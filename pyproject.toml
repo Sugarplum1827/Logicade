@@ -1,0 +1,13 @@
+[project]
+name = "logicade"
+version = "0.1.0"
+description = "LLM-generated adaptive gamified learning for CP1"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "ollama: requires a running local Ollama (§8, Phase 3)",
+    "integration: requires a running local Supabase stack + DEMO_INTEGRATION=1 (§14, Phase 6)",
+]
+addopts = "-q"

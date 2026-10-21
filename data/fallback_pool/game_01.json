@@ -1,0 +1,47 @@
+{
+  "week": 2,
+  "concept": "phase_12_pedagogy",
+  "ilo": "CP1-GEN-ILO1",
+  "difficulty": "needs_support",
+  "game_type": "avoid",
+  "fingerprint": "fallback_01",
+  "entities": [
+    {
+      "id": "player",
+      "sprite": "player_knight",
+      "role": "player"
+    },
+    {
+      "id": "hazard1",
+      "sprite": "spike",
+      "role": "hazard"
+    },
+    {
+      "id": "hazard2",
+      "sprite": "slime",
+      "role": "hazard"
+    }
+  ],
+  "map": "grid_12x9_cave",
+  "rules": [
+    {
+      "on": "collision(player,hazard1)",
+      "if": "always",
+      "then": [
+        "score -= 1",
+        "destroy(hazard1)"
+      ]
+    },
+    {
+      "on": "collision(player,hazard2)",
+      "if": "always",
+      "then": [
+        "score -= 1",
+        "destroy(hazard2)"
+      ]
+    }
+  ],
+  "win": "timer >= 20",
+  "hint": "Avoid the hazards for 20 seconds!",
+  "tutor_note": "Learn the patterns."
+}

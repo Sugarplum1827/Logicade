@@ -1,0 +1,27 @@
+# ── Core Backend ───────────────────────────────────────────────────────
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.6
+httpx>=0.27
+python-dotenv>=1.0
+
+# ── Data & Analysis ───────────────────────────────────────────────────
+psycopg[binary]>=3.1
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+
+# ── Asset Processing ───────────────────────────────────────────────────
+Pillow>=10.0
+
+# ── Testing ────────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-asyncio>=0.23
+
+# ── Desktop Packaging (Phase 15) ───────────────────────────────────────
+pywebview>=6.2
+pyinstaller>=6.22
+
+# ── Build Tools (prevents isolated build errors) ───────────────────────
+setuptools>=65.5
+wheel>=0.40

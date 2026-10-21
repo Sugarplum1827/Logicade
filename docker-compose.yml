@@ -1,0 +1,33 @@
+# Optional. Skip this if you're already running:
+#   - `ollama serve` natively (recommended — the model is already pulled)
+#   - `uvicorn server.main:app` natively
+#   - `supabase start` natively
+#
+# This file exists for fully-containerized dev only. Running it while a
+# native ollama is also listening on :11434 will cause a port conflict.
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
+  app:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      sh -c "pip install -r requirements.txt &&
+             uvicorn server.main:app --host 0.0.0.0 --port 8000 --reload"
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: qwen2.5:3b
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+
+volumes:
+  ollama:

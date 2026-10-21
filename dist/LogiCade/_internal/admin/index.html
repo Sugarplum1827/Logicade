@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LogiCade Admin Dashboard</title>
+    <style>
+        body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+        h1, h2 { color: #4ade80; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #222; }
+        tr:nth-child(even) { background: #1a1a1a; }
+        .status { color: #9ca3af; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>LogiCade Admin Dashboard</h1>
+    <div class="status" id="status">Connecting to Supabase Realtime...</div>
+
+    <h2>Level Summary</h2>
+    <table id="level-summary-table">
+        <thead>
+            <tr>
+                <th>Student ID</th><th>Week</th><th>Level Index</th>
+                <th>First Attempt Score</th><th>Total Attempts</th>
+                <th>Repeats</th><th>Next Difficulty</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/config.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

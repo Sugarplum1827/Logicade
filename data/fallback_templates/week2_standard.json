@@ -1,0 +1,65 @@
+{
+  "week": 2,
+  "concept": "flowcharting",
+  "ilo": "CP1-W2-ILO1",
+  "difficulty": "standard",
+  "game_type": "collect",
+  "fingerprint": "8ee407ed",
+  "entities": [
+    {
+      "id": "player",
+      "sprite": "player_knight",
+      "role": "player"
+    },
+    {
+      "id": "coin0",
+      "sprite": "coin",
+      "role": "collectible"
+    },
+    {
+      "id": "coin1",
+      "sprite": "coin",
+      "role": "collectible"
+    },
+    {
+      "id": "coin2",
+      "sprite": "coin",
+      "role": "collectible"
+    }
+  ],
+  "map": "grid_12x9_forest",
+  "rules": [
+    {
+      "on": "collision(player,coin0)",
+      "if": "always",
+      "then": [
+        "score += 1",
+        "destroy(coin0)"
+      ]
+    },
+    {
+      "on": "collision(player,coin1)",
+      "if": "always",
+      "then": [
+        "score += 1",
+        "destroy(coin1)"
+      ]
+    },
+    {
+      "on": "collision(player,coin2)",
+      "if": "always",
+      "then": [
+        "score += 1",
+        "destroy(coin2)"
+      ]
+    }
+  ],
+  "win": "score >= 3",
+  "hint": "Collect all 3 coins by walking into them.",
+  "tutor_note": "Each collision with a coin adds 1 to your score. Reach 3 to win.",
+  "objectives": [
+    "Collect 3 items",
+    "Complete in under 60s",
+    "Perfect Accuracy"
+  ]
+}

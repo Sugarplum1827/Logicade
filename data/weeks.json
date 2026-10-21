@@ -1,0 +1,126 @@
+[
+  {
+    "week": 1,
+    "concept": "orientation_vmgo_computing_basics",
+    "ilo": ["CP1-W1-ILO1", "CP1-W1-ILO2"],
+    "allowed_triggers": ["collision", "score threshold"],
+    "allowed_conditions": ["always"],
+    "allowed_effects": ["score±n", "destroy"],
+    "forbidden_concepts": [
+      "flowcharts", "algorithms", "identifiers", "c_conditionals",
+      "variables", "scoping", "compound_conditions",
+      "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 2,
+    "concept": "flowcharting",
+    "ilo": ["CP1-W2-ILO1", "CP1-W2-ILO2"],
+    "allowed_triggers": ["collision", "score threshold", "key press"],
+    "allowed_conditions": ["always"],
+    "allowed_effects": ["score±n", "destroy", "spawn"],
+    "forbidden_concepts": [
+      "algorithms", "identifiers", "c_conditionals",
+      "variables", "scoping", "compound_conditions",
+      "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 3,
+    "concept": "algorithms",
+    "ilo": ["CP1-W3-ILO1", "CP1-W3-ILO2"],
+    "allowed_triggers": ["collision", "score threshold", "key press", "count reached"],
+    "allowed_conditions": ["always", "if count </> n"],
+    "allowed_effects": ["score±n", "destroy", "spawn", "slow", "speed_up"],
+    "forbidden_concepts": [
+      "identifiers", "c_conditionals", "variables", "scoping",
+      "compound_conditions", "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 4,
+    "concept": "introduction_to_c_language",
+    "ilo": ["CP1-W4-ILO1", "CP1-W4-ILO2"],
+    "allowed_triggers": ["collision", "score threshold", "key press", "count reached"],
+    "allowed_conditions": ["always", "if count </> n", "if score </>/= n"],
+    "allowed_effects": ["score±n", "destroy", "spawn", "slow", "speed_up", "teleport"],
+    "forbidden_concepts": [
+      "c_conditionals", "variables", "scoping", "compound_conditions",
+      "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 5,
+    "concept": "components_of_c_language",
+    "ilo": ["CP1-W5-ILO1", "CP1-W5-ILO2"],
+    "allowed_triggers": [
+      "collision", "score threshold", "key press", "count reached",
+      "proximity", "timer"
+    ],
+    "allowed_conditions": ["always", "if count </> n", "if score </>/= n"],
+    "allowed_effects": [
+      "score±n", "destroy", "spawn", "slow", "speed_up", "teleport", "freeze"
+    ],
+    "forbidden_concepts": [
+      "variables", "scoping", "compound_conditions",
+      "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 6,
+    "concept": "basic_parts_and_variable_declaration",
+    "ilo": ["CP1-W6-ILO1", "CP1-W6-ILO2"],
+    "allowed_triggers": [
+      "collision", "score threshold", "key press", "count reached",
+      "proximity", "timer"
+    ],
+    "allowed_conditions": [
+      "always", "if count </> n", "if score </>/= n", "if timer </> n"
+    ],
+    "allowed_effects": [
+      "score±n", "destroy", "spawn", "slow", "speed_up", "teleport",
+      "freeze", "swap"
+    ],
+    "forbidden_concepts": [
+      "scoping", "compound_conditions", "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 7,
+    "concept": "local_and_global_variables",
+    "ilo": ["CP1-W7-ILO1", "CP1-W7-ILO2"],
+    "allowed_triggers": [
+      "collision", "score threshold", "key press", "count reached",
+      "proximity", "timer"
+    ],
+    "allowed_conditions": [
+      "always", "if count </> n", "if score </>/= n",
+      "if timer </> n", "if carrying(X)"
+    ],
+    "allowed_effects": [
+      "score±n", "destroy", "spawn", "slow", "speed_up", "teleport",
+      "freeze", "swap", "reset", "invert_controls"
+    ],
+    "forbidden_concepts": [
+      "compound_conditions", "loops", "functions", "arrays", "pointers"
+    ]
+  },
+  {
+    "week": 8,
+    "concept": "compound_comparisons_and_program_synthesis",
+    "ilo": ["CP1-W8-ILO1", "CP1-W8-ILO2"],
+    "allowed_triggers": [
+      "collision", "score threshold", "key press", "count reached",
+      "proximity", "timer"
+    ],
+    "allowed_conditions": [
+      "always", "if count </> n", "if score </>/= n",
+      "if timer </> n", "if carrying(X)", "compound (AND/OR)"
+    ],
+    "allowed_effects": [
+      "score±n", "destroy", "spawn", "slow", "speed_up", "teleport",
+      "freeze", "swap", "reset", "invert_controls"
+    ],
+    "forbidden_concepts": ["loops", "functions", "arrays", "pointers"]
+  }
+]
