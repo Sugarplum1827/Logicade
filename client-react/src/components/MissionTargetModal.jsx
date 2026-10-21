@@ -11,7 +11,7 @@ export default function MissionTargetModal({ spec, onStart, onCancel }) {
         <div className="rok-ribbon">Mission Target</div>
         
         <div className="rok-content">
-          <p className="rok-hint">{spec.hint || 'Deploy your troops and clear the level.'}</p>
+          <p className="rok-hint">{spec?.hint || 'Deploy your troops and clear the level.'}</p>
           
           <div className="rok-objectives">
             <div className="rok-objective-item">

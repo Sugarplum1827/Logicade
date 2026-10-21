@@ -179,6 +179,25 @@ def _check_reachability(spec: dict) -> list[str]:
                 "win condition references 'score' but no rule modifies score "
                 "(unreachable)"
             )
+        else:
+            # ⭐ FIX: Check if the maximum possible score actually reaches the target
+            import re
+            match = re.search(r"score\s*(?:==|>=|>)\s*(\d+)", win)
+            if match:
+                target_score = int(match.group(1))
+                max_score = 0
+                for rule in spec.get("rules", []):
+                    for e in rule.get("then", []):
+                        em = re.match(r"score\s*\+=\s*(\d+)", str(e))
+                        if em:
+                            max_score += int(em.group(1))
+                
+                # If max_score is less than target, it's impossible to win
+                if max_score < target_score:
+                    errors.append(
+                        f"win condition requires score {target_score}, "
+                        f"but rules can only generate max score {max_score} (unreachable)"
+                    )
 
     if "count" in win:
         if not _has_effect(lambda e: e in {"spawn", "score±n"}):

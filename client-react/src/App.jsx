@@ -51,12 +51,13 @@ export default function App() {
     if (selectedRegion) localStorage.setItem('logicade_selected_region', JSON.stringify(selectedRegion));
   }, [selectedRegion]);
 
+  // ⭐ FIXED: Event Listeners
   useEffect(() => {
     const handleGate = (e) => setActiveGate(e.detail);
     const handleCoinsUpdate = (e) => setCoins(e.detail.coins);
     const handleGamePaused = () => setShowPauseExit(true);
     
-        const handleGameOver = (e) => {
+    const handleGameOver = (e) => {
       const result = e.detail;
       console.log('[App] game_over received:', result);
 
@@ -64,37 +65,50 @@ export default function App() {
       let xpReward = 0;
       let isFirstTime = false;
 
-      if (result.won && selectedRegion) {
-        const key = `logicade_levels_${selectedRegion.id}`;
-        const saved = JSON.parse(localStorage.getItem(key) || '[]');
-        isFirstTime = !saved.includes(currentLevel);
-
-        if (isFirstTime) {
-          coinReward = 10;
-          xpReward = 50;
-
-          saved.push(currentLevel);
-          localStorage.setItem(key, JSON.stringify(saved));
-
-          const currentCoins = parseInt(localStorage.getItem('logicade_coins') || '50');
-          const newCoins = currentCoins + coinReward;
-          localStorage.setItem('logicade_coins', String(newCoins));
-          setCoins(newCoins);
-
-          const currentXp = parseInt(localStorage.getItem('logicade_xp') || '0');
-          let newXp = currentXp + xpReward;
-          let newPlayerLevel = playerLevel;
-          let xpToNext = newPlayerLevel * 100;
-          while (newXp >= xpToNext) {
-            newXp -= xpToNext;
-            newPlayerLevel += 1;
-            xpToNext = newPlayerLevel * 100;
+      try {
+        if (result.won && selectedRegion) {
+          const key = `logicade_levels_${selectedRegion.id}`;
+          const raw = localStorage.getItem(key);
+          let saved = [];
+          try {
+            saved = raw ? JSON.parse(raw) : [];
+            if (!Array.isArray(saved)) saved = [];
+          } catch (err) {
+            saved = [];
           }
-          localStorage.setItem('logicade_xp', String(newXp));
-          localStorage.setItem('logicade_level', String(newPlayerLevel));
-          setXp(newXp);
-          setPlayerLevel(newPlayerLevel);
+
+          isFirstTime = !saved.includes(currentLevel);
+
+          if (isFirstTime) {
+            coinReward = 10;
+            xpReward = 50;
+
+            saved.push(currentLevel);
+            localStorage.setItem(key, JSON.stringify(saved));
+
+            const currentCoins = parseInt(localStorage.getItem('logicade_coins') || '50');
+            const newCoins = currentCoins + coinReward;
+            localStorage.setItem('logicade_coins', String(newCoins));
+            setCoins(newCoins);
+
+            const currentXp = parseInt(localStorage.getItem('logicade_xp') || '0');
+            let newXp = currentXp + xpReward;
+            let newPlayerLevel = parseInt(localStorage.getItem('logicade_level') || '1');
+            let xpToNext = newPlayerLevel * 100;
+            
+            while (newXp >= xpToNext) {
+              newXp -= xpToNext;
+              newPlayerLevel += 1;
+              xpToNext = newPlayerLevel * 100;
+            }
+            localStorage.setItem('logicade_xp', String(newXp));
+            localStorage.setItem('logicade_level', String(newPlayerLevel));
+            setXp(newXp);
+            setPlayerLevel(newPlayerLevel);
+          }
         }
+      } catch (err) {
+        console.error('[App] Error processing game over:', err);
       }
 
       setGameResult({
@@ -104,61 +118,28 @@ export default function App() {
         isFirstTime,
       });
     };
+
+    window.addEventListener('logicade:gate_opened', handleGate);
+    window.addEventListener('logicade:coins_updated', handleCoinsUpdate);
+    window.addEventListener('logicade:game_over', handleGameOver);
+    window.addEventListener('logicade:game_paused', handleGamePaused);
+    
     return () => {
       window.removeEventListener('logicade:gate_opened', handleGate);
       window.removeEventListener('logicade:coins_updated', handleCoinsUpdate);
       window.removeEventListener('logicade:game_over', handleGameOver);
       window.removeEventListener('logicade:game_paused', handleGamePaused);
     };
-  }, [selectedRegion, currentLevel, playerLevel, coins, xp]);  // ⭐ dependencies matter // Added dependencies
-
-  // Award coins + XP on first win
-  useEffect(() => {
-    if (gameResult && gameResult.won && selectedRegion) {
-      const key = `logicade_levels_${selectedRegion.id}`;
-      const saved = JSON.parse(localStorage.getItem(key) || '[]');
-      const isFirstTime = !saved.includes(currentLevel);
-
-      if (isFirstTime) {
-        saved.push(currentLevel);
-        localStorage.setItem(key, JSON.stringify(saved));
-
-        const currentCoins = parseInt(localStorage.getItem('logicade_coins') || '50');
-        const newCoins = currentCoins + 10;
-        localStorage.setItem('logicade_coins', String(newCoins));
-        setCoins(newCoins);
-
-        const currentXp = parseInt(localStorage.getItem('logicade_xp') || '0');
-        let newXp = currentXp + 50;
-        let newPlayerLevel = playerLevel;
-        let xpToNext = newPlayerLevel * 100;
-
-        while (newXp >= xpToNext) {
-          newXp -= xpToNext;
-          newPlayerLevel += 1;
-          xpToNext = newPlayerLevel * 100;
-        }
-
-        localStorage.setItem('logicade_xp', String(newXp));
-        localStorage.setItem('logicade_level', String(newPlayerLevel));
-        setXp(newXp);
-        setPlayerLevel(newPlayerLevel);
-      }
-    }
-  }, [gameResult]);
+  }, [selectedRegion, currentLevel]); // Only re-bind if region or level changes
 
   const handleLogin = (id) => {
     setStudentId(id);
     setView('subject');
-    
-    // Reset all pools so this session gets a fresh shuffle
     fetch('/reset_pools', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ student_id: id })
     }).catch(err => console.warn('[reset_pools] failed:', err));
-
-    // Pre-warm weeks 1-3 in the background
     fetch('/warm_pool', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -202,15 +183,12 @@ export default function App() {
     setGameSessionId(prev => prev + 1);
   };
 
-  // ── Hint handling ──
   const handleUseHint = () => {
     if (coins < 1) return;
     const newCoins = coins - 1;
     localStorage.setItem('logicade_coins', String(newCoins));
     setCoins(newCoins);
     setShowHintModal(false);
-    
-    // Tell Phaser to display the hint
     window.dispatchEvent(new CustomEvent('logicade:show_hint', {
       detail: { hint: currentSpec?.hint || 'No hint available.' }
     }));
@@ -231,7 +209,8 @@ export default function App() {
         <LevelSelect region={selectedRegion} onStartLevel={handleStartLevel} onBack={() => setView('region')} />
       )}
       
-      {view === 'game' && selectedRegion && currentSpec && (
+      {/* ⭐ FIX: Removed `&& currentSpec` so it mounts and fetches the game */}
+      {view === 'game' && selectedRegion && (
         <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
           <button 
             onClick={() => window.dispatchEvent(new Event('logicade:pause_game'))} 
@@ -240,7 +219,6 @@ export default function App() {
             ← Back
           </button>
 
-          {/* Coin + Hint overlay */}
           <div className="game-hud-right">
             <div className="coin-display">
               <img src="/assets/gold_coin.png" alt="Coin" />
@@ -274,7 +252,7 @@ export default function App() {
         <HintConfirmModal
           cost={1}
           coins={coins}
-          hintText={currentSpec?.hint}
+          hintText={currentSpec?.hint || 'Generating hint...'}
           onConfirm={handleUseHint}
           onCancel={() => setShowHintModal(false)}
         />

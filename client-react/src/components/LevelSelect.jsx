@@ -4,8 +4,6 @@ import MissionTargetModal from './MissionTargetModal';
 export default function LevelSelect({ region, onStartLevel, onBack }) {
   const [completedLevels, setCompletedLevels] = useState([]);
   const [selectedLevel, setSelectedLevel] = useState(null);
-  const [levelSpec, setLevelSpec] = useState(null);
-  const [loadingSpec, setLoadingSpec] = useState(false);
   const [showMissionModal, setShowMissionModal] = useState(false);
 
   useEffect(() => {
@@ -13,63 +11,19 @@ export default function LevelSelect({ region, onStartLevel, onBack }) {
     setCompletedLevels(saved ? JSON.parse(saved) : []);
   }, [region.id]);
 
-  useEffect(() => {
-    if (!selectedLevel) return;
-    
-    setLoadingSpec(true);
-    setLevelSpec(null);
-
-    let difficulty = 'needs_support';
-    if (selectedLevel.week > 3) difficulty = 'standard';
-    if (selectedLevel.week > 7) difficulty = 'advanced';
-
-    fetch('/serve', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ 
-        student_id: localStorage.getItem('logicade_current_user') || 'guest', 
-        week: selectedLevel.week, 
-        difficulty 
-      })
-    })
-    .then(res => res.json())
-    .then(data => {
-      setLevelSpec(data.spec);
-      setLoadingSpec(false);
-    })
-    .catch(err => {
-      console.error("Failed to load spec:", err);
-      setLoadingSpec(false);
-    });
-  }, [selectedLevel]);
-
   const levels = Array.from({ length: 10 }, (_, i) => i + 1);
   const isUnlocked = (num) => num === 1 || completedLevels.includes(num - 1);
-
-  const formatObjective = (winStr) => {
-    if (!winStr) return "Complete the level";
-    if (winStr.includes('score')) {
-      const match = winStr.match(/score\s*(==|>=|>)\s*(\d+)/);
-      if (match) return `Collect ${match[2]} items`;
-    }
-    if (winStr.includes('timer')) {
-      const match = winStr.match(/timer\s*(==|>=|>)\s*(\d+)/);
-      if (match) return `Survive for ${match[2]} seconds`;
-    }
-    if (winStr.includes('count')) {
-       const match = winStr.match(/count\s*(==|>=|>)\s*(\d+)/);
-       if (match) return `Destroy ${match[2]} objects`;
-    }
-    return "Complete the main objective";
-  };
 
   return (
     <div className="level-select-screen" style={{ backgroundImage: `url('${region.level_bg || '/assets/subjects/library_bg.png'}')` }}>
       
-      {showMissionModal && levelSpec && (
+      {showMissionModal && selectedLevel && (
         <MissionTargetModal 
-          spec={levelSpec}
-          onStart={() => { setShowMissionModal(false); onStartLevel(region, selectedLevel.week, levelSpec); }}
+          spec={null} // ⭐ Pass null so it uses generic text
+          onStart={() => { 
+            setShowMissionModal(false); 
+            onStartLevel(region, selectedLevel.week, null); // ⭐ Pass null spec
+          }}
           onCancel={() => setShowMissionModal(false)}
         />
       )}
@@ -114,16 +68,10 @@ export default function LevelSelect({ region, onStartLevel, onBack }) {
               
               <div className="detail-section">
                 <h4>Objective</h4>
-                {loadingSpec ? (
-                  <p style={{ fontSize: '18px', color: '#8d6e63' }}>Loading from LLM...</p>
-                ) : levelSpec ? (
-                  <ul>
-                    <li>{formatObjective(levelSpec.win)}</li>
-                    <li>Finish under 60s</li>
-                  </ul>
-                ) : (
-                  <p style={{ color: 'red', fontSize: '18px' }}>Failed to load.</p>
-                )}
+                <ul>
+                  <li>Complete the main objective</li>
+                  <li>Finish under 60s</li>
+                </ul>
               </div>
 
               <div className="detail-section">
@@ -137,9 +85,8 @@ export default function LevelSelect({ region, onStartLevel, onBack }) {
               <button 
                 className="btn-start-stage" 
                 onClick={() => setShowMissionModal(true)}
-                disabled={loadingSpec || !levelSpec}
               >
-                {loadingSpec ? 'LOADING...' : 'START STAGE'}
+                START STAGE
               </button>
             </>
           ) : (

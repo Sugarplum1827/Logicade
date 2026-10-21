@@ -24,21 +24,16 @@ export class GameScene extends Phaser.Scene {
             attempts: 1,
             paused: false,
         };
-        Telemetry.reset();
+        if (window.Telemetry) window.Telemetry.reset();
     }
 
     create() {
         this.state.startedAt = this.time.now;
         this._emit('level_start', {});
 
-        // ── Listeners ────────────────────────────────────────────────
         this._onGateResult = this._onGateResult.bind(this);
         window.addEventListener('logicade:gate_resolved', this._onGateResult);
 
-        // Pause uses ONLY a state flag. Phaser 4's scene.pause() and
-        // TimerEvent.paused have both caused freezes when combined, so
-        // we avoid them entirely. update() and the timer callback both
-        // check the flag.
         this._pauseHandler = () => {
             if (!this.state.gameOver && !this.state.paused) {
                 this.state.paused = true;
@@ -52,7 +47,6 @@ export class GameScene extends Phaser.Scene {
         };
         window.addEventListener('logicade:resume_game', this._resumeHandler);
 
-        // Hint display triggered from React (when the confirm modal is accepted)
         this._onShowHint = (event) => {
             const existing = this.children.getByName('hintText');
             if (existing) existing.destroy();
@@ -69,7 +63,7 @@ export class GameScene extends Phaser.Scene {
                     wordWrap: { width: this.scale.width - 80 },
                     align: 'center',
                 }
-            ).setOrigin(0.5, 0).setDepth(150).setName('hintText');
+            ).setOrigin(0.5, 0).setDepth(150).setScrollFactor(0).setName('hintText');
 
             this.time.delayedCall(6000, () => {
                 const t = this.children.getByName('hintText');
@@ -78,7 +72,6 @@ export class GameScene extends Phaser.Scene {
         };
         window.addEventListener('logicade:show_hint', this._onShowHint);
 
-        // ── Audio unlock ─────────────────────────────────────────────
         const unlockAudio = () => {
             const ctx = this.sound.context;
             if (ctx.state === 'suspended') ctx.resume();
@@ -93,15 +86,12 @@ export class GameScene extends Phaser.Scene {
             }
         }
 
-        // ── Build the scene ──────────────────────────────────────────
         this._buildLayout();
         this._buildMap();
         this._buildEntities();
         this._buildInput();
         this._buildHUD();
 
-        // ── Level timer ──────────────────────────────────────────────
-        // Timer increments only when not paused and not game over.
         this._timerEvent = this.time.addEvent({
             delay: 100,
             loop: true,
@@ -114,7 +104,6 @@ export class GameScene extends Phaser.Scene {
 
         this.cameras.main.setBackgroundColor('#1a1a2e');
 
-        // ── Cleanup ──────────────────────────────────────────────────
         this.events.once('shutdown', () => {
             window.removeEventListener('logicade:gate_resolved', this._onGateResult);
             window.removeEventListener('logicade:pause_game', this._pauseHandler);
@@ -133,11 +122,12 @@ export class GameScene extends Phaser.Scene {
         this._updateHUD();
     }
 
-    // ── Construction ─────────────────────────────────────────────────
-
     _buildLayout() {
         const map = this.manifest.tilemaps.find(m => m.id === this.spec.map);
         const [cols, rows] = map.grid_size;
+        this.gridCols = cols;
+        this.gridRows = rows;
+
         this.layout = SpecRenderer.computeLayout({
             viewportW: this.scale.width,
             viewportH: this.scale.height,
@@ -145,8 +135,12 @@ export class GameScene extends Phaser.Scene {
             gridRows: rows,
             tileSize: map.tile_size,
         });
-        this.gridCols = cols;
-        this.gridRows = rows;
+
+        const worldW = this.layout.boardW;
+        const worldH = this.layout.boardH;
+        
+        this.physics.world.setBounds(0, 0, worldW, worldH);
+        this.cameras.main.setBounds(0, 0, worldW, worldH);
     }
 
     _buildMap() {
@@ -166,7 +160,7 @@ export class GameScene extends Phaser.Scene {
         for (const ent of this.spec.entities) {
             let col, row;
             if (ent.role === 'player') {
-                col = 0;
+                col = 1;
                 row = Math.floor(this.gridRows / 2);
             } else {
                 const pos = this._randomFreeCell(used, ent.role);
@@ -185,6 +179,8 @@ export class GameScene extends Phaser.Scene {
             sprite.body.setSize(size, size);
 
             if (ent.role === 'player') {
+                sprite.setCollideWorldBounds(true);
+                this.cameras.main.startFollow(sprite, true, 0.1, 0.1);
                 this.tweens.add({
                     targets: sprite,
                     scaleX: sprite.scaleX * 1.05,
@@ -232,8 +228,13 @@ export class GameScene extends Phaser.Scene {
         for (let i = 0; i < 200; i++) {
             const col = Phaser.Math.Between(0, this.gridCols - 1);
             const row = Phaser.Math.Between(0, this.gridRows - 1);
+            
+            // ⭐ FIX: Don't spawn under the HUD (top-left 3 columns/rows)
+            if (col < 3 && row < 3) continue;
+
             if ((role === 'hazard' || role === 'obstacle') &&
                 col <= 2 && Math.abs(row - playerRow) <= 1) continue;
+                
             if (!used.has(`${col},${row}`)) return { col, row };
         }
         return { col: this.gridCols - 1, row: this.gridRows - 1 };
@@ -245,17 +246,15 @@ export class GameScene extends Phaser.Scene {
             up: 'W', down: 'S', left: 'A', right: 'D',
         });
         this.input.keyboard.addCapture('UP,DOWN,LEFT,RIGHT,W,A,S,D');
-        // Only ESC for pause. No H (hint is HTML button), no R (restart is
-        // in the pause modal).
         this.input.keyboard.on('keydown-ESC', () => this._pauseHandler());
     }
 
     _buildHUD() {
         const style = { fontSize: '18px', color: '#ffffff', fontFamily: 'monospace' };
-        this.add.text(12, 12, 'Score: 0', style).setDepth(100).setName('hudScore');
-        this.add.text(12, 36, 'Time: 0.0', style).setDepth(100).setName('hudTimer');
+        
+        this.add.text(12, 12, 'Score: 0', style).setDepth(100).setScrollFactor(0).setName('hudScore');
+        this.add.text(12, 36, 'Time: 0.0', style).setDepth(100).setScrollFactor(0).setName('hudTimer');
 
-        // Human-readable goal — never shows the raw spec.win string.
         const win = String(this.spec.win || '');
         let goalText = 'Complete the level';
         let m;
@@ -272,18 +271,17 @@ export class GameScene extends Phaser.Scene {
             fontFamily: 'monospace',
             backgroundColor: '#00000088',
             padding: { x: 8, y: 4 },
-        }).setDepth(100).setName('hudGoal');
+        }).setDepth(100).setScrollFactor(0).setName('hudGoal');
 
         this.add.text(12, this.scale.height - 24, 'ESC = pause',
-            { ...style, fontSize: '14px', color: '#9ca3af' }).setDepth(100);
+            { ...style, fontSize: '14px', color: '#9ca3af' }).setDepth(100).setScrollFactor(0);
     }
-
-    // ── Player movement ──────────────────────────────────────────────
 
     _movePlayer(delta) {
         if (!this.player || !this.player.body) return;
         const speed = 200;
         this.player.body.setVelocity(0);
+
         if (this.cursors.left.isDown || this.wasd.left.isDown) {
             this.player.body.setVelocityX(-speed);
         } else if (this.cursors.right.isDown || this.wasd.right.isDown) {
@@ -294,21 +292,7 @@ export class GameScene extends Phaser.Scene {
         } else if (this.cursors.down.isDown || this.wasd.down.isDown) {
             this.player.body.setVelocityY(speed);
         }
-
-        const margin = this.layout.displaySize / 2;
-        this.player.x = Phaser.Math.Clamp(
-            this.player.x,
-            this.layout.offsetX + margin,
-            this.layout.offsetX + this.gridCols * this.layout.displaySize - margin,
-        );
-        this.player.y = Phaser.Math.Clamp(
-            this.player.y,
-            this.layout.offsetY + margin,
-            this.layout.offsetY + this.gridRows * this.layout.displaySize - margin,
-        );
     }
-
-    // ── Rule engine ──────────────────────────────────────────────────
 
     _evaluateRules() {
         for (let i = 0; i < this.spec.rules.length; i++) {
@@ -383,7 +367,6 @@ export class GameScene extends Phaser.Scene {
     _applyEffect(effectStr, ruleIndex) {
         const s = String(effectStr).trim();
 
-        // score += n  /  score -= n
         let m = s.match(/^score\s*([+\-]=)\s*(\d+)$/);
         if (m) {
             const delta = m[1] === '+=' ? parseFloat(m[2]) : -parseFloat(m[2]);
@@ -396,7 +379,6 @@ export class GameScene extends Phaser.Scene {
             return;
         }
 
-        // destroy(target_id)
         m = s.match(/^destroy\((\w+)\)$/);
         if (m) {
             const target = this.state.entities[m[1]];
@@ -415,7 +397,6 @@ export class GameScene extends Phaser.Scene {
             return;
         }
 
-        // spawn(sprite_id)
         m = s.match(/^spawn\((\w+)\)$/);
         if (m) {
             const spriteId = m[1];
@@ -437,19 +418,15 @@ export class GameScene extends Phaser.Scene {
             return;
         }
 
-        // open_code_gate
         if (s === 'open_code_gate') {
             this._triggerCodeGate(ruleIndex);
             return;
         }
 
-        // reset — ends the level
         if (s === 'reset') {
             this._finish(false, 'reset_triggered');
         }
     }
-
-    // ── Code Gate (C-programming modal) ──────────────────────────────
 
     _triggerCodeGate(ruleIndex) {
         this.state.paused = true;
@@ -491,8 +468,6 @@ export class GameScene extends Phaser.Scene {
         }
     }
 
-    // ── Audio & effects ──────────────────────────────────────────────
-
     _playSfx(key) {
         if (!this.cache.audio.exists(key)) return;
         const ctx = this.sound.context;
@@ -512,8 +487,6 @@ export class GameScene extends Phaser.Scene {
         });
         this.time.delayedCall(600, () => emitter.destroy());
     }
-
-    // ── Win / lose ───────────────────────────────────────────────────
 
     _checkWin() {
         if (this.state.gameOver) return;
@@ -544,6 +517,10 @@ export class GameScene extends Phaser.Scene {
         this.state.won = won;
         this.state.paused = true;
 
+        // ⭐ FIX: Stop physics and tweens immediately to prevent freezing
+        this.physics.pause();
+        this.tweens.pauseAll();
+
         try {
             this._emit(won ? 'level_win' : 'level_lose', { payload: { reason } });
         } catch (e) {
@@ -564,7 +541,7 @@ export class GameScene extends Phaser.Scene {
         console.log('[finish] dispatching game_over:', payload);
         window.dispatchEvent(new CustomEvent('logicade:game_over', { detail: payload }));
 
-        // Big win/lose text in Phaser, visible behind the React modal.
+        // ⭐ FIX: setScrollFactor(0) ensures Victory text stays centered on screen
         this.add.text(
             this.scale.width / 2,
             this.scale.height / 2,
@@ -576,9 +553,9 @@ export class GameScene extends Phaser.Scene {
                 stroke: '#000000',
                 strokeThickness: 6,
             },
-        ).setOrigin(0.5).setDepth(200);
+        ).setOrigin(0.5).setDepth(200).setScrollFactor(0);
 
-        // Save to IndexedDB in the background — never blocks the modal.
+        // 3. Save to IndexedDB in the background
         (async () => {
             try {
                 const levelId = this.registry.get('level_id');
@@ -590,6 +567,7 @@ export class GameScene extends Phaser.Scene {
                 }
                 const db = await window.LogiCadeDB.openDB();
 
+                // Check if level exists locally
                 const existingLevel = await new Promise((res, rej) => {
                     const tx = db.transaction('levels', 'readonly');
                     const req = tx.objectStore('levels').get(levelId);
@@ -597,7 +575,17 @@ export class GameScene extends Phaser.Scene {
                     req.onerror = () => rej(req.error);
                 });
 
-                if (!existingLevel) {
+                // Check if level is already in the sync queue
+                const queue = await new Promise((res, rej) => {
+                    const tx = db.transaction('sync_queue', 'readonly');
+                    const req = tx.objectStore('sync_queue').getAll();
+                    req.onsuccess = () => res(req.result);
+                    req.onerror = () => rej(req.error);
+                });
+                const hasLevelJob = queue.some(j => j.table === 'levels' && j.payload.level_id === levelId);
+
+                // ⭐ If missing locally OR missing from queue, re-add it
+                if (!existingLevel || !hasLevelJob) {
                     const allLevels = await new Promise((res, rej) => {
                         const tx = db.transaction('levels', 'readonly');
                         const req = tx.objectStore('levels').getAll();
@@ -627,20 +615,27 @@ export class GameScene extends Phaser.Scene {
                     await new Promise((res, rej) => {
                         const tx = db.transaction(['levels', 'sync_queue'], 'readwrite');
                         tx.objectStore('levels').put(levelRow);
-                        tx.objectStore('sync_queue').put({
-                            job_id: crypto.randomUUID(),
-                            created_at: new Date().toISOString(),
-                            table: 'levels',
-                            op: 'upsert',
-                            payload: levelRow,
-                            status: 'pending',
-                            attempts: 0,
-                        });
+                        
+                        // Only add a new job if it's not already there
+                        if (!hasLevelJob) {
+                            tx.objectStore('sync_queue').put({
+                                job_id: crypto.randomUUID(),
+                                created_at: new Date().toISOString(),
+                                table: 'levels',
+                                op: 'upsert',
+                                payload: levelRow,
+                                status: 'pending',
+                                attempts: 0,
+                                last_error: null,
+                                next_retry_at: null,
+                            });
+                        }
                         tx.oncomplete = res;
                         tx.onerror = () => rej(tx.error);
                     });
                 }
 
+                // Now record the attempt (which will trigger its own sync job)
                 const attempt = {
                     attempt_id: crypto.randomUUID(),
                     level_id: levelId,
@@ -664,14 +659,14 @@ export class GameScene extends Phaser.Scene {
                 };
 
                 await window.LogiCadeWrite.recordAttempt(attempt);
+                
+                // ⭐ Drain the queue (worker.js will now process levels first, then attempts)
                 await window.LogiCadeSync.drainQueue();
             } catch (err) {
                 console.error('Failed to save attempt in background:', err);
             }
         })();
     }
-
-    // ── HUD ──────────────────────────────────────────────────────────
 
     _updateHUD() {
         const score = this.children.getByName('hudScore');
