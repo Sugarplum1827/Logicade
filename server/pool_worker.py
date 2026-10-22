@@ -51,7 +51,7 @@ def _load_diverse_for_week(week: int, difficulty: str) -> list[dict]:
     if not valid_maps:
         return games
 
-    for f in sorted(DIVERSE_DIR.glob("game_*.json")):
+    for f in sorted(DIVERSE_DIR.rglob("game_*.json")):
         try:
             spec = json.loads(f.read_text(encoding="utf-8"))
         except Exception:

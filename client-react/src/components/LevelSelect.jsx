@@ -1,5 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import MissionTargetModal from './MissionTargetModal';
+
+function displayText(value) {
+  if (typeof value === 'string' || typeof value === 'number') return String(value);
+  if (value && typeof value === 'object') {
+    const text = value.message ?? value.text ?? value.description ?? value.objective;
+    if (text != null) {
+      const prefix = value.step != null ? `Step ${value.step}: ` : '';
+      return `${prefix}${displayText(text)}`;
+    }
+  }
+  return '';
+}
 
 export default function LevelSelect({ studentId, region, onStartLevel, onBack }) {
   const [completedLevels, setCompletedLevels] = useState([]);
@@ -8,6 +20,8 @@ export default function LevelSelect({ studentId, region, onStartLevel, onBack })
   const [selectedMeta, setSelectedMeta] = useState(null);
   const [showMissionModal, setShowMissionModal] = useState(false);
   const [prefetching, setPrefetching] = useState(false);
+  const [loadError, setLoadError] = useState('');
+  const selectionRequest = useRef(0);
 
   const progressKey = `logicade_levels_${studentId}_${region.id}`;
 
@@ -19,46 +33,62 @@ export default function LevelSelect({ studentId, region, onStartLevel, onBack })
   const levels = Array.from({ length: 10 }, (_, i) => i + 1);
   const isUnlocked = (num) => num === 1 || completedLevels.includes(num - 1);
 
-  const handleSelectLevel = (num) => {
-    setSelectedLevel({ week: num, title: `Stage ${num}`, subtitle: region.subtitle });
+  const handleSelectLevel = async (num) => {
+    const requestId = ++selectionRequest.current;
+    setSelectedLevel({ level: num, title: `Stage ${num}`, subtitle: region.subtitle });
     setSelectedSpec(null);
     setSelectedMeta(null);
-  };
-
-  const handleStartStage = async () => {
-    if (!selectedLevel || prefetching) return;
+    setLoadError('');
+    setShowMissionModal(false);
     setPrefetching(true);
 
-    let spec = null;
-    let meta = null;
     try {
-      const week = selectedLevel.week;
       const res = await fetch('/serve', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           student_id: studentId,
-          week,
-          level: week,
+          week: region.week || 1,
+          level: num,
           difficulty: 'standard',
         }),
       });
-      if (res.ok) {
-        const data = await res.json();
-        spec = data.spec;
-        meta = data.meta;
-      } else {
-        console.warn('[LevelSelect] /serve failed:', res.status);
+      if (!res.ok) throw new Error(`Challenge request failed (${res.status})`);
+      const data = await res.json();
+      if (requestId !== selectionRequest.current) return;
+      setSelectedSpec(data.spec || null);
+      setSelectedMeta(data.meta || null);
+      if (!data.spec) throw new Error('The server returned no challenge JSON.');
+    } catch (error) {
+      if (requestId === selectionRequest.current) {
+        console.warn('[LevelSelect] challenge load failed:', error);
+        setLoadError('Could not load a challenge. Select the level to try again.');
       }
-    } catch (e) {
-      console.warn('[LevelSelect] prefetch failed:', e);
+    } finally {
+      if (requestId === selectionRequest.current) setPrefetching(false);
     }
-
-    setSelectedSpec(spec);
-    setSelectedMeta(meta);
-    setPrefetching(false);
-    setShowMissionModal(true);
   };
+
+  const cancelPreview = () => {
+    selectionRequest.current += 1;
+    setSelectedLevel(null);
+    setSelectedSpec(null);
+    setSelectedMeta(null);
+    setShowMissionModal(false);
+    setPrefetching(false);
+    setLoadError('');
+  };
+
+  const objectiveRows = selectedSpec
+    ? [
+        ['Objective', selectedSpec.player_objective],
+        ...(Array.isArray(selectedSpec.secondary_objectives)
+          ? selectedSpec.secondary_objectives.map((objective, index) => [`Goal ${index + 1}`, objective])
+          : []),
+        ['Win', selectedSpec.win_condition],
+        ['Lose', selectedSpec.lose_condition],
+      ].filter(([, value]) => displayText(value))
+    : [];
 
   return (
     <div
@@ -67,12 +97,12 @@ export default function LevelSelect({ studentId, region, onStartLevel, onBack })
         backgroundImage: `url('${region.level_bg || '/assets/subjects/library_bg.png'}')`,
       }}
     >
-      {showMissionModal && selectedLevel && (
+      {showMissionModal && selectedLevel && selectedSpec && (
         <MissionTargetModal
           spec={selectedSpec}
-          onStart={(event) => {
+          onStart={() => {
             setShowMissionModal(false);
-            onStartLevel(region, selectedLevel.week, selectedSpec, selectedMeta, event);
+            onStartLevel(region, selectedLevel.level, selectedSpec, selectedMeta);
           }}
           onCancel={() => setShowMissionModal(false)}
         />
@@ -100,7 +130,7 @@ export default function LevelSelect({ studentId, region, onStartLevel, onBack })
                   key={num}
                   className={`level-node ${unlocked ? 'unlocked' : 'locked'} ${
                     completed ? 'completed' : ''
-                  } ${selectedLevel?.week === num ? 'selected' : ''}`}
+                  } ${selectedLevel?.level === num ? 'selected' : ''}`}
                   onClick={() => unlocked && handleSelectLevel(num)}
                   disabled={!unlocked}
                 >
@@ -117,16 +147,21 @@ export default function LevelSelect({ studentId, region, onStartLevel, onBack })
         <div className="level-detail-panel">
           {selectedLevel ? (
             <>
-              <h2>Stage {selectedLevel.week}</h2>
-              <p className="detail-desc">{region.desc}</p>
+              <h2>Stage {selectedLevel.level}</h2>
+              {prefetching && <p className="detail-desc">Loading this level’s challenge…</p>}
+              {loadError && <p className="detail-desc" role="alert">{loadError}</p>}
 
-              <div className="detail-section">
-                <h4>Objective</h4>
-                <ul>
-                  <li>Complete the main objective</li>
-                  <li>Finish under 60s</li>
-                </ul>
-              </div>
+              {objectiveRows.length > 0 && (
+                <div className="detail-section rok-objectives level-preview-objectives">
+                  <h4>Mission Objectives</h4>
+                  {objectiveRows.map(([label, value]) => (
+                    <div className="rok-objective-item" key={label}>
+                      <span className="rok-star">{label === 'Objective' ? '⭐' : label === 'Win' ? '✔' : '✘'}</span>
+                      <span><strong>{label}:</strong> {displayText(value)}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div className="detail-section">
                 <h4>Rewards</h4>
@@ -138,14 +173,17 @@ export default function LevelSelect({ studentId, region, onStartLevel, onBack })
 
               <button
                 className="btn-start-stage"
-                onClick={handleStartStage}
-                disabled={prefetching}
+                onClick={() => selectedSpec && setShowMissionModal(true)}
+                disabled={prefetching || !selectedSpec}
               >
-                {prefetching ? 'LOADING…' : 'START STAGE'}
+                {prefetching ? 'LOADING…' : 'VIEW MISSION'}
+              </button>
+              <button className="btn-cancel-preview" onClick={cancelPreview} disabled={prefetching}>
+                CANCEL
               </button>
             </>
           ) : (
-            <p className="detail-placeholder">Select a level to view details</p>
+            <p className="detail-placeholder">Select an unlocked level to load its challenge and objectives.</p>
           )}
         </div>
       </div>

@@ -1,14 +1,8 @@
 """Manifest-backed fallback game loader — §14/§15.
 
-Trusts `data/manifest.json` as the single source of truth, with three
-layers of path resolution to survive real-world drift:
-
-  1. Exact match on `entry["path"]` (canonical — what we want).
-  2. Difficulty-directory substitution. The on-disk directory is
-     `NeedAssistance` (camelCase), but a regenerated manifest might
-     use `needs_support` (API token). Same for `Advance` vs `advanced`.
-  3. Case-insensitive per-component walk. Catches OneDrive casing
-     quirks and any other surprises.
+Uses the week/level/difficulty directory layout to locate files, then uses
+the manifest for identity and game metadata. Pool files are indexed once
+by their embedded file_id; manifest entries do not store filesystem paths.
 
 Missing / malformed files are logged into `Registry.missing` /
 `invalid_entries` / `duplicate_entries`, never fatal.
@@ -50,22 +44,10 @@ _DIFFICULTY_ALIASES = {
 }
 
 # Canonical on-disk directory name for each API token.
-# If a regenerated manifest writes `needs_support` into the path, this is
-# how we find the real file.
 _ON_DISK_DIRNAME = {
-    "needs_support": "NeedAssistance",
+    "needs_support": "needs_support",
     "standard":      "standard",
     "advanced":      "advanced",
-}
-
-# Filename/directory tokens that should be swapped to the on-disk casing.
-_NEEDS_SUPPORT_TOKENS = {
-    "needs_support",
-    "needassistance",
-    "need_assistance",
-    "need-assistance",
-    "needsupport",
-    "need support",
 }
 
 _GAME_TEXT_FIELDS = (
@@ -116,58 +98,45 @@ def _norm_difficulty(raw: str) -> str:
         raise ValueError(f"unknown difficulty token {raw!r}")
 
 
-def _resolve_path(repo_root: Path, entry: dict) -> Path | None:
-    """Resolve `entry["path"]` to a file that exists, tolerating
-    difficulty-directory drift and casing differences.
-    """
-    raw = entry["path"]
-
-    # 1. Exact match — canonical path.
-    exact = repo_root / raw
-    if exact.exists():
-        return exact
-
-    # 2. Difficulty-directory substitution.
-    # The on-disk directory for needs_support is `NeedAssistance`, so if
-    # the manifest writes `needs_support`, swap it.
-    parts = list(Path(raw).parts)
-    diff = _norm_difficulty(entry["difficulty"])
-    target = _ON_DISK_DIRNAME[diff]
-
-    for i, part in enumerate(parts):
-        if part.lower().replace("-", "_").replace(" ", "_") in {
-            "needs_support", "needassistance", "needsupport", "need_assistance",
-        }:
-            parts[i] = target
-        elif part.lower() in {"advance", "advanced"} and diff == "advanced":
-            parts[i] = "advanced"
-
-    candidate = repo_root.joinpath(*parts)
-    if candidate.exists():
-        return candidate
-
-    # 3. Last resort: case-insensitive per-component walk.
-    current = repo_root
-    for comp in parts:
-        if not current.is_dir():
-            return None
-        direct = current / comp
-        if direct.exists():
-            current = direct
-            continue
-        match = None
+def _index_pool_files(repo_root: Path) -> tuple[dict[str, Path], set[str]]:
+    """Index nested fallback files by embedded identity, without manifest paths."""
+    pool_root = repo_root / "data" / "fallback_pool"
+    by_id: dict[str, Path] = {}
+    duplicates: set[str] = set()
+    if not pool_root.is_dir():
+        return by_id, duplicates
+    for path in pool_root.glob("week_*/level*/*/*.json"):
         try:
-            for child in current.iterdir():
-                if child.name.lower() == comp.lower():
-                    match = child
-                    break
-        except OSError:
-            return None
-        if match is None:
-            return None
-        current = match
+            spec = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        file_id = str(spec.get("file_id") or "") if isinstance(spec, dict) else ""
+        if not file_id:
+            continue
+        if file_id in by_id:
+            duplicates.add(file_id)
+            by_id.pop(file_id, None)
+        elif file_id not in duplicates:
+            by_id[file_id] = path
+    return by_id, duplicates
 
-    return current if current.exists() else None
+
+def _resolve_path(repo_root: Path, entry: dict, indexed_paths: dict[str, Path]) -> Path | None:
+    """Find an identity only inside its expected week/level/difficulty folder."""
+    try:
+        week = int(entry["week"])
+        level = int(entry["level"])
+        difficulty = _norm_difficulty(entry["difficulty"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    expected_dir = repo_root / "data" / "fallback_pool" / f"week_{week}" / f"level{level}" / _ON_DISK_DIRNAME[difficulty]
+    path = indexed_paths.get(str(entry.get("file_id") or ""))
+    if path is None:
+        return None
+    try:
+        return path if path.parent.resolve() == expected_dir.resolve() else None
+    except OSError:
+        return None
 
 
 class Registry:
@@ -204,7 +173,7 @@ class Registry:
             "level": level,
             "difficulty": diff,
             "unique_identity_key": entry["unique_identity_key"],
-            "source_path": entry["path"],
+            "source_path": entry["source_path"],
             "metadata": {
                 "week": week,
                 "level": level,
@@ -261,6 +230,7 @@ class Registry:
             "mission_type": metadata.get("mission_type", spec.get("mission_type")),
             "genre": spec.get("genre"),
             "region": metadata.get("region", spec.get("region")),
+            "source_path": spec.get("source_path"),
         }
 
     def list_games(
@@ -349,18 +319,17 @@ def load_registry(repo_root: Path | None = None) -> Registry:
     entries = json.loads(manifest_path.read_text(encoding="utf-8"))
     reg = Registry()
     reg.attempted = len(entries)
+    indexed_paths, duplicate_file_ids = _index_pool_files(repo_root)
+    if duplicate_file_ids:
+        print(f"[manifest] duplicate file_id values in fallback files: {len(duplicate_file_ids)}")
 
     for entry in entries:
-        file_path = _resolve_path(repo_root, entry)
+        file_path = _resolve_path(repo_root, entry, indexed_paths)
         if file_path is None:
-            reg.record_missing(
-                entry["file_id"],
-                str(repo_root / entry["path"]),
-                "not found (exact, substituted, and case-insensitive all failed)",
-            )
+            expected = repo_root / "data" / "fallback_pool" / f"week_{entry.get('week')}" / f"level{entry.get('level')}"
+            reg.record_missing(entry["file_id"], str(expected), "no matching file_id under its week/level/difficulty folder")
             continue
-        if file_path != repo_root / entry["path"]:
-            reg.recovered += 1
+        runtime_entry = {**entry, "source_path": file_path.relative_to(repo_root).as_posix()}
 
         try:
             spec = json.loads(file_path.read_text(encoding="utf-8"))
@@ -376,13 +345,13 @@ def load_registry(repo_root: Path | None = None) -> Registry:
                 f"{entry['file_id']}: {file_path} (not a JSON object)"
             )
             continue
-        validation_error = validate_game_definition(entry, spec)
+        validation_error = validate_game_definition(runtime_entry, spec)
         if validation_error:
             reg.invalid += 1
             reg.invalid_entries.append(f"{entry['file_id']}: {file_path} ({validation_error})")
             continue
         try:
-            reg.add(entry, spec)
+            reg.add(runtime_entry, spec)
         except ValueError as exc:
             reg.duplicate_entries.append(
                 f"{entry['file_id']}: {file_path} ({exc})"

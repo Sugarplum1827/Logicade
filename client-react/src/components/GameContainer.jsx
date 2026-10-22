@@ -23,37 +23,6 @@ function loadSpriteRegistry() {
   return spriteRegistryPromise;
 }
 
-async function resolveDifficulty(studentId, week, level) {
-  if (level <= 1) return 'standard';
-  try {
-    const db = await window.LogiCadeDB.openDB();
-    const summaries = await new Promise((res, rej) => {
-      const tx = db.transaction('level_summary', 'readonly');
-      const req = tx.objectStore('level_summary').getAll();
-      req.onsuccess = () => res(req.result || []);
-      req.onerror = () => rej(req.error);
-    });
-    const forWeek = summaries.filter(
-      (s) => s.student_id === studentId && s.week === week,
-    );
-    if (forWeek.length === 0) return 'standard';
-    forWeek.sort((a, b) => (b.level_index ?? 0) - (a.level_index ?? 0));
-    const last = forWeek[0];
-    const next = window.LogiCadeDifficulty.nextDifficulty(
-      last.first_attempt_accuracy ?? 0.7,
-      last.repeats_this_level ?? 0,
-      last.total_errors ?? 0,
-    );
-    console.log(
-      `[GameContainer] difficulty=${next} (acc=${last.first_attempt_accuracy}, repeats=${last.repeats_this_level})`,
-    );
-    return next;
-  } catch (err) {
-    console.warn('[GameContainer] difficulty lookup failed:', err);
-    return 'standard';
-  }
-}
-
 export default function GameContainer({
   studentId,
   region,
@@ -61,6 +30,7 @@ export default function GameContainer({
   levelId,
   preloadedSpec,
   preloadedMeta,
+  pauseForTutorial,
   onSpecLoaded,
 }) {
   const gameRef = useRef(null);
@@ -79,31 +49,10 @@ export default function GameContainer({
         window.LogiCadeSync?.init();
         const manifest = await loadSpriteRegistry();
 
-        let spec = preloadedSpec;
+        const spec = preloadedSpec;
         let meta =
           preloadedMeta || { verification_result: 'pass', model_tag: 'preloaded' };
-
-        if (!spec) {
-          const week = region?.week || 1;
-          const difficulty = await resolveDifficulty(studentId, week, level);
-          console.log(
-            `[GameContainer] Fetching week=${week} level=${level} difficulty=${difficulty} from /serve…`,
-          );
-          const specRes = await fetch('/serve', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              student_id: studentId,
-              week,
-              level,
-              difficulty,
-            }),
-          });
-          if (!specRes.ok) throw new Error(`/serve ${specRes.status}`);
-          const data = await specRes.json();
-          spec = data.spec;
-          meta = data.meta;
-        }
+        if (!spec) throw new Error('No game JSON was selected. Return to level select and choose a level again.');
 
         if (!isMounted) return;
 
@@ -135,6 +84,7 @@ export default function GameContainer({
               g.registry.set('manifest', manifest);
               g.registry.set('spec', spec);
               g.registry.set('meta', meta);
+              g.registry.set('pause_for_tutorial', pauseForTutorial);
             },
           },
         };

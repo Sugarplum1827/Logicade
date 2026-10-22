@@ -123,6 +123,14 @@ export class GameScene extends Phaser.Scene {
 
     this.cameras.main.setBackgroundColor('#1a1a2e');
 
+    if (this.registry.get('pause_for_tutorial')) {
+      this.state.paused = true;
+      this.physics.pause();
+      this.tweens.pauseAll();
+      this.time.paused = true;
+      window.dispatchEvent(new Event('logicade:tutorial_ready'));
+    }
+
     this.events.once('shutdown', () => {
       window.removeEventListener('logicade:gate_resolved', this._onGateResult);
       window.removeEventListener('logicade:pause_game', this._pauseHandler);

@@ -148,13 +148,15 @@ class LLMClient:
         }
 
     async def generate_template_game(
-        self, week: int, level: int, difficulty: str,
+        self, week: int, level: int, difficulty: str, *, template_spec: dict | None = None,
     ) -> tuple[dict, dict]:
-        """Generate one complete catalogue game from its matching JSON template."""
+        """Generate a complete game from a supplied source JSON or matching template."""
         print(f"[llm] template generation start week={week} level={level} difficulty={difficulty} model={self.model_tag or self.model}")
-        template = _load_game_template(week, level, difficulty)
+        template = copy.deepcopy(template_spec) if template_spec is not None else _load_game_template(week, level, difficulty)
         template.setdefault("code_snippet", template.get("ui", {}).get("code_snippet", ""))
-        game_id = f"llm_w{week}_l{level}_{difficulty}_{uuid.uuid4().hex[:10]}"
+        # A replacement retains the source catalogue identity. New identities are
+        # only needed for the legacy template-only generation pathway.
+        game_id = str(template.get("file_id") or template.get("game_id") or f"llm_w{week}_l{level}_{difficulty}_{uuid.uuid4().hex[:10]}")
         mission_types = (
             "Survival Siege", "Streak Challenge", "Resource Rush",
             "Rival Race", "Efficiency Trial",
@@ -188,10 +190,10 @@ class LLMClient:
         spec = generated or copy.deepcopy(template)
         spec["week"] = week
         spec["level"] = level
-        spec["difficulty"] = difficulty
+        spec["difficulty"] = template.get("difficulty", difficulty)
         spec["file_id"] = game_id
-        spec["game_id"] = game_id
-        spec["unique_identity_key"] = f"LLM-{game_id}"
+        spec["game_id"] = template.get("game_id", game_id)
+        spec["unique_identity_key"] = template.get("unique_identity_key", f"LLM-{game_id}")
         spec["is_fallback"] = fallback
         mission_type = spec.get("mission_type")
         if mission_type not in mission_types:

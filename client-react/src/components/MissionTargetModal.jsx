@@ -3,8 +3,7 @@
  * All content read from the spec JSON; no synthesis.
  *
  * Priority:
- *   objectives : tutorial (3 steps) > secondary_objectives > single
- *                player_objective > neutral defaults
+ *   objectives : secondary_objectives > single player_objective > defaults
  *   hint       : player_objective > hint > neutral default
  */
 function toDisplayText(value) {
@@ -23,9 +22,7 @@ function toDisplayText(value) {
 
 export default function MissionTargetModal({ spec, onStart, onCancel }) {
   let objectives;
-  if (Array.isArray(spec?.tutorial) && spec.tutorial.length > 0) {
-    objectives = spec.tutorial;
-  } else if (
+  if (
     Array.isArray(spec?.secondary_objectives) &&
     spec.secondary_objectives.length > 0
   ) {
@@ -49,21 +46,18 @@ export default function MissionTargetModal({ spec, onStart, onCancel }) {
     'Deploy your troops and clear the level.';
 
   return (
-    <div className="modal-overlay" style={{ zIndex: 2000 }}>
-      <div className="rok-modal">
+    <div
+      className="modal-overlay"
+      style={{ zIndex: 2000, background: 'rgba(0, 0, 0, .42)' }}
+      onClick={(event) => {
+        if (!event.target.closest('.rok-content')) onCancel?.();
+      }}
+    >
+      <div className="rok-modal" role="dialog" aria-modal="true" aria-label="Mission Target">
         <div className="rok-ribbon">Mission Target</div>
 
         <div className="rok-content">
           <p className="rok-hint">{hintText}</p>
-
-          {spec?.source_path && (
-            <div className="mission-json-source">
-              <span>Challenge JSON</span>
-              <a href={`/${spec.source_path.replaceAll('\\', '/')}`} target="_blank" rel="noreferrer">
-                {spec.source_path.split(/[\\/]/).pop()}
-              </a>
-            </div>
-          )}
 
           <div className="rok-objectives">
             {rows.map((text, i) =>

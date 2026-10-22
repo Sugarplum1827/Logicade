@@ -18,7 +18,7 @@ window.LogiCadeSync = (function () {
     const BATCH_SIZE = 50;
 
     // Tables in dependency order — parents must sync before children
-    const TABLE_ORDER = ['students', 'levels', 'level_attempts', 'events'];
+    const TABLE_ORDER = ['students', 'levels', 'level_attempts', 'events', 'coin_transactions'];
 
     let draining = false;
     let initialized = false;

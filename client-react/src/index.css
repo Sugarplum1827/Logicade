@@ -135,6 +135,92 @@ button {
 }
 .music-start-prompt:hover { background: #2e7d32; }
 
+.game-tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2200;
+  display: grid;
+  place-items: center;
+  padding: clamp(10px, 3vw, 28px);
+  background: rgba(5, 10, 15, .72);
+}
+.game-tutorial-card {
+  width: min(760px, 100%);
+  max-height: min(90dvh, 780px);
+  overflow-y: auto;
+  padding: clamp(12px, 2vw, 20px);
+  border: 5px solid #d5d5d5;
+  outline: 3px solid #343434;
+  background: linear-gradient(#f4f4f4 0 54px, #e8e8e8 54px 100%);
+  box-shadow: 0 12px 0 rgba(0, 0, 0, .4);
+  color: #242424;
+  font-family: var(--font-pixel);
+}
+.game-tutorial-title {
+  margin: 0 0 10px;
+  padding: 2px 4px 10px;
+  border-bottom: 4px solid #bcbcbc;
+  color: #383838;
+  text-align: center;
+  font-size: clamp(18px, 4vw, 30px);
+}
+.game-tutorial-steps { display: grid; gap: 8px; }
+.game-tutorial-step {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 36px minmax(125px, .8fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 94px;
+  padding: 10px;
+  border-bottom: 3px solid rgba(80, 80, 80, .16);
+}
+.game-tutorial-number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 3px solid #aaa;
+  border-radius: 50%;
+  background: #fff;
+  color: #555;
+  font-size: 20px;
+}
+.game-tutorial-step p { margin: 0; font-family: Arial, sans-serif; font-size: clamp(14px, 2vw, 18px); line-height: 1.35; }
+.game-tutorial-arrow { color: #777; text-align: center; font: bold 30px Arial, sans-serif; }
+.game-tutorial-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 8px;
+  border: 2px solid rgba(60, 60, 60, .16);
+  background: rgba(255, 255, 255, .46);
+  text-align: center;
+  font-size: clamp(8px, 1.5vw, 11px);
+}
+.game-tutorial-action-icon { font-size: 27px; }
+.game-tutorial-controls {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, .55);
+  font: 14px/1.4 Arial, sans-serif;
+}
+.game-tutorial-controls strong { margin-right: 8px; font: 10px var(--font-pixel); }
+.game-tutorial-start {
+  display: block;
+  width: min(280px, 90%);
+  min-height: 56px;
+  margin: 12px auto 0;
+  border: 3px solid #b7b7b7;
+  background: linear-gradient(#fafafa, #ccc);
+  color: #333;
+  font: clamp(18px, 4vw, 28px) var(--font-pixel);
+  cursor: pointer;
+  box-shadow: 0 4px 0 #888;
+}
+.game-tutorial-start:hover { background: #fff; }
+
 .btn-get-started {
   background: var(--gold);
   color: var(--text-dark);
@@ -818,9 +904,14 @@ button {
 }
 
 /* All direct children sit above the overlay */
-.level-select-screen > * {
+.level-select-screen > *:not(.modal-overlay) {
   position: relative;
   z-index: 1;
+}
+.level-select-screen > .modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
 }
 
 .level-header {
@@ -918,6 +1009,8 @@ button {
   flex-direction: column;
   animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+.pause-exit-content { min-height: 220px; justify-content: center; }
+.pause-exit-modal .rok-ribbon { font-size: clamp(18px, 3vw, 24px); }
 
 /* The Victory/Defeat or Mission Target Ribbon */
 .rok-ribbon {
@@ -1031,6 +1124,27 @@ button {
   cursor: pointer; box-shadow: 0 4px 0 #1b5e20; width: 100%;
 }
 .btn-start-stage:hover { background: #388e3c; }
+.btn-start-stage:disabled { opacity: .6; cursor: wait; }
+.btn-cancel-preview {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border: 2px solid #6e1b1b;
+  border-radius: 6px;
+  background: #c62828;
+  color: #fff;
+  font: 12px var(--font-pixel);
+  cursor: pointer;
+  box-shadow: 0 4px 0 #8e0000;
+}
+.btn-cancel-preview:disabled { opacity: .55; cursor: wait; }
+.level-preview-objectives { gap: 8px; }
+.level-preview-objectives .rok-objective-item {
+  min-height: auto;
+  margin: 0;
+  padding: 7px 0;
+  font-size: 13px;
+}
 .level-node.selected { border-color: #ffca28; background: #fff59d; box-shadow: 0 8px 0 #b28704, 0 0 20px #ffca28; transform: translateY(-4px); }
 
 /* In-Game HTML Back Button */
@@ -1289,6 +1403,20 @@ button {
   .level-header { margin-bottom: 8px; }
   .levels-grid { gap: 8px; }
   .level-node { padding: 6px; }
+}
+
+@media (max-width: 600px) {
+  .game-tutorial-card { border-width: 3px; padding: 9px; }
+  .game-tutorial-step {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 7px;
+    padding: 8px 4px;
+  }
+  .game-tutorial-number { width: 30px; height: 30px; font-size: 16px; }
+  .game-tutorial-arrow { display: none; }
+  .game-tutorial-action { grid-column: 2; justify-content: flex-start; min-height: 42px; }
+  .game-tutorial-action-icon { font-size: 22px; }
+  .pause-exit-content { min-height: 170px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

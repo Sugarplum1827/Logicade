@@ -41,19 +41,14 @@ def read_json(path: Path, errors: list[str]):
         return None
 
 
-def resolve_pool_path(raw: str) -> Path:
-    candidate = ROOT / raw
-    if candidate.exists():
-        return candidate
-    parts = Path(raw).parts
-    repaired = []
-    for part in parts:
-        token = part.casefold().replace("-", "_").replace(" ", "_")
-        if token in {"needs_support", "need_assistance", "needassistance", "needsupport"}:
-            repaired.append("NeedAssistance")
-        else:
-            repaired.append(part)
-    return ROOT.joinpath(*repaired)
+def index_pool_files() -> dict[str, Path]:
+    """Index game JSON by its embedded identity; folder layout supplies location."""
+    files: dict[str, Path] = {}
+    for path in POOL.glob("week_*/level*/*/*.json"):
+        spec = read_json(path, [])
+        if isinstance(spec, dict) and spec.get("file_id"):
+            files[str(spec["file_id"])] = path
+    return files
 
 
 def validate() -> tuple[int, int, list[str]]:
@@ -65,8 +60,9 @@ def validate() -> tuple[int, int, list[str]]:
     ids: set[str] = set()
     identities: set[str] = set()
     buckets: Counter[tuple[int, int, str]] = Counter()
+    pool_files = index_pool_files()
     for entry in manifest:
-        required = {"file_id", "unique_identity_key", "path", "week", "level", "difficulty", "primary_mechanic", "mission_type"}
+        required = {"file_id", "unique_identity_key", "week", "level", "difficulty", "primary_mechanic", "mission_type"}
         missing = required - set(entry)
         if missing:
             errors.append(f"manifest entry missing fields: {sorted(missing)}")
@@ -82,9 +78,10 @@ def validate() -> tuple[int, int, list[str]]:
             errors.append(f"{entry['file_id']}: unknown difficulty {entry['difficulty']!r}")
             continue
         buckets[(int(entry["week"]), int(entry["level"]), difficulty)] += 1
-        file_path = resolve_pool_path(entry["path"]).resolve()
-        if not file_path.is_relative_to(POOL.resolve()):
-            errors.append(f"{entry['file_id']}: manifest path escapes fallback_pool")
+        file_path = pool_files.get(str(entry["file_id"]))
+        expected_dir = POOL / f"week_{int(entry['week'])}" / f"level{int(entry['level'])}" / difficulty
+        if file_path is None or file_path.parent.resolve() != expected_dir.resolve():
+            errors.append(f"{entry['file_id']}: no matching JSON in {expected_dir.relative_to(ROOT)}")
             continue
         spec = read_json(file_path, errors)
         if not isinstance(spec, dict):
@@ -137,4 +134,4 @@ if __name__ == "__main__":
         if len(issues) > 100:
             print(f" - ... {len(issues) - 100} additional issue(s)")
         raise SystemExit(1)
-    print("All manifest references, identities, buckets, and required data fields are valid.")
+    print("All identity lookups, directory buckets, and required data fields are valid.")

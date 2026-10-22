@@ -84,6 +84,34 @@ window.LogiCadeWrite = (function () {
     return jobs[0].job_id;
   }
 
+  async function recordCoinTransaction({
+    studentId, amount, reason, levelId = null, attemptId = null, source = 'gameplay',
+  }) {
+    if (!studentId || !Number.isInteger(amount) || amount === 0 || !reason) return null;
+    const db = await LogiCadeDB.openDB();
+    const createdAt = new Date().toISOString();
+    const row = {
+      transaction_id: crypto.randomUUID(), student_id: studentId, amount, reason,
+      source, level_id: levelId, attempt_id: attemptId, event_id: null,
+      actor_id: null, created_at: createdAt,
+    };
+    const job = {
+      job_id: crypto.randomUUID(), created_at: createdAt, table: 'coin_transactions',
+      op: 'upsert', payload: row, status: 'pending', attempts: 0,
+      last_error: null, next_retry_at: null,
+    };
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction(['coin_transactions', 'sync_queue'], 'readwrite');
+      tx.objectStore('coin_transactions').put(row);
+      tx.objectStore('sync_queue').put(job);
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error || new Error('coin transaction save aborted'));
+    });
+    window.LogiCadeSync?.drainQueue().catch(() => {});
+    return row;
+  }
+
   // ── Shared high-level persistence — call from any scene's _finish() ──
   async function persistAttempt({
     studentId, levelId, week, difficulty,
@@ -215,6 +243,10 @@ window.LogiCadeWrite = (function () {
       hint_count: hintCount ?? 0,
       activity_retries: 0,
       completed: !!won,
+      status: won ? 'completed' : 'failed',
+      restart_count: 0,
+      question_retry_count: 0,
+      origin: navigator.onLine ? 'online' : 'offline',
       started_at: startedAt.toISOString(),
       ended_at: endedAt.toISOString(),
       // Local-only fields — stripped before sync by recordAttempt()
@@ -239,5 +271,5 @@ window.LogiCadeWrite = (function () {
     return attempt;
   }
 
-  return { recordAttempt, ensureStudent, persistAttempt };
+  return { recordAttempt, ensureStudent, persistAttempt, recordCoinTransaction };
 })();

@@ -2,12 +2,12 @@
  * GameResultModal — every label is read from the spec JSON, never
  * synthesized. Supports both puzzle-style specs (win/hint) and
  * mission-style specs (player_objective/win_condition/lose_condition/
- * tutorial/secondary_objectives).
+ * secondary_objectives).
  *
  * Source priority per label:
  *   primary   : player_objective > win_condition > win > lose_condition
  *   lose      : lose_condition
- *   secondary : secondary_objectives > tutorial > [] (nothing shown)
+ *   secondary : secondary_objectives > [] (nothing shown)
  */
 
 function toDisplayText(value) {
@@ -49,14 +49,11 @@ export default function GameResultModal({
 
   const loseLabel = !won ? toDisplayText(spec?.lose_condition) : '';
 
-  // Secondary objectives: prefer explicit secondary_objectives, then
-  // fall back to tutorial steps (both are natural plural lists).
+  // Tutorial steps are shown before play in the in-game tutorial overlay.
   const secondaryObjectives =
     Array.isArray(spec?.secondary_objectives) && spec.secondary_objectives.length > 0
       ? spec.secondary_objectives
-      : Array.isArray(spec?.tutorial)
-        ? spec.tutorial
-        : [];
+      : [];
 
   const scoreDisplay = `${Math.round(score * 100)}%`;
 

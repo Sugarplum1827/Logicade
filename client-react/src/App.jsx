@@ -12,6 +12,7 @@ import CodeGateModal from './components/CodeGateModal';
 import PauseExitModal from './components/PauseExitModal';
 import GameResultModal from './components/GameResultModal';
 import HintConfirmModal from './components/HintConfirmModal';
+import GameTutorialModal from './components/GameTutorialModal';
 import { playButtonClick } from './game/audio';
 
 const MAX_LEVEL = 10;
@@ -48,6 +49,7 @@ export default function App() {
   const [gameSessionId, setGameSessionId] = useState(0);
   const [pageWipe, setPageWipe] = useState(null);
   const navigationBusy = useRef(false);
+  const gameActionBusy = useRef(false);
 
   const [activeGate, setActiveGate] = useState(null);
 
@@ -57,6 +59,8 @@ export default function App() {
   const [playerLevel, setPlayerLevel] = useState(1);
 
   const [showPauseExit, setShowPauseExit] = useState(false);
+  const [tutorialPending, setTutorialPending] = useState(false);
+  const [showGameTutorial, setShowGameTutorial] = useState(false);
   const [showHintModal, setShowHintModal] = useState(false);
   const [gameResult, setGameResult] = useState(null);
   const backgroundMusicRef = useRef(null);
@@ -197,10 +201,12 @@ export default function App() {
     const handleGate = (e) => setActiveGate(e.detail);
     const handleCoinsUpdate = (e) => setCoins(e.detail.coins);
     const handleGamePaused = () => setShowPauseExit(true);
+    const handleTutorialReady = () => setShowGameTutorial(true);
 
     const handleGameOver = (e) => {
       const result = e.detail;
       console.log('[App] game_over received:', result);
+      setShowGameTutorial(false);
 
       if (result.spec) setCurrentSpec(result.spec);
 
@@ -231,6 +237,12 @@ export default function App() {
 
             const newCoins = coins + coinReward;
             setCoins(newCoins);
+            window.LogiCadeWrite?.recordCoinTransaction({
+              studentId,
+              amount: coinReward,
+              reason: 'first_level_completion_reward',
+              levelId: currentLevelId,
+            }).catch((err) => console.warn('[wallet] reward queued locally but could not be recorded:', err));
 
             let newXp = xp + xpReward;
             let newPlayerLevel = playerLevel;
@@ -255,14 +267,16 @@ export default function App() {
     window.addEventListener('logicade:coins_updated', handleCoinsUpdate);
     window.addEventListener('logicade:game_over', handleGameOver);
     window.addEventListener('logicade:game_paused', handleGamePaused);
+    window.addEventListener('logicade:tutorial_ready', handleTutorialReady);
 
     return () => {
       window.removeEventListener('logicade:gate_opened', handleGate);
       window.removeEventListener('logicade:coins_updated', handleCoinsUpdate);
       window.removeEventListener('logicade:game_over', handleGameOver);
       window.removeEventListener('logicade:game_paused', handleGamePaused);
+      window.removeEventListener('logicade:tutorial_ready', handleTutorialReady);
     };
-  }, [selectedRegion, currentLevel, studentId, coins, xp, playerLevel]);
+  }, [selectedRegion, currentLevel, currentLevelId, studentId, coins, xp, playerLevel]);
 
   // ── Auth / avatar ─────────────────────────────────────────────
   const migrateLegacyProgress = (studentId) => {
@@ -308,16 +322,8 @@ export default function App() {
     }
 
     transitionTo('subject');
-    fetch('/reset_pools', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ student_id: id }),
-    }).catch((err) => console.warn('[reset_pools] failed:', err));
-    fetch('/warm_pool', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ student_id: id, weeks: [1, 2, 3] }),
-    }).catch((err) => console.warn('[warm_pool] failed:', err));
+    // Login is not a generation action. LLM work is requested explicitly
+    // through the game repeat flow so opening the app cannot start generation.
   };
 
   const handleNewUser = (id) => {
@@ -365,19 +371,49 @@ export default function App() {
     setCurrentLevelId(crypto.randomUUID());
     setGameSessionId((prev) => prev + 1);
     setGameResult(null);
+    setShowPauseExit(false);
+    setShowGameTutorial(false);
+    setTutorialPending(true);
     transitionTo('game');
   };
 
   const handleExitGame = () => {
     setShowPauseExit(false);
+    setShowGameTutorial(false);
+    setTutorialPending(false);
     setGameResult(null);
     setCurrentSpec(null);
     setCurrentMeta(null);
     transitionTo('level');
   };
 
-  const handleRestartGame = () => {
+  const regenerateCurrentGame = async (actionName) => {
+    const fileId = currentSpec?.file_id || currentSpec?.game_id;
+    if (fileId && String(currentSpec?.source_path || '').replaceAll('\\', '/').startsWith('data/fallback_pool/')) {
+      try {
+        const response = await fetch('/api/games/regenerate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ file_id: fileId, request_id: crypto.randomUUID() }),
+        });
+        if (!response.ok) throw new Error(`Game generation failed for ${actionName} (${response.status})`);
+        const data = await response.json();
+        if (data.spec) {
+          setCurrentSpec(data.spec);
+          setCurrentMeta(data.meta || null);
+        }
+      } catch (error) {
+        // Keep the requested modal action usable if generation is unavailable.
+        console.warn(`[game action] generation unavailable for ${actionName}; continuing with the loaded JSON:`, error);
+      }
+    }
+  };
+
+  const handleReplayLevel = async () => {
+    await regenerateCurrentGame('Repeat');
     setShowPauseExit(false);
+    setShowGameTutorial(false);
+    setTutorialPending(true);
     setGameResult(null);
     setGameSessionId((prev) => prev + 1);
   };
@@ -396,14 +432,38 @@ export default function App() {
     transitionTo('level');
   };
 
-  const handleRepeatLevel = () => {
-    setGameResult(null);
-    setGameSessionId((prev) => prev + 1);
+  const afterMarkingGameUsed = async (action) => {
+    if (gameActionBusy.current) return;
+    gameActionBusy.current = true;
+    try {
+      const fileId = currentSpec?.file_id || currentSpec?.game_id;
+      if (fileId) {
+        try {
+          const response = await fetch('/api/games/mark-used', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ file_id: fileId }),
+          });
+          if (!response.ok) throw new Error(`mark-used failed (${response.status})`);
+        } catch (error) {
+          console.warn('[game usage] could not mark JSON as used:', error);
+        }
+      }
+      await action();
+    } finally {
+      gameActionBusy.current = false;
+    }
   };
 
   const handleUseHint = () => {
     if (coins < 1 || !currentSpec) return;
     setCoins(coins - 1);
+    window.LogiCadeWrite?.recordCoinTransaction({
+      studentId,
+      amount: -1,
+      reason: 'hint_used',
+      levelId: currentLevelId,
+    }).catch((err) => console.warn('[wallet] hint spend queued locally but could not be recorded:', err));
     setShowHintModal(false);
     window.dispatchEvent(
       new CustomEvent('logicade:show_hint', {
@@ -501,10 +561,22 @@ export default function App() {
               levelId={currentLevelId}
               preloadedSpec={currentSpec}
               preloadedMeta={currentMeta}
+              pauseForTutorial={tutorialPending}
               onSpecLoaded={handleSpecLoaded}
             />
           </Suspense>
         </div>
+      )}
+
+      {view === 'game' && showGameTutorial && (
+        <GameTutorialModal
+          spec={currentSpec}
+          onStart={() => {
+            setShowGameTutorial(false);
+            setTutorialPending(false);
+            window.dispatchEvent(new Event('logicade:resume_game'));
+          }}
+        />
       )}
 
       {activeGate && (
@@ -534,8 +606,8 @@ export default function App() {
             setShowPauseExit(false);
             window.dispatchEvent(new Event('logicade:resume_game'));
           }}
-          onRestart={handleRestartGame}
-          onExit={handleExitGame}
+          onRestart={() => afterMarkingGameUsed(handleReplayLevel)}
+          onExit={() => afterMarkingGameUsed(handleExitGame)}
         />
       )}
 
@@ -543,9 +615,9 @@ export default function App() {
         <GameResultModal
           result={gameResult}
           spec={currentSpec}
-          onNext={handleNextLevel}
-          onRepeat={handleRepeatLevel}
-          onExit={handleExitGame}
+          onNext={() => afterMarkingGameUsed(handleNextLevel)}
+          onRepeat={() => afterMarkingGameUsed(handleReplayLevel)}
+          onExit={() => afterMarkingGameUsed(handleExitGame)}
         />
       )}
       {pageWipe && (

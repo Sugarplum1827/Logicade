@@ -11,10 +11,10 @@
 
 window.LogiCadeDB = (function () {
     const DB_NAME = 'logicade';
-    const DB_VERSION = 1;
+    const DB_VERSION = 2;
     const STORES = [
         'students', 'levels', 'attempts', 'events',
-        'level_summary', 'week_summary', 'student_summary', 'sync_queue',
+        'level_summary', 'week_summary', 'student_summary', 'sync_queue', 'coin_transactions',
     ];
 
     let dbPromise = null;
@@ -32,6 +32,7 @@ window.LogiCadeDB = (function () {
             else if (store === 'level_summary') keyPath = 'level_id';
             else if (store === 'week_summary') keyPath = ['student_id', 'week'];
             else if (store === 'student_summary') keyPath = 'student_id';
+            else if (store === 'coin_transactions') keyPath = 'transaction_id';
 
             const objStore = db.createObjectStore(store, {keyPath});
 
@@ -46,6 +47,9 @@ window.LogiCadeDB = (function () {
             }
             if (store === 'sync_queue') {
                 objStore.createIndex('status', 'status', {unique: false});
+            }
+            if (store === 'coin_transactions') {
+                objStore.createIndex('student_id', 'student_id', {unique: false});
             }
         }
     }
