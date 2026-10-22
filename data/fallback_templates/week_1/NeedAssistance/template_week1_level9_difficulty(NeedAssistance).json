@@ -1,0 +1,241 @@
+{
+  "template_id": "tmpl_w1_l09_NA",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 1,
+    "level": 9,
+    "difficulty": "Need Assistance"
+  },
+  "file_id": "fallback_0025",
+  "game_title": "Fallback: Memory Map – Royal Stables",
+  "game_concept": "A tower defense set in The Kingdom – Royal Stables, the royal stables: the knight must hold off bandits while practicing variables & assignment. Core idea – Memory Map: Place variable cards on a memory board so the town gate reads the right value at run time.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Royal Stables: the royal stables",
+  "core_gameplay_loop": "In Royal Stables, repeat each round: Place variable cards on a memory board so the town gate reads the right value at run time. Then check y and advance.",
+  "primary_mechanic": "Memory Map",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the town gate from bandits in Royal Stables: keep y above zero until the 76-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "y > 0 && timer >= 76",
+  "lose_condition": "y <= 0 || lives <= 0",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Memory Map",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "FB-W1-L09-NA",
+  "duplicate_check_notes": "Generic fallback template for Week 1, Level 9, Need Assistance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 1,
+  "level": 9,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Variables & Assignment",
+    "Apply “Memory Map” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_knight",
+    "enemy": "kenney_bandits",
+    "objective": "kenney_town_gate",
+    "background": "w1_kingdom",
+    "projectile": "kenney_coins",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "y",
+    "damage_per_attack": 9,
+    "repair_per_action": 8,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 3,
+    "lives": 5,
+    "hint_count": 5,
+    "game_duration_seconds": 76,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Royal Stables: Memory Map",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "x = 4\ny = x * 2",
+    "health_bar": {
+      "visible": true,
+      "label": "y",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "y > 0 && timer < 76",
+      "then": [
+        "y = max(0, y - 9)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Bandits attack the town gate!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "y > 0 && y < 100 && player_energy >= 5",
+      "then": [
+        "y = min(100, y + 8)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "y >= 100",
+      "then": [
+        "show_message('y is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && y < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "show_hint()",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 76 && y > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 3)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "y > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "y <= 30 && y > 0",
+      "then": [
+        "show_warning('y is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 6,
+      "attack_interval_seconds": 1.8
+    },
+    {
+      "wave": 2,
+      "start_time": 25,
+      "enemy_count": 7,
+      "attack_interval_seconds": 1.4
+    },
+    {
+      "wave": 3,
+      "start_time": 51,
+      "enemy_count": 8,
+      "attack_interval_seconds": 1.0
+    }
+  ],
+  "win": "y > 0 && timer >= 76",
+  "lose": "y <= 0 || lives <= 0",
+  "hint": "Read the code panel: Place variable cards on a memory board so the town gate reads the right value at run time. Keep y above zero until the timer reaches 76.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Bandits are coming! Watch the y meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: x = 4"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 76 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Memory Map in The Kingdom!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "y ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

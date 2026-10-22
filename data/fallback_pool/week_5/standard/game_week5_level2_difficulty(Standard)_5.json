@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1245",
+  "game_title": "Loop Picker – Glowing Heartwood Race",
+  "game_concept": "A strategy race set in Mystic Forest – Glowing Heartwood, the glowing ancient tree: the forest ranger must handle shadow wolves while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
+  "genre": "strategy race",
+  "theme": "Mystic Forest – Glowing Heartwood: the glowing ancient tree",
+  "core_gameplay_loop": "In Glowing Heartwood, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round the rival advances, and solving the step moves the forest ranger ahead. Then check the picks_right value and advance.",
+  "primary_mechanic": "Loop Picker",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the spirit shrine by solving code steps involving picks_right that move the forest ranger forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "lose_condition": "The rival reaches the spirit shrine first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Loop Picker",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M15-X5-T01-340dff7c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Rival Race', and setting 'Glowing Heartwood'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 2,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(3):  # known count",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how picks_right changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Glowing Heartwood.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
+  ]
+}

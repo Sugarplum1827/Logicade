@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2057",
+  "game_title": "Index Archery – Moss Library Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Moss Library, a ruined library: the tomb cartographer must handle cursed statues while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Moss Library: a ruined library",
+  "core_gameplay_loop": "In Moss Library, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, cursed statues strike the relic vault, so respond before the next strike lands. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the relic vault from cursed statues in Moss Library: keep the arrows meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 54 seconds while arrows > 0.",
+  "lose_condition": "arrows drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X1-T05-64fe8a67",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Survival Siege', and setting 'Moss Library'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Moss Library.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while arrows > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1118",
+  "game_title": "Dam Filler – Underground River Defense",
+  "game_concept": "A survival strategy set in Shadow Cave – Underground River, a black underground river: the shadow ranger must handle cave spiders while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
+  "genre": "survival strategy",
+  "theme": "Shadow Cave – Underground River: a black underground river",
+  "core_gameplay_loop": "In Underground River, repeat each round: Raise the water level in a loop while level < max, without overflowing. Each round, cave spiders strike the rope bridge, so respond before the next strike lands. Then check the level value and advance.",
+  "primary_mechanic": "Dam Filler",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the rope bridge from cave spiders in Underground River: keep the level meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 71 seconds while level > 0.",
+  "lose_condition": "level drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Dam Filler",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M08-X1-T04-16f88d11",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Survival Siege', and setting 'Underground River'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while level < max_level:\n    level += 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how level changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Underground River.",
+    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while level > 0."
+  ]
+}

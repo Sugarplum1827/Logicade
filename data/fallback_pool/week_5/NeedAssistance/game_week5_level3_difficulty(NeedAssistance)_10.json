@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1270",
+  "game_title": "Filter Harvest – Bramble Maze Rush",
+  "game_concept": "A arcade set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only mana petals that meet a rule.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
+  "core_gameplay_loop": "In Bramble Maze, repeat each round: Combine for and if to harvest only mana petals that meet a rule. Each round, a new mana petals challenge appears; solve it to bank points before time drains. Then check the harvest value and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 130 points of mana petals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 130 within 50 seconds.",
+  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M10-X2-T08-e1323c9f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Resource Rush', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how harvest changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
+    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
+  ]
+}

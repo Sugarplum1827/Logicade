@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2142",
+  "game_title": "Nested Registry – Peak Beacon Defense",
+  "game_concept": "A action defense set in Frost Peaks – Peak Beacon, the beacon on the peak: the sherpa guide must handle ice hawks while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
+  "genre": "action defense",
+  "theme": "Frost Peaks – Peak Beacon: the beacon on the peak",
+  "core_gameplay_loop": "In Peak Beacon, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, ice hawks strike the radio mast, so respond before the next strike lands. Then check the registry value and advance.",
+  "primary_mechanic": "Nested Registry",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the radio mast from ice hawks in Peak Beacon: keep the registry meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 33 seconds while registry > 0.",
+  "lose_condition": "registry drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): Nested Registry",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M12-X1-T20-7d35e910",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Survival Siege', and setting 'Peak Beacon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 2,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "town['inn']['rooms']",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how registry changes.",
+    "Step 2: Use the controls to apply the code idea against ice hawks in Peak Beacon.",
+    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while registry > 0."
+  ]
+}

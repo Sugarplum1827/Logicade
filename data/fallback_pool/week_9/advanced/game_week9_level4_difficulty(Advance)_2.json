@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2512",
+  "game_title": "Integration Heist – Dry Well Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Dry Well.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Dry Well: a nearly dry well",
+  "core_gameplay_loop": "In Dry Well, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Dry Well. Each round, sand wyrms strike the supply tent, so respond before the next strike lands. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the supply tent from sand wyrms in Dry Well: keep the heist meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while heist > 0.",
+  "lose_condition": "heist drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X1-T10-77ec5273",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Survival Siege', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 2,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while heist > 0."
+  ]
+}

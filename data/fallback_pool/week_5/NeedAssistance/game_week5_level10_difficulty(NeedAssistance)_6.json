@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1476",
+  "game_title": "Times Table Garden – Spirit Stream Streak",
+  "game_concept": "A card battler set in Mystic Forest – Spirit Stream, a stream of spirits: the druid must handle thorn goblins while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of acorns using nested for loops for rows and columns.",
+  "genre": "card battler",
+  "theme": "Mystic Forest – Spirit Stream: a stream of spirits",
+  "core_gameplay_loop": "In Spirit Stream, repeat each round: Plant a grid of acorns using nested for loops for rows and columns. Each round poses one decision; a wrong answer breaks the streak. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about garden_cells to power up the druid and open the vine bridge.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X4-T14-3818ee70",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Streak Challenge', and setting 'Spirit Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Spirit Stream.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

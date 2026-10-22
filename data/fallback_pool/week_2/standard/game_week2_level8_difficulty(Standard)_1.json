@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0521",
+  "game_title": "Exponent Engine – Ember Fields Race",
+  "game_concept": "A adventure race set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "adventure race",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "core_gameplay_loop": "In Ember Fields, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round the rival advances, and solving the step moves the ember mage ahead. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the lava bridge by solving code steps involving engine_power that move the ember mage forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the lava bridge first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X5-T05-d5097726",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Rival Race', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

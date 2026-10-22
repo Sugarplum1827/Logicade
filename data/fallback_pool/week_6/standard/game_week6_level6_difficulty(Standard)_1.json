@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1661",
+  "game_title": "Countdown Recursion – Frozen Gatehouse Defense",
+  "game_concept": "A survival strategy set in Snowy Hold – Frozen Gatehouse, the frozen gate of the hold: the hold guard must handle frost imps while practicing functions. Core idea – Countdown Recursion: Use a simple self-calling function to count down to a base case.",
+  "genre": "survival strategy",
+  "theme": "Snowy Hold – Frozen Gatehouse: the frozen gate of the hold",
+  "core_gameplay_loop": "In Frozen Gatehouse, repeat each round: Use a simple self-calling function to count down to a base case. Each round, frost imps strike the frozen well, so respond before the next strike lands. Then check the base_case value and advance.",
+  "primary_mechanic": "Countdown Recursion",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the frozen well from frost imps in Frozen Gatehouse: keep the base_case meter above zero by applying the concept correctly until the 45-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 45 seconds while base_case > 0.",
+  "lose_condition": "base_case drops to 0, or lives reach 0, before the 45-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Countdown Recursion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M11-X1-T01-5fb0a32c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Recursion' (Week 6 slot 11), mission type 'Survival Siege', and setting 'Frozen Gatehouse'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 6,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def down(n):\n    if n == 0:\n        return\n    down(n - 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how base_case changes.",
+    "Step 2: Use the controls to apply the code idea against frost imps in Frozen Gatehouse.",
+    "Step 3: Win by meeting the goal: Timer reaches 45 seconds while base_case > 0."
+  ]
+}

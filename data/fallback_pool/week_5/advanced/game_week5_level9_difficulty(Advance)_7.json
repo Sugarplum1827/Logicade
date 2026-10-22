@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1467",
+  "game_title": "Iteration Tracer – Lantern Path Defense",
+  "game_concept": "A action defense set in Mystic Forest – Lantern Path, a lantern-lit path: the herbalist must handle mischievous sprites while practicing control flow: for loops. Core idea – Iteration Tracer: Predict how many times a loop body runs before the clock stops.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Lantern Path: a lantern-lit path",
+  "core_gameplay_loop": "In Lantern Path, repeat each round: Predict how many times a loop body runs before the clock stops. Each round, mischievous sprites strike the mushroom ring, so respond before the next strike lands. Then check the trace_score value and advance.",
+  "primary_mechanic": "Iteration Tracer",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the mushroom ring from mischievous sprites in Lantern Path: keep the trace_score meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 43 seconds while trace_score > 0.",
+  "lose_condition": "trace_score drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Iteration Tracer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M12-X1-T15-efff6f71",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Iteration Tracer' (Week 5 slot 12), mission type 'Survival Siege', and setting 'Lantern Path'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 9, 3):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_score changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous sprites in Lantern Path.",
+    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while trace_score > 0."
+  ]
+}

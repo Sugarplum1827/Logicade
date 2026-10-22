@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0396",
+  "game_title": "Boolean Circuit – Lava River Crossing Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Lava River Crossing, a river of molten rock: the volcanologist must handle cinder bats while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the forge anvil.",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Lava River Crossing: a river of molten rock",
+  "core_gameplay_loop": "In Lava River Crossing, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the forge anvil. Each round, a new heat shields challenge appears; solve it to bank points before time drains. Then check the power_on value and advance.",
+  "primary_mechanic": "Boolean Circuit",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 150 points of heat shields by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 150 within 55 seconds.",
+  "lose_condition": "Timer hits 0 with score < 150, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Boolean Circuit",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M06-X2-T02-32072120",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Resource Rush', and setting 'Lava River Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 4,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "open = key and not alarm",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power_on changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Lava River Crossing.",
+    "Step 3: Win by meeting the goal: score >= 150 within 55 seconds."
+  ]
+}

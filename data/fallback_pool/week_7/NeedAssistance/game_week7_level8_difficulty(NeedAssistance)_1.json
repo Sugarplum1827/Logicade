@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2011",
+  "game_title": "Backpack Append – Weathered Gate Race",
+  "game_concept": "A racing platformer set in Eldritch Ruins – Weathered Gate, a weathered stone gate: the ruin warden must handle eldritch shades while practicing lists. Core idea – Backpack Append: Use append and remove to manage the ruin warden's backpack list as eldritch shades drop loot.",
+  "genre": "racing platformer",
+  "theme": "Eldritch Ruins – Weathered Gate: a weathered stone gate",
+  "core_gameplay_loop": "In Weathered Gate, repeat each round: Use append and remove to manage the ruin warden's backpack list as eldritch shades drop loot. Each round the rival advances, and solving the step moves the ruin warden ahead. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Beat a rival AI to the relic vault by solving code steps involving bag_space that move the ruin warden forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "lose_condition": "The rival reaches the relic vault first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X5-T15-35746af1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Rival Race', and setting 'Weathered Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Weathered Gate.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
+  ]
+}

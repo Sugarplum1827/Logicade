@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1491",
+  "game_title": "Times Table Garden – Lantern Path Race",
+  "game_concept": "A strategy race set in Mystic Forest – Lantern Path, a lantern-lit path: the herbalist must handle mischievous sprites while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of dewdrops using nested for loops for rows and columns.",
+  "genre": "strategy race",
+  "theme": "Mystic Forest – Lantern Path: a lantern-lit path",
+  "core_gameplay_loop": "In Lantern Path, repeat each round: Plant a grid of dewdrops using nested for loops for rows and columns. Each round the rival advances, and solving the step moves the herbalist ahead. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the mushroom ring by solving code steps involving garden_cells that move the herbalist forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "lose_condition": "The rival reaches the mushroom ring first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X5-T15-341de555",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Rival Race', and setting 'Lantern Path'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous sprites in Lantern Path.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
+  ]
+}

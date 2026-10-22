@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0949",
+  "game_title": "Infinite Loop Trap – Stalactite Hall Trial",
+  "game_concept": "A puzzle set in Shadow Cave – Stalactite Hall, a hall of dripping stalactites: the lantern keeper must handle slime blobs while practicing control flow: while loops. Core idea – Infinite Loop Trap: Find the missing update line that makes a loop never stop, before slime blobs overload Stalactite Hall.",
+  "genre": "puzzle",
+  "theme": "Shadow Cave – Stalactite Hall: a hall of dripping stalactites",
+  "core_gameplay_loop": "In Stalactite Hall, repeat each round: Find the missing update line that makes a loop never stop, before slime blobs overload Stalactite Hall. Each round costs one action, so plan the step so none are wasted. Then check the loop_safety value and advance.",
+  "primary_mechanic": "Infinite Loop Trap",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the cave gate using at most 15 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The cave gate reached with actions_used <= 15.",
+  "lose_condition": "actions_used exceeds 15 before the cave gate is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Infinite Loop Trap",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M04-X3-T05-16b10838",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Infinite Loop Trap' (Week 4 slot 4), mission type 'Efficiency Trial', and setting 'Stalactite Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_safety changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Stalactite Hall.",
+    "Step 3: Win by meeting the goal: The cave gate reached with actions_used <= 15."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0505",
+  "game_title": "Input Interpreter – Molten Bridge Defense",
+  "game_concept": "A tower defense set in Mt. Pyre – Molten Bridge, a bridge over magma: the ember mage must handle magma slimes while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
+  "genre": "tower defense",
+  "theme": "Mt. Pyre – Molten Bridge: a bridge over magma",
+  "core_gameplay_loop": "In Molten Bridge, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round, magma slimes strike the cooling vent, so respond before the next strike lands. Then check the trust value and advance.",
+  "primary_mechanic": "Input Interpreter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the cooling vent from magma slimes in Molten Bridge: keep the trust meter above zero by applying the concept correctly until the 38-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 38 seconds while trust > 0.",
+  "lose_condition": "trust drops to 0, or lives reach 0, before the 38-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Input Interpreter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M10-X1-T17-1169e745",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Survival Siege', and setting 'Molten Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "age = int(input())",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trust changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Molten Bridge.",
+    "Step 3: Win by meeting the goal: Timer reaches 38 seconds while trust > 0."
+  ]
+}

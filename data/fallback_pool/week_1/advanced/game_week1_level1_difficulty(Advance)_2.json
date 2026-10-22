@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0022",
+  "game_title": "Constant Guardian – Moat Bridge Race",
+  "game_concept": "A racing platformer set in The Kingdom – Moat Bridge, the drawbridge over the moat: the town guard must handle rogue crows while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the granary door.",
+  "genre": "racing platformer",
+  "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
+  "core_gameplay_loop": "In Moat Bridge, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the granary door. Each round the rival advances, and solving the step moves the town guard ahead. Then check the energy value and advance.",
+  "primary_mechanic": "Constant Guardian",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the granary door by solving code steps involving energy that move the town guard forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the granary door first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Constant Guardian",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M07-X5-T04-128ba542",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Rival Race', and setting 'Moat Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "MAX_ENERGY = 100\nenergy = 40",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Moat Bridge.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

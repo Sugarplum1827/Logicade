@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2217",
+  "game_title": "Nested Registry – Crevasse Bridge Defense",
+  "game_concept": "A action defense set in Frost Peaks – Crevasse Bridge, a rope bridge over a crevasse: the ice axe ranger must handle falling rocks while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
+  "genre": "action defense",
+  "theme": "Frost Peaks – Crevasse Bridge: a rope bridge over a crevasse",
+  "core_gameplay_loop": "In Crevasse Bridge, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, falling rocks strike the rope bridge, so respond before the next strike lands. Then check the registry value and advance.",
+  "primary_mechanic": "Nested Registry",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the rope bridge from falling rocks in Crevasse Bridge: keep the registry meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while registry > 0.",
+  "lose_condition": "registry drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Nested Registry",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M12-X1-T05-49ed8260",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Survival Siege', and setting 'Crevasse Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "town['inn']['rooms']",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how registry changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Crevasse Bridge.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while registry > 0."
+  ]
+}

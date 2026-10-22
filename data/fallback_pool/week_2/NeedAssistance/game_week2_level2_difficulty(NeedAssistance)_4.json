@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0334",
+  "game_title": "Divide Or Floor – Magma Forge Rush",
+  "game_concept": "A arcade set in Mt. Pyre – Magma Forge, a forge fed by magma: the ash ranger must handle fire sprites while practicing data types & operators. Core idea – Divide Or Floor: Pick / or // to split ember crystals evenly among allies without leaving fractions.",
+  "genre": "arcade",
+  "theme": "Mt. Pyre – Magma Forge: a forge fed by magma",
+  "core_gameplay_loop": "In Magma Forge, repeat each round: Pick / or // to split ember crystals evenly among allies without leaving fractions. Each round, a new ember crystals challenge appears; solve it to bank points before time drains. Then check the share value and advance.",
+  "primary_mechanic": "Divide Or Floor",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 100 points of ember crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 100 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Divide Or Floor",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M04-X2-T04-565c68d8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Divide Or Floor' (Week 2 slot 4), mission type 'Resource Rush', and setting 'Magma Forge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 4,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "share = total // 4",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how share changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Magma Forge.",
+    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
+  ]
+}

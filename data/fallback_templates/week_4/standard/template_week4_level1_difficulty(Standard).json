@@ -1,0 +1,240 @@
+{
+  "template_id": "tmpl_w4_l01_ST",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 4,
+    "level": 1,
+    "difficulty": "Standard"
+  },
+  "file_id": "fallback_0092",
+  "game_title": "Fallback: Door Defense – Torchlit Cave Mouth",
+  "game_concept": "A tower defense set in Shadow Cave – Torchlit Cave Mouth, the torchlit cave entrance: the knight must hold off zombies while practicing control flow: while loops. Core idea – Door Defense: Push to repair the wooden door while the while-loop condition stays true and zombies keep attacking.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Torchlit Cave Mouth: the torchlit cave entrance",
+  "core_gameplay_loop": "In Torchlit Cave Mouth, repeat each round: Push to repair the wooden door while the while-loop condition stays true and zombies keep attacking. Then check door_health and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the wooden door from zombies in Torchlit Cave Mouth: keep door_health above zero until the 30-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "door_health > 0 && timer >= 30",
+  "lose_condition": "door_health <= 0 || lives <= 0",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 1 (intro tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "FB-W4-L01-ST",
+  "duplicate_check_notes": "Generic fallback template for Week 4, Level 1, Standard. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 4,
+  "level": 1,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Control Flow: While Loops",
+    "Apply “Door Defense” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_knight",
+    "enemy": "kenney_zombies",
+    "objective": "kenney_wooden_door",
+    "background": "w4_cave",
+    "projectile": "kenney_arrows",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "door_health",
+    "damage_per_attack": 10,
+    "repair_per_action": 6,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 2,
+    "lives": 3,
+    "hint_count": 2,
+    "game_duration_seconds": 30,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Torchlit Cave Mouth: Door Defense",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "while door_health > 0 and timer < 30:\n    player.push()",
+    "health_bar": {
+      "visible": true,
+      "label": "door_health",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "door_health > 0 && timer < 30",
+      "then": [
+        "door_health = max(0, door_health - 10)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Zombies attack the wooden door!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "door_health > 0 && door_health < 100 && player_energy >= 5",
+      "then": [
+        "door_health = min(100, door_health + 6)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "door_health >= 100",
+      "then": [
+        "show_message('door_health is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && door_health < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 30 && door_health > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 2)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "door_health > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "door_health <= 30 && door_health > 0",
+      "then": [
+        "show_warning('door_health is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 3,
+      "attack_interval_seconds": 2.7
+    },
+    {
+      "wave": 2,
+      "start_time": 10,
+      "enemy_count": 4,
+      "attack_interval_seconds": 2.3
+    },
+    {
+      "wave": 3,
+      "start_time": 20,
+      "enemy_count": 5,
+      "attack_interval_seconds": 1.9
+    }
+  ],
+  "win": "door_health > 0 && timer >= 30",
+  "lose": "door_health <= 0 || lives <= 0",
+  "hint": "Read the code panel: Push to repair the wooden door while the while-loop condition stays true and zombies keep attacking. Keep door_health above zero until the timer reaches 30.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Zombies are coming! Watch the door_health meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: while door_health > 0 and timer < 30:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 30 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Door Defense in Shadow Cave!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "door_health ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2580",
+  "game_title": "Capstone Boss Chain – Dry Well Streak",
+  "game_concept": "A card battler set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Capstone Boss Chain: Beat a boss with phases that each demand a different skill from earlier weeks.",
+  "genre": "card battler",
+  "theme": "Sand Dunes – Dry Well: a nearly dry well",
+  "core_gameplay_loop": "In Dry Well, repeat each round: Beat a boss with phases that each demand a different skill from earlier weeks. Each round poses one decision; a wrong answer breaks the streak. Then check the boss_hp value and advance.",
+  "primary_mechanic": "Capstone Boss Chain",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about boss_hp to power up the sand ranger and open the supply tent.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Capstone Boss Chain",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M15-X4-T10-90e7ccbf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Capstone Boss Chain' (Week 9 slot 15), mission type 'Streak Challenge', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "boss.phase += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how boss_hp changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

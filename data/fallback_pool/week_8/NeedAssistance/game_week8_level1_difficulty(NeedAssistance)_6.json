@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2106",
+  "game_title": "Vowel Counter – Rockfall Chute Defense",
+  "game_concept": "A action defense set in Frost Peaks – Rockfall Chute, a rockfall chute: the rescue climber must handle snow leopards while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
+  "genre": "action defense",
+  "theme": "Frost Peaks – Rockfall Chute: a rockfall chute",
+  "core_gameplay_loop": "In Rockfall Chute, repeat each round: Count vowels in words by looping over characters. Each round, snow leopards strike the cliff anchor, so respond before the next strike lands. Then check the vowels value and advance.",
+  "primary_mechanic": "Vowel Counter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the cliff anchor from snow leopards in Rockfall Chute: keep the vowels meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while vowels > 0.",
+  "lose_condition": "vowels drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Vowel Counter",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M06-X1-T16-7b8bf33f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Survival Siege', and setting 'Rockfall Chute'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vowels changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Rockfall Chute.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while vowels > 0."
+  ]
+}

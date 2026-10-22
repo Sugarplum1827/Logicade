@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0462",
+  "game_title": "Compound Combo – Sulfur Springs Streak",
+  "game_concept": "A card battler set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "card battler",
+  "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
+  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round poses one decision; a wrong answer breaks the streak. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about energy to power up the volcanologist and open the fire shrine.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X4-T08-6aba0554",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Streak Challenge', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 2,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

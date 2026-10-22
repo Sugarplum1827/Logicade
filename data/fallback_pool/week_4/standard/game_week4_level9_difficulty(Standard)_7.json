@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1157",
+  "game_title": "Countdown Launch – Stalactite Hall Defense",
+  "game_concept": "A survival strategy set in Shadow Cave – Stalactite Hall, a hall of dripping stalactites: the lantern keeper must handle slime blobs while practicing control flow: while loops. Core idea – Countdown Launch: Tick a countdown down each loop until it hits zero and the launch fires.",
+  "genre": "survival strategy",
+  "theme": "Shadow Cave – Stalactite Hall: a hall of dripping stalactites",
+  "core_gameplay_loop": "In Stalactite Hall, repeat each round: Tick a countdown down each loop until it hits zero and the launch fires. Each round, slime blobs strike the cave gate, so respond before the next strike lands. Then check the count value and advance.",
+  "primary_mechanic": "Countdown Launch",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the cave gate from slime blobs in Stalactite Hall: keep the count meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 54 seconds while count > 0.",
+  "lose_condition": "count drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Countdown Launch",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M02-X1-T05-00ea551e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Launch' (Week 4 slot 2), mission type 'Survival Siege', and setting 'Stalactite Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 7,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while count > 0:\n    count -= 1",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how count changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Stalactite Hall.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while count > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1022",
+  "game_title": "Countdown Launch – Moss Door Chamber Rush",
+  "game_concept": "A action puzzle set in Shadow Cave – Moss Door Chamber, a mossy sealed door: the shadow ranger must handle skeleton miners while practicing control flow: while loops. Core idea – Countdown Launch: Tick a countdown down each loop until it hits zero and the launch fires.",
+  "genre": "action puzzle",
+  "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
+  "core_gameplay_loop": "In Moss Door Chamber, repeat each round: Tick a countdown down each loop until it hits zero and the launch fires. Each round, a new pickaxes challenge appears; solve it to bank points before time drains. Then check the count value and advance.",
+  "primary_mechanic": "Countdown Launch",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 180 points of pickaxes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 59 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Countdown Launch",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M02-X2-T16-20985980",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Launch' (Week 4 slot 2), mission type 'Resource Rush', and setting 'Moss Door Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 2,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while count > 0:\n    count -= 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how count changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Moss Door Chamber.",
+    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1997",
+  "game_title": "Index Archery – Broken Colonnade Rush",
+  "game_concept": "A action puzzle set in Eldritch Ruins – Broken Colonnade, a row of broken columns: the relic hunter must handle ghost knights while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "action puzzle",
+  "theme": "Eldritch Ruins – Broken Colonnade: a row of broken columns",
+  "core_gameplay_loop": "In Broken Colonnade, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, a new glyph tablets challenge appears; solve it to bank points before time drains. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 340 points of glyph tablets by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 48 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X2-T01-a9a3a1dc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Resource Rush', and setting 'Broken Colonnade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Broken Colonnade.",
+    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
+  ]
+}

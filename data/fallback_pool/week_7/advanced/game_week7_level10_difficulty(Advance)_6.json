@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2096",
+  "game_title": "Comprehension Lab – Whisper Stones Race",
+  "game_concept": "A adventure race set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform carved tiles.",
+  "genre": "adventure race",
+  "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
+  "core_gameplay_loop": "In Whisper Stones, repeat each round: Build new lists in one line with list comprehensions to transform carved tiles. Each round the rival advances, and solving the step moves the scholar mage ahead. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Beat a rival AI to the crypt seal by solving code steps involving lab_output that move the scholar mage forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "lose_condition": "The rival reaches the crypt seal first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X5-T10-c9db97d0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Rival Race', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
+  ]
+}

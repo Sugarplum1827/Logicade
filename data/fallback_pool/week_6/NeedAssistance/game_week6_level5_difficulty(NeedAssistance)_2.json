@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1622",
+  "game_title": "Parameter Potion – Furrier Lane Rush",
+  "game_concept": "A action puzzle set in Snowy Hold – Furrier Lane, a lane of furriers: the sled courier must handle icicle bats while practicing functions. Core idea – Parameter Potion: Pass parameters into a function so one recipe makes many potions.",
+  "genre": "action puzzle",
+  "theme": "Snowy Hold – Furrier Lane: a lane of furriers",
+  "core_gameplay_loop": "In Furrier Lane, repeat each round: Pass parameters into a function so one recipe makes many potions. Each round, a new salt bags challenge appears; solve it to bank points before time drains. Then check the potions value and advance.",
+  "primary_mechanic": "Parameter Potion",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 180 points of salt bags by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 59 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Parameter Potion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M02-X2-T16-3ea51d4b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parameter Potion' (Week 6 slot 2), mission type 'Resource Rush', and setting 'Furrier Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 5,
+  "trial": 2,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def brew(herb, amount):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potions changes.",
+    "Step 2: Use the controls to apply the code idea against icicle bats in Furrier Lane.",
+    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
+  ]
+}

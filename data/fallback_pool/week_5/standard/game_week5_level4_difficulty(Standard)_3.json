@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1303",
+  "game_title": "Off By One Fixer – Owl Roost Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
+  "core_gameplay_loop": "In Owl Roost, repeat each round: Fix range boundaries that skip or overshoot by one. Each round costs one action, so plan the step so none are wasted. Then check the fixes value and advance.",
+  "primary_mechanic": "Off By One Fixer",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Reach the spirit shrine using at most 16 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The spirit shrine reached with actions_used <= 16.",
+  "lose_condition": "actions_used exceeds 16 before the spirit shrine is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Off By One Fixer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M13-X3-T11-aff3760b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Efficiency Trial', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, n):  # misses n",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fixes changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
+    "Step 3: Win by meeting the goal: The spirit shrine reached with actions_used <= 16."
+  ]
+}

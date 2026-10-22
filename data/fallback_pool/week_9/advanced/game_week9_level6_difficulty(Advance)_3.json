@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2573",
+  "game_title": "Refactor Rescue – Oasis Pool Trial",
+  "game_concept": "A logic puzzle set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
+  "genre": "logic puzzle",
+  "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
+  "core_gameplay_loop": "In Oasis Pool, repeat each round: Clean up messy duplicated code into tidy functions without changing its behavior. Each round costs one action, so plan the step so none are wasted. Then check the clean_score value and advance.",
+  "primary_mechanic": "Refactor Rescue",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the temple door using at most 13 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The temple door reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the temple door is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Refactor Rescue",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M08-X3-T01-4ff35a3a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Refactor Rescue' (Week 9 slot 8), mission type 'Efficiency Trial', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 3,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "def f():\n    ...",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_score changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
+    "Step 3: Win by meeting the goal: The temple door reached with actions_used <= 13."
+  ]
+}

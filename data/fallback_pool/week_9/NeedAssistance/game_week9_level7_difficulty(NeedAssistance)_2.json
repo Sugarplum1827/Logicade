@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2582",
+  "game_title": "Exception Rodeo – Sunset Dunes Defense",
+  "game_concept": "A survival strategy set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
+  "genre": "survival strategy",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round, dust devils strike the supply tent, so respond before the next strike lands. Then check the stability value and advance.",
+  "primary_mechanic": "Exception Rodeo",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the supply tent from dust devils in Sunset Dunes: keep the stability meter above zero by applying the concept correctly until the 67-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 67 seconds while stability > 0.",
+  "lose_condition": "stability drops to 0, or lives reach 0, before the 67-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Exception Rodeo",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M02-X1-T20-e9b5c22d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Survival Siege', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 2,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "try:\n    n = int(text)\nexcept ValueError:\n    n = 0",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stability changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
+    "Step 3: Win by meeting the goal: Timer reaches 67 seconds while stability > 0."
+  ]
+}

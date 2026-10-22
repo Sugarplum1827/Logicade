@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2407",
+  "game_title": "Integration Heist – Caravan Camp Streak",
+  "game_concept": "A quiz RPG set in Sand Dunes – Caravan Camp, a caravan camp: the oasis keeper must handle vultures while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Caravan Camp.",
+  "genre": "quiz RPG",
+  "theme": "Sand Dunes – Caravan Camp: a caravan camp",
+  "core_gameplay_loop": "In Caravan Camp, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Caravan Camp. Each round poses one decision; a wrong answer breaks the streak. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 5 consecutive correct decisions about heist to power up the oasis keeper and open the palm grove.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 5.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X4-T03-6acdc805",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Streak Challenge', and setting 'Caravan Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Caravan Camp.",
+    "Step 3: Win by meeting the goal: streak counter reaches 5."
+  ]
+}

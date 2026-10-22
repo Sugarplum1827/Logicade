@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1982",
+  "game_title": "Index Archery – Eldritch Heart Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Eldritch Heart, the glowing heart of the ruins: the rune scholar must handle rune wisps while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Eldritch Heart: the glowing heart of the ruins",
+  "core_gameplay_loop": "In Eldritch Heart, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, rune wisps strike the crypt seal, so respond before the next strike lands. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the crypt seal from rune wisps in Eldritch Heart: keep the arrows meter above zero by applying the concept correctly until the 67-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 67 seconds while arrows > 0.",
+  "lose_condition": "arrows drops to 0, or lives reach 0, before the 67-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X1-T20-cb18d62c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Survival Siege', and setting 'Eldritch Heart'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Eldritch Heart.",
+    "Step 3: Win by meeting the goal: Timer reaches 67 seconds while arrows > 0."
+  ]
+}

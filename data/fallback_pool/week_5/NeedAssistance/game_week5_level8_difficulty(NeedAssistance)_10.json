@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1420",
+  "game_title": "Filter Harvest – Herbalist Hut Rush",
+  "game_concept": "A arcade set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only vine ropes that meet a rule.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
+  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Combine for and if to harvest only vine ropes that meet a rule. Each round, a new vine ropes challenge appears; solve it to bank points before time drains. Then check the harvest value and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 270 points of vine ropes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 270 within 71 seconds.",
+  "lose_condition": "Timer hits 0 with score < 270, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M10-X2-T18-193b8803",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Resource Rush', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how harvest changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
+    "Step 3: Win by meeting the goal: score >= 270 within 71 seconds."
+  ]
+}

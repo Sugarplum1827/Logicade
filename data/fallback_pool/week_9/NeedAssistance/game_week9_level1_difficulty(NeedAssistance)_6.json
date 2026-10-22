@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2406",
+  "game_title": "Off By One Autopsy – Bone Valley Defense",
+  "game_concept": "A action defense set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "action defense",
+  "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
+  "core_gameplay_loop": "In Bone Valley, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round, mirage spirits strike the camel pen, so respond before the next strike lands. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the camel pen from mirage spirits in Bone Valley: keep the autopsy meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while autopsy > 0.",
+  "lose_condition": "autopsy drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X1-T16-b3acbd27",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Survival Siege', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while autopsy > 0."
+  ]
+}

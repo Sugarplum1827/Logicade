@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0841",
+  "game_title": "Gatekeeper If – Pearl Divers' Lagoon Rush",
+  "game_concept": "A arcade set in Coastal Port – Pearl Divers' Lagoon, a lagoon of pearl divers: the dock cartographer must handle rogue crabs while practicing conditionals (if / elif / else). Core idea – Gatekeeper If: Write a single if condition that opens the gate only for friendly visitors.",
+  "genre": "arcade",
+  "theme": "Coastal Port – Pearl Divers' Lagoon: a lagoon of pearl divers",
+  "core_gameplay_loop": "In Pearl Divers' Lagoon, repeat each round: Write a single if condition that opens the gate only for friendly visitors. Each round, a new ship ropes challenge appears; solve it to bank points before time drains. Then check the gate_integrity value and advance.",
+  "primary_mechanic": "Gatekeeper If",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 290 points of ship ropes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 9 (extended tier): Gatekeeper If",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M01-X2-T17-9b28e41a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Gatekeeper If' (Week 3 slot 1), mission type 'Resource Rush', and setting 'Pearl Divers' Lagoon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 9,
+  "trial": 1,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if has_key:\n    open_gate()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate_integrity changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crabs in Pearl Divers' Lagoon.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

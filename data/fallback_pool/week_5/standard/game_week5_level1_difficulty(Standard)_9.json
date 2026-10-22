@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1219",
+  "game_title": "Squad Marcher – Fairy Ring Glade Defense",
+  "game_concept": "A tower defense set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
+  "genre": "tower defense",
+  "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
+  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round, bog toads strike the fairy lantern, so respond before the next strike lands. Then check the squad_ready value and advance.",
+  "primary_mechanic": "Squad Marcher",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the fairy lantern from bog toads in Fairy Ring Glade: keep the squad_ready meter above zero by applying the concept correctly until the 30-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 30 seconds while squad_ready > 0.",
+  "lose_condition": "squad_ready drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Squad Marcher",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M04-X1-T03-568205bd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Survival Siege', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 9,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for ally in squad:\n    ally.assign()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how squad_ready changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
+    "Step 3: Win by meeting the goal: Timer reaches 30 seconds while squad_ready > 0."
+  ]
+}

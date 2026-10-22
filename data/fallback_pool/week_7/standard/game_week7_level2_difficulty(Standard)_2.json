@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1842",
+  "game_title": "Duplicate Sweep – Eldritch Heart Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Eldritch Heart, the glowing heart of the ruins: the rune scholar must handle rune wisps while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of relic shards while keeping the order.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Eldritch Heart: the glowing heart of the ruins",
+  "core_gameplay_loop": "In Eldritch Heart, repeat each round: Remove repeated items from a list of relic shards while keeping the order. Each round, rune wisps strike the crypt seal, so respond before the next strike lands. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the crypt seal from rune wisps in Eldritch Heart: keep the clean_list meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 33 seconds while clean_list > 0.",
+  "lose_condition": "clean_list drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X1-T20-b72a2f6f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Survival Siege', and setting 'Eldritch Heart'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Eldritch Heart.",
+    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while clean_list > 0."
+  ]
+}

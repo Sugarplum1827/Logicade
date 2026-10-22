@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0082",
+  "game_title": "Constant Guardian – Village Green Streak",
+  "game_concept": "A quiz RPG set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the throne.",
+  "genre": "quiz RPG",
+  "theme": "The Kingdom – Village Green: the green outside the walls",
+  "core_gameplay_loop": "In Village Green, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the throne. Each round poses one decision; a wrong answer breaks the streak. Then check the energy value and advance.",
+  "primary_mechanic": "Constant Guardian",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about energy to power up the squire and open the throne.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 3 (intro tier): Constant Guardian",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M07-X4-T08-90e9edb6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Streak Challenge', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 3,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "MAX_ENERGY = 100\nenergy = 40",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

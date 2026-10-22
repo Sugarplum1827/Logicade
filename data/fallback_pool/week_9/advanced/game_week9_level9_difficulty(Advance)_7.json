@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2667",
+  "game_title": "Algorithm Race – Camel Trail Defense",
+  "game_concept": "A action defense set in Sand Dunes – Camel Trail, a camel trail: the oasis keeper must handle scarab swarms while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
+  "genre": "action defense",
+  "theme": "Sand Dunes – Camel Trail: a camel trail",
+  "core_gameplay_loop": "In Camel Trail, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round, scarab swarms strike the caravan wagon, so respond before the next strike lands. Then check the speed value and advance.",
+  "primary_mechanic": "Algorithm Race",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the caravan wagon from scarab swarms in Camel Trail: keep the speed meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 43 seconds while speed > 0.",
+  "lose_condition": "speed drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Algorithm Race",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M12-X1-T15-d8875fa5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Survival Siege', and setting 'Camel Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "sum(range(n))  # vs loop",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how speed changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Camel Trail.",
+    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while speed > 0."
+  ]
+}

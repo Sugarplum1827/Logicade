@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1269",
+  "game_title": "Roll Call Enumerate – Glowing Heartwood Streak",
+  "game_concept": "A card battler set in Mystic Forest – Glowing Heartwood, the glowing ancient tree: the forest ranger must handle shadow wolves while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "card battler",
+  "theme": "Mystic Forest – Glowing Heartwood: the glowing ancient tree",
+  "core_gameplay_loop": "In Glowing Heartwood, repeat each round: Use enumerate to call out each position and name in a roll call. Each round poses one decision; a wrong answer breaks the streak. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about roll_call to power up the forest ranger and open the spirit shrine.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X4-T01-16bef119",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Streak Challenge', and setting 'Glowing Heartwood'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 9,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Glowing Heartwood.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

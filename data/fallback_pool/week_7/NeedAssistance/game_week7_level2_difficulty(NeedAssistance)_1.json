@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1831",
+  "game_title": "Backpack Append – Rune Circle Trial",
+  "game_concept": "A puzzle set in Eldritch Ruins – Rune Circle, a circle of glowing runes: the ruin warden must handle echo phantoms while practicing lists. Core idea – Backpack Append: Use append and remove to manage the ruin warden's backpack list as echo phantoms drop loot.",
+  "genre": "puzzle",
+  "theme": "Eldritch Ruins – Rune Circle: a circle of glowing runes",
+  "core_gameplay_loop": "In Rune Circle, repeat each round: Use append and remove to manage the ruin warden's backpack list as echo phantoms drop loot. Each round costs one action, so plan the step so none are wasted. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the spirit lantern using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The spirit lantern reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the spirit lantern is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X3-T03-003cea5a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Efficiency Trial', and setting 'Rune Circle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Rune Circle.",
+    "Step 3: Win by meeting the goal: The spirit lantern reached with actions_used <= 19."
+  ]
+}

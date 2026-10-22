@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2033",
+  "game_title": "Matrix Map – Moss Library Rush",
+  "game_concept": "A action puzzle set in Eldritch Ruins – Moss Library, a ruined library: the tomb cartographer must handle cursed statues while practicing lists. Core idea – Matrix Map: Navigate a list of lists as rows and columns of a map.",
+  "genre": "action puzzle",
+  "theme": "Eldritch Ruins – Moss Library: a ruined library",
+  "core_gameplay_loop": "In Moss Library, repeat each round: Navigate a list of lists as rows and columns of a map. Each round, a new chalk marks challenge appears; solve it to bank points before time drains. Then check the map_cells value and advance.",
+  "primary_mechanic": "Matrix Map",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 490 points of chalk marks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Matrix Map",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M08-X2-T05-ba04f45e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Matrix Map' (Week 7 slot 8), mission type 'Resource Rush', and setting 'Moss Library'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "grid[1][2]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how map_cells changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Moss Library.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

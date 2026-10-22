@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0338",
+  "game_title": "Type Cast Forge – Geyser Flats Streak",
+  "game_concept": "A rhythm puzzle set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
+  "genre": "rhythm puzzle",
+  "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
+  "core_gameplay_loop": "In Geyser Flats, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round poses one decision; a wrong answer breaks the streak. Then check the forge_heat value and advance.",
+  "primary_mechanic": "Type Cast Forge",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about forge_heat to power up the lava scout and open the forge anvil.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Type Cast Forge",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M08-X4-T12-7bb1b4d4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Streak Challenge', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "total = int('5') + 3",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how forge_heat changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

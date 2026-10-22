@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0250",
+  "game_title": "Copy Cat – Postern Gate Streak",
+  "game_concept": "A quiz RPG set in The Kingdom – Postern Gate, the hidden postern gate: the squire must handle rogue crows while practicing variables & assignment. Core idea – Copy Cat: Copy one variable into another and predict whether the original changes when rogue crows strike.",
+  "genre": "quiz RPG",
+  "theme": "The Kingdom – Postern Gate: the hidden postern gate",
+  "core_gameplay_loop": "In Postern Gate, repeat each round: Copy one variable into another and predict whether the original changes when rogue crows strike. Each round poses one decision; a wrong answer breaks the streak. Then check the b value and advance.",
+  "primary_mechanic": "Copy Cat",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about b to power up the squire and open the market bell.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Copy Cat",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M10-X4-T20-fe10ba7a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Copy Cat' (Week 1 slot 10), mission type 'Streak Challenge', and setting 'Postern Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 9,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "b = a\na = 9",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how b changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Postern Gate.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

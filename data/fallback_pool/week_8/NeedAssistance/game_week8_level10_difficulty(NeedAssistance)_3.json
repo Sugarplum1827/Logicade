@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2373",
+  "game_title": "Case Choir – Ice Cave Shelter Race",
+  "game_concept": "A strategy race set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Case Choir: Convert text with upper(), lower(), and title() to match the choir's tune.",
+  "genre": "strategy race",
+  "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
+  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Convert text with upper(), lower(), and title() to match the choir's tune. Each round the rival advances, and solving the step moves the mountaineer ahead. Then check the choir value and advance.",
+  "primary_mechanic": "Case Choir",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the flag pole by solving code steps involving choir that move the mountaineer forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the flag pole first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Case Choir",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M03-X5-T13-f2d8ab9a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Case Choir' (Week 8 slot 3), mission type 'Rival Race', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 3,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "name.title()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how choir changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

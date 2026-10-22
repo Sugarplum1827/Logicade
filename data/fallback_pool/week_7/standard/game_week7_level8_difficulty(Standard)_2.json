@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2022",
+  "game_title": "Duplicate Sweep – Collapsed Dome Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Collapsed Dome, a collapsed dome: the spirit seeker must handle rune wisps while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of relic shards while keeping the order.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Collapsed Dome: a collapsed dome",
+  "core_gameplay_loop": "In Collapsed Dome, repeat each round: Remove repeated items from a list of relic shards while keeping the order. Each round costs one action, so plan the step so none are wasted. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the rune gate using at most 18 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The rune gate reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the rune gate is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X3-T12-bd29dd16",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Efficiency Trial', and setting 'Collapsed Dome'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Collapsed Dome.",
+    "Step 3: Win by meeting the goal: The rune gate reached with actions_used <= 18."
+  ]
+}

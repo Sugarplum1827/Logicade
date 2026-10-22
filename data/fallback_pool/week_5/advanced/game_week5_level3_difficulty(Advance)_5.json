@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1285",
+  "game_title": "Filter Harvest – Waterfall Pool Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Waterfall Pool, a pool below a waterfall: the herbalist must handle shadow wolves while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only glowing seeds that meet a rule.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Waterfall Pool: a pool below a waterfall",
+  "core_gameplay_loop": "In Waterfall Pool, repeat each round: Combine for and if to harvest only glowing seeds that meet a rule. Each round costs one action, so plan the step so none are wasted. Then check the harvest value and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the seed vault using at most 11 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The seed vault reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the seed vault is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M10-X3-T09-bf9ad52c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Efficiency Trial', and setting 'Waterfall Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how harvest changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Waterfall Pool.",
+    "Step 3: Win by meeting the goal: The seed vault reached with actions_used <= 11."
+  ]
+}

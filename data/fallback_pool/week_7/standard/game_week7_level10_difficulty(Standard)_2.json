@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2082",
+  "game_title": "Duplicate Sweep – Spirit Hall Rush",
+  "game_concept": "A speed quiz set in Eldritch Ruins – Spirit Hall, a hall of wandering spirits: the scholar mage must handle crypt crawlers while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of spirit candles while keeping the order.",
+  "genre": "speed quiz",
+  "theme": "Eldritch Ruins – Spirit Hall: a hall of wandering spirits",
+  "core_gameplay_loop": "In Spirit Hall, repeat each round: Remove repeated items from a list of spirit candles while keeping the order. Each round, a new spirit candles challenge appears; solve it to bank points before time drains. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 460 points of spirit candles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 460 within 57 seconds.",
+  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X2-T16-72eddafd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Resource Rush', and setting 'Spirit Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Spirit Hall.",
+    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
+  ]
+}

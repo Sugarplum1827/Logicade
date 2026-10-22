@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0330",
+  "game_title": "Mixed Type Oracle – Pyre Summit Streak",
+  "game_concept": "A card battler set in Mt. Pyre – Pyre Summit, the roaring summit: the volcanologist must handle fire sprites while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before fire sprites spring the trap.",
+  "genre": "card battler",
+  "theme": "Mt. Pyre – Pyre Summit: the roaring summit",
+  "core_gameplay_loop": "In Pyre Summit, repeat each round: Predict the result or error of mixed-type expressions before fire sprites spring the trap. Each round poses one decision; a wrong answer breaks the streak. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about predictions to power up the volcanologist and open the obsidian gate.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X4-T20-9734b601",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Streak Challenge', and setting 'Pyre Summit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Pyre Summit.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0200",
+  "game_title": "Name Tag Match – Royal Granary Defense",
+  "game_concept": "A survival strategy set in The Kingdom – Royal Granary, the king's grain stores: the squire must handle siege rats while practicing variables & assignment. Core idea – Name Tag Match: Match floating variable name tags to the values on passing apples before they reach siege rats.",
+  "genre": "survival strategy",
+  "theme": "The Kingdom – Royal Granary: the king's grain stores",
+  "core_gameplay_loop": "In Royal Granary, repeat each round: Match floating variable name tags to the values on passing apples before they reach siege rats. Each round, siege rats strike the castle gate, so respond before the next strike lands. Then check the tag_matches value and advance.",
+  "primary_mechanic": "Name Tag Match",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the castle gate from siege rats in Royal Granary: keep the tag_matches meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 48 seconds while tag_matches > 0.",
+  "lose_condition": "tag_matches drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Name Tag Match",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M05-X1-T02-e5bee327",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Name Tag Match' (Week 1 slot 5), mission type 'Survival Siege', and setting 'Royal Granary'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 7,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "speed = 12\nname = 'Rex'",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tag_matches changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Royal Granary.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while tag_matches > 0."
+  ]
+}

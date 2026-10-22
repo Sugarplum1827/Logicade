@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1174",
+  "game_title": "Infinite Loop Trap – Exit Light Ledge Trial",
+  "game_concept": "A puzzle set in Shadow Cave – Exit Light Ledge, a ledge toward daylight: the spelunker must handle cave spiders while practicing control flow: while loops. Core idea – Infinite Loop Trap: Find the missing update line that makes a loop never stop, before cave spiders overload Exit Light Ledge.",
+  "genre": "puzzle",
+  "theme": "Shadow Cave – Exit Light Ledge: a ledge toward daylight",
+  "core_gameplay_loop": "In Exit Light Ledge, repeat each round: Find the missing update line that makes a loop never stop, before cave spiders overload Exit Light Ledge. Each round costs one action, so plan the step so none are wasted. Then check the loop_safety value and advance.",
+  "primary_mechanic": "Infinite Loop Trap",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the stone seal using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The stone seal reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the stone seal is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 10 (extended tier): Infinite Loop Trap",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M04-X3-T20-86ef017a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Infinite Loop Trap' (Week 4 slot 4), mission type 'Efficiency Trial', and setting 'Exit Light Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 10,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_safety changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Exit Light Ledge.",
+    "Step 3: Win by meeting the goal: The stone seal reached with actions_used <= 23."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2358",
+  "game_title": "Case Choir – Supply Cache Camp Streak",
+  "game_concept": "A card battler set in Frost Peaks – Supply Cache Camp, a high supply cache: the summit pilot must handle ice hawks while practicing strings & dictionaries. Core idea – Case Choir: Convert text with upper(), lower(), and title() to match the choir's tune.",
+  "genre": "card battler",
+  "theme": "Frost Peaks – Supply Cache Camp: a high supply cache",
+  "core_gameplay_loop": "In Supply Cache Camp, repeat each round: Convert text with upper(), lower(), and title() to match the choir's tune. Each round poses one decision; a wrong answer breaks the streak. Then check the choir value and advance.",
+  "primary_mechanic": "Case Choir",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about choir to power up the summit pilot and open the summit beacon.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 9 (extended tier): Case Choir",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M03-X4-T12-54a3b212",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Case Choir' (Week 8 slot 3), mission type 'Streak Challenge', and setting 'Supply Cache Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 9,
+  "trial": 8,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "name.title()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how choir changes.",
+    "Step 2: Use the controls to apply the code idea against ice hawks in Supply Cache Camp.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1206",
+  "game_title": "Times Table Garden – Root Tunnels Defense",
+  "game_concept": "A action defense set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of mana petals using nested for loops for rows and columns.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Plant a grid of mana petals using nested for loops for rows and columns. Each round, wasp swarms strike the elder's door, so respond before the next strike lands. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the elder's door from wasp swarms in Root Tunnels: keep the garden_cells meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while garden_cells > 0.",
+  "lose_condition": "garden_cells drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X1-T16-d55b3178",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Survival Siege', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while garden_cells > 0."
+  ]
+}

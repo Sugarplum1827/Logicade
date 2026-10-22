@@ -1,0 +1,240 @@
+{
+  "template_id": "tmpl_w6_l05_ST",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 6,
+    "level": 5,
+    "difficulty": "Standard"
+  },
+  "file_id": "fallback_0164",
+  "game_title": "Fallback: Function Pipeline – Hearth Hall",
+  "game_concept": "A tower defense set in Snowy Hold – Hearth Hall, a warm hearth hall: the hold guard must hold off blizzard sprites while practicing functions. Core idea – Function Pipeline: Chain one function's output into the next to push hot soup pots down a processing line.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Chain one function's output into the next to push hot soup pots down a processing line. Then check pipeline and advance.",
+  "primary_mechanic": "Function Pipeline",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the sleigh from blizzard sprites in Hearth Hall: keep pipeline above zero until the 42-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "pipeline > 0 && timer >= 42",
+  "lose_condition": "pipeline <= 0 || lives <= 0",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Function Pipeline",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "FB-W6-L05-ST",
+  "duplicate_check_notes": "Generic fallback template for Week 6, Level 5, Standard. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 6,
+  "level": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Functions",
+    "Apply “Function Pipeline” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_hold_guard",
+    "enemy": "kenney_blizzard_sprites",
+    "objective": "kenney_sleigh",
+    "background": "w6_snowy",
+    "projectile": "kenney_hot_soup_pots",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "pipeline",
+    "damage_per_attack": 11,
+    "repair_per_action": 6,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 2,
+    "lives": 3,
+    "hint_count": 2,
+    "game_duration_seconds": 42,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Hearth Hall: Function Pipeline",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "clean(sort(load()))",
+    "health_bar": {
+      "visible": true,
+      "label": "pipeline",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "pipeline > 0 && timer < 42",
+      "then": [
+        "pipeline = max(0, pipeline - 11)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Blizzard sprites attack the sleigh!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "pipeline > 0 && pipeline < 100 && player_energy >= 5",
+      "then": [
+        "pipeline = min(100, pipeline + 6)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "pipeline >= 100",
+      "then": [
+        "show_message('pipeline is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && pipeline < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 42 && pipeline > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 2)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "pipeline > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "pipeline <= 30 && pipeline > 0",
+      "then": [
+        "show_warning('pipeline is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 5,
+      "attack_interval_seconds": 2.1
+    },
+    {
+      "wave": 2,
+      "start_time": 14,
+      "enemy_count": 6,
+      "attack_interval_seconds": 1.7
+    },
+    {
+      "wave": 3,
+      "start_time": 28,
+      "enemy_count": 7,
+      "attack_interval_seconds": 1.3
+    }
+  ],
+  "win": "pipeline > 0 && timer >= 42",
+  "lose": "pipeline <= 0 || lives <= 0",
+  "hint": "Read the code panel: Chain one function's output into the next to push hot soup pots down a processing line. Keep pipeline above zero until the timer reaches 42.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Blizzard sprites are coming! Watch the pipeline meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: clean(sort(load()))"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 42 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Function Pipeline in Snowy Hold!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "pipeline ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

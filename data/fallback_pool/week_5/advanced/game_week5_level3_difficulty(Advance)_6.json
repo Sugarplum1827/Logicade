@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1286",
+  "game_title": "Max Finder Derby – Root Tunnels Defense",
+  "game_concept": "A survival strategy set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Max Finder Derby: Track the biggest value seen so far while looping over contestants.",
+  "genre": "survival strategy",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Track the biggest value seen so far while looping over contestants. Each round, wasp swarms strike the elder's door, so respond before the next strike lands. Then check the best value and advance.",
+  "primary_mechanic": "Max Finder Derby",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the elder's door from wasp swarms in Root Tunnels: keep the best meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 29 seconds while best > 0.",
+  "lose_condition": "best drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Max Finder Derby",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M11-X1-T16-4fd77795",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Max Finder Derby' (Week 5 slot 11), mission type 'Survival Siege', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "best = 0\nfor x in scores:\n    if x > best:\n        best = x",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how best changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while best > 0."
+  ]
+}

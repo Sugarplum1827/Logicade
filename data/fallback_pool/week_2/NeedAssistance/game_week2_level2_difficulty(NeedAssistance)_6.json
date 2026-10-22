@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0336",
+  "game_title": "Boolean Circuit – Ore Smelter Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the fire shrine.",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the fire shrine. Each round costs one action, so plan the step so none are wasted. Then check the power_on value and advance.",
+  "primary_mechanic": "Boolean Circuit",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the fire shrine using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The fire shrine reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the fire shrine is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Boolean Circuit",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M06-X3-T18-8250a59b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Efficiency Trial', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "open = key and not alarm",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power_on changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: The fire shrine reached with actions_used <= 19."
+  ]
+}

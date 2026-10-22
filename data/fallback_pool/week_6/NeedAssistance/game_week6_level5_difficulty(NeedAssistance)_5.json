@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1625",
+  "game_title": "Function Pipeline – Ice Mill Defense",
+  "game_concept": "A survival strategy set in Snowy Hold – Ice Mill, a frozen mill wheel: the frost mage must handle frost imps while practicing functions. Core idea – Function Pipeline: Chain one function's output into the next to push furs down a processing line.",
+  "genre": "survival strategy",
+  "theme": "Snowy Hold – Ice Mill: a frozen mill wheel",
+  "core_gameplay_loop": "In Ice Mill, repeat each round: Chain one function's output into the next to push furs down a processing line. Each round, frost imps strike the wall banner, so respond before the next strike lands. Then check the pipeline value and advance.",
+  "primary_mechanic": "Function Pipeline",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the wall banner from frost imps in Ice Mill: keep the pipeline meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 59 seconds while pipeline > 0.",
+  "lose_condition": "pipeline drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Function Pipeline",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M05-X1-T17-b61389ff",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Function Pipeline' (Week 6 slot 5), mission type 'Survival Siege', and setting 'Ice Mill'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 5,
+  "trial": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "clean(sort(load()))",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pipeline changes.",
+    "Step 2: Use the controls to apply the code idea against frost imps in Ice Mill.",
+    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while pipeline > 0."
+  ]
+}

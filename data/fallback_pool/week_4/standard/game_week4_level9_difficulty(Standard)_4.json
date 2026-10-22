@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1154",
+  "game_title": "Condition Builder – Echo Chamber Defense",
+  "game_concept": "A survival strategy set in Shadow Cave – Echo Chamber, a booming echo chamber: the spelunker must handle skeleton miners while practicing control flow: while loops. Core idea – Condition Builder: Choose the loop condition so the loop runs exactly the requested number of times.",
+  "genre": "survival strategy",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "core_gameplay_loop": "In Echo Chamber, repeat each round: Choose the loop condition so the loop runs exactly the requested number of times. Each round, skeleton miners strike the crystal door, so respond before the next strike lands. Then check the loop_runs value and advance.",
+  "primary_mechanic": "Condition Builder",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the crystal door from skeleton miners in Echo Chamber: keep the loop_runs meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 54 seconds while loop_runs > 0.",
+  "lose_condition": "loop_runs drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Condition Builder",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M14-X1-T08-b926a0bf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Condition Builder' (Week 4 slot 14), mission type 'Survival Siege', and setting 'Echo Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i ____ 4:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_runs changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Echo Chamber.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while loop_runs > 0."
+  ]
+}

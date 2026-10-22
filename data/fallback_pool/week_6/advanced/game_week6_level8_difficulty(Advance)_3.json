@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1733",
+  "game_title": "Call Stack Tower – Hearth Hall Rush",
+  "game_concept": "A action puzzle set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
+  "genre": "action puzzle",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Each round, a new snowshoes challenge appears; solve it to bank points before time drains. Then check the stack_height value and advance.",
+  "primary_mechanic": "Call Stack Tower",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 490 points of snowshoes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Call Stack Tower",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M08-X2-T05-de4036a6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Call Stack Tower' (Week 6 slot 8), mission type 'Resource Rush', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def a():\n    b()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_height changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

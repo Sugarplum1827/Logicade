@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1503",
+  "game_title": "Return Vault – Snow Fort Rush",
+  "game_concept": "A speed quiz set in Snowy Hold – Snow Fort, a snowball fort: the firewood keeper must handle yeti raiders while practicing functions. Core idea – Return Vault: Use return to send a computed value back to the caller and open the hearth fire.",
+  "genre": "speed quiz",
+  "theme": "Snowy Hold – Snow Fort: a snowball fort",
+  "core_gameplay_loop": "In Snow Fort, repeat each round: Use return to send a computed value back to the caller and open the hearth fire. Each round, a new firewood challenge appears; solve it to bank points before time drains. Then check the vault value and advance.",
+  "primary_mechanic": "Return Vault",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 70 points of firewood by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 70 within 42 seconds.",
+  "lose_condition": "Timer hits 0 with score < 70, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 6 – Functions | Level 1 (intro tier): Return Vault",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M03-X2-T15-412c1340",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Return Vault' (Week 6 slot 3), mission type 'Resource Rush', and setting 'Snow Fort'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 1,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def double(x):\n    return x * 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Snow Fort.",
+    "Step 3: Win by meeting the goal: score >= 70 within 42 seconds."
+  ]
+}

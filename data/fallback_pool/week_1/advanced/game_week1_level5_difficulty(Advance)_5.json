@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0145",
+  "game_title": "Copy Cat – Archery Yard Rush",
+  "game_concept": "A arcade set in The Kingdom – Archery Yard, the garrison archery yard: the knight must handle shadow scouts while practicing variables & assignment. Core idea – Copy Cat: Copy one variable into another and predict whether the original changes when shadow scouts strike.",
+  "genre": "arcade",
+  "theme": "The Kingdom – Archery Yard: the garrison archery yard",
+  "core_gameplay_loop": "In Archery Yard, repeat each round: Copy one variable into another and predict whether the original changes when shadow scouts strike. Each round, a new keys challenge appears; solve it to bank points before time drains. Then check the b value and advance.",
+  "primary_mechanic": "Copy Cat",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 340 points of keys by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 5 (applied tier): Copy Cat",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M10-X2-T13-cbc427a1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Copy Cat' (Week 1 slot 10), mission type 'Resource Rush', and setting 'Archery Yard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 5,
+  "trial": 5,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "b = a\na = 9",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how b changes.",
+    "Step 2: Use the controls to apply the code idea against shadow scouts in Archery Yard.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

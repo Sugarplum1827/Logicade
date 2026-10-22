@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1432",
+  "game_title": "Pattern Painter – Herbalist Hut Streak",
+  "game_concept": "A quiz RPG set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Pattern Painter: Print growing star triangles with nested loops to decorate the root gate.",
+  "genre": "quiz RPG",
+  "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
+  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Print growing star triangles with nested loops to decorate the root gate. Each round poses one decision; a wrong answer breaks the streak. Then check the pattern_rows value and advance.",
+  "primary_mechanic": "Pattern Painter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about pattern_rows to power up the beast tamer and open the root gate.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Pattern Painter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M07-X4-T18-e9cc4fac",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pattern Painter' (Week 5 slot 7), mission type 'Streak Challenge', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, 5):\n    print('*' * i)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pattern_rows changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

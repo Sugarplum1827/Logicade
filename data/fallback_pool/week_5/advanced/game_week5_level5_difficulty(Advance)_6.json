@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1346",
+  "game_title": "Max Finder Derby – Moonlit Clearing Race",
+  "game_concept": "A adventure race set in Mystic Forest – Moonlit Clearing, a moonlit clearing: the druid must handle bramble beasts while practicing control flow: for loops. Core idea – Max Finder Derby: Track the biggest value seen so far while looping over contestants.",
+  "genre": "adventure race",
+  "theme": "Mystic Forest – Moonlit Clearing: a moonlit clearing",
+  "core_gameplay_loop": "In Moonlit Clearing, repeat each round: Track the biggest value seen so far while looping over contestants. Each round the rival advances, and solving the step moves the druid ahead. Then check the best value and advance.",
+  "primary_mechanic": "Max Finder Derby",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the waterfall gate by solving code steps involving best that move the druid forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the waterfall gate first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Max Finder Derby",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M11-X5-T20-03866e5f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Max Finder Derby' (Week 5 slot 11), mission type 'Rival Race', and setting 'Moonlit Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "best = 0\nfor x in scores:\n    if x > best:\n        best = x",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how best changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Moonlit Clearing.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1126",
+  "game_title": "Door Defense – Moss Door Chamber Defense",
+  "game_concept": "A tower defense set in Shadow Cave – Moss Door Chamber, a mossy sealed door: the shadow ranger must handle skeleton miners while practicing control flow: while loops. Core idea – Door Defense: Push to repair the supply cache while the while-loop condition stays true and skeleton miners keep attacking.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
+  "core_gameplay_loop": "In Moss Door Chamber, repeat each round: Push to repair the supply cache while the while-loop condition stays true and skeleton miners keep attacking. Each round, skeleton miners strike the supply cache, so respond before the next strike lands. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the supply cache from skeleton miners in Moss Door Chamber: keep the door_health meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 51 seconds while door_health > 0.",
+  "lose_condition": "door_health drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X1-T16-656dc9ff",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Survival Siege', and setting 'Moss Door Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 51:\n    player.push()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Moss Door Chamber.",
+    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while door_health > 0."
+  ]
+}

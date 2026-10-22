@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0509",
+  "game_title": "Unit Trader – Ember Fields Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of sulfur crystals is fair.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "core_gameplay_loop": "In Ember Fields, repeat each round: Convert units using expressions so each trade of sulfur crystals is fair. Each round costs one action, so plan the step so none are wasted. Then check the fair_trades value and advance.",
+  "primary_mechanic": "Unit Trader",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the lava bridge using at most 13 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The lava bridge reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the lava bridge is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Unit Trader",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M14-X3-T05-c2d12250",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Efficiency Trial', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 9,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "cm = m * 100",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fair_trades changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
+    "Step 3: Win by meeting the goal: The lava bridge reached with actions_used <= 13."
+  ]
+}

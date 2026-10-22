@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1537",
+  "game_title": "Scope Sanctuary – Hearth Hall Defense",
+  "game_concept": "A tower defense set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Scope Sanctuary: Distinguish local from global variables to keep snowshoes safe from frozen golems.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Distinguish local from global variables to keep snowshoes safe from frozen golems. Each round, frozen golems strike the hearth fire, so respond before the next strike lands. Then check the scope_safe value and advance.",
+  "primary_mechanic": "Scope Sanctuary",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the hearth fire from frozen golems in Hearth Hall: keep the scope_safe meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 46 seconds while scope_safe > 0.",
+  "lose_condition": "scope_safe drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 6 – Functions | Level 2 (intro tier): Scope Sanctuary",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M07-X1-T05-8f758b7f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Scope Sanctuary' (Week 6 slot 7), mission type 'Survival Siege', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 2,
+  "trial": 7,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "x = 1\ndef f():\n    x = 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how scope_safe changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while scope_safe > 0."
+  ]
+}

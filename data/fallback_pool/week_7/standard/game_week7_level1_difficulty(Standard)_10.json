@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1820",
+  "game_title": "Stack Of Plates – Whisper Stones Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
+  "core_gameplay_loop": "In Whisper Stones, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round poses one decision; a wrong answer breaks the streak. Then check the stack_balance value and advance.",
+  "primary_mechanic": "Stack Of Plates",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about stack_balance to power up the scholar mage and open the crypt seal.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Stack Of Plates",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M05-X4-T10-d17c8826",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Streak Challenge', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "stack.append(x)\nstack.pop()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_balance changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

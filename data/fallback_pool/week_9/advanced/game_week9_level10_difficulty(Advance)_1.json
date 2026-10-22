@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2691",
+  "game_title": "Off By One Autopsy – Camel Trail Race",
+  "game_concept": "A strategy race set in Sand Dunes – Camel Trail, a camel trail: the oasis keeper must handle scarab swarms while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "strategy race",
+  "theme": "Sand Dunes – Camel Trail: a camel trail",
+  "core_gameplay_loop": "In Camel Trail, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round the rival advances, and solving the step moves the oasis keeper ahead. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the caravan wagon by solving code steps involving autopsy that move the oasis keeper forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "lose_condition": "The rival reaches the caravan wagon first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X5-T15-cfdf68c8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Rival Race', and setting 'Camel Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Camel Trail.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
+  ]
+}

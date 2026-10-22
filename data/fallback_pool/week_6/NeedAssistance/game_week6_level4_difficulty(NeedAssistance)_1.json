@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1591",
+  "game_title": "Spell Forge – Frozen Well Rush",
+  "game_concept": "A arcade set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Spell Forge: Define a function once, then call it to cast the same spell repeatedly against yeti raiders.",
+  "genre": "arcade",
+  "theme": "Snowy Hold – Frozen Well: a frozen village well",
+  "core_gameplay_loop": "In Frozen Well, repeat each round: Define a function once, then call it to cast the same spell repeatedly against yeti raiders. Each round, a new firewood challenge appears; solve it to bank points before time drains. Then check the spells value and advance.",
+  "primary_mechanic": "Spell Forge",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 150 points of firewood by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 150 within 55 seconds.",
+  "lose_condition": "Timer hits 0 with score < 150, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Spell Forge",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M01-X2-T07-1d953740",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Spell Forge' (Week 6 slot 1), mission type 'Resource Rush', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 4,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def cast():\n    attack()\ncast()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how spells changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
+    "Step 3: Win by meeting the goal: score >= 150 within 55 seconds."
+  ]
+}

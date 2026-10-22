@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1775",
+  "game_title": "Function Pipeline – Frozen Well Defense",
+  "game_concept": "A survival strategy set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Function Pipeline: Chain one function's output into the next to push firewood down a processing line.",
+  "genre": "survival strategy",
+  "theme": "Snowy Hold – Frozen Well: a frozen village well",
+  "core_gameplay_loop": "In Frozen Well, repeat each round: Chain one function's output into the next to push firewood down a processing line. Each round, yeti raiders strike the wall banner, so respond before the next strike lands. Then check the pipeline value and advance.",
+  "primary_mechanic": "Function Pipeline",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the wall banner from yeti raiders in Frozen Well: keep the pipeline meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while pipeline > 0.",
+  "lose_condition": "pipeline drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Function Pipeline",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M05-X1-T07-96202bf6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Function Pipeline' (Week 6 slot 5), mission type 'Survival Siege', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "clean(sort(load()))",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pipeline changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while pipeline > 0."
+  ]
+}

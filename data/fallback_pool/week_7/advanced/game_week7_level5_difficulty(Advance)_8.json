@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1948",
+  "game_title": "Merge Convoy – Relic Vault Defense",
+  "game_concept": "A tower defense set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Merge Convoy: Merge two lists using + or extend() to join convoys.",
+  "genre": "tower defense",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Merge two lists using + or extend() to join convoys. Each round, stone sentinels strike the moon altar, so respond before the next strike lands. Then check the convoy_size value and advance.",
+  "primary_mechanic": "Merge Convoy",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the moon altar from stone sentinels in Relic Vault: keep the convoy_size meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while convoy_size > 0.",
+  "lose_condition": "convoy_size drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Merge Convoy",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M13-X1-T14-4da8f7f6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Merge Convoy' (Week 7 slot 13), mission type 'Survival Siege', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 5,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "convoy_a.extend(convoy_b)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how convoy_size changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while convoy_size > 0."
+  ]
+}

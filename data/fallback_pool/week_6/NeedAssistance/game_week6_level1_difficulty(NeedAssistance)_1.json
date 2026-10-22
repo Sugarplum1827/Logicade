@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1501",
+  "game_title": "Spell Forge – Frozen Gatehouse Defense",
+  "game_concept": "A tower defense set in Snowy Hold – Frozen Gatehouse, the frozen gate of the hold: the hold guard must handle frost imps while practicing functions. Core idea – Spell Forge: Define a function once, then call it to cast the same spell repeatedly against frost imps.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Frozen Gatehouse: the frozen gate of the hold",
+  "core_gameplay_loop": "In Frozen Gatehouse, repeat each round: Define a function once, then call it to cast the same spell repeatedly against frost imps. Each round, frost imps strike the frozen well, so respond before the next strike lands. Then check the spells value and advance.",
+  "primary_mechanic": "Spell Forge",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the frozen well from frost imps in Frozen Gatehouse: keep the spells meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while spells > 0.",
+  "lose_condition": "spells drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 6 – Functions | Level 1 (intro tier): Spell Forge",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M01-X1-T01-62a5da82",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Spell Forge' (Week 6 slot 1), mission type 'Survival Siege', and setting 'Frozen Gatehouse'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 1,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def cast():\n    attack()\ncast()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how spells changes.",
+    "Step 2: Use the controls to apply the code idea against frost imps in Frozen Gatehouse.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while spells > 0."
+  ]
+}

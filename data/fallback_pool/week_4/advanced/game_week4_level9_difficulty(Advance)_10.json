@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1170",
+  "game_title": "Nested While Dungeon – Moss Door Chamber Race",
+  "game_concept": "A strategy race set in Shadow Cave – Moss Door Chamber, a mossy sealed door: the shadow ranger must handle skeleton miners while practicing control flow: while loops. Core idea – Nested While Dungeon: Run an inner loop for each room inside an outer loop for each floor.",
+  "genre": "strategy race",
+  "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
+  "core_gameplay_loop": "In Moss Door Chamber, repeat each round: Run an inner loop for each room inside an outer loop for each floor. Each round the rival advances, and solving the step moves the shadow ranger ahead. Then check the dungeon_clear value and advance.",
+  "primary_mechanic": "Nested While Dungeon",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving dungeon_clear that move the shadow ranger forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.2).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Nested While Dungeon",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M15-X5-T16-49edbcb4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested While Dungeon' (Week 4 slot 15), mission type 'Rival Race', and setting 'Moss Door Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 10,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how dungeon_clear changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Moss Door Chamber.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.2)."
+  ]
+}

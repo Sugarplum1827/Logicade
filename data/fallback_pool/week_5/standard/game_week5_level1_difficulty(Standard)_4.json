@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1214",
+  "game_title": "Loop Choreography – Berry Thicket Race",
+  "game_concept": "A adventure race set in Mystic Forest – Berry Thicket, a berry thicket: the beast tamer must handle bramble beasts while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "adventure race",
+  "theme": "Mystic Forest – Berry Thicket: a berry thicket",
+  "core_gameplay_loop": "In Berry Thicket, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round the rival advances, and solving the step moves the beast tamer ahead. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the heartwood tree by solving code steps involving sync that move the beast tamer forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "lose_condition": "The rival reaches the heartwood tree first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X5-T12-6d9e8a62",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Rival Race', and setting 'Berry Thicket'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Berry Thicket.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
+  ]
+}

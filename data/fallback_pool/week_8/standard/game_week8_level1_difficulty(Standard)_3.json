@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2113",
+  "game_title": "F-String Herald – Crevasse Bridge Rush",
+  "game_concept": "A arcade set in Frost Peaks – Crevasse Bridge, a rope bridge over a crevasse: the ice axe ranger must handle falling rocks while practicing strings & dictionaries. Core idea – F-String Herald: Format messages with f-strings that insert live values for announcements.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Crevasse Bridge: a rope bridge over a crevasse",
+  "core_gameplay_loop": "In Crevasse Bridge, repeat each round: Format messages with f-strings that insert live values for announcements. Each round, a new crampons challenge appears; solve it to bank points before time drains. Then check the announcements value and advance.",
+  "primary_mechanic": "F-String Herald",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 100 points of crampons by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 100 within 30 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): F-String Herald",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M13-X2-T05-898614d3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'F-String Herald' (Week 8 slot 13), mission type 'Resource Rush', and setting 'Crevasse Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 3,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "f'{name} scored {pts}'",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how announcements changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Crevasse Bridge.",
+    "Step 3: Win by meeting the goal: score >= 100 within 30 seconds."
+  ]
+}

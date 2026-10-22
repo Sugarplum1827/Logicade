@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2359",
+  "game_title": "Split Join Assembly – Blizzard Saddle Rush",
+  "game_concept": "A arcade set in Frost Peaks – Blizzard Saddle, a saddle between peaks: the mountaineer must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Split Join Assembly: Split sentences into words and join them back to assemble orders.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Blizzard Saddle: a saddle between peaks",
+  "core_gameplay_loop": "In Blizzard Saddle, repeat each round: Split sentences into words and join them back to assemble orders. Each round, a new flares challenge appears; solve it to bank points before time drains. Then check the assembly value and advance.",
+  "primary_mechanic": "Split Join Assembly",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 420 points of flares by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 9 (extended tier): Split Join Assembly",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M04-X2-T19-7b43c5f1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Split Join Assembly' (Week 8 slot 4), mission type 'Resource Rush', and setting 'Blizzard Saddle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 9,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "'a b c'.split()\n'-'.join(words)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how assembly changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Blizzard Saddle.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

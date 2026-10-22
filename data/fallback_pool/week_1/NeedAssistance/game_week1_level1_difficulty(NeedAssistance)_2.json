@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0002",
+  "game_title": "Reassign Relay – Village Green Streak",
+  "game_concept": "A rhythm puzzle set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Reassign Relay: Overwrite a variable with a fresh value each round so the old number vanishes before rogue knights can use it.",
+  "genre": "rhythm puzzle",
+  "theme": "The Kingdom – Village Green: the green outside the walls",
+  "core_gameplay_loop": "In Village Green, repeat each round: Overwrite a variable with a fresh value each round so the old number vanishes before rogue knights can use it. Each round poses one decision; a wrong answer breaks the streak. Then check the wave_target value and advance.",
+  "primary_mechanic": "Reassign Relay",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 5 consecutive correct decisions about wave_target to power up the squire and open the throne.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 5.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Reassign Relay",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M02-X4-T08-324ea0cf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reassign Relay' (Week 1 slot 2), mission type 'Streak Challenge', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "wave_target = 3\nwave_target = 7",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wave_target changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
+    "Step 3: Win by meeting the goal: streak counter reaches 5."
+  ]
+}

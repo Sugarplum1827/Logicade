@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0333",
+  "game_title": "Modulo Gate – Molten Bridge Streak",
+  "game_concept": "A card battler set in Mt. Pyre – Molten Bridge, a bridge over magma: the ember mage must handle magma slimes while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Molten Bridge open (even, odd, divisible by 3).",
+  "genre": "card battler",
+  "theme": "Mt. Pyre – Molten Bridge: a bridge over magma",
+  "core_gameplay_loop": "In Molten Bridge, repeat each round: Use % to decide which gates in Molten Bridge open (even, odd, divisible by 3). Each round poses one decision; a wrong answer breaks the streak. Then check the gates_open value and advance.",
+  "primary_mechanic": "Modulo Gate",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about gates_open to power up the ember mage and open the cooling vent.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Modulo Gate",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M03-X4-T17-657b5be7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Streak Challenge', and setting 'Molten Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 3,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "if n % 3 == 0:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gates_open changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Molten Bridge.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

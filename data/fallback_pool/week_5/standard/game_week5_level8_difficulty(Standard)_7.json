@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1427",
+  "game_title": "Volley Counter – Fairy Ring Glade Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming bog toads.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
+  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming bog toads. Each round poses one decision; a wrong answer breaks the streak. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about ammo to power up the herbalist and open the fairy lantern.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X4-T03-58534344",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Streak Challenge', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

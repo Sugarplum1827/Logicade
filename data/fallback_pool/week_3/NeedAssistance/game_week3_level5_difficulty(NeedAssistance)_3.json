@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0723",
+  "game_title": "Elif Ladder – Fish Market Race",
+  "game_concept": "A strategy race set in Coastal Port – Fish Market, a fish market full of crates: the shipwright must handle jellyfish swarms while practicing conditionals (if / elif / else). Core idea – Elif Ladder: Rank threats with an if/elif/else ladder and send the right response to each.",
+  "genre": "strategy race",
+  "theme": "Coastal Port – Fish Market: a fish market full of crates",
+  "core_gameplay_loop": "In Fish Market, repeat each round: Rank threats with an if/elif/else ladder and send the right response to each. Each round the rival advances, and solving the step moves the shipwright ahead. Then check the threat_level value and advance.",
+  "primary_mechanic": "Elif Ladder",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the ferry by solving code steps involving threat_level that move the shipwright forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "lose_condition": "The rival reaches the ferry first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 5 (applied tier): Elif Ladder",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M03-X5-T03-81be39fa",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Elif Ladder' (Week 3 slot 3), mission type 'Rival Race', and setting 'Fish Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 5,
+  "trial": 3,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if hp < 20:\n    run()\nelif hp < 60:\n    guard()\nelse:\n    fight()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how threat_level changes.",
+    "Step 2: Use the controls to apply the code idea against jellyfish swarms in Fish Market.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
+  ]
+}

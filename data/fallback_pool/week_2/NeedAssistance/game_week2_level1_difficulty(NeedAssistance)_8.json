@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0308",
+  "game_title": "Type Cast Forge – Fire Shrine Rush",
+  "game_concept": "A action puzzle set in Mt. Pyre – Fire Shrine, an ancient fire shrine: the ash ranger must handle cinder bats while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
+  "genre": "action puzzle",
+  "theme": "Mt. Pyre – Fire Shrine: an ancient fire shrine",
+  "core_gameplay_loop": "In Fire Shrine, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round, a new heat shields challenge appears; solve it to bank points before time drains. Then check the forge_heat value and advance.",
+  "primary_mechanic": "Type Cast Forge",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 70 points of heat shields by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 70 within 42 seconds.",
+  "lose_condition": "Timer hits 0 with score < 70, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Type Cast Forge",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M08-X2-T10-18abaf99",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Resource Rush', and setting 'Fire Shrine'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "total = int('5') + 3",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how forge_heat changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Fire Shrine.",
+    "Step 3: Win by meeting the goal: score >= 70 within 42 seconds."
+  ]
+}

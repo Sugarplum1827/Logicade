@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1357",
+  "game_title": "Pattern Painter – Woodcutter Clearing Streak",
+  "game_concept": "A quiz RPG set in Mystic Forest – Woodcutter Clearing, a woodcutter's clearing: the forest ranger must handle cursed treants while practicing control flow: for loops. Core idea – Pattern Painter: Print growing star triangles with nested loops to decorate the fairy lantern.",
+  "genre": "quiz RPG",
+  "theme": "Mystic Forest – Woodcutter Clearing: a woodcutter's clearing",
+  "core_gameplay_loop": "In Woodcutter Clearing, repeat each round: Print growing star triangles with nested loops to decorate the fairy lantern. Each round poses one decision; a wrong answer breaks the streak. Then check the pattern_rows value and advance.",
+  "primary_mechanic": "Pattern Painter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about pattern_rows to power up the forest ranger and open the fairy lantern.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Pattern Painter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M07-X4-T13-18a56513",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pattern Painter' (Week 5 slot 7), mission type 'Streak Challenge', and setting 'Woodcutter Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, 5):\n    print('*' * i)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pattern_rows changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Woodcutter Clearing.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1096",
+  "game_title": "Door Defense – Lantern Crossing Streak",
+  "game_concept": "A quiz RPG set in Shadow Cave – Lantern Crossing, a rope bridge over a pit: the spelunker must handle zombies while practicing control flow: while loops. Core idea – Door Defense: Push to repair the rope bridge while the while-loop condition stays true and zombies keep attacking.",
+  "genre": "quiz RPG",
+  "theme": "Shadow Cave – Lantern Crossing: a rope bridge over a pit",
+  "core_gameplay_loop": "In Lantern Crossing, repeat each round: Push to repair the rope bridge while the while-loop condition stays true and zombies keep attacking. Each round poses one decision; a wrong answer breaks the streak. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about door_health to power up the spelunker and open the rope bridge.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X4-T14-d66ce3df",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Streak Challenge', and setting 'Lantern Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 48:\n    player.push()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against zombies in Lantern Crossing.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

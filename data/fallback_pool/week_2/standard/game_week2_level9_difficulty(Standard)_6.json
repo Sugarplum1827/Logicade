@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0556",
+  "game_title": "Type Sorter – Ore Smelter Trial",
+  "game_concept": "A puzzle set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Type Sorter: Sort falling heat shields into bins labelled int, float, str and bool before they hit the ground.",
+  "genre": "puzzle",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Sort falling heat shields into bins labelled int, float, str and bool before they hit the ground. Each round costs one action, so plan the step so none are wasted. Then check the sorted_ok value and advance.",
+  "primary_mechanic": "Type Sorter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the fire shrine using at most 18 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The fire shrine reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the fire shrine is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Type Sorter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M01-X3-T18-ef6c0691",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Efficiency Trial', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "type(3.5)  # float",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: The fire shrine reached with actions_used <= 18."
+  ]
+}

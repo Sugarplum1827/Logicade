@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2068",
+  "game_title": "Merge Convoy – Overgrown Archway Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Merge Convoy: Merge two lists using + or extend() to join convoys.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
+  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Merge two lists using + or extend() to join convoys. Each round poses one decision; a wrong answer breaks the streak. Then check the convoy_size value and advance.",
+  "primary_mechanic": "Merge Convoy",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about convoy_size to power up the rune scholar and open the rune gate.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Merge Convoy",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M13-X4-T02-fb200d58",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Merge Convoy' (Week 7 slot 13), mission type 'Streak Challenge', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "convoy_a.extend(convoy_b)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how convoy_size changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

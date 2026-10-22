@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0931",
+  "game_title": "Door Defense – Bat Hollow Trial",
+  "game_concept": "A puzzle set in Shadow Cave – Bat Hollow, a hollow of roosting bats: the cave miner must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Door Defense: Push to repair the exit ledge while the while-loop condition stays true and glow-eyed lurkers keep attacking.",
+  "genre": "puzzle",
+  "theme": "Shadow Cave – Bat Hollow: a hollow of roosting bats",
+  "core_gameplay_loop": "In Bat Hollow, repeat each round: Push to repair the exit ledge while the while-loop condition stays true and glow-eyed lurkers keep attacking. Each round costs one action, so plan the step so none are wasted. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the exit ledge using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The exit ledge reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the exit ledge is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X3-T03-46d06bb5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Efficiency Trial', and setting 'Bat Hollow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 1,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 46:\n    player.push()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Bat Hollow.",
+    "Step 3: Win by meeting the goal: The exit ledge reached with actions_used <= 19."
+  ]
+}

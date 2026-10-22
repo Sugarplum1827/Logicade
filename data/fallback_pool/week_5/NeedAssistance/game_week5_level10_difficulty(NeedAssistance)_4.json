@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1474",
+  "game_title": "Squad Marcher – Moonlit Clearing Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Moonlit Clearing, a moonlit clearing: the druid must handle bramble beasts while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Moonlit Clearing: a moonlit clearing",
+  "core_gameplay_loop": "In Moonlit Clearing, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round costs one action, so plan the step so none are wasted. Then check the squad_ready value and advance.",
+  "primary_mechanic": "Squad Marcher",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the waterfall gate using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The waterfall gate reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the waterfall gate is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Squad Marcher",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M04-X3-T20-bf69e2e3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Efficiency Trial', and setting 'Moonlit Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for ally in squad:\n    ally.assign()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how squad_ready changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Moonlit Clearing.",
+    "Step 3: Win by meeting the goal: The waterfall gate reached with actions_used <= 23."
+  ]
+}

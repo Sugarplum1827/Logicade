@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2076",
+  "game_title": "Shelf Sorter – Relic Vault Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of moon crystals from smallest to largest.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Use sort() to rearrange shelves of moon crystals from smallest to largest. Each round poses one decision; a wrong answer breaks the streak. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about order_score to power up the rune scholar and open the moon altar.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X4-T14-a6a2fd99",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Streak Challenge', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

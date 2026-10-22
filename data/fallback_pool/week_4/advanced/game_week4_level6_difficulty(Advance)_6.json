@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1076",
+  "game_title": "Continue Gate – Crystal Grotto Rush",
+  "game_concept": "A action puzzle set in Shadow Cave – Crystal Grotto, a grotto of glowing crystals: the spelunker must handle rock golems while practicing control flow: while loops. Core idea – Continue Gate: Use continue to skip spoiled iron keys but keep the loop running.",
+  "genre": "action puzzle",
+  "theme": "Shadow Cave – Crystal Grotto: a grotto of glowing crystals",
+  "core_gameplay_loop": "In Crystal Grotto, repeat each round: Use continue to skip spoiled iron keys but keep the loop running. Each round, a new iron keys challenge appears; solve it to bank points before time drains. Then check the skipped_ok value and advance.",
+  "primary_mechanic": "Continue Gate",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 390 points of iron keys by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 6 (applied tier): Continue Gate",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M11-X2-T02-54f1f79b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Continue Gate' (Week 4 slot 11), mission type 'Resource Rush', and setting 'Crystal Grotto'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 6,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how skipped_ok changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Crystal Grotto.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

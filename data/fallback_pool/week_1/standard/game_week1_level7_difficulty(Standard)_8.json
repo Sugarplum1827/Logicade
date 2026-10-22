@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0198",
+  "game_title": "Counter Tower – Village Green Race",
+  "game_concept": "A strategy race set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Counter Tower: Increase a counter variable every time torches reach the throne, stacking the tower higher.",
+  "genre": "strategy race",
+  "theme": "The Kingdom – Village Green: the green outside the walls",
+  "core_gameplay_loop": "In Village Green, repeat each round: Increase a counter variable every time torches reach the throne, stacking the tower higher. Each round the rival advances, and solving the step moves the squire ahead. Then check the delivered value and advance.",
+  "primary_mechanic": "Counter Tower",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the throne by solving code steps involving delivered that move the squire forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the throne first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Counter Tower",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M03-X5-T08-86333542",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Counter Tower' (Week 1 slot 3), mission type 'Rival Race', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 7,
+  "trial": 8,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "delivered = delivered + 1",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how delivered changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

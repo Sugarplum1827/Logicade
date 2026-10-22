@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2292",
+  "game_title": "Nested Registry – Frozen Waterfall Defense",
+  "game_concept": "A action defense set in Frost Peaks – Frozen Waterfall, a frozen waterfall: the rescue climber must handle frost wyrms while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
+  "genre": "action defense",
+  "theme": "Frost Peaks – Frozen Waterfall: a frozen waterfall",
+  "core_gameplay_loop": "In Frozen Waterfall, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, frost wyrms strike the radio mast, so respond before the next strike lands. Then check the registry value and advance.",
+  "primary_mechanic": "Nested Registry",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the radio mast from frost wyrms in Frozen Waterfall: keep the registry meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 48 seconds while registry > 0.",
+  "lose_condition": "registry drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Nested Registry",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M12-X1-T10-193ebd39",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Survival Siege', and setting 'Frozen Waterfall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 7,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "town['inn']['rooms']",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how registry changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Frozen Waterfall.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while registry > 0."
+  ]
+}

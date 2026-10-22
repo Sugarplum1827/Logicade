@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1764",
+  "game_title": "Docstring Detective – Lantern Square Rush",
+  "game_concept": "A speed quiz set in Snowy Hold – Lantern Square, a lantern-lit square: the snow ranger must handle ice wolves while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "speed quiz",
+  "theme": "Snowy Hold – Lantern Square: a lantern-lit square",
+  "core_gameplay_loop": "In Lantern Square, repeat each round: Read docstrings to pick the right function for each case. Each round, a new ice picks challenge appears; solve it to bank points before time drains. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 550 points of ice picks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 550 within 43 seconds.",
+  "lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X2-T14-e4722085",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Resource Rush', and setting 'Lantern Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 9,
+  "trial": 4,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against ice wolves in Lantern Square.",
+    "Step 3: Win by meeting the goal: score >= 550 within 43 seconds."
+  ]
+}

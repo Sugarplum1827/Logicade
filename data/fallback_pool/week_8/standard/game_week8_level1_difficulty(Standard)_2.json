@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2112",
+  "game_title": "Nested Registry – Glacier Lake Streak",
+  "game_concept": "A card battler set in Frost Peaks – Glacier Lake, a lake of glacier melt: the summit pilot must handle frost wyrms while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
+  "genre": "card battler",
+  "theme": "Frost Peaks – Glacier Lake: a lake of glacier melt",
+  "core_gameplay_loop": "In Glacier Lake, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round poses one decision; a wrong answer breaks the streak. Then check the registry value and advance.",
+  "primary_mechanic": "Nested Registry",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about registry to power up the summit pilot and open the basecamp tent.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Nested Registry",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M12-X4-T18-f8d877ee",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Streak Challenge', and setting 'Glacier Lake'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "town['inn']['rooms']",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how registry changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Lake.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

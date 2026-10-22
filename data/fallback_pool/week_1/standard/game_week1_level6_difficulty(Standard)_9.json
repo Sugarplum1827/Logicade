@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0169",
+  "game_title": "Swap Switch – Archery Yard Defense",
+  "game_concept": "A tower defense set in The Kingdom – Archery Yard, the garrison archery yard: the knight must handle shadow scouts while practicing variables & assignment. Core idea – Swap Switch: Swap two variables with a temporary slot to reroute keys without losing either value.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Archery Yard: the garrison archery yard",
+  "core_gameplay_loop": "In Archery Yard, repeat each round: Swap two variables with a temporary slot to reroute keys without losing either value. Each round, shadow scouts strike the wall banner, so respond before the next strike lands. Then check the a value and advance.",
+  "primary_mechanic": "Swap Switch",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the wall banner from shadow scouts in Archery Yard: keep the a meter above zero by applying the concept correctly until the 45-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 45 seconds while a > 0.",
+  "lose_condition": "a drops to 0, or lives reach 0, before the 45-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 6 (applied tier): Swap Switch",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M04-X1-T13-8f5b16dd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Swap Switch' (Week 1 slot 4), mission type 'Survival Siege', and setting 'Archery Yard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 6,
+  "trial": 9,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "temp = a\na = b\nb = temp",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how a changes.",
+    "Step 2: Use the controls to apply the code idea against shadow scouts in Archery Yard.",
+    "Step 3: Win by meeting the goal: Timer reaches 45 seconds while a > 0."
+  ]
+}

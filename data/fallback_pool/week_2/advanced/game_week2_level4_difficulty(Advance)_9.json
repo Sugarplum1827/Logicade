@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0419",
+  "game_title": "Unit Trader – Vent Garden Rush",
+  "game_concept": "A action puzzle set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of fire gems is fair.",
+  "genre": "action puzzle",
+  "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
+  "core_gameplay_loop": "In Vent Garden, repeat each round: Convert units using expressions so each trade of fire gems is fair. Each round, a new fire gems challenge appears; solve it to bank points before time drains. Then check the fair_trades value and advance.",
+  "primary_mechanic": "Unit Trader",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 290 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 290 within 31 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Unit Trader",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M14-X2-T19-68619858",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Resource Rush', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 4,
+  "trial": 9,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "cm = m * 100",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fair_trades changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
+    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
+  ]
+}

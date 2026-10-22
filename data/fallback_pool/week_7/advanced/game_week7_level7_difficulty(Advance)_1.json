@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2001",
+  "game_title": "Shelf Sorter – Crypt Stairs Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Crypt Stairs, stairs to a crypt: the ruin warden must handle ghost knights while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of glyph tablets from smallest to largest.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Crypt Stairs: stairs to a crypt",
+  "core_gameplay_loop": "In Crypt Stairs, repeat each round: Use sort() to rearrange shelves of glyph tablets from smallest to largest. Each round poses one decision; a wrong answer breaks the streak. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about order_score to power up the ruin warden and open the heart stone.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X4-T09-3333f4c1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Streak Challenge', and setting 'Crypt Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Crypt Stairs.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1423",
+  "game_title": "Off By One Fixer – Misty Bog Defense",
+  "game_concept": "A tower defense set in Mystic Forest – Misty Bog, a misty bog: the forest ranger must handle bog toads while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
+  "genre": "tower defense",
+  "theme": "Mystic Forest – Misty Bog: a misty bog",
+  "core_gameplay_loop": "In Misty Bog, repeat each round: Fix range boundaries that skip or overshoot by one. Each round, bog toads strike the seed vault, so respond before the next strike lands. Then check the fixes value and advance.",
+  "primary_mechanic": "Off By One Fixer",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the seed vault from bog toads in Misty Bog: keep the fixes meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 51 seconds while fixes > 0.",
+  "lose_condition": "fixes drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Off By One Fixer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M13-X1-T19-4f32f78e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Survival Siege', and setting 'Misty Bog'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, n):  # misses n",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fixes changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Misty Bog.",
+    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while fixes > 0."
+  ]
+}

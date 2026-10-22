@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1721",
+  "game_title": "Countdown Recursion – Hearth Hall Race",
+  "game_concept": "A adventure race set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Countdown Recursion: Use a simple self-calling function to count down to a base case.",
+  "genre": "adventure race",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Use a simple self-calling function to count down to a base case. Each round the rival advances, and solving the step moves the frost mage ahead. Then check the base_case value and advance.",
+  "primary_mechanic": "Countdown Recursion",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the hearth fire by solving code steps involving base_case that move the frost mage forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the hearth fire first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Countdown Recursion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M11-X5-T05-42de3a32",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Recursion' (Week 6 slot 11), mission type 'Rival Race', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def down(n):\n    if n == 0:\n        return\n    down(n - 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how base_case changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

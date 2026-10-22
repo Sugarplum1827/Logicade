@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0913",
+  "game_title": "Digit Mill – Stalactite Hall Rush",
+  "game_concept": "A arcade set in Shadow Cave – Stalactite Hall, a hall of dripping stalactites: the lantern keeper must handle slime blobs while practicing control flow: while loops. Core idea – Digit Mill: Peel digits off a number with while n > 0 using // and %.",
+  "genre": "arcade",
+  "theme": "Shadow Cave – Stalactite Hall: a hall of dripping stalactites",
+  "core_gameplay_loop": "In Stalactite Hall, repeat each round: Peel digits off a number with while n > 0 using // and %. Each round, a new glowing mushrooms challenge appears; solve it to bank points before time drains. Then check the digits value and advance.",
+  "primary_mechanic": "Digit Mill",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 100 points of glowing mushrooms by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 100 within 30 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 1 (intro tier): Digit Mill",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M13-X2-T05-8cd647e2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Digit Mill' (Week 4 slot 13), mission type 'Resource Rush', and setting 'Stalactite Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 1,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n > 0:\n    n //= 10",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how digits changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Stalactite Hall.",
+    "Step 3: Win by meeting the goal: score >= 100 within 30 seconds."
+  ]
+}

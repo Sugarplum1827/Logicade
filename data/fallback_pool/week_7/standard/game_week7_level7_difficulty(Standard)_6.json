@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1996",
+  "game_title": "Backpack Append – Relic Vault Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Backpack Append: Use append and remove to manage the rune scholar's backpack list as stone sentinels drop loot.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Use append and remove to manage the rune scholar's backpack list as stone sentinels drop loot. Each round poses one decision; a wrong answer breaks the streak. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about bag_space to power up the rune scholar and open the moon altar.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X4-T14-c9a25112",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Streak Challenge', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0170",
+  "game_title": "Name Tag Match – Postern Gate Streak",
+  "game_concept": "A rhythm puzzle set in The Kingdom – Postern Gate, the hidden postern gate: the squire must handle rogue crows while practicing variables & assignment. Core idea – Name Tag Match: Match floating variable name tags to the values on passing arrows before they reach rogue crows.",
+  "genre": "rhythm puzzle",
+  "theme": "The Kingdom – Postern Gate: the hidden postern gate",
+  "core_gameplay_loop": "In Postern Gate, repeat each round: Match floating variable name tags to the values on passing arrows before they reach rogue crows. Each round poses one decision; a wrong answer breaks the streak. Then check the tag_matches value and advance.",
+  "primary_mechanic": "Name Tag Match",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about tag_matches to power up the squire and open the market bell.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 6 (applied tier): Name Tag Match",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M05-X4-T20-c0f2b4cc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Name Tag Match' (Week 1 slot 5), mission type 'Streak Challenge', and setting 'Postern Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 6,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "speed = 12\nname = 'Rex'",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tag_matches changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Postern Gate.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

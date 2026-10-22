@@ -1,30 +1,48 @@
-﻿export default function RegionModal({ region, isUnlocked, hasPlayed, playCount, onClose, onEnter }) {
+﻿export default function RegionModal({
+  region,
+  isUnlocked,
+  hasPlayed,
+  playCount,
+  onClose,
+  onEnter,
+}) {
   const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
+    if (e.target === e.currentTarget) onClose();
   };
 
-  // Ensure playCount is a valid number even if old data is boolean
   const safeCount = Number(playCount) || 0;
+  const displayTitle = region.title || region.name || 'Unknown Region';
 
   return (
     <div className="modal-overlay" onMouseDown={handleOverlayClick}>
       <div className="region-modal" onMouseDown={(e) => e.stopPropagation()}>
-        
         <div className="region-image-container">
-          <img src={region.preview_image} alt={region.name} className="region-image" />
+          <img
+            src={region.preview_image}
+            alt={displayTitle}
+            className="region-image"
+          />
         </div>
 
         <div className="modal-header">
-          <h2>{region.name}</h2>
+          <h2>{displayTitle}</h2>
           <div className="header-tags">
-            <span className="week-badge">Week {region.week} • Orientation</span>
-            <span className="status-badge" style={{ background: isUnlocked ? (hasPlayed ? '#f57f17' : '#2e7d32') : '#c62828' }}>
-              {isUnlocked ? (hasPlayed ? "Completed" : "Available") : "Locked"}
+            <span className="week-badge">
+              Week {region.week} • Orientation
             </span>
-            
-            {/* ONLY SHOW THE TICKER IF safeCount IS GREATER THAN 0 */}
+            <span
+              className="status-badge"
+              style={{
+                background: isUnlocked
+                  ? hasPlayed
+                    ? '#f57f17'
+                    : '#2e7d32'
+                  : '#c62828',
+              }}
+            >
+              {isUnlocked ? (hasPlayed ? 'Completed' : 'Available') : 'Locked'}
+            </span>
+
             {safeCount > 0 && (
               <span className="play-counter">
                 Played: {safeCount} {safeCount === 1 ? 'time' : 'times'}
@@ -35,7 +53,7 @@
 
         <div className="modal-body">
           <p>
-            Welcome to LogiCade! Start your journey in the {region.name},
+            Welcome to LogiCade! Start your journey in the {displayTitle},
             learn the basics of the game, meet key characters, and complete
             your first set of activities.
           </p>
@@ -52,10 +70,12 @@
             </div>
             <div>
               <h4>Rewards:</h4>
-              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+              <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
                 <li>🔓 Region Unlocked</li>
                 <li>🔑 Access to Week {region.week + 1}</li>
-                <li style={{ marginTop: "10px", fontSize: "18px" }}>⏱ 1–2 hours</li>
+                <li style={{ marginTop: '10px', fontSize: '18px' }}>
+                  ⏱ 1–2 hours
+                </li>
               </ul>
             </div>
           </div>
@@ -65,7 +85,7 @@
           <button className="btn-back" type="button" onClick={onClose}>
             ← BACK
           </button>
-          
+
           {!hasPlayed ? (
             <button
               className="btn-enter"

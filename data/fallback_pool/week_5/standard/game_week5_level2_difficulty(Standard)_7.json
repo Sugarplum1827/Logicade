@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1247",
+  "game_title": "Volley Counter – Owl Roost Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming bog toads.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
+  "core_gameplay_loop": "In Owl Roost, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming bog toads. Each round, a new spirit lanterns challenge appears; solve it to bank points before time drains. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 140 points of spirit lanterns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 140 within 33 seconds.",
+  "lose_condition": "Timer hits 0 with score < 140, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X2-T11-11dddf42",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Resource Rush', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 2,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
+    "Step 3: Win by meeting the goal: score >= 140 within 33 seconds."
+  ]
+}

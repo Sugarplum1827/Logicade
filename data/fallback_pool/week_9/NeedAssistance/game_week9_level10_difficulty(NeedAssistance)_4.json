@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2674",
+  "game_title": "Print Tracer – Sunset Dunes Trial",
+  "game_concept": "A puzzle set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what dust devils changed.",
+  "genre": "puzzle",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Insert print statements at the right lines to reveal what dust devils changed. Each round costs one action, so plan the step so none are wasted. Then check the trace_clarity value and advance.",
+  "primary_mechanic": "Print Tracer",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the supply tent using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The supply tent reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the supply tent is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Print Tracer",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M04-X3-T20-73b1307c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Efficiency Trial', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "print('x =', x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
+    "Step 3: Win by meeting the goal: The supply tent reached with actions_used <= 23."
+  ]
+}

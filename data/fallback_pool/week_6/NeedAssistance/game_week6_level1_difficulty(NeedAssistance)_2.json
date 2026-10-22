@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1502",
+  "game_title": "Parameter Potion – Wolf Watch Streak",
+  "game_concept": "A rhythm puzzle set in Snowy Hold – Wolf Watch, a lookout against wolves: the snow ranger must handle icicle bats while practicing functions. Core idea – Parameter Potion: Pass parameters into a function so one recipe makes many potions.",
+  "genre": "rhythm puzzle",
+  "theme": "Snowy Hold – Wolf Watch: a lookout against wolves",
+  "core_gameplay_loop": "In Wolf Watch, repeat each round: Pass parameters into a function so one recipe makes many potions. Each round poses one decision; a wrong answer breaks the streak. Then check the potions value and advance.",
+  "primary_mechanic": "Parameter Potion",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 5 consecutive correct decisions about potions to power up the snow ranger and open the watch bell.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 5.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 6 – Functions | Level 1 (intro tier): Parameter Potion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M02-X4-T08-73ebacad",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parameter Potion' (Week 6 slot 2), mission type 'Streak Challenge', and setting 'Wolf Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 1,
+  "trial": 2,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def brew(herb, amount):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potions changes.",
+    "Step 2: Use the controls to apply the code idea against icicle bats in Wolf Watch.",
+    "Step 3: Win by meeting the goal: streak counter reaches 5."
+  ]
+}

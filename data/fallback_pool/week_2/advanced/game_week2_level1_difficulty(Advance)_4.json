@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0324",
+  "game_title": "Parenthesis Puzzle – Ore Smelter Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the fire shrine.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Place parentheses to make an expression equal the number carved on the fire shrine. Each round, cinder bats strike the fire shrine, so respond before the next strike lands. Then check the puzzle_gap value and advance.",
+  "primary_mechanic": "Parenthesis Puzzle",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the fire shrine from cinder bats in Ore Smelter: keep the puzzle_gap meter above zero by applying the concept correctly until the 24-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 24 seconds while puzzle_gap > 0.",
+  "lose_condition": "puzzle_gap drops to 0, or lives reach 0, before the 24-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Parenthesis Puzzle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M09-X1-T18-05d8f44c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Survival Siege', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 4,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "(2 + 3) * 4",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: Timer reaches 24 seconds while puzzle_gap > 0."
+  ]
+}

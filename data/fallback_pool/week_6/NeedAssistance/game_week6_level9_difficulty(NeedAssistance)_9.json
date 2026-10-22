@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1749",
+  "game_title": "Docstring Detective – Cold Larder Defense",
+  "game_concept": "A action defense set in Snowy Hold – Cold Larder, an ice-cellar larder: the hold guard must handle frozen golems while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "action defense",
+  "theme": "Snowy Hold – Cold Larder: an ice-cellar larder",
+  "core_gameplay_loop": "In Cold Larder, repeat each round: Read docstrings to pick the right function for each case. Each round, frozen golems strike the beacon fire, so respond before the next strike lands. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the beacon fire from frozen golems in Cold Larder: keep the cases meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 76 seconds while cases > 0.",
+  "lose_condition": "cases drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X1-T13-748c55e2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Survival Siege', and setting 'Cold Larder'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 9,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Cold Larder.",
+    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while cases > 0."
+  ]
+}

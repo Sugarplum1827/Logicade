@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1297",
+  "game_title": "Pattern Painter – Waterfall Pool Race",
+  "game_concept": "A racing platformer set in Mystic Forest – Waterfall Pool, a pool below a waterfall: the herbalist must handle shadow wolves while practicing control flow: for loops. Core idea – Pattern Painter: Print growing star triangles with nested loops to decorate the seed vault.",
+  "genre": "racing platformer",
+  "theme": "Mystic Forest – Waterfall Pool: a pool below a waterfall",
+  "core_gameplay_loop": "In Waterfall Pool, repeat each round: Print growing star triangles with nested loops to decorate the seed vault. Each round the rival advances, and solving the step moves the herbalist ahead. Then check the pattern_rows value and advance.",
+  "primary_mechanic": "Pattern Painter",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Beat a rival AI to the seed vault by solving code steps involving pattern_rows that move the herbalist forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "lose_condition": "The rival reaches the seed vault first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Pattern Painter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M07-X5-T09-0c8325a3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pattern Painter' (Week 5 slot 7), mission type 'Rival Race', and setting 'Waterfall Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, 5):\n    print('*' * i)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pattern_rows changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Waterfall Pool.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
+  ]
+}

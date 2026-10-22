@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0674",
+  "game_title": "Truth Table Tiles – Tavern Terrace Streak",
+  "game_concept": "A rhythm puzzle set in Coastal Port – Tavern Terrace, a seaside tavern terrace: the fisher must handle smugglers while practicing conditionals (if / elif / else). Core idea – Truth Table Tiles: Fill in truth-table tiles for and/or/not to light the correct path.",
+  "genre": "rhythm puzzle",
+  "theme": "Coastal Port – Tavern Terrace: a seaside tavern terrace",
+  "core_gameplay_loop": "In Tavern Terrace, repeat each round: Fill in truth-table tiles for and/or/not to light the correct path. Each round poses one decision; a wrong answer breaks the streak. Then check the table_score value and advance.",
+  "primary_mechanic": "Truth Table Tiles",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about table_score to power up the fisher and open the treasure chest.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Truth Table Tiles",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M14-X4-T16-765928f5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Truth Table Tiles' (Week 3 slot 14), mission type 'Streak Challenge', and setting 'Tavern Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 3,
+  "trial": 4,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "True and False  # False",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how table_score changes.",
+    "Step 2: Use the controls to apply the code idea against smugglers in Tavern Terrace.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

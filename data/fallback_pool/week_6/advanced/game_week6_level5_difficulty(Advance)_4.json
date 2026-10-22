@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1644",
+  "game_title": "Docstring Detective – Sled Run Streak",
+  "game_concept": "A card battler set in Snowy Hold – Sled Run, a steep sled run: the innkeeper must handle ice wolves while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "card battler",
+  "theme": "Snowy Hold – Sled Run: a steep sled run",
+  "core_gameplay_loop": "In Sled Run, repeat each round: Read docstrings to pick the right function for each case. Each round poses one decision; a wrong answer breaks the streak. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about cases to power up the innkeeper and open the ice mill.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X4-T06-9aaba3f8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Streak Challenge', and setting 'Sled Run'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 5,
+  "trial": 4,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against ice wolves in Sled Run.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2064",
+  "game_title": "Length Limit – Relic Vault Rush",
+  "game_concept": "A speed quiz set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Relic Vault.",
+  "genre": "speed quiz",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Use len() to stop the list from growing past the limit of Relic Vault. Each round, a new moon crystals challenge appears; solve it to bank points before time drains. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 550 points of moon crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 550 within 43 seconds.",
+  "lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X2-T14-4b750ee4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Resource Rush', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: score >= 550 within 43 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1231",
+  "game_title": "Range Runner – Fairy Ring Glade Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the herbalist moves exactly n steps toward the fairy lantern.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
+  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Run a for i in range(n) loop so the herbalist moves exactly n steps toward the fairy lantern. Each round costs one action, so plan the step so none are wasted. Then check the steps_left value and advance.",
+  "primary_mechanic": "Range Runner",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the fairy lantern using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The fairy lantern reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the fairy lantern is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Range Runner",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M01-X3-T03-d410f593",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Efficiency Trial', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 2,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(5):\n    step()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how steps_left changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
+    "Step 3: Win by meeting the goal: The fairy lantern reached with actions_used <= 19."
+  ]
+}

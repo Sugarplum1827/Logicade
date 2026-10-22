@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2301",
+  "game_title": "Vowel Counter – Cloud Sea Overlook Streak",
+  "game_concept": "A card battler set in Frost Peaks – Cloud Sea Overlook, an overlook above the clouds: the avalanche scout must handle yetis while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
+  "genre": "card battler",
+  "theme": "Frost Peaks – Cloud Sea Overlook: an overlook above the clouds",
+  "core_gameplay_loop": "In Cloud Sea Overlook, repeat each round: Count vowels in words by looping over characters. Each round poses one decision; a wrong answer breaks the streak. Then check the vowels value and advance.",
+  "primary_mechanic": "Vowel Counter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about vowels to power up the avalanche scout and open the pass gate.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Vowel Counter",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M06-X4-T09-765e7baa",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Streak Challenge', and setting 'Cloud Sea Overlook'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 7,
+  "trial": 1,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vowels changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Cloud Sea Overlook.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

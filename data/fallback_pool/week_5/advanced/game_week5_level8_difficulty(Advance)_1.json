@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1431",
+  "game_title": "Times Table Garden – Owl Roost Defense",
+  "game_concept": "A action defense set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of spirit lanterns using nested for loops for rows and columns.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
+  "core_gameplay_loop": "In Owl Roost, repeat each round: Plant a grid of spirit lanterns using nested for loops for rows and columns. Each round, bog toads strike the spirit shrine, so respond before the next strike lands. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the spirit shrine from bog toads in Owl Roost: keep the garden_cells meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 41 seconds while garden_cells > 0.",
+  "lose_condition": "garden_cells drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X1-T11-a4577f96",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Survival Siege', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
+    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while garden_cells > 0."
+  ]
+}

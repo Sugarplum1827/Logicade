@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1390",
+  "game_title": "Filter Harvest – Root Tunnels Race",
+  "game_concept": "A racing platformer set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only mana petals that meet a rule.",
+  "genre": "racing platformer",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Combine for and if to harvest only mana petals that meet a rule. Each round the rival advances, and solving the step moves the fairy gardener ahead. Then check the harvest value and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the elder's door by solving code steps involving harvest that move the fairy gardener forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the elder's door first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M10-X5-T16-43793eee",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Rival Race', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how harvest changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

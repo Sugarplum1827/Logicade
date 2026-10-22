@@ -1,0 +1,240 @@
+{
+  "template_id": "tmpl_w3_l01_ST",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 3,
+    "level": 1,
+    "difficulty": "Standard"
+  },
+  "file_id": "fallback_0062",
+  "game_title": "Fallback: Gatekeeper If – Harbor Docks",
+  "game_concept": "A tower defense set in Coastal Port – Harbor Docks, busy wooden harbor docks: the sailor must hold off sea serpents while practicing conditionals (if / elif / else). Core idea – Gatekeeper If: Write a single if condition that opens the gate only for friendly visitors.",
+  "genre": "tower defense",
+  "theme": "Coastal Port – Harbor Docks: busy wooden harbor docks",
+  "core_gameplay_loop": "In Harbor Docks, repeat each round: Write a single if condition that opens the gate only for friendly visitors. Then check gate_integrity and advance.",
+  "primary_mechanic": "Gatekeeper If",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the harbor gate from sea serpents in Harbor Docks: keep gate_integrity above zero until the 30-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "gate_integrity > 0 && timer >= 30",
+  "lose_condition": "gate_integrity <= 0 || lives <= 0",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 1 (intro tier): Gatekeeper If",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "FB-W3-L01-ST",
+  "duplicate_check_notes": "Generic fallback template for Week 3, Level 1, Standard. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 3,
+  "level": 1,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Conditionals (if / elif / else)",
+    "Apply “Gatekeeper If” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_sailor",
+    "enemy": "kenney_sea_serpents",
+    "objective": "kenney_harbor_gate",
+    "background": "w3_coast",
+    "projectile": "kenney_pearls",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "gate_integrity",
+    "damage_per_attack": 10,
+    "repair_per_action": 6,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 2,
+    "lives": 3,
+    "hint_count": 2,
+    "game_duration_seconds": 30,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Harbor Docks: Gatekeeper If",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "if has_key:\n    open_gate()",
+    "health_bar": {
+      "visible": true,
+      "label": "gate_integrity",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "gate_integrity > 0 && timer < 30",
+      "then": [
+        "gate_integrity = max(0, gate_integrity - 10)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Sea serpents attack the harbor gate!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "gate_integrity > 0 && gate_integrity < 100 && player_energy >= 5",
+      "then": [
+        "gate_integrity = min(100, gate_integrity + 6)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "gate_integrity >= 100",
+      "then": [
+        "show_message('gate_integrity is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && gate_integrity < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 30 && gate_integrity > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 2)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "gate_integrity > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "gate_integrity <= 30 && gate_integrity > 0",
+      "then": [
+        "show_warning('gate_integrity is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 3,
+      "attack_interval_seconds": 2.7
+    },
+    {
+      "wave": 2,
+      "start_time": 10,
+      "enemy_count": 4,
+      "attack_interval_seconds": 2.3
+    },
+    {
+      "wave": 3,
+      "start_time": 20,
+      "enemy_count": 5,
+      "attack_interval_seconds": 1.9
+    }
+  ],
+  "win": "gate_integrity > 0 && timer >= 30",
+  "lose": "gate_integrity <= 0 || lives <= 0",
+  "hint": "Read the code panel: Write a single if condition that opens the gate only for friendly visitors. Keep gate_integrity above zero until the timer reaches 30.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Sea serpents are coming! Watch the gate_integrity meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: if has_key:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 30 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Gatekeeper If in Coastal Port!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "gate_integrity ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

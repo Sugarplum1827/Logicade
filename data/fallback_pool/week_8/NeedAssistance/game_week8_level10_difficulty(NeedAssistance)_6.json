@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2376",
+  "game_title": "Vowel Counter – Snowline Trail Streak",
+  "game_concept": "A card battler set in Frost Peaks – Snowline Trail, the trail at the snowline: the sherpa guide must handle avalanches while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
+  "genre": "card battler",
+  "theme": "Frost Peaks – Snowline Trail: the trail at the snowline",
+  "core_gameplay_loop": "In Snowline Trail, repeat each round: Count vowels in words by looping over characters. Each round poses one decision; a wrong answer breaks the streak. Then check the vowels value and advance.",
+  "primary_mechanic": "Vowel Counter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about vowels to power up the sherpa guide and open the rescue sled.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Vowel Counter",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M06-X4-T14-260d4f3b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Streak Challenge', and setting 'Snowline Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vowels changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Snowline Trail.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

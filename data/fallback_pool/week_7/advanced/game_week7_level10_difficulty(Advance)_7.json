@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2097",
+  "game_title": "Duplicate Sweep – Pillar Maze Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Pillar Maze, a maze of pillars: the tomb cartographer must handle ghost knights while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of glyph tablets while keeping the order.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Pillar Maze: a maze of pillars",
+  "core_gameplay_loop": "In Pillar Maze, repeat each round: Remove repeated items from a list of glyph tablets while keeping the order. Each round costs one action, so plan the step so none are wasted. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the obelisk using at most 15 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The obelisk reached with actions_used <= 15.",
+  "lose_condition": "actions_used exceeds 15 before the obelisk is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X3-T17-59e02538",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Efficiency Trial', and setting 'Pillar Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Pillar Maze.",
+    "Step 3: Win by meeting the goal: The obelisk reached with actions_used <= 15."
+  ]
+}

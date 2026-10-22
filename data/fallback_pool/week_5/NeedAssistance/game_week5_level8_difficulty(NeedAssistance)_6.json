@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1416",
+  "game_title": "Times Table Garden – Mushroom Market Race",
+  "game_concept": "A strategy race set in Mystic Forest – Mushroom Market, a forest mushroom market: the fairy gardener must handle giant beetles while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of vine ropes using nested for loops for rows and columns.",
+  "genre": "strategy race",
+  "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
+  "core_gameplay_loop": "In Mushroom Market, repeat each round: Plant a grid of vine ropes using nested for loops for rows and columns. Each round the rival advances, and solving the step moves the fairy gardener ahead. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Beat a rival AI to the waterfall gate by solving code steps involving garden_cells that move the fairy gardener forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "lose_condition": "The rival reaches the waterfall gate first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X5-T10-ef40995f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Rival Race', and setting 'Mushroom Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mushroom Market.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
+  ]
+}

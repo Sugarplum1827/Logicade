@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1058",
+  "game_title": "Dam Filler – Exit Light Ledge Rush",
+  "game_concept": "A action puzzle set in Shadow Cave – Exit Light Ledge, a ledge toward daylight: the spelunker must handle cave spiders while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
+  "genre": "action puzzle",
+  "theme": "Shadow Cave – Exit Light Ledge: a ledge toward daylight",
+  "core_gameplay_loop": "In Exit Light Ledge, repeat each round: Raise the water level in a loop while level < max, without overflowing. Each round, a new arrows challenge appears; solve it to bank points before time drains. Then check the level value and advance.",
+  "primary_mechanic": "Dam Filler",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 210 points of arrows by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 210 within 63 seconds.",
+  "lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 6 (applied tier): Dam Filler",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M08-X2-T20-82f16924",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Resource Rush', and setting 'Exit Light Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 6,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while level < max_level:\n    level += 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how level changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Exit Light Ledge.",
+    "Step 3: Win by meeting the goal: score >= 210 within 63 seconds."
+  ]
+}

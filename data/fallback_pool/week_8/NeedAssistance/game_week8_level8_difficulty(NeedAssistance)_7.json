@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2317",
+  "game_title": "Key Vault – Sherpa Bridge Trial",
+  "game_concept": "A puzzle set in Frost Peaks – Sherpa Bridge, a bridge of fixed ropes: the ice axe ranger must handle yetis while practicing strings & dictionaries. Core idea – Key Vault: Look up values in a dictionary by key to open the supply cache.",
+  "genre": "puzzle",
+  "theme": "Frost Peaks – Sherpa Bridge: a bridge of fixed ropes",
+  "core_gameplay_loop": "In Sherpa Bridge, repeat each round: Look up values in a dictionary by key to open the supply cache. Each round costs one action, so plan the step so none are wasted. Then check the vault_keys value and advance.",
+  "primary_mechanic": "Key Vault",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Reach the supply cache using at most 22 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The supply cache reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the supply cache is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 8 (extended tier): Key Vault",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M07-X3-T17-1dbe794e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Key Vault' (Week 8 slot 7), mission type 'Efficiency Trial', and setting 'Sherpa Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 8,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "vault['gold']",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault_keys changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Sherpa Bridge.",
+    "Step 3: Win by meeting the goal: The supply cache reached with actions_used <= 22."
+  ]
+}

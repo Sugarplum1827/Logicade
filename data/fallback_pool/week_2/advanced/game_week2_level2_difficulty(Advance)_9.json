@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0359",
+  "game_title": "Unit Trader – Eruption Watch Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of ore chunks is fair.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
+  "core_gameplay_loop": "In Eruption Watch, repeat each round: Convert units using expressions so each trade of ore chunks is fair. Each round costs one action, so plan the step so none are wasted. Then check the fair_trades value and advance.",
+  "primary_mechanic": "Unit Trader",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the lava bridge using at most 11 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The lava bridge reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the lava bridge is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Unit Trader",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M14-X3-T15-cb7dc851",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Efficiency Trial', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 9,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "cm = m * 100",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fair_trades changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
+    "Step 3: Win by meeting the goal: The lava bridge reached with actions_used <= 11."
+  ]
+}

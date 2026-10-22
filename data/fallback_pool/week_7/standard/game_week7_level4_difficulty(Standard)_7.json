@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1907",
+  "game_title": "Index Archery – Weathered Gate Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Weathered Gate, a weathered stone gate: the ruin warden must handle eldritch shades while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Weathered Gate: a weathered stone gate",
+  "core_gameplay_loop": "In Weathered Gate, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, eldritch shades strike the relic vault, so respond before the next strike lands. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the relic vault from eldritch shades in Weathered Gate: keep the arrows meter above zero by applying the concept correctly until the 39-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 39 seconds while arrows > 0.",
+  "lose_condition": "arrows drops to 0, or lives reach 0, before the 39-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X1-T15-4280bf9e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Survival Siege', and setting 'Weathered Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 4,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Weathered Gate.",
+    "Step 3: Win by meeting the goal: Timer reaches 39 seconds while arrows > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1832",
+  "game_title": "Index Archery – Whisper Stones Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
+  "core_gameplay_loop": "In Whisper Stones, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, vine horrors strike the crypt seal, so respond before the next strike lands. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the crypt seal from vine horrors in Whisper Stones: keep the arrows meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 46 seconds while arrows > 0.",
+  "lose_condition": "arrows drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X1-T10-45ac7ba3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Survival Siege', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while arrows > 0."
+  ]
+}

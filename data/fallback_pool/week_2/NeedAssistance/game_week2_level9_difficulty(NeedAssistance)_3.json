@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0543",
+  "game_title": "Modulo Gate – Smoke Ridge Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Smoke Ridge, a ridge shrouded in ash: the ember mage must handle smoke serpents while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Smoke Ridge open (even, odd, divisible by 3).",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
+  "core_gameplay_loop": "In Smoke Ridge, repeat each round: Use % to decide which gates in Smoke Ridge open (even, odd, divisible by 3). Each round costs one action, so plan the step so none are wasted. Then check the gates_open value and advance.",
+  "primary_mechanic": "Modulo Gate",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the magma valve using at most 22 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The magma valve reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the magma valve is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Modulo Gate",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M03-X3-T11-26d12511",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Efficiency Trial', and setting 'Smoke Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 3,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "if n % 3 == 0:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gates_open changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Smoke Ridge.",
+    "Step 3: Win by meeting the goal: The magma valve reached with actions_used <= 22."
+  ]
+}

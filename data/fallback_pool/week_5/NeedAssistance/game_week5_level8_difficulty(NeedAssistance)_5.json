@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1415",
+  "game_title": "Sum Sprint – Fairy Ring Glade Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Fairy Ring Glade.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
+  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Accumulate a total across a loop to pay a toll at Fairy Ring Glade. Each round, a new spirit lanterns challenge appears; solve it to bank points before time drains. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 270 points of spirit lanterns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 270 within 71 seconds.",
+  "lose_condition": "Timer hits 0 with score < 270, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X2-T03-c227de8a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Resource Rush', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
+    "Step 3: Win by meeting the goal: score >= 270 within 71 seconds."
+  ]
+}

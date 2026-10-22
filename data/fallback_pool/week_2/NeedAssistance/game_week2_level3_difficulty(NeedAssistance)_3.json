@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0363",
+  "game_title": "Modulo Gate – Vent Garden Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Vent Garden open (even, odd, divisible by 3).",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
+  "core_gameplay_loop": "In Vent Garden, repeat each round: Use % to decide which gates in Vent Garden open (even, odd, divisible by 3). Each round, smoke serpents strike the ash barrier, so respond before the next strike lands. Then check the gates_open value and advance.",
+  "primary_mechanic": "Modulo Gate",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the ash barrier from smoke serpents in Vent Garden: keep the gates_open meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 50 seconds while gates_open > 0.",
+  "lose_condition": "gates_open drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Modulo Gate",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M03-X1-T19-1c08a0cb",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Survival Siege', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 3,
+  "trial": 3,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "if n % 3 == 0:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gates_open changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
+    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while gates_open > 0."
+  ]
+}

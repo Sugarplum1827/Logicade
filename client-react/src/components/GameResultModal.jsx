@@ -1,29 +1,70 @@
-export default function GameResultModal({ result, spec, onNext, onRepeat, onExit }) {
-  const { won, time, score, coinReward = 0, xpReward = 0, isFirstTime } = result;
+/**
+ * GameResultModal — every label is read from the spec JSON, never
+ * synthesized. Supports both puzzle-style specs (win/hint) and
+ * mission-style specs (player_objective/win_condition/lose_condition/
+ * tutorial/secondary_objectives).
+ *
+ * Source priority per label:
+ *   primary   : player_objective > win_condition > win > lose_condition
+ *   lose      : lose_condition
+ *   secondary : secondary_objectives > tutorial > [] (nothing shown)
+ */
 
-  // Derive human-readable main objective from win condition
-  const win = String(spec?.win || '');
-  let mainObj = 'Complete the main objective';
-  let m;
-  if ((m = win.match(/^score\s*(>=|==|>)\s*(\d+)/))) {
-    mainObj = `Collect ${m[2]} items`;
-  } else if ((m = win.match(/^timer\s*(>=|>)\s*(\d+)/))) {
-    mainObj = `Survive ${m[2]} seconds`;
-  } else if ((m = win.match(/^count\s*(>=|==|>)\s*(\d+)/))) {
-    mainObj = `Destroy ${m[2]} objects`;
+function toDisplayText(value) {
+  if (typeof value === 'string' || typeof value === 'number') return String(value);
+  if (Array.isArray(value)) return value.map(toDisplayText).filter(Boolean).join(' ');
+  if (value && typeof value === 'object') {
+    const content = value.message ?? value.text ?? value.description ?? value.objective ?? value.title;
+    if (content !== undefined && content !== null) {
+      const text = toDisplayText(content);
+      return value.step != null ? `Step ${value.step}: ${text}` : text;
+    }
   }
+  return '';
+}
 
-  const isTimeObjMet = won && time < 60;
-  const isPerfectObjMet = won && score === 1;
+export default function GameResultModal({
+  result,
+  spec,
+  onNext,
+  onRepeat,
+  onExit,
+}) {
+  const {
+    won,
+    time,
+    score,
+    coinReward = 0,
+    xpReward = 0,
+    isFirstTime,
+  } = result;
 
-  // Score % is only meaningful for score-win levels
-  const isScoreWin = win.includes('score');
-  const scoreDisplay = isScoreWin
-    ? `${Math.round(score * 100)}%`
-    : (won ? '✓' : '✗');
+  // ── Labels: strictly from the JSON ──────────────────────────────
+  const primaryLabel =
+    toDisplayText(
+      won
+        ? spec?.player_objective || spec?.win_condition || spec?.win
+        : spec?.player_objective || spec?.lose_condition || spec?.win,
+    ) || 'Complete the level';
+
+  const loseLabel = !won ? toDisplayText(spec?.lose_condition) : '';
+
+  // Secondary objectives: prefer explicit secondary_objectives, then
+  // fall back to tutorial steps (both are natural plural lists).
+  const secondaryObjectives =
+    Array.isArray(spec?.secondary_objectives) && spec.secondary_objectives.length > 0
+      ? spec.secondary_objectives
+      : Array.isArray(spec?.tutorial)
+        ? spec.tutorial
+        : [];
+
+  const scoreDisplay = `${Math.round(score * 100)}%`;
 
   return (
-    <div className="modal-overlay" style={{ zIndex: 2000, background: 'rgba(0,0,0,0.7)' }}>
+    <div
+      className="modal-overlay"
+      style={{ zIndex: 2000, background: 'rgba(0,0,0,0.7)' }}
+    >
       <div className="rok-modal">
         <div className={`rok-ribbon ${won ? 'gold' : 'gray'}`}>
           {won ? 'VICTORY' : 'DEFEAT'}
@@ -31,18 +72,30 @@ export default function GameResultModal({ result, spec, onNext, onRepeat, onExit
 
         <div className="rok-content">
           <div className="rok-objectives">
+            {/* Primary objective — exact text from the JSON */}
             <div className={`rok-objective-item ${won ? 'completed' : 'failed'}`}>
               <span className="rok-icon">{won ? '✅' : '❌'}</span>
-              <span>{mainObj}</span>
+              <span>{primaryLabel}</span>
             </div>
-            <div className={`rok-objective-item ${isTimeObjMet ? 'completed' : 'failed'}`}>
-              <span className="rok-icon">{isTimeObjMet ? '✅' : '❌'}</span>
-              <span>Complete in under 60s ({Math.round(time)}s)</span>
-            </div>
-            <div className={`rok-objective-item ${isPerfectObjMet ? 'completed' : 'failed'}`}>
-              <span className="rok-icon">{isPerfectObjMet ? '✅' : '❌'}</span>
-              <span>Perfect Accuracy</span>
-            </div>
+
+            {/* Secondary objectives — from JSON (secondary_objectives or tutorial) */}
+            {secondaryObjectives.map((label, i) => (
+              <div
+                key={i}
+                className={`rok-objective-item ${won ? 'completed' : 'failed'}`}
+              >
+                <span className="rok-icon">{won ? '✅' : '❌'}</span>
+                <span>{toDisplayText(label)}</span>
+              </div>
+            ))}
+
+            {/* Lose reason — only on defeat, from the JSON */}
+            {!won && loseLabel && (
+              <div className="rok-objective-item failed">
+                <span className="rok-icon">⚠️</span>
+                <span>{loseLabel}</span>
+              </div>
+            )}
           </div>
 
           <div className="rok-stats">
@@ -56,7 +109,14 @@ export default function GameResultModal({ result, spec, onNext, onRepeat, onExit
             </div>
             <div className="rok-stat-box">
               <small>REWARDS</small>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '2px',
+                }}
+              >
                 <span>🪙 {coinReward}</span>
                 <span style={{ fontSize: '16px' }}>✨ {xpReward}</span>
               </div>
@@ -64,16 +124,31 @@ export default function GameResultModal({ result, spec, onNext, onRepeat, onExit
           </div>
 
           {won && !isFirstTime && (
-            <p style={{ textAlign: 'center', marginTop: '15px', fontSize: '16px', color: '#8d6e63' }}>
+            <p
+              style={{
+                textAlign: 'center',
+                marginTop: '15px',
+                fontSize: '16px',
+                color: '#8d6e63',
+              }}
+            >
               Already completed — no rewards on replay
             </p>
           )}
         </div>
 
         <div className="rok-footer">
-          <button className="rok-btn-exit" onClick={onExit}>EXIT</button>
-          <button className="rok-btn-repeat" onClick={onRepeat}>REPEAT</button>
-          {won && <button className="rok-btn-next" onClick={onNext}>NEXT</button>}
+          <button className="rok-btn-exit" onClick={onExit}>
+            EXIT
+          </button>
+          <button className="rok-btn-repeat" onClick={onRepeat}>
+            REPEAT
+          </button>
+          {won && (
+            <button className="rok-btn-next" onClick={onNext}>
+              NEXT
+            </button>
+          )}
         </div>
       </div>
     </div>

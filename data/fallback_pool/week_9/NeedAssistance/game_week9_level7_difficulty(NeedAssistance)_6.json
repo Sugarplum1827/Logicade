@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2586",
+  "game_title": "Off By One Autopsy – Scorpion Canyon Trial",
+  "game_concept": "A programming puzzle set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "programming puzzle",
+  "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
+  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round costs one action, so plan the step so none are wasted. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the water well using at most 21 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The water well reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the water well is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X3-T08-a1517acc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Efficiency Trial', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
+    "Step 3: Win by meeting the goal: The water well reached with actions_used <= 21."
+  ]
+}

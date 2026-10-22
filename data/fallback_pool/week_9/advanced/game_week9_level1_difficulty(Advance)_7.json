@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2427",
+  "game_title": "Algorithm Race – Sandstone Arch Race",
+  "game_concept": "A strategy race set in Sand Dunes – Sandstone Arch, a natural sandstone arch: the caravan guide must handle vultures while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
+  "genre": "strategy race",
+  "theme": "Sand Dunes – Sandstone Arch: a natural sandstone arch",
+  "core_gameplay_loop": "In Sandstone Arch, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round the rival advances, and solving the step moves the caravan guide ahead. Then check the speed value and advance.",
+  "primary_mechanic": "Algorithm Race",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the sandstone arch by solving code steps involving speed that move the caravan guide forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the sandstone arch first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Algorithm Race",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M12-X5-T19-0ac0bc2f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Rival Race', and setting 'Sandstone Arch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "sum(range(n))  # vs loop",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how speed changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Sandstone Arch.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1966",
+  "game_title": "Backpack Append – Collapsed Dome Rush",
+  "game_concept": "A arcade set in Eldritch Ruins – Collapsed Dome, a collapsed dome: the spirit seeker must handle rune wisps while practicing lists. Core idea – Backpack Append: Use append and remove to manage the spirit seeker's backpack list as rune wisps drop loot.",
+  "genre": "arcade",
+  "theme": "Eldritch Ruins – Collapsed Dome: a collapsed dome",
+  "core_gameplay_loop": "In Collapsed Dome, repeat each round: Use append and remove to manage the spirit seeker's backpack list as rune wisps drop loot. Each round, a new relic shards challenge appears; solve it to bank points before time drains. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 300 points of relic shards by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 300 within 45 seconds.",
+  "lose_condition": "Timer hits 0 with score < 300, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X2-T12-a3bc609a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Resource Rush', and setting 'Collapsed Dome'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Collapsed Dome.",
+    "Step 3: Win by meeting the goal: score >= 300 within 45 seconds."
+  ]
+}

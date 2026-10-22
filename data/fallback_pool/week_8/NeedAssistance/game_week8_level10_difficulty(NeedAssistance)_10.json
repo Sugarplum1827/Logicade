@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2380",
+  "game_title": "Safe Get Scout – Glacier Crossing Defense",
+  "game_concept": "A tower defense set in Frost Peaks – Glacier Crossing, a cracking glacier: the sherpa guide must handle frost wyrms while practicing strings & dictionaries. Core idea – Safe Get Scout: Use .get() with a default to avoid missing key errors.",
+  "genre": "tower defense",
+  "theme": "Frost Peaks – Glacier Crossing: a cracking glacier",
+  "core_gameplay_loop": "In Glacier Crossing, repeat each round: Use .get() with a default to avoid missing key errors. Each round, frost wyrms strike the summit beacon, so respond before the next strike lands. Then check the safe_lookups value and advance.",
+  "primary_mechanic": "Safe Get Scout",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the summit beacon from frost wyrms in Glacier Crossing: keep the safe_lookups meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while safe_lookups > 0.",
+  "lose_condition": "safe_lookups drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Safe Get Scout",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M10-X1-T02-bec91713",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Safe Get Scout' (Week 8 slot 10), mission type 'Survival Siege', and setting 'Glacier Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "stock.get('apple', 0)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how safe_lookups changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Crossing.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while safe_lookups > 0."
+  ]
+}

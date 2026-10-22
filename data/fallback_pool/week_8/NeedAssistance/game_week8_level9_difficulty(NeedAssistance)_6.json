@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2346",
+  "game_title": "Vowel Counter – Supply Cache Camp Rush",
+  "game_concept": "A speed quiz set in Frost Peaks – Supply Cache Camp, a high supply cache: the summit pilot must handle ice hawks while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
+  "genre": "speed quiz",
+  "theme": "Frost Peaks – Supply Cache Camp: a high supply cache",
+  "core_gameplay_loop": "In Supply Cache Camp, repeat each round: Count vowels in words by looping over characters. Each round, a new ice axes challenge appears; solve it to bank points before time drains. Then check the vowels value and advance.",
+  "primary_mechanic": "Vowel Counter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 290 points of ice axes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 9 (extended tier): Vowel Counter",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M06-X2-T12-6f0b5b39",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Resource Rush', and setting 'Supply Cache Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 9,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vowels changes.",
+    "Step 2: Use the controls to apply the code idea against ice hawks in Supply Cache Camp.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

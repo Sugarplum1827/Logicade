@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1308",
+  "game_title": "Stride Selector – Mossy Creek Streak",
+  "game_concept": "A card battler set in Mystic Forest – Mossy Creek, a mossy forest creek: the druid must handle giant beetles while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
+  "genre": "card battler",
+  "theme": "Mystic Forest – Mossy Creek: a mossy forest creek",
+  "core_gameplay_loop": "In Mossy Creek, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round poses one decision; a wrong answer breaks the streak. Then check the stones value and advance.",
+  "primary_mechanic": "Stride Selector",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about stones to power up the druid and open the heartwood tree.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Stride Selector",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M03-X4-T02-28f8ff31",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Streak Challenge', and setting 'Mossy Creek'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 20, 4):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stones changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mossy Creek.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

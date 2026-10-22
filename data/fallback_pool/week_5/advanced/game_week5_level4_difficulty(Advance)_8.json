@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1318",
+  "game_title": "Off By One Fixer – Berry Thicket Streak",
+  "game_concept": "A quiz RPG set in Mystic Forest – Berry Thicket, a berry thicket: the beast tamer must handle bramble beasts while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
+  "genre": "quiz RPG",
+  "theme": "Mystic Forest – Berry Thicket: a berry thicket",
+  "core_gameplay_loop": "In Berry Thicket, repeat each round: Fix range boundaries that skip or overshoot by one. Each round poses one decision; a wrong answer breaks the streak. Then check the fixes value and advance.",
+  "primary_mechanic": "Off By One Fixer",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about fixes to power up the beast tamer and open the heartwood tree.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Off By One Fixer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M13-X4-T12-32e6c703",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Streak Challenge', and setting 'Berry Thicket'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, n):  # misses n",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fixes changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Berry Thicket.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

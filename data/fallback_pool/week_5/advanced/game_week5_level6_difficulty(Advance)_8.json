@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1378",
+  "game_title": "Off By One Fixer – Root Tunnels Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Fix range boundaries that skip or overshoot by one. Each round costs one action, so plan the step so none are wasted. Then check the fixes value and advance.",
+  "primary_mechanic": "Off By One Fixer",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the elder's door using at most 13 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The elder's door reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the elder's door is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Off By One Fixer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M13-X3-T16-5834bc49",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Efficiency Trial', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, n):  # misses n",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fixes changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: The elder's door reached with actions_used <= 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1918",
+  "game_title": "Merge Convoy – Collapsed Dome Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Collapsed Dome, a collapsed dome: the spirit seeker must handle rune wisps while practicing lists. Core idea – Merge Convoy: Merge two lists using + or extend() to join convoys.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Collapsed Dome: a collapsed dome",
+  "core_gameplay_loop": "In Collapsed Dome, repeat each round: Merge two lists using + or extend() to join convoys. Each round poses one decision; a wrong answer breaks the streak. Then check the convoy_size value and advance.",
+  "primary_mechanic": "Merge Convoy",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about convoy_size to power up the spirit seeker and open the rune gate.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Merge Convoy",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M13-X4-T12-47353aac",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Merge Convoy' (Week 7 slot 13), mission type 'Streak Challenge', and setting 'Collapsed Dome'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 4,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "convoy_a.extend(convoy_b)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how convoy_size changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Collapsed Dome.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

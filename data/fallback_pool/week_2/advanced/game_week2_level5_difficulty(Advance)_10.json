@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0450",
+  "game_title": "Mixed Type Oracle – Sulfur Springs Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before ember hounds spring the trap.",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
+  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Predict the result or error of mixed-type expressions before ember hounds spring the trap. Each round, a new ash bricks challenge appears; solve it to bank points before time drains. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 340 points of ash bricks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X2-T08-1e3b4adb",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Resource Rush', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 5,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

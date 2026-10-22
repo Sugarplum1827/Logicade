@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2430",
+  "game_title": "Capstone Boss Chain – Sunset Dunes Streak",
+  "game_concept": "A card battler set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Capstone Boss Chain: Beat a boss with phases that each demand a different skill from earlier weeks.",
+  "genre": "card battler",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Beat a boss with phases that each demand a different skill from earlier weeks. Each round poses one decision; a wrong answer breaks the streak. Then check the boss_hp value and advance.",
+  "primary_mechanic": "Capstone Boss Chain",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about boss_hp to power up the desert nomad and open the supply tent.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Capstone Boss Chain",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M15-X4-T20-46a2ca4c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Capstone Boss Chain' (Week 9 slot 15), mission type 'Streak Challenge', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "boss.phase += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how boss_hp changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

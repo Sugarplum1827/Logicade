@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0118",
+  "game_title": "Print Probe – Chapel Gardens Streak",
+  "game_concept": "A quiz RPG set in The Kingdom – Chapel Gardens, the chapel gardens: the herald must handle rogue crows while practicing variables & assignment. Core idea – Print Probe: Use print-style probes to reveal hidden variable values before rogue crows act.",
+  "genre": "quiz RPG",
+  "theme": "The Kingdom – Chapel Gardens: the chapel gardens",
+  "core_gameplay_loop": "In Chapel Gardens, repeat each round: Use print-style probes to reveal hidden variable values before rogue crows act. Each round poses one decision; a wrong answer breaks the streak. Then check the shield value and advance.",
+  "primary_mechanic": "Print Probe",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about shield to power up the herald and open the castle gate.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 4 (applied tier): Print Probe",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M13-X4-T12-4371741d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Streak Challenge', and setting 'Chapel Gardens'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 4,
+  "trial": 8,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "print(shield)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how shield changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Chapel Gardens.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2518",
+  "game_title": "Program Assembler – Palm Grove Streak",
+  "game_concept": "A quiz RPG set in Sand Dunes – Palm Grove, a palm grove: the camel trader must handle dust devils while practicing debugging & combined skills. Core idea – Program Assembler: Assemble a working program from shuffled code blocks in the right order.",
+  "genre": "quiz RPG",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "core_gameplay_loop": "In Palm Grove, repeat each round: Assemble a working program from shuffled code blocks in the right order. Each round poses one decision; a wrong answer breaks the streak. Then check the program_ok value and advance.",
+  "primary_mechanic": "Program Assembler",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about program_ok to power up the camel trader and open the oasis.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Program Assembler",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M13-X4-T12-8cafa1e0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Program Assembler' (Week 9 slot 13), mission type 'Streak Challenge', and setting 'Palm Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 8,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "blocks = [...]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how program_ok changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Palm Grove.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

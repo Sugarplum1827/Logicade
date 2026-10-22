@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0262",
+  "game_title": "Constant Guardian – Postern Gate Defense",
+  "game_concept": "A tower defense set in The Kingdom – Postern Gate, the hidden postern gate: the squire must handle rogue crows while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the market bell.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Postern Gate: the hidden postern gate",
+  "core_gameplay_loop": "In Postern Gate, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the market bell. Each round, rogue crows strike the market bell, so respond before the next strike lands. Then check the energy value and advance.",
+  "primary_mechanic": "Constant Guardian",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the market bell from rogue crows in Postern Gate: keep the energy meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 43 seconds while energy > 0.",
+  "lose_condition": "energy drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Constant Guardian",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M07-X1-T20-87e7a743",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Survival Siege', and setting 'Postern Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 9,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "MAX_ENERGY = 100\nenergy = 40",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Postern Gate.",
+    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while energy > 0."
+  ]
+}

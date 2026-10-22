@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0486",
+  "game_title": "Boolean Circuit – Sulfur Springs Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the fire shrine.",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
+  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the fire shrine. Each round costs one action, so plan the step so none are wasted. Then check the power_on value and advance.",
+  "primary_mechanic": "Boolean Circuit",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the fire shrine using at most 21 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The fire shrine reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the fire shrine is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Boolean Circuit",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M06-X3-T08-681feab3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Efficiency Trial', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "open = key and not alarm",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power_on changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
+    "Step 3: Win by meeting the goal: The fire shrine reached with actions_used <= 21."
+  ]
+}

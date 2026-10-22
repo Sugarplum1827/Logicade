@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1908",
+  "game_title": "Slice Slicer – Overgrown Archway Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Slice Slicer: Cut lists with slices like items[1:4] to grab exactly the right group.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
+  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Cut lists with slices like items[1:4] to grab exactly the right group. Each round poses one decision; a wrong answer breaks the streak. Then check the slice_ok value and advance.",
+  "primary_mechanic": "Slice Slicer",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about slice_ok to power up the rune scholar and open the rune gate.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Slice Slicer",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M03-X4-T02-0240c6cd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Slice Slicer' (Week 7 slot 3), mission type 'Streak Challenge', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 4,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "items[1:4]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slice_ok changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2031",
+  "game_title": "Shelf Sorter – Ritual Pool Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Ritual Pool, a still ritual pool: the tomb cartographer must handle echo phantoms while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of ancient keys from smallest to largest.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Ritual Pool: a still ritual pool",
+  "core_gameplay_loop": "In Ritual Pool, repeat each round: Use sort() to rearrange shelves of ancient keys from smallest to largest. Each round, echo phantoms strike the glyph door, so respond before the next strike lands. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the glyph door from echo phantoms in Ritual Pool: keep the order_score meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 41 seconds while order_score > 0.",
+  "lose_condition": "order_score drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X1-T11-1bdb98d6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Survival Siege', and setting 'Ritual Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Ritual Pool.",
+    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while order_score > 0."
+  ]
+}

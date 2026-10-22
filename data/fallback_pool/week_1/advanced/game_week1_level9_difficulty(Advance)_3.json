@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0263",
+  "game_title": "Inventory Slots – Throne Hall Streak",
+  "game_concept": "A rhythm puzzle set in The Kingdom – Throne Hall, the throne hall of the kingdom: the knight must handle mischievous imps while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against mischievous imps.",
+  "genre": "rhythm puzzle",
+  "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
+  "core_gameplay_loop": "In Throne Hall, repeat each round: Store each item in its own variable and choose which one to spend against mischievous imps. Each round poses one decision; a wrong answer breaks the streak. Then check the potion value and advance.",
+  "primary_mechanic": "Inventory Slots",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about potion to power up the knight and open the signal beacon.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Inventory Slots",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M08-X4-T07-f2fb41b6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Streak Challenge', and setting 'Throne Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 9,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "sword = 3\npotion = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potion changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous imps in Throne Hall.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

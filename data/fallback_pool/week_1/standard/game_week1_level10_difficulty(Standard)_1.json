@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0281",
+  "game_title": "Rename Rush – Royal Stables Streak",
+  "game_concept": "A rhythm puzzle set in The Kingdom – Royal Stables, the royal stables: the royal scribe must handle goblin raiders while practicing variables & assignment. Core idea – Rename Rush: Pick valid variable names (no spaces, no leading digits) to unlock doors across the area.",
+  "genre": "rhythm puzzle",
+  "theme": "The Kingdom – Royal Stables: the royal stables",
+  "core_gameplay_loop": "In Royal Stables, repeat each round: Pick valid variable names (no spaces, no leading digits) to unlock doors across the area. Each round poses one decision; a wrong answer breaks the streak. Then check the valid_names value and advance.",
+  "primary_mechanic": "Rename Rush",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about valid_names to power up the royal scribe and open the royal seal.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Rename Rush",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M11-X4-T09-87e573a7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rename Rush' (Week 1 slot 11), mission type 'Streak Challenge', and setting 'Royal Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 1,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "player_name = 'Ada'",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how valid_names changes.",
+    "Step 2: Use the controls to apply the code idea against goblin raiders in Royal Stables.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

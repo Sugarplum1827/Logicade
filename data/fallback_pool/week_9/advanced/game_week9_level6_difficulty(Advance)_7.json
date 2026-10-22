@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2577",
+  "game_title": "Algorithm Race – Bazaar Tents Race",
+  "game_concept": "A strategy race set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
+  "genre": "strategy race",
+  "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
+  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round the rival advances, and solving the step moves the oasis keeper ahead. Then check the speed value and advance.",
+  "primary_mechanic": "Algorithm Race",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the sandstone arch by solving code steps involving speed that move the oasis keeper forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "lose_condition": "The rival reaches the sandstone arch first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Algorithm Race",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M12-X5-T09-e32cfb56",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Rival Race', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "sum(range(n))  # vs loop",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how speed changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
+  ]
+}

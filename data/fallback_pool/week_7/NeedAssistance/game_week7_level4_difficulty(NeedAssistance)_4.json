@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1894",
+  "game_title": "Queue Line – Cracked Obelisk Defense",
+  "game_concept": "A tower defense set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Queue Line: Serve a queue of visitors with pop(0) in first-come order.",
+  "genre": "tower defense",
+  "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
+  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Serve a queue of visitors with pop(0) in first-come order. Each round, crypt crawlers strike the sealed archway, so respond before the next strike lands. Then check the queue_calm value and advance.",
+  "primary_mechanic": "Queue Line",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the sealed archway from crypt crawlers in Cracked Obelisk: keep the queue_calm meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 55 seconds while queue_calm > 0.",
+  "lose_condition": "queue_calm drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Queue Line",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M04-X1-T08-91f700e9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Queue Line' (Week 7 slot 4), mission type 'Survival Siege', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 4,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "line.pop(0)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how queue_calm changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
+    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while queue_calm > 0."
+  ]
+}

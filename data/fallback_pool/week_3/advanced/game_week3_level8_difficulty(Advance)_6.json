@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0836",
+  "game_title": "Rule Duel – Sandbar Crossing Defense",
+  "game_concept": "A survival strategy set in Coastal Port – Sandbar Crossing, a sandbar at low tide: the deckhand must handle sea serpents while practicing conditionals (if / elif / else). Core idea – Rule Duel: Write rules that beat the AI's chosen move in a best-of-rounds duel.",
+  "genre": "survival strategy",
+  "theme": "Coastal Port – Sandbar Crossing: a sandbar at low tide",
+  "core_gameplay_loop": "In Sandbar Crossing, repeat each round: Write rules that beat the AI's chosen move in a best-of-rounds duel. Each round, sea serpents strike the treasure chest, so respond before the next strike lands. Then check the duel_hp value and advance.",
+  "primary_mechanic": "Rule Duel",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the treasure chest from sea serpents in Sandbar Crossing: keep the duel_hp meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 41 seconds while duel_hp > 0.",
+  "lose_condition": "duel_hp drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Rule Duel",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M11-X1-T06-c7e6d2af",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rule Duel' (Week 3 slot 11), mission type 'Survival Siege', and setting 'Sandbar Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 8,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if enemy == 'rock':\n    play('paper')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how duel_hp changes.",
+    "Step 2: Use the controls to apply the code idea against sea serpents in Sandbar Crossing.",
+    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while duel_hp > 0."
+  ]
+}

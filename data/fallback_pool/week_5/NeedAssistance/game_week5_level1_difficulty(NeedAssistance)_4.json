@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1204",
+  "game_title": "Squad Marcher – Mossy Creek Race",
+  "game_concept": "A racing platformer set in Mystic Forest – Mossy Creek, a mossy forest creek: the druid must handle giant beetles while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
+  "genre": "racing platformer",
+  "theme": "Mystic Forest – Mossy Creek: a mossy forest creek",
+  "core_gameplay_loop": "In Mossy Creek, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round the rival advances, and solving the step moves the druid ahead. Then check the squad_ready value and advance.",
+  "primary_mechanic": "Squad Marcher",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the heartwood tree by solving code steps involving squad_ready that move the druid forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "lose_condition": "The rival reaches the heartwood tree first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Squad Marcher",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M04-X5-T02-e912af7c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Rival Race', and setting 'Mossy Creek'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for ally in squad:\n    ally.assign()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how squad_ready changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mossy Creek.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
+  ]
+}

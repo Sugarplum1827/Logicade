@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1455",
+  "game_title": "Loop Picker – Lantern Path Streak",
+  "game_concept": "A card battler set in Mystic Forest – Lantern Path, a lantern-lit path: the herbalist must handle mischievous sprites while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
+  "genre": "card battler",
+  "theme": "Mystic Forest – Lantern Path: a lantern-lit path",
+  "core_gameplay_loop": "In Lantern Path, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round poses one decision; a wrong answer breaks the streak. Then check the picks_right value and advance.",
+  "primary_mechanic": "Loop Picker",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about picks_right to power up the herbalist and open the mushroom ring.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Loop Picker",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M15-X4-T15-74baea17",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Streak Challenge', and setting 'Lantern Path'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(3):  # known count",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how picks_right changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous sprites in Lantern Path.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

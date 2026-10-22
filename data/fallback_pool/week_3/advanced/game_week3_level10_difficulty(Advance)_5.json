@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0895",
+  "game_title": "Discount Rules – Fish Market Rush",
+  "game_concept": "A arcade set in Coastal Port – Fish Market, a fish market full of crates: the shipwright must handle jellyfish swarms while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
+  "genre": "arcade",
+  "theme": "Coastal Port – Fish Market: a fish market full of crates",
+  "core_gameplay_loop": "In Fish Market, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round, a new cannonballs challenge appears; solve it to bank points before time drains. Then check the profit value and advance.",
+  "primary_mechanic": "Discount Rules",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 600 points of cannonballs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 600 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 600, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 10 (extended tier): Discount Rules",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M10-X2-T03-668a2cee",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Resource Rush', and setting 'Fish Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 10,
+  "trial": 5,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if total >= 100:\n    total *= 0.9",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against jellyfish swarms in Fish Market.",
+    "Step 3: Win by meeting the goal: score >= 600 within 46 seconds."
+  ]
+}

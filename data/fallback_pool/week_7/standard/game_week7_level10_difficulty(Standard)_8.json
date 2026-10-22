@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2088",
+  "game_title": "Slice Slicer – Relic Vault Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Slice Slicer: Cut lists with slices like items[1:4] to grab exactly the right group.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Cut lists with slices like items[1:4] to grab exactly the right group. Each round, stone sentinels strike the moon altar, so respond before the next strike lands. Then check the slice_ok value and advance.",
+  "primary_mechanic": "Slice Slicer",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the moon altar from stone sentinels in Relic Vault: keep the slice_ok meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 57 seconds while slice_ok > 0.",
+  "lose_condition": "slice_ok drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Slice Slicer",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M03-X1-T14-b198df70",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Slice Slicer' (Week 7 slot 3), mission type 'Survival Siege', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "items[1:4]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slice_ok changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while slice_ok > 0."
+  ]
+}

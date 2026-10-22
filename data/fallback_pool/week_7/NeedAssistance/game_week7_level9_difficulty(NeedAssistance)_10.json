@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2050",
+  "game_title": "Reverse Parade – Eldritch Heart Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Eldritch Heart, the glowing heart of the ruins: the rune scholar must handle rune wisps while practicing lists. Core idea – Reverse Parade: Reverse the order of a parade list with reverse() or slicing.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Eldritch Heart: the glowing heart of the ruins",
+  "core_gameplay_loop": "In Eldritch Heart, repeat each round: Reverse the order of a parade list with reverse() or slicing. Each round poses one decision; a wrong answer breaks the streak. Then check the parade_ok value and advance.",
+  "primary_mechanic": "Reverse Parade",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about parade_ok to power up the rune scholar and open the crypt seal.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Reverse Parade",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M10-X4-T20-3dfe5e2c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Parade' (Week 7 slot 10), mission type 'Streak Challenge', and setting 'Eldritch Heart'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "parade[::-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how parade_ok changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Eldritch Heart.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

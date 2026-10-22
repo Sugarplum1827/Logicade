@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0422",
+  "game_title": "Arithmetic Cannon – Charred Forest Rush",
+  "game_concept": "A action puzzle set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on ember hounds.",
+  "genre": "action puzzle",
+  "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
+  "core_gameplay_loop": "In Charred Forest, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on ember hounds. Each round, a new ash bricks challenge appears; solve it to bank points before time drains. Then check the damage value and advance.",
+  "primary_mechanic": "Arithmetic Cannon",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 180 points of ash bricks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 59 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Arithmetic Cannon",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M02-X2-T16-9ac1279d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Resource Rush', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 5,
+  "trial": 2,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "damage = base * 3 + 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how damage changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
+    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
+  ]
+}

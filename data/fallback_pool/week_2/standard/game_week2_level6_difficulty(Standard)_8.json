@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0468",
+  "game_title": "Modulo Gate – Crater Lake Edge Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Crater Lake Edge open (even, odd, divisible by 3).",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
+  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Use % to decide which gates in Crater Lake Edge open (even, odd, divisible by 3). Each round costs one action, so plan the step so none are wasted. Then check the gates_open value and advance.",
+  "primary_mechanic": "Modulo Gate",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the smelter using at most 17 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The smelter reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the smelter is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Modulo Gate",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M03-X3-T06-29e474d6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Efficiency Trial', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "if n % 3 == 0:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gates_open changes.",
+    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
+    "Step 3: Win by meeting the goal: The smelter reached with actions_used <= 17."
+  ]
+}

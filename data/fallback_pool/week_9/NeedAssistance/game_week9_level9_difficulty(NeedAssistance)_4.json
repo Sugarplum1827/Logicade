@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2644",
+  "game_title": "Print Tracer – Dust Devil Plain Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Dust Devil Plain, a plain of dust devils: the camel trader must handle sand wyrms while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what sand wyrms changed.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Dust Devil Plain: a plain of dust devils",
+  "core_gameplay_loop": "In Dust Devil Plain, repeat each round: Insert print statements at the right lines to reveal what sand wyrms changed. Each round, sand wyrms strike the water well, so respond before the next strike lands. Then check the trace_clarity value and advance.",
+  "primary_mechanic": "Print Tracer",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the water well from sand wyrms in Dust Devil Plain: keep the trace_clarity meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 76 seconds while trace_clarity > 0.",
+  "lose_condition": "trace_clarity drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Print Tracer",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M04-X1-T18-7551f5f3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Survival Siege', and setting 'Dust Devil Plain'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "print('x =', x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dust Devil Plain.",
+    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while trace_clarity > 0."
+  ]
+}

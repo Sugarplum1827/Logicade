@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0312",
+  "game_title": "Compound Combo – Ore Smelter Streak",
+  "game_concept": "A card battler set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "card battler",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round poses one decision; a wrong answer breaks the streak. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about energy to power up the lava scout and open the fire shrine.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X4-T18-0650fb59",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Streak Challenge', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 2,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

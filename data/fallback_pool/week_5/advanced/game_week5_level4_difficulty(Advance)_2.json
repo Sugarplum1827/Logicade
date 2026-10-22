@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1312",
+  "game_title": "Pattern Painter – Mushroom Market Defense",
+  "game_concept": "A tower defense set in Mystic Forest – Mushroom Market, a forest mushroom market: the fairy gardener must handle giant beetles while practicing control flow: for loops. Core idea – Pattern Painter: Print growing star triangles with nested loops to decorate the waterfall gate.",
+  "genre": "tower defense",
+  "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
+  "core_gameplay_loop": "In Mushroom Market, repeat each round: Print growing star triangles with nested loops to decorate the waterfall gate. Each round, giant beetles strike the waterfall gate, so respond before the next strike lands. Then check the pattern_rows value and advance.",
+  "primary_mechanic": "Pattern Painter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the waterfall gate from giant beetles in Mushroom Market: keep the pattern_rows meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while pattern_rows > 0.",
+  "lose_condition": "pattern_rows drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Pattern Painter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M07-X1-T10-49a0b852",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pattern Painter' (Week 5 slot 7), mission type 'Survival Siege', and setting 'Mushroom Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, 5):\n    print('*' * i)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pattern_rows changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mushroom Market.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while pattern_rows > 0."
+  ]
+}

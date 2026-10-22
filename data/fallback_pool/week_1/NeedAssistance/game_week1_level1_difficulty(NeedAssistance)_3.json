@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0003",
+  "game_title": "Counter Tower – Harvest Fields Rush",
+  "game_concept": "A speed quiz set in The Kingdom – Harvest Fields, farm fields beyond the walls: the royal scribe must handle mischievous imps while practicing variables & assignment. Core idea – Counter Tower: Increase a counter variable every time coins reach the drawbridge, stacking the tower higher.",
+  "genre": "speed quiz",
+  "theme": "The Kingdom – Harvest Fields: farm fields beyond the walls",
+  "core_gameplay_loop": "In Harvest Fields, repeat each round: Increase a counter variable every time coins reach the drawbridge, stacking the tower higher. Each round, a new coins challenge appears; solve it to bank points before time drains. Then check the delivered value and advance.",
+  "primary_mechanic": "Counter Tower",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 70 points of coins by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 70 within 42 seconds.",
+  "lose_condition": "Timer hits 0 with score < 70, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Counter Tower",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M03-X2-T15-0daa5d54",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Counter Tower' (Week 1 slot 3), mission type 'Resource Rush', and setting 'Harvest Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "delivered = delivered + 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how delivered changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous imps in Harvest Fields.",
+    "Step 3: Win by meeting the goal: score >= 70 within 42 seconds."
+  ]
+}

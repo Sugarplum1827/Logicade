@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0255",
+  "game_title": "Uninitialized Hunt – Harvest Fields Streak",
+  "game_concept": "A card battler set in The Kingdom – Harvest Fields, farm fields beyond the walls: the royal scribe must handle mischievous imps while practicing variables & assignment. Core idea – Uninitialized Hunt: Find variables used before assignment and fix them before mischievous imps exploit the gap.",
+  "genre": "card battler",
+  "theme": "The Kingdom – Harvest Fields: farm fields beyond the walls",
+  "core_gameplay_loop": "In Harvest Fields, repeat each round: Find variables used before assignment and fix them before mischievous imps exploit the gap. Each round poses one decision; a wrong answer breaks the streak. Then check the bugs_fixed value and advance.",
+  "primary_mechanic": "Uninitialized Hunt",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about bugs_fixed to power up the royal scribe and open the drawbridge.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Uninitialized Hunt",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M15-X4-T15-21694563",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Uninitialized Hunt' (Week 1 slot 15), mission type 'Streak Challenge', and setting 'Harvest Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 9,
+  "trial": 5,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "total = total + 5  # bug!",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bugs_fixed changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous imps in Harvest Fields.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

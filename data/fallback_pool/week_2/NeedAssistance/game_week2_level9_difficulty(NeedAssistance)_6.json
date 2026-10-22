@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0546",
+  "game_title": "Boolean Circuit – Geyser Flats Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the forge anvil.",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
+  "core_gameplay_loop": "In Geyser Flats, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the forge anvil. Each round, a new ember crystals challenge appears; solve it to bank points before time drains. Then check the power_on value and advance.",
+  "primary_mechanic": "Boolean Circuit",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 290 points of ember crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Boolean Circuit",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M06-X2-T12-4734b912",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Resource Rush', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "open = key and not alarm",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power_on changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

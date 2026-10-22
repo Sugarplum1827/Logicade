@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1153",
+  "game_title": "Digit Mill – Torchlit Cave Mouth Trial",
+  "game_concept": "A puzzle set in Shadow Cave – Torchlit Cave Mouth, the torchlit cave entrance: the torchbearer must handle giant bats while practicing control flow: while loops. Core idea – Digit Mill: Peel digits off a number with while n > 0 using // and %.",
+  "genre": "puzzle",
+  "theme": "Shadow Cave – Torchlit Cave Mouth: the torchlit cave entrance",
+  "core_gameplay_loop": "In Torchlit Cave Mouth, repeat each round: Peel digits off a number with while n > 0 using // and %. Each round costs one action, so plan the step so none are wasted. Then check the digits value and advance.",
+  "primary_mechanic": "Digit Mill",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the lantern post using at most 18 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The lantern post reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the lantern post is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Digit Mill",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M13-X3-T01-01654b79",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Digit Mill' (Week 4 slot 13), mission type 'Efficiency Trial', and setting 'Torchlit Cave Mouth'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n > 0:\n    n //= 10",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how digits changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Torchlit Cave Mouth.",
+    "Step 3: Win by meeting the goal: The lantern post reached with actions_used <= 18."
+  ]
+}

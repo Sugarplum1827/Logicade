@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0531",
+  "game_title": "Boolean Circuit – Smoke Ridge Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Smoke Ridge, a ridge shrouded in ash: the ember mage must handle smoke serpents while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the magma valve.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
+  "core_gameplay_loop": "In Smoke Ridge, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the magma valve. Each round, smoke serpents strike the magma valve, so respond before the next strike lands. Then check the power_on value and advance.",
+  "primary_mechanic": "Boolean Circuit",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the magma valve from smoke serpents in Smoke Ridge: keep the power_on meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 41 seconds while power_on > 0.",
+  "lose_condition": "power_on drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Boolean Circuit",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M06-X1-T11-9988b498",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Survival Siege', and setting 'Smoke Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "open = key and not alarm",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power_on changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Smoke Ridge.",
+    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while power_on > 0."
+  ]
+}

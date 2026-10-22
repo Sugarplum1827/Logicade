@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1424",
+  "game_title": "Loop Choreography – Firefly Meadow Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Firefly Meadow, a meadow of fireflies: the beast tamer must handle thorn goblins while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Firefly Meadow: a meadow of fireflies",
+  "core_gameplay_loop": "In Firefly Meadow, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round poses one decision; a wrong answer breaks the streak. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about sync to power up the beast tamer and open the elder's door.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X4-T06-a0050820",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Streak Challenge', and setting 'Firefly Meadow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Firefly Meadow.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0392",
+  "game_title": "Arithmetic Cannon – Lava Tube Tunnel Race",
+  "game_concept": "A adventure race set in Mt. Pyre – Lava Tube Tunnel, a glowing lava tube: the volcanologist must handle lava imps while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on lava imps.",
+  "genre": "adventure race",
+  "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
+  "core_gameplay_loop": "In Lava Tube Tunnel, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on lava imps. Each round the rival advances, and solving the step moves the volcanologist ahead. Then check the damage value and advance.",
+  "primary_mechanic": "Arithmetic Cannon",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the summit beacon by solving code steps involving damage that move the volcanologist forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "lose_condition": "The rival reaches the summit beacon first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Arithmetic Cannon",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M02-X5-T14-89e5afb6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Rival Race', and setting 'Lava Tube Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 4,
+  "trial": 2,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "damage = base * 3 + 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how damage changes.",
+    "Step 2: Use the controls to apply the code idea against lava imps in Lava Tube Tunnel.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
+  ]
+}

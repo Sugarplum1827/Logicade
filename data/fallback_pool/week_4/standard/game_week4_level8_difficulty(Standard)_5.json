@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1125",
+  "game_title": "Nested While Dungeon – Bone Crypt Rush",
+  "game_concept": "A speed quiz set in Shadow Cave – Bone Crypt, a dusty bone crypt: the torchbearer must handle slime blobs while practicing control flow: while loops. Core idea – Nested While Dungeon: Run an inner loop for each room inside an outer loop for each floor.",
+  "genre": "speed quiz",
+  "theme": "Shadow Cave – Bone Crypt: a dusty bone crypt",
+  "core_gameplay_loop": "In Bone Crypt, repeat each round: Run an inner loop for each room inside an outer loop for each floor. Each round, a new glowing mushrooms challenge appears; solve it to bank points before time drains. Then check the dungeon_clear value and advance.",
+  "primary_mechanic": "Nested While Dungeon",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 380 points of glowing mushrooms by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 380 within 51 seconds.",
+  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Nested While Dungeon",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M15-X2-T13-f62464c3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested While Dungeon' (Week 4 slot 15), mission type 'Resource Rush', and setting 'Bone Crypt'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 5,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how dungeon_clear changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Bone Crypt.",
+    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
+  ]
+}

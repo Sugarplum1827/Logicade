@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0044",
+  "game_title": "Trace Table Race – Wall Battlements Rush",
+  "game_concept": "A action puzzle set in The Kingdom – Wall Battlements, the high battlements: the squire must handle bandits while practicing variables & assignment. Core idea – Trace Table Race: Fill a trace table showing each variable after every line of a mini program.",
+  "genre": "action puzzle",
+  "theme": "The Kingdom – Wall Battlements: the high battlements",
+  "core_gameplay_loop": "In Wall Battlements, repeat each round: Fill a trace table showing each variable after every line of a mini program. Each round, a new banners challenge appears; solve it to bank points before time drains. Then check the trace_rows_correct value and advance.",
+  "primary_mechanic": "Trace Table Race",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 140 points of banners by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 140 within 33 seconds.",
+  "lose_condition": "Timer hits 0 with score < 140, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Trace Table Race",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M14-X2-T14-eab7b126",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Trace Table Race' (Week 1 slot 14), mission type 'Resource Rush', and setting 'Wall Battlements'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 2,
+  "trial": 4,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "a = 2\na = a + 3\nb = a * 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_rows_correct changes.",
+    "Step 2: Use the controls to apply the code idea against bandits in Wall Battlements.",
+    "Step 3: Win by meeting the goal: score >= 140 within 33 seconds."
+  ]
+}

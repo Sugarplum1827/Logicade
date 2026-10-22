@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2571",
+  "game_title": "Off By One Autopsy – Sandstorm Pass Rush",
+  "game_concept": "A speed quiz set in Sand Dunes – Sandstorm Pass, a pass in a sandstorm: the caravan guide must handle scarab swarms while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "speed quiz",
+  "theme": "Sand Dunes – Sandstorm Pass: a pass in a sandstorm",
+  "core_gameplay_loop": "In Sandstorm Pass, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round, a new water flasks challenge appears; solve it to bank points before time drains. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 390 points of water flasks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X2-T07-ffbe6fc3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Resource Rush', and setting 'Sandstorm Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Sandstorm Pass.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

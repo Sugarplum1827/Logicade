@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1824",
+  "game_title": "Length Limit – Ivy Tower Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Ivy Tower.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
+  "core_gameplay_loop": "In Ivy Tower, repeat each round: Use len() to stop the list from growing past the limit of Ivy Tower. Each round, vine horrors strike the sealed archway, so respond before the next strike lands. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the sealed archway from vine horrors in Ivy Tower: keep the capacity meter above zero by applying the concept correctly until the 24-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 24 seconds while capacity > 0.",
+  "lose_condition": "capacity drops to 0, or lives reach 0, before the 24-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X1-T18-91ca9d1e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Survival Siege', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
+    "Step 3: Win by meeting the goal: Timer reaches 24 seconds while capacity > 0."
+  ]
+}

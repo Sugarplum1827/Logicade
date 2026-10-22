@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2032",
+  "game_title": "Search Scout – Ivy Tower Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Search Scout: Use in and index() to find where a hidden item sits in a list.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
+  "core_gameplay_loop": "In Ivy Tower, repeat each round: Use in and index() to find where a hidden item sits in a list. Each round poses one decision; a wrong answer breaks the streak. Then check the found value and advance.",
+  "primary_mechanic": "Search Scout",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about found to power up the spirit seeker and open the sealed archway.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Search Scout",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M07-X4-T18-7b737ad2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Search Scout' (Week 7 slot 7), mission type 'Streak Challenge', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if 'gem' in cave:\n    cave.index('gem')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how found changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

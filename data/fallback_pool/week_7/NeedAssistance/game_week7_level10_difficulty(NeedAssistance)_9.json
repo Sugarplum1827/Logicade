@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2079",
+  "game_title": "Length Limit – Weathered Gate Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Weathered Gate, a weathered stone gate: the ruin warden must handle eldritch shades while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Weathered Gate.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Weathered Gate: a weathered stone gate",
+  "core_gameplay_loop": "In Weathered Gate, repeat each round: Use len() to stop the list from growing past the limit of Weathered Gate. Each round costs one action, so plan the step so none are wasted. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the relic vault using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The relic vault reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the relic vault is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X3-T15-e61dd8f0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Efficiency Trial', and setting 'Weathered Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 9,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Weathered Gate.",
+    "Step 3: Win by meeting the goal: The relic vault reached with actions_used <= 23."
+  ]
+}

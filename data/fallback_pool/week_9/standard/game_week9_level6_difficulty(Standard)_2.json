@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2562",
+  "game_title": "Algorithm Race – Scorpion Canyon Streak",
+  "game_concept": "A card battler set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
+  "genre": "card battler",
+  "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
+  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round poses one decision; a wrong answer breaks the streak. Then check the speed value and advance.",
+  "primary_mechanic": "Algorithm Race",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about speed to power up the desert nomad and open the water well.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Algorithm Race",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M12-X4-T08-54ad7444",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Streak Challenge', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 2,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "sum(range(n))  # vs loop",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how speed changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2250",
+  "game_title": "Cipher Decoder – Cliffside Ledge Rush",
+  "game_concept": "A speed quiz set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
+  "genre": "speed quiz",
+  "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
+  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round, a new thermal packs challenge appears; solve it to bank points before time drains. Then check the decoded value and advance.",
+  "primary_mechanic": "Cipher Decoder",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 340 points of thermal packs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Cipher Decoder",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M15-X2-T08-5cb2db83",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Resource Rush', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 5,
+  "trial": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "chr(ord('a') + 1)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how decoded changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

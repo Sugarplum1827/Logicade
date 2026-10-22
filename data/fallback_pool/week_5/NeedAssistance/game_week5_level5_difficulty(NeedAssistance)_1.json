@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1321",
+  "game_title": "Range Runner – Waterfall Pool Streak",
+  "game_concept": "A quiz RPG set in Mystic Forest – Waterfall Pool, a pool below a waterfall: the herbalist must handle shadow wolves while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the herbalist moves exactly n steps toward the seed vault.",
+  "genre": "quiz RPG",
+  "theme": "Mystic Forest – Waterfall Pool: a pool below a waterfall",
+  "core_gameplay_loop": "In Waterfall Pool, repeat each round: Run a for i in range(n) loop so the herbalist moves exactly n steps toward the seed vault. Each round poses one decision; a wrong answer breaks the streak. Then check the steps_left value and advance.",
+  "primary_mechanic": "Range Runner",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about steps_left to power up the herbalist and open the seed vault.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Range Runner",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M01-X4-T09-d025d14a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Streak Challenge', and setting 'Waterfall Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(5):\n    step()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how steps_left changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Waterfall Pool.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

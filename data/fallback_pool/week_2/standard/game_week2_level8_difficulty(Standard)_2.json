@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0522",
+  "game_title": "Compound Combo – Geyser Flats Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
+  "core_gameplay_loop": "In Geyser Flats, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round costs one action, so plan the step so none are wasted. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the forge anvil using at most 18 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The forge anvil reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the forge anvil is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X3-T12-0c54dbfd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Efficiency Trial', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 2,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
+    "Step 3: Win by meeting the goal: The forge anvil reached with actions_used <= 18."
+  ]
+}

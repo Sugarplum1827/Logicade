@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1838",
+  "game_title": "Matrix Map – Collapsed Dome Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Collapsed Dome, a collapsed dome: the spirit seeker must handle rune wisps while practicing lists. Core idea – Matrix Map: Navigate a list of lists as rows and columns of a map.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Collapsed Dome: a collapsed dome",
+  "core_gameplay_loop": "In Collapsed Dome, repeat each round: Navigate a list of lists as rows and columns of a map. Each round poses one decision; a wrong answer breaks the streak. Then check the map_cells value and advance.",
+  "primary_mechanic": "Matrix Map",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about map_cells to power up the spirit seeker and open the rune gate.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Matrix Map",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M08-X4-T12-7c7b593c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Matrix Map' (Week 7 slot 8), mission type 'Streak Challenge', and setting 'Collapsed Dome'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "grid[1][2]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how map_cells changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Collapsed Dome.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

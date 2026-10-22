@@ -1,0 +1,241 @@
+{
+  "template_id": "tmpl_w6_l08_NA",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 6,
+    "level": 8,
+    "difficulty": "Need Assistance"
+  },
+  "file_id": "fallback_0172",
+  "game_title": "Fallback: Call Stack Tower – Wolf Watch",
+  "game_concept": "A tower defense set in Snowy Hold – Wolf Watch, a lookout against wolves: the hold guard must hold off winter bandits while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Wolf Watch: a lookout against wolves",
+  "core_gameplay_loop": "In Wolf Watch, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Then check stack_height and advance.",
+  "primary_mechanic": "Call Stack Tower",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the beacon fire from winter bandits in Wolf Watch: keep stack_height above zero until the 71-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "stack_height > 0 && timer >= 71",
+  "lose_condition": "stack_height <= 0 || lives <= 0",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Call Stack Tower",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "FB-W6-L08-NA",
+  "duplicate_check_notes": "Generic fallback template for Week 6, Level 8, Need Assistance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 6,
+  "level": 8,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Functions",
+    "Apply “Call Stack Tower” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_hold_guard",
+    "enemy": "kenney_winter_bandits",
+    "objective": "kenney_beacon_fire",
+    "background": "w6_snowy",
+    "projectile": "kenney_flint_stones",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "stack_height",
+    "damage_per_attack": 8,
+    "repair_per_action": 8,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 3,
+    "lives": 5,
+    "hint_count": 5,
+    "game_duration_seconds": 71,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Wolf Watch: Call Stack Tower",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "def a():\n    b()",
+    "health_bar": {
+      "visible": true,
+      "label": "stack_height",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "stack_height > 0 && timer < 71",
+      "then": [
+        "stack_height = max(0, stack_height - 8)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Winter bandits attack the beacon fire!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "stack_height > 0 && stack_height < 100 && player_energy >= 5",
+      "then": [
+        "stack_height = min(100, stack_height + 8)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "stack_height >= 100",
+      "then": [
+        "show_message('stack_height is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && stack_height < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "show_hint()",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 71 && stack_height > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 3)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "stack_height > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "stack_height <= 30 && stack_height > 0",
+      "then": [
+        "show_warning('stack_height is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 6,
+      "attack_interval_seconds": 1.95
+    },
+    {
+      "wave": 2,
+      "start_time": 24,
+      "enemy_count": 7,
+      "attack_interval_seconds": 1.55
+    },
+    {
+      "wave": 3,
+      "start_time": 47,
+      "enemy_count": 8,
+      "attack_interval_seconds": 1.15
+    }
+  ],
+  "win": "stack_height > 0 && timer >= 71",
+  "lose": "stack_height <= 0 || lives <= 0",
+  "hint": "Read the code panel: Trace nested function calls as stacked blocks and unwind them in order. Keep stack_height above zero until the timer reaches 71.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Winter bandits are coming! Watch the stack_height meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: def a():"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 71 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Call Stack Tower in Snowy Hold!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "stack_height ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

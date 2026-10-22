@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1663",
+  "game_title": "Function Test Arena – Snow Fort Rush",
+  "game_concept": "A arcade set in Snowy Hold – Snow Fort, a snowball fort: the firewood keeper must handle yeti raiders while practicing functions. Core idea – Function Test Arena: Write quick assert tests to confirm functions behave before facing yeti raiders.",
+  "genre": "arcade",
+  "theme": "Snowy Hold – Snow Fort: a snowball fort",
+  "core_gameplay_loop": "In Snow Fort, repeat each round: Write quick assert tests to confirm functions behave before facing yeti raiders. Each round, a new firewood challenge appears; solve it to bank points before time drains. Then check the tests_passed value and advance.",
+  "primary_mechanic": "Function Test Arena",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 300 points of firewood by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 300 within 45 seconds.",
+  "lose_condition": "Timer hits 0 with score < 300, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Function Test Arena",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M13-X2-T15-6c9ffaf6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Function Test Arena' (Week 6 slot 13), mission type 'Resource Rush', and setting 'Snow Fort'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 6,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "assert add(2, 3) == 5",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests_passed changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Snow Fort.",
+    "Step 3: Win by meeting the goal: score >= 300 within 45 seconds."
+  ]
+}

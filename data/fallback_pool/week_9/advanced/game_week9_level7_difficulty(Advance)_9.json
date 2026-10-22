@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2609",
+  "game_title": "Validation Fortress – Mirage Road Trial",
+  "game_concept": "A logic puzzle set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so desert bandits can't sneak through.",
+  "genre": "logic puzzle",
+  "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
+  "core_gameplay_loop": "In Mirage Road, repeat each round: Write input checks that reject bad data so desert bandits can't sneak through. Each round costs one action, so plan the step so none are wasted. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the caravan wagon using at most 13 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The caravan wagon reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the caravan wagon is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X3-T05-bd303ca7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Efficiency Trial', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
+    "Step 3: Win by meeting the goal: The caravan wagon reached with actions_used <= 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2624",
+  "game_title": "Validation Fortress – Buried Temple Steps Streak",
+  "game_concept": "A rhythm puzzle set in Sand Dunes – Buried Temple Steps, steps of a half-buried temple: the camel trader must handle sandstorms while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so sandstorms can't sneak through.",
+  "genre": "rhythm puzzle",
+  "theme": "Sand Dunes – Buried Temple Steps: steps of a half-buried temple",
+  "core_gameplay_loop": "In Buried Temple Steps, repeat each round: Write input checks that reject bad data so sandstorms can't sneak through. Each round poses one decision; a wrong answer breaks the streak. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about fortress to power up the camel trader and open the camel pen.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X4-T06-5e4bdd6c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Streak Challenge', and setting 'Buried Temple Steps'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against sandstorms in Buried Temple Steps.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

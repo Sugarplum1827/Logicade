@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1769",
+  "game_title": "Library Builder – Skating Pond Rush",
+  "game_concept": "A action puzzle set in Snowy Hold – Skating Pond, a frozen skating pond: the firewood keeper must handle frost imps while practicing functions. Core idea – Library Builder: Combine small functions into a reusable library the firewood keeper calls throughout the level.",
+  "genre": "action puzzle",
+  "theme": "Snowy Hold – Skating Pond: a frozen skating pond",
+  "core_gameplay_loop": "In Skating Pond, repeat each round: Combine small functions into a reusable library the firewood keeper calls throughout the level. Each round, a new furs challenge appears; solve it to bank points before time drains. Then check the library value and advance.",
+  "primary_mechanic": "Library Builder",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 550 points of furs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 550 within 43 seconds.",
+  "lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Library Builder",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M14-X2-T09-9d35a8a1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Library Builder' (Week 6 slot 14), mission type 'Resource Rush', and setting 'Skating Pond'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 9,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "import tools\ntools.heal()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how library changes.",
+    "Step 2: Use the controls to apply the code idea against frost imps in Skating Pond.",
+    "Step 3: Win by meeting the goal: score >= 550 within 43 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1108",
+  "game_title": "Digit Mill – Dragon Hoard Cave Race",
+  "game_concept": "A racing platformer set in Shadow Cave – Dragon Hoard Cave, a hoard-filled cave: the dwarf scout must handle rock golems while practicing control flow: while loops. Core idea – Digit Mill: Peel digits off a number with while n > 0 using // and %.",
+  "genre": "racing platformer",
+  "theme": "Shadow Cave – Dragon Hoard Cave: a hoard-filled cave",
+  "core_gameplay_loop": "In Dragon Hoard Cave, repeat each round: Peel digits off a number with while n > 0 using // and %. Each round the rival advances, and solving the step moves the dwarf scout ahead. Then check the digits value and advance.",
+  "primary_mechanic": "Digit Mill",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the crystal door by solving code steps involving digits that move the dwarf scout forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the crystal door first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Digit Mill",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M13-X5-T18-9643d771",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Digit Mill' (Week 4 slot 13), mission type 'Rival Race', and setting 'Dragon Hoard Cave'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n > 0:\n    n //= 10",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how digits changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Dragon Hoard Cave.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1806",
+  "game_title": "Shelf Sorter – Spirit Hall Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Spirit Hall, a hall of wandering spirits: the scholar mage must handle crypt crawlers while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of spirit candles from smallest to largest.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Spirit Hall: a hall of wandering spirits",
+  "core_gameplay_loop": "In Spirit Hall, repeat each round: Use sort() to rearrange shelves of spirit candles from smallest to largest. Each round, crypt crawlers strike the ancient lock, so respond before the next strike lands. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the ancient lock from crypt crawlers in Spirit Hall: keep the order_score meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while order_score > 0.",
+  "lose_condition": "order_score drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X1-T16-488ba064",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Survival Siege', and setting 'Spirit Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Spirit Hall.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while order_score > 0."
+  ]
+}

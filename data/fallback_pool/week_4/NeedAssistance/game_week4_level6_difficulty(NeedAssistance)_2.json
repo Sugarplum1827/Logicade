@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1052",
+  "game_title": "Countdown Launch – Dragon Hoard Cave Streak",
+  "game_concept": "A rhythm puzzle set in Shadow Cave – Dragon Hoard Cave, a hoard-filled cave: the dwarf scout must handle rock golems while practicing control flow: while loops. Core idea – Countdown Launch: Tick a countdown down each loop until it hits zero and the launch fires.",
+  "genre": "rhythm puzzle",
+  "theme": "Shadow Cave – Dragon Hoard Cave: a hoard-filled cave",
+  "core_gameplay_loop": "In Dragon Hoard Cave, repeat each round: Tick a countdown down each loop until it hits zero and the launch fires. Each round poses one decision; a wrong answer breaks the streak. Then check the count value and advance.",
+  "primary_mechanic": "Countdown Launch",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about count to power up the dwarf scout and open the crystal door.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 6 (applied tier): Countdown Launch",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M02-X4-T18-d659b88d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Launch' (Week 4 slot 2), mission type 'Streak Challenge', and setting 'Dragon Hoard Cave'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 6,
+  "trial": 2,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while count > 0:\n    count -= 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how count changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Dragon Hoard Cave.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1385",
+  "game_title": "Sum Sprint – Glowing Heartwood Race",
+  "game_concept": "A adventure race set in Mystic Forest – Glowing Heartwood, the glowing ancient tree: the forest ranger must handle shadow wolves while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Glowing Heartwood.",
+  "genre": "adventure race",
+  "theme": "Mystic Forest – Glowing Heartwood: the glowing ancient tree",
+  "core_gameplay_loop": "In Glowing Heartwood, repeat each round: Accumulate a total across a loop to pay a toll at Glowing Heartwood. Each round the rival advances, and solving the step moves the forest ranger ahead. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Beat a rival AI to the spirit shrine by solving code steps involving total that move the forest ranger forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the spirit shrine first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X5-T01-f1011dde",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Rival Race', and setting 'Glowing Heartwood'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Glowing Heartwood.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

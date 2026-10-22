@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1805",
+  "game_title": "Stack Of Plates – Crypt Stairs Trial",
+  "game_concept": "A logic puzzle set in Eldritch Ruins – Crypt Stairs, stairs to a crypt: the ruin warden must handle ghost knights while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
+  "genre": "logic puzzle",
+  "theme": "Eldritch Ruins – Crypt Stairs: stairs to a crypt",
+  "core_gameplay_loop": "In Crypt Stairs, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round costs one action, so plan the step so none are wasted. Then check the stack_balance value and advance.",
+  "primary_mechanic": "Stack Of Plates",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the heart stone using at most 18 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The heart stone reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the heart stone is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Stack Of Plates",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M05-X3-T09-835fea9a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Efficiency Trial', and setting 'Crypt Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 5,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "stack.append(x)\nstack.pop()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_balance changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Crypt Stairs.",
+    "Step 3: Win by meeting the goal: The heart stone reached with actions_used <= 18."
+  ]
+}

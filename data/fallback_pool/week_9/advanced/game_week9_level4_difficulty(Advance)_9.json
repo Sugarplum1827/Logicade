@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2519",
+  "game_title": "Validation Fortress – Sandstone Arch Rush",
+  "game_concept": "A action puzzle set in Sand Dunes – Sandstone Arch, a natural sandstone arch: the caravan guide must handle vultures while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so vultures can't sneak through.",
+  "genre": "action puzzle",
+  "theme": "Sand Dunes – Sandstone Arch: a natural sandstone arch",
+  "core_gameplay_loop": "In Sandstone Arch, repeat each round: Write input checks that reject bad data so vultures can't sneak through. Each round, a new camel feed challenge appears; solve it to bank points before time drains. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 290 points of camel feed by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 290 within 31 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X2-T19-5791e6b3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Resource Rush', and setting 'Sandstone Arch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Sandstone Arch.",
+    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
+  ]
+}

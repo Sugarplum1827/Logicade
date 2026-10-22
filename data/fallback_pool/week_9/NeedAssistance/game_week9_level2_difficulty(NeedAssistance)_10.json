@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2440",
+  "game_title": "Code Reading Relay – Buried Temple Steps Race",
+  "game_concept": "A racing platformer set in Sand Dunes – Buried Temple Steps, steps of a half-buried temple: the camel trader must handle sandstorms while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
+  "genre": "racing platformer",
+  "theme": "Sand Dunes – Buried Temple Steps: steps of a half-buried temple",
+  "core_gameplay_loop": "In Buried Temple Steps, repeat each round: Read short programs as a relay and predict their output line by line. Each round the rival advances, and solving the step moves the camel trader ahead. Then check the predicted value and advance.",
+  "primary_mechanic": "Code Reading Relay",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Beat a rival AI to the camel pen by solving code steps involving predicted that move the camel trader forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.55).",
+  "lose_condition": "The rival reaches the camel pen first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Code Reading Relay",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M10-X5-T06-ad1cb1a3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Rival Race', and setting 'Buried Temple Steps'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(3):\n    print(i)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predicted changes.",
+    "Step 2: Use the controls to apply the code idea against sandstorms in Buried Temple Steps.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.55)."
+  ]
+}

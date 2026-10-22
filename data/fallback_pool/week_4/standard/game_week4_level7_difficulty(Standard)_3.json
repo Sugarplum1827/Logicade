@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1093",
+  "game_title": "Digit Mill – Whispering Corridor Streak",
+  "game_concept": "A quiz RPG set in Shadow Cave – Whispering Corridor, a whispering corridor: the lantern keeper must handle giant bats while practicing control flow: while loops. Core idea – Digit Mill: Peel digits off a number with while n > 0 using // and %.",
+  "genre": "quiz RPG",
+  "theme": "Shadow Cave – Whispering Corridor: a whispering corridor",
+  "core_gameplay_loop": "In Whispering Corridor, repeat each round: Peel digits off a number with while n > 0 using // and %. Each round poses one decision; a wrong answer breaks the streak. Then check the digits value and advance.",
+  "primary_mechanic": "Digit Mill",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about digits to power up the lantern keeper and open the mine cart.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Digit Mill",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M13-X4-T17-a0f1a4e3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Digit Mill' (Week 4 slot 13), mission type 'Streak Challenge', and setting 'Whispering Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n > 0:\n    n //= 10",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how digits changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Whispering Corridor.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

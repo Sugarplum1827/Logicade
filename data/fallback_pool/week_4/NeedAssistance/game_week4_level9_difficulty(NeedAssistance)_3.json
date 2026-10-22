@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1143",
+  "game_title": "Stamina Climb – Collapsed Passage Trial",
+  "game_concept": "A programming puzzle set in Shadow Cave – Collapsed Passage, a half-collapsed passage: the lantern keeper must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
+  "genre": "programming puzzle",
+  "theme": "Shadow Cave – Collapsed Passage: a half-collapsed passage",
+  "core_gameplay_loop": "In Collapsed Passage, repeat each round: Keep climbing while stamina > 0, deciding when to rest inside the loop. Each round costs one action, so plan the step so none are wasted. Then check the stamina value and advance.",
+  "primary_mechanic": "Stamina Climb",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the lantern post using at most 22 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The lantern post reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the lantern post is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Stamina Climb",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M03-X3-T11-13aa8937",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Efficiency Trial', and setting 'Collapsed Passage'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while stamina > 0:\n    climb()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stamina changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Collapsed Passage.",
+    "Step 3: Win by meeting the goal: The lantern post reached with actions_used <= 22."
+  ]
+}

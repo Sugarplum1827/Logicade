@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1813",
+  "game_title": "Merge Convoy – Moss Library Rush",
+  "game_concept": "A arcade set in Eldritch Ruins – Moss Library, a ruined library: the tomb cartographer must handle cursed statues while practicing lists. Core idea – Merge Convoy: Merge two lists using + or extend() to join convoys.",
+  "genre": "arcade",
+  "theme": "Eldritch Ruins – Moss Library: a ruined library",
+  "core_gameplay_loop": "In Moss Library, repeat each round: Merge two lists using + or extend() to join convoys. Each round, a new chalk marks challenge appears; solve it to bank points before time drains. Then check the convoy_size value and advance.",
+  "primary_mechanic": "Merge Convoy",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 100 points of chalk marks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 100 within 30 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Merge Convoy",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M13-X2-T05-81000126",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Merge Convoy' (Week 7 slot 13), mission type 'Resource Rush', and setting 'Moss Library'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "convoy_a.extend(convoy_b)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how convoy_size changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Moss Library.",
+    "Step 3: Win by meeting the goal: score >= 100 within 30 seconds."
+  ]
+}

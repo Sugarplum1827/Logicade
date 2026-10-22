@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0600",
+  "game_title": "Mixed Type Oracle – Ore Smelter Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before cinder bats spring the trap.",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Predict the result or error of mixed-type expressions before cinder bats spring the trap. Each round, a new heat shields challenge appears; solve it to bank points before time drains. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 600 points of heat shields by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 600 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 600, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X2-T18-53e574e1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Resource Rush', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 10,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: score >= 600 within 46 seconds."
+  ]
+}

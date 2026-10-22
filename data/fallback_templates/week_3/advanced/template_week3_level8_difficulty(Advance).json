@@ -1,0 +1,235 @@
+{
+  "template_id": "tmpl_w3_l08_AD",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 3,
+    "level": 8,
+    "difficulty": "Advance"
+  },
+  "file_id": "fallback_0084",
+  "game_title": "Fallback: Range Check Bridge – Coral Reef Shallows",
+  "game_concept": "A tower defense set in Coastal Port – Coral Reef Shallows, reef shallows: the sailor must hold off jellyfish swarms while practicing conditionals (if / elif / else). Core idea – Range Check Bridge: Test ranges such as 10 <= weight < 20 to let only the right travelers cross.",
+  "genre": "tower defense",
+  "theme": "Coastal Port – Coral Reef Shallows: reef shallows",
+  "core_gameplay_loop": "In Coral Reef Shallows, repeat each round: Test ranges such as 10 <= weight < 20 to let only the right travelers cross. Then check bridge_load and advance.",
+  "primary_mechanic": "Range Check Bridge",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the ferry from jellyfish swarms in Coral Reef Shallows: keep bridge_load above zero until the 41-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "bridge_load > 0 && timer >= 41",
+  "lose_condition": "bridge_load <= 0 || lives <= 0",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Range Check Bridge",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "FB-W3-L08-AD",
+  "duplicate_check_notes": "Generic fallback template for Week 3, Level 8, Advance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 3,
+  "level": 8,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Conditionals (if / elif / else)",
+    "Apply “Range Check Bridge” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_sailor",
+    "enemy": "kenney_jellyfish_swarms",
+    "objective": "kenney_ferry",
+    "background": "w3_coast",
+    "projectile": "kenney_lanterns",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "bridge_load",
+    "damage_per_attack": 16,
+    "repair_per_action": 5,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 1,
+    "lives": 2,
+    "hint_count": 0,
+    "game_duration_seconds": 41,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Coral Reef Shallows: Range Check Bridge",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "if 10 <= weight < 20:",
+    "health_bar": {
+      "visible": true,
+      "label": "bridge_load",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "bridge_load > 0 && timer < 41",
+      "then": [
+        "bridge_load = max(0, bridge_load - 16)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Jellyfish swarms attack the ferry!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "bridge_load > 0 && bridge_load < 100 && player_energy >= 5",
+      "then": [
+        "bridge_load = min(100, bridge_load + 5)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "bridge_load >= 100",
+      "then": [
+        "show_message('bridge_load is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && bridge_load < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 41 && bridge_load > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 1)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "bridge_load > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "bridge_load <= 30 && bridge_load > 0",
+      "then": [
+        "show_warning('bridge_load is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 8,
+      "attack_interval_seconds": 1.35
+    },
+    {
+      "wave": 2,
+      "start_time": 14,
+      "enemy_count": 9,
+      "attack_interval_seconds": 0.95
+    },
+    {
+      "wave": 3,
+      "start_time": 27,
+      "enemy_count": 10,
+      "attack_interval_seconds": 0.8
+    }
+  ],
+  "win": "bridge_load > 0 && timer >= 41",
+  "lose": "bridge_load <= 0 || lives <= 0",
+  "hint": "Read the code panel: Test ranges such as 10 <= weight < 20 to let only the right travelers cross. Keep bridge_load above zero until the timer reaches 41.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Jellyfish swarms are coming! Watch the bridge_load meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: if 10 <= weight < 20:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 41 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Range Check Bridge in Coastal Port!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "bridge_load ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

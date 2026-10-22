@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0477",
+  "game_title": "Compound Combo – Basalt Stair Race",
+  "game_concept": "A strategy race set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "strategy race",
+  "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
+  "core_gameplay_loop": "In Basalt Stair, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round the rival advances, and solving the step moves the forge smith ahead. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the ash barrier by solving code steps involving energy that move the forge smith forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "lose_condition": "The rival reaches the ash barrier first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X5-T09-a900cd53",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Rival Race', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 7,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
+  ]
+}

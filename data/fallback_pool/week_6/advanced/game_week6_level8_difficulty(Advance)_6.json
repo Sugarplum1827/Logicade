@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1736",
+  "game_title": "Countdown Recursion – Sled Run Defense",
+  "game_concept": "A survival strategy set in Snowy Hold – Sled Run, a steep sled run: the innkeeper must handle ice wolves while practicing functions. Core idea – Countdown Recursion: Use a simple self-calling function to count down to a base case.",
+  "genre": "survival strategy",
+  "theme": "Snowy Hold – Sled Run: a steep sled run",
+  "core_gameplay_loop": "In Sled Run, repeat each round: Use a simple self-calling function to count down to a base case. Each round, ice wolves strike the ice mill, so respond before the next strike lands. Then check the base_case value and advance.",
+  "primary_mechanic": "Countdown Recursion",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the ice mill from ice wolves in Sled Run: keep the base_case meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 41 seconds while base_case > 0.",
+  "lose_condition": "base_case drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Countdown Recursion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M11-X1-T06-561830d0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Recursion' (Week 6 slot 11), mission type 'Survival Siege', and setting 'Sled Run'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 6,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def down(n):\n    if n == 0:\n        return\n    down(n - 1)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how base_case changes.",
+    "Step 2: Use the controls to apply the code idea against ice wolves in Sled Run.",
+    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while base_case > 0."
+  ]
+}

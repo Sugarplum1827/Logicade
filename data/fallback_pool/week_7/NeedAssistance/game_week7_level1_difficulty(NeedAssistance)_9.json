@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1809",
+  "game_title": "Length Limit – Pillar Maze Race",
+  "game_concept": "A strategy race set in Eldritch Ruins – Pillar Maze, a maze of pillars: the tomb cartographer must handle ghost knights while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Pillar Maze.",
+  "genre": "strategy race",
+  "theme": "Eldritch Ruins – Pillar Maze: a maze of pillars",
+  "core_gameplay_loop": "In Pillar Maze, repeat each round: Use len() to stop the list from growing past the limit of Pillar Maze. Each round the rival advances, and solving the step moves the tomb cartographer ahead. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Beat a rival AI to the obelisk by solving code steps involving capacity that move the tomb cartographer forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "lose_condition": "The rival reaches the obelisk first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X5-T17-b93895a9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Rival Race', and setting 'Pillar Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 9,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Pillar Maze.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1310",
+  "game_title": "Sum Sprint – Root Tunnels Race",
+  "game_concept": "A adventure race set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Root Tunnels.",
+  "genre": "adventure race",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Accumulate a total across a loop to pay a toll at Root Tunnels. Each round the rival advances, and solving the step moves the fairy gardener ahead. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Beat a rival AI to the elder's door by solving code steps involving total that move the fairy gardener forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the elder's door first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X5-T16-40358f3b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Rival Race', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

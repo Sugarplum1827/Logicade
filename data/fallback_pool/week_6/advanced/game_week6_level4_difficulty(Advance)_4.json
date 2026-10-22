@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1614",
+  "game_title": "Docstring Detective – Frosted Chapel Rush",
+  "game_concept": "A speed quiz set in Snowy Hold – Frosted Chapel, a frosted chapel: the sled courier must handle snow wraiths while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "speed quiz",
+  "theme": "Snowy Hold – Frosted Chapel: a frosted chapel",
+  "core_gameplay_loop": "In Frosted Chapel, repeat each round: Read docstrings to pick the right function for each case. Each round, a new warm lanterns challenge appears; solve it to bank points before time drains. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 290 points of warm lanterns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 290 within 31 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X2-T04-9bffeb58",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Resource Rush', and setting 'Frosted Chapel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 4,
+  "trial": 4,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against snow wraiths in Frosted Chapel.",
+    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
+  ]
+}

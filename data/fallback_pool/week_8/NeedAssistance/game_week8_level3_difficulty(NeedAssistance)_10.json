@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2170",
+  "game_title": "Safe Get Scout – Cliffside Ledge Rush",
+  "game_concept": "A arcade set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Safe Get Scout: Use .get() with a default to avoid missing key errors.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
+  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Use .get() with a default to avoid missing key errors. Each round, a new thermal packs challenge appears; solve it to bank points before time drains. Then check the safe_lookups value and advance.",
+  "primary_mechanic": "Safe Get Scout",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 130 points of thermal packs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 130 within 50 seconds.",
+  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Safe Get Scout",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M10-X2-T08-415844e6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Safe Get Scout' (Week 8 slot 10), mission type 'Resource Rush', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "stock.get('apple', 0)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how safe_lookups changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
+    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
+  ]
+}

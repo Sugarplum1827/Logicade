@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0020",
+  "game_title": "Name Tag Match – Tavern Quarter Streak",
+  "game_concept": "A rhythm puzzle set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Name Tag Match: Match floating variable name tags to the values on passing apples before they reach siege rats.",
+  "genre": "rhythm puzzle",
+  "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
+  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Match floating variable name tags to the values on passing apples before they reach siege rats. Each round poses one decision; a wrong answer breaks the streak. Then check the tag_matches value and advance.",
+  "primary_mechanic": "Name Tag Match",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about tag_matches to power up the town guard and open the market bell.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Name Tag Match",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M05-X4-T10-5ad6ca10",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Name Tag Match' (Week 1 slot 5), mission type 'Streak Challenge', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "speed = 12\nname = 'Rex'",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tag_matches changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

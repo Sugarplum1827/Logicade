@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1067",
+  "game_title": "Countdown Launch – Shadow Pit Race",
+  "game_concept": "A adventure race set in Shadow Cave – Shadow Pit, a pit of deep shadow: the torchbearer must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Countdown Launch: Tick a countdown down each loop until it hits zero and the launch fires.",
+  "genre": "adventure race",
+  "theme": "Shadow Cave – Shadow Pit: a pit of deep shadow",
+  "core_gameplay_loop": "In Shadow Pit, repeat each round: Tick a countdown down each loop until it hits zero and the launch fires. Each round the rival advances, and solving the step moves the torchbearer ahead. Then check the count value and advance.",
+  "primary_mechanic": "Countdown Launch",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the ore lift by solving code steps involving count that move the torchbearer forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the ore lift first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 6 (applied tier): Countdown Launch",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M02-X5-T19-5bc63c0c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Launch' (Week 4 slot 2), mission type 'Rival Race', and setting 'Shadow Pit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 6,
+  "trial": 7,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while count > 0:\n    count -= 1",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how count changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Shadow Pit.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

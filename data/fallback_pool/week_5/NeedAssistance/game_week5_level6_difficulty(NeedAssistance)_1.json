@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1351",
+  "game_title": "Range Runner – Owl Roost Defense",
+  "game_concept": "A tower defense set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the wood elf archer moves exactly n steps toward the spirit shrine.",
+  "genre": "tower defense",
+  "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
+  "core_gameplay_loop": "In Owl Roost, repeat each round: Run a for i in range(n) loop so the wood elf archer moves exactly n steps toward the spirit shrine. Each round, bog toads strike the spirit shrine, so respond before the next strike lands. Then check the steps_left value and advance.",
+  "primary_mechanic": "Range Runner",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the spirit shrine from bog toads in Owl Roost: keep the steps_left meter above zero by applying the concept correctly until the 63-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 63 seconds while steps_left > 0.",
+  "lose_condition": "steps_left drops to 0, or lives reach 0, before the 63-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Range Runner",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M01-X1-T11-d43e36c5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Survival Siege', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(5):\n    step()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how steps_left changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
+    "Step 3: Win by meeting the goal: Timer reaches 63 seconds while steps_left > 0."
+  ]
+}

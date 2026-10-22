@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1133",
+  "game_title": "Dam Filler – Stalactite Hall Rush",
+  "game_concept": "A action puzzle set in Shadow Cave – Stalactite Hall, a hall of dripping stalactites: the lantern keeper must handle slime blobs while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
+  "genre": "action puzzle",
+  "theme": "Shadow Cave – Stalactite Hall: a hall of dripping stalactites",
+  "core_gameplay_loop": "In Stalactite Hall, repeat each round: Raise the water level in a loop while level < max, without overflowing. Each round, a new glowing mushrooms challenge appears; solve it to bank points before time drains. Then check the level value and advance.",
+  "primary_mechanic": "Dam Filler",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 490 points of glowing mushrooms by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Dam Filler",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M08-X2-T05-807f17d8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Resource Rush', and setting 'Stalactite Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while level < max_level:\n    level += 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how level changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Stalactite Hall.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

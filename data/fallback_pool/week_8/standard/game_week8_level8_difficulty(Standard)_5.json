@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2325",
+  "game_title": "Cipher Decoder – Ice Cave Shelter Rush",
+  "game_concept": "A speed quiz set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
+  "genre": "speed quiz",
+  "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
+  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round, a new crampons challenge appears; solve it to bank points before time drains. Then check the decoded value and advance.",
+  "primary_mechanic": "Cipher Decoder",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 380 points of crampons by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 380 within 51 seconds.",
+  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 8 (extended tier): Cipher Decoder",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M15-X2-T13-3770a702",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Resource Rush', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 8,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "chr(ord('a') + 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how decoded changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
+    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0456",
+  "game_title": "Boolean Circuit – Crater Lake Edge Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the smelter.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
+  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the smelter. Each round, lava imps strike the smelter, so respond before the next strike lands. Then check the power_on value and advance.",
+  "primary_mechanic": "Boolean Circuit",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the smelter from lava imps in Crater Lake Edge: keep the power_on meter above zero by applying the concept correctly until the 63-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 63 seconds while power_on > 0.",
+  "lose_condition": "power_on drops to 0, or lives reach 0, before the 63-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Boolean Circuit",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M06-X1-T06-2da3c142",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Survival Siege', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "open = key and not alarm",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power_on changes.",
+    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
+    "Step 3: Win by meeting the goal: Timer reaches 63 seconds while power_on > 0."
+  ]
+}

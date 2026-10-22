@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2116",
+  "game_title": "Letter Lock – Glacier Crossing Rush",
+  "game_concept": "A arcade set in Frost Peaks – Glacier Crossing, a cracking glacier: the sherpa guide must handle frost wyrms while practicing strings & dictionaries. Core idea – Letter Lock: Use string indexing to pull the right letter and crack the lock on the summit beacon.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Glacier Crossing: a cracking glacier",
+  "core_gameplay_loop": "In Glacier Crossing, repeat each round: Use string indexing to pull the right letter and crack the lock on the summit beacon. Each round, a new supply crates challenge appears; solve it to bank points before time drains. Then check the lock_letters value and advance.",
+  "primary_mechanic": "Letter Lock",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 100 points of supply crates by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 100 within 30 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Letter Lock",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M01-X2-T02-10d058a9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Letter Lock' (Week 8 slot 1), mission type 'Resource Rush', and setting 'Glacier Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word[0]\nword[-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_letters changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Crossing.",
+    "Step 3: Win by meeting the goal: score >= 100 within 30 seconds."
+  ]
+}

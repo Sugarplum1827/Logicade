@@ -32,9 +32,12 @@ import json
 import os
 import re
 import sys
+import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from PIL.ImagePalette import raw
 import httpx
 
 from .grammar import load_registry, load_week
@@ -99,7 +102,7 @@ class LLMClient:
         for attempt in range(MAX_RETRIES + 1):
             print(f"[llm] Attempt {attempt + 1}/{MAX_RETRIES + 1} — week={week} difficulty={difficulty}")
             raw = await self._call_ollama(prompt)
-            spec = _coerce_to_spec(raw, week, difficulty)
+            spec = _coerce_to_spec(raw, week, difficulty, brief)
 
             if spec is None:
                 err = f"attempt {attempt + 1}: response was not a valid JSON object"
@@ -144,18 +147,93 @@ class LLMClient:
             "raw_llm_response": self._last_raw[:500],
         }
 
+    async def generate_template_game(
+        self, week: int, level: int, difficulty: str,
+    ) -> tuple[dict, dict]:
+        """Generate one complete catalogue game from its matching JSON template."""
+        print(f"[llm] template generation start week={week} level={level} difficulty={difficulty} model={self.model_tag or self.model}")
+        template = _load_game_template(week, level, difficulty)
+        template.setdefault("code_snippet", template.get("ui", {}).get("code_snippet", ""))
+        game_id = f"llm_w{week}_l{level}_{difficulty}_{uuid.uuid4().hex[:10]}"
+        mission_types = (
+            "Survival Siege", "Streak Challenge", "Resource Rush",
+            "Rival Race", "Efficiency Trial",
+        )
+        reference_fields = (
+            "week", "level", "difficulty", "topic", "game_title", "game_concept",
+            "primary_mechanic", "player_objective", "controls", "win_condition",
+            "lose_condition", "learning_alignment", "game_settings", "code_snippet",
+            "hint", "tutorial",
+        )
+        reference = {key: template.get(key) for key in reference_fields}
+        prompt = "\n".join([
+            "Create fresh player-facing content for a LogiCade programming game.",
+            "Return one JSON patch object only. The server will merge it into the full fallback template, preserving all other keys and settings.",
+            "Return these keys: game_title, game_concept, primary_mechanic, secondary_mechanics, player_objective, controls, learning_alignment, code_snippet, hint, tutorial, win_condition, lose_condition, mission_type.",
+            "Keep the provided week, level, difficulty, topic, and learning concept. Keep tutorial as an array of step objects matching the example. Keep win/lose conditions logically reachable and game_settings unchanged.",
+            f"mission_type must be exactly one of: {', '.join(mission_types)}.",
+            "Keep code_snippet educational and inert; do not emit scripts or executable game code.",
+            "TEMPLATE REFERENCE:", json.dumps(reference, ensure_ascii=False),
+        ])
+        raw = await self._call_ollama(prompt, temperature=0.65, num_predict=1400)
+        generated = _merge_template_response(template, raw)
+        repaired = False
+        if generated is None:
+            repair_prompt = prompt + "\nThe previous response was not valid JSON with the required template fields. Return the complete corrected JSON object."
+            generated = _merge_template_response(template, await self._call_ollama(repair_prompt, temperature=0.35, num_predict=1400))
+            repaired = True
+
+        fallback = generated is None
+        print(f"[llm] template generation {'used template fallback' if fallback else 'accepted generated JSON'} week={week} level={level} difficulty={difficulty}")
+        spec = generated or copy.deepcopy(template)
+        spec["week"] = week
+        spec["level"] = level
+        spec["difficulty"] = difficulty
+        spec["file_id"] = game_id
+        spec["game_id"] = game_id
+        spec["unique_identity_key"] = f"LLM-{game_id}"
+        spec["is_fallback"] = fallback
+        mission_type = spec.get("mission_type")
+        if mission_type not in mission_types:
+            mission_type = "Survival Siege"
+        spec["mission_type"] = mission_type
+        spec["game_type"] = mission_type
+        if not spec.get("code_snippet"):
+            spec["code_snippet"] = spec.get("ui", {}).get("code_snippet") or spec.get("code", "")
+        settings = spec.setdefault("game_settings", {})
+        settings.setdefault("target_score", settings.get("max_meter", 10))
+        settings.setdefault("time_limit_seconds", settings.get("game_duration_seconds", 60))
+        settings.setdefault("enemy_attack_interval_seconds", 2)
+        settings.setdefault("enemy_wave_count", 2)
+        settings.setdefault("streak_target", 5)
+        settings.setdefault("action_budget", 10)
+        settings.setdefault("rival_speed", 0.5)
+        settings.setdefault("lives", 3)
+        now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        spec["generated_at"] = datetime.now(timezone.utc).isoformat()
+        return spec, {
+            "verification_result": "template_fallback" if fallback else "llm_template",
+            "fallback": fallback,
+            "repaired": repaired,
+            "model_tag": self.model_tag,
+            "model_digest": self.model_digest,
+            "generated_filename": f"{now}_{game_id}.json",
+        }
+
 
     # ── Internals ────────────────────────────────────────────────────
 
-    async def _call_ollama(self, prompt: str) -> str:
+    async def _call_ollama(
+        self, prompt: str, *, temperature: float = 0.1, num_predict: int = 2048,
+    ) -> str:
         payload: dict[str, Any] = {
             "model": self.model,
             "prompt": prompt,
             "format": "json",
             "stream": False,
             "options": {
-                "temperature": 0.1,
-                "num_predict": 2048,   # back to 2048; 1024 truncated qwen's output
+                "temperature": temperature,
+                "num_predict": num_predict,
                 "num_ctx": 8192,
             },
         }
@@ -391,7 +469,13 @@ def _coerce_to_spec(
                 file=sys.stderr,
             )
         obj["map"] = brief["map_id"]
-    obj.setdefault("fingerprint", "00000000")
+    # ⭐ Recompute fingerprint from the actual rules/effects/win — the LLM
+    # never supplies a trustworthy one, and downstream analytics (novelty
+    # checks, difficulty_divergence) depend on a real hash.
+    try:
+        obj["fingerprint"] = compute_fingerprint(obj)
+    except Exception:
+        obj.setdefault("fingerprint", "00000000")
     return obj
 
 
@@ -403,6 +487,42 @@ def _coerce_to_spec(
 # data/fallback_templates/ directory.
 
 _WIN_SCORE_RE = re.compile(r"^score\s*(==|>=|<=|>|<|!=)\s*(\d+)$")
+
+
+def _load_game_template(week: int, level: int, difficulty: str) -> dict:
+    directory = FALLBACK_DIR / f"week_{week}" / difficulty
+    candidates = sorted(directory.glob(f"template_week{week}_level{level}_difficulty*.json"))
+    if not candidates:
+        raise FileNotFoundError(f"No game template for week={week}, level={level}, difficulty={difficulty} in {directory}")
+    return json.loads(candidates[0].read_text(encoding="utf-8"))
+
+
+def _merge_template_response(template: dict, raw: str) -> dict | None:
+    try:
+        candidate = json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
+        return None
+    if not isinstance(candidate, dict):
+        return None
+    if candidate.get("_error") or not all(
+        isinstance(candidate.get(key), str) and candidate[key].strip()
+        for key in ("game_title", "game_concept", "primary_mechanic", "player_objective", "hint")
+    ):
+        return None
+    merged = copy.deepcopy(template)
+    for key, value in candidate.items():
+        if key == "mission_type":
+            merged[key] = value
+        elif key in merged and isinstance(value, type(merged[key])):
+            merged[key] = value
+    required_strings = ("game_title", "game_concept", "primary_mechanic", "player_objective", "controls", "win_condition", "lose_condition", "learning_alignment", "topic")
+    if any(not isinstance(merged.get(key), str) or not merged[key].strip() for key in required_strings):
+        return None
+    if not isinstance(merged.get("game_settings"), dict) or not isinstance(merged.get("tutorial"), list):
+        return None
+    if any(not isinstance(v, (str, int, float, bool)) for v in merged["game_settings"].values()):
+        return None
+    return merged
 
 
 def _base_fallback(week: int, difficulty: str) -> dict:

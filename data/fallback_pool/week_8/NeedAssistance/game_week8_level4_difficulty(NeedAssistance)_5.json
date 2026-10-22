@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2195",
+  "game_title": "Palindrome Gate – Rope Line Streak",
+  "game_concept": "A rhythm puzzle set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
+  "genre": "rhythm puzzle",
+  "theme": "Frost Peaks – Rope Line: a long fixed rope line",
+  "core_gameplay_loop": "In Rope Line, repeat each round: Check whether a word reads the same backward to open the gate. Each round poses one decision; a wrong answer breaks the streak. Then check the gate value and advance.",
+  "primary_mechanic": "Palindrome Gate",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about gate to power up the avalanche scout and open the rope bridge.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Palindrome Gate",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M05-X4-T15-bcc51c70",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Streak Challenge', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word == word[::-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

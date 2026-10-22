@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2157",
+  "game_title": "Nested Registry – Basecamp Ridge Rush",
+  "game_concept": "A speed quiz set in Frost Peaks – Basecamp Ridge, the basecamp on a ridge: the mountaineer must handle yetis while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
+  "genre": "speed quiz",
+  "theme": "Frost Peaks – Basecamp Ridge: the basecamp on a ridge",
+  "core_gameplay_loop": "In Basecamp Ridge, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, a new oxygen tanks challenge appears; solve it to bank points before time drains. Then check the registry value and advance.",
+  "primary_mechanic": "Nested Registry",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 180 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 180 within 26 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): Nested Registry",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M12-X2-T01-4c63fe24",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Resource Rush', and setting 'Basecamp Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 2,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "town['inn']['rooms']",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how registry changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Basecamp Ridge.",
+    "Step 3: Win by meeting the goal: score >= 180 within 26 seconds."
+  ]
+}

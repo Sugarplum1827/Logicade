@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2307",
+  "game_title": "Nested Registry – Yeti Ridge Rush",
+  "game_concept": "A speed quiz set in Frost Peaks – Yeti Ridge, a ridge known for yetis: the ice axe ranger must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
+  "genre": "speed quiz",
+  "theme": "Frost Peaks – Yeti Ridge: a ridge known for yetis",
+  "core_gameplay_loop": "In Yeti Ridge, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, a new flares challenge appears; solve it to bank points before time drains. Then check the registry value and advance.",
+  "primary_mechanic": "Nested Registry",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 440 points of flares by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 440 within 38 seconds.",
+  "lose_condition": "Timer hits 0 with score < 440, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Nested Registry",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M12-X2-T11-7e8251f9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Resource Rush', and setting 'Yeti Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 7,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "town['inn']['rooms']",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how registry changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Yeti Ridge.",
+    "Step 3: Win by meeting the goal: score >= 440 within 38 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1788",
+  "game_title": "Return Vault – Lantern Square Defense",
+  "game_concept": "A action defense set in Snowy Hold – Lantern Square, a lantern-lit square: the snow ranger must handle ice wolves while practicing functions. Core idea – Return Vault: Use return to send a computed value back to the caller and open the sleigh.",
+  "genre": "action defense",
+  "theme": "Snowy Hold – Lantern Square: a lantern-lit square",
+  "core_gameplay_loop": "In Lantern Square, repeat each round: Use return to send a computed value back to the caller and open the sleigh. Each round, ice wolves strike the sleigh, so respond before the next strike lands. Then check the vault value and advance.",
+  "primary_mechanic": "Return Vault",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the sleigh from ice wolves in Lantern Square: keep the vault meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 57 seconds while vault > 0.",
+  "lose_condition": "vault drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Return Vault",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M03-X1-T14-df4b0a57",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Return Vault' (Week 6 slot 3), mission type 'Survival Siege', and setting 'Lantern Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 8,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def double(x):\n    return x * 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault changes.",
+    "Step 2: Use the controls to apply the code idea against ice wolves in Lantern Square.",
+    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while vault > 0."
+  ]
+}

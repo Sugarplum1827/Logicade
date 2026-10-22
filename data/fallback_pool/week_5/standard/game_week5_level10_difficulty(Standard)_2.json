@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1482",
+  "game_title": "Iteration Tracer – Root Tunnels Rush",
+  "game_concept": "A speed quiz set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Iteration Tracer: Predict how many times a loop body runs before the clock stops.",
+  "genre": "speed quiz",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Predict how many times a loop body runs before the clock stops. Each round, a new mana petals challenge appears; solve it to bank points before time drains. Then check the trace_score value and advance.",
+  "primary_mechanic": "Iteration Tracer",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 460 points of mana petals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 460 within 57 seconds.",
+  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Iteration Tracer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M12-X2-T16-f95a6753",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Iteration Tracer' (Week 5 slot 12), mission type 'Resource Rush', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 9, 3):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_score changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
+  ]
+}

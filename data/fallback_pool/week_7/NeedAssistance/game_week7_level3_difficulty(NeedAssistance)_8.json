@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1868",
+  "game_title": "Matrix Map – Relic Vault Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Matrix Map: Navigate a list of lists as rows and columns of a map.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Navigate a list of lists as rows and columns of a map. Each round, stone sentinels strike the moon altar, so respond before the next strike lands. Then check the map_cells value and advance.",
+  "primary_mechanic": "Matrix Map",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the moon altar from stone sentinels in Relic Vault: keep the map_cells meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 50 seconds while map_cells > 0.",
+  "lose_condition": "map_cells drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Matrix Map",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M08-X1-T14-32b5c26c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Matrix Map' (Week 7 slot 8), mission type 'Survival Siege', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 8,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "grid[1][2]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how map_cells changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while map_cells > 0."
+  ]
+}

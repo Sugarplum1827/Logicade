@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1018",
+  "game_title": "Digit Mill – Glowworm Gallery Streak",
+  "game_concept": "A quiz RPG set in Shadow Cave – Glowworm Gallery, a ceiling of glowworms: the dwarf scout must handle cave spiders while practicing control flow: while loops. Core idea – Digit Mill: Peel digits off a number with while n > 0 using // and %.",
+  "genre": "quiz RPG",
+  "theme": "Shadow Cave – Glowworm Gallery: a ceiling of glowworms",
+  "core_gameplay_loop": "In Glowworm Gallery, repeat each round: Peel digits off a number with while n > 0 using // and %. Each round poses one decision; a wrong answer breaks the streak. Then check the digits value and advance.",
+  "primary_mechanic": "Digit Mill",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about digits to power up the dwarf scout and open the wooden door.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 4 (applied tier): Digit Mill",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M13-X4-T12-4a0a5ff0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Digit Mill' (Week 4 slot 13), mission type 'Streak Challenge', and setting 'Glowworm Gallery'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 4,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n > 0:\n    n //= 10",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how digits changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Glowworm Gallery.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

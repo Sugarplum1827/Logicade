@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0416",
+  "game_title": "Exponent Engine – Ore Smelter Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round costs one action, so plan the step so none are wasted. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the fire shrine using at most 12 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The fire shrine reached with actions_used <= 12.",
+  "lose_condition": "actions_used exceeds 12 before the fire shrine is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X3-T18-30e9253c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Efficiency Trial', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 4,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: The fire shrine reached with actions_used <= 12."
+  ]
+}

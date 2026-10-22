@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2680",
+  "game_title": "Code Reading Relay – Dune Crest Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Dune Crest: a high dune crest",
+  "core_gameplay_loop": "In Dune Crest, repeat each round: Read short programs as a relay and predict their output line by line. Each round, sand wyrms strike the oasis, so respond before the next strike lands. Then check the predicted value and advance.",
+  "primary_mechanic": "Code Reading Relay",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the oasis from sand wyrms in Dune Crest: keep the predicted meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while predicted > 0.",
+  "lose_condition": "predicted drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Code Reading Relay",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M10-X1-T02-24fea4c2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Survival Siege', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(3):\n    print(i)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predicted changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while predicted > 0."
+  ]
+}

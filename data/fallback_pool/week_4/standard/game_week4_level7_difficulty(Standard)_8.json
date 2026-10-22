@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1098",
+  "game_title": "Stamina Climb – Echo Chamber Race",
+  "game_concept": "A strategy race set in Shadow Cave – Echo Chamber, a booming echo chamber: the spelunker must handle skeleton miners while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
+  "genre": "strategy race",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "core_gameplay_loop": "In Echo Chamber, repeat each round: Keep climbing while stamina > 0, deciding when to rest inside the loop. Each round the rival advances, and solving the step moves the spelunker ahead. Then check the stamina value and advance.",
+  "primary_mechanic": "Stamina Climb",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the crystal door by solving code steps involving stamina that move the spelunker forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the crystal door first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Stamina Climb",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M03-X5-T08-62c27a7e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Rival Race', and setting 'Echo Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while stamina > 0:\n    climb()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stamina changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Echo Chamber.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

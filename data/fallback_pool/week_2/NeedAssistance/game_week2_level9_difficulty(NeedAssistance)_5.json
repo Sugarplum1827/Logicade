@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0545",
+  "game_title": "Comparison Duel – Ember Fields Streak",
+  "game_concept": "A rhythm puzzle set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the ember mage's power beats the shield shown by molten golems.",
+  "genre": "rhythm puzzle",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "core_gameplay_loop": "In Ember Fields, repeat each round: Choose ==, !=, < , > or >= so the ember mage's power beats the shield shown by molten golems. Each round poses one decision; a wrong answer breaks the streak. Then check the power value and advance.",
+  "primary_mechanic": "Comparison Duel",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about power to power up the ember mage and open the lava bridge.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Comparison Duel",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M05-X4-T05-ccbb33af",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Streak Challenge', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power > shield",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

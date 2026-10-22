@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0500",
+  "game_title": "Comparison Duel – Lava River Crossing Defense",
+  "game_concept": "A survival strategy set in Mt. Pyre – Lava River Crossing, a river of molten rock: the volcanologist must handle cinder bats while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the volcanologist's power beats the shield shown by cinder bats.",
+  "genre": "survival strategy",
+  "theme": "Mt. Pyre – Lava River Crossing: a river of molten rock",
+  "core_gameplay_loop": "In Lava River Crossing, repeat each round: Choose ==, !=, < , > or >= so the volcanologist's power beats the shield shown by cinder bats. Each round, cinder bats strike the forge anvil, so respond before the next strike lands. Then check the power value and advance.",
+  "primary_mechanic": "Comparison Duel",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the forge anvil from cinder bats in Lava River Crossing: keep the power meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 48 seconds while power > 0.",
+  "lose_condition": "power drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Comparison Duel",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M05-X1-T02-68ed8b6d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Survival Siege', and setting 'Lava River Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power > shield",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Lava River Crossing.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while power > 0."
+  ]
+}

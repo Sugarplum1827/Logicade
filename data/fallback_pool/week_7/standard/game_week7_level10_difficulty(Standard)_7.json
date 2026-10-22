@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2087",
+  "game_title": "Index Archery – Echoing Courtyard Trial",
+  "game_concept": "A logic puzzle set in Eldritch Ruins – Echoing Courtyard, an echoing courtyard: the relic hunter must handle eldritch shades while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "logic puzzle",
+  "theme": "Eldritch Ruins – Echoing Courtyard: an echoing courtyard",
+  "core_gameplay_loop": "In Echoing Courtyard, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round costs one action, so plan the step so none are wasted. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the obelisk using at most 19 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The obelisk reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the obelisk is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X3-T07-728d1d4e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Efficiency Trial', and setting 'Echoing Courtyard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Echoing Courtyard.",
+    "Step 3: Win by meeting the goal: The obelisk reached with actions_used <= 19."
+  ]
+}

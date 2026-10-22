@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2626",
+  "game_title": "Syntax Sweep – Bone Valley Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
+  "core_gameplay_loop": "In Bone Valley, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round, mirage spirits strike the camel pen, so respond before the next strike lands. Then check the syntax_errors value and advance.",
+  "primary_mechanic": "Syntax Sweep",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the camel pen from mirage spirits in Bone Valley: keep the syntax_errors meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 51 seconds while syntax_errors > 0.",
+  "lose_condition": "syntax_errors drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Syntax Sweep",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M01-X1-T16-ac55d85f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Survival Siege', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "if x > 3\n    print(x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
+    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while syntax_errors > 0."
+  ]
+}

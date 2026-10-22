@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1836",
+  "game_title": "Shelf Sorter – Ivy Tower Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of carved tiles from smallest to largest.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
+  "core_gameplay_loop": "In Ivy Tower, repeat each round: Use sort() to rearrange shelves of carved tiles from smallest to largest. Each round costs one action, so plan the step so none are wasted. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the sealed archway using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The sealed archway reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the sealed archway is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X3-T18-e96cb97f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Efficiency Trial', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
+    "Step 3: Win by meeting the goal: The sealed archway reached with actions_used <= 19."
+  ]
+}

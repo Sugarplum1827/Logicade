@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0539",
+  "game_title": "Unit Trader – Cinder Cone Camp Race",
+  "game_concept": "A adventure race set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of ore chunks is fair.",
+  "genre": "adventure race",
+  "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Convert units using expressions so each trade of ore chunks is fair. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the fair_trades value and advance.",
+  "primary_mechanic": "Unit Trader",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the cooling vent by solving code steps involving fair_trades that move the fire warden forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "lose_condition": "The rival reaches the cooling vent first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Unit Trader",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M14-X5-T07-1295035e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Rival Race', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 9,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "cm = m * 100",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fair_trades changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
+  ]
+}

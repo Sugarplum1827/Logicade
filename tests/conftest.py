@@ -54,7 +54,8 @@ def make_valid_spec():
         # Weeks 1–8 all include both 'score±n' and 'destroy' in allowed_effects.
         rules = []
         for i in range(n_rules):
-            then = ["score += 1"] if i == 0 else [f"destroy(e{i})"]
+            # A single reachable score effect must meet the fixture's score == 5 win.
+            then = ["score += 5"] if i == 0 else [f"destroy(e{i})"]
             rules.append(
                 {
                     "on": f"{trigger.replace(' ', '_')}(player,e{i})",

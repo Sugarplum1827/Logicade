@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1921",
+  "game_title": "Backpack Append – Crypt Stairs Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Crypt Stairs, stairs to a crypt: the ruin warden must handle ghost knights while practicing lists. Core idea – Backpack Append: Use append and remove to manage the ruin warden's backpack list as ghost knights drop loot.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Crypt Stairs: stairs to a crypt",
+  "core_gameplay_loop": "In Crypt Stairs, repeat each round: Use append and remove to manage the ruin warden's backpack list as ghost knights drop loot. Each round poses one decision; a wrong answer breaks the streak. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about bag_space to power up the ruin warden and open the heart stone.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X4-T09-c7805be2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Streak Challenge', and setting 'Crypt Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 5,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Crypt Stairs.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

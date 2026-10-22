@@ -1,59 +1,113 @@
 import { useState, useEffect } from 'react';
 import MissionTargetModal from './MissionTargetModal';
 
-export default function LevelSelect({ region, onStartLevel, onBack }) {
+export default function LevelSelect({ studentId, region, onStartLevel, onBack }) {
   const [completedLevels, setCompletedLevels] = useState([]);
   const [selectedLevel, setSelectedLevel] = useState(null);
+  const [selectedSpec, setSelectedSpec] = useState(null);
+  const [selectedMeta, setSelectedMeta] = useState(null);
   const [showMissionModal, setShowMissionModal] = useState(false);
+  const [prefetching, setPrefetching] = useState(false);
+
+  const progressKey = `logicade_levels_${studentId}_${region.id}`;
 
   useEffect(() => {
-    const saved = localStorage.getItem(`logicade_levels_${region.id}`);
+    const saved = localStorage.getItem(progressKey);
     setCompletedLevels(saved ? JSON.parse(saved) : []);
-  }, [region.id]);
+  }, [progressKey]);
 
   const levels = Array.from({ length: 10 }, (_, i) => i + 1);
   const isUnlocked = (num) => num === 1 || completedLevels.includes(num - 1);
 
+  const handleSelectLevel = (num) => {
+    setSelectedLevel({ week: num, title: `Stage ${num}`, subtitle: region.subtitle });
+    setSelectedSpec(null);
+    setSelectedMeta(null);
+  };
+
+  const handleStartStage = async () => {
+    if (!selectedLevel || prefetching) return;
+    setPrefetching(true);
+
+    let spec = null;
+    let meta = null;
+    try {
+      const week = selectedLevel.week;
+      const res = await fetch('/serve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          student_id: studentId,
+          week,
+          level: week,
+          difficulty: 'standard',
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        spec = data.spec;
+        meta = data.meta;
+      } else {
+        console.warn('[LevelSelect] /serve failed:', res.status);
+      }
+    } catch (e) {
+      console.warn('[LevelSelect] prefetch failed:', e);
+    }
+
+    setSelectedSpec(spec);
+    setSelectedMeta(meta);
+    setPrefetching(false);
+    setShowMissionModal(true);
+  };
+
   return (
-    <div className="level-select-screen" style={{ backgroundImage: `url('${region.level_bg || '/assets/subjects/library_bg.png'}')` }}>
-      
+    <div
+      className="level-select-screen"
+      style={{
+        backgroundImage: `url('${region.level_bg || '/assets/subjects/library_bg.png'}')`,
+      }}
+    >
       {showMissionModal && selectedLevel && (
-        <MissionTargetModal 
-          spec={null} // ⭐ Pass null so it uses generic text
-          onStart={() => { 
-            setShowMissionModal(false); 
-            onStartLevel(region, selectedLevel.week, null); // ⭐ Pass null spec
+        <MissionTargetModal
+          spec={selectedSpec}
+          onStart={(event) => {
+            setShowMissionModal(false);
+            onStartLevel(region, selectedLevel.week, selectedSpec, selectedMeta, event);
           }}
           onCancel={() => setShowMissionModal(false)}
         />
       )}
 
       <div className="level-header">
-        <button className="btn-back" onClick={onBack}>← BACK TO MAP</button>
+        <button className="btn-back" onClick={onBack}>
+          ← BACK TO MAP
+        </button>
         <div className="level-header-info">
           <h1>{region.title}</h1>
           <p>{region.subtitle}</p>
         </div>
-        <div style={{ width: '150px' }}></div>
+        <div style={{ width: '150px' }} />
       </div>
 
       <div className="level-layout">
         <div className="levels-container">
           <div className="levels-grid">
-            {levels.map(num => {
+            {levels.map((num) => {
               const unlocked = isUnlocked(num);
               const completed = completedLevels.includes(num);
-              const mockLevelData = { week: num, title: `Stage ${num}`, subtitle: region.subtitle };
-
               return (
-                <button 
-                  key={num} 
-                  className={`level-node ${unlocked ? 'unlocked' : 'locked'} ${completed ? 'completed' : ''} ${selectedLevel?.week === num ? 'selected' : ''}`}
-                  onClick={() => unlocked && setSelectedLevel(mockLevelData)}
+                <button
+                  key={num}
+                  className={`level-node ${unlocked ? 'unlocked' : 'locked'} ${
+                    completed ? 'completed' : ''
+                  } ${selectedLevel?.week === num ? 'selected' : ''}`}
+                  onClick={() => unlocked && handleSelectLevel(num)}
                   disabled={!unlocked}
                 >
                   <div className="level-badge">LVL {num}</div>
-                  <div className="level-icon">{completed ? '⭐' : unlocked ? '▶' : '🔒'}</div>
+                  <div className="level-icon">
+                    {completed ? '⭐' : unlocked ? '▶' : '🔒'}
+                  </div>
                 </button>
               );
             })}
@@ -65,7 +119,7 @@ export default function LevelSelect({ region, onStartLevel, onBack }) {
             <>
               <h2>Stage {selectedLevel.week}</h2>
               <p className="detail-desc">{region.desc}</p>
-              
+
               <div className="detail-section">
                 <h4>Objective</h4>
                 <ul>
@@ -82,11 +136,12 @@ export default function LevelSelect({ region, onStartLevel, onBack }) {
                 </div>
               </div>
 
-              <button 
-                className="btn-start-stage" 
-                onClick={() => setShowMissionModal(true)}
+              <button
+                className="btn-start-stage"
+                onClick={handleStartStage}
+                disabled={prefetching}
               >
-                START STAGE
+                {prefetching ? 'LOADING…' : 'START STAGE'}
               </button>
             </>
           ) : (

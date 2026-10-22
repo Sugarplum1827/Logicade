@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2100",
+  "game_title": "Mutation Mystery – Ivy Tower Rush",
+  "game_concept": "A speed quiz set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
+  "genre": "speed quiz",
+  "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
+  "core_gameplay_loop": "In Ivy Tower, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round, a new carved tiles challenge appears; solve it to bank points before time drains. Then check the mutation_safe value and advance.",
+  "primary_mechanic": "Mutation Mystery",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 600 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 600 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 600, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Mutation Mystery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M15-X2-T18-337bf7c7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Resource Rush', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "b = a.copy()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
+    "Step 3: Win by meeting the goal: score >= 600 within 46 seconds."
+  ]
+}

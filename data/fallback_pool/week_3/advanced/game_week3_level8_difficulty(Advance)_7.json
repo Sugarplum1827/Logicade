@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0837",
+  "game_title": "Branching Tale – Island Ferry Streak",
+  "game_concept": "A card battler set in Coastal Port – Island Ferry, the island ferry landing: the sailor must handle kraken tentacles while practicing conditionals (if / elif / else). Core idea – Branching Tale: Make story choices that run different if/elif branches toward different endings.",
+  "genre": "card battler",
+  "theme": "Coastal Port – Island Ferry: the island ferry landing",
+  "core_gameplay_loop": "In Island Ferry, repeat each round: Make story choices that run different if/elif branches toward different endings. Each round poses one decision; a wrong answer breaks the streak. Then check the story_trust value and advance.",
+  "primary_mechanic": "Branching Tale",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about story_trust to power up the sailor and open the ferry.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Branching Tale",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M12-X4-T13-1ffa0267",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Branching Tale' (Week 3 slot 12), mission type 'Streak Challenge', and setting 'Island Ferry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 8,
+  "trial": 7,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if trust > 5:\n    ending = 'ally'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how story_trust changes.",
+    "Step 2: Use the controls to apply the code idea against kraken tentacles in Island Ferry.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1812",
+  "game_title": "Duplicate Sweep – Ivy Tower Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of carved tiles while keeping the order.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
+  "core_gameplay_loop": "In Ivy Tower, repeat each round: Remove repeated items from a list of carved tiles while keeping the order. Each round poses one decision; a wrong answer breaks the streak. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about clean_list to power up the spirit seeker and open the sealed archway.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X4-T18-42fd7fae",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Streak Challenge', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1794",
+  "game_title": "Docstring Detective – Furrier Lane Streak",
+  "game_concept": "A card battler set in Snowy Hold – Furrier Lane, a lane of furriers: the sled courier must handle icicle bats while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "card battler",
+  "theme": "Snowy Hold – Furrier Lane: a lane of furriers",
+  "core_gameplay_loop": "In Furrier Lane, repeat each round: Read docstrings to pick the right function for each case. Each round poses one decision; a wrong answer breaks the streak. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Chain 14 consecutive correct decisions about cases to power up the sled courier and open the ice mill.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 14.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X4-T16-944552e4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Streak Challenge', and setting 'Furrier Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 4,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against icicle bats in Furrier Lane.",
+    "Step 3: Win by meeting the goal: streak counter reaches 14."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1406",
+  "game_title": "Max Finder Derby – Canopy Walkway Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Canopy Walkway, rope walkways in the canopy: the fairy gardener must handle bramble beasts while practicing control flow: for loops. Core idea – Max Finder Derby: Track the biggest value seen so far while looping over contestants.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Canopy Walkway: rope walkways in the canopy",
+  "core_gameplay_loop": "In Canopy Walkway, repeat each round: Track the biggest value seen so far while looping over contestants. Each round poses one decision; a wrong answer breaks the streak. Then check the best value and advance.",
+  "primary_mechanic": "Max Finder Derby",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about best to power up the fairy gardener and open the vine bridge.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Max Finder Derby",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M11-X4-T04-8f862496",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Max Finder Derby' (Week 5 slot 11), mission type 'Streak Challenge', and setting 'Canopy Walkway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "best = 0\nfor x in scores:\n    if x > best:\n        best = x",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how best changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Canopy Walkway.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

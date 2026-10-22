@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0567",
+  "game_title": "Compound Combo – Eruption Watch Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
+  "core_gameplay_loop": "In Eruption Watch, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round, ash wraiths strike the lava bridge, so respond before the next strike lands. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the lava bridge from ash wraiths in Eruption Watch: keep the energy meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 43 seconds while energy > 0.",
+  "lose_condition": "energy drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X1-T15-0da44249",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Survival Siege', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 7,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
+    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while energy > 0."
+  ]
+}

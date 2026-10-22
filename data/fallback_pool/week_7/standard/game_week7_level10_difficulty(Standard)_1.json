@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2081",
+  "game_title": "Comprehension Lab – Crypt Stairs Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Crypt Stairs, stairs to a crypt: the ruin warden must handle ghost knights while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform glyph tablets.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Crypt Stairs: stairs to a crypt",
+  "core_gameplay_loop": "In Crypt Stairs, repeat each round: Build new lists in one line with list comprehensions to transform glyph tablets. Each round poses one decision; a wrong answer breaks the streak. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about lab_output to power up the ruin warden and open the heart stone.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X4-T09-b7ea6347",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Streak Challenge', and setting 'Crypt Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Crypt Stairs.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

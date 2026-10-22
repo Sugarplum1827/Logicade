@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1365",
+  "game_title": "Loop Picker – Waterfall Pool Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Waterfall Pool, a pool below a waterfall: the herbalist must handle shadow wolves while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Waterfall Pool: a pool below a waterfall",
+  "core_gameplay_loop": "In Waterfall Pool, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round costs one action, so plan the step so none are wasted. Then check the picks_right value and advance.",
+  "primary_mechanic": "Loop Picker",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the seed vault using at most 17 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The seed vault reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the seed vault is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Loop Picker",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M15-X3-T09-83b6dd76",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Efficiency Trial', and setting 'Waterfall Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(3):  # known count",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how picks_right changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Waterfall Pool.",
+    "Step 3: Win by meeting the goal: The seed vault reached with actions_used <= 17."
+  ]
+}

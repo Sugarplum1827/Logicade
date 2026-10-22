@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2684",
+  "game_title": "Validation Fortress – Dry Well Trial",
+  "game_concept": "A logic puzzle set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so sand wyrms can't sneak through.",
+  "genre": "logic puzzle",
+  "theme": "Sand Dunes – Dry Well: a nearly dry well",
+  "core_gameplay_loop": "In Dry Well, repeat each round: Write input checks that reject bad data so sand wyrms can't sneak through. Each round costs one action, so plan the step so none are wasted. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the supply tent using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The supply tent reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the supply tent is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X3-T10-df0e678e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Efficiency Trial', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
+    "Step 3: Win by meeting the goal: The supply tent reached with actions_used <= 19."
+  ]
+}

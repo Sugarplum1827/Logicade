@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2386",
+  "game_title": "Letter Lock – Peak Beacon Race",
+  "game_concept": "A racing platformer set in Frost Peaks – Peak Beacon, the beacon on the peak: the sherpa guide must handle ice hawks while practicing strings & dictionaries. Core idea – Letter Lock: Use string indexing to pull the right letter and crack the lock on the radio mast.",
+  "genre": "racing platformer",
+  "theme": "Frost Peaks – Peak Beacon: the beacon on the peak",
+  "core_gameplay_loop": "In Peak Beacon, repeat each round: Use string indexing to pull the right letter and crack the lock on the radio mast. Each round the rival advances, and solving the step moves the sherpa guide ahead. Then check the lock_letters value and advance.",
+  "primary_mechanic": "Letter Lock",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the radio mast by solving code steps involving lock_letters that move the sherpa guide forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the radio mast first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Letter Lock",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M01-X5-T20-0dba8d8b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Letter Lock' (Week 8 slot 1), mission type 'Rival Race', and setting 'Peak Beacon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word[0]\nword[-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_letters changes.",
+    "Step 2: Use the controls to apply the code idea against ice hawks in Peak Beacon.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

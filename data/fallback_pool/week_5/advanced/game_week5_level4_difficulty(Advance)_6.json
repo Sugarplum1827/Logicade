@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1316",
+  "game_title": "Max Finder Derby – Herbalist Hut Trial",
+  "game_concept": "A logic puzzle set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Max Finder Derby: Track the biggest value seen so far while looping over contestants.",
+  "genre": "logic puzzle",
+  "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
+  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Track the biggest value seen so far while looping over contestants. Each round costs one action, so plan the step so none are wasted. Then check the best value and advance.",
+  "primary_mechanic": "Max Finder Derby",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the root gate using at most 12 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The root gate reached with actions_used <= 12.",
+  "lose_condition": "actions_used exceeds 12 before the root gate is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Max Finder Derby",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M11-X3-T18-f8a92812",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Max Finder Derby' (Week 5 slot 11), mission type 'Efficiency Trial', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "best = 0\nfor x in scores:\n    if x > best:\n        best = x",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how best changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
+    "Step 3: Win by meeting the goal: The root gate reached with actions_used <= 12."
+  ]
+}

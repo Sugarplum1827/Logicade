@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1179",
+  "game_title": "Loop Counter Conveyor – Ore Vein Depths Trial",
+  "game_concept": "A programming puzzle set in Shadow Cave – Ore Vein Depths, a rich ore vein: the cave miner must handle shadow wraiths while practicing control flow: while loops. Core idea – Loop Counter Conveyor: Count conveyor passes with a loop counter so exactly N items get processed.",
+  "genre": "programming puzzle",
+  "theme": "Shadow Cave – Ore Vein Depths: a rich ore vein",
+  "core_gameplay_loop": "In Ore Vein Depths, repeat each round: Count conveyor passes with a loop counter so exactly N items get processed. Each round costs one action, so plan the step so none are wasted. Then check the belt_count value and advance.",
+  "primary_mechanic": "Loop Counter Conveyor",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the cave gate using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The cave gate reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the cave gate is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 10 (extended tier): Loop Counter Conveyor",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M09-X3-T15-6ae73179",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Counter Conveyor' (Week 4 slot 9), mission type 'Efficiency Trial', and setting 'Ore Vein Depths'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 10,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 5:\n    i += 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how belt_count changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wraiths in Ore Vein Depths.",
+    "Step 3: Win by meeting the goal: The cave gate reached with actions_used <= 23."
+  ]
+}

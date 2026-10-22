@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1408",
+  "game_title": "Off By One Fixer – Herbalist Hut Race",
+  "game_concept": "A racing platformer set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
+  "genre": "racing platformer",
+  "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
+  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Fix range boundaries that skip or overshoot by one. Each round the rival advances, and solving the step moves the beast tamer ahead. Then check the fixes value and advance.",
+  "primary_mechanic": "Off By One Fixer",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the root gate by solving code steps involving fixes that move the beast tamer forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the root gate first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Off By One Fixer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M13-X5-T18-a80d1986",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Rival Race', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, n):  # misses n",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fixes changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1113",
+  "game_title": "Stamina Climb – Hidden Spring Defense",
+  "game_concept": "A action defense set in Shadow Cave – Hidden Spring, a hidden spring: the cave miner must handle giant bats while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
+  "genre": "action defense",
+  "theme": "Shadow Cave – Hidden Spring: a hidden spring",
+  "core_gameplay_loop": "In Hidden Spring, repeat each round: Keep climbing while stamina > 0, deciding when to rest inside the loop. Each round, giant bats strike the ore lift, so respond before the next strike lands. Then check the stamina value and advance.",
+  "primary_mechanic": "Stamina Climb",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the ore lift from giant bats in Hidden Spring: keep the stamina meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 71 seconds while stamina > 0.",
+  "lose_condition": "stamina drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Stamina Climb",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M03-X1-T09-fc7bd33f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Survival Siege', and setting 'Hidden Spring'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while stamina > 0:\n    climb()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stamina changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Hidden Spring.",
+    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while stamina > 0."
+  ]
+}

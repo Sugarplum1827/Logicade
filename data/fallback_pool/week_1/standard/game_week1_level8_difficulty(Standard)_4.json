@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0224",
+  "game_title": "Trace Table Race – Watchtower Ring Streak",
+  "game_concept": "A rhythm puzzle set in The Kingdom – Watchtower Ring, towers along the town wall: the herald must handle bandits while practicing variables & assignment. Core idea – Trace Table Race: Fill a trace table showing each variable after every line of a mini program.",
+  "genre": "rhythm puzzle",
+  "theme": "The Kingdom – Watchtower Ring: towers along the town wall",
+  "core_gameplay_loop": "In Watchtower Ring, repeat each round: Fill a trace table showing each variable after every line of a mini program. Each round poses one decision; a wrong answer breaks the streak. Then check the trace_rows_correct value and advance.",
+  "primary_mechanic": "Trace Table Race",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about trace_rows_correct to power up the herald and open the town gate.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Trace Table Race",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M14-X4-T06-008774f5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Trace Table Race' (Week 1 slot 14), mission type 'Streak Challenge', and setting 'Watchtower Ring'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 8,
+  "trial": 4,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "a = 2\na = a + 3\nb = a * 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_rows_correct changes.",
+    "Step 2: Use the controls to apply the code idea against bandits in Watchtower Ring.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

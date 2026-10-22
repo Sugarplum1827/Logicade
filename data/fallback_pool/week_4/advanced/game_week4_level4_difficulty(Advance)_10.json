@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1020",
+  "game_title": "Nested While Dungeon – Mushroom Cavern Race",
+  "game_concept": "A strategy race set in Shadow Cave – Mushroom Cavern, a cavern of glowing mushrooms: the dwarf scout must handle zombies while practicing control flow: while loops. Core idea – Nested While Dungeon: Run an inner loop for each room inside an outer loop for each floor.",
+  "genre": "strategy race",
+  "theme": "Shadow Cave – Mushroom Cavern: a cavern of glowing mushrooms",
+  "core_gameplay_loop": "In Mushroom Cavern, repeat each round: Run an inner loop for each room inside an outer loop for each floor. Each round the rival advances, and solving the step moves the dwarf scout ahead. Then check the dungeon_clear value and advance.",
+  "primary_mechanic": "Nested While Dungeon",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving dungeon_clear that move the dwarf scout forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 4 (applied tier): Nested While Dungeon",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M15-X5-T06-b759a4c3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested While Dungeon' (Week 4 slot 15), mission type 'Rival Race', and setting 'Mushroom Cavern'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 4,
+  "trial": 10,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how dungeon_clear changes.",
+    "Step 2: Use the controls to apply the code idea against zombies in Mushroom Cavern.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

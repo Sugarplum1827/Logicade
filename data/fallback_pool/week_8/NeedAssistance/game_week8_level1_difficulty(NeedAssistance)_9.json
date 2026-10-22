@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2109",
+  "game_title": "Frequency Bazaar – Sherpa Bridge Race",
+  "game_concept": "A strategy race set in Frost Peaks – Sherpa Bridge, a bridge of fixed ropes: the ice axe ranger must handle yetis while practicing strings & dictionaries. Core idea – Frequency Bazaar: Count how often each item appears using a dictionary.",
+  "genre": "strategy race",
+  "theme": "Frost Peaks – Sherpa Bridge: a bridge of fixed ropes",
+  "core_gameplay_loop": "In Sherpa Bridge, repeat each round: Count how often each item appears using a dictionary. Each round the rival advances, and solving the step moves the ice axe ranger ahead. Then check the tally value and advance.",
+  "primary_mechanic": "Frequency Bazaar",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving tally that move the ice axe ranger forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Frequency Bazaar",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M09-X5-T17-2884f36c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Frequency Bazaar' (Week 8 slot 9), mission type 'Rival Race', and setting 'Sherpa Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "count[x] = count.get(x, 0) + 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tally changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Sherpa Bridge.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
+  ]
+}

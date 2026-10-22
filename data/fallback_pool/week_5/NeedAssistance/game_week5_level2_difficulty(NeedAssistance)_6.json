@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1236",
+  "game_title": "Times Table Garden – Herbalist Hut Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of vine ropes using nested for loops for rows and columns.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
+  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Plant a grid of vine ropes using nested for loops for rows and columns. Each round costs one action, so plan the step so none are wasted. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the root gate using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The root gate reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the root gate is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X3-T18-b64ebbfe",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Efficiency Trial', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 2,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
+    "Step 3: Win by meeting the goal: The root gate reached with actions_used <= 19."
+  ]
+}

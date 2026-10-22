@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2530",
+  "game_title": "Code Reading Relay – Palm Grove Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Palm Grove, a palm grove: the camel trader must handle dust devils while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "core_gameplay_loop": "In Palm Grove, repeat each round: Read short programs as a relay and predict their output line by line. Each round, dust devils strike the oasis, so respond before the next strike lands. Then check the predicted value and advance.",
+  "primary_mechanic": "Code Reading Relay",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the oasis from dust devils in Palm Grove: keep the predicted meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 59 seconds while predicted > 0.",
+  "lose_condition": "predicted drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Code Reading Relay",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M10-X1-T12-421664af",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Survival Siege', and setting 'Palm Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 5,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(3):\n    print(i)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predicted changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Palm Grove.",
+    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while predicted > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1332",
+  "game_title": "Iteration Tracer – Firefly Meadow Rush",
+  "game_concept": "A speed quiz set in Mystic Forest – Firefly Meadow, a meadow of fireflies: the beast tamer must handle thorn goblins while practicing control flow: for loops. Core idea – Iteration Tracer: Predict how many times a loop body runs before the clock stops.",
+  "genre": "speed quiz",
+  "theme": "Mystic Forest – Firefly Meadow: a meadow of fireflies",
+  "core_gameplay_loop": "In Firefly Meadow, repeat each round: Predict how many times a loop body runs before the clock stops. Each round, a new acorns challenge appears; solve it to bank points before time drains. Then check the trace_score value and advance.",
+  "primary_mechanic": "Iteration Tracer",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 260 points of acorns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 260 within 42 seconds.",
+  "lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Iteration Tracer",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M12-X2-T06-9ab07612",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Iteration Tracer' (Week 5 slot 12), mission type 'Resource Rush', and setting 'Firefly Meadow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 9, 3):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 42,
+    "target_score": 260,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_score changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Firefly Meadow.",
+    "Step 3: Win by meeting the goal: score >= 260 within 42 seconds."
+  ]
+}

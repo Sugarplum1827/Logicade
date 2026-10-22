@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0765",
+  "game_title": "Patrol Decision Tree – Customs House Trial",
+  "game_concept": "A programming puzzle set in Coastal Port – Customs House, the port customs house: the shipwright must handle rogue crabs while practicing conditionals (if / elif / else). Core idea – Patrol Decision Tree: Program a guard-evasion decision tree using nested conditions.",
+  "genre": "programming puzzle",
+  "theme": "Coastal Port – Customs House: the port customs house",
+  "core_gameplay_loop": "In Customs House, repeat each round: Program a guard-evasion decision tree using nested conditions. Each round costs one action, so plan the step so none are wasted. Then check the cover value and advance.",
+  "primary_mechanic": "Patrol Decision Tree",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the harbor bell using at most 17 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The harbor bell reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the harbor bell is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 6 (applied tier): Patrol Decision Tree",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M15-X3-T09-c0f45b74",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Patrol Decision Tree' (Week 3 slot 15), mission type 'Efficiency Trial', and setting 'Customs House'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 6,
+  "trial": 5,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if guard_near:\n    hide()\nelse:\n    sneak()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cover changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crabs in Customs House.",
+    "Step 3: Win by meeting the goal: The harbor bell reached with actions_used <= 17."
+  ]
+}

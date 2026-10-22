@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0327",
+  "game_title": "Compound Combo – Vent Garden Race",
+  "game_concept": "A strategy race set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "strategy race",
+  "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
+  "core_gameplay_loop": "In Vent Garden, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the ash barrier by solving code steps involving energy that move the fire warden forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the ash barrier first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X5-T19-fdb1f4c2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Rival Race', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 7,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

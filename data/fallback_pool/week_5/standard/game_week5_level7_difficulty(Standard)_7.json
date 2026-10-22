@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1397",
+  "game_title": "Volley Counter – Glowing Heartwood Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Glowing Heartwood, the glowing ancient tree: the forest ranger must handle shadow wolves while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming shadow wolves.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Glowing Heartwood: the glowing ancient tree",
+  "core_gameplay_loop": "In Glowing Heartwood, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming shadow wolves. Each round, a new glowing seeds challenge appears; solve it to bank points before time drains. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 340 points of glowing seeds by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 48 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X2-T01-2eb89929",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Resource Rush', and setting 'Glowing Heartwood'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Glowing Heartwood.",
+    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
+  ]
+}

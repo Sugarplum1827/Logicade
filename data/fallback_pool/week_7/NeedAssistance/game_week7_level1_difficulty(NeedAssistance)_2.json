@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1802",
+  "game_title": "Index Archery – Cracked Obelisk Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
+  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round poses one decision; a wrong answer breaks the streak. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 5 consecutive correct decisions about arrows to power up the rune scholar and open the sealed archway.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 5.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X4-T08-b8803d04",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Streak Challenge', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 1,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
+    "Step 3: Win by meeting the goal: streak counter reaches 5."
+  ]
+}

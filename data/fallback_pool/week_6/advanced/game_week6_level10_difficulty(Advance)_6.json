@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1796",
+  "game_title": "Countdown Recursion – Chimney Roofs Race",
+  "game_concept": "A adventure race set in Snowy Hold – Chimney Roofs, snowy chimney rooftops: the sled courier must handle blizzard sprites while practicing functions. Core idea – Countdown Recursion: Use a simple self-calling function to count down to a base case.",
+  "genre": "adventure race",
+  "theme": "Snowy Hold – Chimney Roofs: snowy chimney rooftops",
+  "core_gameplay_loop": "In Chimney Roofs, repeat each round: Use a simple self-calling function to count down to a base case. Each round the rival advances, and solving the step moves the sled courier ahead. Then check the base_case value and advance.",
+  "primary_mechanic": "Countdown Recursion",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Beat a rival AI to the larder door by solving code steps involving base_case that move the sled courier forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "lose_condition": "The rival reaches the larder door first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Countdown Recursion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M11-X5-T10-065fe1b0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Recursion' (Week 6 slot 11), mission type 'Rival Race', and setting 'Chimney Roofs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 6,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def down(n):\n    if n == 0:\n        return\n    down(n - 1)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how base_case changes.",
+    "Step 2: Use the controls to apply the code idea against blizzard sprites in Chimney Roofs.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
+  ]
+}

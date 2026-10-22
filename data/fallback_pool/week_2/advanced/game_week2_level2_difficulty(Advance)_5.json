@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0355",
+  "game_title": "Input Interpreter – Cinder Cone Camp Defense",
+  "game_concept": "A tower defense set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
+  "genre": "tower defense",
+  "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round, ash wraiths strike the cooling vent, so respond before the next strike lands. Then check the trust value and advance.",
+  "primary_mechanic": "Input Interpreter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the cooling vent from ash wraiths in Cinder Cone Camp: keep the trust meter above zero by applying the concept correctly until the 26-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 26 seconds while trust > 0.",
+  "lose_condition": "trust drops to 0, or lives reach 0, before the 26-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Input Interpreter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M10-X1-T07-4c0b6ef8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Survival Siege', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "age = int(input())",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trust changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
+    "Step 3: Win by meeting the goal: Timer reaches 26 seconds while trust > 0."
+  ]
+}

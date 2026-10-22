@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0936",
+  "game_title": "Accumulator Pump – Dragon Hoard Cave Trial",
+  "game_concept": "A programming puzzle set in Shadow Cave – Dragon Hoard Cave, a hoard-filled cave: the dwarf scout must handle rock golems while practicing control flow: while loops. Core idea – Accumulator Pump: Add values each pass until the running total reaches the goal.",
+  "genre": "programming puzzle",
+  "theme": "Shadow Cave – Dragon Hoard Cave: a hoard-filled cave",
+  "core_gameplay_loop": "In Dragon Hoard Cave, repeat each round: Add values each pass until the running total reaches the goal. Each round costs one action, so plan the step so none are wasted. Then check the total value and advance.",
+  "primary_mechanic": "Accumulator Pump",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the crystal door using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The crystal door reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the crystal door is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Accumulator Pump",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M06-X3-T18-c87054ab",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Accumulator Pump' (Week 4 slot 6), mission type 'Efficiency Trial', and setting 'Dragon Hoard Cave'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while total < goal:\n    total += step",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Dragon Hoard Cave.",
+    "Step 3: Win by meeting the goal: The crystal door reached with actions_used <= 19."
+  ]
+}

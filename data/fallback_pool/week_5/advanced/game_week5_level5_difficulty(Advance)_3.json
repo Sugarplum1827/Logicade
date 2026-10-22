@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1343",
+  "game_title": "Reverse Countdown – Misty Bog Defense",
+  "game_concept": "A survival strategy set in Mystic Forest – Misty Bog, a misty bog: the forest ranger must handle bog toads while practicing control flow: for loops. Core idea – Reverse Countdown: Count backward with range(10, 0, -1) to time perfect launches.",
+  "genre": "survival strategy",
+  "theme": "Mystic Forest – Misty Bog: a misty bog",
+  "core_gameplay_loop": "In Misty Bog, repeat each round: Count backward with range(10, 0, -1) to time perfect launches. Each round, bog toads strike the seed vault, so respond before the next strike lands. Then check the launch_timing value and advance.",
+  "primary_mechanic": "Reverse Countdown",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the seed vault from bog toads in Misty Bog: keep the launch_timing meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while launch_timing > 0.",
+  "lose_condition": "launch_timing drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Reverse Countdown",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M08-X1-T19-31b0b0f6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Countdown' (Week 5 slot 8), mission type 'Survival Siege', and setting 'Misty Bog'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(10, 0, -1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how launch_timing changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Misty Bog.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while launch_timing > 0."
+  ]
+}

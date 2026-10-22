@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1314",
+  "game_title": "Roll Call Enumerate – Canopy Walkway Rush",
+  "game_concept": "A speed quiz set in Mystic Forest – Canopy Walkway, rope walkways in the canopy: the fairy gardener must handle bramble beasts while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "speed quiz",
+  "theme": "Mystic Forest – Canopy Walkway: rope walkways in the canopy",
+  "core_gameplay_loop": "In Canopy Walkway, repeat each round: Use enumerate to call out each position and name in a roll call. Each round, a new healing herbs challenge appears; solve it to bank points before time drains. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 290 points of healing herbs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 290 within 31 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X2-T04-966d27ce",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Resource Rush', and setting 'Canopy Walkway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Canopy Walkway.",
+    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
+  ]
+}

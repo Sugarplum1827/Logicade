@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1485",
+  "game_title": "Loop Picker – Stump Court Defense",
+  "game_concept": "A action defense set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Stump Court: a court around a giant stump",
+  "core_gameplay_loop": "In Stump Court, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round, shadow wolves strike the herb garden, so respond before the next strike lands. Then check the picks_right value and advance.",
+  "primary_mechanic": "Loop Picker",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the herb garden from shadow wolves in Stump Court: keep the picks_right meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 57 seconds while picks_right > 0.",
+  "lose_condition": "picks_right drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Loop Picker",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M15-X1-T17-d945c2d1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Survival Siege', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(3):  # known count",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how picks_right changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
+    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while picks_right > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2566",
+  "game_title": "Syntax Sweep – Palm Grove Rush",
+  "game_concept": "A arcade set in Sand Dunes – Palm Grove, a palm grove: the camel trader must handle dust devils while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
+  "genre": "arcade",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "core_gameplay_loop": "In Palm Grove, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round, a new dates challenge appears; solve it to bank points before time drains. Then check the syntax_errors value and advance.",
+  "primary_mechanic": "Syntax Sweep",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 300 points of dates by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 300 within 45 seconds.",
+  "lose_condition": "Timer hits 0 with score < 300, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Syntax Sweep",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M01-X2-T12-afb676e1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Resource Rush', and setting 'Palm Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "if x > 3\n    print(x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Palm Grove.",
+    "Step 3: Win by meeting the goal: score >= 300 within 45 seconds."
+  ]
+}

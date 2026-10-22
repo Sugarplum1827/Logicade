@@ -1,4 +1,4 @@
-export default function HintConfirmModal({ cost, coins, hintText, onConfirm, onCancel }) {
+export default function HintConfirmModal({ cost, coins, onConfirm, onCancel }) {
   const canAfford = coins >= cost;
 
   return (

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0001",
+  "game_title": "Variable Crates – Castle Gatehouse Defense",
+  "game_concept": "A tower defense set in The Kingdom – Castle Gatehouse, the fortified castle gatehouse: the knight must handle goblin raiders while practicing variables & assignment. Core idea – Variable Crates: Drag collected grain sacks into labelled variable crates, then read each crate's value to feed the royal vault.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Castle Gatehouse: the fortified castle gatehouse",
+  "core_gameplay_loop": "In Castle Gatehouse, repeat each round: Drag collected grain sacks into labelled variable crates, then read each crate's value to feed the royal vault. Each round, goblin raiders strike the royal vault, so respond before the next strike lands. Then check the crate_b value and advance.",
+  "primary_mechanic": "Variable Crates",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the royal vault from goblin raiders in Castle Gatehouse: keep the crate_b meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while crate_b > 0.",
+  "lose_condition": "crate_b drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Variable Crates",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M01-X1-T01-66803a79",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Variable Crates' (Week 1 slot 1), mission type 'Survival Siege', and setting 'Castle Gatehouse'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 1,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "crate_a = 5\ncrate_b = crate_a + 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how crate_b changes.",
+    "Step 2: Use the controls to apply the code idea against goblin raiders in Castle Gatehouse.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while crate_b > 0."
+  ]
+}

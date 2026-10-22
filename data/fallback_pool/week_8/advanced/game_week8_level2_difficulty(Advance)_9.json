@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2159",
+  "game_title": "Strip And Replace – Rope Line Trial",
+  "game_concept": "A logic puzzle set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Strip And Replace: Clean messy text with strip() and replace() before the scribes read it.",
+  "genre": "logic puzzle",
+  "theme": "Frost Peaks – Rope Line: a long fixed rope line",
+  "core_gameplay_loop": "In Rope Line, repeat each round: Clean messy text with strip() and replace() before the scribes read it. Each round costs one action, so plan the step so none are wasted. Then check the clean_text value and advance.",
+  "primary_mechanic": "Strip And Replace",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the rope bridge using at most 11 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The rope bridge reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the rope bridge is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): Strip And Replace",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M14-X3-T15-e085bf1c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Strip And Replace' (Week 8 slot 14), mission type 'Efficiency Trial', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 2,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "text.strip().replace('_', ' ')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_text changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
+    "Step 3: Win by meeting the goal: The rope bridge reached with actions_used <= 11."
+  ]
+}

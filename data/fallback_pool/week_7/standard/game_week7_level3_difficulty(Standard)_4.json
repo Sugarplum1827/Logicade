@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1874",
+  "game_title": "Stat Market – Spirit Hall Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Spirit Hall, a hall of wandering spirits: the scholar mage must handle crypt crawlers while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Spirit Hall: a hall of wandering spirits",
+  "core_gameplay_loop": "In Spirit Hall, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round poses one decision; a wrong answer breaks the streak. Then check the profit value and advance.",
+  "primary_mechanic": "Stat Market",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about profit to power up the scholar mage and open the ancient lock.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Stat Market",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M14-X4-T16-cf58eb53",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Streak Challenge', and setting 'Spirit Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "max(prices)\nsum(prices)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Spirit Hall.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

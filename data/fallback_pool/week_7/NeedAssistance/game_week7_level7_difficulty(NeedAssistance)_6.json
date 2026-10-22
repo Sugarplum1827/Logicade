@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1986",
+  "game_title": "Shelf Sorter – Cracked Obelisk Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of spirit candles from smallest to largest.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
+  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Use sort() to rearrange shelves of spirit candles from smallest to largest. Each round costs one action, so plan the step so none are wasted. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the sealed archway using at most 21 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The sealed archway reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the sealed archway is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X3-T08-4e0c4628",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Efficiency Trial', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
+    "Step 3: Win by meeting the goal: The sealed archway reached with actions_used <= 21."
+  ]
+}

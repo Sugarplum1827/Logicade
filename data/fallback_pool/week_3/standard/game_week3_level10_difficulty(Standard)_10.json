@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0890",
+  "game_title": "Not Negator – Coral Reef Shallows Rush",
+  "game_concept": "A action puzzle set in Coastal Port – Coral Reef Shallows, reef shallows: the harbor master must handle smugglers while practicing conditionals (if / elif / else). Core idea – Not Negator: Use not to flip alarms and traps so the harbor master slips through safely.",
+  "genre": "action puzzle",
+  "theme": "Coastal Port – Coral Reef Shallows: reef shallows",
+  "core_gameplay_loop": "In Coral Reef Shallows, repeat each round: Use not to flip alarms and traps so the harbor master slips through safely. Each round, a new sea charts challenge appears; solve it to bank points before time drains. Then check the stealth value and advance.",
+  "primary_mechanic": "Not Negator",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 460 points of sea charts by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 460 within 57 seconds.",
+  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 10 (extended tier): Not Negator",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M05-X2-T08-2398a591",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Not Negator' (Week 3 slot 5), mission type 'Resource Rush', and setting 'Coral Reef Shallows'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 10,
+  "trial": 10,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if not alarm_on:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stealth changes.",
+    "Step 2: Use the controls to apply the code idea against smugglers in Coral Reef Shallows.",
+    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
+  ]
+}

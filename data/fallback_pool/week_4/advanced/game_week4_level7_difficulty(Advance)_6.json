@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1106",
+  "game_title": "Continue Gate – Underground River Streak",
+  "game_concept": "A rhythm puzzle set in Shadow Cave – Underground River, a black underground river: the shadow ranger must handle cave spiders while practicing control flow: while loops. Core idea – Continue Gate: Use continue to skip spoiled arrows but keep the loop running.",
+  "genre": "rhythm puzzle",
+  "theme": "Shadow Cave – Underground River: a black underground river",
+  "core_gameplay_loop": "In Underground River, repeat each round: Use continue to skip spoiled arrows but keep the loop running. Each round poses one decision; a wrong answer breaks the streak. Then check the skipped_ok value and advance.",
+  "primary_mechanic": "Continue Gate",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about skipped_ok to power up the shadow ranger and open the rope bridge.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Continue Gate",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M11-X4-T04-2e2c8f18",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Continue Gate' (Week 4 slot 11), mission type 'Streak Challenge', and setting 'Underground River'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how skipped_ok changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Underground River.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

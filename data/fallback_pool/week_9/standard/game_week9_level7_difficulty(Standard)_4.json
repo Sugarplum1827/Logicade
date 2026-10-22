@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2594",
+  "game_title": "Validation Fortress – Cactus Flats Rush",
+  "game_concept": "A action puzzle set in Sand Dunes – Cactus Flats, flats of tall cacti: the sand ranger must handle dust devils while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so dust devils can't sneak through.",
+  "genre": "action puzzle",
+  "theme": "Sand Dunes – Cactus Flats: flats of tall cacti",
+  "core_gameplay_loop": "In Cactus Flats, repeat each round: Write input checks that reject bad data so dust devils can't sneak through. Each round, a new dates challenge appears; solve it to bank points before time drains. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 340 points of dates by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 340 within 48 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X2-T04-451e9381",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Resource Rush', and setting 'Cactus Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Cactus Flats.",
+    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
+  ]
+}

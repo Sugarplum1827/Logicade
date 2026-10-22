@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0696",
+  "game_title": "Nested Maze – Lighthouse Point Rush",
+  "game_concept": "A speed quiz set in Coastal Port – Lighthouse Point, the lighthouse on the point: the harbor master must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Nested Maze: Pick routes through nested if statements that branch inside branches.",
+  "genre": "speed quiz",
+  "theme": "Coastal Port – Lighthouse Point: the lighthouse on the point",
+  "core_gameplay_loop": "In Lighthouse Point, repeat each round: Pick routes through nested if statements that branch inside branches. Each round, a new lanterns challenge appears; solve it to bank points before time drains. Then check the route_score value and advance.",
+  "primary_mechanic": "Nested Maze",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 150 points of lanterns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 150 within 55 seconds.",
+  "lose_condition": "Timer hits 0 with score < 150, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 4 (applied tier): Nested Maze",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M06-X2-T02-c7af74c5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Maze' (Week 3 slot 6), mission type 'Resource Rush', and setting 'Lighthouse Point'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 4,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if door:\n    if key:\n        enter()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how route_score changes.",
+    "Step 2: Use the controls to apply the code idea against rogue waves in Lighthouse Point.",
+    "Step 3: Win by meeting the goal: score >= 150 within 55 seconds."
+  ]
+}

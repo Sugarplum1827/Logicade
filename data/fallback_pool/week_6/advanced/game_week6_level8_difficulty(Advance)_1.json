@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1731",
+  "game_title": "Helper Factory – Firewood Stacks Defense",
+  "game_concept": "A action defense set in Snowy Hold – Firewood Stacks, towering firewood stacks: the frost mage must handle winter bandits while practicing functions. Core idea – Helper Factory: Refactor repeated code into helper functions to save time during a rush.",
+  "genre": "action defense",
+  "theme": "Snowy Hold – Firewood Stacks: towering firewood stacks",
+  "core_gameplay_loop": "In Firewood Stacks, repeat each round: Refactor repeated code into helper functions to save time during a rush. Each round, winter bandits strike the frozen well, so respond before the next strike lands. Then check the refactor_score value and advance.",
+  "primary_mechanic": "Helper Factory",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the frozen well from winter bandits in Firewood Stacks: keep the refactor_score meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 41 seconds while refactor_score > 0.",
+  "lose_condition": "refactor_score drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Helper Factory",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M06-X1-T11-2434cc8f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Helper Factory' (Week 6 slot 6), mission type 'Survival Siege', and setting 'Firewood Stacks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def helper():\n    ...",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how refactor_score changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Firewood Stacks.",
+    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while refactor_score > 0."
+  ]
+}

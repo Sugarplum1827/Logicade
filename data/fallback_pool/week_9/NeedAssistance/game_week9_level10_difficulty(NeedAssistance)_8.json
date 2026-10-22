@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2678",
+  "game_title": "Refactor Rescue – Scorpion Canyon Race",
+  "game_concept": "A adventure race set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
+  "genre": "adventure race",
+  "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
+  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Clean up messy duplicated code into tidy functions without changing its behavior. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the clean_score value and advance.",
+  "primary_mechanic": "Refactor Rescue",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the water well by solving code steps involving clean_score that move the desert nomad forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the water well first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Refactor Rescue",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M08-X5-T08-abd12809",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Refactor Rescue' (Week 9 slot 8), mission type 'Rival Race', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 8,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "def f():\n    ...",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_score changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2506",
+  "game_title": "Syntax Sweep – Scorpion Canyon Trial",
+  "game_concept": "A puzzle set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
+  "genre": "puzzle",
+  "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
+  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round costs one action, so plan the step so none are wasted. Then check the syntax_errors value and advance.",
+  "primary_mechanic": "Syntax Sweep",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the water well using at most 16 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The water well reached with actions_used <= 16.",
+  "lose_condition": "actions_used exceeds 16 before the water well is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Syntax Sweep",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M01-X3-T08-76711593",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Efficiency Trial', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "if x > 3\n    print(x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
+    "Step 3: Win by meeting the goal: The water well reached with actions_used <= 16."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2051",
+  "game_title": "Comprehension Lab – Echoing Courtyard Rush",
+  "game_concept": "A action puzzle set in Eldritch Ruins – Echoing Courtyard, an echoing courtyard: the relic hunter must handle eldritch shades while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform rune stones.",
+  "genre": "action puzzle",
+  "theme": "Eldritch Ruins – Echoing Courtyard: an echoing courtyard",
+  "core_gameplay_loop": "In Echoing Courtyard, repeat each round: Build new lists in one line with list comprehensions to transform rune stones. Each round, a new rune stones challenge appears; solve it to bank points before time drains. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 420 points of rune stones by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X2-T07-31fb6d36",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Resource Rush', and setting 'Echoing Courtyard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Echoing Courtyard.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

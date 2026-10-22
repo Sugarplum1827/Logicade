@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2385",
+  "game_title": "Cipher Decoder – Sherpa Bridge Defense",
+  "game_concept": "A action defense set in Frost Peaks – Sherpa Bridge, a bridge of fixed ropes: the ice axe ranger must handle yetis while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
+  "genre": "action defense",
+  "theme": "Frost Peaks – Sherpa Bridge: a bridge of fixed ropes",
+  "core_gameplay_loop": "In Sherpa Bridge, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round, yetis strike the supply cache, so respond before the next strike lands. Then check the decoded value and advance.",
+  "primary_mechanic": "Cipher Decoder",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the supply cache from yetis in Sherpa Bridge: keep the decoded meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 57 seconds while decoded > 0.",
+  "lose_condition": "decoded drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Cipher Decoder",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M15-X1-T17-f5a409cc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Survival Siege', and setting 'Sherpa Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "chr(ord('a') + 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how decoded changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Sherpa Bridge.",
+    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while decoded > 0."
+  ]
+}

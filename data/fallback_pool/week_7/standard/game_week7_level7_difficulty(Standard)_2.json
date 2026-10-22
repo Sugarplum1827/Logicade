@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1992",
+  "game_title": "Duplicate Sweep – Whisper Stones Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of carved tiles while keeping the order.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
+  "core_gameplay_loop": "In Whisper Stones, repeat each round: Remove repeated items from a list of carved tiles while keeping the order. Each round, vine horrors strike the crypt seal, so respond before the next strike lands. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the crypt seal from vine horrors in Whisper Stones: keep the clean_list meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 48 seconds while clean_list > 0.",
+  "lose_condition": "clean_list drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X1-T10-1d99c4f7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Survival Siege', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while clean_list > 0."
+  ]
+}

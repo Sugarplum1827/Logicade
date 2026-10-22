@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2059",
+  "game_title": "Queue Line – Moonstone Terrace Rush",
+  "game_concept": "A arcade set in Eldritch Ruins – Moonstone Terrace, a terrace of moonstone: the relic hunter must handle echo phantoms while practicing lists. Core idea – Queue Line: Serve a queue of visitors with pop(0) in first-come order.",
+  "genre": "arcade",
+  "theme": "Eldritch Ruins – Moonstone Terrace: a terrace of moonstone",
+  "core_gameplay_loop": "In Moonstone Terrace, repeat each round: Serve a queue of visitors with pop(0) in first-come order. Each round, a new ancient keys challenge appears; solve it to bank points before time drains. Then check the queue_calm value and advance.",
+  "primary_mechanic": "Queue Line",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 420 points of ancient keys by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Queue Line",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M04-X2-T19-83f530c9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Queue Line' (Week 7 slot 4), mission type 'Resource Rush', and setting 'Moonstone Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 9,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "line.pop(0)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how queue_calm changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Moonstone Terrace.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

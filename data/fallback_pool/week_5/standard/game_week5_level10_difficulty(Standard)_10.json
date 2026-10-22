@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1490",
+  "game_title": "Sum Sprint – Bramble Maze Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Bramble Maze.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
+  "core_gameplay_loop": "In Bramble Maze, repeat each round: Accumulate a total across a loop to pay a toll at Bramble Maze. Each round, a new mana petals challenge appears; solve it to bank points before time drains. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 460 points of mana petals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 460 within 57 seconds.",
+  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X2-T08-77b02ff9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Resource Rush', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
+    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
+  ]
+}

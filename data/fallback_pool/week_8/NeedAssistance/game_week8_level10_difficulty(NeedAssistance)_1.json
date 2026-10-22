@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2371",
+  "game_title": "Letter Lock – Blizzard Saddle Streak",
+  "game_concept": "A quiz RPG set in Frost Peaks – Blizzard Saddle, a saddle between peaks: the mountaineer must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Letter Lock: Use string indexing to pull the right letter and crack the lock on the pass gate.",
+  "genre": "quiz RPG",
+  "theme": "Frost Peaks – Blizzard Saddle: a saddle between peaks",
+  "core_gameplay_loop": "In Blizzard Saddle, repeat each round: Use string indexing to pull the right letter and crack the lock on the pass gate. Each round poses one decision; a wrong answer breaks the streak. Then check the lock_letters value and advance.",
+  "primary_mechanic": "Letter Lock",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about lock_letters to power up the mountaineer and open the pass gate.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Letter Lock",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M01-X4-T19-76138f56",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Letter Lock' (Week 8 slot 1), mission type 'Streak Challenge', and setting 'Blizzard Saddle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 1,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word[0]\nword[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_letters changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Blizzard Saddle.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

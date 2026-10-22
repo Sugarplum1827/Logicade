@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0738",
+  "game_title": "Elif Ladder – Shipyard Slip Defense",
+  "game_concept": "A action defense set in Coastal Port – Shipyard Slip, a shipyard building boats: the fisher must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Elif Ladder: Rank threats with an if/elif/else ladder and send the right response to each.",
+  "genre": "action defense",
+  "theme": "Coastal Port – Shipyard Slip: a shipyard building boats",
+  "core_gameplay_loop": "In Shipyard Slip, repeat each round: Rank threats with an if/elif/else ladder and send the right response to each. Each round, pirate raiders strike the dock crane, so respond before the next strike lands. Then check the threat_level value and advance.",
+  "primary_mechanic": "Elif Ladder",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the dock crane from pirate raiders in Shipyard Slip: keep the threat_level meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 42 seconds while threat_level > 0.",
+  "lose_condition": "threat_level drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 5 (applied tier): Elif Ladder",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M03-X1-T04-d1637e9a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Elif Ladder' (Week 3 slot 3), mission type 'Survival Siege', and setting 'Shipyard Slip'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 5,
+  "trial": 8,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if hp < 20:\n    run()\nelif hp < 60:\n    guard()\nelse:\n    fight()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 42,
+    "target_score": 260,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how threat_level changes.",
+    "Step 2: Use the controls to apply the code idea against pirate raiders in Shipyard Slip.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while threat_level > 0."
+  ]
+}

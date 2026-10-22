@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1086",
+  "game_title": "Accumulator Pump – Echo Chamber Trial",
+  "game_concept": "A programming puzzle set in Shadow Cave – Echo Chamber, a booming echo chamber: the spelunker must handle skeleton miners while practicing control flow: while loops. Core idea – Accumulator Pump: Add values each pass until the running total reaches the goal.",
+  "genre": "programming puzzle",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "core_gameplay_loop": "In Echo Chamber, repeat each round: Add values each pass until the running total reaches the goal. Each round costs one action, so plan the step so none are wasted. Then check the total value and advance.",
+  "primary_mechanic": "Accumulator Pump",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the crystal door using at most 21 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The crystal door reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the crystal door is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Accumulator Pump",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M06-X3-T08-310144e6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Accumulator Pump' (Week 4 slot 6), mission type 'Efficiency Trial', and setting 'Echo Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while total < goal:\n    total += step",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Echo Chamber.",
+    "Step 3: Win by meeting the goal: The crystal door reached with actions_used <= 21."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0300",
+  "game_title": "Uninitialized Hunt – Festival Grounds Rush",
+  "game_concept": "A speed quiz set in The Kingdom – Festival Grounds, the festival grounds: the herald must handle siege rats while practicing variables & assignment. Core idea – Uninitialized Hunt: Find variables used before assignment and fix them before siege rats exploit the gap.",
+  "genre": "speed quiz",
+  "theme": "The Kingdom – Festival Grounds: the festival grounds",
+  "core_gameplay_loop": "In Festival Grounds, repeat each round: Find variables used before assignment and fix them before siege rats exploit the gap. Each round, a new apples challenge appears; solve it to bank points before time drains. Then check the bugs_fixed value and advance.",
+  "primary_mechanic": "Uninitialized Hunt",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 600 points of apples by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 600 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 600, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Uninitialized Hunt",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M15-X2-T18-7218c4f7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Uninitialized Hunt' (Week 1 slot 15), mission type 'Resource Rush', and setting 'Festival Grounds'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "total = total + 5  # bug!",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bugs_fixed changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Festival Grounds.",
+    "Step 3: Win by meeting the goal: score >= 600 within 46 seconds."
+  ]
+}

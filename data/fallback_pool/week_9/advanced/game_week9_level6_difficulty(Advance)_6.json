@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2576",
+  "game_title": "Pseudocode Bridge – Dune Crest Rush",
+  "game_concept": "A action puzzle set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Pseudocode Bridge: Convert plain-language pseudocode into working code steps to cross the gap.",
+  "genre": "action puzzle",
+  "theme": "Sand Dunes – Dune Crest: a high dune crest",
+  "core_gameplay_loop": "In Dune Crest, repeat each round: Convert plain-language pseudocode into working code steps to cross the gap. Each round, a new sand maps challenge appears; solve it to bank points before time drains. Then check the bridge value and advance.",
+  "primary_mechanic": "Pseudocode Bridge",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 390 points of sand maps by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Pseudocode Bridge",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M11-X2-T02-caaa5e8e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pseudocode Bridge' (Week 9 slot 11), mission type 'Resource Rush', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 6,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "# repeat until empty",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bridge changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0235",
+  "game_title": "Copy Cat – Orchard Lane Trial",
+  "game_concept": "A puzzle set in The Kingdom – Orchard Lane, the royal orchard lane: the knight must handle thieves while practicing variables & assignment. Core idea – Copy Cat: Copy one variable into another and predict whether the original changes when thieves strike.",
+  "genre": "puzzle",
+  "theme": "The Kingdom – Orchard Lane: the royal orchard lane",
+  "core_gameplay_loop": "In Orchard Lane, repeat each round: Copy one variable into another and predict whether the original changes when thieves strike. Each round costs one action, so plan the step so none are wasted. Then check the b value and advance.",
+  "primary_mechanic": "Copy Cat",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Reach the royal seal using at most 14 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The royal seal reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the royal seal is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Copy Cat",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M10-X3-T19-ff62a92a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Copy Cat' (Week 1 slot 10), mission type 'Efficiency Trial', and setting 'Orchard Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 8,
+  "trial": 5,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "b = a\na = 9",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how b changes.",
+    "Step 2: Use the controls to apply the code idea against thieves in Orchard Lane.",
+    "Step 3: Win by meeting the goal: The royal seal reached with actions_used <= 14."
+  ]
+}

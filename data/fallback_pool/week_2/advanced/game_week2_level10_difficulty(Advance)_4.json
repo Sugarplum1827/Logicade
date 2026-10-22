@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0594",
+  "game_title": "Parenthesis Puzzle – Charred Forest Streak",
+  "game_concept": "A card battler set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the smelter.",
+  "genre": "card battler",
+  "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
+  "core_gameplay_loop": "In Charred Forest, repeat each round: Place parentheses to make an expression equal the number carved on the smelter. Each round poses one decision; a wrong answer breaks the streak. Then check the puzzle_gap value and advance.",
+  "primary_mechanic": "Parenthesis Puzzle",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Chain 14 consecutive correct decisions about puzzle_gap to power up the ash ranger and open the smelter.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 14.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Parenthesis Puzzle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M09-X4-T16-b27d7585",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Streak Challenge', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 10,
+  "trial": 4,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "(2 + 3) * 4",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
+    "Step 3: Win by meeting the goal: streak counter reaches 14."
+  ]
+}

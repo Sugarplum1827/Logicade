@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2070",
+  "game_title": "Mutation Mystery – Spirit Hall Race",
+  "game_concept": "A strategy race set in Eldritch Ruins – Spirit Hall, a hall of wandering spirits: the scholar mage must handle crypt crawlers while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
+  "genre": "strategy race",
+  "theme": "Eldritch Ruins – Spirit Hall: a hall of wandering spirits",
+  "core_gameplay_loop": "In Spirit Hall, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round the rival advances, and solving the step moves the scholar mage ahead. Then check the mutation_safe value and advance.",
+  "primary_mechanic": "Mutation Mystery",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the ancient lock by solving code steps involving mutation_safe that move the scholar mage forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.2).",
+  "lose_condition": "The rival reaches the ancient lock first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Mutation Mystery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M15-X5-T16-0470a1b7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Rival Race', and setting 'Spirit Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "b = a.copy()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Spirit Hall.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.2)."
+  ]
+}

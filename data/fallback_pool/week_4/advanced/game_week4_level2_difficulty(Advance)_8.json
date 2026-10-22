@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0958",
+  "game_title": "Digit Mill – Echo Chamber Race",
+  "game_concept": "A racing platformer set in Shadow Cave – Echo Chamber, a booming echo chamber: the spelunker must handle skeleton miners while practicing control flow: while loops. Core idea – Digit Mill: Peel digits off a number with while n > 0 using // and %.",
+  "genre": "racing platformer",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "core_gameplay_loop": "In Echo Chamber, repeat each round: Peel digits off a number with while n > 0 using // and %. Each round the rival advances, and solving the step moves the spelunker ahead. Then check the digits value and advance.",
+  "primary_mechanic": "Digit Mill",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the crystal door by solving code steps involving digits that move the spelunker forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "lose_condition": "The rival reaches the crystal door first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Digit Mill",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M13-X5-T08-cd9750f0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Digit Mill' (Week 4 slot 13), mission type 'Rival Race', and setting 'Echo Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n > 0:\n    n //= 10",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how digits changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Echo Chamber.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
+  ]
+}

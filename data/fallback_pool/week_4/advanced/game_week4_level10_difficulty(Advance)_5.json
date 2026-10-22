@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1195",
+  "game_title": "Break Out – Bat Hollow Rush",
+  "game_concept": "A arcade set in Shadow Cave – Bat Hollow, a hollow of roosting bats: the cave miner must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Break Out: Use break to leave a loop the moment a dangerous foe is spotted.",
+  "genre": "arcade",
+  "theme": "Shadow Cave – Bat Hollow: a hollow of roosting bats",
+  "core_gameplay_loop": "In Bat Hollow, repeat each round: Use break to leave a loop the moment a dangerous foe is spotted. Each round, a new lantern oil challenge appears; solve it to bank points before time drains. Then check the alert value and advance.",
+  "primary_mechanic": "Break Out",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 600 points of lantern oil by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 600 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 600, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 10 (extended tier): Break Out",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M10-X2-T03-0250ea85",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Break Out' (Week 4 slot 10), mission type 'Resource Rush', and setting 'Bat Hollow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 10,
+  "trial": 5,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while True:\n    if danger:\n        break",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how alert changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Bat Hollow.",
+    "Step 3: Win by meeting the goal: score >= 600 within 46 seconds."
+  ]
+}

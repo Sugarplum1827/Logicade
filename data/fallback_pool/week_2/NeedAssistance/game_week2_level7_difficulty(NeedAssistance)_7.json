@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0487",
+  "game_title": "String Glue – Eruption Watch Defense",
+  "game_concept": "A tower defense set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – String Glue: Concatenate string pieces to forge passwords and spell names.",
+  "genre": "tower defense",
+  "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
+  "core_gameplay_loop": "In Eruption Watch, repeat each round: Concatenate string pieces to forge passwords and spell names. Each round, ash wraiths strike the lava bridge, so respond before the next strike lands. Then check the spell_ok value and advance.",
+  "primary_mechanic": "String Glue",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the lava bridge from ash wraiths in Eruption Watch: keep the spell_ok meter above zero by applying the concept correctly until the 67-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 67 seconds while spell_ok > 0.",
+  "lose_condition": "spell_ok drops to 0, or lives reach 0, before the 67-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): String Glue",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M07-X1-T15-3baac1a2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'String Glue' (Week 2 slot 7), mission type 'Survival Siege', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 7,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "name = 'Dark' + 'Lord'",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how spell_ok changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
+    "Step 3: Win by meeting the goal: Timer reaches 67 seconds while spell_ok > 0."
+  ]
+}

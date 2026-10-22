@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0897",
+  "game_title": "Branching Tale – Pearl Divers' Lagoon Trial",
+  "game_concept": "A programming puzzle set in Coastal Port – Pearl Divers' Lagoon, a lagoon of pearl divers: the dock cartographer must handle rogue crabs while practicing conditionals (if / elif / else). Core idea – Branching Tale: Make story choices that run different if/elif branches toward different endings.",
+  "genre": "programming puzzle",
+  "theme": "Coastal Port – Pearl Divers' Lagoon: a lagoon of pearl divers",
+  "core_gameplay_loop": "In Pearl Divers' Lagoon, repeat each round: Make story choices that run different if/elif branches toward different endings. Each round costs one action, so plan the step so none are wasted. Then check the story_trust value and advance.",
+  "primary_mechanic": "Branching Tale",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the signal flag using at most 15 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The signal flag reached with actions_used <= 15.",
+  "lose_condition": "actions_used exceeds 15 before the signal flag is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 10 (extended tier): Branching Tale",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M12-X3-T17-ce8d490a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Branching Tale' (Week 3 slot 12), mission type 'Efficiency Trial', and setting 'Pearl Divers' Lagoon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 10,
+  "trial": 7,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if trust > 5:\n    ending = 'ally'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how story_trust changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crabs in Pearl Divers' Lagoon.",
+    "Step 3: Win by meeting the goal: The signal flag reached with actions_used <= 15."
+  ]
+}

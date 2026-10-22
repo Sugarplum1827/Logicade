@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2237",
+  "game_title": "Phrase Slicer – Sherpa Bridge Trial",
+  "game_concept": "A logic puzzle set in Frost Peaks – Sherpa Bridge, a bridge of fixed ropes: the ice axe ranger must handle yetis while practicing strings & dictionaries. Core idea – Phrase Slicer: Slice strings to cut messages into exactly the needed pieces.",
+  "genre": "logic puzzle",
+  "theme": "Frost Peaks – Sherpa Bridge: a bridge of fixed ropes",
+  "core_gameplay_loop": "In Sherpa Bridge, repeat each round: Slice strings to cut messages into exactly the needed pieces. Each round costs one action, so plan the step so none are wasted. Then check the phrase_ok value and advance.",
+  "primary_mechanic": "Phrase Slicer",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the supply cache using at most 16 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The supply cache reached with actions_used <= 16.",
+  "lose_condition": "actions_used exceeds 16 before the supply cache is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Phrase Slicer",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M02-X3-T17-c320da43",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phrase Slicer' (Week 8 slot 2), mission type 'Efficiency Trial', and setting 'Sherpa Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 5,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "msg[2:6]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 42,
+    "target_score": 260,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how phrase_ok changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Sherpa Bridge.",
+    "Step 3: Win by meeting the goal: The supply cache reached with actions_used <= 16."
+  ]
+}

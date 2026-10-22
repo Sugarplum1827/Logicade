@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0867",
+  "game_title": "Branching Tale – Storm Breakwater Defense",
+  "game_concept": "A action defense set in Coastal Port – Storm Breakwater, a breakwater in a storm: the shipwright must handle storm gulls while practicing conditionals (if / elif / else). Core idea – Branching Tale: Make story choices that run different if/elif branches toward different endings.",
+  "genre": "action defense",
+  "theme": "Coastal Port – Storm Breakwater: a breakwater in a storm",
+  "core_gameplay_loop": "In Storm Breakwater, repeat each round: Make story choices that run different if/elif branches toward different endings. Each round, storm gulls strike the lighthouse lamp, so respond before the next strike lands. Then check the story_trust value and advance.",
+  "primary_mechanic": "Branching Tale",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the lighthouse lamp from storm gulls in Storm Breakwater: keep the story_trust meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 43 seconds while story_trust > 0.",
+  "lose_condition": "story_trust drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 9 (extended tier): Branching Tale",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M12-X1-T15-f079610e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Branching Tale' (Week 3 slot 12), mission type 'Survival Siege', and setting 'Storm Breakwater'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 9,
+  "trial": 7,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if trust > 5:\n    ending = 'ally'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how story_trust changes.",
+    "Step 2: Use the controls to apply the code idea against storm gulls in Storm Breakwater.",
+    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while story_trust > 0."
+  ]
+}

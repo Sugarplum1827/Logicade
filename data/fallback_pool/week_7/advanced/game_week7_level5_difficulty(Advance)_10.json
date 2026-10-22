@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1950",
+  "game_title": "Mutation Mystery – Cracked Obelisk Rush",
+  "game_concept": "A speed quiz set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
+  "genre": "speed quiz",
+  "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
+  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round, a new spirit candles challenge appears; solve it to bank points before time drains. Then check the mutation_safe value and advance.",
+  "primary_mechanic": "Mutation Mystery",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 340 points of spirit candles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Mutation Mystery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M15-X2-T08-08a5860b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Resource Rush', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 5,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "b = a.copy()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

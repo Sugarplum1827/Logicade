@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0202",
+  "game_title": "Constant Guardian – Library Tower Rush",
+  "game_concept": "A arcade set in The Kingdom – Library Tower, the royal library tower: the town guard must handle rogue knights while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the town gate.",
+  "genre": "arcade",
+  "theme": "The Kingdom – Library Tower: the royal library tower",
+  "core_gameplay_loop": "In Library Tower, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the town gate. Each round, a new torches challenge appears; solve it to bank points before time drains. Then check the energy value and advance.",
+  "primary_mechanic": "Constant Guardian",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 440 points of torches by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 440 within 38 seconds.",
+  "lose_condition": "Timer hits 0 with score < 440, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Constant Guardian",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M07-X2-T16-2b7bc4c1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Resource Rush', and setting 'Library Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 7,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "MAX_ENERGY = 100\nenergy = 40",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Library Tower.",
+    "Step 3: Win by meeting the goal: score >= 440 within 38 seconds."
+  ]
+}

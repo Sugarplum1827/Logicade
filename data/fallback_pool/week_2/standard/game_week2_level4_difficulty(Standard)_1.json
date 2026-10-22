@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0401",
+  "game_title": "Exponent Engine – Molten Bridge Rush",
+  "game_concept": "A action puzzle set in Mt. Pyre – Molten Bridge, a bridge over magma: the ember mage must handle magma slimes while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "action puzzle",
+  "theme": "Mt. Pyre – Molten Bridge: a bridge over magma",
+  "core_gameplay_loop": "In Molten Bridge, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round, a new obsidian shards challenge appears; solve it to bank points before time drains. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 220 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 220 within 39 seconds.",
+  "lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X2-T17-9dd4d61b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Resource Rush', and setting 'Molten Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 4,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Molten Bridge.",
+    "Step 3: Win by meeting the goal: score >= 220 within 39 seconds."
+  ]
+}

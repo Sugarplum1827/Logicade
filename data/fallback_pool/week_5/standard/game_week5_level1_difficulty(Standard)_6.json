@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1216",
+  "game_title": "Range Runner – Mossy Creek Rush",
+  "game_concept": "A arcade set in Mystic Forest – Mossy Creek, a mossy forest creek: the druid must handle giant beetles while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the druid moves exactly n steps toward the heartwood tree.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Mossy Creek: a mossy forest creek",
+  "core_gameplay_loop": "In Mossy Creek, repeat each round: Run a for i in range(n) loop so the druid moves exactly n steps toward the heartwood tree. Each round, a new vine ropes challenge appears; solve it to bank points before time drains. Then check the steps_left value and advance.",
+  "primary_mechanic": "Range Runner",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 100 points of vine ropes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 100 within 30 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Range Runner",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M01-X2-T02-a95076ae",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Resource Rush', and setting 'Mossy Creek'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(5):\n    step()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how steps_left changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mossy Creek.",
+    "Step 3: Win by meeting the goal: score >= 100 within 30 seconds."
+  ]
+}

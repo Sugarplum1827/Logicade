@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1050",
+  "game_title": "Nested While Dungeon – Echo Chamber Rush",
+  "game_concept": "A speed quiz set in Shadow Cave – Echo Chamber, a booming echo chamber: the spelunker must handle skeleton miners while practicing control flow: while loops. Core idea – Nested While Dungeon: Run an inner loop for each room inside an outer loop for each floor.",
+  "genre": "speed quiz",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "core_gameplay_loop": "In Echo Chamber, repeat each round: Run an inner loop for each room inside an outer loop for each floor. Each round, a new pickaxes challenge appears; solve it to bank points before time drains. Then check the dungeon_clear value and advance.",
+  "primary_mechanic": "Nested While Dungeon",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 340 points of pickaxes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Nested While Dungeon",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M15-X2-T08-7f64b83f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested While Dungeon' (Week 4 slot 15), mission type 'Resource Rush', and setting 'Echo Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 10,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how dungeon_clear changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Echo Chamber.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

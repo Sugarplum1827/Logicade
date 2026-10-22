@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1629",
+  "game_title": "Docstring Detective – Hearth Hall Trial",
+  "game_concept": "A programming puzzle set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "programming puzzle",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Read docstrings to pick the right function for each case. Each round costs one action, so plan the step so none are wasted. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the hearth fire using at most 20 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The hearth fire reached with actions_used <= 20.",
+  "lose_condition": "actions_used exceeds 20 before the hearth fire is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X3-T05-8034eda3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Efficiency Trial', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 5,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
+    "Step 3: Win by meeting the goal: The hearth fire reached with actions_used <= 20."
+  ]
+}

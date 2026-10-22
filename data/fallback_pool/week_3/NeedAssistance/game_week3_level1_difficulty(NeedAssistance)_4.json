@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0604",
+  "game_title": "And/Or Locks – Lighthouse Point Race",
+  "game_concept": "A racing platformer set in Coastal Port – Lighthouse Point, the lighthouse on the point: the harbor master must handle rogue waves while practicing conditionals (if / elif / else). Core idea – And/Or Locks: Combine conditions with and/or to open a lock that needs several clues.",
+  "genre": "racing platformer",
+  "theme": "Coastal Port – Lighthouse Point: the lighthouse on the point",
+  "core_gameplay_loop": "In Lighthouse Point, repeat each round: Combine conditions with and/or to open a lock that needs several clues. Each round the rival advances, and solving the step moves the harbor master ahead. Then check the lock_progress value and advance.",
+  "primary_mechanic": "And/Or Locks",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the harbor gate by solving code steps involving lock_progress that move the harbor master forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "lose_condition": "The rival reaches the harbor gate first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 1 (intro tier): And/Or Locks",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M04-X5-T02-31a1be0f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'And/Or Locks' (Week 3 slot 4), mission type 'Rival Race', and setting 'Lighthouse Point'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 1,
+  "trial": 4,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if red and (blue or green):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_progress changes.",
+    "Step 2: Use the controls to apply the code idea against rogue waves in Lighthouse Point.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
+  ]
+}

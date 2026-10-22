@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1299",
+  "game_title": "Roll Call Enumerate – Fairy Ring Glade Defense",
+  "game_concept": "A action defense set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
+  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Use enumerate to call out each position and name in a roll call. Each round, bog toads strike the fairy lantern, so respond before the next strike lands. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the fairy lantern from bog toads in Fairy Ring Glade: keep the roll_call meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 55 seconds while roll_call > 0.",
+  "lose_condition": "roll_call drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X1-T03-a6463482",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Survival Siege', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 9,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
+    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while roll_call > 0."
+  ]
+}

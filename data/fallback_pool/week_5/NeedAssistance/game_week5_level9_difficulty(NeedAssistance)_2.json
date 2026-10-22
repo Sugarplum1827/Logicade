@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1442",
+  "game_title": "Volley Counter – Canopy Walkway Race",
+  "game_concept": "A adventure race set in Mystic Forest – Canopy Walkway, rope walkways in the canopy: the fairy gardener must handle bramble beasts while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming bramble beasts.",
+  "genre": "adventure race",
+  "theme": "Mystic Forest – Canopy Walkway: rope walkways in the canopy",
+  "core_gameplay_loop": "In Canopy Walkway, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming bramble beasts. Each round the rival advances, and solving the step moves the fairy gardener ahead. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Beat a rival AI to the vine bridge by solving code steps involving ammo that move the fairy gardener forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the vine bridge first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X5-T04-1de920f2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Rival Race', and setting 'Canopy Walkway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Canopy Walkway.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

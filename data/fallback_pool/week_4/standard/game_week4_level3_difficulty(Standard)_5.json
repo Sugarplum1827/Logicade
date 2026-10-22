@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0975",
+  "game_title": "Nested While Dungeon – Bat Hollow Rush",
+  "game_concept": "A speed quiz set in Shadow Cave – Bat Hollow, a hollow of roosting bats: the cave miner must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Nested While Dungeon: Run an inner loop for each room inside an outer loop for each floor.",
+  "genre": "speed quiz",
+  "theme": "Shadow Cave – Bat Hollow: a hollow of roosting bats",
+  "core_gameplay_loop": "In Bat Hollow, repeat each round: Run an inner loop for each room inside an outer loop for each floor. Each round, a new lantern oil challenge appears; solve it to bank points before time drains. Then check the dungeon_clear value and advance.",
+  "primary_mechanic": "Nested While Dungeon",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 180 points of lantern oil by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 3 (intro tier): Nested While Dungeon",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M15-X2-T03-92b2987c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested While Dungeon' (Week 4 slot 15), mission type 'Resource Rush', and setting 'Bat Hollow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 3,
+  "trial": 5,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how dungeon_clear changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Bat Hollow.",
+    "Step 3: Win by meeting the goal: score >= 180 within 36 seconds."
+  ]
+}

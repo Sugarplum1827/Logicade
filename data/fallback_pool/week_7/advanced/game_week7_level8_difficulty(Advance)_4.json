@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2034",
+  "game_title": "Length Limit – Collapsed Dome Race",
+  "game_concept": "A strategy race set in Eldritch Ruins – Collapsed Dome, a collapsed dome: the spirit seeker must handle rune wisps while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Collapsed Dome.",
+  "genre": "strategy race",
+  "theme": "Eldritch Ruins – Collapsed Dome: a collapsed dome",
+  "core_gameplay_loop": "In Collapsed Dome, repeat each round: Use len() to stop the list from growing past the limit of Collapsed Dome. Each round the rival advances, and solving the step moves the spirit seeker ahead. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the rune gate by solving code steps involving capacity that move the spirit seeker forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "lose_condition": "The rival reaches the rune gate first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X5-T12-f626abc2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Rival Race', and setting 'Collapsed Dome'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Collapsed Dome.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
+  ]
+}

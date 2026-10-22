@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1980",
+  "game_title": "Mutation Mystery – Whisper Stones Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
+  "core_gameplay_loop": "In Whisper Stones, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round poses one decision; a wrong answer breaks the streak. Then check the mutation_safe value and advance.",
+  "primary_mechanic": "Mutation Mystery",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about mutation_safe to power up the scholar mage and open the crypt seal.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Mutation Mystery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M15-X4-T10-4bee4a65",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Streak Challenge', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "b = a.copy()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

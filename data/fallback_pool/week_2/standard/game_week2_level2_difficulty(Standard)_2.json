@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0342",
+  "game_title": "Compound Combo – Pyre Summit Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Pyre Summit, the roaring summit: the volcanologist must handle fire sprites while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Pyre Summit: the roaring summit",
+  "core_gameplay_loop": "In Pyre Summit, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round, fire sprites strike the obsidian gate, so respond before the next strike lands. Then check the energy value and advance.",
+  "primary_mechanic": "Compound Combo",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the obsidian gate from fire sprites in Pyre Summit: keep the energy meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 33 seconds while energy > 0.",
+  "lose_condition": "energy drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Compound Combo",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M12-X1-T20-f572d25b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Survival Siege', and setting 'Pyre Summit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 2,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "energy *= 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Pyre Summit.",
+    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while energy > 0."
+  ]
+}

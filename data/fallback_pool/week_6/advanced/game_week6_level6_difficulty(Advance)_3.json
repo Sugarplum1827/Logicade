@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1673",
+  "game_title": "Call Stack Tower – Frozen Gatehouse Trial",
+  "game_concept": "A logic puzzle set in Snowy Hold – Frozen Gatehouse, the frozen gate of the hold: the hold guard must handle frost imps while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
+  "genre": "logic puzzle",
+  "theme": "Snowy Hold – Frozen Gatehouse: the frozen gate of the hold",
+  "core_gameplay_loop": "In Frozen Gatehouse, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Each round costs one action, so plan the step so none are wasted. Then check the stack_height value and advance.",
+  "primary_mechanic": "Call Stack Tower",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the frozen well using at most 13 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The frozen well reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the frozen well is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Call Stack Tower",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M08-X3-T01-a0d6f967",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Call Stack Tower' (Week 6 slot 8), mission type 'Efficiency Trial', and setting 'Frozen Gatehouse'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 6,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def a():\n    b()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_height changes.",
+    "Step 2: Use the controls to apply the code idea against frost imps in Frozen Gatehouse.",
+    "Step 3: Win by meeting the goal: The frozen well reached with actions_used <= 13."
+  ]
+}

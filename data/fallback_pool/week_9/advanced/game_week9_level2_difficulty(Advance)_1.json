@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2451",
+  "game_title": "Off By One Autopsy – Sandstone Arch Streak",
+  "game_concept": "A card battler set in Sand Dunes – Sandstone Arch, a natural sandstone arch: the caravan guide must handle vultures while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "card battler",
+  "theme": "Sand Dunes – Sandstone Arch: a natural sandstone arch",
+  "core_gameplay_loop": "In Sandstone Arch, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round poses one decision; a wrong answer breaks the streak. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about autopsy to power up the caravan guide and open the sandstone arch.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X4-T19-f6601fa2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Streak Challenge', and setting 'Sandstone Arch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Sandstone Arch.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

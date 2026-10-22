@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0233",
+  "game_title": "Inventory Slots – Blacksmith Row Rush",
+  "game_concept": "A action puzzle set in The Kingdom – Blacksmith Row, a street of busy forges: the baker's apprentice must handle shadow scouts while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against shadow scouts.",
+  "genre": "action puzzle",
+  "theme": "The Kingdom – Blacksmith Row: a street of busy forges",
+  "core_gameplay_loop": "In Blacksmith Row, repeat each round: Store each item in its own variable and choose which one to spend against shadow scouts. Each round, a new keys challenge appears; solve it to bank points before time drains. Then check the potion value and advance.",
+  "primary_mechanic": "Inventory Slots",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 490 points of keys by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Inventory Slots",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M08-X2-T05-d0aa6bf6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Resource Rush', and setting 'Blacksmith Row'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 8,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "sword = 3\npotion = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potion changes.",
+    "Step 2: Use the controls to apply the code idea against shadow scouts in Blacksmith Row.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

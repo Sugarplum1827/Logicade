@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2668",
+  "game_title": "Program Assembler – Dune Crest Streak",
+  "game_concept": "A quiz RPG set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Program Assembler: Assemble a working program from shuffled code blocks in the right order.",
+  "genre": "quiz RPG",
+  "theme": "Sand Dunes – Dune Crest: a high dune crest",
+  "core_gameplay_loop": "In Dune Crest, repeat each round: Assemble a working program from shuffled code blocks in the right order. Each round poses one decision; a wrong answer breaks the streak. Then check the program_ok value and advance.",
+  "primary_mechanic": "Program Assembler",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about program_ok to power up the desert nomad and open the oasis.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Program Assembler",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M13-X4-T02-331e9ed3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Program Assembler' (Week 9 slot 13), mission type 'Streak Challenge', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 8,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "blocks = [...]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how program_ok changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1671",
+  "game_title": "Helper Factory – Frozen Well Rush",
+  "game_concept": "A speed quiz set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Helper Factory: Refactor repeated code into helper functions to save time during a rush.",
+  "genre": "speed quiz",
+  "theme": "Snowy Hold – Frozen Well: a frozen village well",
+  "core_gameplay_loop": "In Frozen Well, repeat each round: Refactor repeated code into helper functions to save time during a rush. Each round, a new firewood challenge appears; solve it to bank points before time drains. Then check the refactor_score value and advance.",
+  "primary_mechanic": "Helper Factory",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 390 points of firewood by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Helper Factory",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M06-X2-T07-404e1c33",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Helper Factory' (Week 6 slot 6), mission type 'Resource Rush', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 6,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def helper():\n    ...",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how refactor_score changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

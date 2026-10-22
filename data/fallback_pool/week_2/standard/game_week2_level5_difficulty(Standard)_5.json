@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0435",
+  "game_title": "Mixed Type Oracle – Cinder Cone Camp Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before ash wraiths spring the trap.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Predict the result or error of mixed-type expressions before ash wraiths spring the trap. Each round, ash wraiths strike the cooling vent, so respond before the next strike lands. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the cooling vent from ash wraiths in Cinder Cone Camp: keep the predictions meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while predictions > 0.",
+  "lose_condition": "predictions drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X1-T07-75f5c84b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Survival Siege', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 5,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 42,
+    "target_score": 260,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while predictions > 0."
+  ]
+}

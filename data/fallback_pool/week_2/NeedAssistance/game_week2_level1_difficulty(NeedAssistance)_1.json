@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0301",
+  "game_title": "Type Sorter – Ash Rim Trail Defense",
+  "game_concept": "A tower defense set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Type Sorter: Sort falling obsidian shards into bins labelled int, float, str and bool before they hit the ground.",
+  "genre": "tower defense",
+  "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
+  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Sort falling obsidian shards into bins labelled int, float, str and bool before they hit the ground. Each round, magma slimes strike the magma valve, so respond before the next strike lands. Then check the sorted_ok value and advance.",
+  "primary_mechanic": "Type Sorter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the magma valve from magma slimes in Ash Rim Trail: keep the sorted_ok meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while sorted_ok > 0.",
+  "lose_condition": "sorted_ok drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Type Sorter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M01-X1-T01-88651a93",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Survival Siege', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "type(3.5)  # float",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while sorted_ok > 0."
+  ]
+}

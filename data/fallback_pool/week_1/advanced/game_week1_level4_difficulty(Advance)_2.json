@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0112",
+  "game_title": "Constant Guardian – Tavern Quarter Defense",
+  "game_concept": "A tower defense set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the market bell.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
+  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the market bell. Each round, siege rats strike the market bell, so respond before the next strike lands. Then check the energy value and advance.",
+  "primary_mechanic": "Constant Guardian",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the market bell from siege rats in Tavern Quarter: keep the energy meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while energy > 0.",
+  "lose_condition": "energy drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 4 (applied tier): Constant Guardian",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M07-X1-T10-71aa7ade",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Survival Siege', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 4,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "MAX_ENERGY = 100\nenergy = 40",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how energy changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while energy > 0."
+  ]
+}

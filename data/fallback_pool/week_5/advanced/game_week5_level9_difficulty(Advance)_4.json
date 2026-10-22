@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1464",
+  "game_title": "Roll Call Enumerate – Spirit Stream Rush",
+  "game_concept": "A speed quiz set in Mystic Forest – Spirit Stream, a stream of spirits: the druid must handle thorn goblins while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "speed quiz",
+  "theme": "Mystic Forest – Spirit Stream: a stream of spirits",
+  "core_gameplay_loop": "In Spirit Stream, repeat each round: Use enumerate to call out each position and name in a roll call. Each round, a new acorns challenge appears; solve it to bank points before time drains. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 550 points of acorns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 550 within 43 seconds.",
+  "lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X2-T14-a0ece4f5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Resource Rush', and setting 'Spirit Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Spirit Stream.",
+    "Step 3: Win by meeting the goal: score >= 550 within 43 seconds."
+  ]
+}

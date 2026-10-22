@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1218",
+  "game_title": "Stride Selector – Root Tunnels Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round costs one action, so plan the step so none are wasted. Then check the stones value and advance.",
+  "primary_mechanic": "Stride Selector",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the elder's door using at most 14 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The elder's door reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the elder's door is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Stride Selector",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M03-X3-T16-45e13ede",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Efficiency Trial', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 20, 4):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stones changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: The elder's door reached with actions_used <= 14."
+  ]
+}

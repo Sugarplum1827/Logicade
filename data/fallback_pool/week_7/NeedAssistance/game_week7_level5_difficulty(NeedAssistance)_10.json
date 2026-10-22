@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1930",
+  "game_title": "Reverse Parade – Collapsed Dome Defense",
+  "game_concept": "A tower defense set in Eldritch Ruins – Collapsed Dome, a collapsed dome: the spirit seeker must handle rune wisps while practicing lists. Core idea – Reverse Parade: Reverse the order of a parade list with reverse() or slicing.",
+  "genre": "tower defense",
+  "theme": "Eldritch Ruins – Collapsed Dome: a collapsed dome",
+  "core_gameplay_loop": "In Collapsed Dome, repeat each round: Reverse the order of a parade list with reverse() or slicing. Each round, rune wisps strike the rune gate, so respond before the next strike lands. Then check the parade_ok value and advance.",
+  "primary_mechanic": "Reverse Parade",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the rune gate from rune wisps in Collapsed Dome: keep the parade_ok meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 59 seconds while parade_ok > 0.",
+  "lose_condition": "parade_ok drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Reverse Parade",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M10-X1-T12-5e11c95c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Parade' (Week 7 slot 10), mission type 'Survival Siege', and setting 'Collapsed Dome'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 5,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "parade[::-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how parade_ok changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Collapsed Dome.",
+    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while parade_ok > 0."
+  ]
+}

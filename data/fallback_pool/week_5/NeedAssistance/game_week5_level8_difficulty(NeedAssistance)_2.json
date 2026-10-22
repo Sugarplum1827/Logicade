@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1412",
+  "game_title": "Volley Counter – Mossy Creek Trial",
+  "game_concept": "A logic puzzle set in Mystic Forest – Mossy Creek, a mossy forest creek: the druid must handle giant beetles while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming giant beetles.",
+  "genre": "logic puzzle",
+  "theme": "Mystic Forest – Mossy Creek: a mossy forest creek",
+  "core_gameplay_loop": "In Mossy Creek, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming giant beetles. Each round costs one action, so plan the step so none are wasted. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the heartwood tree using at most 22 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The heartwood tree reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the heartwood tree is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X3-T02-273b69dc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Efficiency Trial', and setting 'Mossy Creek'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mossy Creek.",
+    "Step 3: Win by meeting the goal: The heartwood tree reached with actions_used <= 22."
+  ]
+}

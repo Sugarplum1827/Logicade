@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0551",
+  "game_title": "Exponent Engine – Cinder Cone Camp Rush",
+  "game_concept": "A action puzzle set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "action puzzle",
+  "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round, a new ore chunks challenge appears; solve it to bank points before time drains. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 420 points of ore chunks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X2-T07-b7f940e1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Resource Rush', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1266",
+  "game_title": "Times Table Garden – Moonlit Clearing Race",
+  "game_concept": "A strategy race set in Mystic Forest – Moonlit Clearing, a moonlit clearing: the druid must handle bramble beasts while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of healing herbs using nested for loops for rows and columns.",
+  "genre": "strategy race",
+  "theme": "Mystic Forest – Moonlit Clearing: a moonlit clearing",
+  "core_gameplay_loop": "In Moonlit Clearing, repeat each round: Plant a grid of healing herbs using nested for loops for rows and columns. Each round the rival advances, and solving the step moves the druid ahead. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Beat a rival AI to the waterfall gate by solving code steps involving garden_cells that move the druid forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.6).",
+  "lose_condition": "The rival reaches the waterfall gate first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X5-T20-9742975d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Rival Race', and setting 'Moonlit Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Moonlit Clearing.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.6)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1594",
+  "game_title": "Default Armory – Wolf Watch Defense",
+  "game_concept": "A tower defense set in Snowy Hold – Wolf Watch, a lookout against wolves: the snow ranger must handle icicle bats while practicing functions. Core idea – Default Armory: Use default parameter values so the armory works even when arguments are missing.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Wolf Watch: a lookout against wolves",
+  "core_gameplay_loop": "In Wolf Watch, repeat each round: Use default parameter values so the armory works even when arguments are missing. Each round, icicle bats strike the watch bell, so respond before the next strike lands. Then check the armor value and advance.",
+  "primary_mechanic": "Default Armory",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the watch bell from icicle bats in Wolf Watch: keep the armor meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 55 seconds while armor > 0.",
+  "lose_condition": "armor drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Default Armory",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M04-X1-T08-9269c6d8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Default Armory' (Week 6 slot 4), mission type 'Survival Siege', and setting 'Wolf Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 4,
+  "trial": 4,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def equip(item='sword'):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how armor changes.",
+    "Step 2: Use the controls to apply the code idea against icicle bats in Wolf Watch.",
+    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while armor > 0."
+  ]
+}

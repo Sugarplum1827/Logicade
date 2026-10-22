@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2245",
+  "game_title": "Safe Get Scout – Ice Cave Shelter Rush",
+  "game_concept": "A arcade set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Safe Get Scout: Use .get() with a default to avoid missing key errors.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
+  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Use .get() with a default to avoid missing key errors. Each round, a new crampons challenge appears; solve it to bank points before time drains. Then check the safe_lookups value and advance.",
+  "primary_mechanic": "Safe Get Scout",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 340 points of crampons by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Safe Get Scout",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M10-X2-T13-a1d8ccb3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Safe Get Scout' (Week 8 slot 10), mission type 'Resource Rush', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 5,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "stock.get('apple', 0)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how safe_lookups changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

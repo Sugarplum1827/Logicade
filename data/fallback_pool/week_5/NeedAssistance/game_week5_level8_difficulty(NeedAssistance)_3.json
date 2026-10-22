@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1413",
+  "game_title": "Stride Selector – Waterfall Pool Defense",
+  "game_concept": "A action defense set in Mystic Forest – Waterfall Pool, a pool below a waterfall: the herbalist must handle shadow wolves while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Waterfall Pool: a pool below a waterfall",
+  "core_gameplay_loop": "In Waterfall Pool, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round, shadow wolves strike the seed vault, so respond before the next strike lands. Then check the stones value and advance.",
+  "primary_mechanic": "Stride Selector",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the seed vault from shadow wolves in Waterfall Pool: keep the stones meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 71 seconds while stones > 0.",
+  "lose_condition": "stones drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Stride Selector",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M03-X1-T09-3383f58e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Survival Siege', and setting 'Waterfall Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 20, 4):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stones changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Waterfall Pool.",
+    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while stones > 0."
+  ]
+}

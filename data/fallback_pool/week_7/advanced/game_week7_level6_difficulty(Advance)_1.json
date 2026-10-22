@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1971",
+  "game_title": "Shelf Sorter – Echoing Courtyard Rush",
+  "game_concept": "A speed quiz set in Eldritch Ruins – Echoing Courtyard, an echoing courtyard: the relic hunter must handle eldritch shades while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of rune stones from smallest to largest.",
+  "genre": "speed quiz",
+  "theme": "Eldritch Ruins – Echoing Courtyard: an echoing courtyard",
+  "core_gameplay_loop": "In Echoing Courtyard, repeat each round: Use sort() to rearrange shelves of rune stones from smallest to largest. Each round, a new rune stones challenge appears; solve it to bank points before time drains. Then check the order_score value and advance.",
+  "primary_mechanic": "Shelf Sorter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 390 points of rune stones by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Shelf Sorter",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M06-X2-T07-284c74b5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Resource Rush', and setting 'Echoing Courtyard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "shelf.sort()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how order_score changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Echoing Courtyard.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

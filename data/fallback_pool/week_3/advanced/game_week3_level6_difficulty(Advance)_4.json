@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0774",
+  "game_title": "Signal Logic – Coral Reef Shallows Defense",
+  "game_concept": "A action defense set in Coastal Port – Coral Reef Shallows, reef shallows: the harbor master must handle smugglers while practicing conditionals (if / elif / else). Core idea – Signal Logic: Control light signals with conditions so nothing crashes at crossings.",
+  "genre": "action defense",
+  "theme": "Coastal Port – Coral Reef Shallows: reef shallows",
+  "core_gameplay_loop": "In Coral Reef Shallows, repeat each round: Control light signals with conditions so nothing crashes at crossings. Each round, smugglers strike the ship's hull, so respond before the next strike lands. Then check the safety value and advance.",
+  "primary_mechanic": "Signal Logic",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the ship's hull from smugglers in Coral Reef Shallows: keep the safety meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 36 seconds while safety > 0.",
+  "lose_condition": "safety drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 6 (applied tier): Signal Logic",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M09-X1-T08-6508b2ed",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Signal Logic' (Week 3 slot 9), mission type 'Survival Siege', and setting 'Coral Reef Shallows'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 6,
+  "trial": 4,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if light == 'red':\n    stop()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how safety changes.",
+    "Step 2: Use the controls to apply the code idea against smugglers in Coral Reef Shallows.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while safety > 0."
+  ]
+}

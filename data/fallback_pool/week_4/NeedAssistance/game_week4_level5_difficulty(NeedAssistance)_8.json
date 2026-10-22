@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1028",
+  "game_title": "Dam Filler – Dragon Hoard Cave Race",
+  "game_concept": "A adventure race set in Shadow Cave – Dragon Hoard Cave, a hoard-filled cave: the dwarf scout must handle rock golems while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
+  "genre": "adventure race",
+  "theme": "Shadow Cave – Dragon Hoard Cave: a hoard-filled cave",
+  "core_gameplay_loop": "In Dragon Hoard Cave, repeat each round: Raise the water level in a loop while level < max, without overflowing. Each round the rival advances, and solving the step moves the dwarf scout ahead. Then check the level value and advance.",
+  "primary_mechanic": "Dam Filler",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the crystal door by solving code steps involving level that move the dwarf scout forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "lose_condition": "The rival reaches the crystal door first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Dam Filler",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M08-X5-T18-f85e3bbb",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Rival Race', and setting 'Dragon Hoard Cave'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while level < max_level:\n    level += 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how level changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Dragon Hoard Cave.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
+  ]
+}

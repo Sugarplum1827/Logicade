@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1254",
+  "game_title": "Roll Call Enumerate – Moonlit Clearing Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Moonlit Clearing, a moonlit clearing: the druid must handle bramble beasts while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Moonlit Clearing: a moonlit clearing",
+  "core_gameplay_loop": "In Moonlit Clearing, repeat each round: Use enumerate to call out each position and name in a roll call. Each round costs one action, so plan the step so none are wasted. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the waterfall gate using at most 11 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The waterfall gate reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the waterfall gate is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X3-T20-2cb9b423",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Efficiency Trial', and setting 'Moonlit Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 2,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Moonlit Clearing.",
+    "Step 3: Win by meeting the goal: The waterfall gate reached with actions_used <= 11."
+  ]
+}

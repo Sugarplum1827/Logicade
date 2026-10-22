@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1043",
+  "game_title": "Dam Filler – Shadow Pit Defense",
+  "game_concept": "A survival strategy set in Shadow Cave – Shadow Pit, a pit of deep shadow: the torchbearer must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
+  "genre": "survival strategy",
+  "theme": "Shadow Cave – Shadow Pit: a pit of deep shadow",
+  "core_gameplay_loop": "In Shadow Pit, repeat each round: Raise the water level in a loop while level < max, without overflowing. Each round, glow-eyed lurkers strike the ore lift, so respond before the next strike lands. Then check the level value and advance.",
+  "primary_mechanic": "Dam Filler",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the ore lift from glow-eyed lurkers in Shadow Pit: keep the level meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while level > 0.",
+  "lose_condition": "level drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Dam Filler",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M08-X1-T19-3a4945e6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Survival Siege', and setting 'Shadow Pit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while level < max_level:\n    level += 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how level changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Shadow Pit.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while level > 0."
+  ]
+}

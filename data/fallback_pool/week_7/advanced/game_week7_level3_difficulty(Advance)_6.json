@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1886",
+  "game_title": "Comprehension Lab – Spirit Hall Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Spirit Hall, a hall of wandering spirits: the scholar mage must handle crypt crawlers while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform spirit candles.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Spirit Hall: a hall of wandering spirits",
+  "core_gameplay_loop": "In Spirit Hall, repeat each round: Build new lists in one line with list comprehensions to transform spirit candles. Each round, crypt crawlers strike the ancient lock, so respond before the next strike lands. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the ancient lock from crypt crawlers in Spirit Hall: keep the lab_output meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 29 seconds while lab_output > 0.",
+  "lose_condition": "lab_output drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X1-T16-1fa73053",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Survival Siege', and setting 'Spirit Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Spirit Hall.",
+    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while lab_output > 0."
+  ]
+}

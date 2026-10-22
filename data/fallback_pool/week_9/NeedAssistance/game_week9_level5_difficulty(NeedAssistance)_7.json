@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2527",
+  "game_title": "Integration Heist – Salt Flat Crossing Rush",
+  "game_concept": "A arcade set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Salt Flat Crossing.",
+  "genre": "arcade",
+  "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
+  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Salt Flat Crossing. Each round, a new camel feed challenge appears; solve it to bank points before time drains. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 180 points of camel feed by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 59 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X2-T11-e52eb36a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Resource Rush', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 5,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
+    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2222",
+  "game_title": "Phrase Slicer – Rockfall Chute Rush",
+  "game_concept": "A action puzzle set in Frost Peaks – Rockfall Chute, a rockfall chute: the rescue climber must handle snow leopards while practicing strings & dictionaries. Core idea – Phrase Slicer: Slice strings to cut messages into exactly the needed pieces.",
+  "genre": "action puzzle",
+  "theme": "Frost Peaks – Rockfall Chute: a rockfall chute",
+  "core_gameplay_loop": "In Rockfall Chute, repeat each round: Slice strings to cut messages into exactly the needed pieces. Each round, a new thermal packs challenge appears; solve it to bank points before time drains. Then check the phrase_ok value and advance.",
+  "primary_mechanic": "Phrase Slicer",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 180 points of thermal packs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 59 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Phrase Slicer",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M02-X2-T16-3c50fda9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phrase Slicer' (Week 8 slot 2), mission type 'Resource Rush', and setting 'Rockfall Chute'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 5,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "msg[2:6]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how phrase_ok changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Rockfall Chute.",
+    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
+  ]
+}

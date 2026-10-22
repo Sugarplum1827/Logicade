@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2658",
+  "game_title": "Logic Detective – Palm Grove Streak",
+  "game_concept": "A card battler set in Sand Dunes – Palm Grove, a palm grove: the camel trader must handle dust devils while practicing debugging & combined skills. Core idea – Logic Detective: Trace code that runs but gives the wrong answer and fix the logic bug.",
+  "genre": "card battler",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "core_gameplay_loop": "In Palm Grove, repeat each round: Trace code that runs but gives the wrong answer and fix the logic bug. Each round poses one decision; a wrong answer breaks the streak. Then check the clues value and advance.",
+  "primary_mechanic": "Logic Detective",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about clues to power up the camel trader and open the oasis.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Logic Detective",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M03-X4-T12-f2a58c88",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Logic Detective' (Week 9 slot 3), mission type 'Streak Challenge', and setting 'Palm Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 8,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "total = a - b  # should be +",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clues changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Palm Grove.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

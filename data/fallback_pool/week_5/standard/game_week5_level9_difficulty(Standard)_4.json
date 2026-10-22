@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1454",
+  "game_title": "Loop Choreography – Bramble Maze Defense",
+  "game_concept": "A survival strategy set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "survival strategy",
+  "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
+  "core_gameplay_loop": "In Bramble Maze, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round, wasp swarms strike the root gate, so respond before the next strike lands. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the root gate from wasp swarms in Bramble Maze: keep the sync meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 54 seconds while sync > 0.",
+  "lose_condition": "sync drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X1-T08-1e6c66de",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Survival Siege', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while sync > 0."
+  ]
+}

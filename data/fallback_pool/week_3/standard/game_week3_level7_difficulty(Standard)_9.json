@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0799",
+  "game_title": "And/Or Locks – Storm Breakwater Trial",
+  "game_concept": "A puzzle set in Coastal Port – Storm Breakwater, a breakwater in a storm: the shipwright must handle storm gulls while practicing conditionals (if / elif / else). Core idea – And/Or Locks: Combine conditions with and/or to open a lock that needs several clues.",
+  "genre": "puzzle",
+  "theme": "Coastal Port – Storm Breakwater: a breakwater in a storm",
+  "core_gameplay_loop": "In Storm Breakwater, repeat each round: Combine conditions with and/or to open a lock that needs several clues. Each round costs one action, so plan the step so none are wasted. Then check the lock_progress value and advance.",
+  "primary_mechanic": "And/Or Locks",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the lighthouse lamp using at most 17 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The lighthouse lamp reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the lighthouse lamp is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 7 (applied tier): And/Or Locks",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M04-X3-T15-0fc5ca56",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'And/Or Locks' (Week 3 slot 4), mission type 'Efficiency Trial', and setting 'Storm Breakwater'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 7,
+  "trial": 9,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if red and (blue or green):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_progress changes.",
+    "Step 2: Use the controls to apply the code idea against storm gulls in Storm Breakwater.",
+    "Step 3: Win by meeting the goal: The lighthouse lamp reached with actions_used <= 17."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2697",
+  "game_title": "Algorithm Race – Merchant Waystation Trial",
+  "game_concept": "A programming puzzle set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
+  "genre": "programming puzzle",
+  "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
+  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round costs one action, so plan the step so none are wasted. Then check the speed value and advance.",
+  "primary_mechanic": "Algorithm Race",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the sundial using at most 15 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The sundial reached with actions_used <= 15.",
+  "lose_condition": "actions_used exceeds 15 before the sundial is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Algorithm Race",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M12-X3-T17-5b4a60bf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Efficiency Trial', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "sum(range(n))  # vs loop",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how speed changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
+    "Step 3: Win by meeting the goal: The sundial reached with actions_used <= 15."
+  ]
+}

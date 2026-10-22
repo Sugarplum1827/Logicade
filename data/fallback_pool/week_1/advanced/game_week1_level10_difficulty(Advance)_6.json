@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0296",
+  "game_title": "Rename Rush – Tavern Quarter Race",
+  "game_concept": "A adventure race set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Rename Rush: Pick valid variable names (no spaces, no leading digits) to unlock doors across the area.",
+  "genre": "adventure race",
+  "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
+  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Pick valid variable names (no spaces, no leading digits) to unlock doors across the area. Each round the rival advances, and solving the step moves the town guard ahead. Then check the valid_names value and advance.",
+  "primary_mechanic": "Rename Rush",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Beat a rival AI to the market bell by solving code steps involving valid_names that move the town guard forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "lose_condition": "The rival reaches the market bell first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Rename Rush",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M11-X5-T10-11c7d99d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rename Rush' (Week 1 slot 11), mission type 'Rival Race', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 6,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "player_name = 'Ada'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how valid_names changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
+  ]
+}

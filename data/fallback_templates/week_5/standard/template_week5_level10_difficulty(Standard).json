@@ -1,0 +1,240 @@
+{
+  "template_id": "tmpl_w5_l10_ST",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 5,
+    "level": 10,
+    "difficulty": "Standard"
+  },
+  "file_id": "fallback_0149",
+  "game_title": "Fallback: Filter Harvest – Mushroom Market",
+  "game_concept": "A tower defense set in Mystic Forest – Mushroom Market, a forest mushroom market: the forest ranger must hold off shadow wolves while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only healing herbs that meet a rule.",
+  "genre": "tower defense",
+  "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
+  "core_gameplay_loop": "In Mushroom Market, repeat each round: Combine for and if to harvest only healing herbs that meet a rule. Then check harvest and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the seed vault from shadow wolves in Mushroom Market: keep harvest above zero until the 57-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "harvest > 0 && timer >= 57",
+  "lose_condition": "harvest <= 0 || lives <= 0",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "FB-W5-L10-ST",
+  "duplicate_check_notes": "Generic fallback template for Week 5, Level 10, Standard. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 5,
+  "level": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Control Flow: For Loops",
+    "Apply “Filter Harvest” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_forest_ranger",
+    "enemy": "kenney_shadow_wolves",
+    "objective": "kenney_seed_vault",
+    "background": "w5_forest",
+    "projectile": "kenney_healing_herbs",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "harvest",
+    "damage_per_attack": 13,
+    "repair_per_action": 6,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 2,
+    "lives": 3,
+    "hint_count": 2,
+    "game_duration_seconds": 57,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Mushroom Market: Filter Harvest",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+    "health_bar": {
+      "visible": true,
+      "label": "harvest",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "harvest > 0 && timer < 57",
+      "then": [
+        "harvest = max(0, harvest - 13)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Shadow wolves attack the seed vault!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "harvest > 0 && harvest < 100 && player_energy >= 5",
+      "then": [
+        "harvest = min(100, harvest + 6)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "harvest >= 100",
+      "then": [
+        "show_message('harvest is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && harvest < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 57 && harvest > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 2)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "harvest > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "harvest <= 30 && harvest > 0",
+      "then": [
+        "show_warning('harvest is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 8,
+      "attack_interval_seconds": 1.35
+    },
+    {
+      "wave": 2,
+      "start_time": 19,
+      "enemy_count": 9,
+      "attack_interval_seconds": 0.95
+    },
+    {
+      "wave": 3,
+      "start_time": 38,
+      "enemy_count": 10,
+      "attack_interval_seconds": 0.8
+    }
+  ],
+  "win": "harvest > 0 && timer >= 57",
+  "lose": "harvest <= 0 || lives <= 0",
+  "hint": "Read the code panel: Combine for and if to harvest only healing herbs that meet a rule. Keep harvest above zero until the timer reaches 57.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Shadow wolves are coming! Watch the harvest meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: for item in basket:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 57 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Filter Harvest in Mystic Forest!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "harvest ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

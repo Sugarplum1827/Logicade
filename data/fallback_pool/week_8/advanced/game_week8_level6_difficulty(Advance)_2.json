@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2272",
+  "game_title": "Key Vault – Snowline Trail Race",
+  "game_concept": "A racing platformer set in Frost Peaks – Snowline Trail, the trail at the snowline: the sherpa guide must handle avalanches while practicing strings & dictionaries. Core idea – Key Vault: Look up values in a dictionary by key to open the rescue sled.",
+  "genre": "racing platformer",
+  "theme": "Frost Peaks – Snowline Trail: the trail at the snowline",
+  "core_gameplay_loop": "In Snowline Trail, repeat each round: Look up values in a dictionary by key to open the rescue sled. Each round the rival advances, and solving the step moves the sherpa guide ahead. Then check the vault_keys value and advance.",
+  "primary_mechanic": "Key Vault",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the rescue sled by solving code steps involving vault_keys that move the sherpa guide forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "lose_condition": "The rival reaches the rescue sled first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Key Vault",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M07-X5-T14-2ba6516b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Key Vault' (Week 8 slot 7), mission type 'Rival Race', and setting 'Snowline Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 6,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "vault['gold']",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault_keys changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Snowline Trail.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
+  ]
+}

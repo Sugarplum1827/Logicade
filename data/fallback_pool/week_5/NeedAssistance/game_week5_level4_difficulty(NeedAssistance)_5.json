@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1295",
+  "game_title": "Sum Sprint – Lantern Path Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Lantern Path, a lantern-lit path: the herbalist must handle mischievous sprites while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Lantern Path.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Lantern Path: a lantern-lit path",
+  "core_gameplay_loop": "In Lantern Path, repeat each round: Accumulate a total across a loop to pay a toll at Lantern Path. Each round poses one decision; a wrong answer breaks the streak. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about total to power up the herbalist and open the mushroom ring.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X4-T15-910478e9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Streak Challenge', and setting 'Lantern Path'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous sprites in Lantern Path.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

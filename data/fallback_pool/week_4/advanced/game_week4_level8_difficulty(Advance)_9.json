@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1139",
+  "game_title": "Condition Builder – Mine Cart Tunnel Race",
+  "game_concept": "A adventure race set in Shadow Cave – Mine Cart Tunnel, an old mine cart tunnel: the torchbearer must handle shadow wraiths while practicing control flow: while loops. Core idea – Condition Builder: Choose the loop condition so the loop runs exactly the requested number of times.",
+  "genre": "adventure race",
+  "theme": "Shadow Cave – Mine Cart Tunnel: an old mine cart tunnel",
+  "core_gameplay_loop": "In Mine Cart Tunnel, repeat each round: Choose the loop condition so the loop runs exactly the requested number of times. Each round the rival advances, and solving the step moves the torchbearer ahead. Then check the loop_runs value and advance.",
+  "primary_mechanic": "Condition Builder",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the mine cart by solving code steps involving loop_runs that move the torchbearer forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "lose_condition": "The rival reaches the mine cart first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Condition Builder",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M14-X5-T07-0030b5c8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Condition Builder' (Week 4 slot 14), mission type 'Rival Race', and setting 'Mine Cart Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i ____ 4:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_runs changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wraiths in Mine Cart Tunnel.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
+  ]
+}

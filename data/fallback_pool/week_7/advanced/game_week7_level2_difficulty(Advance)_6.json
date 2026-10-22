@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1856",
+  "game_title": "Comprehension Lab – Relic Vault Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Relic Vault, a hidden relic vault: the rune scholar must handle stone sentinels while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform moon crystals.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "core_gameplay_loop": "In Relic Vault, repeat each round: Build new lists in one line with list comprehensions to transform moon crystals. Each round poses one decision; a wrong answer breaks the streak. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about lab_output to power up the rune scholar and open the moon altar.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X4-T14-a701b254",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Streak Challenge', and setting 'Relic Vault'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Relic Vault.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

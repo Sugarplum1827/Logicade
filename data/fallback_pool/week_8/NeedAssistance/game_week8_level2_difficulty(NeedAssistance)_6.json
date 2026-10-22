@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2136",
+  "game_title": "Vowel Counter – Glacier Lake Trial",
+  "game_concept": "A programming puzzle set in Frost Peaks – Glacier Lake, a lake of glacier melt: the summit pilot must handle frost wyrms while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
+  "genre": "programming puzzle",
+  "theme": "Frost Peaks – Glacier Lake: a lake of glacier melt",
+  "core_gameplay_loop": "In Glacier Lake, repeat each round: Count vowels in words by looping over characters. Each round costs one action, so plan the step so none are wasted. Then check the vowels value and advance.",
+  "primary_mechanic": "Vowel Counter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the basecamp tent using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The basecamp tent reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the basecamp tent is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): Vowel Counter",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M06-X3-T18-ba2102f7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Efficiency Trial', and setting 'Glacier Lake'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 2,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vowels changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Lake.",
+    "Step 3: Win by meeting the goal: The basecamp tent reached with actions_used <= 19."
+  ]
+}

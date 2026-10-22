@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0162",
+  "game_title": "Formula Fuel – Village Green Streak",
+  "game_concept": "A card battler set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Formula Fuel: Compute values like total = price * qty to fuel the squire's trip to the throne.",
+  "genre": "card battler",
+  "theme": "The Kingdom – Village Green: the green outside the walls",
+  "core_gameplay_loop": "In Village Green, repeat each round: Compute values like total = price * qty to fuel the squire's trip to the throne. Each round poses one decision; a wrong answer breaks the streak. Then check the total value and advance.",
+  "primary_mechanic": "Formula Fuel",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about total to power up the squire and open the throne.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 6 (applied tier): Formula Fuel",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M12-X4-T08-95a66661",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Formula Fuel' (Week 1 slot 12), mission type 'Streak Challenge', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 6,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "total = price * qty",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1030",
+  "game_title": "Break Out – Glowworm Gallery Defense",
+  "game_concept": "A tower defense set in Shadow Cave – Glowworm Gallery, a ceiling of glowworms: the dwarf scout must handle cave spiders while practicing control flow: while loops. Core idea – Break Out: Use break to leave a loop the moment a dangerous foe is spotted.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Glowworm Gallery: a ceiling of glowworms",
+  "core_gameplay_loop": "In Glowworm Gallery, repeat each round: Use break to leave a loop the moment a dangerous foe is spotted. Each round, cave spiders strike the wooden door, so respond before the next strike lands. Then check the alert value and advance.",
+  "primary_mechanic": "Break Out",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the wooden door from cave spiders in Glowworm Gallery: keep the alert meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 59 seconds while alert > 0.",
+  "lose_condition": "alert drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Break Out",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M10-X1-T12-f6d6f6ef",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Break Out' (Week 4 slot 10), mission type 'Survival Siege', and setting 'Glowworm Gallery'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 10,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while True:\n    if danger:\n        break",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how alert changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Glowworm Gallery.",
+    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while alert > 0."
+  ]
+}

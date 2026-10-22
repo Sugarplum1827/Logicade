@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1443",
+  "game_title": "Stride Selector – Owl Roost Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
+  "core_gameplay_loop": "In Owl Roost, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round costs one action, so plan the step so none are wasted. Then check the stones value and advance.",
+  "primary_mechanic": "Stride Selector",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the spirit shrine using at most 22 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The spirit shrine reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the spirit shrine is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Stride Selector",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M03-X3-T11-5b12b5f8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Efficiency Trial', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 20, 4):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stones changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
+    "Step 3: Win by meeting the goal: The spirit shrine reached with actions_used <= 22."
+  ]
+}

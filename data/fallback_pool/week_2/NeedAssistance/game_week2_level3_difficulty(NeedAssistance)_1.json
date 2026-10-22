@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0361",
+  "game_title": "Type Sorter – Ember Fields Race",
+  "game_concept": "A racing platformer set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – Type Sorter: Sort falling sulfur crystals into bins labelled int, float, str and bool before they hit the ground.",
+  "genre": "racing platformer",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "core_gameplay_loop": "In Ember Fields, repeat each round: Sort falling sulfur crystals into bins labelled int, float, str and bool before they hit the ground. Each round the rival advances, and solving the step moves the ember mage ahead. Then check the sorted_ok value and advance.",
+  "primary_mechanic": "Type Sorter",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Beat a rival AI to the lava bridge by solving code steps involving sorted_ok that move the ember mage forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.6).",
+  "lose_condition": "The rival reaches the lava bridge first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Type Sorter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M01-X5-T05-2818c3d5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Rival Race', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 3,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "type(3.5)  # float",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.6)."
+  ]
+}

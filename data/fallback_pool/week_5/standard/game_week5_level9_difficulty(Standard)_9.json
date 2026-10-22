@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1459",
+  "game_title": "Squad Marcher – Misty Bog Rush",
+  "game_concept": "A arcade set in Mystic Forest – Misty Bog, a misty bog: the forest ranger must handle bog toads while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Misty Bog: a misty bog",
+  "core_gameplay_loop": "In Misty Bog, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round, a new spirit lanterns challenge appears; solve it to bank points before time drains. Then check the squad_ready value and advance.",
+  "primary_mechanic": "Squad Marcher",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 420 points of spirit lanterns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Squad Marcher",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M04-X2-T19-4c441131",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Resource Rush', and setting 'Misty Bog'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 9,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for ally in squad:\n    ally.assign()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how squad_ready changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Misty Bog.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

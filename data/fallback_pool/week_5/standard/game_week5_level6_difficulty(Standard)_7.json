@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1367",
+  "game_title": "Volley Counter – Misty Bog Race",
+  "game_concept": "A adventure race set in Mystic Forest – Misty Bog, a misty bog: the forest ranger must handle bog toads while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming bog toads.",
+  "genre": "adventure race",
+  "theme": "Mystic Forest – Misty Bog: a misty bog",
+  "core_gameplay_loop": "In Misty Bog, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming bog toads. Each round the rival advances, and solving the step moves the forest ranger ahead. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the seed vault by solving code steps involving ammo that move the forest ranger forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the seed vault first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X5-T19-1873ac73",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Rival Race', and setting 'Misty Bog'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Misty Bog.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

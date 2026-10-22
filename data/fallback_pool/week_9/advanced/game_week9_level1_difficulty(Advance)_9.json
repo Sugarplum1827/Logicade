@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2429",
+  "game_title": "Validation Fortress – Scarab Burrow Defense",
+  "game_concept": "A survival strategy set in Sand Dunes – Scarab Burrow, a scarab burrow: the caravan guide must handle desert bandits while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so desert bandits can't sneak through.",
+  "genre": "survival strategy",
+  "theme": "Sand Dunes – Scarab Burrow: a scarab burrow",
+  "core_gameplay_loop": "In Scarab Burrow, repeat each round: Write input checks that reject bad data so desert bandits can't sneak through. Each round, desert bandits strike the palm grove, so respond before the next strike lands. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the palm grove from desert bandits in Scarab Burrow: keep the fortress meter above zero by applying the concept correctly until the 24-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 24 seconds while fortress > 0.",
+  "lose_condition": "fortress drops to 0, or lives reach 0, before the 24-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X1-T13-654f1601",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Survival Siege', and setting 'Scarab Burrow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against desert bandits in Scarab Burrow.",
+    "Step 3: Win by meeting the goal: Timer reaches 24 seconds while fortress > 0."
+  ]
+}

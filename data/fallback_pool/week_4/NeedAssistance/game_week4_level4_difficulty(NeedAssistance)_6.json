@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0996",
+  "game_title": "Accumulator Pump – Crystal Grotto Rush",
+  "game_concept": "A speed quiz set in Shadow Cave – Crystal Grotto, a grotto of glowing crystals: the spelunker must handle rock golems while practicing control flow: while loops. Core idea – Accumulator Pump: Add values each pass until the running total reaches the goal.",
+  "genre": "speed quiz",
+  "theme": "Shadow Cave – Crystal Grotto: a grotto of glowing crystals",
+  "core_gameplay_loop": "In Crystal Grotto, repeat each round: Add values each pass until the running total reaches the goal. Each round, a new iron keys challenge appears; solve it to bank points before time drains. Then check the total value and advance.",
+  "primary_mechanic": "Accumulator Pump",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 150 points of iron keys by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 150 within 55 seconds.",
+  "lose_condition": "Timer hits 0 with score < 150, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 4 (applied tier): Accumulator Pump",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M06-X2-T02-ad35f7c9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Accumulator Pump' (Week 4 slot 6), mission type 'Resource Rush', and setting 'Crystal Grotto'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 4,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while total < goal:\n    total += step",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Crystal Grotto.",
+    "Step 3: Win by meeting the goal: score >= 150 within 55 seconds."
+  ]
+}

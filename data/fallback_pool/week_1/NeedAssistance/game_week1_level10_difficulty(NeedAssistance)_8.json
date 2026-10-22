@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0278",
+  "game_title": "Inventory Slots – Village Green Race",
+  "game_concept": "A adventure race set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against rogue knights.",
+  "genre": "adventure race",
+  "theme": "The Kingdom – Village Green: the green outside the walls",
+  "core_gameplay_loop": "In Village Green, repeat each round: Store each item in its own variable and choose which one to spend against rogue knights. Each round the rival advances, and solving the step moves the squire ahead. Then check the potion value and advance.",
+  "primary_mechanic": "Inventory Slots",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the throne by solving code steps involving potion that move the squire forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the throne first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Inventory Slots",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M08-X5-T08-e8ced63a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Rival Race', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 8,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "sword = 3\npotion = 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potion changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

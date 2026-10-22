@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0275",
+  "game_title": "Name Tag Match – Throne Hall Defense",
+  "game_concept": "A survival strategy set in The Kingdom – Throne Hall, the throne hall of the kingdom: the knight must handle mischievous imps while practicing variables & assignment. Core idea – Name Tag Match: Match floating variable name tags to the values on passing coins before they reach mischievous imps.",
+  "genre": "survival strategy",
+  "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
+  "core_gameplay_loop": "In Throne Hall, repeat each round: Match floating variable name tags to the values on passing coins before they reach mischievous imps. Each round, mischievous imps strike the signal beacon, so respond before the next strike lands. Then check the tag_matches value and advance.",
+  "primary_mechanic": "Name Tag Match",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the signal beacon from mischievous imps in Throne Hall: keep the tag_matches meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while tag_matches > 0.",
+  "lose_condition": "tag_matches drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Name Tag Match",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M05-X1-T07-b4a50b32",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Name Tag Match' (Week 1 slot 5), mission type 'Survival Siege', and setting 'Throne Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 5,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "speed = 12\nname = 'Rex'",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tag_matches changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous imps in Throne Hall.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while tag_matches > 0."
+  ]
+}

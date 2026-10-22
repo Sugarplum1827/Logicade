@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0586",
+  "game_title": "Type Sorter – Pyre Summit Race",
+  "game_concept": "A racing platformer set in Mt. Pyre – Pyre Summit, the roaring summit: the volcanologist must handle fire sprites while practicing data types & operators. Core idea – Type Sorter: Sort falling ember crystals into bins labelled int, float, str and bool before they hit the ground.",
+  "genre": "racing platformer",
+  "theme": "Mt. Pyre – Pyre Summit: the roaring summit",
+  "core_gameplay_loop": "In Pyre Summit, repeat each round: Sort falling ember crystals into bins labelled int, float, str and bool before they hit the ground. Each round the rival advances, and solving the step moves the volcanologist ahead. Then check the sorted_ok value and advance.",
+  "primary_mechanic": "Type Sorter",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the obsidian gate by solving code steps involving sorted_ok that move the volcanologist forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the obsidian gate first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Type Sorter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M01-X5-T20-ffb52ea9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Rival Race', and setting 'Pyre Summit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 10,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "type(3.5)  # float",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Pyre Summit.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

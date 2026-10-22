@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1433",
+  "game_title": "Reverse Countdown – Hollow Log Trail Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Reverse Countdown: Count backward with range(10, 0, -1) to time perfect launches.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
+  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Count backward with range(10, 0, -1) to time perfect launches. Each round, a new moss bundles challenge appears; solve it to bank points before time drains. Then check the launch_timing value and advance.",
+  "primary_mechanic": "Reverse Countdown",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 490 points of moss bundles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Reverse Countdown",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M08-X2-T05-f5cc6e31",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Countdown' (Week 5 slot 8), mission type 'Resource Rush', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 8,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(10, 0, -1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how launch_timing changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

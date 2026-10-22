@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2497",
+  "game_title": "Integration Heist – Bazaar Tents Race",
+  "game_concept": "A racing platformer set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Bazaar Tents.",
+  "genre": "racing platformer",
+  "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
+  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Bazaar Tents. Each round the rival advances, and solving the step moves the oasis keeper ahead. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Beat a rival AI to the sandstone arch by solving code steps involving heist that move the oasis keeper forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "lose_condition": "The rival reaches the sandstone arch first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X5-T09-21f75fc4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Rival Race', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
+  ]
+}

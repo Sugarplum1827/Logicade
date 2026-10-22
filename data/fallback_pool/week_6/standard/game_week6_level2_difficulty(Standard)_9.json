@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1549",
+  "game_title": "Default Armory – Hearth Hall Trial",
+  "game_concept": "A puzzle set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Default Armory: Use default parameter values so the armory works even when arguments are missing.",
+  "genre": "puzzle",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Use default parameter values so the armory works even when arguments are missing. Each round costs one action, so plan the step so none are wasted. Then check the armor value and advance.",
+  "primary_mechanic": "Default Armory",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the hearth fire using at most 15 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The hearth fire reached with actions_used <= 15.",
+  "lose_condition": "actions_used exceeds 15 before the hearth fire is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 2 (intro tier): Default Armory",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M04-X3-T05-d8c8499f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Default Armory' (Week 6 slot 4), mission type 'Efficiency Trial', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 2,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def equip(item='sword'):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how armor changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
+    "Step 3: Win by meeting the goal: The hearth fire reached with actions_used <= 15."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1274",
+  "game_title": "Loop Choreography – Root Tunnels Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Root Tunnels, tunnels among huge roots: the fairy gardener must handle wasp swarms while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "core_gameplay_loop": "In Root Tunnels, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round poses one decision; a wrong answer breaks the streak. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about sync to power up the fairy gardener and open the elder's door.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X4-T16-234b8c25",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Streak Challenge', and setting 'Root Tunnels'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Root Tunnels.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

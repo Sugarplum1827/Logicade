@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0032",
+  "game_title": "Reassign Relay – Tavern Quarter Defense",
+  "game_concept": "A survival strategy set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Reassign Relay: Overwrite a variable with a fresh value each round so the old number vanishes before siege rats can use it.",
+  "genre": "survival strategy",
+  "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
+  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Overwrite a variable with a fresh value each round so the old number vanishes before siege rats can use it. Each round, siege rats strike the market bell, so respond before the next strike lands. Then check the wave_target value and advance.",
+  "primary_mechanic": "Reassign Relay",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the market bell from siege rats in Tavern Quarter: keep the wave_target meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 46 seconds while wave_target > 0.",
+  "lose_condition": "wave_target drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Reassign Relay",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M02-X1-T10-ddb1bcc9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reassign Relay' (Week 1 slot 2), mission type 'Survival Siege', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 2,
+  "trial": 2,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "wave_target = 3\nwave_target = 7",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wave_target changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while wave_target > 0."
+  ]
+}

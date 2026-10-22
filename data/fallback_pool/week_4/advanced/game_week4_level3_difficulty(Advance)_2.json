@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0982",
+  "game_title": "Guess Until Right – Echo Chamber Streak",
+  "game_concept": "A quiz RPG set in Shadow Cave – Echo Chamber, a booming echo chamber: the spelunker must handle skeleton miners while practicing control flow: while loops. Core idea – Guess Until Right: Keep guessing while guess != secret, narrowing the range using hints.",
+  "genre": "quiz RPG",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "core_gameplay_loop": "In Echo Chamber, repeat each round: Keep guessing while guess != secret, narrowing the range using hints. Each round poses one decision; a wrong answer breaks the streak. Then check the guess_range value and advance.",
+  "primary_mechanic": "Guess Until Right",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about guess_range to power up the spelunker and open the crystal door.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 3 (intro tier): Guess Until Right",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M07-X4-T08-d535d8de",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Guess Until Right' (Week 4 slot 7), mission type 'Streak Challenge', and setting 'Echo Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 3,
+  "trial": 2,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while guess != secret:\n    guess = next_guess()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how guess_range changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Echo Chamber.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1394",
+  "game_title": "Loop Choreography – Canopy Walkway Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Canopy Walkway, rope walkways in the canopy: the fairy gardener must handle bramble beasts while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Canopy Walkway: rope walkways in the canopy",
+  "core_gameplay_loop": "In Canopy Walkway, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round, a new healing herbs challenge appears; solve it to bank points before time drains. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 340 points of healing herbs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 340 within 48 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X2-T04-a6d98782",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Resource Rush', and setting 'Canopy Walkway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Canopy Walkway.",
+    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0809",
+  "game_title": "Truth Table Tiles – Tidepool Cove Trial",
+  "game_concept": "A logic puzzle set in Coastal Port – Tidepool Cove, a tidepool cove: the dock cartographer must handle kraken tentacles while practicing conditionals (if / elif / else). Core idea – Truth Table Tiles: Fill in truth-table tiles for and/or/not to light the correct path.",
+  "genre": "logic puzzle",
+  "theme": "Coastal Port – Tidepool Cove: a tidepool cove",
+  "core_gameplay_loop": "In Tidepool Cove, repeat each round: Fill in truth-table tiles for and/or/not to light the correct path. Each round costs one action, so plan the step so none are wasted. Then check the table_score value and advance.",
+  "primary_mechanic": "Truth Table Tiles",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the lighthouse lamp using at most 13 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The lighthouse lamp reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the lighthouse lamp is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 7 (applied tier): Truth Table Tiles",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M14-X3-T05-6c4c33fc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Truth Table Tiles' (Week 3 slot 14), mission type 'Efficiency Trial', and setting 'Tidepool Cove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 7,
+  "trial": 9,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "True and False  # False",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how table_score changes.",
+    "Step 2: Use the controls to apply the code idea against kraken tentacles in Tidepool Cove.",
+    "Step 3: Win by meeting the goal: The lighthouse lamp reached with actions_used <= 13."
+  ]
+}

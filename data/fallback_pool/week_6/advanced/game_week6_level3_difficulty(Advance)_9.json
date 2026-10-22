@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1589",
+  "game_title": "Library Builder – Ice Mill Race",
+  "game_concept": "A adventure race set in Snowy Hold – Ice Mill, a frozen mill wheel: the frost mage must handle frost imps while practicing functions. Core idea – Library Builder: Combine small functions into a reusable library the frost mage calls throughout the level.",
+  "genre": "adventure race",
+  "theme": "Snowy Hold – Ice Mill: a frozen mill wheel",
+  "core_gameplay_loop": "In Ice Mill, repeat each round: Combine small functions into a reusable library the frost mage calls throughout the level. Each round the rival advances, and solving the step moves the frost mage ahead. Then check the library value and advance.",
+  "primary_mechanic": "Library Builder",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the wall banner by solving code steps involving library that move the frost mage forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the wall banner first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 3 (intro tier): Library Builder",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M14-X5-T17-451f9ce2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Library Builder' (Week 6 slot 14), mission type 'Rival Race', and setting 'Ice Mill'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 3,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "import tools\ntools.heal()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how library changes.",
+    "Step 2: Use the controls to apply the code idea against frost imps in Ice Mill.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

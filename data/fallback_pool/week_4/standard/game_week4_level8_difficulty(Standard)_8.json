@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1128",
+  "game_title": "Stamina Climb – Spider Den Rush",
+  "game_concept": "A speed quiz set in Shadow Cave – Spider Den, a webbed spider den: the shadow ranger must handle rock golems while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
+  "genre": "speed quiz",
+  "theme": "Shadow Cave – Spider Den: a webbed spider den",
+  "core_gameplay_loop": "In Spider Den, repeat each round: Keep climbing while stamina > 0, deciding when to rest inside the loop. Each round, a new iron keys challenge appears; solve it to bank points before time drains. Then check the stamina value and advance.",
+  "primary_mechanic": "Stamina Climb",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 380 points of iron keys by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 380 within 51 seconds.",
+  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Stamina Climb",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M03-X2-T10-c4688a70",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Resource Rush', and setting 'Spider Den'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while stamina > 0:\n    climb()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stamina changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Spider Den.",
+    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
+  ]
+}

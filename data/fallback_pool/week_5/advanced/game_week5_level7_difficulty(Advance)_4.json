@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1404",
+  "game_title": "Roll Call Enumerate – Mushroom Market Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Mushroom Market, a forest mushroom market: the fairy gardener must handle giant beetles while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
+  "core_gameplay_loop": "In Mushroom Market, repeat each round: Use enumerate to call out each position and name in a roll call. Each round costs one action, so plan the step so none are wasted. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the waterfall gate using at most 13 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The waterfall gate reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the waterfall gate is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X3-T10-ce7e0aa5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Efficiency Trial', and setting 'Mushroom Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mushroom Market.",
+    "Step 3: Win by meeting the goal: The waterfall gate reached with actions_used <= 13."
+  ]
+}

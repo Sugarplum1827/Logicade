@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1250",
+  "game_title": "Sum Sprint – Berry Thicket Defense",
+  "game_concept": "A survival strategy set in Mystic Forest – Berry Thicket, a berry thicket: the beast tamer must handle bramble beasts while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Berry Thicket.",
+  "genre": "survival strategy",
+  "theme": "Mystic Forest – Berry Thicket: a berry thicket",
+  "core_gameplay_loop": "In Berry Thicket, repeat each round: Accumulate a total across a loop to pay a toll at Berry Thicket. Each round, bramble beasts strike the heartwood tree, so respond before the next strike lands. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the heartwood tree from bramble beasts in Berry Thicket: keep the total meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 33 seconds while total > 0.",
+  "lose_condition": "total drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X1-T12-b3671b73",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Survival Siege', and setting 'Berry Thicket'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 2,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Berry Thicket.",
+    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while total > 0."
+  ]
+}

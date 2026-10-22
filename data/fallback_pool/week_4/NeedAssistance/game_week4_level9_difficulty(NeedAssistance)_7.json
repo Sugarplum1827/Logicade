@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1147",
+  "game_title": "Guess Until Right – Shadow Pit Race",
+  "game_concept": "A racing platformer set in Shadow Cave – Shadow Pit, a pit of deep shadow: the torchbearer must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Guess Until Right: Keep guessing while guess != secret, narrowing the range using hints.",
+  "genre": "racing platformer",
+  "theme": "Shadow Cave – Shadow Pit: a pit of deep shadow",
+  "core_gameplay_loop": "In Shadow Pit, repeat each round: Keep guessing while guess != secret, narrowing the range using hints. Each round the rival advances, and solving the step moves the torchbearer ahead. Then check the guess_range value and advance.",
+  "primary_mechanic": "Guess Until Right",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the ore lift by solving code steps involving guess_range that move the torchbearer forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the ore lift first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Guess Until Right",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M07-X5-T19-d0a2e7a8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Guess Until Right' (Week 4 slot 7), mission type 'Rival Race', and setting 'Shadow Pit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 7,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while guess != secret:\n    guess = next_guess()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how guess_range changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Shadow Pit.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

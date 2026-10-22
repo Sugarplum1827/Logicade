@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0404",
+  "game_title": "Unit Trader – Ore Smelter Defense",
+  "game_concept": "A survival strategy set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of heat shields is fair.",
+  "genre": "survival strategy",
+  "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
+  "core_gameplay_loop": "In Ore Smelter, repeat each round: Convert units using expressions so each trade of heat shields is fair. Each round, cinder bats strike the fire shrine, so respond before the next strike lands. Then check the fair_trades value and advance.",
+  "primary_mechanic": "Unit Trader",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the fire shrine from cinder bats in Ore Smelter: keep the fair_trades meter above zero by applying the concept correctly until the 39-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 39 seconds while fair_trades > 0.",
+  "lose_condition": "fair_trades drops to 0, or lives reach 0, before the 39-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Unit Trader",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M14-X1-T18-62a25925",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Survival Siege', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 4,
+  "trial": 4,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "cm = m * 100",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fair_trades changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
+    "Step 3: Win by meeting the goal: Timer reaches 39 seconds while fair_trades > 0."
+  ]
+}

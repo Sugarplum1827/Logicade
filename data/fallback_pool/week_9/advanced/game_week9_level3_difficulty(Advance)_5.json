@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2485",
+  "game_title": "Code Reading Relay – Bazaar Tents Trial",
+  "game_concept": "A puzzle set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
+  "genre": "puzzle",
+  "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
+  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Read short programs as a relay and predict their output line by line. Each round costs one action, so plan the step so none are wasted. Then check the predicted value and advance.",
+  "primary_mechanic": "Code Reading Relay",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the sandstone arch using at most 11 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The sandstone arch reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the sandstone arch is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Code Reading Relay",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M10-X3-T09-e5759fa9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Efficiency Trial', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 3,
+  "trial": 5,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(3):\n    print(i)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predicted changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
+    "Step 3: Win by meeting the goal: The sandstone arch reached with actions_used <= 11."
+  ]
+}

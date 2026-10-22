@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2664",
+  "game_title": "Edge Case Hunter – Sundial Plaza Rush",
+  "game_concept": "A speed quiz set in Sand Dunes – Sundial Plaza, a giant sundial plaza: the desert nomad must handle sandstorms while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
+  "genre": "speed quiz",
+  "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
+  "core_gameplay_loop": "In Sundial Plaza, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round, a new sun cloaks challenge appears; solve it to bank points before time drains. Then check the edge_cases value and advance.",
+  "primary_mechanic": "Edge Case Hunter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 550 points of sun cloaks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 550 within 43 seconds.",
+  "lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Edge Case Hunter",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M09-X2-T14-6c651a75",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Resource Rush', and setting 'Sundial Plaza'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "avg = total / len(items)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how edge_cases changes.",
+    "Step 2: Use the controls to apply the code idea against sandstorms in Sundial Plaza.",
+    "Step 3: Win by meeting the goal: score >= 550 within 43 seconds."
+  ]
+}

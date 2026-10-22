@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1751",
+  "game_title": "Countdown Recursion – Frozen Well Rush",
+  "game_concept": "A action puzzle set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Countdown Recursion: Use a simple self-calling function to count down to a base case.",
+  "genre": "action puzzle",
+  "theme": "Snowy Hold – Frozen Well: a frozen village well",
+  "core_gameplay_loop": "In Frozen Well, repeat each round: Use a simple self-calling function to count down to a base case. Each round, a new firewood challenge appears; solve it to bank points before time drains. Then check the base_case value and advance.",
+  "primary_mechanic": "Countdown Recursion",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 420 points of firewood by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Countdown Recursion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M11-X2-T07-6666dbfd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Recursion' (Week 6 slot 11), mission type 'Resource Rush', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 9,
+  "trial": 1,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def down(n):\n    if n == 0:\n        return\n    down(n - 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how base_case changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

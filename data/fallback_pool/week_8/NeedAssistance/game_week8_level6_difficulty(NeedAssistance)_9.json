@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2259",
+  "game_title": "Frequency Bazaar – Summit Spire Race",
+  "game_concept": "A strategy race set in Frost Peaks – Summit Spire, the highest spire: the mountaineer must handle storm winds while practicing strings & dictionaries. Core idea – Frequency Bazaar: Count how often each item appears using a dictionary.",
+  "genre": "strategy race",
+  "theme": "Frost Peaks – Summit Spire: the highest spire",
+  "core_gameplay_loop": "In Summit Spire, repeat each round: Count how often each item appears using a dictionary. Each round the rival advances, and solving the step moves the mountaineer ahead. Then check the tally value and advance.",
+  "primary_mechanic": "Frequency Bazaar",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving tally that move the mountaineer forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Frequency Bazaar",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M09-X5-T07-3e13894b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Frequency Bazaar' (Week 8 slot 9), mission type 'Rival Race', and setting 'Summit Spire'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 6,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "count[x] = count.get(x, 0) + 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tally changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Summit Spire.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.75)."
+  ]
+}

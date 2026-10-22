@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0579",
+  "game_title": "Parenthesis Puzzle – Eruption Watch Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the lava bridge.",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
+  "core_gameplay_loop": "In Eruption Watch, repeat each round: Place parentheses to make an expression equal the number carved on the lava bridge. Each round costs one action, so plan the step so none are wasted. Then check the puzzle_gap value and advance.",
+  "primary_mechanic": "Parenthesis Puzzle",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the lava bridge using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The lava bridge reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the lava bridge is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Parenthesis Puzzle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M09-X3-T15-b832f464",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Efficiency Trial', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 10,
+  "trial": 9,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "(2 + 3) * 4",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
+    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
+    "Step 3: Win by meeting the goal: The lava bridge reached with actions_used <= 23."
+  ]
+}

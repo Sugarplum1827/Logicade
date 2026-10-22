@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0190",
+  "game_title": "Copy Cat – Library Tower Race",
+  "game_concept": "A racing platformer set in The Kingdom – Library Tower, the royal library tower: the town guard must handle rogue knights while practicing variables & assignment. Core idea – Copy Cat: Copy one variable into another and predict whether the original changes when rogue knights strike.",
+  "genre": "racing platformer",
+  "theme": "The Kingdom – Library Tower: the royal library tower",
+  "core_gameplay_loop": "In Library Tower, repeat each round: Copy one variable into another and predict whether the original changes when rogue knights strike. Each round the rival advances, and solving the step moves the town guard ahead. Then check the b value and advance.",
+  "primary_mechanic": "Copy Cat",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the town gate by solving code steps involving b that move the town guard forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the town gate first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Copy Cat",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M10-X5-T16-5c619831",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Copy Cat' (Week 1 slot 10), mission type 'Rival Race', and setting 'Library Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 7,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "b = a\na = 9",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how b changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Library Tower.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

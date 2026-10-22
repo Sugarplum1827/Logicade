@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0940",
+  "game_title": "Break Out – Mushroom Cavern Race",
+  "game_concept": "A racing platformer set in Shadow Cave – Mushroom Cavern, a cavern of glowing mushrooms: the dwarf scout must handle zombies while practicing control flow: while loops. Core idea – Break Out: Use break to leave a loop the moment a dangerous foe is spotted.",
+  "genre": "racing platformer",
+  "theme": "Shadow Cave – Mushroom Cavern: a cavern of glowing mushrooms",
+  "core_gameplay_loop": "In Mushroom Cavern, repeat each round: Use break to leave a loop the moment a dangerous foe is spotted. Each round the rival advances, and solving the step moves the dwarf scout ahead. Then check the alert value and advance.",
+  "primary_mechanic": "Break Out",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving alert that move the dwarf scout forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.55).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Break Out",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M10-X5-T06-5857bf81",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Break Out' (Week 4 slot 10), mission type 'Rival Race', and setting 'Mushroom Cavern'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 10,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while True:\n    if danger:\n        break",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how alert changes.",
+    "Step 2: Use the controls to apply the code idea against zombies in Mushroom Cavern.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.55)."
+  ]
+}

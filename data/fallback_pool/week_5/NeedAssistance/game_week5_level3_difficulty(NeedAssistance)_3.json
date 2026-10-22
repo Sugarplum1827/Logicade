@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1263",
+  "game_title": "Stride Selector – Misty Bog Defense",
+  "game_concept": "A action defense set in Mystic Forest – Misty Bog, a misty bog: the forest ranger must handle bog toads while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Misty Bog: a misty bog",
+  "core_gameplay_loop": "In Misty Bog, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round, bog toads strike the seed vault, so respond before the next strike lands. Then check the stones value and advance.",
+  "primary_mechanic": "Stride Selector",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the seed vault from bog toads in Misty Bog: keep the stones meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 50 seconds while stones > 0.",
+  "lose_condition": "stones drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Stride Selector",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M03-X1-T19-c53ff16e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Survival Siege', and setting 'Misty Bog'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 3,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 20, 4):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stones changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Misty Bog.",
+    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while stones > 0."
+  ]
+}

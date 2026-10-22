@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0919",
+  "game_title": "Infinite Loop Trap – Bat Hollow Defense",
+  "game_concept": "A tower defense set in Shadow Cave – Bat Hollow, a hollow of roosting bats: the cave miner must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Infinite Loop Trap: Find the missing update line that makes a loop never stop, before glow-eyed lurkers overload Bat Hollow.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Bat Hollow: a hollow of roosting bats",
+  "core_gameplay_loop": "In Bat Hollow, repeat each round: Find the missing update line that makes a loop never stop, before glow-eyed lurkers overload Bat Hollow. Each round, glow-eyed lurkers strike the exit ledge, so respond before the next strike lands. Then check the loop_safety value and advance.",
+  "primary_mechanic": "Infinite Loop Trap",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the exit ledge from glow-eyed lurkers in Bat Hollow: keep the loop_safety meter above zero by applying the concept correctly until the 30-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 30 seconds while loop_safety > 0.",
+  "lose_condition": "loop_safety drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 1 (intro tier): Infinite Loop Trap",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M04-X1-T03-7e658660",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Infinite Loop Trap' (Week 4 slot 4), mission type 'Survival Siege', and setting 'Bat Hollow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 1,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_safety changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Bat Hollow.",
+    "Step 3: Win by meeting the goal: Timer reaches 30 seconds while loop_safety > 0."
+  ]
+}

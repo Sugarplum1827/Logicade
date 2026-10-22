@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1488",
+  "game_title": "Stride Selector – Spirit Stream Defense",
+  "game_concept": "A action defense set in Mystic Forest – Spirit Stream, a stream of spirits: the druid must handle thorn goblins while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Spirit Stream: a stream of spirits",
+  "core_gameplay_loop": "In Spirit Stream, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round, thorn goblins strike the vine bridge, so respond before the next strike lands. Then check the stones value and advance.",
+  "primary_mechanic": "Stride Selector",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the vine bridge from thorn goblins in Spirit Stream: keep the stones meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 57 seconds while stones > 0.",
+  "lose_condition": "stones drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Stride Selector",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M03-X1-T14-13716cb9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Survival Siege', and setting 'Spirit Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(2, 20, 4):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stones changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Spirit Stream.",
+    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while stones > 0."
+  ]
+}

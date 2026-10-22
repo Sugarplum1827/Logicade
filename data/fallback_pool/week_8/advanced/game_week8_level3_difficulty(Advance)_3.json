@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2183",
+  "game_title": "Phone Book Rescue – Rope Line Rush",
+  "game_concept": "A action puzzle set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Phone Book Rescue: Add and update dictionary entries as contacts change.",
+  "genre": "action puzzle",
+  "theme": "Frost Peaks – Rope Line: a long fixed rope line",
+  "core_gameplay_loop": "In Rope Line, repeat each round: Add and update dictionary entries as contacts change. Each round, a new ropes challenge appears; solve it to bank points before time drains. Then check the contacts value and advance.",
+  "primary_mechanic": "Phone Book Rescue",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 230 points of ropes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 230 within 29 seconds.",
+  "lose_condition": "Timer hits 0 with score < 230, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Phone Book Rescue",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M08-X2-T15-931dd400",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phone Book Rescue' (Week 8 slot 8), mission type 'Resource Rush', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 3,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "book['Ana'] = '0917'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how contacts changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
+    "Step 3: Win by meeting the goal: score >= 230 within 29 seconds."
+  ]
+}

@@ -12,7 +12,7 @@
 // because a child row arrived before its parent.
 
 window.LogiCadeSync = (function () {
-    const syncTriggerMode = 'level_end'; // 'menu' | 'interval' | 'level_end'
+    const syncTriggerMode = 'interval'; // also drains immediately after level completion
     const BACKOFF_SECONDS = [2, 10, 60, 300, 900];
     const MAX_ATTEMPTS = 20;
     const BATCH_SIZE = 50;
@@ -21,6 +21,7 @@ window.LogiCadeSync = (function () {
     const TABLE_ORDER = ['students', 'levels', 'level_attempts', 'events'];
 
     let draining = false;
+    let initialized = false;
 
     async function drainQueue() {
         if (draining || !navigator.onLine) return;
@@ -35,9 +36,31 @@ window.LogiCadeSync = (function () {
             });
 
             const now = Date.now();
+            const abandoned = jobs.filter((j) => j.status === 'inflight' &&
+                (!j.inflight_at || now - Date.parse(j.inflight_at) > 90_000));
+            await Promise.all(abandoned.map((j) => _updateJob(db, {
+                ...j, status: 'failed', inflight_at: null,
+                last_error: 'Recovered an interrupted sync after app restart.',
+                next_retry_at: null,
+            })));
+            const recoveredIds = new Set(abandoned.map((j) => j.job_id));
+            const levelJobs = new Map();
+            for (const job of jobs) {
+                if (job.table === 'levels' && job.payload?.level_id) {
+                    levelJobs.set(job.payload.level_id, job);
+                }
+            }
             const eligible = jobs
-                .filter(j => (j.status === 'pending' || j.status === 'failed'))
+                .filter(j => (
+                    j.status === 'pending' || j.status === 'failed' || recoveredIds.has(j.job_id) ||
+                    (j.status === 'dead' && /23503|foreign key constraint/i.test(j.last_error || ''))
+                ))
                 .filter(j => !j.next_retry_at || Date.parse(j.next_retry_at) <= now)
+                .filter(j => {
+                    if (j.table !== 'level_attempts' && j.table !== 'events') return true;
+                    const parent = levelJobs.get(j.payload?.level_id);
+                    return !parent || parent.status === 'done';
+                })
                 .sort((a, b) => {
                     // Priority: dependencies first
                     const pA = TABLE_ORDER.indexOf(a.table);
@@ -58,8 +81,10 @@ window.LogiCadeSync = (function () {
             for (const table of TABLE_ORDER) {
                 if (!byTable.has(table)) continue;
                 const tableJobs = byTable.get(table);
-                const batch = tableJobs.slice(0, BATCH_SIZE);
-                await drainBatch(db, table, batch);
+                for (let offset = 0; offset < tableJobs.length; offset += BATCH_SIZE) {
+                    const batch = tableJobs.slice(offset, offset + BATCH_SIZE);
+                    if (!(await drainBatch(db, table, batch))) break;
+                }
             }
         } finally {
             draining = false;
@@ -67,29 +92,15 @@ window.LogiCadeSync = (function () {
     }
 
     async function drainBatch(db, table, batch) {
-        await Promise.all(batch.map(j => _updateJob(db, {...j, status: 'inflight'})));
+        await Promise.all(batch.map(j => _updateJob(db, {
+            ...j, status: 'inflight', inflight_at: new Date().toISOString(),
+        })));
 
         try {
-            let url = `${window.LOGICADE_CONFIG.supabaseUrl}/rest/v1/${table}`;
-            if (table === 'levels') {
-                url += '?on_conflict=student_id,level_index';
-            }
-
-            const key = window.LOGICADE_CONFIG.supabaseAnonKey;
-            
-            const headers = {
-                'apikey': key,
-                'Content-Type': 'application/json',
-                'Prefer': 'resolution=merge-duplicates'
-            };
-            if (key && key.startsWith('eyJ')) {
-                headers['Authorization'] = `Bearer ${key}`;
-            }
-
-            const res = await fetch(url, {
+            const res = await fetch('/api/sync/batch', {
                 method: 'POST',
-                headers: headers,
-                body: JSON.stringify(batch.map(j => j.payload))
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ table, rows: batch.map(j => j.payload) }),
             });
 
             if (!res.ok) {
@@ -99,11 +110,13 @@ window.LogiCadeSync = (function () {
 
             console.log(`[sync] delivered ${batch.length} × ${table}`);
             await Promise.all(batch.map(j => _updateJob(db, {
-                ...j, status: 'done', last_error: null, next_retry_at: null,
+                ...j, status: 'done', inflight_at: null, last_error: null, next_retry_at: null,
             })));
+            return true;
         } catch (err) {
             console.error(`[sync] batch failed for ${table}:`, err);
             await Promise.all(batch.map(j => _failJob(db, j, err)));
+            return false;
         }
     }
 
@@ -113,7 +126,7 @@ window.LogiCadeSync = (function () {
         const next = new Date(Date.now() + BACKOFF_SECONDS[delayIdx] * 1000).toISOString();
         const status = attempts >= MAX_ATTEMPTS ? 'dead' : 'failed';
         await _updateJob(db, {
-            ...job, attempts, status,
+            ...job, attempts, status, inflight_at: null,
             last_error: String(err?.message || err),
             next_retry_at: status === 'dead' ? null : next,
         });
@@ -129,10 +142,12 @@ window.LogiCadeSync = (function () {
     }
 
     function init() {
-        window.addEventListener('online', () => drainQueue());
-        if (syncTriggerMode === 'interval') {
-            setInterval(drainQueue, 30_000);
-        }
+        if (initialized) return;
+        initialized = true;
+        const kick = () => drainQueue().catch((err) => console.warn('[sync] queue drain failed:', err));
+        window.addEventListener('online', kick);
+        setInterval(kick, 30_000);
+        kick();
     }
 
     return {init, drainQueue, syncTriggerMode};

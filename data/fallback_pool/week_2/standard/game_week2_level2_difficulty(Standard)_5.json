@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0345",
+  "game_title": "Mixed Type Oracle – Ash Rim Trail Race",
+  "game_concept": "A strategy race set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before magma slimes spring the trap.",
+  "genre": "strategy race",
+  "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
+  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Predict the result or error of mixed-type expressions before magma slimes spring the trap. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the magma valve by solving code steps involving predictions that move the fire warden forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X5-T01-1f447b1a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Rival Race', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
+  ]
+}

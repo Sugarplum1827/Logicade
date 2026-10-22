@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2297",
+  "game_title": "Phrase Slicer – Basecamp Ridge Rush",
+  "game_concept": "A action puzzle set in Frost Peaks – Basecamp Ridge, the basecamp on a ridge: the mountaineer must handle yetis while practicing strings & dictionaries. Core idea – Phrase Slicer: Slice strings to cut messages into exactly the needed pieces.",
+  "genre": "action puzzle",
+  "theme": "Frost Peaks – Basecamp Ridge: the basecamp on a ridge",
+  "core_gameplay_loop": "In Basecamp Ridge, repeat each round: Slice strings to cut messages into exactly the needed pieces. Each round, a new oxygen tanks challenge appears; solve it to bank points before time drains. Then check the phrase_ok value and advance.",
+  "primary_mechanic": "Phrase Slicer",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 340 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 48 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Phrase Slicer",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M02-X2-T01-f696a205",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phrase Slicer' (Week 8 slot 2), mission type 'Resource Rush', and setting 'Basecamp Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 7,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "msg[2:6]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how phrase_ok changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Basecamp Ridge.",
+    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
+  ]
+}

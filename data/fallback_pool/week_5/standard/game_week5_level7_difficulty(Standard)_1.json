@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1391",
+  "game_title": "Max Finder Derby – Fairy Ring Glade Trial",
+  "game_concept": "A logic puzzle set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Max Finder Derby: Track the biggest value seen so far while looping over contestants.",
+  "genre": "logic puzzle",
+  "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
+  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Track the biggest value seen so far while looping over contestants. Each round costs one action, so plan the step so none are wasted. Then check the best value and advance.",
+  "primary_mechanic": "Max Finder Derby",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the fairy lantern using at most 17 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The fairy lantern reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the fairy lantern is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Max Finder Derby",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M11-X3-T03-2508a30c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Max Finder Derby' (Week 5 slot 11), mission type 'Efficiency Trial', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "best = 0\nfor x in scores:\n    if x > best:\n        best = x",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how best changes.",
+    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
+    "Step 3: Win by meeting the goal: The fairy lantern reached with actions_used <= 17."
+  ]
+}

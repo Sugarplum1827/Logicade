@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0818",
+  "game_title": "Range Check Bridge – Shipyard Slip Defense",
+  "game_concept": "A survival strategy set in Coastal Port – Shipyard Slip, a shipyard building boats: the fisher must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Range Check Bridge: Test ranges such as 10 <= weight < 20 to let only the right travelers cross.",
+  "genre": "survival strategy",
+  "theme": "Coastal Port – Shipyard Slip: a shipyard building boats",
+  "core_gameplay_loop": "In Shipyard Slip, repeat each round: Test ranges such as 10 <= weight < 20 to let only the right travelers cross. Each round, pirate raiders strike the dock crane, so respond before the next strike lands. Then check the bridge_load value and advance.",
+  "primary_mechanic": "Range Check Bridge",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the dock crane from pirate raiders in Shipyard Slip: keep the bridge_load meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 71 seconds while bridge_load > 0.",
+  "lose_condition": "bridge_load drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Range Check Bridge",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M08-X1-T04-d0c76db9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Check Bridge' (Week 3 slot 8), mission type 'Survival Siege', and setting 'Shipyard Slip'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 8,
+  "trial": 8,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if 10 <= weight < 20:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bridge_load changes.",
+    "Step 2: Use the controls to apply the code idea against pirate raiders in Shipyard Slip.",
+    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while bridge_load > 0."
+  ]
+}

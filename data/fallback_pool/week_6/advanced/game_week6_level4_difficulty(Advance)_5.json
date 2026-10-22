@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1615",
+  "game_title": "Boolean Guards – Firewood Stacks Race",
+  "game_concept": "A racing platformer set in Snowy Hold – Firewood Stacks, towering firewood stacks: the frost mage must handle winter bandits while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
+  "genre": "racing platformer",
+  "theme": "Snowy Hold – Firewood Stacks: towering firewood stacks",
+  "core_gameplay_loop": "In Firewood Stacks, repeat each round: Write functions returning True or False that guard checkpoints. Each round the rival advances, and solving the step moves the frost mage ahead. Then check the guards value and advance.",
+  "primary_mechanic": "Boolean Guards",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the frozen well by solving code steps involving guards that move the frost mage forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the frozen well first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Boolean Guards",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M10-X5-T11-f4f063b4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Rival Race', and setting 'Firewood Stacks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 4,
+  "trial": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def is_safe(x):\n    return x < 5",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how guards changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Firewood Stacks.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

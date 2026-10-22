@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2299",
+  "game_title": "Split Join Assembly – Rope Line Trial",
+  "game_concept": "A puzzle set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Split Join Assembly: Split sentences into words and join them back to assemble orders.",
+  "genre": "puzzle",
+  "theme": "Frost Peaks – Rope Line: a long fixed rope line",
+  "core_gameplay_loop": "In Rope Line, repeat each round: Split sentences into words and join them back to assemble orders. Each round costs one action, so plan the step so none are wasted. Then check the assembly value and advance.",
+  "primary_mechanic": "Split Join Assembly",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the rope bridge using at most 17 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The rope bridge reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the rope bridge is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Split Join Assembly",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M04-X3-T15-1fa0c4da",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Split Join Assembly' (Week 8 slot 4), mission type 'Efficiency Trial', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 7,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "'a b c'.split()\n'-'.join(words)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how assembly changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
+    "Step 3: Win by meeting the goal: The rope bridge reached with actions_used <= 17."
+  ]
+}

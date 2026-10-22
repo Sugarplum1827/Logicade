@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1409",
+  "game_title": "Loop Choreography – Hollow Log Trail Trial",
+  "game_concept": "A logic puzzle set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "logic puzzle",
+  "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
+  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round costs one action, so plan the step so none are wasted. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the mushroom ring using at most 13 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The mushroom ring reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the mushroom ring is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X3-T05-1e6c16c7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Efficiency Trial', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 9,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
+    "Step 3: Win by meeting the goal: The mushroom ring reached with actions_used <= 13."
+  ]
+}

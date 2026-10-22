@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2435",
+  "game_title": "Test Gauntlet – Salt Flat Crossing Race",
+  "game_concept": "A adventure race set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Test Gauntlet: Run small test cases against a function and fix the failing ones.",
+  "genre": "adventure race",
+  "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
+  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Run small test cases against a function and fix the failing ones. Each round the rival advances, and solving the step moves the scarab scholar ahead. Then check the tests value and advance.",
+  "primary_mechanic": "Test Gauntlet",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the temple door by solving code steps involving tests that move the scarab scholar forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.55).",
+  "lose_condition": "The rival reaches the temple door first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Test Gauntlet",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M05-X5-T11-1fe7530e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Test Gauntlet' (Week 9 slot 5), mission type 'Rival Race', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 5,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "assert f(2) == 4",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.55)."
+  ]
+}

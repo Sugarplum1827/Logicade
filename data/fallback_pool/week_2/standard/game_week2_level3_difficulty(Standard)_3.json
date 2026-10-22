@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0373",
+  "game_title": "Rounding Range – Basalt Stair Defense",
+  "game_concept": "A tower defense set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
+  "genre": "tower defense",
+  "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
+  "core_gameplay_loop": "In Basalt Stair, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round, magma slimes strike the ash barrier, so respond before the next strike lands. Then check the slot_matches value and advance.",
+  "primary_mechanic": "Rounding Range",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the ash barrier from magma slimes in Basalt Stair: keep the slot_matches meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 36 seconds while slot_matches > 0.",
+  "lose_condition": "slot_matches drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Rounding Range",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M13-X1-T09-1e03aabf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Survival Siege', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 3,
+  "trial": 3,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "round(7.46, 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slot_matches changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while slot_matches > 0."
+  ]
+}

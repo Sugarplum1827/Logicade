@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1890",
+  "game_title": "Mutation Mystery – Sunken Altar Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Sunken Altar, an altar half-sunk in earth: the scholar mage must handle rune wisps while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Sunken Altar: an altar half-sunk in earth",
+  "core_gameplay_loop": "In Sunken Altar, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round costs one action, so plan the step so none are wasted. Then check the mutation_safe value and advance.",
+  "primary_mechanic": "Mutation Mystery",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the moon altar using at most 11 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The moon altar reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the moon altar is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Mutation Mystery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M15-X3-T04-709dc72d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Efficiency Trial', and setting 'Sunken Altar'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "b = a.copy()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Sunken Altar.",
+    "Step 3: Win by meeting the goal: The moon altar reached with actions_used <= 11."
+  ]
+}

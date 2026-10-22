@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1970",
+  "game_title": "Stack Of Plates – Eldritch Heart Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Eldritch Heart, the glowing heart of the ruins: the rune scholar must handle rune wisps while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Eldritch Heart: the glowing heart of the ruins",
+  "core_gameplay_loop": "In Eldritch Heart, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round poses one decision; a wrong answer breaks the streak. Then check the stack_balance value and advance.",
+  "primary_mechanic": "Stack Of Plates",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about stack_balance to power up the rune scholar and open the crypt seal.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Stack Of Plates",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M05-X4-T20-e8024ee4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Streak Challenge', and setting 'Eldritch Heart'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "stack.append(x)\nstack.pop()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_balance changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Eldritch Heart.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

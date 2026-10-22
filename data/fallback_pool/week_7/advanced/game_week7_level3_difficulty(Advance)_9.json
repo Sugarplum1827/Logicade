@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1889",
+  "game_title": "Stat Market – Pillar Maze Race",
+  "game_concept": "A adventure race set in Eldritch Ruins – Pillar Maze, a maze of pillars: the tomb cartographer must handle ghost knights while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
+  "genre": "adventure race",
+  "theme": "Eldritch Ruins – Pillar Maze: a maze of pillars",
+  "core_gameplay_loop": "In Pillar Maze, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round the rival advances, and solving the step moves the tomb cartographer ahead. Then check the profit value and advance.",
+  "primary_mechanic": "Stat Market",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the obelisk by solving code steps involving profit that move the tomb cartographer forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the obelisk first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Stat Market",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M14-X5-T17-1cb95fcc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Rival Race', and setting 'Pillar Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 9,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "max(prices)\nsum(prices)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Pillar Maze.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2524",
+  "game_title": "Print Tracer – Dry Well Trial",
+  "game_concept": "A puzzle set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what sand wyrms changed.",
+  "genre": "puzzle",
+  "theme": "Sand Dunes – Dry Well: a nearly dry well",
+  "core_gameplay_loop": "In Dry Well, repeat each round: Insert print statements at the right lines to reveal what sand wyrms changed. Each round costs one action, so plan the step so none are wasted. Then check the trace_clarity value and advance.",
+  "primary_mechanic": "Print Tracer",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the supply tent using at most 20 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The supply tent reached with actions_used <= 20.",
+  "lose_condition": "actions_used exceeds 20 before the supply tent is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Print Tracer",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M04-X3-T10-b2d4fab1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Efficiency Trial', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 5,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "print('x =', x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
+    "Step 3: Win by meeting the goal: The supply tent reached with actions_used <= 20."
+  ]
+}

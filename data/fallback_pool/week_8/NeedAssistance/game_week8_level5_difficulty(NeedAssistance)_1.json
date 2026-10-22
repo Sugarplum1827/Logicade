@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2221",
+  "game_title": "Letter Lock – Cloud Sea Overlook Streak",
+  "game_concept": "A quiz RPG set in Frost Peaks – Cloud Sea Overlook, an overlook above the clouds: the avalanche scout must handle yetis while practicing strings & dictionaries. Core idea – Letter Lock: Use string indexing to pull the right letter and crack the lock on the pass gate.",
+  "genre": "quiz RPG",
+  "theme": "Frost Peaks – Cloud Sea Overlook: an overlook above the clouds",
+  "core_gameplay_loop": "In Cloud Sea Overlook, repeat each round: Use string indexing to pull the right letter and crack the lock on the pass gate. Each round poses one decision; a wrong answer breaks the streak. Then check the lock_letters value and advance.",
+  "primary_mechanic": "Letter Lock",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about lock_letters to power up the avalanche scout and open the pass gate.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Letter Lock",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M01-X4-T09-4ebc35b6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Letter Lock' (Week 8 slot 1), mission type 'Streak Challenge', and setting 'Cloud Sea Overlook'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 5,
+  "trial": 1,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word[0]\nword[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_letters changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Cloud Sea Overlook.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

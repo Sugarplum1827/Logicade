@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0228",
+  "game_title": "Counter Tower – Tavern Quarter Rush",
+  "game_concept": "A speed quiz set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Counter Tower: Increase a counter variable every time apples reach the market bell, stacking the tower higher.",
+  "genre": "speed quiz",
+  "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
+  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Increase a counter variable every time apples reach the market bell, stacking the tower higher. Each round, a new apples challenge appears; solve it to bank points before time drains. Then check the delivered value and advance.",
+  "primary_mechanic": "Counter Tower",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 380 points of apples by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 380 within 51 seconds.",
+  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Counter Tower",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M03-X2-T10-bb96f5a3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Counter Tower' (Week 1 slot 3), mission type 'Resource Rush', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 8,
+  "trial": 8,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "delivered = delivered + 1",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how delivered changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
+    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
+  ]
+}

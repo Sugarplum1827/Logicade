@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2548",
+  "game_title": "Program Assembler – Sundial Plaza Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Sundial Plaza, a giant sundial plaza: the desert nomad must handle sandstorms while practicing debugging & combined skills. Core idea – Program Assembler: Assemble a working program from shuffled code blocks in the right order.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
+  "core_gameplay_loop": "In Sundial Plaza, repeat each round: Assemble a working program from shuffled code blocks in the right order. Each round, sandstorms strike the bazaar gate, so respond before the next strike lands. Then check the program_ok value and advance.",
+  "primary_mechanic": "Program Assembler",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the bazaar gate from sandstorms in Sundial Plaza: keep the program_ok meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while program_ok > 0.",
+  "lose_condition": "program_ok drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Program Assembler",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M13-X1-T14-ad2e2722",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Program Assembler' (Week 9 slot 13), mission type 'Survival Siege', and setting 'Sundial Plaza'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 5,
+  "trial": 8,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "blocks = [...]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how program_ok changes.",
+    "Step 2: Use the controls to apply the code idea against sandstorms in Sundial Plaza.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while program_ok > 0."
+  ]
+}

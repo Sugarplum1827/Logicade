@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1221",
+  "game_title": "Times Table Garden – Stump Court Rush",
+  "game_concept": "A speed quiz set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of glowing seeds using nested for loops for rows and columns.",
+  "genre": "speed quiz",
+  "theme": "Mystic Forest – Stump Court: a court around a giant stump",
+  "core_gameplay_loop": "In Stump Court, repeat each round: Plant a grid of glowing seeds using nested for loops for rows and columns. Each round, a new glowing seeds challenge appears; solve it to bank points before time drains. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 130 points of glowing seeds by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 130 within 24 seconds.",
+  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X2-T17-0911d22f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Resource Rush', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 1,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
+    "Step 3: Win by meeting the goal: score >= 130 within 24 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0954",
+  "game_title": "Loop Counter Conveyor – Exit Light Ledge Trial",
+  "game_concept": "A programming puzzle set in Shadow Cave – Exit Light Ledge, a ledge toward daylight: the spelunker must handle cave spiders while practicing control flow: while loops. Core idea – Loop Counter Conveyor: Count conveyor passes with a loop counter so exactly N items get processed.",
+  "genre": "programming puzzle",
+  "theme": "Shadow Cave – Exit Light Ledge: a ledge toward daylight",
+  "core_gameplay_loop": "In Exit Light Ledge, repeat each round: Count conveyor passes with a loop counter so exactly N items get processed. Each round costs one action, so plan the step so none are wasted. Then check the belt_count value and advance.",
+  "primary_mechanic": "Loop Counter Conveyor",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the stone seal using at most 11 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The stone seal reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the stone seal is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Loop Counter Conveyor",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M09-X3-T20-410d9046",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Counter Conveyor' (Week 4 slot 9), mission type 'Efficiency Trial', and setting 'Exit Light Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 5:\n    i += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how belt_count changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Exit Light Ledge.",
+    "Step 3: Win by meeting the goal: The stone seal reached with actions_used <= 11."
+  ]
+}

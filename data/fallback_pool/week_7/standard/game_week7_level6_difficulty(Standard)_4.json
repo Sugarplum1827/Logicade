@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1964",
+  "game_title": "Stat Market – Overgrown Archway Race",
+  "game_concept": "A adventure race set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
+  "genre": "adventure race",
+  "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
+  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round the rival advances, and solving the step moves the rune scholar ahead. Then check the profit value and advance.",
+  "primary_mechanic": "Stat Market",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the rune gate by solving code steps involving profit that move the rune scholar forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the rune gate first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Stat Market",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M14-X5-T02-b2207fc2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Rival Race', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "max(prices)\nsum(prices)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

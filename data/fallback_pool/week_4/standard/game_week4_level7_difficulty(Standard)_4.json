@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1094",
+  "game_title": "Condition Builder – Underground River Rush",
+  "game_concept": "A action puzzle set in Shadow Cave – Underground River, a black underground river: the shadow ranger must handle cave spiders while practicing control flow: while loops. Core idea – Condition Builder: Choose the loop condition so the loop runs exactly the requested number of times.",
+  "genre": "action puzzle",
+  "theme": "Shadow Cave – Underground River: a black underground river",
+  "core_gameplay_loop": "In Underground River, repeat each round: Choose the loop condition so the loop runs exactly the requested number of times. Each round, a new arrows challenge appears; solve it to bank points before time drains. Then check the loop_runs value and advance.",
+  "primary_mechanic": "Condition Builder",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 340 points of arrows by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 340 within 48 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Condition Builder",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M14-X2-T04-7ffe3ea2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Condition Builder' (Week 4 slot 14), mission type 'Resource Rush', and setting 'Underground River'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i ____ 4:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_runs changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Underground River.",
+    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
+  ]
+}

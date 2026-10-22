@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1860",
+  "game_title": "Mutation Mystery – Overgrown Archway Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
+  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round, vine horrors strike the rune gate, so respond before the next strike lands. Then check the mutation_safe value and advance.",
+  "primary_mechanic": "Mutation Mystery",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the rune gate from vine horrors in Overgrown Archway: keep the mutation_safe meter above zero by applying the concept correctly until the 26-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 26 seconds while mutation_safe > 0.",
+  "lose_condition": "mutation_safe drops to 0, or lives reach 0, before the 26-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Mutation Mystery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M15-X1-T02-dcdf99c7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Survival Siege', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "b = a.copy()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
+    "Step 3: Win by meeting the goal: Timer reaches 26 seconds while mutation_safe > 0."
+  ]
+}

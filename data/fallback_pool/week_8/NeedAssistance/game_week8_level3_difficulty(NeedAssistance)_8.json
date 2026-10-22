@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2168",
+  "game_title": "Phone Book Rescue – Snowline Trail Defense",
+  "game_concept": "A survival strategy set in Frost Peaks – Snowline Trail, the trail at the snowline: the sherpa guide must handle avalanches while practicing strings & dictionaries. Core idea – Phone Book Rescue: Add and update dictionary entries as contacts change.",
+  "genre": "survival strategy",
+  "theme": "Frost Peaks – Snowline Trail: the trail at the snowline",
+  "core_gameplay_loop": "In Snowline Trail, repeat each round: Add and update dictionary entries as contacts change. Each round, avalanches strike the rescue sled, so respond before the next strike lands. Then check the contacts value and advance.",
+  "primary_mechanic": "Phone Book Rescue",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the rescue sled from avalanches in Snowline Trail: keep the contacts meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 50 seconds while contacts > 0.",
+  "lose_condition": "contacts drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Phone Book Rescue",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M08-X1-T14-53bda013",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phone Book Rescue' (Week 8 slot 8), mission type 'Survival Siege', and setting 'Snowline Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 8,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "book['Ana'] = '0917'",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how contacts changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Snowline Trail.",
+    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while contacts > 0."
+  ]
+}

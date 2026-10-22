@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0568",
+  "game_title": "Rounding Range – Lava River Crossing Streak",
+  "game_concept": "A quiz RPG set in Mt. Pyre – Lava River Crossing, a river of molten rock: the volcanologist must handle cinder bats while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
+  "genre": "quiz RPG",
+  "theme": "Mt. Pyre – Lava River Crossing: a river of molten rock",
+  "core_gameplay_loop": "In Lava River Crossing, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round poses one decision; a wrong answer breaks the streak. Then check the slot_matches value and advance.",
+  "primary_mechanic": "Rounding Range",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about slot_matches to power up the volcanologist and open the forge anvil.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Rounding Range",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M13-X4-T02-c00b1ec0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Streak Challenge', and setting 'Lava River Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "round(7.46, 1)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slot_matches changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Lava River Crossing.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

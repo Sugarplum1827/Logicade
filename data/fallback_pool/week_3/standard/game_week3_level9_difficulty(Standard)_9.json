@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0859",
+  "game_title": "And/Or Locks – Rope Walk Rush",
+  "game_concept": "A arcade set in Coastal Port – Rope Walk, the rope-makers' walk: the sailor must handle jellyfish swarms while practicing conditionals (if / elif / else). Core idea – And/Or Locks: Combine conditions with and/or to open a lock that needs several clues.",
+  "genre": "arcade",
+  "theme": "Coastal Port – Rope Walk: the rope-makers' walk",
+  "core_gameplay_loop": "In Rope Walk, repeat each round: Combine conditions with and/or to open a lock that needs several clues. Each round, a new cannonballs challenge appears; solve it to bank points before time drains. Then check the lock_progress value and advance.",
+  "primary_mechanic": "And/Or Locks",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 420 points of cannonballs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 9 (extended tier): And/Or Locks",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M04-X2-T19-768353ca",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'And/Or Locks' (Week 3 slot 4), mission type 'Resource Rush', and setting 'Rope Walk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 9,
+  "trial": 9,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if red and (blue or green):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_progress changes.",
+    "Step 2: Use the controls to apply the code idea against jellyfish swarms in Rope Walk.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

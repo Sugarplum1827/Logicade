@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0504",
+  "game_title": "Parenthesis Puzzle – Fire Shrine Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Fire Shrine, an ancient fire shrine: the ash ranger must handle cinder bats while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the obsidian gate.",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Fire Shrine: an ancient fire shrine",
+  "core_gameplay_loop": "In Fire Shrine, repeat each round: Place parentheses to make an expression equal the number carved on the obsidian gate. Each round costs one action, so plan the step so none are wasted. Then check the puzzle_gap value and advance.",
+  "primary_mechanic": "Parenthesis Puzzle",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the obsidian gate using at most 13 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The obsidian gate reached with actions_used <= 13.",
+  "lose_condition": "actions_used exceeds 13 before the obsidian gate is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Parenthesis Puzzle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M09-X3-T10-328e3f87",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Efficiency Trial', and setting 'Fire Shrine'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 4,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "(2 + 3) * 4",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
+    "Step 2: Use the controls to apply the code idea against cinder bats in Fire Shrine.",
+    "Step 3: Win by meeting the goal: The obsidian gate reached with actions_used <= 13."
+  ]
+}

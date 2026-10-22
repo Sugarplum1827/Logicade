@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2257",
+  "game_title": "Key Vault – Ice Cave Shelter Streak",
+  "game_concept": "A quiz RPG set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Key Vault: Look up values in a dictionary by key to open the flag pole.",
+  "genre": "quiz RPG",
+  "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
+  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Look up values in a dictionary by key to open the flag pole. Each round poses one decision; a wrong answer breaks the streak. Then check the vault_keys value and advance.",
+  "primary_mechanic": "Key Vault",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about vault_keys to power up the mountaineer and open the flag pole.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Key Vault",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M07-X4-T13-962be1c6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Key Vault' (Week 8 slot 7), mission type 'Streak Challenge', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 6,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "vault['gold']",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault_keys changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0047",
+  "game_title": "Reassign Relay – Mill Stream Rush",
+  "game_concept": "A action puzzle set in The Kingdom – Mill Stream, a stream-side windmill: the baker's apprentice must handle thieves while practicing variables & assignment. Core idea – Reassign Relay: Overwrite a variable with a fresh value each round so the old number vanishes before thieves can use it.",
+  "genre": "action puzzle",
+  "theme": "The Kingdom – Mill Stream: a stream-side windmill",
+  "core_gameplay_loop": "In Mill Stream, repeat each round: Overwrite a variable with a fresh value each round so the old number vanishes before thieves can use it. Each round, a new scrolls challenge appears; solve it to bank points before time drains. Then check the wave_target value and advance.",
+  "primary_mechanic": "Reassign Relay",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 140 points of scrolls by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 140 within 33 seconds.",
+  "lose_condition": "Timer hits 0 with score < 140, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Reassign Relay",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M02-X2-T11-8959ec2d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reassign Relay' (Week 1 slot 2), mission type 'Resource Rush', and setting 'Mill Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 2,
+  "trial": 7,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "wave_target = 3\nwave_target = 7",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wave_target changes.",
+    "Step 2: Use the controls to apply the code idea against thieves in Mill Stream.",
+    "Step 3: Win by meeting the goal: score >= 140 within 33 seconds."
+  ]
+}

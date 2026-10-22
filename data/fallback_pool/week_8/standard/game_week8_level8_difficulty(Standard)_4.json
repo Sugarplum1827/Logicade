@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2324",
+  "game_title": "Strip And Replace – Wind Pass Streak",
+  "game_concept": "A rhythm puzzle set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Strip And Replace: Clean messy text with strip() and replace() before the scribes read it.",
+  "genre": "rhythm puzzle",
+  "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
+  "core_gameplay_loop": "In Wind Pass, repeat each round: Clean messy text with strip() and replace() before the scribes read it. Each round poses one decision; a wrong answer breaks the streak. Then check the clean_text value and advance.",
+  "primary_mechanic": "Strip And Replace",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about clean_text to power up the summit pilot and open the cliff anchor.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 8 (extended tier): Strip And Replace",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M14-X4-T06-e49583c7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Strip And Replace' (Week 8 slot 14), mission type 'Streak Challenge', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 8,
+  "trial": 4,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "text.strip().replace('_', ' ')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_text changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

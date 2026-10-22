@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0673",
+  "game_title": "Priority Alert – Customs House Defense",
+  "game_concept": "A tower defense set in Coastal Port – Customs House, the port customs house: the shipwright must handle rogue crabs while practicing conditionals (if / elif / else). Core idea – Priority Alert: Order elif checks correctly because only the first true branch runs.",
+  "genre": "tower defense",
+  "theme": "Coastal Port – Customs House: the port customs house",
+  "core_gameplay_loop": "In Customs House, repeat each round: Order elif checks correctly because only the first true branch runs. Each round, rogue crabs strike the harbor bell, so respond before the next strike lands. Then check the alert_accuracy value and advance.",
+  "primary_mechanic": "Priority Alert",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Protect the harbor bell from rogue crabs in Customs House: keep the alert_accuracy meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 36 seconds while alert_accuracy > 0.",
+  "lose_condition": "alert_accuracy drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Priority Alert",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M13-X1-T09-3bce8a9d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Priority Alert' (Week 3 slot 13), mission type 'Survival Siege', and setting 'Customs House'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 3,
+  "trial": 3,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if x > 0:\n    a()\nelif x > 10:\n    b()  # never runs",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how alert_accuracy changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crabs in Customs House.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while alert_accuracy > 0."
+  ]
+}

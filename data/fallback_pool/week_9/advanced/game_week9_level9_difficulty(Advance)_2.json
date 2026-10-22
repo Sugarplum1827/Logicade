@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2662",
+  "game_title": "Integration Heist – Sunset Dunes Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Sunset Dunes.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Sunset Dunes. Each round, dust devils strike the supply tent, so respond before the next strike lands. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the supply tent from dust devils in Sunset Dunes: keep the heist meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 43 seconds while heist > 0.",
+  "lose_condition": "heist drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X1-T20-7cbc490e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Survival Siege', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 2,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
+    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while heist > 0."
+  ]
+}

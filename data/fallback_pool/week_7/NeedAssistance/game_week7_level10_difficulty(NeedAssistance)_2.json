@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2072",
+  "game_title": "Index Archery – Fallen Statue Garden Rush",
+  "game_concept": "A action puzzle set in Eldritch Ruins – Fallen Statue Garden, a garden of fallen statues: the spirit seeker must handle stone sentinels while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
+  "genre": "action puzzle",
+  "theme": "Eldritch Ruins – Fallen Statue Garden: a garden of fallen statues",
+  "core_gameplay_loop": "In Fallen Statue Garden, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, a new moon crystals challenge appears; solve it to bank points before time drains. Then check the arrows value and advance.",
+  "primary_mechanic": "Index Archery",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 320 points of moon crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 320 within 80 seconds.",
+  "lose_condition": "Timer hits 0 with score < 320, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Index Archery",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M02-X2-T06-11a11ecf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Resource Rush', and setting 'Fallen Statue Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "targets[2]\ntargets[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how arrows changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Fallen Statue Garden.",
+    "Step 3: Win by meeting the goal: score >= 320 within 80 seconds."
+  ]
+}

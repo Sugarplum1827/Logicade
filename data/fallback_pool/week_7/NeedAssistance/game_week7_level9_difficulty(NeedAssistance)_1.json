@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2041",
+  "game_title": "Backpack Append – Pillar Maze Rush",
+  "game_concept": "A arcade set in Eldritch Ruins – Pillar Maze, a maze of pillars: the tomb cartographer must handle ghost knights while practicing lists. Core idea – Backpack Append: Use append and remove to manage the tomb cartographer's backpack list as ghost knights drop loot.",
+  "genre": "arcade",
+  "theme": "Eldritch Ruins – Pillar Maze: a maze of pillars",
+  "core_gameplay_loop": "In Pillar Maze, repeat each round: Use append and remove to manage the tomb cartographer's backpack list as ghost knights drop loot. Each round, a new glyph tablets challenge appears; solve it to bank points before time drains. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 290 points of glyph tablets by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X2-T17-268b54f6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Resource Rush', and setting 'Pillar Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Pillar Maze.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

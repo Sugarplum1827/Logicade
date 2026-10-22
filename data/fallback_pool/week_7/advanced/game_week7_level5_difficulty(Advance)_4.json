@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1944",
+  "game_title": "Length Limit – Fallen Statue Garden Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Fallen Statue Garden, a garden of fallen statues: the spirit seeker must handle stone sentinels while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Fallen Statue Garden.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Fallen Statue Garden: a garden of fallen statues",
+  "core_gameplay_loop": "In Fallen Statue Garden, repeat each round: Use len() to stop the list from growing past the limit of Fallen Statue Garden. Each round poses one decision; a wrong answer breaks the streak. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about capacity to power up the spirit seeker and open the ancient lock.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X4-T06-d9114d11",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Streak Challenge', and setting 'Fallen Statue Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 5,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against stone sentinels in Fallen Statue Garden.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

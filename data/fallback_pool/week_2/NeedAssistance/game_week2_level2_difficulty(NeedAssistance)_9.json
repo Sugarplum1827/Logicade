@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0339",
+  "game_title": "Parenthesis Puzzle – Vent Garden Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the ash barrier.",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
+  "core_gameplay_loop": "In Vent Garden, repeat each round: Place parentheses to make an expression equal the number carved on the ash barrier. Each round, a new fire gems challenge appears; solve it to bank points before time drains. Then check the puzzle_gap value and advance.",
+  "primary_mechanic": "Parenthesis Puzzle",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 100 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 100 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Parenthesis Puzzle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M09-X2-T19-d6e82690",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Resource Rush', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 2,
+  "trial": 9,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "(2 + 3) * 4",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
+    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
+  ]
+}

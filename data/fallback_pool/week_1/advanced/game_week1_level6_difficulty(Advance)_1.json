@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0171",
+  "game_title": "Score Keeper – Throne Hall Rush",
+  "game_concept": "A speed quiz set in The Kingdom – Throne Hall, the throne hall of the kingdom: the knight must handle mischievous imps while practicing variables & assignment. Core idea – Score Keeper: Update score, lives and ammo variables after every event while mischievous imps close in.",
+  "genre": "speed quiz",
+  "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
+  "core_gameplay_loop": "In Throne Hall, repeat each round: Update score, lives and ammo variables after every event while mischievous imps close in. Each round, a new coins challenge appears; solve it to bank points before time drains. Then check the score value and advance.",
+  "primary_mechanic": "Score Keeper",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 390 points of coins by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 6 (applied tier): Score Keeper",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M06-X2-T07-07a9a9e5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Score Keeper' (Week 1 slot 6), mission type 'Resource Rush', and setting 'Throne Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 6,
+  "trial": 1,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "score = score + 10\nlives = lives - 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how score changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous imps in Throne Hall.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

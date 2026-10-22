@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0490",
+  "game_title": "Input Interpreter – Charred Forest Race",
+  "game_concept": "A racing platformer set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
+  "genre": "racing platformer",
+  "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
+  "core_gameplay_loop": "In Charred Forest, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round the rival advances, and solving the step moves the ash ranger ahead. Then check the trust value and advance.",
+  "primary_mechanic": "Input Interpreter",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the smelter by solving code steps involving trust that move the ash ranger forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "lose_condition": "The rival reaches the smelter first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Input Interpreter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M10-X5-T16-08c5cd03",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Rival Race', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "age = int(input())",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trust changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
+  ]
+}

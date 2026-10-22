@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1696",
+  "game_title": "Spell Forge – Lantern Square Streak",
+  "game_concept": "A quiz RPG set in Snowy Hold – Lantern Square, a lantern-lit square: the snow ranger must handle ice wolves while practicing functions. Core idea – Spell Forge: Define a function once, then call it to cast the same spell repeatedly against ice wolves.",
+  "genre": "quiz RPG",
+  "theme": "Snowy Hold – Lantern Square: a lantern-lit square",
+  "core_gameplay_loop": "In Lantern Square, repeat each round: Define a function once, then call it to cast the same spell repeatedly against ice wolves. Each round poses one decision; a wrong answer breaks the streak. Then check the spells value and advance.",
+  "primary_mechanic": "Spell Forge",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about spells to power up the snow ranger and open the sleigh.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 7 (applied tier): Spell Forge",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M01-X4-T14-a031859b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Spell Forge' (Week 6 slot 1), mission type 'Streak Challenge', and setting 'Lantern Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 7,
+  "trial": 6,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def cast():\n    attack()\ncast()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how spells changes.",
+    "Step 2: Use the controls to apply the code idea against ice wolves in Lantern Square.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

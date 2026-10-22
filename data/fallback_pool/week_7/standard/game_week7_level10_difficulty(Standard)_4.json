@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2084",
+  "game_title": "Stat Market – Whisper Stones Trial",
+  "game_concept": "A logic puzzle set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
+  "genre": "logic puzzle",
+  "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
+  "core_gameplay_loop": "In Whisper Stones, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round costs one action, so plan the step so none are wasted. Then check the profit value and advance.",
+  "primary_mechanic": "Stat Market",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the crypt seal using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The crypt seal reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the crypt seal is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Stat Market",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M14-X3-T10-681a02d8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Efficiency Trial', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "max(prices)\nsum(prices)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
+    "Step 3: Win by meeting the goal: The crypt seal reached with actions_used <= 19."
+  ]
+}

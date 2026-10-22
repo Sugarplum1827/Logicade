@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1121",
+  "game_title": "Continue Gate – Stalactite Hall Race",
+  "game_concept": "A adventure race set in Shadow Cave – Stalactite Hall, a hall of dripping stalactites: the lantern keeper must handle slime blobs while practicing control flow: while loops. Core idea – Continue Gate: Use continue to skip spoiled glowing mushrooms but keep the loop running.",
+  "genre": "adventure race",
+  "theme": "Shadow Cave – Stalactite Hall: a hall of dripping stalactites",
+  "core_gameplay_loop": "In Stalactite Hall, repeat each round: Use continue to skip spoiled glowing mushrooms but keep the loop running. Each round the rival advances, and solving the step moves the lantern keeper ahead. Then check the skipped_ok value and advance.",
+  "primary_mechanic": "Continue Gate",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the cave gate by solving code steps involving skipped_ok that move the lantern keeper forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the cave gate first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Continue Gate",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M11-X5-T05-a0e35179",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Continue Gate' (Week 4 slot 11), mission type 'Rival Race', and setting 'Stalactite Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 1,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how skipped_ok changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Stalactite Hall.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

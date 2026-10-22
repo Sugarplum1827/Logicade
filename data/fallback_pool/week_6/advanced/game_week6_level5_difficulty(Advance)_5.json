@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1645",
+  "game_title": "Boolean Guards – Cold Larder Rush",
+  "game_concept": "A arcade set in Snowy Hold – Cold Larder, an ice-cellar larder: the hold guard must handle frozen golems while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
+  "genre": "arcade",
+  "theme": "Snowy Hold – Cold Larder: an ice-cellar larder",
+  "core_gameplay_loop": "In Cold Larder, repeat each round: Write functions returning True or False that guard checkpoints. Each round, a new snowshoes challenge appears; solve it to bank points before time drains. Then check the guards value and advance.",
+  "primary_mechanic": "Boolean Guards",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 340 points of snowshoes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Boolean Guards",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M10-X2-T13-cfae7581",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Resource Rush', and setting 'Cold Larder'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 5,
+  "trial": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def is_safe(x):\n    return x < 5",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how guards changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Cold Larder.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2267",
+  "game_title": "Phrase Slicer – Blizzard Saddle Race",
+  "game_concept": "A adventure race set in Frost Peaks – Blizzard Saddle, a saddle between peaks: the mountaineer must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Phrase Slicer: Slice strings to cut messages into exactly the needed pieces.",
+  "genre": "adventure race",
+  "theme": "Frost Peaks – Blizzard Saddle: a saddle between peaks",
+  "core_gameplay_loop": "In Blizzard Saddle, repeat each round: Slice strings to cut messages into exactly the needed pieces. Each round the rival advances, and solving the step moves the mountaineer ahead. Then check the phrase_ok value and advance.",
+  "primary_mechanic": "Phrase Slicer",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the pass gate by solving code steps involving phrase_ok that move the mountaineer forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "lose_condition": "The rival reaches the pass gate first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Phrase Slicer",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M02-X5-T19-a252561e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phrase Slicer' (Week 8 slot 2), mission type 'Rival Race', and setting 'Blizzard Saddle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 6,
+  "trial": 7,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "msg[2:6]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how phrase_ok changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Blizzard Saddle.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
+  ]
+}

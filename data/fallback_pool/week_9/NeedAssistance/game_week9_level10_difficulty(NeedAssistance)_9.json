@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2679",
+  "game_title": "Edge Case Hunter – Camel Trail Trial",
+  "game_concept": "A programming puzzle set in Sand Dunes – Camel Trail, a camel trail: the oasis keeper must handle scarab swarms while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
+  "genre": "programming puzzle",
+  "theme": "Sand Dunes – Camel Trail: a camel trail",
+  "core_gameplay_loop": "In Camel Trail, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round costs one action, so plan the step so none are wasted. Then check the edge_cases value and advance.",
+  "primary_mechanic": "Edge Case Hunter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the caravan wagon using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The caravan wagon reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the caravan wagon is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Edge Case Hunter",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M09-X3-T15-6876bd8b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Efficiency Trial', and setting 'Camel Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "avg = total / len(items)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how edge_cases changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Camel Trail.",
+    "Step 3: Win by meeting the goal: The caravan wagon reached with actions_used <= 23."
+  ]
+}

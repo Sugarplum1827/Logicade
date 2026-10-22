@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2633",
+  "game_title": "Refactor Rescue – Mirage Road Rush",
+  "game_concept": "A action puzzle set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
+  "genre": "action puzzle",
+  "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
+  "core_gameplay_loop": "In Mirage Road, repeat each round: Clean up messy duplicated code into tidy functions without changing its behavior. Each round, a new scarab charms challenge appears; solve it to bank points before time drains. Then check the clean_score value and advance.",
+  "primary_mechanic": "Refactor Rescue",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 490 points of scarab charms by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Refactor Rescue",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M08-X2-T05-f4cfbf8b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Refactor Rescue' (Week 9 slot 8), mission type 'Resource Rush', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 3,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "def f():\n    ...",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_score changes.",
+    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

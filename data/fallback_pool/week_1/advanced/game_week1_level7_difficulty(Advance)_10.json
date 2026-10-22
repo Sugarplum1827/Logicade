@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0210",
+  "game_title": "Uninitialized Hunt – Chapel Gardens Defense",
+  "game_concept": "A action defense set in The Kingdom – Chapel Gardens, the chapel gardens: the herald must handle rogue crows while practicing variables & assignment. Core idea – Uninitialized Hunt: Find variables used before assignment and fix them before rogue crows exploit the gap.",
+  "genre": "action defense",
+  "theme": "The Kingdom – Chapel Gardens: the chapel gardens",
+  "core_gameplay_loop": "In Chapel Gardens, repeat each round: Find variables used before assignment and fix them before rogue crows exploit the gap. Each round, rogue crows strike the castle gate, so respond before the next strike lands. Then check the bugs_fixed value and advance.",
+  "primary_mechanic": "Uninitialized Hunt",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the castle gate from rogue crows in Chapel Gardens: keep the bugs_fixed meter above zero by applying the concept correctly until the 38-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 38 seconds while bugs_fixed > 0.",
+  "lose_condition": "bugs_fixed drops to 0, or lives reach 0, before the 38-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Uninitialized Hunt",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M15-X1-T12-fc830da6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Uninitialized Hunt' (Week 1 slot 15), mission type 'Survival Siege', and setting 'Chapel Gardens'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 7,
+  "trial": 10,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "total = total + 5  # bug!",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bugs_fixed changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Chapel Gardens.",
+    "Step 3: Win by meeting the goal: Timer reaches 38 seconds while bugs_fixed > 0."
+  ]
+}

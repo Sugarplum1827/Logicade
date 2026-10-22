@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1194",
+  "game_title": "Loop Counter Conveyor – Moss Door Chamber Streak",
+  "game_concept": "A card battler set in Shadow Cave – Moss Door Chamber, a mossy sealed door: the shadow ranger must handle skeleton miners while practicing control flow: while loops. Core idea – Loop Counter Conveyor: Count conveyor passes with a loop counter so exactly N items get processed.",
+  "genre": "card battler",
+  "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
+  "core_gameplay_loop": "In Moss Door Chamber, repeat each round: Count conveyor passes with a loop counter so exactly N items get processed. Each round poses one decision; a wrong answer breaks the streak. Then check the belt_count value and advance.",
+  "primary_mechanic": "Loop Counter Conveyor",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Chain 14 consecutive correct decisions about belt_count to power up the shadow ranger and open the supply cache.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 14.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 10 (extended tier): Loop Counter Conveyor",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M09-X4-T16-7be0c4c7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Counter Conveyor' (Week 4 slot 9), mission type 'Streak Challenge', and setting 'Moss Door Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 10,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 5:\n    i += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how belt_count changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Moss Door Chamber.",
+    "Step 3: Win by meeting the goal: streak counter reaches 14."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1461",
+  "game_title": "Times Table Garden – Woodcutter Clearing Trial",
+  "game_concept": "A programming puzzle set in Mystic Forest – Woodcutter Clearing, a woodcutter's clearing: the forest ranger must handle cursed treants while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of moss bundles using nested for loops for rows and columns.",
+  "genre": "programming puzzle",
+  "theme": "Mystic Forest – Woodcutter Clearing: a woodcutter's clearing",
+  "core_gameplay_loop": "In Woodcutter Clearing, repeat each round: Plant a grid of moss bundles using nested for loops for rows and columns. Each round costs one action, so plan the step so none are wasted. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the fairy lantern using at most 14 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The fairy lantern reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the fairy lantern is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X3-T13-da8fde7d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Efficiency Trial', and setting 'Woodcutter Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Woodcutter Clearing.",
+    "Step 3: Win by meeting the goal: The fairy lantern reached with actions_used <= 14."
+  ]
+}

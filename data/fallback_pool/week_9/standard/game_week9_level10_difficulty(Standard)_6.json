@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2686",
+  "game_title": "Syntax Sweep – Sunset Dunes Race",
+  "game_concept": "A racing platformer set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
+  "genre": "racing platformer",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the syntax_errors value and advance.",
+  "primary_mechanic": "Syntax Sweep",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the supply tent by solving code steps involving syntax_errors that move the desert nomad forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Syntax Sweep",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M01-X5-T20-0271117f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Rival Race', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 10,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "if x > 3\n    print(x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

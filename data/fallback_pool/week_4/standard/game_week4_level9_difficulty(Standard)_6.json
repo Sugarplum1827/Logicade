@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1156",
+  "game_title": "Door Defense – Dragon Hoard Cave Trial",
+  "game_concept": "A puzzle set in Shadow Cave – Dragon Hoard Cave, a hoard-filled cave: the dwarf scout must handle rock golems while practicing control flow: while loops. Core idea – Door Defense: Push to repair the crystal door while the while-loop condition stays true and rock golems keep attacking.",
+  "genre": "puzzle",
+  "theme": "Shadow Cave – Dragon Hoard Cave: a hoard-filled cave",
+  "core_gameplay_loop": "In Dragon Hoard Cave, repeat each round: Push to repair the crystal door while the while-loop condition stays true and rock golems keep attacking. Each round costs one action, so plan the step so none are wasted. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Reach the crystal door using at most 18 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The crystal door reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the crystal door is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X3-T18-65200ddc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Efficiency Trial', and setting 'Dragon Hoard Cave'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 54:\n    player.push()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Dragon Hoard Cave.",
+    "Step 3: Win by meeting the goal: The crystal door reached with actions_used <= 18."
+  ]
+}

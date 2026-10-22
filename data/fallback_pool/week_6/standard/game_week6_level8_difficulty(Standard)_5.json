@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1725",
+  "game_title": "Return Or Print – Cold Larder Rush",
+  "game_concept": "A speed quiz set in Snowy Hold – Cold Larder, an ice-cellar larder: the hold guard must handle frozen golems while practicing functions. Core idea – Return Or Print: Decide whether to return or print and see why only return passes data on.",
+  "genre": "speed quiz",
+  "theme": "Snowy Hold – Cold Larder: an ice-cellar larder",
+  "core_gameplay_loop": "In Cold Larder, repeat each round: Decide whether to return or print and see why only return passes data on. Each round, a new snowshoes challenge appears; solve it to bank points before time drains. Then check the court_score value and advance.",
+  "primary_mechanic": "Return Or Print",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 380 points of snowshoes by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 380 within 51 seconds.",
+  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Return Or Print",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M15-X2-T13-6a56c89a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Return Or Print' (Week 6 slot 15), mission type 'Resource Rush', and setting 'Cold Larder'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "return x  # vs print(x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how court_score changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Cold Larder.",
+    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
+  ]
+}

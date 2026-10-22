@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0375",
+  "game_title": "Mixed Type Oracle – Obsidian Quarry Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before smoke serpents spring the trap.",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
+  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Predict the result or error of mixed-type expressions before smoke serpents spring the trap. Each round, a new fire gems challenge appears; solve it to bank points before time drains. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 180 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 180 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X2-T03-65630833",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Resource Rush', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 3,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
+    "Step 3: Win by meeting the goal: score >= 180 within 36 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2286",
+  "game_title": "Vowel Counter – Cliffside Ledge Trial",
+  "game_concept": "A programming puzzle set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
+  "genre": "programming puzzle",
+  "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
+  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Count vowels in words by looping over characters. Each round costs one action, so plan the step so none are wasted. Then check the vowels value and advance.",
+  "primary_mechanic": "Vowel Counter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the basecamp tent using at most 21 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The basecamp tent reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the basecamp tent is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Vowel Counter",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M06-X3-T08-b775cefd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Efficiency Trial', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 7,
+  "trial": 6,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vowels changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
+    "Step 3: Win by meeting the goal: The basecamp tent reached with actions_used <= 21."
+  ]
+}

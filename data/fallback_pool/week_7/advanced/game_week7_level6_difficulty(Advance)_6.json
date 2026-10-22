@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1976",
+  "game_title": "Comprehension Lab – Overgrown Archway Rush",
+  "game_concept": "A action puzzle set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform carved tiles.",
+  "genre": "action puzzle",
+  "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
+  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Build new lists in one line with list comprehensions to transform carved tiles. Each round, a new carved tiles challenge appears; solve it to bank points before time drains. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 390 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 390 within 36 seconds.",
+  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X2-T02-03d12793",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Resource Rush', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
+    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
+  ]
+}

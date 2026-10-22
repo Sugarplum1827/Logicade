@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0445",
+  "game_title": "Input Interpreter – Pumice Pass Rush",
+  "game_concept": "A arcade set in Mt. Pyre – Pumice Pass, a narrow pumice pass: the fire warden must handle molten golems while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
+  "genre": "arcade",
+  "theme": "Mt. Pyre – Pumice Pass: a narrow pumice pass",
+  "core_gameplay_loop": "In Pumice Pass, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round, a new sulfur crystals challenge appears; solve it to bank points before time drains. Then check the trust value and advance.",
+  "primary_mechanic": "Input Interpreter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 340 points of sulfur crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Input Interpreter",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M10-X2-T13-f6bc2fc8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Resource Rush', and setting 'Pumice Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 5,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "age = int(input())",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trust changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Pumice Pass.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

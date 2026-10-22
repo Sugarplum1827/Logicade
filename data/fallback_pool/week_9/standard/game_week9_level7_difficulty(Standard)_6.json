@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2596",
+  "game_title": "Syntax Sweep – Sundial Plaza Streak",
+  "game_concept": "A quiz RPG set in Sand Dunes – Sundial Plaza, a giant sundial plaza: the desert nomad must handle sandstorms while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
+  "genre": "quiz RPG",
+  "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
+  "core_gameplay_loop": "In Sundial Plaza, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round poses one decision; a wrong answer breaks the streak. Then check the syntax_errors value and advance.",
+  "primary_mechanic": "Syntax Sweep",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about syntax_errors to power up the desert nomad and open the bazaar gate.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Syntax Sweep",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M01-X4-T14-4c4ab561",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Streak Challenge', and setting 'Sundial Plaza'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 6,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "if x > 3\n    print(x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
+    "Step 2: Use the controls to apply the code idea against sandstorms in Sundial Plaza.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

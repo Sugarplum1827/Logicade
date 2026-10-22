@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1082",
+  "game_title": "Countdown Launch – Exit Light Ledge Defense",
+  "game_concept": "A survival strategy set in Shadow Cave – Exit Light Ledge, a ledge toward daylight: the spelunker must handle cave spiders while practicing control flow: while loops. Core idea – Countdown Launch: Tick a countdown down each loop until it hits zero and the launch fires.",
+  "genre": "survival strategy",
+  "theme": "Shadow Cave – Exit Light Ledge: a ledge toward daylight",
+  "core_gameplay_loop": "In Exit Light Ledge, repeat each round: Tick a countdown down each loop until it hits zero and the launch fires. Each round, cave spiders strike the stone seal, so respond before the next strike lands. Then check the count value and advance.",
+  "primary_mechanic": "Countdown Launch",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the stone seal from cave spiders in Exit Light Ledge: keep the count meter above zero by applying the concept correctly until the 67-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 67 seconds while count > 0.",
+  "lose_condition": "count drops to 0, or lives reach 0, before the 67-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Countdown Launch",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M02-X1-T20-6936902d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Countdown Launch' (Week 4 slot 2), mission type 'Survival Siege', and setting 'Exit Light Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 2,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while count > 0:\n    count -= 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how count changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Exit Light Ledge.",
+    "Step 3: Win by meeting the goal: Timer reaches 67 seconds while count > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1457",
+  "game_title": "Volley Counter – Hollow Log Trail Defense",
+  "game_concept": "A survival strategy set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming cursed treants.",
+  "genre": "survival strategy",
+  "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
+  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming cursed treants. Each round, cursed treants strike the mushroom ring, so respond before the next strike lands. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the mushroom ring from cursed treants in Hollow Log Trail: keep the ammo meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 54 seconds while ammo > 0.",
+  "lose_condition": "ammo drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X1-T05-8f254331",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Survival Siege', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while ammo > 0."
+  ]
+}

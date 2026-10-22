@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0016",
+  "game_title": "Variable Crates – Royal Granary Rush",
+  "game_concept": "A arcade set in The Kingdom – Royal Granary, the king's grain stores: the squire must handle siege rats while practicing variables & assignment. Core idea – Variable Crates: Drag collected apples into labelled variable crates, then read each crate's value to feed the castle gate.",
+  "genre": "arcade",
+  "theme": "The Kingdom – Royal Granary: the king's grain stores",
+  "core_gameplay_loop": "In Royal Granary, repeat each round: Drag collected apples into labelled variable crates, then read each crate's value to feed the castle gate. Each round, a new apples challenge appears; solve it to bank points before time drains. Then check the crate_b value and advance.",
+  "primary_mechanic": "Variable Crates",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 100 points of apples by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 100 within 30 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Variable Crates",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M01-X2-T02-744c8d7c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Variable Crates' (Week 1 slot 1), mission type 'Resource Rush', and setting 'Royal Granary'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 6,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "crate_a = 5\ncrate_b = crate_a + 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how crate_b changes.",
+    "Step 2: Use the controls to apply the code idea against siege rats in Royal Granary.",
+    "Step 3: Win by meeting the goal: score >= 100 within 30 seconds."
+  ]
+}

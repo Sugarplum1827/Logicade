@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2188",
+  "game_title": "F-String Herald – Frozen Waterfall Rush",
+  "game_concept": "A arcade set in Frost Peaks – Frozen Waterfall, a frozen waterfall: the rescue climber must handle frost wyrms while practicing strings & dictionaries. Core idea – F-String Herald: Format messages with f-strings that insert live values for announcements.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Frozen Waterfall: a frozen waterfall",
+  "core_gameplay_loop": "In Frozen Waterfall, repeat each round: Format messages with f-strings that insert live values for announcements. Each round, a new supply crates challenge appears; solve it to bank points before time drains. Then check the announcements value and advance.",
+  "primary_mechanic": "F-String Herald",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 230 points of supply crates by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 230 within 29 seconds.",
+  "lose_condition": "Timer hits 0 with score < 230, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): F-String Herald",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M13-X2-T10-062f8eb1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'F-String Herald' (Week 8 slot 13), mission type 'Resource Rush', and setting 'Frozen Waterfall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 8,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "f'{name} scored {pts}'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how announcements changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Frozen Waterfall.",
+    "Step 3: Win by meeting the goal: score >= 230 within 29 seconds."
+  ]
+}

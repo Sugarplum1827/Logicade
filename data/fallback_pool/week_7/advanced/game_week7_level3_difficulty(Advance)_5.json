@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1885",
+  "game_title": "Reverse Parade – Crypt Stairs Trial",
+  "game_concept": "A puzzle set in Eldritch Ruins – Crypt Stairs, stairs to a crypt: the ruin warden must handle ghost knights while practicing lists. Core idea – Reverse Parade: Reverse the order of a parade list with reverse() or slicing.",
+  "genre": "puzzle",
+  "theme": "Eldritch Ruins – Crypt Stairs: stairs to a crypt",
+  "core_gameplay_loop": "In Crypt Stairs, repeat each round: Reverse the order of a parade list with reverse() or slicing. Each round costs one action, so plan the step so none are wasted. Then check the parade_ok value and advance.",
+  "primary_mechanic": "Reverse Parade",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the heart stone using at most 11 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The heart stone reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the heart stone is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Reverse Parade",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M10-X3-T09-b52d50d5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Parade' (Week 7 slot 10), mission type 'Efficiency Trial', and setting 'Crypt Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 5,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "parade[::-1]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how parade_ok changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Crypt Stairs.",
+    "Step 3: Win by meeting the goal: The heart stone reached with actions_used <= 11."
+  ]
+}

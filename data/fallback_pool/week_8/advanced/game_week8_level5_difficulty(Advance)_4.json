@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2244",
+  "game_title": "Frequency Bazaar – Wind Pass Streak",
+  "game_concept": "A card battler set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Frequency Bazaar: Count how often each item appears using a dictionary.",
+  "genre": "card battler",
+  "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
+  "core_gameplay_loop": "In Wind Pass, repeat each round: Count how often each item appears using a dictionary. Each round poses one decision; a wrong answer breaks the streak. Then check the tally value and advance.",
+  "primary_mechanic": "Frequency Bazaar",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about tally to power up the summit pilot and open the cliff anchor.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Frequency Bazaar",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M09-X4-T06-f3064123",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Frequency Bazaar' (Week 8 slot 9), mission type 'Streak Challenge', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 5,
+  "trial": 4,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "count[x] = count.get(x, 0) + 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tally changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

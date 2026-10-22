@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1410",
+  "game_title": "Loop Picker – Berry Thicket Defense",
+  "game_concept": "A action defense set in Mystic Forest – Berry Thicket, a berry thicket: the beast tamer must handle bramble beasts while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Berry Thicket: a berry thicket",
+  "core_gameplay_loop": "In Berry Thicket, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round, bramble beasts strike the heartwood tree, so respond before the next strike lands. Then check the picks_right value and advance.",
+  "primary_mechanic": "Loop Picker",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the heartwood tree from bramble beasts in Berry Thicket: keep the picks_right meter above zero by applying the concept correctly until the 38-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 38 seconds while picks_right > 0.",
+  "lose_condition": "picks_right drops to 0, or lives reach 0, before the 38-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Loop Picker",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M15-X1-T12-453da4eb",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Survival Siege', and setting 'Berry Thicket'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 10,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(3):  # known count",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how picks_right changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Berry Thicket.",
+    "Step 3: Win by meeting the goal: Timer reaches 38 seconds while picks_right > 0."
+  ]
+}

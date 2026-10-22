@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2360",
+  "game_title": "Palindrome Gate – Wind Pass Race",
+  "game_concept": "A adventure race set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
+  "genre": "adventure race",
+  "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
+  "core_gameplay_loop": "In Wind Pass, repeat each round: Check whether a word reads the same backward to open the gate. Each round the rival advances, and solving the step moves the summit pilot ahead. Then check the gate value and advance.",
+  "primary_mechanic": "Palindrome Gate",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the cliff anchor by solving code steps involving gate that move the summit pilot forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "lose_condition": "The rival reaches the cliff anchor first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 9 (extended tier): Palindrome Gate",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M05-X5-T06-71192c91",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Rival Race', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 9,
+  "trial": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word == word[::-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
+  ]
+}

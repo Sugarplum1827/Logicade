@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2204",
+  "game_title": "Strip And Replace – Glacier Lake Defense",
+  "game_concept": "A survival strategy set in Frost Peaks – Glacier Lake, a lake of glacier melt: the summit pilot must handle frost wyrms while practicing strings & dictionaries. Core idea – Strip And Replace: Clean messy text with strip() and replace() before the scribes read it.",
+  "genre": "survival strategy",
+  "theme": "Frost Peaks – Glacier Lake: a lake of glacier melt",
+  "core_gameplay_loop": "In Glacier Lake, repeat each round: Clean messy text with strip() and replace() before the scribes read it. Each round, frost wyrms strike the basecamp tent, so respond before the next strike lands. Then check the clean_text value and advance.",
+  "primary_mechanic": "Strip And Replace",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the basecamp tent from frost wyrms in Glacier Lake: keep the clean_text meter above zero by applying the concept correctly until the 39-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 39 seconds while clean_text > 0.",
+  "lose_condition": "clean_text drops to 0, or lives reach 0, before the 39-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Strip And Replace",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M14-X1-T18-aca5841f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Strip And Replace' (Week 8 slot 14), mission type 'Survival Siege', and setting 'Glacier Lake'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 4,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "text.strip().replace('_', ' ')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_text changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Lake.",
+    "Step 3: Win by meeting the goal: Timer reaches 39 seconds while clean_text > 0."
+  ]
+}

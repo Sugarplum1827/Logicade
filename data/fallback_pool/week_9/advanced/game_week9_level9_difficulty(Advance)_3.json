@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2663",
+  "game_title": "Refactor Rescue – Sandstorm Pass Streak",
+  "game_concept": "A rhythm puzzle set in Sand Dunes – Sandstorm Pass, a pass in a sandstorm: the caravan guide must handle scarab swarms while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
+  "genre": "rhythm puzzle",
+  "theme": "Sand Dunes – Sandstorm Pass: a pass in a sandstorm",
+  "core_gameplay_loop": "In Sandstorm Pass, repeat each round: Clean up messy duplicated code into tidy functions without changing its behavior. Each round poses one decision; a wrong answer breaks the streak. Then check the clean_score value and advance.",
+  "primary_mechanic": "Refactor Rescue",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about clean_score to power up the caravan guide and open the sundial.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Refactor Rescue",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M08-X4-T07-9949d25e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Refactor Rescue' (Week 9 slot 8), mission type 'Streak Challenge', and setting 'Sandstorm Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 3,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "def f():\n    ...",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_score changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Sandstorm Pass.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1475",
+  "game_title": "Sum Sprint – Druid Grove Defense",
+  "game_concept": "A survival strategy set in Mystic Forest – Druid Grove, the druids' grove: the forest ranger must handle mischievous sprites while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Druid Grove.",
+  "genre": "survival strategy",
+  "theme": "Mystic Forest – Druid Grove: the druids' grove",
+  "core_gameplay_loop": "In Druid Grove, repeat each round: Accumulate a total across a loop to pay a toll at Druid Grove. Each round, mischievous sprites strike the herb garden, so respond before the next strike lands. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the herb garden from mischievous sprites in Druid Grove: keep the total meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while total > 0.",
+  "lose_condition": "total drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X1-T07-f9a6b2a7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Survival Siege', and setting 'Druid Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous sprites in Druid Grove.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while total > 0."
+  ]
+}

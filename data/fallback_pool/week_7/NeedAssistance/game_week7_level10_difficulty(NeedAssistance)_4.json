@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2074",
+  "game_title": "Queue Line – Eldritch Heart Trial",
+  "game_concept": "A puzzle set in Eldritch Ruins – Eldritch Heart, the glowing heart of the ruins: the rune scholar must handle rune wisps while practicing lists. Core idea – Queue Line: Serve a queue of visitors with pop(0) in first-come order.",
+  "genre": "puzzle",
+  "theme": "Eldritch Ruins – Eldritch Heart: the glowing heart of the ruins",
+  "core_gameplay_loop": "In Eldritch Heart, repeat each round: Serve a queue of visitors with pop(0) in first-come order. Each round costs one action, so plan the step so none are wasted. Then check the queue_calm value and advance.",
+  "primary_mechanic": "Queue Line",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the crypt seal using at most 23 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The crypt seal reached with actions_used <= 23.",
+  "lose_condition": "actions_used exceeds 23 before the crypt seal is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Queue Line",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M04-X3-T20-da3dc322",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Queue Line' (Week 7 slot 4), mission type 'Efficiency Trial', and setting 'Eldritch Heart'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "line.pop(0)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how queue_calm changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Eldritch Heart.",
+    "Step 3: Win by meeting the goal: The crypt seal reached with actions_used <= 23."
+  ]
+}

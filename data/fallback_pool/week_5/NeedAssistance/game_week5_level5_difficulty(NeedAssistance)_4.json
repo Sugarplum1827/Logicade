@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1324",
+  "game_title": "Squad Marcher – Mushroom Market Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Mushroom Market, a forest mushroom market: the fairy gardener must handle giant beetles while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
+  "core_gameplay_loop": "In Mushroom Market, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round costs one action, so plan the step so none are wasted. Then check the squad_ready value and advance.",
+  "primary_mechanic": "Squad Marcher",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the waterfall gate using at most 20 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The waterfall gate reached with actions_used <= 20.",
+  "lose_condition": "actions_used exceeds 20 before the waterfall gate is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Squad Marcher",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M04-X3-T10-bd7d1330",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Efficiency Trial', and setting 'Mushroom Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for ally in squad:\n    ally.assign()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how squad_ready changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mushroom Market.",
+    "Step 3: Win by meeting the goal: The waterfall gate reached with actions_used <= 20."
+  ]
+}

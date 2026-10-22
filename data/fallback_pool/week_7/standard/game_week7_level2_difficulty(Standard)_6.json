@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1846",
+  "game_title": "Backpack Append – Sunken Altar Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Sunken Altar, an altar half-sunk in earth: the scholar mage must handle rune wisps while practicing lists. Core idea – Backpack Append: Use append and remove to manage the scholar mage's backpack list as rune wisps drop loot.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Sunken Altar: an altar half-sunk in earth",
+  "core_gameplay_loop": "In Sunken Altar, repeat each round: Use append and remove to manage the scholar mage's backpack list as rune wisps drop loot. Each round poses one decision; a wrong answer breaks the streak. Then check the bag_space value and advance.",
+  "primary_mechanic": "Backpack Append",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about bag_space to power up the scholar mage and open the moon altar.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Backpack Append",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M01-X4-T04-f261d772",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Streak Challenge', and setting 'Sunken Altar'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "bag.append('key')\nbag.remove('rock')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bag_space changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Sunken Altar.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

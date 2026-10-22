@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2467",
+  "game_title": "Integration Heist – Sandstorm Pass Trial",
+  "game_concept": "A puzzle set in Sand Dunes – Sandstorm Pass, a pass in a sandstorm: the caravan guide must handle scarab swarms while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstorm Pass.",
+  "genre": "puzzle",
+  "theme": "Sand Dunes – Sandstorm Pass: a pass in a sandstorm",
+  "core_gameplay_loop": "In Sandstorm Pass, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstorm Pass. Each round costs one action, so plan the step so none are wasted. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the sundial using at most 19 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The sundial reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the sundial is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X3-T07-b94fb769",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Efficiency Trial', and setting 'Sandstorm Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 3,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Sandstorm Pass.",
+    "Step 3: Win by meeting the goal: The sundial reached with actions_used <= 19."
+  ]
+}

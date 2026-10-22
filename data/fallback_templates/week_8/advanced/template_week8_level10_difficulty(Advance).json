@@ -1,0 +1,235 @@
+{
+  "template_id": "tmpl_w8_l10_AD",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 8,
+    "level": 10,
+    "difficulty": "Advance"
+  },
+  "file_id": "fallback_0240",
+  "game_title": "Fallback: Safe Get Scout – Frozen Waterfall",
+  "game_concept": "A tower defense set in Frost Peaks – Frozen Waterfall, a frozen waterfall: the mountaineer must hold off yetis while practicing strings & dictionaries. Core idea – Safe Get Scout: Use .get() with a default to avoid missing key errors.",
+  "genre": "tower defense",
+  "theme": "Frost Peaks – Frozen Waterfall: a frozen waterfall",
+  "core_gameplay_loop": "In Frozen Waterfall, repeat each round: Use .get() with a default to avoid missing key errors. Then check safe_lookups and advance.",
+  "primary_mechanic": "Safe Get Scout",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the pass gate from yetis in Frozen Waterfall: keep safe_lookups above zero until the 46-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "safe_lookups > 0 && timer >= 46",
+  "lose_condition": "safe_lookups <= 0 || lives <= 0",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Safe Get Scout",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "FB-W8-L10-AD",
+  "duplicate_check_notes": "Generic fallback template for Week 8, Level 10, Advance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 8,
+  "level": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Strings & Dictionaries",
+    "Apply “Safe Get Scout” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_mountaineer",
+    "enemy": "kenney_yetis",
+    "objective": "kenney_pass_gate",
+    "background": "w8_peaks",
+    "projectile": "kenney_ice_axes",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "safe_lookups",
+    "damage_per_attack": 17,
+    "repair_per_action": 5,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 1,
+    "lives": 2,
+    "hint_count": 0,
+    "game_duration_seconds": 46,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Frozen Waterfall: Safe Get Scout",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "stock.get('apple', 0)",
+    "health_bar": {
+      "visible": true,
+      "label": "safe_lookups",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "safe_lookups > 0 && timer < 46",
+      "then": [
+        "safe_lookups = max(0, safe_lookups - 17)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Yetis attack the pass gate!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "safe_lookups > 0 && safe_lookups < 100 && player_energy >= 5",
+      "then": [
+        "safe_lookups = min(100, safe_lookups + 5)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "safe_lookups >= 100",
+      "then": [
+        "show_message('safe_lookups is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && safe_lookups < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 46 && safe_lookups > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 1)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "safe_lookups > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "safe_lookups <= 30 && safe_lookups > 0",
+      "then": [
+        "show_warning('safe_lookups is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 9,
+      "attack_interval_seconds": 1.05
+    },
+    {
+      "wave": 2,
+      "start_time": 15,
+      "enemy_count": 10,
+      "attack_interval_seconds": 0.8
+    },
+    {
+      "wave": 3,
+      "start_time": 31,
+      "enemy_count": 11,
+      "attack_interval_seconds": 0.8
+    }
+  ],
+  "win": "safe_lookups > 0 && timer >= 46",
+  "lose": "safe_lookups <= 0 || lives <= 0",
+  "hint": "Read the code panel: Use .get() with a default to avoid missing key errors. Keep safe_lookups above zero until the timer reaches 46.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Yetis are coming! Watch the safe_lookups meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: stock.get('apple', 0)"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 46 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Safe Get Scout in Frost Peaks!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "safe_lookups ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

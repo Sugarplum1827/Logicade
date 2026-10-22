@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2339",
+  "game_title": "Strip And Replace – Summit Spire Race",
+  "game_concept": "A adventure race set in Frost Peaks – Summit Spire, the highest spire: the mountaineer must handle storm winds while practicing strings & dictionaries. Core idea – Strip And Replace: Clean messy text with strip() and replace() before the scribes read it.",
+  "genre": "adventure race",
+  "theme": "Frost Peaks – Summit Spire: the highest spire",
+  "core_gameplay_loop": "In Summit Spire, repeat each round: Clean messy text with strip() and replace() before the scribes read it. Each round the rival advances, and solving the step moves the mountaineer ahead. Then check the clean_text value and advance.",
+  "primary_mechanic": "Strip And Replace",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving clean_text that move the mountaineer forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 8 (extended tier): Strip And Replace",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M14-X5-T07-1dc9772a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Strip And Replace' (Week 8 slot 14), mission type 'Rival Race', and setting 'Summit Spire'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 8,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "text.strip().replace('_', ' ')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_text changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Summit Spire.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
+  ]
+}

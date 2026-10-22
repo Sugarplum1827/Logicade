@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0257",
+  "game_title": "Reassign Relay – Blacksmith Row Defense",
+  "game_concept": "A survival strategy set in The Kingdom – Blacksmith Row, a street of busy forges: the baker's apprentice must handle shadow scouts while practicing variables & assignment. Core idea – Reassign Relay: Overwrite a variable with a fresh value each round so the old number vanishes before shadow scouts can use it.",
+  "genre": "survival strategy",
+  "theme": "The Kingdom – Blacksmith Row: a street of busy forges",
+  "core_gameplay_loop": "In Blacksmith Row, repeat each round: Overwrite a variable with a fresh value each round so the old number vanishes before shadow scouts can use it. Each round, shadow scouts strike the drawbridge, so respond before the next strike lands. Then check the wave_target value and advance.",
+  "primary_mechanic": "Reassign Relay",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the drawbridge from shadow scouts in Blacksmith Row: keep the wave_target meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 54 seconds while wave_target > 0.",
+  "lose_condition": "wave_target drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Reassign Relay",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M02-X1-T05-a9aa003a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reassign Relay' (Week 1 slot 2), mission type 'Survival Siege', and setting 'Blacksmith Row'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 9,
+  "trial": 7,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "wave_target = 3\nwave_target = 7",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wave_target changes.",
+    "Step 2: Use the controls to apply the code idea against shadow scouts in Blacksmith Row.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while wave_target > 0."
+  ]
+}

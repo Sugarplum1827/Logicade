@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2401",
+  "game_title": "Syntax Sweep – Oasis Pool Defense",
+  "game_concept": "A tower defense set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
+  "core_gameplay_loop": "In Oasis Pool, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round, giant scorpions strike the temple door, so respond before the next strike lands. Then check the syntax_errors value and advance.",
+  "primary_mechanic": "Syntax Sweep",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the temple door from giant scorpions in Oasis Pool: keep the syntax_errors meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while syntax_errors > 0.",
+  "lose_condition": "syntax_errors drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Syntax Sweep",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M01-X1-T01-352b1348",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Survival Siege', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "if x > 3\n    print(x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while syntax_errors > 0."
+  ]
+}

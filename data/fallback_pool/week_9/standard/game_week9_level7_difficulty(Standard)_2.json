@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2592",
+  "game_title": "Algorithm Race – Dry Well Defense",
+  "game_concept": "A action defense set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
+  "genre": "action defense",
+  "theme": "Sand Dunes – Dry Well: a nearly dry well",
+  "core_gameplay_loop": "In Dry Well, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round, sand wyrms strike the supply tent, so respond before the next strike lands. Then check the speed value and advance.",
+  "primary_mechanic": "Algorithm Race",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the supply tent from sand wyrms in Dry Well: keep the speed meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 48 seconds while speed > 0.",
+  "lose_condition": "speed drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Algorithm Race",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M12-X1-T10-693c6d98",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Survival Siege', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 2,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "sum(range(n))  # vs loop",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how speed changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while speed > 0."
+  ]
+}

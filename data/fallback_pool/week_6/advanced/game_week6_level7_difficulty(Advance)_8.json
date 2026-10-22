@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1708",
+  "game_title": "Function Test Arena – Northern Wall Race",
+  "game_concept": "A racing platformer set in Snowy Hold – Northern Wall, the northern wall: the innkeeper must handle blizzard sprites while practicing functions. Core idea – Function Test Arena: Write quick assert tests to confirm functions behave before facing blizzard sprites.",
+  "genre": "racing platformer",
+  "theme": "Snowy Hold – Northern Wall: the northern wall",
+  "core_gameplay_loop": "In Northern Wall, repeat each round: Write quick assert tests to confirm functions behave before facing blizzard sprites. Each round the rival advances, and solving the step moves the innkeeper ahead. Then check the tests_passed value and advance.",
+  "primary_mechanic": "Function Test Arena",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Beat a rival AI to the watch bell by solving code steps involving tests_passed that move the innkeeper forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the watch bell first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 7 (applied tier): Function Test Arena",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M13-X5-T18-193c0b52",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Function Test Arena' (Week 6 slot 13), mission type 'Rival Race', and setting 'Northern Wall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 7,
+  "trial": 8,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "assert add(2, 3) == 5",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests_passed changes.",
+    "Step 2: Use the controls to apply the code idea against blizzard sprites in Northern Wall.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

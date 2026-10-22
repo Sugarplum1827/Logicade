@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2390",
+  "game_title": "Palindrome Gate – Cliffside Ledge Rush",
+  "game_concept": "A action puzzle set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
+  "genre": "action puzzle",
+  "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
+  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Check whether a word reads the same backward to open the gate. Each round, a new thermal packs challenge appears; solve it to bank points before time drains. Then check the gate value and advance.",
+  "primary_mechanic": "Palindrome Gate",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 460 points of thermal packs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 460 within 57 seconds.",
+  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Palindrome Gate",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M05-X2-T08-2efcdd90",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Resource Rush', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word == word[::-1]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
+    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
+  ]
+}

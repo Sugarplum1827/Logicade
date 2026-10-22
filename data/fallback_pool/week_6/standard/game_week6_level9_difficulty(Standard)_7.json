@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1757",
+  "game_title": "Parameter Potion – Hearth Hall Defense",
+  "game_concept": "A survival strategy set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Parameter Potion: Pass parameters into a function so one recipe makes many potions.",
+  "genre": "survival strategy",
+  "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
+  "core_gameplay_loop": "In Hearth Hall, repeat each round: Pass parameters into a function so one recipe makes many potions. Each round, frozen golems strike the hearth fire, so respond before the next strike lands. Then check the potions value and advance.",
+  "primary_mechanic": "Parameter Potion",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the hearth fire from frozen golems in Hearth Hall: keep the potions meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 54 seconds while potions > 0.",
+  "lose_condition": "potions drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Parameter Potion",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M02-X1-T05-a02deb43",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parameter Potion' (Week 6 slot 2), mission type 'Survival Siege', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 9,
+  "trial": 7,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def brew(herb, amount):",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potions changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while potions > 0."
+  ]
+}

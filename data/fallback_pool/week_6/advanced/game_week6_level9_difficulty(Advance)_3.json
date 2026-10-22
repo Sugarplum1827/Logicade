@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1763",
+  "game_title": "Call Stack Tower – Frozen Well Streak",
+  "game_concept": "A rhythm puzzle set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
+  "genre": "rhythm puzzle",
+  "theme": "Snowy Hold – Frozen Well: a frozen village well",
+  "core_gameplay_loop": "In Frozen Well, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Each round poses one decision; a wrong answer breaks the streak. Then check the stack_height value and advance.",
+  "primary_mechanic": "Call Stack Tower",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about stack_height to power up the hold guard and open the wall banner.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Call Stack Tower",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M08-X4-T07-8b88ceec",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Call Stack Tower' (Week 6 slot 8), mission type 'Streak Challenge', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 9,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def a():\n    b()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_height changes.",
+    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

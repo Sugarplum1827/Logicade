@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1734",
+  "game_title": "Docstring Detective – Blizzard Bridge Race",
+  "game_concept": "A strategy race set in Snowy Hold – Blizzard Bridge, a bridge in a blizzard: the innkeeper must handle snow wraiths while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
+  "genre": "strategy race",
+  "theme": "Snowy Hold – Blizzard Bridge: a bridge in a blizzard",
+  "core_gameplay_loop": "In Blizzard Bridge, repeat each round: Read docstrings to pick the right function for each case. Each round the rival advances, and solving the step moves the innkeeper ahead. Then check the cases value and advance.",
+  "primary_mechanic": "Docstring Detective",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the hold gate by solving code steps involving cases that move the innkeeper forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "lose_condition": "The rival reaches the hold gate first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Docstring Detective",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M09-X5-T12-d559c6df",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Rival Race', and setting 'Blizzard Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 4,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def area(w, h):\n    '''Return area'''",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how cases changes.",
+    "Step 2: Use the controls to apply the code idea against snow wraiths in Blizzard Bridge.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
+  ]
+}

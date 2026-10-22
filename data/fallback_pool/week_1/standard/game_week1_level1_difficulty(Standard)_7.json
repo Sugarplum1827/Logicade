@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0017",
+  "game_title": "Reassign Relay – Royal Stables Race",
+  "game_concept": "A adventure race set in The Kingdom – Royal Stables, the royal stables: the royal scribe must handle goblin raiders while practicing variables & assignment. Core idea – Reassign Relay: Overwrite a variable with a fresh value each round so the old number vanishes before goblin raiders can use it.",
+  "genre": "adventure race",
+  "theme": "The Kingdom – Royal Stables: the royal stables",
+  "core_gameplay_loop": "In Royal Stables, repeat each round: Overwrite a variable with a fresh value each round so the old number vanishes before goblin raiders can use it. Each round the rival advances, and solving the step moves the royal scribe ahead. Then check the wave_target value and advance.",
+  "primary_mechanic": "Reassign Relay",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the royal seal by solving code steps involving wave_target that move the royal scribe forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "lose_condition": "The rival reaches the royal seal first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Reassign Relay",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M02-X5-T09-16bb68f8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reassign Relay' (Week 1 slot 2), mission type 'Rival Race', and setting 'Royal Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 1,
+  "trial": 7,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "wave_target = 3\nwave_target = 7",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wave_target changes.",
+    "Step 2: Use the controls to apply the code idea against goblin raiders in Royal Stables.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
+  ]
+}

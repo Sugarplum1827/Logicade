@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2158",
+  "game_title": "F-String Herald – Cliffside Ledge Race",
+  "game_concept": "A racing platformer set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – F-String Herald: Format messages with f-strings that insert live values for announcements.",
+  "genre": "racing platformer",
+  "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
+  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Format messages with f-strings that insert live values for announcements. Each round the rival advances, and solving the step moves the sherpa guide ahead. Then check the announcements value and advance.",
+  "primary_mechanic": "F-String Herald",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the basecamp tent by solving code steps involving announcements that move the sherpa guide forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "lose_condition": "The rival reaches the basecamp tent first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): F-String Herald",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M13-X5-T08-dc6e64db",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'F-String Herald' (Week 8 slot 13), mission type 'Rival Race', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 2,
+  "trial": 8,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "f'{name} scored {pts}'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how announcements changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
+  ]
+}

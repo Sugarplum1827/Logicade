@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1163",
+  "game_title": "Dam Filler – Mine Cart Tunnel Streak",
+  "game_concept": "A rhythm puzzle set in Shadow Cave – Mine Cart Tunnel, an old mine cart tunnel: the torchbearer must handle shadow wraiths while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
+  "genre": "rhythm puzzle",
+  "theme": "Shadow Cave – Mine Cart Tunnel: an old mine cart tunnel",
+  "core_gameplay_loop": "In Mine Cart Tunnel, repeat each round: Raise the water level in a loop while level < max, without overflowing. Each round poses one decision; a wrong answer breaks the streak. Then check the level value and advance.",
+  "primary_mechanic": "Dam Filler",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about level to power up the torchbearer and open the mine cart.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Dam Filler",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M08-X4-T07-91911ac6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Streak Challenge', and setting 'Mine Cart Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while level < max_level:\n    level += 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how level changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wraiths in Mine Cart Tunnel.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

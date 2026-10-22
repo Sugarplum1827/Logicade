@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1723",
+  "game_title": "Function Test Arena – Sleigh Stables Defense",
+  "game_concept": "A tower defense set in Snowy Hold – Sleigh Stables, the sleigh stables: the hold guard must handle winter bandits while practicing functions. Core idea – Function Test Arena: Write quick assert tests to confirm functions behave before facing winter bandits.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Sleigh Stables: the sleigh stables",
+  "core_gameplay_loop": "In Sleigh Stables, repeat each round: Write quick assert tests to confirm functions behave before facing winter bandits. Each round, winter bandits strike the chapel bell, so respond before the next strike lands. Then check the tests_passed value and advance.",
+  "primary_mechanic": "Function Test Arena",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the chapel bell from winter bandits in Sleigh Stables: keep the tests_passed meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 51 seconds while tests_passed > 0.",
+  "lose_condition": "tests_passed drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Function Test Arena",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M13-X1-T19-c5334dc2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Function Test Arena' (Week 6 slot 13), mission type 'Survival Siege', and setting 'Sleigh Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 8,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "assert add(2, 3) == 5",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests_passed changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Sleigh Stables.",
+    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while tests_passed > 0."
+  ]
+}

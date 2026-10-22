@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1306",
+  "game_title": "Range Runner – Bramble Maze Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the druid moves exactly n steps toward the root gate.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
+  "core_gameplay_loop": "In Bramble Maze, repeat each round: Run a for i in range(n) loop so the druid moves exactly n steps toward the root gate. Each round costs one action, so plan the step so none are wasted. Then check the steps_left value and advance.",
+  "primary_mechanic": "Range Runner",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the root gate using at most 16 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The root gate reached with actions_used <= 16.",
+  "lose_condition": "actions_used exceeds 16 before the root gate is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Range Runner",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M01-X3-T08-37d8d71c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Efficiency Trial', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 4,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(5):\n    step()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how steps_left changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
+    "Step 3: Win by meeting the goal: The root gate reached with actions_used <= 16."
+  ]
+}

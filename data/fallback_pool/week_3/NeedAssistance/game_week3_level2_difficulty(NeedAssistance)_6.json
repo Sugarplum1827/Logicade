@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0636",
+  "game_title": "Nested Maze – Cannon Battery Trial",
+  "game_concept": "A programming puzzle set in Coastal Port – Cannon Battery, the harbor cannon battery: the deckhand must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Nested Maze: Pick routes through nested if statements that branch inside branches.",
+  "genre": "programming puzzle",
+  "theme": "Coastal Port – Cannon Battery: the harbor cannon battery",
+  "core_gameplay_loop": "In Cannon Battery, repeat each round: Pick routes through nested if statements that branch inside branches. Each round costs one action, so plan the step so none are wasted. Then check the route_score value and advance.",
+  "primary_mechanic": "Nested Maze",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the ship's hull using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The ship's hull reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the ship's hull is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 2 (intro tier): Nested Maze",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M06-X3-T18-6560ed5b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Maze' (Week 3 slot 6), mission type 'Efficiency Trial', and setting 'Cannon Battery'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 2,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if door:\n    if key:\n        enter()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how route_score changes.",
+    "Step 2: Use the controls to apply the code idea against rogue waves in Cannon Battery.",
+    "Step 3: Win by meeting the goal: The ship's hull reached with actions_used <= 19."
+  ]
+}

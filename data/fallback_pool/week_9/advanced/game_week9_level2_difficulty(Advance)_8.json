@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2458",
+  "game_title": "Program Assembler – Scorpion Canyon Race",
+  "game_concept": "A racing platformer set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Program Assembler: Assemble a working program from shuffled code blocks in the right order.",
+  "genre": "racing platformer",
+  "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
+  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Assemble a working program from shuffled code blocks in the right order. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the program_ok value and advance.",
+  "primary_mechanic": "Program Assembler",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the water well by solving code steps involving program_ok that move the desert nomad forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "lose_condition": "The rival reaches the water well first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Program Assembler",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M13-X5-T08-6ebfbee5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Program Assembler' (Week 9 slot 13), mission type 'Rival Race', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 8,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "blocks = [...]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how program_ok changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
+  ]
+}

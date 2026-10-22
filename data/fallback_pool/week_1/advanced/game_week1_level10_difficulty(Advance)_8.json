@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0298",
+  "game_title": "Print Probe – Moat Bridge Defense",
+  "game_concept": "A tower defense set in The Kingdom – Moat Bridge, the drawbridge over the moat: the town guard must handle rogue crows while practicing variables & assignment. Core idea – Print Probe: Use print-style probes to reveal hidden variable values before rogue crows act.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
+  "core_gameplay_loop": "In Moat Bridge, repeat each round: Use print-style probes to reveal hidden variable values before rogue crows act. Each round, rogue crows strike the granary door, so respond before the next strike lands. Then check the shield value and advance.",
+  "primary_mechanic": "Print Probe",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the granary door from rogue crows in Moat Bridge: keep the shield meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 46 seconds while shield > 0.",
+  "lose_condition": "shield drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Print Probe",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M13-X1-T04-b2552c7f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Survival Siege', and setting 'Moat Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 8,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "print(shield)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how shield changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Moat Bridge.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while shield > 0."
+  ]
+}

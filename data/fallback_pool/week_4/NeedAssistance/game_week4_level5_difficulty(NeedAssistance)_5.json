@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1025",
+  "game_title": "Sentinel Loop – Whispering Corridor Defense",
+  "game_concept": "A survival strategy set in Shadow Cave – Whispering Corridor, a whispering corridor: the lantern keeper must handle giant bats while practicing control flow: while loops. Core idea – Sentinel Loop: Keep serving visitors while the input is not 'quit' and stop on the sentinel word.",
+  "genre": "survival strategy",
+  "theme": "Shadow Cave – Whispering Corridor: a whispering corridor",
+  "core_gameplay_loop": "In Whispering Corridor, repeat each round: Keep serving visitors while the input is not 'quit' and stop on the sentinel word. Each round, giant bats strike the mine cart, so respond before the next strike lands. Then check the queue_length value and advance.",
+  "primary_mechanic": "Sentinel Loop",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the mine cart from giant bats in Whispering Corridor: keep the queue_length meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 59 seconds while queue_length > 0.",
+  "lose_condition": "queue_length drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Sentinel Loop",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M05-X1-T17-24997226",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sentinel Loop' (Week 4 slot 5), mission type 'Survival Siege', and setting 'Whispering Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 5,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while answer != 'quit':\n    answer = input()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how queue_length changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Whispering Corridor.",
+    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while queue_length > 0."
+  ]
+}

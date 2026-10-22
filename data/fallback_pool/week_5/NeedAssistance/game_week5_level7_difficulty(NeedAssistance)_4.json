@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1384",
+  "game_title": "Squad Marcher – Spirit Stream Rush",
+  "game_concept": "A arcade set in Mystic Forest – Spirit Stream, a stream of spirits: the druid must handle thorn goblins while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Spirit Stream: a stream of spirits",
+  "core_gameplay_loop": "In Spirit Stream, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round, a new acorns challenge appears; solve it to bank points before time drains. Then check the squad_ready value and advance.",
+  "primary_mechanic": "Squad Marcher",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 240 points of acorns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 240 within 67 seconds.",
+  "lose_condition": "Timer hits 0 with score < 240, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Squad Marcher",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M04-X2-T14-b8f80f46",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Resource Rush', and setting 'Spirit Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for ally in squad:\n    ally.assign()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how squad_ready changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Spirit Stream.",
+    "Step 3: Win by meeting the goal: score >= 240 within 67 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0909",
+  "game_title": "Loop Counter Conveyor – Whispering Corridor Race",
+  "game_concept": "A strategy race set in Shadow Cave – Whispering Corridor, a whispering corridor: the lantern keeper must handle giant bats while practicing control flow: while loops. Core idea – Loop Counter Conveyor: Count conveyor passes with a loop counter so exactly N items get processed.",
+  "genre": "strategy race",
+  "theme": "Shadow Cave – Whispering Corridor: a whispering corridor",
+  "core_gameplay_loop": "In Whispering Corridor, repeat each round: Count conveyor passes with a loop counter so exactly N items get processed. Each round the rival advances, and solving the step moves the lantern keeper ahead. Then check the belt_count value and advance.",
+  "primary_mechanic": "Loop Counter Conveyor",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Beat a rival AI to the mine cart by solving code steps involving belt_count that move the lantern keeper forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "lose_condition": "The rival reaches the mine cart first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 1 (intro tier): Loop Counter Conveyor",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M09-X5-T17-59d2b5e6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Counter Conveyor' (Week 4 slot 9), mission type 'Rival Race', and setting 'Whispering Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 1,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 5:\n    i += 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how belt_count changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Whispering Corridor.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
+  ]
+}

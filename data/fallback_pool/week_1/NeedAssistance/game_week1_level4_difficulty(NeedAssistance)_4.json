@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0094",
+  "game_title": "Swap Switch – Village Green Defense",
+  "game_concept": "A tower defense set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Swap Switch: Swap two variables with a temporary slot to reroute torches without losing either value.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Village Green: the green outside the walls",
+  "core_gameplay_loop": "In Village Green, repeat each round: Swap two variables with a temporary slot to reroute torches without losing either value. Each round, rogue knights strike the throne, so respond before the next strike lands. Then check the a value and advance.",
+  "primary_mechanic": "Swap Switch",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the throne from rogue knights in Village Green: keep the a meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 55 seconds while a > 0.",
+  "lose_condition": "a drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 4 (applied tier): Swap Switch",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M04-X1-T08-808cd8e3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Swap Switch' (Week 1 slot 4), mission type 'Survival Siege', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 4,
+  "trial": 4,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "temp = a\na = b\nb = temp",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how a changes.",
+    "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
+    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while a > 0."
+  ]
+}

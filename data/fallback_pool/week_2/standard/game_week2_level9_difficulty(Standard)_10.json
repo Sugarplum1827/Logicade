@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0560",
+  "game_title": "Comparison Duel – Crater Lake Edge Race",
+  "game_concept": "A adventure race set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the lava scout's power beats the shield shown by lava imps.",
+  "genre": "adventure race",
+  "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
+  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Choose ==, !=, < , > or >= so the lava scout's power beats the shield shown by lava imps. Each round the rival advances, and solving the step moves the lava scout ahead. Then check the power value and advance.",
+  "primary_mechanic": "Comparison Duel",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the smelter by solving code steps involving power that move the lava scout forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "lose_condition": "The rival reaches the smelter first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Comparison Duel",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M05-X5-T06-af014e7e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Rival Race', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power > shield",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power changes.",
+    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
+  ]
+}

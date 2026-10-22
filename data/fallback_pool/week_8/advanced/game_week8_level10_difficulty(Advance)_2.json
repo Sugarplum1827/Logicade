@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2392",
+  "game_title": "Key Vault – Glacier Crossing Trial",
+  "game_concept": "A puzzle set in Frost Peaks – Glacier Crossing, a cracking glacier: the sherpa guide must handle frost wyrms while practicing strings & dictionaries. Core idea – Key Vault: Look up values in a dictionary by key to open the summit beacon.",
+  "genre": "puzzle",
+  "theme": "Frost Peaks – Glacier Crossing: a cracking glacier",
+  "core_gameplay_loop": "In Glacier Crossing, repeat each round: Look up values in a dictionary by key to open the summit beacon. Each round costs one action, so plan the step so none are wasted. Then check the vault_keys value and advance.",
+  "primary_mechanic": "Key Vault",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the summit beacon using at most 15 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The summit beacon reached with actions_used <= 15.",
+  "lose_condition": "actions_used exceeds 15 before the summit beacon is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Key Vault",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M07-X3-T02-1c31565b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Key Vault' (Week 8 slot 7), mission type 'Efficiency Trial', and setting 'Glacier Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "vault['gold']",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault_keys changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Crossing.",
+    "Step 3: Win by meeting the goal: The summit beacon reached with actions_used <= 15."
+  ]
+}

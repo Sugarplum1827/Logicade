@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1066",
+  "game_title": "Door Defense – Glowworm Gallery Rush",
+  "game_concept": "A arcade set in Shadow Cave – Glowworm Gallery, a ceiling of glowworms: the dwarf scout must handle cave spiders while practicing control flow: while loops. Core idea – Door Defense: Push to repair the wooden door while the while-loop condition stays true and cave spiders keep attacking.",
+  "genre": "arcade",
+  "theme": "Shadow Cave – Glowworm Gallery: a ceiling of glowworms",
+  "core_gameplay_loop": "In Glowworm Gallery, repeat each round: Push to repair the wooden door while the while-loop condition stays true and cave spiders keep attacking. Each round, a new arrows challenge appears; solve it to bank points before time drains. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 300 points of arrows by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 300 within 45 seconds.",
+  "lose_condition": "Timer hits 0 with score < 300, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 6 (applied tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X2-T12-7583cef8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Resource Rush', and setting 'Glowworm Gallery'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 6,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 45:\n    player.push()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Glowworm Gallery.",
+    "Step 3: Win by meeting the goal: score >= 300 within 45 seconds."
+  ]
+}

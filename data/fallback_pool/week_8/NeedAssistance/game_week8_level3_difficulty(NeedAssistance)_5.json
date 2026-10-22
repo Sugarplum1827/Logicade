@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2165",
+  "game_title": "Palindrome Gate – Ice Cave Shelter Rush",
+  "game_concept": "A action puzzle set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
+  "genre": "action puzzle",
+  "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
+  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Check whether a word reads the same backward to open the gate. Each round, a new crampons challenge appears; solve it to bank points before time drains. Then check the gate value and advance.",
+  "primary_mechanic": "Palindrome Gate",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 130 points of crampons by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 130 within 50 seconds.",
+  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Palindrome Gate",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M05-X2-T13-132c7814",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Resource Rush', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word == word[::-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate changes.",
+    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
+    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
+  ]
+}

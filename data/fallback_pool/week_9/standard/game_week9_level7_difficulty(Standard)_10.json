@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2600",
+  "game_title": "Test Gauntlet – Dune Crest Defense",
+  "game_concept": "A survival strategy set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Test Gauntlet: Run small test cases against a function and fix the failing ones.",
+  "genre": "survival strategy",
+  "theme": "Sand Dunes – Dune Crest: a high dune crest",
+  "core_gameplay_loop": "In Dune Crest, repeat each round: Run small test cases against a function and fix the failing ones. Each round, sand wyrms strike the oasis, so respond before the next strike lands. Then check the tests value and advance.",
+  "primary_mechanic": "Test Gauntlet",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the oasis from sand wyrms in Dune Crest: keep the tests meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 48 seconds while tests > 0.",
+  "lose_condition": "tests drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Test Gauntlet",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M05-X1-T02-24d9d3d8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Test Gauntlet' (Week 9 slot 5), mission type 'Survival Siege', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 7,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "assert f(2) == 4",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while tests > 0."
+  ]
+}

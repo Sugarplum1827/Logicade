@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0558",
+  "game_title": "Modulo Gate – Geyser Flats Streak",
+  "game_concept": "A card battler set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Geyser Flats open (even, odd, divisible by 3).",
+  "genre": "card battler",
+  "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
+  "core_gameplay_loop": "In Geyser Flats, repeat each round: Use % to decide which gates in Geyser Flats open (even, odd, divisible by 3). Each round poses one decision; a wrong answer breaks the streak. Then check the gates_open value and advance.",
+  "primary_mechanic": "Modulo Gate",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about gates_open to power up the lava scout and open the forge anvil.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Modulo Gate",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M03-X4-T12-e97b1d83",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Streak Challenge', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "if n % 3 == 0:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gates_open changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

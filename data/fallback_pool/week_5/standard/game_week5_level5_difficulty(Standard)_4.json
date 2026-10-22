@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1334",
+  "game_title": "Loop Choreography – Moonlit Clearing Trial",
+  "game_concept": "A logic puzzle set in Mystic Forest – Moonlit Clearing, a moonlit clearing: the druid must handle bramble beasts while practicing control flow: for loops. Core idea – Loop Choreography: Repeat dance moves in loops to sync a routine with the beat.",
+  "genre": "logic puzzle",
+  "theme": "Mystic Forest – Moonlit Clearing: a moonlit clearing",
+  "core_gameplay_loop": "In Moonlit Clearing, repeat each round: Repeat dance moves in loops to sync a routine with the beat. Each round costs one action, so plan the step so none are wasted. Then check the sync value and advance.",
+  "primary_mechanic": "Loop Choreography",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the waterfall gate using at most 16 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The waterfall gate reached with actions_used <= 16.",
+  "lose_condition": "actions_used exceeds 16 before the waterfall gate is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Loop Choreography",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M14-X3-T20-8469fd56",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Choreography' (Week 5 slot 14), mission type 'Efficiency Trial', and setting 'Moonlit Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for beat in range(8):\n    dance(beat)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 42,
+    "target_score": 260,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how sync changes.",
+    "Step 2: Use the controls to apply the code idea against bramble beasts in Moonlit Clearing.",
+    "Step 3: Win by meeting the goal: The waterfall gate reached with actions_used <= 16."
+  ]
+}

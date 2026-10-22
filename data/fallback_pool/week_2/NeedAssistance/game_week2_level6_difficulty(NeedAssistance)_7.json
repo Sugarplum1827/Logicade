@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0457",
+  "game_title": "String Glue – Pumice Pass Streak",
+  "game_concept": "A quiz RPG set in Mt. Pyre – Pumice Pass, a narrow pumice pass: the fire warden must handle molten golems while practicing data types & operators. Core idea – String Glue: Concatenate string pieces to forge passwords and spell names.",
+  "genre": "quiz RPG",
+  "theme": "Mt. Pyre – Pumice Pass: a narrow pumice pass",
+  "core_gameplay_loop": "In Pumice Pass, repeat each round: Concatenate string pieces to forge passwords and spell names. Each round poses one decision; a wrong answer breaks the streak. Then check the spell_ok value and advance.",
+  "primary_mechanic": "String Glue",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about spell_ok to power up the fire warden and open the ember furnace.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): String Glue",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M07-X4-T13-801c0736",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'String Glue' (Week 2 slot 7), mission type 'Streak Challenge', and setting 'Pumice Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 7,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "name = 'Dark' + 'Lord'",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how spell_ok changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Pumice Pass.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

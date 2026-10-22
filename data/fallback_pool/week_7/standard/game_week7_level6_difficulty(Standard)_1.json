@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1961",
+  "game_title": "Comprehension Lab – Broken Colonnade Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Broken Colonnade, a row of broken columns: the relic hunter must handle ghost knights while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform glyph tablets.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Broken Colonnade: a row of broken columns",
+  "core_gameplay_loop": "In Broken Colonnade, repeat each round: Build new lists in one line with list comprehensions to transform glyph tablets. Each round, ghost knights strike the glyph door, so respond before the next strike lands. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the glyph door from ghost knights in Broken Colonnade: keep the lab_output meter above zero by applying the concept correctly until the 45-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 45 seconds while lab_output > 0.",
+  "lose_condition": "lab_output drops to 0, or lives reach 0, before the 45-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X1-T01-7126d95c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Survival Siege', and setting 'Broken Colonnade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 6,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against ghost knights in Broken Colonnade.",
+    "Step 3: Win by meeting the goal: Timer reaches 45 seconds while lab_output > 0."
+  ]
+}

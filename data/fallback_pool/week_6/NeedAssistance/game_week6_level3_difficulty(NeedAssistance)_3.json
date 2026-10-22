@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1563",
+  "game_title": "Return Vault – Sleigh Stables Defense",
+  "game_concept": "A action defense set in Snowy Hold – Sleigh Stables, the sleigh stables: the hold guard must handle winter bandits while practicing functions. Core idea – Return Vault: Use return to send a computed value back to the caller and open the chapel bell.",
+  "genre": "action defense",
+  "theme": "Snowy Hold – Sleigh Stables: the sleigh stables",
+  "core_gameplay_loop": "In Sleigh Stables, repeat each round: Use return to send a computed value back to the caller and open the chapel bell. Each round, winter bandits strike the chapel bell, so respond before the next strike lands. Then check the vault value and advance.",
+  "primary_mechanic": "Return Vault",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the chapel bell from winter bandits in Sleigh Stables: keep the vault meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 50 seconds while vault > 0.",
+  "lose_condition": "vault drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 6 – Functions | Level 3 (intro tier): Return Vault",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M03-X1-T19-f056b3bc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Return Vault' (Week 6 slot 3), mission type 'Survival Siege', and setting 'Sleigh Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 3,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def double(x):\n    return x * 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Sleigh Stables.",
+    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while vault > 0."
+  ]
+}

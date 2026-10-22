@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0453",
+  "game_title": "Modulo Gate – Ember Fields Rush",
+  "game_concept": "A speed quiz set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Ember Fields open (even, odd, divisible by 3).",
+  "genre": "speed quiz",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "core_gameplay_loop": "In Ember Fields, repeat each round: Use % to decide which gates in Ember Fields open (even, odd, divisible by 3). Each round, a new sulfur crystals challenge appears; solve it to bank points before time drains. Then check the gates_open value and advance.",
+  "primary_mechanic": "Modulo Gate",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Collect 210 points of sulfur crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 210 within 63 seconds.",
+  "lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Modulo Gate",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M03-X2-T05-2a13525d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Resource Rush', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 3,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "if n % 3 == 0:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gates_open changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
+    "Step 3: Win by meeting the goal: score >= 210 within 63 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0933",
+  "game_title": "Stamina Climb – Whispering Corridor Streak",
+  "game_concept": "A card battler set in Shadow Cave – Whispering Corridor, a whispering corridor: the lantern keeper must handle giant bats while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
+  "genre": "card battler",
+  "theme": "Shadow Cave – Whispering Corridor: a whispering corridor",
+  "core_gameplay_loop": "In Whispering Corridor, repeat each round: Keep climbing while stamina > 0, deciding when to rest inside the loop. Each round poses one decision; a wrong answer breaks the streak. Then check the stamina value and advance.",
+  "primary_mechanic": "Stamina Climb",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about stamina to power up the lantern keeper and open the mine cart.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Stamina Climb",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M03-X4-T17-daeacaa3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Streak Challenge', and setting 'Whispering Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 3,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while stamina > 0:\n    climb()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stamina changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Whispering Corridor.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

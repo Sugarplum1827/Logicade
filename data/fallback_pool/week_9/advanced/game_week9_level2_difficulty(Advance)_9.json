@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2459",
+  "game_title": "Validation Fortress – Camel Trail Trial",
+  "game_concept": "A logic puzzle set in Sand Dunes – Camel Trail, a camel trail: the oasis keeper must handle scarab swarms while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so scarab swarms can't sneak through.",
+  "genre": "logic puzzle",
+  "theme": "Sand Dunes – Camel Trail: a camel trail",
+  "core_gameplay_loop": "In Camel Trail, repeat each round: Write input checks that reject bad data so scarab swarms can't sneak through. Each round costs one action, so plan the step so none are wasted. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the caravan wagon using at most 11 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The caravan wagon reached with actions_used <= 11.",
+  "lose_condition": "actions_used exceeds 11 before the caravan wagon is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X3-T15-5c0efc70",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Efficiency Trial', and setting 'Camel Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against scarab swarms in Camel Trail.",
+    "Step 3: Win by meeting the goal: The caravan wagon reached with actions_used <= 11."
+  ]
+}

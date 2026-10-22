@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0700",
+  "game_title": "Discount Rules – Cliffside Fort Streak",
+  "game_concept": "A quiz RPG set in Coastal Port – Cliffside Fort, a fort on the sea cliffs: the fisher must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
+  "genre": "quiz RPG",
+  "theme": "Coastal Port – Cliffside Fort: a fort on the sea cliffs",
+  "core_gameplay_loop": "In Cliffside Fort, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round poses one decision; a wrong answer breaks the streak. Then check the profit value and advance.",
+  "primary_mechanic": "Discount Rules",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about profit to power up the fisher and open the sea wall.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 4 (applied tier): Discount Rules",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M10-X4-T10-cf26c569",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Streak Challenge', and setting 'Cliffside Fort'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 4,
+  "trial": 10,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if total >= 100:\n    total *= 0.9",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against rogue waves in Cliffside Fort.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1582",
+  "game_title": "Scope Sanctuary – Wolf Watch Streak",
+  "game_concept": "A quiz RPG set in Snowy Hold – Wolf Watch, a lookout against wolves: the snow ranger must handle icicle bats while practicing functions. Core idea – Scope Sanctuary: Distinguish local from global variables to keep salt bags safe from icicle bats.",
+  "genre": "quiz RPG",
+  "theme": "Snowy Hold – Wolf Watch: a lookout against wolves",
+  "core_gameplay_loop": "In Wolf Watch, repeat each round: Distinguish local from global variables to keep salt bags safe from icicle bats. Each round poses one decision; a wrong answer breaks the streak. Then check the scope_safe value and advance.",
+  "primary_mechanic": "Scope Sanctuary",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about scope_safe to power up the snow ranger and open the watch bell.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 3 (intro tier): Scope Sanctuary",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M07-X4-T08-7e328d6d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Scope Sanctuary' (Week 6 slot 7), mission type 'Streak Challenge', and setting 'Wolf Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 3,
+  "trial": 2,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "x = 1\ndef f():\n    x = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how scope_safe changes.",
+    "Step 2: Use the controls to apply the code idea against icicle bats in Wolf Watch.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

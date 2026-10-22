@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1265",
+  "game_title": "Sum Sprint – Woodcutter Clearing Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Woodcutter Clearing, a woodcutter's clearing: the forest ranger must handle cursed treants while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Woodcutter Clearing.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Woodcutter Clearing: a woodcutter's clearing",
+  "core_gameplay_loop": "In Woodcutter Clearing, repeat each round: Accumulate a total across a loop to pay a toll at Woodcutter Clearing. Each round, a new moss bundles challenge appears; solve it to bank points before time drains. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Collect 130 points of moss bundles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 130 within 50 seconds.",
+  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X2-T13-cde81983",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Resource Rush', and setting 'Woodcutter Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Woodcutter Clearing.",
+    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
+  ]
+}

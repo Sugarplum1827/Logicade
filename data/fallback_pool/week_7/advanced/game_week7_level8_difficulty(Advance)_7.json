@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2037",
+  "game_title": "Duplicate Sweep – Glyph Corridor Streak",
+  "game_concept": "A card battler set in Eldritch Ruins – Glyph Corridor, a corridor of glyphs: the relic hunter must handle cursed statues while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of chalk marks while keeping the order.",
+  "genre": "card battler",
+  "theme": "Eldritch Ruins – Glyph Corridor: a corridor of glyphs",
+  "core_gameplay_loop": "In Glyph Corridor, repeat each round: Remove repeated items from a list of chalk marks while keeping the order. Each round poses one decision; a wrong answer breaks the streak. Then check the clean_list value and advance.",
+  "primary_mechanic": "Duplicate Sweep",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about clean_list to power up the relic hunter and open the spirit lantern.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Duplicate Sweep",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M12-X4-T13-0f7d78c1",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Streak Challenge', and setting 'Glyph Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "for x in items:\n    if x not in seen:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_list changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Glyph Corridor.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0639",
+  "game_title": "Signal Logic – Rope Walk Rush",
+  "game_concept": "A speed quiz set in Coastal Port – Rope Walk, the rope-makers' walk: the sailor must handle jellyfish swarms while practicing conditionals (if / elif / else). Core idea – Signal Logic: Control light signals with conditions so nothing crashes at crossings.",
+  "genre": "speed quiz",
+  "theme": "Coastal Port – Rope Walk: the rope-makers' walk",
+  "core_gameplay_loop": "In Rope Walk, repeat each round: Control light signals with conditions so nothing crashes at crossings. Each round, a new cannonballs challenge appears; solve it to bank points before time drains. Then check the safety value and advance.",
+  "primary_mechanic": "Signal Logic",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 100 points of cannonballs by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 100 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 2 (intro tier): Signal Logic",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M09-X2-T19-1a48948e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Signal Logic' (Week 3 slot 9), mission type 'Resource Rush', and setting 'Rope Walk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 2,
+  "trial": 9,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if light == 'red':\n    stop()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how safety changes.",
+    "Step 2: Use the controls to apply the code idea against jellyfish swarms in Rope Walk.",
+    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
+  ]
+}

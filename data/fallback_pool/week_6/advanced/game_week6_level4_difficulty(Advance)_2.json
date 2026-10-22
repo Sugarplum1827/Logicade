@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1612",
+  "game_title": "Scope Sanctuary – Chimney Roofs Defense",
+  "game_concept": "A tower defense set in Snowy Hold – Chimney Roofs, snowy chimney rooftops: the sled courier must handle blizzard sprites while practicing functions. Core idea – Scope Sanctuary: Distinguish local from global variables to keep flint stones safe from blizzard sprites.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Chimney Roofs: snowy chimney rooftops",
+  "core_gameplay_loop": "In Chimney Roofs, repeat each round: Distinguish local from global variables to keep flint stones safe from blizzard sprites. Each round, blizzard sprites strike the larder door, so respond before the next strike lands. Then check the scope_safe value and advance.",
+  "primary_mechanic": "Scope Sanctuary",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the larder door from blizzard sprites in Chimney Roofs: keep the scope_safe meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while scope_safe > 0.",
+  "lose_condition": "scope_safe drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Scope Sanctuary",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M07-X1-T10-809494e0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Scope Sanctuary' (Week 6 slot 7), mission type 'Survival Siege', and setting 'Chimney Roofs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 4,
+  "trial": 2,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "x = 1\ndef f():\n    x = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how scope_safe changes.",
+    "Step 2: Use the controls to apply the code idea against blizzard sprites in Chimney Roofs.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while scope_safe > 0."
+  ]
+}

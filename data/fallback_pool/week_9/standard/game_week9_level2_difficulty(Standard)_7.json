@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2447",
+  "game_title": "Exception Rodeo – Salt Flat Crossing Rush",
+  "game_concept": "A action puzzle set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
+  "genre": "action puzzle",
+  "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
+  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round, a new camel feed challenge appears; solve it to bank points before time drains. Then check the stability value and advance.",
+  "primary_mechanic": "Exception Rodeo",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Collect 140 points of camel feed by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 140 within 33 seconds.",
+  "lose_condition": "Timer hits 0 with score < 140, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Exception Rodeo",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M02-X2-T11-4784f760",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Resource Rush', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "try:\n    n = int(text)\nexcept ValueError:\n    n = 0",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stability changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
+    "Step 3: Win by meeting the goal: score >= 140 within 33 seconds."
+  ]
+}

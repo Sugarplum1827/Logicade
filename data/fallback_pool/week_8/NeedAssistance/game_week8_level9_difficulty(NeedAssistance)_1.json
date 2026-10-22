@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2341",
+  "game_title": "Letter Lock – Sherpa Bridge Rush",
+  "game_concept": "A arcade set in Frost Peaks – Sherpa Bridge, a bridge of fixed ropes: the ice axe ranger must handle yetis while practicing strings & dictionaries. Core idea – Letter Lock: Use string indexing to pull the right letter and crack the lock on the supply cache.",
+  "genre": "arcade",
+  "theme": "Frost Peaks – Sherpa Bridge: a bridge of fixed ropes",
+  "core_gameplay_loop": "In Sherpa Bridge, repeat each round: Use string indexing to pull the right letter and crack the lock on the supply cache. Each round, a new oxygen tanks challenge appears; solve it to bank points before time drains. Then check the lock_letters value and advance.",
+  "primary_mechanic": "Letter Lock",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 290 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 9 (extended tier): Letter Lock",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M01-X2-T17-de40664f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Letter Lock' (Week 8 slot 1), mission type 'Resource Rush', and setting 'Sherpa Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 9,
+  "trial": 1,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word[0]\nword[-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lock_letters changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Sherpa Bridge.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

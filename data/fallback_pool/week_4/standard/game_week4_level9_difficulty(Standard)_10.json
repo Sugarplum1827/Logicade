@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1160",
+  "game_title": "Sentinel Loop – Mushroom Cavern Race",
+  "game_concept": "A adventure race set in Shadow Cave – Mushroom Cavern, a cavern of glowing mushrooms: the dwarf scout must handle zombies while practicing control flow: while loops. Core idea – Sentinel Loop: Keep serving visitors while the input is not 'quit' and stop on the sentinel word.",
+  "genre": "adventure race",
+  "theme": "Shadow Cave – Mushroom Cavern: a cavern of glowing mushrooms",
+  "core_gameplay_loop": "In Mushroom Cavern, repeat each round: Keep serving visitors while the input is not 'quit' and stop on the sentinel word. Each round the rival advances, and solving the step moves the dwarf scout ahead. Then check the queue_length value and advance.",
+  "primary_mechanic": "Sentinel Loop",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving queue_length that move the dwarf scout forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Sentinel Loop",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M05-X5-T06-afff2911",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sentinel Loop' (Week 4 slot 5), mission type 'Rival Race', and setting 'Mushroom Cavern'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 10,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while answer != 'quit':\n    answer = input()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how queue_length changes.",
+    "Step 2: Use the controls to apply the code idea against zombies in Mushroom Cavern.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
+  ]
+}

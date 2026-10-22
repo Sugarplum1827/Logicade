@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1345",
+  "game_title": "Filter Harvest – Woodcutter Clearing Rush",
+  "game_concept": "A arcade set in Mystic Forest – Woodcutter Clearing, a woodcutter's clearing: the forest ranger must handle cursed treants while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only moss bundles that meet a rule.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Woodcutter Clearing: a woodcutter's clearing",
+  "core_gameplay_loop": "In Woodcutter Clearing, repeat each round: Combine for and if to harvest only moss bundles that meet a rule. Each round, a new moss bundles challenge appears; solve it to bank points before time drains. Then check the harvest value and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 340 points of moss bundles by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M10-X2-T13-fd74851b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Resource Rush', and setting 'Woodcutter Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 5,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how harvest changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Woodcutter Clearing.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

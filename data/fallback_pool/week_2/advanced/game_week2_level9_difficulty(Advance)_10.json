@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0570",
+  "game_title": "Mixed Type Oracle – Charred Forest Race",
+  "game_concept": "A strategy race set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before ember hounds spring the trap.",
+  "genre": "strategy race",
+  "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
+  "core_gameplay_loop": "In Charred Forest, repeat each round: Predict the result or error of mixed-type expressions before ember hounds spring the trap. Each round the rival advances, and solving the step moves the ash ranger ahead. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the smelter by solving code steps involving predictions that move the ash ranger forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.2).",
+  "lose_condition": "The rival reaches the smelter first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X5-T16-57f90075",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Rival Race', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.2)."
+  ]
+}

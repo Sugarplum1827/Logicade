@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2212",
+  "game_title": "Key Vault – Frozen Waterfall Defense",
+  "game_concept": "A tower defense set in Frost Peaks – Frozen Waterfall, a frozen waterfall: the rescue climber must handle frost wyrms while practicing strings & dictionaries. Core idea – Key Vault: Look up values in a dictionary by key to open the radio mast.",
+  "genre": "tower defense",
+  "theme": "Frost Peaks – Frozen Waterfall: a frozen waterfall",
+  "core_gameplay_loop": "In Frozen Waterfall, repeat each round: Look up values in a dictionary by key to open the radio mast. Each round, frost wyrms strike the radio mast, so respond before the next strike lands. Then check the vault_keys value and advance.",
+  "primary_mechanic": "Key Vault",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the radio mast from frost wyrms in Frozen Waterfall: keep the vault_keys meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while vault_keys > 0.",
+  "lose_condition": "vault_keys drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Key Vault",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M07-X1-T10-79228950",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Key Vault' (Week 8 slot 7), mission type 'Survival Siege', and setting 'Frozen Waterfall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "vault['gold']",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault_keys changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Frozen Waterfall.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while vault_keys > 0."
+  ]
+}

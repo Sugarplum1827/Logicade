@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1184",
+  "game_title": "Condition Builder – Spider Den Trial",
+  "game_concept": "A logic puzzle set in Shadow Cave – Spider Den, a webbed spider den: the shadow ranger must handle rock golems while practicing control flow: while loops. Core idea – Condition Builder: Choose the loop condition so the loop runs exactly the requested number of times.",
+  "genre": "logic puzzle",
+  "theme": "Shadow Cave – Spider Den: a webbed spider den",
+  "core_gameplay_loop": "In Spider Den, repeat each round: Choose the loop condition so the loop runs exactly the requested number of times. Each round costs one action, so plan the step so none are wasted. Then check the loop_runs value and advance.",
+  "primary_mechanic": "Condition Builder",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the stone seal using at most 19 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The stone seal reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the stone seal is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 10 (extended tier): Condition Builder",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M14-X3-T10-e6a713d2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Condition Builder' (Week 4 slot 14), mission type 'Efficiency Trial', and setting 'Spider Den'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 10,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i ____ 4:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_runs changes.",
+    "Step 2: Use the controls to apply the code idea against rock golems in Spider Den.",
+    "Step 3: Win by meeting the goal: The stone seal reached with actions_used <= 19."
+  ]
+}

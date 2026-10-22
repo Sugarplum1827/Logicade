@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0646",
+  "game_title": "Gatekeeper If – Shipyard Slip Streak",
+  "game_concept": "A quiz RPG set in Coastal Port – Shipyard Slip, a shipyard building boats: the fisher must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Gatekeeper If: Write a single if condition that opens the gate only for friendly visitors.",
+  "genre": "quiz RPG",
+  "theme": "Coastal Port – Shipyard Slip: a shipyard building boats",
+  "core_gameplay_loop": "In Shipyard Slip, repeat each round: Write a single if condition that opens the gate only for friendly visitors. Each round poses one decision; a wrong answer breaks the streak. Then check the gate_integrity value and advance.",
+  "primary_mechanic": "Gatekeeper If",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about gate_integrity to power up the fisher and open the dock crane.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 2 (intro tier): Gatekeeper If",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M01-X4-T04-66237200",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Gatekeeper If' (Week 3 slot 1), mission type 'Streak Challenge', and setting 'Shipyard Slip'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 2,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if has_key:\n    open_gate()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate_integrity changes.",
+    "Step 2: Use the controls to apply the code idea against pirate raiders in Shipyard Slip.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

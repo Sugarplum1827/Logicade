@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0538",
+  "game_title": "Rounding Range – Pyre Summit Rush",
+  "game_concept": "A arcade set in Mt. Pyre – Pyre Summit, the roaring summit: the volcanologist must handle fire sprites while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
+  "genre": "arcade",
+  "theme": "Mt. Pyre – Pyre Summit: the roaring summit",
+  "core_gameplay_loop": "In Pyre Summit, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round, a new ember crystals challenge appears; solve it to bank points before time drains. Then check the slot_matches value and advance.",
+  "primary_mechanic": "Rounding Range",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 490 points of ember crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 490 within 41 seconds.",
+  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Rounding Range",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M13-X2-T20-b0d80aa5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Resource Rush', and setting 'Pyre Summit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "round(7.46, 1)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slot_matches changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Pyre Summit.",
+    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
+  ]
+}

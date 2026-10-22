@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1045",
+  "game_title": "Break Out – Bone Crypt Rush",
+  "game_concept": "A arcade set in Shadow Cave – Bone Crypt, a dusty bone crypt: the torchbearer must handle slime blobs while practicing control flow: while loops. Core idea – Break Out: Use break to leave a loop the moment a dangerous foe is spotted.",
+  "genre": "arcade",
+  "theme": "Shadow Cave – Bone Crypt: a dusty bone crypt",
+  "core_gameplay_loop": "In Bone Crypt, repeat each round: Use break to leave a loop the moment a dangerous foe is spotted. Each round, a new glowing mushrooms challenge appears; solve it to bank points before time drains. Then check the alert value and advance.",
+  "primary_mechanic": "Break Out",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 340 points of glowing mushrooms by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 340 within 34 seconds.",
+  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 5 (applied tier): Break Out",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M10-X2-T13-179b2174",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Break Out' (Week 4 slot 10), mission type 'Resource Rush', and setting 'Bone Crypt'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 5,
+  "trial": 5,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while True:\n    if danger:\n        break",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how alert changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Bone Crypt.",
+    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
+  ]
+}

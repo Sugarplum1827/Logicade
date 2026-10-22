@@ -8,9 +8,13 @@ Keeping them from the same module means the committed files and the
 runtime in-memory fallbacks cannot drift. `generate_fallbacks.py
 --check` catches drift against this module specifically.
 
-Shape: "collect N coins by collision". Valid for weeks 1–8, scores
+Shape: "collect N coins by collision". Valid for weeks 1–9, scores
 cleanly in each difficulty band (see §10 table). Win text varies by
 week so files don't all share one fingerprint.
+
+Note: this is the canonical fallback for the LLM pool path. The
+2,700 pre-generated games in data/fallback_pool/ are served by
+fallback_loader.Registry, not here.
 """
 
 from __future__ import annotations
@@ -21,10 +25,10 @@ from .verifier import compute_fingerprint
 DIFFICULTIES = ("needs_support", "standard", "advanced")
 RULE_COUNT = {"needs_support": 2, "standard": 3, "advanced": 5}
 
-# Operator chosen per week so the 24 files don't collapse to 3 fingerprints.
+# Operator chosen per week so the 27 files don't collapse to 3 fingerprints.
 WIN_STYLE = {
     1: "==", 4: "==", 7: "==",
-    2: ">=", 5: ">=", 8: ">=",
+    2: ">=", 5: ">=", 8: ">=", 9: ">=",
     3: ">",  6: ">",
 }
 
@@ -87,9 +91,16 @@ def build_fallback(week: int, difficulty: str) -> dict:
         "rules": rules,
         "win": _make_win(week, n),
         "hint": f"Collect all {n} coins by walking into them.",
-        "tutor_note": f"Each collision with a coin adds 1 to your score. Reach {n} to win.",
-        "objectives": [f"Collect {n} items", "Complete in under 60s", "Perfect Accuracy"]
+        "tutor_note": (
+            f"Each collision with a coin adds 1 to your score. "
+            f"Reach {n} to win."
+        ),
+        "objectives": [
+            f"Collect {n} items",
+            "Complete in under 60s",
+            "Perfect Accuracy",
+        ],
     }
-    
+
     spec["fingerprint"] = compute_fingerprint(spec)
     return spec

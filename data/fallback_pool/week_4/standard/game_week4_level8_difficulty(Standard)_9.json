@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1129",
+  "game_title": "Infinite Loop Trap – Whispering Corridor Race",
+  "game_concept": "A racing platformer set in Shadow Cave – Whispering Corridor, a whispering corridor: the lantern keeper must handle giant bats while practicing control flow: while loops. Core idea – Infinite Loop Trap: Find the missing update line that makes a loop never stop, before giant bats overload Whispering Corridor.",
+  "genre": "racing platformer",
+  "theme": "Shadow Cave – Whispering Corridor: a whispering corridor",
+  "core_gameplay_loop": "In Whispering Corridor, repeat each round: Find the missing update line that makes a loop never stop, before giant bats overload Whispering Corridor. Each round the rival advances, and solving the step moves the lantern keeper ahead. Then check the loop_safety value and advance.",
+  "primary_mechanic": "Infinite Loop Trap",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Beat a rival AI to the mine cart by solving code steps involving loop_safety that move the lantern keeper forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the mine cart first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 8 (extended tier): Infinite Loop Trap",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M04-X5-T17-7b18f00a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Infinite Loop Trap' (Week 4 slot 4), mission type 'Rival Race', and setting 'Whispering Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 8,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_safety changes.",
+    "Step 2: Use the controls to apply the code idea against giant bats in Whispering Corridor.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

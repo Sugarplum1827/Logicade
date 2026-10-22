@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2123",
+  "game_title": "Phone Book Rescue – Yeti Ridge Trial",
+  "game_concept": "A logic puzzle set in Frost Peaks – Yeti Ridge, a ridge known for yetis: the ice axe ranger must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Phone Book Rescue: Add and update dictionary entries as contacts change.",
+  "genre": "logic puzzle",
+  "theme": "Frost Peaks – Yeti Ridge: a ridge known for yetis",
+  "core_gameplay_loop": "In Yeti Ridge, repeat each round: Add and update dictionary entries as contacts change. Each round costs one action, so plan the step so none are wasted. Then check the contacts value and advance.",
+  "primary_mechanic": "Phone Book Rescue",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Reach the ice ladder using at most 10 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The ice ladder reached with actions_used <= 10.",
+  "lose_condition": "actions_used exceeds 10 before the ice ladder is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Phone Book Rescue",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M08-X3-T11-4f203350",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phone Book Rescue' (Week 8 slot 8), mission type 'Efficiency Trial', and setting 'Yeti Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 3,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "book['Ana'] = '0917'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how contacts changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Yeti Ridge.",
+    "Step 3: Win by meeting the goal: The ice ladder reached with actions_used <= 10."
+  ]
+}

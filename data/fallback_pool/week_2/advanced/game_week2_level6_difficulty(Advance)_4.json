@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0474",
+  "game_title": "Parenthesis Puzzle – Sulfur Springs Defense",
+  "game_concept": "A action defense set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the fire shrine.",
+  "genre": "action defense",
+  "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
+  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Place parentheses to make an expression equal the number carved on the fire shrine. Each round, ember hounds strike the fire shrine, so respond before the next strike lands. Then check the puzzle_gap value and advance.",
+  "primary_mechanic": "Parenthesis Puzzle",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the fire shrine from ember hounds in Sulfur Springs: keep the puzzle_gap meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 36 seconds while puzzle_gap > 0.",
+  "lose_condition": "puzzle_gap drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Parenthesis Puzzle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M09-X1-T08-cda12065",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Survival Siege', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 4,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "(2 + 3) * 4",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while puzzle_gap > 0."
+  ]
+}

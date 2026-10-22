@@ -2,35 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>LogiCade Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LogiCade Player Analytics</title>
     <style>
-        body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
-        h1, h2 { color: #4ade80; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
-        th { background: #222; }
-        tr:nth-child(even) { background: #1a1a1a; }
-        .status { color: #9ca3af; margin-bottom: 20px; }
+        :root { color-scheme: dark; font: 15px/1.5 system-ui, sans-serif; background: #101814; color: #edf5ef; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 28px clamp(16px, 4vw, 56px); }
+        header { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+        h1,h2 { margin:0; color:#b8f2c8; } h1 { font-size: clamp(26px,4vw,38px); } h2 { font-size:20px; margin-bottom:14px; }
+        .status { color:#a7b7ab; margin:8px 0 22px; }
+        .controls { display:flex; gap:10px; align-items:center; }
+        button,select { color:inherit; background:#203329; border:1px solid #3e644d; border-radius:9px; padding:9px 12px; }
+        button { cursor:pointer; } button:hover { background:#2c4937; }
+        .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(155px,1fr)); gap:12px; margin:20px 0 26px; }
+        .card,.panel { background:#17231c; border:1px solid #293e31; border-radius:14px; padding:16px; }
+        .card span { display:block; color:#9eb2a3; font-size:13px; } .card strong { display:block; font-size:26px; margin-top:5px; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr)); gap:16px; }
+        .bars { display:grid; gap:9px; } .bar-row { display:grid; grid-template-columns:82px 1fr 44px; gap:9px; align-items:center; font-size:13px; }
+        .track { height:12px; background:#26372c; border-radius:8px; overflow:hidden; } .fill { height:100%; background:linear-gradient(90deg,#54c879,#bbef8e); border-radius:8px; }
+        .table-wrap { overflow:auto; } table { width:100%; border-collapse:collapse; min-width:570px; } th,td { text-align:left; padding:10px 9px; border-bottom:1px solid #2a3c30; } th { color:#acc4b2; font-weight:600; }
+        .empty { color:#9eb2a3; padding:12px 0; } footer { color:#819589; margin:24px 0 4px; font-size:12px; }
     </style>
 </head>
 <body>
-    <h1>LogiCade Admin Dashboard</h1>
-    <div class="status" id="status">Connecting to Supabase Realtime...</div>
+    <header>
+        <div><h1>Player activity</h1><div class="status" id="status">Loading analytics…</div></div>
+        <div class="controls"><select id="week-filter" aria-label="Filter by week"><option value="all">All weeks</option></select><button id="refresh">Refresh</button></div>
+    </header>
+    <section class="cards" id="metrics" aria-live="polite"></section>
+    <div class="grid">
+        <section class="panel"><h2>Progress by week</h2><div id="weekly-chart" class="bars"></div></section>
+        <section class="panel"><h2>Player activity</h2><div id="activity-chart" class="bars"></div></section>
+    </div>
+    <section class="panel" style="margin-top:16px"><h2>Mechanic performance</h2><div class="table-wrap"><table><thead><tr><th>Mechanic</th><th>Topic</th><th>Players</th><th>Levels</th><th>Attempts</th><th>First score</th><th>Errors</th><th>Hints</th></tr></thead><tbody id="mechanics-table"></tbody></table></div></section>
+    <footer>Analytics refresh automatically every 20 seconds. Student identifiers are not shown.</footer>
 
-    <h2>Level Summary</h2>
-    <table id="level-summary-table">
-        <thead>
-            <tr>
-                <th>Student ID</th><th>Week</th><th>Level Index</th>
-                <th>First Attempt Score</th><th>Total Attempts</th>
-                <th>Repeats</th><th>Next Difficulty</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <!-- REMOVED /config.js script tag -->
     <script src="dashboard.js"></script>
 </body>
 </html>

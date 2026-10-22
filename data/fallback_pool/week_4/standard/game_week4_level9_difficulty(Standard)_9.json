@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1159",
+  "game_title": "Infinite Loop Trap – Shadow Pit Rush",
+  "game_concept": "A arcade set in Shadow Cave – Shadow Pit, a pit of deep shadow: the torchbearer must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Infinite Loop Trap: Find the missing update line that makes a loop never stop, before glow-eyed lurkers overload Shadow Pit.",
+  "genre": "arcade",
+  "theme": "Shadow Cave – Shadow Pit: a pit of deep shadow",
+  "core_gameplay_loop": "In Shadow Pit, repeat each round: Find the missing update line that makes a loop never stop, before glow-eyed lurkers overload Shadow Pit. Each round, a new lantern oil challenge appears; solve it to bank points before time drains. Then check the loop_safety value and advance.",
+  "primary_mechanic": "Infinite Loop Trap",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Collect 420 points of lantern oil by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 420 within 54 seconds.",
+  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Infinite Loop Trap",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M04-X2-T19-31c10044",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Infinite Loop Trap' (Week 4 slot 4), mission type 'Resource Rush', and setting 'Shadow Pit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 9,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_safety changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Shadow Pit.",
+    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
+  ]
+}

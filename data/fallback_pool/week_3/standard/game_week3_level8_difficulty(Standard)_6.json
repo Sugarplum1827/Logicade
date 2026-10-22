@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0826",
+  "game_title": "Gatekeeper If – Tavern Terrace Defense",
+  "game_concept": "A tower defense set in Coastal Port – Tavern Terrace, a seaside tavern terrace: the fisher must handle smugglers while practicing conditionals (if / elif / else). Core idea – Gatekeeper If: Write a single if condition that opens the gate only for friendly visitors.",
+  "genre": "tower defense",
+  "theme": "Coastal Port – Tavern Terrace: a seaside tavern terrace",
+  "core_gameplay_loop": "In Tavern Terrace, repeat each round: Write a single if condition that opens the gate only for friendly visitors. Each round, smugglers strike the treasure chest, so respond before the next strike lands. Then check the gate_integrity value and advance.",
+  "primary_mechanic": "Gatekeeper If",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the treasure chest from smugglers in Tavern Terrace: keep the gate_integrity meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 51 seconds while gate_integrity > 0.",
+  "lose_condition": "gate_integrity drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Gatekeeper If",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M01-X1-T16-b8235d1e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Gatekeeper If' (Week 3 slot 1), mission type 'Survival Siege', and setting 'Tavern Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 8,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if has_key:\n    open_gate()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate_integrity changes.",
+    "Step 2: Use the controls to apply the code idea against smugglers in Tavern Terrace.",
+    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while gate_integrity > 0."
+  ]
+}

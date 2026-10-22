@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1051",
+  "game_title": "Door Defense – Collapsed Passage Defense",
+  "game_concept": "A tower defense set in Shadow Cave – Collapsed Passage, a half-collapsed passage: the lantern keeper must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Door Defense: Push to repair the lantern post while the while-loop condition stays true and glow-eyed lurkers keep attacking.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Collapsed Passage: a half-collapsed passage",
+  "core_gameplay_loop": "In Collapsed Passage, repeat each round: Push to repair the lantern post while the while-loop condition stays true and glow-eyed lurkers keep attacking. Each round, glow-eyed lurkers strike the lantern post, so respond before the next strike lands. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the lantern post from glow-eyed lurkers in Collapsed Passage: keep the door_health meter above zero by applying the concept correctly until the 63-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 63 seconds while door_health > 0.",
+  "lose_condition": "door_health drops to 0, or lives reach 0, before the 63-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 6 (applied tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X1-T11-2930a2d6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Survival Siege', and setting 'Collapsed Passage'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 6,
+  "trial": 1,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 63:\n    player.push()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Collapsed Passage.",
+    "Step 3: Win by meeting the goal: Timer reaches 63 seconds while door_health > 0."
+  ]
+}

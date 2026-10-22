@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1863",
+  "game_title": "Slice Slicer – Moonstone Terrace Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Moonstone Terrace, a terrace of moonstone: the relic hunter must handle echo phantoms while practicing lists. Core idea – Slice Slicer: Cut lists with slices like items[1:4] to grab exactly the right group.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Moonstone Terrace: a terrace of moonstone",
+  "core_gameplay_loop": "In Moonstone Terrace, repeat each round: Cut lists with slices like items[1:4] to grab exactly the right group. Each round, echo phantoms strike the heart stone, so respond before the next strike lands. Then check the slice_ok value and advance.",
+  "primary_mechanic": "Slice Slicer",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the heart stone from echo phantoms in Moonstone Terrace: keep the slice_ok meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 50 seconds while slice_ok > 0.",
+  "lose_condition": "slice_ok drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Slice Slicer",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M03-X1-T19-fa64e2b4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Slice Slicer' (Week 7 slot 3), mission type 'Survival Siege', and setting 'Moonstone Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "items[1:4]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slice_ok changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Moonstone Terrace.",
+    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while slice_ok > 0."
+  ]
+}

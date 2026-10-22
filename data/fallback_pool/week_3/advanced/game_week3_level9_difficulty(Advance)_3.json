@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0863",
+  "game_title": "Range Check Bridge – Merchant Wharf Streak",
+  "game_concept": "A rhythm puzzle set in Coastal Port – Merchant Wharf, the merchant wharf: the sailor must handle storm gulls while practicing conditionals (if / elif / else). Core idea – Range Check Bridge: Test ranges such as 10 <= weight < 20 to let only the right travelers cross.",
+  "genre": "rhythm puzzle",
+  "theme": "Coastal Port – Merchant Wharf: the merchant wharf",
+  "core_gameplay_loop": "In Merchant Wharf, repeat each round: Test ranges such as 10 <= weight < 20 to let only the right travelers cross. Each round poses one decision; a wrong answer breaks the streak. Then check the bridge_load value and advance.",
+  "primary_mechanic": "Range Check Bridge",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about bridge_load to power up the sailor and open the signal flag.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 9 (extended tier): Range Check Bridge",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M08-X4-T07-9516b127",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Check Bridge' (Week 3 slot 8), mission type 'Streak Challenge', and setting 'Merchant Wharf'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 9,
+  "trial": 3,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if 10 <= weight < 20:",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bridge_load changes.",
+    "Step 2: Use the controls to apply the code idea against storm gulls in Merchant Wharf.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1405",
+  "game_title": "Filter Harvest – Stump Court Defense",
+  "game_concept": "A tower defense set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only glowing seeds that meet a rule.",
+  "genre": "tower defense",
+  "theme": "Mystic Forest – Stump Court: a court around a giant stump",
+  "core_gameplay_loop": "In Stump Court, repeat each round: Combine for and if to harvest only glowing seeds that meet a rule. Each round, shadow wolves strike the herb garden, so respond before the next strike lands. Then check the harvest value and advance.",
+  "primary_mechanic": "Filter Harvest",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the herb garden from shadow wolves in Stump Court: keep the harvest meter above zero by applying the concept correctly until the 38-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 38 seconds while harvest > 0.",
+  "lose_condition": "harvest drops to 0, or lives reach 0, before the 38-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Filter Harvest",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M10-X1-T17-0c2c3c03",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Survival Siege', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for item in basket:\n    if item.ripe:\n        keep(item)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how harvest changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
+    "Step 3: Win by meeting the goal: Timer reaches 38 seconds while harvest > 0."
+  ]
+}

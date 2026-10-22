@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1472",
+  "game_title": "Volley Counter – Firefly Meadow Rush",
+  "game_concept": "A action puzzle set in Mystic Forest – Firefly Meadow, a meadow of fireflies: the beast tamer must handle thorn goblins while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming thorn goblins.",
+  "genre": "action puzzle",
+  "theme": "Mystic Forest – Firefly Meadow: a meadow of fireflies",
+  "core_gameplay_loop": "In Firefly Meadow, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming thorn goblins. Each round, a new acorns challenge appears; solve it to bank points before time drains. Then check the ammo value and advance.",
+  "primary_mechanic": "Volley Counter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 320 points of acorns by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 320 within 80 seconds.",
+  "lose_condition": "Timer hits 0 with score < 320, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Volley Counter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M02-X2-T06-1a726372",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Resource Rush', and setting 'Firefly Meadow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 10,
+  "trial": 2,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for shot in range(volley):\n    fire()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how ammo changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Firefly Meadow.",
+    "Step 3: Win by meeting the goal: score >= 320 within 80 seconds."
+  ]
+}

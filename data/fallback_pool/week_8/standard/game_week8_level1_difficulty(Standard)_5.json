@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2115",
+  "game_title": "Cipher Decoder – Blizzard Saddle Trial",
+  "game_concept": "A programming puzzle set in Frost Peaks – Blizzard Saddle, a saddle between peaks: the mountaineer must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
+  "genre": "programming puzzle",
+  "theme": "Frost Peaks – Blizzard Saddle: a saddle between peaks",
+  "core_gameplay_loop": "In Blizzard Saddle, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round costs one action, so plan the step so none are wasted. Then check the decoded value and advance.",
+  "primary_mechanic": "Cipher Decoder",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the pass gate using at most 14 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The pass gate reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the pass gate is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Cipher Decoder",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M15-X3-T19-efba0ade",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Efficiency Trial', and setting 'Blizzard Saddle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 1,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "chr(ord('a') + 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how decoded changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Blizzard Saddle.",
+    "Step 3: Win by meeting the goal: The pass gate reached with actions_used <= 14."
+  ]
+}

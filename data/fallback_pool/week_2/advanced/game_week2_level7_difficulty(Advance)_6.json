@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0506",
+  "game_title": "Exponent Engine – Magma Forge Streak",
+  "game_concept": "A rhythm puzzle set in Mt. Pyre – Magma Forge, a forge fed by magma: the ash ranger must handle fire sprites while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "rhythm puzzle",
+  "theme": "Mt. Pyre – Magma Forge: a forge fed by magma",
+  "core_gameplay_loop": "In Magma Forge, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round poses one decision; a wrong answer breaks the streak. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about engine_power to power up the ash ranger and open the summit beacon.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X4-T04-02ca6e6d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Streak Challenge', and setting 'Magma Forge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Magma Forge.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

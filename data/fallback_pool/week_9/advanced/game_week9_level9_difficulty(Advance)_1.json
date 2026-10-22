@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2661",
+  "game_title": "Off By One Autopsy – Scarab Burrow Trial",
+  "game_concept": "A programming puzzle set in Sand Dunes – Scarab Burrow, a scarab burrow: the caravan guide must handle desert bandits while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "programming puzzle",
+  "theme": "Sand Dunes – Scarab Burrow: a scarab burrow",
+  "core_gameplay_loop": "In Scarab Burrow, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round costs one action, so plan the step so none are wasted. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Reach the palm grove using at most 14 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The palm grove reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the palm grove is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X3-T13-3cd3c8f3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Efficiency Trial', and setting 'Scarab Burrow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 9,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against desert bandits in Scarab Burrow.",
+    "Step 3: Win by meeting the goal: The palm grove reached with actions_used <= 14."
+  ]
+}

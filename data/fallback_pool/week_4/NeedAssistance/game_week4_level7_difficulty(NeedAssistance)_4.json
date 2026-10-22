@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1084",
+  "game_title": "Infinite Loop Trap – Lantern Crossing Rush",
+  "game_concept": "A arcade set in Shadow Cave – Lantern Crossing, a rope bridge over a pit: the spelunker must handle zombies while practicing control flow: while loops. Core idea – Infinite Loop Trap: Find the missing update line that makes a loop never stop, before zombies overload Lantern Crossing.",
+  "genre": "arcade",
+  "theme": "Shadow Cave – Lantern Crossing: a rope bridge over a pit",
+  "core_gameplay_loop": "In Lantern Crossing, repeat each round: Find the missing update line that makes a loop never stop, before zombies overload Lantern Crossing. Each round, a new rope coils challenge appears; solve it to bank points before time drains. Then check the loop_safety value and advance.",
+  "primary_mechanic": "Infinite Loop Trap",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 240 points of rope coils by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 240 within 67 seconds.",
+  "lose_condition": "Timer hits 0 with score < 240, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Infinite Loop Trap",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M04-X2-T14-b4d44ae4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Infinite Loop Trap' (Week 4 slot 4), mission type 'Resource Rush', and setting 'Lantern Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 4,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how loop_safety changes.",
+    "Step 2: Use the controls to apply the code idea against zombies in Lantern Crossing.",
+    "Step 3: Win by meeting the goal: score >= 240 within 67 seconds."
+  ]
+}

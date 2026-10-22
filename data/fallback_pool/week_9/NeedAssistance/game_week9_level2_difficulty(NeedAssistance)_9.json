@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2439",
+  "game_title": "Edge Case Hunter – Sandstone Arch Rush",
+  "game_concept": "A speed quiz set in Sand Dunes – Sandstone Arch, a natural sandstone arch: the caravan guide must handle vultures while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
+  "genre": "speed quiz",
+  "theme": "Sand Dunes – Sandstone Arch: a natural sandstone arch",
+  "core_gameplay_loop": "In Sandstone Arch, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round, a new camel feed challenge appears; solve it to bank points before time drains. Then check the edge_cases value and advance.",
+  "primary_mechanic": "Edge Case Hunter",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Collect 100 points of camel feed by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 100 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Edge Case Hunter",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M09-X2-T19-b6241fc9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Resource Rush', and setting 'Sandstone Arch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "avg = total / len(items)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how edge_cases changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Sandstone Arch.",
+    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
+  ]
+}

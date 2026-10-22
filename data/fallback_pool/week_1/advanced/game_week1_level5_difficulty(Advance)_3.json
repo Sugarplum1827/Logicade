@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0143",
+  "game_title": "Inventory Slots – Orchard Lane Defense",
+  "game_concept": "A survival strategy set in The Kingdom – Orchard Lane, the royal orchard lane: the knight must handle thieves while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against thieves.",
+  "genre": "survival strategy",
+  "theme": "The Kingdom – Orchard Lane: the royal orchard lane",
+  "core_gameplay_loop": "In Orchard Lane, repeat each round: Store each item in its own variable and choose which one to spend against thieves. Each round, thieves strike the royal seal, so respond before the next strike lands. Then check the potion value and advance.",
+  "primary_mechanic": "Inventory Slots",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the royal seal from thieves in Orchard Lane: keep the potion meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while potion > 0.",
+  "lose_condition": "potion drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 5 (applied tier): Inventory Slots",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M08-X1-T19-5c1b4daf",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Survival Siege', and setting 'Orchard Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 5,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "sword = 3\npotion = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potion changes.",
+    "Step 2: Use the controls to apply the code idea against thieves in Orchard Lane.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while potion > 0."
+  ]
+}

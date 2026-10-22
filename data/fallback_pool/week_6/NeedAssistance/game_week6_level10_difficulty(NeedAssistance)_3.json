@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1773",
+  "game_title": "Return Vault – Cold Larder Race",
+  "game_concept": "A strategy race set in Snowy Hold – Cold Larder, an ice-cellar larder: the hold guard must handle frozen golems while practicing functions. Core idea – Return Vault: Use return to send a computed value back to the caller and open the beacon fire.",
+  "genre": "strategy race",
+  "theme": "Snowy Hold – Cold Larder: an ice-cellar larder",
+  "core_gameplay_loop": "In Cold Larder, repeat each round: Use return to send a computed value back to the caller and open the beacon fire. Each round the rival advances, and solving the step moves the hold guard ahead. Then check the vault value and advance.",
+  "primary_mechanic": "Return Vault",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the beacon fire by solving code steps involving vault that move the hold guard forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the beacon fire first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Return Vault",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M03-X5-T13-025d646e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Return Vault' (Week 6 slot 3), mission type 'Rival Race', and setting 'Cold Larder'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 3,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def double(x):\n    return x * 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how vault changes.",
+    "Step 2: Use the controls to apply the code idea against frozen golems in Cold Larder.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

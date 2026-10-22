@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1538",
+  "game_title": "Call Stack Tower – Blizzard Bridge Streak",
+  "game_concept": "A rhythm puzzle set in Snowy Hold – Blizzard Bridge, a bridge in a blizzard: the innkeeper must handle snow wraiths while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
+  "genre": "rhythm puzzle",
+  "theme": "Snowy Hold – Blizzard Bridge: a bridge in a blizzard",
+  "core_gameplay_loop": "In Blizzard Bridge, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Each round poses one decision; a wrong answer breaks the streak. Then check the stack_height value and advance.",
+  "primary_mechanic": "Call Stack Tower",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about stack_height to power up the innkeeper and open the hold gate.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 6 – Functions | Level 2 (intro tier): Call Stack Tower",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M08-X4-T12-69a7ca67",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Call Stack Tower' (Week 6 slot 8), mission type 'Streak Challenge', and setting 'Blizzard Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 2,
+  "trial": 8,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def a():\n    b()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_height changes.",
+    "Step 2: Use the controls to apply the code idea against snow wraiths in Blizzard Bridge.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

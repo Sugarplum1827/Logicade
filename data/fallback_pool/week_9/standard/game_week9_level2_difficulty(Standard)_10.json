@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2450",
+  "game_title": "Test Gauntlet – Palm Grove Defense",
+  "game_concept": "A survival strategy set in Sand Dunes – Palm Grove, a palm grove: the camel trader must handle dust devils while practicing debugging & combined skills. Core idea – Test Gauntlet: Run small test cases against a function and fix the failing ones.",
+  "genre": "survival strategy",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "core_gameplay_loop": "In Palm Grove, repeat each round: Run small test cases against a function and fix the failing ones. Each round, dust devils strike the oasis, so respond before the next strike lands. Then check the tests value and advance.",
+  "primary_mechanic": "Test Gauntlet",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the oasis from dust devils in Palm Grove: keep the tests meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 33 seconds while tests > 0.",
+  "lose_condition": "tests drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Test Gauntlet",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M05-X1-T12-0dba044f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Test Gauntlet' (Week 9 slot 5), mission type 'Survival Siege', and setting 'Palm Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 2,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "assert f(2) == 4",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 33,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Palm Grove.",
+    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while tests > 0."
+  ]
+}

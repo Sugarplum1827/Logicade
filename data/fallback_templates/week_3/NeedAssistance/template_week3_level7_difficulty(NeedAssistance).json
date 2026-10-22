@@ -1,0 +1,241 @@
+{
+  "template_id": "tmpl_w3_l07_NA",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 3,
+    "level": 7,
+    "difficulty": "Need Assistance"
+  },
+  "file_id": "fallback_0079",
+  "game_title": "Fallback: Weather Switch – Merchant Wharf",
+  "game_concept": "A tower defense set in Coastal Port – Merchant Wharf, the merchant wharf: the sailor must hold off smugglers while practicing conditionals (if / elif / else). Core idea – Weather Switch: Choose tools by checking weather and terrain conditions each turn.",
+  "genre": "tower defense",
+  "theme": "Coastal Port – Merchant Wharf: the merchant wharf",
+  "core_gameplay_loop": "In Merchant Wharf, repeat each round: Choose tools by checking weather and terrain conditions each turn. Then check gear_ok and advance.",
+  "primary_mechanic": "Weather Switch",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the sea wall from smugglers in Merchant Wharf: keep gear_ok above zero until the 67-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "gear_ok > 0 && timer >= 67",
+  "lose_condition": "gear_ok <= 0 || lives <= 0",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 7 (applied tier): Weather Switch",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "FB-W3-L07-NA",
+  "duplicate_check_notes": "Generic fallback template for Week 3, Level 7, Need Assistance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 3,
+  "level": 7,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Conditionals (if / elif / else)",
+    "Apply “Weather Switch” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_sailor",
+    "enemy": "kenney_smugglers",
+    "objective": "kenney_sea_wall",
+    "background": "w3_coast",
+    "projectile": "kenney_anchors",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "gear_ok",
+    "damage_per_attack": 8,
+    "repair_per_action": 8,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 3,
+    "lives": 5,
+    "hint_count": 5,
+    "game_duration_seconds": 67,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Merchant Wharf: Weather Switch",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "if rain:\n    use_umbrella()",
+    "health_bar": {
+      "visible": true,
+      "label": "gear_ok",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "gear_ok > 0 && timer < 67",
+      "then": [
+        "gear_ok = max(0, gear_ok - 8)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Smugglers attack the sea wall!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "gear_ok > 0 && gear_ok < 100 && player_energy >= 5",
+      "then": [
+        "gear_ok = min(100, gear_ok + 8)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "gear_ok >= 100",
+      "then": [
+        "show_message('gear_ok is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && gear_ok < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "show_hint()",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 67 && gear_ok > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 3)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "gear_ok > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "gear_ok <= 30 && gear_ok > 0",
+      "then": [
+        "show_warning('gear_ok is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 5,
+      "attack_interval_seconds": 2.1
+    },
+    {
+      "wave": 2,
+      "start_time": 22,
+      "enemy_count": 6,
+      "attack_interval_seconds": 1.7
+    },
+    {
+      "wave": 3,
+      "start_time": 45,
+      "enemy_count": 7,
+      "attack_interval_seconds": 1.3
+    }
+  ],
+  "win": "gear_ok > 0 && timer >= 67",
+  "lose": "gear_ok <= 0 || lives <= 0",
+  "hint": "Read the code panel: Choose tools by checking weather and terrain conditions each turn. Keep gear_ok above zero until the timer reaches 67.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Smugglers are coming! Watch the gear_ok meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: if rain:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 67 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Weather Switch in Coastal Port!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "gear_ok ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

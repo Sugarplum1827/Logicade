@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0918",
+  "game_title": "Stamina Climb – Moss Door Chamber Trial",
+  "game_concept": "A programming puzzle set in Shadow Cave – Moss Door Chamber, a mossy sealed door: the shadow ranger must handle skeleton miners while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
+  "genre": "programming puzzle",
+  "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
+  "core_gameplay_loop": "In Moss Door Chamber, repeat each round: Keep climbing while stamina > 0, deciding when to rest inside the loop. Each round costs one action, so plan the step so none are wasted. Then check the stamina value and advance.",
+  "primary_mechanic": "Stamina Climb",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Ghost replay of best run",
+    "Combo multiplier"
+  ],
+  "player_objective": "Reach the supply cache using at most 14 actions, so every code step counts.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "The supply cache reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the supply cache is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 1 (intro tier): Stamina Climb",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M03-X3-T16-61f03309",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Efficiency Trial', and setting 'Moss Door Chamber'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 1,
+  "trial": 8,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while stamina > 0:\n    climb()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stamina changes.",
+    "Step 2: Use the controls to apply the code idea against skeleton miners in Moss Door Chamber.",
+    "Step 3: Win by meeting the goal: The supply cache reached with actions_used <= 14."
+  ]
+}

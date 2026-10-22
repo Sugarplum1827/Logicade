@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2279",
+  "game_title": "Strip And Replace – Icefall Ladder Defense",
+  "game_concept": "A survival strategy set in Frost Peaks – Icefall Ladder, ladders up an icefall: the avalanche scout must handle crevasse ghouls while practicing strings & dictionaries. Core idea – Strip And Replace: Clean messy text with strip() and replace() before the scribes read it.",
+  "genre": "survival strategy",
+  "theme": "Frost Peaks – Icefall Ladder: ladders up an icefall",
+  "core_gameplay_loop": "In Icefall Ladder, repeat each round: Clean messy text with strip() and replace() before the scribes read it. Each round, crevasse ghouls strike the flag pole, so respond before the next strike lands. Then check the clean_text value and advance.",
+  "primary_mechanic": "Strip And Replace",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the flag pole from crevasse ghouls in Icefall Ladder: keep the clean_text meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 36 seconds while clean_text > 0.",
+  "lose_condition": "clean_text drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Strip And Replace",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M14-X1-T03-49d37ad2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Strip And Replace' (Week 8 slot 14), mission type 'Survival Siege', and setting 'Icefall Ladder'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 6,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "text.strip().replace('_', ' ')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clean_text changes.",
+    "Step 2: Use the controls to apply the code idea against crevasse ghouls in Icefall Ladder.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while clean_text > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2021",
+  "game_title": "Comprehension Lab – Moss Library Race",
+  "game_concept": "A adventure race set in Eldritch Ruins – Moss Library, a ruined library: the tomb cartographer must handle cursed statues while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform chalk marks.",
+  "genre": "adventure race",
+  "theme": "Eldritch Ruins – Moss Library: a ruined library",
+  "core_gameplay_loop": "In Moss Library, repeat each round: Build new lists in one line with list comprehensions to transform chalk marks. Each round the rival advances, and solving the step moves the tomb cartographer ahead. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Beat a rival AI to the relic vault by solving code steps involving lab_output that move the tomb cartographer forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the relic vault first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X5-T05-df54aacc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Rival Race', and setting 'Moss Library'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 1,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Moss Library.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

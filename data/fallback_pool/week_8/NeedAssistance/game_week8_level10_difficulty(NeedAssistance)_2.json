@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2372",
+  "game_title": "Phrase Slicer – Wind Pass Rush",
+  "game_concept": "A action puzzle set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Phrase Slicer: Slice strings to cut messages into exactly the needed pieces.",
+  "genre": "action puzzle",
+  "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
+  "core_gameplay_loop": "In Wind Pass, repeat each round: Slice strings to cut messages into exactly the needed pieces. Each round, a new pitons challenge appears; solve it to bank points before time drains. Then check the phrase_ok value and advance.",
+  "primary_mechanic": "Phrase Slicer",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 320 points of pitons by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 320 within 80 seconds.",
+  "lose_condition": "Timer hits 0 with score < 320, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Phrase Slicer",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M02-X2-T06-e2ebe47b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Phrase Slicer' (Week 8 slot 2), mission type 'Resource Rush', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 2,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "msg[2:6]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how phrase_ok changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
+    "Step 3: Win by meeting the goal: score >= 320 within 80 seconds."
+  ]
+}

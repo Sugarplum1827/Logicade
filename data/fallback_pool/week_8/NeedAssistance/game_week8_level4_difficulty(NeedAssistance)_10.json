@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2200",
+  "game_title": "Safe Get Scout – Frozen Waterfall Streak",
+  "game_concept": "A quiz RPG set in Frost Peaks – Frozen Waterfall, a frozen waterfall: the rescue climber must handle frost wyrms while practicing strings & dictionaries. Core idea – Safe Get Scout: Use .get() with a default to avoid missing key errors.",
+  "genre": "quiz RPG",
+  "theme": "Frost Peaks – Frozen Waterfall: a frozen waterfall",
+  "core_gameplay_loop": "In Frozen Waterfall, repeat each round: Use .get() with a default to avoid missing key errors. Each round poses one decision; a wrong answer breaks the streak. Then check the safe_lookups value and advance.",
+  "primary_mechanic": "Safe Get Scout",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about safe_lookups to power up the rescue climber and open the radio mast.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Safe Get Scout",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M10-X4-T10-865b6d39",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Safe Get Scout' (Week 8 slot 10), mission type 'Streak Challenge', and setting 'Frozen Waterfall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 10,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "stock.get('apple', 0)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how safe_lookups changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Frozen Waterfall.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}

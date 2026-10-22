@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0530",
+  "game_title": "Comparison Duel – Magma Forge Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Magma Forge, a forge fed by magma: the ash ranger must handle fire sprites while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the ash ranger's power beats the shield shown by fire sprites.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Magma Forge: a forge fed by magma",
+  "core_gameplay_loop": "In Magma Forge, repeat each round: Choose ==, !=, < , > or >= so the ash ranger's power beats the shield shown by fire sprites. Each round costs one action, so plan the step so none are wasted. Then check the power value and advance.",
+  "primary_mechanic": "Comparison Duel",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the summit beacon using at most 18 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The summit beacon reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the summit beacon is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Comparison Duel",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M05-X3-T04-dcbf8cc0",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Efficiency Trial', and setting 'Magma Forge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power > shield",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Magma Forge.",
+    "Step 3: Win by meeting the goal: The summit beacon reached with actions_used <= 18."
+  ]
+}

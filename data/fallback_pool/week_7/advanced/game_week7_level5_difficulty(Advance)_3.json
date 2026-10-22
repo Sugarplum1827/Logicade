@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1943",
+  "game_title": "Matrix Map – Moonstone Terrace Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Moonstone Terrace, a terrace of moonstone: the relic hunter must handle echo phantoms while practicing lists. Core idea – Matrix Map: Navigate a list of lists as rows and columns of a map.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Moonstone Terrace: a terrace of moonstone",
+  "core_gameplay_loop": "In Moonstone Terrace, repeat each round: Navigate a list of lists as rows and columns of a map. Each round, echo phantoms strike the heart stone, so respond before the next strike lands. Then check the map_cells value and advance.",
+  "primary_mechanic": "Matrix Map",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the heart stone from echo phantoms in Moonstone Terrace: keep the map_cells meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while map_cells > 0.",
+  "lose_condition": "map_cells drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Matrix Map",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M08-X1-T19-14034449",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Matrix Map' (Week 7 slot 8), mission type 'Survival Siege', and setting 'Moonstone Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 5,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "grid[1][2]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how map_cells changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Moonstone Terrace.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while map_cells > 0."
+  ]
+}

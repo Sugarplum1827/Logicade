@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2023",
+  "game_title": "Merge Convoy – Moonstone Terrace Defense",
+  "game_concept": "A tower defense set in Eldritch Ruins – Moonstone Terrace, a terrace of moonstone: the relic hunter must handle echo phantoms while practicing lists. Core idea – Merge Convoy: Merge two lists using + or extend() to join convoys.",
+  "genre": "tower defense",
+  "theme": "Eldritch Ruins – Moonstone Terrace: a terrace of moonstone",
+  "core_gameplay_loop": "In Moonstone Terrace, repeat each round: Merge two lists using + or extend() to join convoys. Each round, echo phantoms strike the heart stone, so respond before the next strike lands. Then check the convoy_size value and advance.",
+  "primary_mechanic": "Merge Convoy",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the heart stone from echo phantoms in Moonstone Terrace: keep the convoy_size meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 51 seconds while convoy_size > 0.",
+  "lose_condition": "convoy_size drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Merge Convoy",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M13-X1-T19-5d9c522d",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Merge Convoy' (Week 7 slot 13), mission type 'Survival Siege', and setting 'Moonstone Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 8,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "convoy_a.extend(convoy_b)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 51,
+    "target_score": 380,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how convoy_size changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Moonstone Terrace.",
+    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while convoy_size > 0."
+  ]
+}

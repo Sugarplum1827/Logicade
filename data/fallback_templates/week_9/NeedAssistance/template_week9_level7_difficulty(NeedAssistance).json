@@ -1,0 +1,241 @@
+{
+  "template_id": "tmpl_w9_l07_NA",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 9,
+    "level": 7,
+    "difficulty": "Need Assistance"
+  },
+  "file_id": "fallback_0259",
+  "game_title": "Fallback: Integration Heist – Sandstorm Pass",
+  "game_concept": "A tower defense set in Sand Dunes – Sandstorm Pass, a pass in a sandstorm: the caravan guide must hold off mirage spirits while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstorm Pass.",
+  "genre": "tower defense",
+  "theme": "Sand Dunes – Sandstorm Pass: a pass in a sandstorm",
+  "core_gameplay_loop": "In Sandstorm Pass, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstorm Pass. Then check heist and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the supply tent from mirage spirits in Sandstorm Pass: keep heist above zero until the 67-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; H shows a hint; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "heist > 0 && timer >= 67",
+  "lose_condition": "heist <= 0 || lives <= 0",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "FB-W9-L07-NA",
+  "duplicate_check_notes": "Generic fallback template for Week 9, Level 7, Need Assistance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 9,
+  "level": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Debugging & Combined Skills",
+    "Apply “Integration Heist” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_caravan_guide",
+    "enemy": "kenney_mirage_spirits",
+    "objective": "kenney_supply_tent",
+    "background": "w9_desert",
+    "projectile": "kenney_scarab_charms",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "heist",
+    "damage_per_attack": 8,
+    "repair_per_action": 8,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 3,
+    "lives": 5,
+    "hint_count": 5,
+    "game_duration_seconds": 67,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Sandstorm Pass: Integration Heist",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+    "health_bar": {
+      "visible": true,
+      "label": "heist",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      },
+      {
+        "key": "H",
+        "action": "use_hint",
+        "label": "Hint"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "heist > 0 && timer < 67",
+      "then": [
+        "heist = max(0, heist - 8)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Mirage spirits attack the supply tent!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "heist > 0 && heist < 100 && player_energy >= 5",
+      "then": [
+        "heist = min(100, heist + 8)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "heist >= 100",
+      "then": [
+        "show_message('heist is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && heist < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "show_hint()",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 67 && heist > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 3)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "heist > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "heist <= 30 && heist > 0",
+      "then": [
+        "show_warning('heist is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 5,
+      "attack_interval_seconds": 2.1
+    },
+    {
+      "wave": 2,
+      "start_time": 22,
+      "enemy_count": 6,
+      "attack_interval_seconds": 1.7
+    },
+    {
+      "wave": 3,
+      "start_time": 45,
+      "enemy_count": 7,
+      "attack_interval_seconds": 1.3
+    }
+  ],
+  "win": "heist > 0 && timer >= 67",
+  "lose": "heist <= 0 || lives <= 0",
+  "hint": "Read the code panel: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstorm Pass. Keep heist above zero until the timer reaches 67.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Mirage spirits are coming! Watch the heist meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: for x in loot:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 67 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Integration Heist in Sand Dunes!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "heist ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2063",
+  "game_title": "Matrix Map – Echoing Courtyard Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Echoing Courtyard, an echoing courtyard: the relic hunter must handle eldritch shades while practicing lists. Core idea – Matrix Map: Navigate a list of lists as rows and columns of a map.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Echoing Courtyard: an echoing courtyard",
+  "core_gameplay_loop": "In Echoing Courtyard, repeat each round: Navigate a list of lists as rows and columns of a map. Each round poses one decision; a wrong answer breaks the streak. Then check the map_cells value and advance.",
+  "primary_mechanic": "Matrix Map",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 13 consecutive correct decisions about map_cells to power up the relic hunter and open the obelisk.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 13.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Matrix Map",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M08-X4-T07-6628b0b5",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Matrix Map' (Week 7 slot 8), mission type 'Streak Challenge', and setting 'Echoing Courtyard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "grid[1][2]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 43,
+    "target_score": 550,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.2,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.2,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how map_cells changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Echoing Courtyard.",
+    "Step 3: Win by meeting the goal: streak counter reaches 13."
+  ]
+}

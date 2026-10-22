@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0148",
+  "game_title": "Print Probe – Wall Battlements Defense",
+  "game_concept": "A tower defense set in The Kingdom – Wall Battlements, the high battlements: the squire must handle bandits while practicing variables & assignment. Core idea – Print Probe: Use print-style probes to reveal hidden variable values before bandits act.",
+  "genre": "tower defense",
+  "theme": "The Kingdom – Wall Battlements: the high battlements",
+  "core_gameplay_loop": "In Wall Battlements, repeat each round: Use print-style probes to reveal hidden variable values before bandits act. Each round, bandits strike the granary door, so respond before the next strike lands. Then check the shield value and advance.",
+  "primary_mechanic": "Print Probe",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the granary door from bandits in Wall Battlements: keep the shield meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while shield > 0.",
+  "lose_condition": "shield drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 5 (applied tier): Print Probe",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M13-X1-T14-00b7cea7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Survival Siege', and setting 'Wall Battlements'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 5,
+  "trial": 8,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "print(shield)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how shield changes.",
+    "Step 2: Use the controls to apply the code idea against bandits in Wall Battlements.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while shield > 0."
+  ]
+}

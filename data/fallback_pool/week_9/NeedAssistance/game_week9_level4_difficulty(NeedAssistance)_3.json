@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2493",
+  "game_title": "Logic Detective – Oasis Pool Trial",
+  "game_concept": "A programming puzzle set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Logic Detective: Trace code that runs but gives the wrong answer and fix the logic bug.",
+  "genre": "programming puzzle",
+  "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
+  "core_gameplay_loop": "In Oasis Pool, repeat each round: Trace code that runs but gives the wrong answer and fix the logic bug. Each round costs one action, so plan the step so none are wasted. Then check the clues value and advance.",
+  "primary_mechanic": "Logic Detective",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Reach the temple door using at most 20 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The temple door reached with actions_used <= 20.",
+  "lose_condition": "actions_used exceeds 20 before the temple door is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Logic Detective",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M03-X3-T01-ba3c0425",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Logic Detective' (Week 9 slot 3), mission type 'Efficiency Trial', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 3,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "total = a - b  # should be +",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how clues changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
+    "Step 3: Win by meeting the goal: The temple door reached with actions_used <= 20."
+  ]
+}

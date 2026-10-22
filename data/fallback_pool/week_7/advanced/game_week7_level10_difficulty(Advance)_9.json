@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2099",
+  "game_title": "Stat Market – Ritual Pool Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Ritual Pool, a still ritual pool: the tomb cartographer must handle echo phantoms while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Ritual Pool: a still ritual pool",
+  "core_gameplay_loop": "In Ritual Pool, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round poses one decision; a wrong answer breaks the streak. Then check the profit value and advance.",
+  "primary_mechanic": "Stat Market",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 14 consecutive correct decisions about profit to power up the tomb cartographer and open the glyph door.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 14.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Stat Market",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M14-X4-T11-d3d496b4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Streak Challenge', and setting 'Ritual Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 10,
+  "trial": 9,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "max(prices)\nsum(prices)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how profit changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Ritual Pool.",
+    "Step 3: Win by meeting the goal: streak counter reaches 14."
+  ]
+}

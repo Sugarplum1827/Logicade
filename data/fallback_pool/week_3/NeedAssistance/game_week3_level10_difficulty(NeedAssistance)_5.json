@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0875",
+  "game_title": "Not Negator – Merchant Wharf Defense",
+  "game_concept": "A survival strategy set in Coastal Port – Merchant Wharf, the merchant wharf: the sailor must handle storm gulls while practicing conditionals (if / elif / else). Core idea – Not Negator: Use not to flip alarms and traps so the sailor slips through safely.",
+  "genre": "survival strategy",
+  "theme": "Coastal Port – Merchant Wharf: the merchant wharf",
+  "core_gameplay_loop": "In Merchant Wharf, repeat each round: Use not to flip alarms and traps so the sailor slips through safely. Each round, storm gulls strike the signal flag, so respond before the next strike lands. Then check the stealth value and advance.",
+  "primary_mechanic": "Not Negator",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the signal flag from storm gulls in Merchant Wharf: keep the stealth meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while stealth > 0.",
+  "lose_condition": "stealth drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 10 (extended tier): Not Negator",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M05-X1-T07-213ea657",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Not Negator' (Week 3 slot 5), mission type 'Survival Siege', and setting 'Merchant Wharf'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 10,
+  "trial": 5,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if not alarm_on:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stealth changes.",
+    "Step 2: Use the controls to apply the code idea against storm gulls in Merchant Wharf.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while stealth > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1146",
+  "game_title": "Accumulator Pump – Glowworm Gallery Rush",
+  "game_concept": "A speed quiz set in Shadow Cave – Glowworm Gallery, a ceiling of glowworms: the dwarf scout must handle cave spiders while practicing control flow: while loops. Core idea – Accumulator Pump: Add values each pass until the running total reaches the goal.",
+  "genre": "speed quiz",
+  "theme": "Shadow Cave – Glowworm Gallery: a ceiling of glowworms",
+  "core_gameplay_loop": "In Glowworm Gallery, repeat each round: Add values each pass until the running total reaches the goal. Each round, a new arrows challenge appears; solve it to bank points before time drains. Then check the total value and advance.",
+  "primary_mechanic": "Accumulator Pump",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 290 points of arrows by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 9 (extended tier): Accumulator Pump",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M06-X2-T12-45282493",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Accumulator Pump' (Week 4 slot 6), mission type 'Resource Rush', and setting 'Glowworm Gallery'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 9,
+  "trial": 6,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while total < goal:\n    total += step",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against cave spiders in Glowworm Gallery.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

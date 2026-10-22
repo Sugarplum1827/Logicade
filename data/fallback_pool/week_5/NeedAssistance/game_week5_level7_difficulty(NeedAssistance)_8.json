@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1388",
+  "game_title": "Reverse Countdown – Mossy Creek Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Mossy Creek, a mossy forest creek: the druid must handle giant beetles while practicing control flow: for loops. Core idea – Reverse Countdown: Count backward with range(10, 0, -1) to time perfect launches.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Mossy Creek: a mossy forest creek",
+  "core_gameplay_loop": "In Mossy Creek, repeat each round: Count backward with range(10, 0, -1) to time perfect launches. Each round poses one decision; a wrong answer breaks the streak. Then check the launch_timing value and advance.",
+  "primary_mechanic": "Reverse Countdown",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 8 consecutive correct decisions about launch_timing to power up the druid and open the heartwood tree.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 8.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Reverse Countdown",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M08-X4-T02-9ac30d56",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Countdown' (Week 5 slot 8), mission type 'Streak Challenge', and setting 'Mossy Creek'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 7,
+  "trial": 8,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(10, 0, -1):",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how launch_timing changes.",
+    "Step 2: Use the controls to apply the code idea against giant beetles in Mossy Creek.",
+    "Step 3: Win by meeting the goal: streak counter reaches 8."
+  ]
+}

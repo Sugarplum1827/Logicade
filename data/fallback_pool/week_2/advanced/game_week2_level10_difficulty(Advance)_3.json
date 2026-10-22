@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0593",
+  "game_title": "Type Cast Forge – Basalt Stair Defense",
+  "game_concept": "A survival strategy set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
+  "genre": "survival strategy",
+  "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
+  "core_gameplay_loop": "In Basalt Stair, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round, magma slimes strike the ash barrier, so respond before the next strike lands. Then check the forge_heat value and advance.",
+  "primary_mechanic": "Type Cast Forge",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the ash barrier from magma slimes in Basalt Stair: keep the forge_heat meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 46 seconds while forge_heat > 0.",
+  "lose_condition": "forge_heat drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Type Cast Forge",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M08-X1-T09-f71dfd9c",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Survival Siege', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 10,
+  "trial": 3,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "total = int('5') + 3",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how forge_heat changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while forge_heat > 0."
+  ]
+}

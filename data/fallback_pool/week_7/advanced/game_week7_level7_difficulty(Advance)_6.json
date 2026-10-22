@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2006",
+  "game_title": "Comprehension Lab – Sunken Altar Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Sunken Altar, an altar half-sunk in earth: the scholar mage must handle rune wisps while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform relic shards.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Sunken Altar: an altar half-sunk in earth",
+  "core_gameplay_loop": "In Sunken Altar, repeat each round: Build new lists in one line with list comprehensions to transform relic shards. Each round poses one decision; a wrong answer breaks the streak. Then check the lab_output value and advance.",
+  "primary_mechanic": "Comprehension Lab",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about lab_output to power up the scholar mage and open the moon altar.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Comprehension Lab",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M11-X4-T04-be7c3b8f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Streak Challenge', and setting 'Sunken Altar'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 6,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "[x * 2 for x in nums]",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how lab_output changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Sunken Altar.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

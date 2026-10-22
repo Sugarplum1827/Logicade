@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1507",
+  "game_title": "Scope Sanctuary – Snowdrift Barracks Streak",
+  "game_concept": "A quiz RPG set in Snowy Hold – Snowdrift Barracks, barracks half buried in snow: the firewood keeper must handle winter bandits while practicing functions. Core idea – Scope Sanctuary: Distinguish local from global variables to keep hot soup pots safe from winter bandits.",
+  "genre": "quiz RPG",
+  "theme": "Snowy Hold – Snowdrift Barracks: barracks half buried in snow",
+  "core_gameplay_loop": "In Snowdrift Barracks, repeat each round: Distinguish local from global variables to keep hot soup pots safe from winter bandits. Each round poses one decision; a wrong answer breaks the streak. Then check the scope_safe value and advance.",
+  "primary_mechanic": "Scope Sanctuary",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Mini-tutorial pop-ups",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Chain 5 consecutive correct decisions about scope_safe to power up the firewood keeper and open the beacon fire.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 5.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 6 – Functions | Level 1 (intro tier): Scope Sanctuary",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M07-X4-T03-48d6f67e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Scope Sanctuary' (Week 6 slot 7), mission type 'Streak Challenge', and setting 'Snowdrift Barracks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 1,
+  "trial": 7,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "x = 1\ndef f():\n    x = 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how scope_safe changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Snowdrift Barracks.",
+    "Step 3: Win by meeting the goal: streak counter reaches 5."
+  ]
+}

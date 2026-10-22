@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1619",
+  "game_title": "Library Builder – Sleigh Stables Rush",
+  "game_concept": "A action puzzle set in Snowy Hold – Sleigh Stables, the sleigh stables: the hold guard must handle winter bandits while practicing functions. Core idea – Library Builder: Combine small functions into a reusable library the hold guard calls throughout the level.",
+  "genre": "action puzzle",
+  "theme": "Snowy Hold – Sleigh Stables: the sleigh stables",
+  "core_gameplay_loop": "In Sleigh Stables, repeat each round: Combine small functions into a reusable library the hold guard calls throughout the level. Each round, a new hot soup pots challenge appears; solve it to bank points before time drains. Then check the library value and advance.",
+  "primary_mechanic": "Library Builder",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Ghost replay of best run",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 290 points of hot soup pots by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 290 within 31 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Library Builder",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M14-X2-T19-31bcc107",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Library Builder' (Week 6 slot 14), mission type 'Resource Rush', and setting 'Sleigh Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 4,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "import tools\ntools.heal()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how library changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Sleigh Stables.",
+    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
+  ]
+}

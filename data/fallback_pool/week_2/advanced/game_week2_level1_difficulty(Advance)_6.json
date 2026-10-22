@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0326",
+  "game_title": "Exponent Engine – Geyser Flats Rush",
+  "game_concept": "A action puzzle set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "action puzzle",
+  "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
+  "core_gameplay_loop": "In Geyser Flats, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round, a new ember crystals challenge appears; solve it to bank points before time drains. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Collect 130 points of ember crystals by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 130 within 24 seconds.",
+  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X2-T12-f27e997a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Resource Rush', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 6,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 24,
+    "target_score": 130,
+    "action_budget": 10,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
+    "Step 3: Win by meeting the goal: score >= 130 within 24 seconds."
+  ]
+}

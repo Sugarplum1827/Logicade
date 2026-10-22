@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1091",
+  "game_title": "Continue Gate – Bat Hollow Trial",
+  "game_concept": "A logic puzzle set in Shadow Cave – Bat Hollow, a hollow of roosting bats: the cave miner must handle glow-eyed lurkers while practicing control flow: while loops. Core idea – Continue Gate: Use continue to skip spoiled lantern oil but keep the loop running.",
+  "genre": "logic puzzle",
+  "theme": "Shadow Cave – Bat Hollow: a hollow of roosting bats",
+  "core_gameplay_loop": "In Bat Hollow, repeat each round: Use continue to skip spoiled lantern oil but keep the loop running. Each round costs one action, so plan the step so none are wasted. Then check the skipped_ok value and advance.",
+  "primary_mechanic": "Continue Gate",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the exit ledge using at most 17 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The exit ledge reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the exit ledge is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Continue Gate",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M11-X3-T03-37a861a7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Continue Gate' (Week 4 slot 11), mission type 'Efficiency Trial', and setting 'Bat Hollow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 1,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how skipped_ok changes.",
+    "Step 2: Use the controls to apply the code idea against glow-eyed lurkers in Bat Hollow.",
+    "Step 3: Win by meeting the goal: The exit ledge reached with actions_used <= 17."
+  ]
+}

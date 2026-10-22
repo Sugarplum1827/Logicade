@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0203",
+  "game_title": "Inventory Slots – Market Square Race",
+  "game_concept": "A adventure race set in The Kingdom – Market Square, a bustling cobbled market square: the royal scribe must handle thieves while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against thieves.",
+  "genre": "adventure race",
+  "theme": "The Kingdom – Market Square: a bustling cobbled market square",
+  "core_gameplay_loop": "In Market Square, repeat each round: Store each item in its own variable and choose which one to spend against thieves. Each round the rival advances, and solving the step moves the royal scribe ahead. Then check the potion value and advance.",
+  "primary_mechanic": "Inventory Slots",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Beat a rival AI to the wall banner by solving code steps involving potion that move the royal scribe forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "lose_condition": "The rival reaches the wall banner first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Inventory Slots",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M08-X5-T03-520fc758",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Rival Race', and setting 'Market Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 7,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "sword = 3\npotion = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 38,
+    "target_score": 440,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potion changes.",
+    "Step 2: Use the controls to apply the code idea against thieves in Market Square.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
+  ]
+}

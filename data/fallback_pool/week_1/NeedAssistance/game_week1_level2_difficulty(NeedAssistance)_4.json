@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0034",
+  "game_title": "Swap Switch – Moat Bridge Rush",
+  "game_concept": "A arcade set in The Kingdom – Moat Bridge, the drawbridge over the moat: the town guard must handle rogue crows while practicing variables & assignment. Core idea – Swap Switch: Swap two variables with a temporary slot to reroute arrows without losing either value.",
+  "genre": "arcade",
+  "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
+  "core_gameplay_loop": "In Moat Bridge, repeat each round: Swap two variables with a temporary slot to reroute arrows without losing either value. Each round, a new arrows challenge appears; solve it to bank points before time drains. Then check the a value and advance.",
+  "primary_mechanic": "Swap Switch",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 100 points of arrows by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 100 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Swap Switch",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M04-X2-T04-b22cd1dc",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Swap Switch' (Week 1 slot 4), mission type 'Resource Rush', and setting 'Moat Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 2,
+  "trial": 4,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "temp = a\na = b\nb = temp",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how a changes.",
+    "Step 2: Use the controls to apply the code idea against rogue crows in Moat Bridge.",
+    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
+  ]
+}

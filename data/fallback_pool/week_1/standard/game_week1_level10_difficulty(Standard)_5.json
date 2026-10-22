@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0285",
+  "game_title": "Uninitialized Hunt – Dungeon Stairs Defense",
+  "game_concept": "A action defense set in The Kingdom – Dungeon Stairs, the castle dungeon stairwell: the baker's apprentice must handle goblin raiders while practicing variables & assignment. Core idea – Uninitialized Hunt: Find variables used before assignment and fix them before goblin raiders exploit the gap.",
+  "genre": "action defense",
+  "theme": "The Kingdom – Dungeon Stairs: the castle dungeon stairwell",
+  "core_gameplay_loop": "In Dungeon Stairs, repeat each round: Find variables used before assignment and fix them before goblin raiders exploit the gap. Each round, goblin raiders strike the signal beacon, so respond before the next strike lands. Then check the bugs_fixed value and advance.",
+  "primary_mechanic": "Uninitialized Hunt",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the signal beacon from goblin raiders in Dungeon Stairs: keep the bugs_fixed meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 57 seconds while bugs_fixed > 0.",
+  "lose_condition": "bugs_fixed drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Uninitialized Hunt",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M15-X1-T17-d86f8afd",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Uninitialized Hunt' (Week 1 slot 15), mission type 'Survival Siege', and setting 'Dungeon Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 5,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "total = total + 5  # bug!",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bugs_fixed changes.",
+    "Step 2: Use the controls to apply the code idea against goblin raiders in Dungeon Stairs.",
+    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while bugs_fixed > 0."
+  ]
+}

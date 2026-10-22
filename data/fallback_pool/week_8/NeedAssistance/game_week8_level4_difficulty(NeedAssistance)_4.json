@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2194",
+  "game_title": "Split Join Assembly – Cliffside Ledge Defense",
+  "game_concept": "A tower defense set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Split Join Assembly: Split sentences into words and join them back to assemble orders.",
+  "genre": "tower defense",
+  "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
+  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Split sentences into words and join them back to assemble orders. Each round, snow leopards strike the basecamp tent, so respond before the next strike lands. Then check the assembly value and advance.",
+  "primary_mechanic": "Split Join Assembly",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the basecamp tent from snow leopards in Cliffside Ledge: keep the assembly meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 55 seconds while assembly > 0.",
+  "lose_condition": "assembly drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Split Join Assembly",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M04-X1-T08-7790b100",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Split Join Assembly' (Week 8 slot 4), mission type 'Survival Siege', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 4,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "'a b c'.split()\n'-'.join(words)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how assembly changes.",
+    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
+    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while assembly > 0."
+  ]
+}

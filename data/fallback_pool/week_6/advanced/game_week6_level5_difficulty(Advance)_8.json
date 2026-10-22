@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1648",
+  "game_title": "Function Test Arena – Lantern Square Defense",
+  "game_concept": "A tower defense set in Snowy Hold – Lantern Square, a lantern-lit square: the snow ranger must handle ice wolves while practicing functions. Core idea – Function Test Arena: Write quick assert tests to confirm functions behave before facing ice wolves.",
+  "genre": "tower defense",
+  "theme": "Snowy Hold – Lantern Square: a lantern-lit square",
+  "core_gameplay_loop": "In Lantern Square, repeat each round: Write quick assert tests to confirm functions behave before facing ice wolves. Each round, ice wolves strike the sleigh, so respond before the next strike lands. Then check the tests_passed value and advance.",
+  "primary_mechanic": "Function Test Arena",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the sleigh from ice wolves in Lantern Square: keep the tests_passed meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 34 seconds while tests_passed > 0.",
+  "lose_condition": "tests_passed drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Function Test Arena",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M13-X1-T14-87db7589",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Function Test Arena' (Week 6 slot 13), mission type 'Survival Siege', and setting 'Lantern Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 5,
+  "trial": 8,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "assert add(2, 3) == 5",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tests_passed changes.",
+    "Step 2: Use the controls to apply the code idea against ice wolves in Lantern Square.",
+    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while tests_passed > 0."
+  ]
+}

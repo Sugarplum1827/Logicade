@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2375",
+  "game_title": "Palindrome Gate – Summit Spire Defense",
+  "game_concept": "A survival strategy set in Frost Peaks – Summit Spire, the highest spire: the mountaineer must handle storm winds while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
+  "genre": "survival strategy",
+  "theme": "Frost Peaks – Summit Spire: the highest spire",
+  "core_gameplay_loop": "In Summit Spire, repeat each round: Check whether a word reads the same backward to open the gate. Each round, storm winds strike the supply cache, so respond before the next strike lands. Then check the gate value and advance.",
+  "primary_mechanic": "Palindrome Gate",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Protect the supply cache from storm winds in Summit Spire: keep the gate meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 80 seconds while gate > 0.",
+  "lose_condition": "gate drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Palindrome Gate",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M05-X1-T07-9a5e341f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Survival Siege', and setting 'Summit Spire'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "word == word[::-1]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Summit Spire.",
+    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while gate > 0."
+  ]
+}

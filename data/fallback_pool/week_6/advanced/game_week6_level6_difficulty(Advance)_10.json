@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1680",
+  "game_title": "Return Or Print – Chimney Roofs Streak",
+  "game_concept": "A card battler set in Snowy Hold – Chimney Roofs, snowy chimney rooftops: the sled courier must handle blizzard sprites while practicing functions. Core idea – Return Or Print: Decide whether to return or print and see why only return passes data on.",
+  "genre": "card battler",
+  "theme": "Snowy Hold – Chimney Roofs: snowy chimney rooftops",
+  "core_gameplay_loop": "In Chimney Roofs, repeat each round: Decide whether to return or print and see why only return passes data on. Each round poses one decision; a wrong answer breaks the streak. Then check the court_score value and advance.",
+  "primary_mechanic": "Return Or Print",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about court_score to power up the sled courier and open the larder door.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Return Or Print",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M15-X4-T10-21279225",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Return Or Print' (Week 6 slot 15), mission type 'Streak Challenge', and setting 'Chimney Roofs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 6,
+  "trial": 10,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "return x  # vs print(x)",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how court_score changes.",
+    "Step 2: Use the controls to apply the code idea against blizzard sprites in Chimney Roofs.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

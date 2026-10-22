@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1837",
+  "game_title": "Search Scout – Moss Library Defense",
+  "game_concept": "A tower defense set in Eldritch Ruins – Moss Library, a ruined library: the tomb cartographer must handle cursed statues while practicing lists. Core idea – Search Scout: Use in and index() to find where a hidden item sits in a list.",
+  "genre": "tower defense",
+  "theme": "Eldritch Ruins – Moss Library: a ruined library",
+  "core_gameplay_loop": "In Moss Library, repeat each round: Use in and index() to find where a hidden item sits in a list. Each round, cursed statues strike the relic vault, so respond before the next strike lands. Then check the found value and advance.",
+  "primary_mechanic": "Search Scout",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the relic vault from cursed statues in Moss Library: keep the found meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 46 seconds while found > 0.",
+  "lose_condition": "found drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Search Scout",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M07-X1-T05-e57d6ca8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Search Scout' (Week 7 slot 7), mission type 'Survival Siege', and setting 'Moss Library'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 7,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if 'gem' in cave:\n    cave.index('gem')",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how found changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Moss Library.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while found > 0."
+  ]
+}

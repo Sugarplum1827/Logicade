@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2411",
+  "game_title": "Pseudocode Bridge – Salt Flat Crossing Defense",
+  "game_concept": "A survival strategy set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Pseudocode Bridge: Convert plain-language pseudocode into working code steps to cross the gap.",
+  "genre": "survival strategy",
+  "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
+  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Convert plain-language pseudocode into working code steps to cross the gap. Each round, vultures strike the temple door, so respond before the next strike lands. Then check the bridge value and advance.",
+  "primary_mechanic": "Pseudocode Bridge",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the temple door from vultures in Salt Flat Crossing: keep the bridge meter above zero by applying the concept correctly until the 30-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 30 seconds while bridge > 0.",
+  "lose_condition": "bridge drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Pseudocode Bridge",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M11-X1-T11-9ed8ec14",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pseudocode Bridge' (Week 9 slot 11), mission type 'Survival Siege', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "# repeat until empty",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 30,
+    "target_score": 100,
+    "action_budget": 14,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bridge changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
+    "Step 3: Win by meeting the goal: Timer reaches 30 seconds while bridge > 0."
+  ]
+}

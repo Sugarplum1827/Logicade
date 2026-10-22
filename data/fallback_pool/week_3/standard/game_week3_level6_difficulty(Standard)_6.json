@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0766",
+  "game_title": "Gatekeeper If – Net Menders' Pier Rush",
+  "game_concept": "A arcade set in Coastal Port – Net Menders' Pier, a pier of net menders: the deckhand must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Gatekeeper If: Write a single if condition that opens the gate only for friendly visitors.",
+  "genre": "arcade",
+  "theme": "Coastal Port – Net Menders' Pier: a pier of net menders",
+  "core_gameplay_loop": "In Net Menders' Pier, repeat each round: Write a single if condition that opens the gate only for friendly visitors. Each round, a new cargo crates challenge appears; solve it to bank points before time drains. Then check the gate_integrity value and advance.",
+  "primary_mechanic": "Gatekeeper If",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Collect 300 points of cargo crates by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 300 within 45 seconds.",
+  "lose_condition": "Timer hits 0 with score < 300, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 6 (applied tier): Gatekeeper If",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M01-X2-T12-5ae921ec",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Gatekeeper If' (Week 3 slot 1), mission type 'Resource Rush', and setting 'Net Menders' Pier'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 6,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if has_key:\n    open_gate()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how gate_integrity changes.",
+    "Step 2: Use the controls to apply the code idea against pirate raiders in Net Menders' Pier.",
+    "Step 3: Win by meeting the goal: score >= 300 within 45 seconds."
+  ]
+}

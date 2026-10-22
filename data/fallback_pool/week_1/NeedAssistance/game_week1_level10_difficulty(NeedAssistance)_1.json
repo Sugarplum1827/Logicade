@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0271",
+  "game_title": "Variable Crates – Orchard Lane Streak",
+  "game_concept": "A quiz RPG set in The Kingdom – Orchard Lane, the royal orchard lane: the knight must handle thieves while practicing variables & assignment. Core idea – Variable Crates: Drag collected scrolls into labelled variable crates, then read each crate's value to feed the royal seal.",
+  "genre": "quiz RPG",
+  "theme": "The Kingdom – Orchard Lane: the royal orchard lane",
+  "core_gameplay_loop": "In Orchard Lane, repeat each round: Drag collected scrolls into labelled variable crates, then read each crate's value to feed the royal seal. Each round poses one decision; a wrong answer breaks the streak. Then check the crate_b value and advance.",
+  "primary_mechanic": "Variable Crates",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about crate_b to power up the knight and open the royal seal.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Variable Crates",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M01-X4-T19-a8e0824a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Variable Crates' (Week 1 slot 1), mission type 'Streak Challenge', and setting 'Orchard Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 10,
+  "trial": 1,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "crate_a = 5\ncrate_b = crate_a + 2",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how crate_b changes.",
+    "Step 2: Use the controls to apply the code idea against thieves in Orchard Lane.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

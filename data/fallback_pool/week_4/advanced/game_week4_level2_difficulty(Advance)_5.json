@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0955",
+  "game_title": "Break Out – Mine Cart Tunnel Defense",
+  "game_concept": "A tower defense set in Shadow Cave – Mine Cart Tunnel, an old mine cart tunnel: the torchbearer must handle shadow wraiths while practicing control flow: while loops. Core idea – Break Out: Use break to leave a loop the moment a dangerous foe is spotted.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Mine Cart Tunnel: an old mine cart tunnel",
+  "core_gameplay_loop": "In Mine Cart Tunnel, repeat each round: Use break to leave a loop the moment a dangerous foe is spotted. Each round, shadow wraiths strike the mine cart, so respond before the next strike lands. Then check the alert value and advance.",
+  "primary_mechanic": "Break Out",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Ghost replay of best run",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the mine cart from shadow wraiths in Mine Cart Tunnel: keep the alert meter above zero by applying the concept correctly until the 26-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 26 seconds while alert > 0.",
+  "lose_condition": "alert drops to 0, or lives reach 0, before the 26-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 2 (intro tier): Break Out",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M10-X1-T07-43cee5e9",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Break Out' (Week 4 slot 10), mission type 'Survival Siege', and setting 'Mine Cart Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 2,
+  "trial": 5,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while True:\n    if danger:\n        break",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 26,
+    "target_score": 180,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how alert changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wraiths in Mine Cart Tunnel.",
+    "Step 3: Win by meeting the goal: Timer reaches 26 seconds while alert > 0."
+  ]
+}

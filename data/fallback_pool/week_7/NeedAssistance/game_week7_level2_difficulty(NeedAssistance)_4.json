@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1834",
+  "game_title": "Queue Line – Sunken Altar Rush",
+  "game_concept": "A arcade set in Eldritch Ruins – Sunken Altar, an altar half-sunk in earth: the scholar mage must handle rune wisps while practicing lists. Core idea – Queue Line: Serve a queue of visitors with pop(0) in first-come order.",
+  "genre": "arcade",
+  "theme": "Eldritch Ruins – Sunken Altar: an altar half-sunk in earth",
+  "core_gameplay_loop": "In Sunken Altar, repeat each round: Serve a queue of visitors with pop(0) in first-come order. Each round, a new relic shards challenge appears; solve it to bank points before time drains. Then check the queue_calm value and advance.",
+  "primary_mechanic": "Queue Line",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Collect 100 points of relic shards by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 100 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Queue Line",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M04-X2-T04-b17816e3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Queue Line' (Week 7 slot 4), mission type 'Resource Rush', and setting 'Sunken Altar'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 2,
+  "trial": 4,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "line.pop(0)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 46,
+    "target_score": 100,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.55,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.85,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how queue_calm changes.",
+    "Step 2: Use the controls to apply the code idea against rune wisps in Sunken Altar.",
+    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
+  ]
+}

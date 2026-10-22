@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1679",
+  "game_title": "Library Builder – Snowdrift Barracks Defense",
+  "game_concept": "A survival strategy set in Snowy Hold – Snowdrift Barracks, barracks half buried in snow: the firewood keeper must handle winter bandits while practicing functions. Core idea – Library Builder: Combine small functions into a reusable library the firewood keeper calls throughout the level.",
+  "genre": "survival strategy",
+  "theme": "Snowy Hold – Snowdrift Barracks: barracks half buried in snow",
+  "core_gameplay_loop": "In Snowdrift Barracks, repeat each round: Combine small functions into a reusable library the firewood keeper calls throughout the level. Each round, winter bandits strike the beacon fire, so respond before the next strike lands. Then check the library value and advance.",
+  "primary_mechanic": "Library Builder",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Limited undo button",
+    "Combo multiplier"
+  ],
+  "player_objective": "Protect the beacon fire from winter bandits in Snowdrift Barracks: keep the library meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 36 seconds while library > 0.",
+  "lose_condition": "library drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Library Builder",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M14-X1-T03-a29a3334",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Library Builder' (Week 6 slot 14), mission type 'Survival Siege', and setting 'Snowdrift Barracks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 6,
+  "trial": 9,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "import tools\ntools.heal()",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how library changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Snowdrift Barracks.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while library > 0."
+  ]
+}

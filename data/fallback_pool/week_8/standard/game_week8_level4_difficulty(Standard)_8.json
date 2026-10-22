@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2208",
+  "game_title": "Case Choir – Glacier Crossing Streak",
+  "game_concept": "A card battler set in Frost Peaks – Glacier Crossing, a cracking glacier: the sherpa guide must handle frost wyrms while practicing strings & dictionaries. Core idea – Case Choir: Convert text with upper(), lower(), and title() to match the choir's tune.",
+  "genre": "card battler",
+  "theme": "Frost Peaks – Glacier Crossing: a cracking glacier",
+  "core_gameplay_loop": "In Glacier Crossing, repeat each round: Convert text with upper(), lower(), and title() to match the choir's tune. Each round poses one decision; a wrong answer breaks the streak. Then check the choir value and advance.",
+  "primary_mechanic": "Case Choir",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about choir to power up the sherpa guide and open the summit beacon.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Case Choir",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M03-X4-T02-4ffc9d25",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Case Choir' (Week 8 slot 3), mission type 'Streak Challenge', and setting 'Glacier Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 4,
+  "trial": 8,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "name.title()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how choir changes.",
+    "Step 2: Use the controls to apply the code idea against frost wyrms in Glacier Crossing.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

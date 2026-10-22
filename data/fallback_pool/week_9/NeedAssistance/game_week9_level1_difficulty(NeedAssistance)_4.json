@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2404",
+  "game_title": "Print Tracer – Dune Crest Race",
+  "game_concept": "A racing platformer set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what sand wyrms changed.",
+  "genre": "racing platformer",
+  "theme": "Sand Dunes – Dune Crest: a high dune crest",
+  "core_gameplay_loop": "In Dune Crest, repeat each round: Insert print statements at the right lines to reveal what sand wyrms changed. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the trace_clarity value and advance.",
+  "primary_mechanic": "Print Tracer",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Beat a rival AI to the oasis by solving code steps involving trace_clarity that move the desert nomad forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "lose_condition": "The rival reaches the oasis first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Print Tracer",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M04-X5-T02-06b5057a",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Rival Race', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 1,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "print('x =', x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
+    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0117",
+  "game_title": "Formula Fuel – Blacksmith Row Defense",
+  "game_concept": "A action defense set in The Kingdom – Blacksmith Row, a street of busy forges: the baker's apprentice must handle shadow scouts while practicing variables & assignment. Core idea – Formula Fuel: Compute values like total = price * qty to fuel the baker's apprentice's trip to the drawbridge.",
+  "genre": "action defense",
+  "theme": "The Kingdom – Blacksmith Row: a street of busy forges",
+  "core_gameplay_loop": "In Blacksmith Row, repeat each round: Compute values like total = price * qty to fuel the baker's apprentice's trip to the drawbridge. Each round, shadow scouts strike the drawbridge, so respond before the next strike lands. Then check the total value and advance.",
+  "primary_mechanic": "Formula Fuel",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Protect the drawbridge from shadow scouts in Blacksmith Row: keep the total meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 31 seconds while total > 0.",
+  "lose_condition": "total drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 4 (applied tier): Formula Fuel",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M12-X1-T05-fcfab7b6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Formula Fuel' (Week 1 slot 12), mission type 'Survival Siege', and setting 'Blacksmith Row'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 4,
+  "trial": 7,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "total = price * qty",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 31,
+    "target_score": 290,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against shadow scouts in Blacksmith Row.",
+    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while total > 0."
+  ]
+}

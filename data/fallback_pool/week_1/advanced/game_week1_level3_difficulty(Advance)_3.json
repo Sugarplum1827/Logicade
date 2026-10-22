@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0083",
+  "game_title": "Inventory Slots – Harvest Fields Rush",
+  "game_concept": "A action puzzle set in The Kingdom – Harvest Fields, farm fields beyond the walls: the royal scribe must handle mischievous imps while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against mischievous imps.",
+  "genre": "action puzzle",
+  "theme": "The Kingdom – Harvest Fields: farm fields beyond the walls",
+  "core_gameplay_loop": "In Harvest Fields, repeat each round: Store each item in its own variable and choose which one to spend against mischievous imps. Each round, a new coins challenge appears; solve it to bank points before time drains. Then check the potion value and advance.",
+  "primary_mechanic": "Inventory Slots",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Checkpoint flags",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Collect 230 points of coins by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "score >= 230 within 29 seconds.",
+  "lose_condition": "Timer hits 0 with score < 230, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 3 (intro tier): Inventory Slots",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M08-X2-T15-28526711",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Resource Rush', and setting 'Harvest Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 3,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "sword = 3\npotion = 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how potion changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous imps in Harvest Fields.",
+    "Step 3: Win by meeting the goal: score >= 230 within 29 seconds."
+  ]
+}

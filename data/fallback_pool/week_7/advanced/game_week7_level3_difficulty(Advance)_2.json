@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1882",
+  "game_title": "Search Scout – Cracked Obelisk Streak",
+  "game_concept": "A quiz RPG set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Search Scout: Use in and index() to find where a hidden item sits in a list.",
+  "genre": "quiz RPG",
+  "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
+  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Use in and index() to find where a hidden item sits in a list. Each round poses one decision; a wrong answer breaks the streak. Then check the found value and advance.",
+  "primary_mechanic": "Search Scout",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Live variable watch panel",
+    "Combo multiplier"
+  ],
+  "player_objective": "Chain 10 consecutive correct decisions about found to power up the rune scholar and open the sealed archway.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 10.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Search Scout",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M07-X4-T08-f2780dee",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Search Scout' (Week 7 slot 7), mission type 'Streak Challenge', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 3,
+  "trial": 2,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if 'gem' in cave:\n    cave.index('gem')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how found changes.",
+    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
+    "Step 3: Win by meeting the goal: streak counter reaches 10."
+  ]
+}

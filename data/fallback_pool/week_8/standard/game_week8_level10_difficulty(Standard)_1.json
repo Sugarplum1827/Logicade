@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2381",
+  "game_title": "Key Checkpoint – Cloud Sea Overlook Streak",
+  "game_concept": "A rhythm puzzle set in Frost Peaks – Cloud Sea Overlook, an overlook above the clouds: the avalanche scout must handle yetis while practicing strings & dictionaries. Core idea – Key Checkpoint: Check key membership with in before reading dictionary values.",
+  "genre": "rhythm puzzle",
+  "theme": "Frost Peaks – Cloud Sea Overlook: an overlook above the clouds",
+  "core_gameplay_loop": "In Cloud Sea Overlook, repeat each round: Check key membership with in before reading dictionary values. Each round poses one decision; a wrong answer breaks the streak. Then check the checkpoint value and advance.",
+  "primary_mechanic": "Key Checkpoint",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 12 consecutive correct decisions about checkpoint to power up the avalanche scout and open the pass gate.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 12.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Key Checkpoint",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M11-X4-T09-196a6ef3",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Key Checkpoint' (Week 8 slot 11), mission type 'Streak Challenge', and setting 'Cloud Sea Overlook'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 1,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "if 'pass' in guests:",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how checkpoint changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Cloud Sea Overlook.",
+    "Step 3: Win by meeting the goal: streak counter reaches 12."
+  ]
+}

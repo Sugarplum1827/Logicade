@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0123",
+  "game_title": "Counter Tower – Market Square Race",
+  "game_concept": "A strategy race set in The Kingdom – Market Square, a bustling cobbled market square: the royal scribe must handle thieves while practicing variables & assignment. Core idea – Counter Tower: Increase a counter variable every time scrolls reach the wall banner, stacking the tower higher.",
+  "genre": "strategy race",
+  "theme": "The Kingdom – Market Square: a bustling cobbled market square",
+  "core_gameplay_loop": "In Market Square, repeat each round: Increase a counter variable every time scrolls reach the wall banner, stacking the tower higher. Each round the rival advances, and solving the step moves the royal scribe ahead. Then check the delivered value and advance.",
+  "primary_mechanic": "Counter Tower",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the wall banner by solving code steps involving delivered that move the royal scribe forward.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "lose_condition": "The rival reaches the wall banner first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 5 (applied tier): Counter Tower",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M03-X5-T03-a6f9c048",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Counter Tower' (Week 1 slot 3), mission type 'Rival Race', and setting 'Market Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 5,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "delivered = delivered + 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 59,
+    "target_score": 180,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how delivered changes.",
+    "Step 2: Use the controls to apply the code idea against thieves in Market Square.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
+  ]
+}

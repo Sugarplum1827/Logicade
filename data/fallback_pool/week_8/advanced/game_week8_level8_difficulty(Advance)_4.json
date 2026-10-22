@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2334",
+  "game_title": "Frequency Bazaar – Supply Cache Camp Race",
+  "game_concept": "A strategy race set in Frost Peaks – Supply Cache Camp, a high supply cache: the summit pilot must handle ice hawks while practicing strings & dictionaries. Core idea – Frequency Bazaar: Count how often each item appears using a dictionary.",
+  "genre": "strategy race",
+  "theme": "Frost Peaks – Supply Cache Camp: a high supply cache",
+  "core_gameplay_loop": "In Supply Cache Camp, repeat each round: Count how often each item appears using a dictionary. Each round the rival advances, and solving the step moves the summit pilot ahead. Then check the tally value and advance.",
+  "primary_mechanic": "Frequency Bazaar",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Checkpoint flags",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the summit beacon by solving code steps involving tally that move the summit pilot forward.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "lose_condition": "The rival reaches the summit beacon first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 8 (extended tier): Frequency Bazaar",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M09-X5-T12-ebc20c6b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Frequency Bazaar' (Week 8 slot 9), mission type 'Rival Race', and setting 'Supply Cache Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 8,
+  "trial": 4,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "count[x] = count.get(x, 0) + 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how tally changes.",
+    "Step 2: Use the controls to apply the code idea against ice hawks in Supply Cache Camp.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
+  ]
+}

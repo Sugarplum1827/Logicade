@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2619",
+  "game_title": "Edge Case Hunter – Salt Flat Crossing Streak",
+  "game_concept": "A card battler set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
+  "genre": "card battler",
+  "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
+  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round poses one decision; a wrong answer breaks the streak. Then check the edge_cases value and advance.",
+  "primary_mechanic": "Edge Case Hunter",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Combo multiplier",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about edge_cases to power up the scarab scholar and open the temple door.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Edge Case Hunter",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M09-X4-T11-37dabf55",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Streak Challenge', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "avg = total / len(items)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how edge_cases changes.",
+    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

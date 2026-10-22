@@ -1,0 +1,235 @@
+{
+  "template_id": "tmpl_w4_l07_AD",
+  "is_fallback": true,
+  "fallback_for": {
+    "week": 4,
+    "level": 7,
+    "difficulty": "Advance"
+  },
+  "file_id": "fallback_0111",
+  "game_title": "Fallback: Guess Until Right – Mine Cart Tunnel",
+  "game_concept": "A tower defense set in Shadow Cave – Mine Cart Tunnel, an old mine cart tunnel: the torchbearer must hold off skeleton miners while practicing control flow: while loops. Core idea – Guess Until Right: Keep guessing while guess != secret, narrowing the range using hints.",
+  "genre": "tower defense",
+  "theme": "Shadow Cave – Mine Cart Tunnel: an old mine cart tunnel",
+  "core_gameplay_loop": "In Mine Cart Tunnel, repeat each round: Keep guessing while guess != secret, narrowing the range using hints. Then check guess_range and advance.",
+  "primary_mechanic": "Guess Until Right",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Energy-limited fixes",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the stone seal from skeleton miners in Mine Cart Tunnel: keep guess_range above zero until the 38-second timer ends.",
+  "controls": "Keyboard: SPACE applies the code fix; mouse/touch: tap the code panel to choose a value.",
+  "win_condition": "guess_range > 0 && timer >= 38",
+  "lose_condition": "guess_range <= 0 || lives <= 0",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Guess Until Right",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "FB-W4-L07-AD",
+  "duplicate_check_notes": "Generic fallback template for Week 4, Level 7, Advance. Deliberately a simple survival game; it is not one of the 2,700 unique pool games and is only used when no pool game can be served.",
+  "week": 4,
+  "level": 7,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "learning_objectives": [
+    "Understand the idea behind: Control Flow: While Loops",
+    "Apply “Guess Until Right” in a short challenge",
+    "Predict what the code does before running it",
+    "Notice and fix a mistake in the code"
+  ],
+  "assets": {
+    "player": "kenney_torchbearer",
+    "enemy": "kenney_skeleton_miners",
+    "objective": "kenney_stone_seal",
+    "background": "w4_cave",
+    "projectile": "kenney_glowing_mushrooms",
+    "effects": [
+      "hit_sparks",
+      "enemy_defeat_effect",
+      "repair_glow"
+    ]
+  },
+  "game_settings": {
+    "starting_meter": 100,
+    "max_meter": 100,
+    "meter_variable": "guess_range",
+    "damage_per_attack": 16,
+    "repair_per_action": 5,
+    "starting_player_energy": 50,
+    "max_player_energy": 100,
+    "energy_per_action": 5,
+    "energy_regen_per_second": 1,
+    "lives": 2,
+    "hint_count": 0,
+    "game_duration_seconds": 38,
+    "starting_score": 0,
+    "score_per_survived_second": 10,
+    "score_per_enemy_defeated": 50
+  },
+  "ui": {
+    "title": "Mine Cart Tunnel: Guess Until Right",
+    "subtitle": "Hold out until the timer ends!",
+    "code_snippet": "while guess != secret:\n    guess = next_guess()",
+    "health_bar": {
+      "visible": true,
+      "label": "guess_range",
+      "color_states": {
+        "high": "green",
+        "medium": "yellow",
+        "low": "red"
+      }
+    },
+    "timer": {
+      "visible": true,
+      "label": "Time Remaining"
+    },
+    "score_display": true,
+    "energy_bar": true,
+    "wave_counter": true,
+    "code_highlighting": true,
+    "event_log": true,
+    "controls": [
+      {
+        "key": "SPACE",
+        "action": "apply_fix",
+        "label": "Run Code Fix"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "on": "enemy_attack_tick",
+      "if": "guess_range > 0 && timer < 38",
+      "then": [
+        "guess_range = max(0, guess_range - 16)",
+        "play_animation('hit')",
+        "play_sound('impact')",
+        "add_event_log('Skeleton miners attack the stone seal!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "guess_range > 0 && guess_range < 100 && player_energy >= 5",
+      "then": [
+        "guess_range = min(100, guess_range + 5)",
+        "player_energy -= 5",
+        "score += 10",
+        "play_animation('repair')",
+        "play_sound('repair')",
+        "add_event_log('You applied the fix!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "guess_range >= 100",
+      "then": [
+        "show_message('guess_range is already full!')"
+      ]
+    },
+    {
+      "on": "player_press_space",
+      "if": "player_energy < 5 && guess_range < 100",
+      "then": [
+        "show_message('Not enough energy!')"
+      ]
+    },
+    {
+      "on": "wrong_code_choice",
+      "if": "lives > 0",
+      "then": [
+        "lives -= 1",
+        "play_sound('wrong')",
+        "add_event_log('That choice does not match the code.')"
+      ]
+    },
+    {
+      "on": "timer_tick",
+      "if": "timer < 38 && guess_range > 0",
+      "then": [
+        "timer += 1",
+        "score += 10",
+        "player_energy = min(100, player_energy + 1)"
+      ]
+    },
+    {
+      "on": "enemy_defeated",
+      "if": "guess_range > 0",
+      "then": [
+        "score += 50",
+        "play_sound('defeat')"
+      ]
+    },
+    {
+      "on": "meter_changed",
+      "if": "guess_range <= 30 && guess_range > 0",
+      "then": [
+        "show_warning('guess_range is about to fail!')",
+        "play_animation('shaking')"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": 1,
+      "start_time": 0,
+      "enemy_count": 7,
+      "attack_interval_seconds": 1.5
+    },
+    {
+      "wave": 2,
+      "start_time": 13,
+      "enemy_count": 8,
+      "attack_interval_seconds": 1.1
+    },
+    {
+      "wave": 3,
+      "start_time": 25,
+      "enemy_count": 9,
+      "attack_interval_seconds": 0.8
+    }
+  ],
+  "win": "guess_range > 0 && timer >= 38",
+  "lose": "guess_range <= 0 || lives <= 0",
+  "hint": "Read the code panel: Keep guessing while guess != secret, narrowing the range using hints. Keep guess_range above zero until the timer reaches 38.",
+  "tutorial": [
+    {
+      "step": 1,
+      "message": "Skeleton miners are coming! Watch the guess_range meter."
+    },
+    {
+      "step": 2,
+      "message": "Press SPACE to run a code fix when the meter drops."
+    },
+    {
+      "step": 3,
+      "message": "Look at the code: while guess != secret:"
+    },
+    {
+      "step": 4,
+      "message": "Survive for 38 seconds to complete the level."
+    }
+  ],
+  "feedback": {
+    "on_win": {
+      "title": "Level Cleared!",
+      "message": "You mastered Guess Until Right in Shadow Cave!",
+      "reward": 100
+    },
+    "on_lose": {
+      "title": "Try Again!",
+      "message": "guess_range ran out. Fix the code sooner and watch the meter!"
+    }
+  },
+  "accessibility": {
+    "color_independent_health_indicator": true,
+    "subtitles": true,
+    "keyboard_controls": true,
+    "reduced_motion": true
+  }
+}

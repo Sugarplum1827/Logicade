@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1782",
+  "game_title": "Keyword Switchboard – Furrier Lane Rush",
+  "game_concept": "A speed quiz set in Snowy Hold – Furrier Lane, a lane of furriers: the sled courier must handle icicle bats while practicing functions. Core idea – Keyword Switchboard: Call functions with keyword arguments to wire the right switches.",
+  "genre": "speed quiz",
+  "theme": "Snowy Hold – Furrier Lane: a lane of furriers",
+  "core_gameplay_loop": "In Furrier Lane, repeat each round: Call functions with keyword arguments to wire the right switches. Each round, a new salt bags challenge appears; solve it to bank points before time drains. Then check the wires value and advance.",
+  "primary_mechanic": "Keyword Switchboard",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 460 points of salt bags by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 460 within 57 seconds.",
+  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Keyword Switchboard",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M12-X2-T16-794230c4",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Keyword Switchboard' (Week 6 slot 12), mission type 'Resource Rush', and setting 'Furrier Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 2,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "move(speed=3, dir='left')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 57,
+    "target_score": 460,
+    "action_budget": 19,
+    "streak_target": 12,
+    "rival_speed": 1.1,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wires changes.",
+    "Step 2: Use the controls to apply the code idea against icicle bats in Furrier Lane.",
+    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
+  ]
+}

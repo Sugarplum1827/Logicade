@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1795",
+  "game_title": "Boolean Guards – Snowdrift Barracks Rush",
+  "game_concept": "A arcade set in Snowy Hold – Snowdrift Barracks, barracks half buried in snow: the firewood keeper must handle winter bandits while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
+  "genre": "arcade",
+  "theme": "Snowy Hold – Snowdrift Barracks: barracks half buried in snow",
+  "core_gameplay_loop": "In Snowdrift Barracks, repeat each round: Write functions returning True or False that guard checkpoints. Each round, a new hot soup pots challenge appears; solve it to bank points before time drains. Then check the guards value and advance.",
+  "primary_mechanic": "Boolean Guards",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 600 points of hot soup pots by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 600 within 46 seconds.",
+  "lose_condition": "Timer hits 0 with score < 600, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Boolean Guards",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M10-X2-T03-af397f91",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Resource Rush', and setting 'Snowdrift Barracks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 10,
+  "trial": 5,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "def is_safe(x):\n    return x < 5",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how guards changes.",
+    "Step 2: Use the controls to apply the code idea against winter bandits in Snowdrift Barracks.",
+    "Step 3: Win by meeting the goal: score >= 600 within 46 seconds."
+  ]
+}

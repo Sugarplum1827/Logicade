@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1081",
+  "game_title": "Door Defense – Bone Crypt Trial",
+  "game_concept": "A puzzle set in Shadow Cave – Bone Crypt, a dusty bone crypt: the torchbearer must handle slime blobs while practicing control flow: while loops. Core idea – Door Defense: Push to repair the exit ledge while the while-loop condition stays true and slime blobs keep attacking.",
+  "genre": "puzzle",
+  "theme": "Shadow Cave – Bone Crypt: a dusty bone crypt",
+  "core_gameplay_loop": "In Bone Crypt, repeat each round: Push to repair the exit ledge while the while-loop condition stays true and slime blobs keep attacking. Each round costs one action, so plan the step so none are wasted. Then check the door_health value and advance.",
+  "primary_mechanic": "Door Defense",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the exit ledge using at most 21 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The exit ledge reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the exit ledge is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 4 – Control Flow: While Loops | Level 7 (applied tier): Door Defense",
+  "assets_style": "dark pixel-art cavern: torchlit stone, mossy rock, deep shadows, glowing crystals; flat Kenney-style sprites; echoing drips, low drones and torch crackle",
+  "unique_identity_key": "W4-M01-X3-T13-e5adba3b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Door Defense' (Week 4 slot 1), mission type 'Efficiency Trial', and setting 'Bone Crypt'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 4,
+  "level": 7,
+  "trial": 1,
+  "topic": "Control Flow: While Loops",
+  "region": {
+    "id": "w4_cave",
+    "name": "Shadow Cave",
+    "banner": "data/fallback_pool/week_4/w4_cave.png",
+    "mood": "echoing drips, low drones and torch crackle"
+  },
+  "code_snippet": "while door_health > 0 and timer < 67:\n    player.push()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 67,
+    "target_score": 240,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how door_health changes.",
+    "Step 2: Use the controls to apply the code idea against slime blobs in Bone Crypt.",
+    "Step 3: Win by meeting the goal: The exit ledge reached with actions_used <= 21."
+  ]
+}

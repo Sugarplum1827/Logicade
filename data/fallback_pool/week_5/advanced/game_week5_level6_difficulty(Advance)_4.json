@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1374",
+  "game_title": "Roll Call Enumerate – Bramble Maze Defense",
+  "game_concept": "A action defense set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
+  "core_gameplay_loop": "In Bramble Maze, repeat each round: Use enumerate to call out each position and name in a roll call. Each round, wasp swarms strike the root gate, so respond before the next strike lands. Then check the roll_call value and advance.",
+  "primary_mechanic": "Roll Call Enumerate",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Protect the root gate from wasp swarms in Bramble Maze: keep the roll_call meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 36 seconds while roll_call > 0.",
+  "lose_condition": "roll_call drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Roll Call Enumerate",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M09-X1-T08-f707329b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Survival Siege', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 4,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i, name in enumerate(names):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 36,
+    "target_score": 390,
+    "action_budget": 13,
+    "streak_target": 12,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how roll_call changes.",
+    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
+    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while roll_call > 0."
+  ]
+}

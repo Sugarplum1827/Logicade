@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0455",
+  "game_title": "Comparison Duel – Vent Garden Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the fire warden's power beats the shield shown by smoke serpents.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
+  "core_gameplay_loop": "In Vent Garden, repeat each round: Choose ==, !=, < , > or >= so the fire warden's power beats the shield shown by smoke serpents. Each round costs one action, so plan the step so none are wasted. Then check the power value and advance.",
+  "primary_mechanic": "Comparison Duel",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Power-up crates for perfect rounds",
+    "Limited undo button"
+  ],
+  "player_objective": "Reach the ash barrier using at most 21 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The ash barrier reached with actions_used <= 21.",
+  "lose_condition": "actions_used exceeds 21 before the ash barrier is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Comparison Duel",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M05-X3-T19-45bd61ab",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Efficiency Trial', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 6,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power > shield",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
+    "Step 3: Win by meeting the goal: The ash barrier reached with actions_used <= 21."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2617",
+  "game_title": "Integration Heist – Merchant Waystation Trial",
+  "game_concept": "A puzzle set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Merchant Waystation.",
+  "genre": "puzzle",
+  "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
+  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Merchant Waystation. Each round costs one action, so plan the step so none are wasted. Then check the heist value and advance.",
+  "primary_mechanic": "Integration Heist",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Combo multiplier",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Reach the sundial using at most 22 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The sundial reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the sundial is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Integration Heist",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M07-X3-T17-08ee4d59",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Efficiency Trial', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 7,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how heist changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
+    "Step 3: Win by meeting the goal: The sundial reached with actions_used <= 22."
+  ]
+}

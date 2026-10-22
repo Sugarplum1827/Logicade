@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2000",
+  "game_title": "Stack Of Plates – Overgrown Archway Defense",
+  "game_concept": "A survival strategy set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
+  "genre": "survival strategy",
+  "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
+  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round, vine horrors strike the rune gate, so respond before the next strike lands. Then check the stack_balance value and advance.",
+  "primary_mechanic": "Stack Of Plates",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Protect the rune gate from vine horrors in Overgrown Archway: keep the stack_balance meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 48 seconds while stack_balance > 0.",
+  "lose_condition": "stack_balance drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Stack Of Plates",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M05-X1-T02-859502f2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Survival Siege', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 10,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "stack.append(x)\nstack.pop()",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_balance changes.",
+    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while stack_balance > 0."
+  ]
+}

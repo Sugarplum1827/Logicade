@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2481",
+  "game_title": "Off By One Autopsy – Oasis Pool Defense",
+  "game_concept": "A action defense set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
+  "genre": "action defense",
+  "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
+  "core_gameplay_loop": "In Oasis Pool, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round, giant scorpions strike the temple door, so respond before the next strike lands. Then check the autopsy value and advance.",
+  "primary_mechanic": "Off By One Autopsy",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Bonus coins for fast correct moves"
+  ],
+  "player_objective": "Protect the temple door from giant scorpions in Oasis Pool: keep the autopsy meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 29 seconds while autopsy > 0.",
+  "lose_condition": "autopsy drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Off By One Autopsy",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M06-X1-T01-4f4a52b2",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Survival Siege', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 3,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "for i in range(len(a) + 1):",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 29,
+    "target_score": 230,
+    "action_budget": 11,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.1,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how autopsy changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
+    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while autopsy > 0."
+  ]
+}

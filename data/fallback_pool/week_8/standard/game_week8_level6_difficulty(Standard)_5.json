@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2265",
+  "game_title": "Cipher Decoder – Cloud Sea Overlook Trial",
+  "game_concept": "A programming puzzle set in Frost Peaks – Cloud Sea Overlook, an overlook above the clouds: the avalanche scout must handle yetis while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
+  "genre": "programming puzzle",
+  "theme": "Frost Peaks – Cloud Sea Overlook: an overlook above the clouds",
+  "core_gameplay_loop": "In Cloud Sea Overlook, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round costs one action, so plan the step so none are wasted. Then check the decoded value and advance.",
+  "primary_mechanic": "Cipher Decoder",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Reach the pass gate using at most 17 actions, so every code step counts.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "The pass gate reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the pass gate is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Cipher Decoder",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M15-X3-T09-a70ecd23",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Efficiency Trial', and setting 'Cloud Sea Overlook'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 6,
+  "trial": 5,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "chr(ord('a') + 1)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 45,
+    "target_score": 300,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how decoded changes.",
+    "Step 2: Use the controls to apply the code idea against yetis in Cloud Sea Overlook.",
+    "Step 3: Win by meeting the goal: The pass gate reached with actions_used <= 17."
+  ]
+}

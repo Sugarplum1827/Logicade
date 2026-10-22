@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1267",
+  "game_title": "Pattern Painter – Druid Grove Trial",
+  "game_concept": "A puzzle set in Mystic Forest – Druid Grove, the druids' grove: the forest ranger must handle mischievous sprites while practicing control flow: for loops. Core idea – Pattern Painter: Print growing star triangles with nested loops to decorate the herb garden.",
+  "genre": "puzzle",
+  "theme": "Mystic Forest – Druid Grove: the druids' grove",
+  "core_gameplay_loop": "In Druid Grove, repeat each round: Print growing star triangles with nested loops to decorate the herb garden. Each round costs one action, so plan the step so none are wasted. Then check the pattern_rows value and advance.",
+  "primary_mechanic": "Pattern Painter",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Reach the herb garden using at most 19 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The herb garden reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the herb garden is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Pattern Painter",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M07-X3-T07-63441f5b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pattern Painter' (Week 5 slot 7), mission type 'Efficiency Trial', and setting 'Druid Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 3,
+  "trial": 7,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(1, 5):\n    print('*' * i)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how pattern_rows changes.",
+    "Step 2: Use the controls to apply the code idea against mischievous sprites in Druid Grove.",
+    "Step 3: Win by meeting the goal: The herb garden reached with actions_used <= 19."
+  ]
+}

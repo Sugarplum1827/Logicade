@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2179",
+  "game_title": "Split Join Assembly – Summit Spire Race",
+  "game_concept": "A racing platformer set in Frost Peaks – Summit Spire, the highest spire: the mountaineer must handle storm winds while practicing strings & dictionaries. Core idea – Split Join Assembly: Split sentences into words and join them back to assemble orders.",
+  "genre": "racing platformer",
+  "theme": "Frost Peaks – Summit Spire: the highest spire",
+  "core_gameplay_loop": "In Summit Spire, repeat each round: Split sentences into words and join them back to assemble orders. Each round the rival advances, and solving the step moves the mountaineer ahead. Then check the assembly value and advance.",
+  "primary_mechanic": "Split Join Assembly",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Beat a rival AI to the supply cache by solving code steps involving assembly that move the mountaineer forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
+  "lose_condition": "The rival reaches the supply cache first, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Split Join Assembly",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M04-X5-T07-38e94790",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Split Join Assembly' (Week 8 slot 4), mission type 'Rival Race', and setting 'Summit Spire'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 9,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "'a b c'.split()\n'-'.join(words)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 36,
+    "target_score": 180,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.4,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how assembly changes.",
+    "Step 2: Use the controls to apply the code idea against storm winds in Summit Spire.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.75)."
+  ]
+}

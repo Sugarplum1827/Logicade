@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2501",
+  "game_title": "Pseudocode Bridge – Merchant Waystation Rush",
+  "game_concept": "A action puzzle set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Pseudocode Bridge: Convert plain-language pseudocode into working code steps to cross the gap.",
+  "genre": "action puzzle",
+  "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
+  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Convert plain-language pseudocode into working code steps to cross the gap. Each round, a new trade goods challenge appears; solve it to bank points before time drains. Then check the bridge value and advance.",
+  "primary_mechanic": "Pseudocode Bridge",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Combo multiplier",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Collect 220 points of trade goods by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "score >= 220 within 39 seconds.",
+  "lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Pseudocode Bridge",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M11-X2-T17-0d018a81",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Pseudocode Bridge' (Week 9 slot 11), mission type 'Resource Rush', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 1,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "# repeat until empty",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how bridge changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
+    "Step 3: Win by meeting the goal: score >= 220 within 39 seconds."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0746",
+  "game_title": "Rule Duel – Sunken Wreck Race",
+  "game_concept": "A adventure race set in Coastal Port – Sunken Wreck, a wreck beneath the waves: the harbor master must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Rule Duel: Write rules that beat the AI's chosen move in a best-of-rounds duel.",
+  "genre": "adventure race",
+  "theme": "Coastal Port – Sunken Wreck: a wreck beneath the waves",
+  "core_gameplay_loop": "In Sunken Wreck, repeat each round: Write rules that beat the AI's chosen move in a best-of-rounds duel. Each round the rival advances, and solving the step moves the harbor master ahead. Then check the duel_hp value and advance.",
+  "primary_mechanic": "Rule Duel",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Live variable watch panel",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Beat a rival AI to the sea wall by solving code steps involving duel_hp that move the harbor master forward.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "lose_condition": "The rival reaches the sea wall first, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 5 (applied tier): Rule Duel",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M11-X5-T20-13ef6080",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Rule Duel' (Week 3 slot 11), mission type 'Rival Race', and setting 'Sunken Wreck'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 5,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if enemy == 'rock':\n    play('paper')",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how duel_hp changes.",
+    "Step 2: Use the controls to apply the code idea against pirate raiders in Sunken Wreck.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
+  ]
+}

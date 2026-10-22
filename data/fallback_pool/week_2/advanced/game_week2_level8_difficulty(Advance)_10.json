@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0540",
+  "game_title": "Mixed Type Oracle – Lava Tube Tunnel Trial",
+  "game_concept": "A programming puzzle set in Mt. Pyre – Lava Tube Tunnel, a glowing lava tube: the volcanologist must handle lava imps while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before lava imps spring the trap.",
+  "genre": "programming puzzle",
+  "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
+  "core_gameplay_loop": "In Lava Tube Tunnel, repeat each round: Predict the result or error of mixed-type expressions before lava imps spring the trap. Each round costs one action, so plan the step so none are wasted. Then check the predictions value and advance.",
+  "primary_mechanic": "Mixed Type Oracle",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the summit beacon using at most 14 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The summit beacon reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the summit beacon is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Mixed Type Oracle",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M15-X3-T14-c9938466",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Efficiency Trial', and setting 'Lava Tube Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 8,
+  "trial": 10,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "'5' + 3  # TypeError",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how predictions changes.",
+    "Step 2: Use the controls to apply the code idea against lava imps in Lava Tube Tunnel.",
+    "Step 3: Win by meeting the goal: The summit beacon reached with actions_used <= 14."
+  ]
+}

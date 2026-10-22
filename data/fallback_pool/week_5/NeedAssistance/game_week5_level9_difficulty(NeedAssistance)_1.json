@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1441",
+  "game_title": "Range Runner – Stump Court Rush",
+  "game_concept": "A arcade set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the wood elf archer moves exactly n steps toward the herb garden.",
+  "genre": "arcade",
+  "theme": "Mystic Forest – Stump Court: a court around a giant stump",
+  "core_gameplay_loop": "In Stump Court, repeat each round: Run a for i in range(n) loop so the wood elf archer moves exactly n steps toward the herb garden. Each round, a new glowing seeds challenge appears; solve it to bank points before time drains. Then check the steps_left value and advance.",
+  "primary_mechanic": "Range Runner",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Bonus coins for fast correct moves",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Collect 290 points of glowing seeds by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "score >= 290 within 76 seconds.",
+  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Range Runner",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M01-X2-T17-0feab9a6",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Resource Rush', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 1,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for i in range(5):\n    step()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how steps_left changes.",
+    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
+    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
+  ]
+}

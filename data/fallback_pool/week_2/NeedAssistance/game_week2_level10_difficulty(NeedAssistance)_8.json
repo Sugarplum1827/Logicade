@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0578",
+  "game_title": "Type Cast Forge – Sulfur Springs Race",
+  "game_concept": "A adventure race set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
+  "genre": "adventure race",
+  "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
+  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round the rival advances, and solving the step moves the volcanologist ahead. Then check the forge_heat value and advance.",
+  "primary_mechanic": "Type Cast Forge",
+  "secondary_mechanics": [
+    "Rival AI with rubber-band speed",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Beat a rival AI to the fire shrine by solving code steps involving forge_heat that move the volcanologist forward.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "lose_condition": "The rival reaches the fire shrine first, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Type Cast Forge",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M08-X5-T08-5496c14e",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Rival Race', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 10,
+  "trial": 8,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "total = int('5') + 3",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 80,
+    "target_score": 320,
+    "action_budget": 23,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.65,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how forge_heat changes.",
+    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
+    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
+  ]
+}

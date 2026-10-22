@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0557",
+  "game_title": "Arithmetic Cannon – Ember Fields Defense",
+  "game_concept": "A survival strategy set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on molten golems.",
+  "genre": "survival strategy",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "core_gameplay_loop": "In Ember Fields, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on molten golems. Each round, molten golems strike the lava bridge, so respond before the next strike lands. Then check the damage value and advance.",
+  "primary_mechanic": "Arithmetic Cannon",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Reduced-motion and color-blind-safe UI",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the lava bridge from molten golems in Ember Fields: keep the damage meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "Timer reaches 54 seconds while damage > 0.",
+  "lose_condition": "damage drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Arithmetic Cannon",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M02-X1-T05-2a61e398",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Survival Siege', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 9,
+  "trial": 7,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "damage = base * 3 + 2",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 54,
+    "target_score": 420,
+    "action_budget": 18,
+    "streak_target": 11,
+    "rival_speed": 1.05,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.5,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how damage changes.",
+    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
+    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while damage > 0."
+  ]
+}

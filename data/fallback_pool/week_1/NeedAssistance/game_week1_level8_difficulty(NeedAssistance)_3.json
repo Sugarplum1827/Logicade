@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0213",
+  "game_title": "Counter Tower – Royal Stables Defense",
+  "game_concept": "A action defense set in The Kingdom – Royal Stables, the royal stables: the royal scribe must handle goblin raiders while practicing variables & assignment. Core idea – Counter Tower: Increase a counter variable every time grain sacks reach the royal seal, stacking the tower higher.",
+  "genre": "action defense",
+  "theme": "The Kingdom – Royal Stables: the royal stables",
+  "core_gameplay_loop": "In Royal Stables, repeat each round: Increase a counter variable every time grain sacks reach the royal seal, stacking the tower higher. Each round, goblin raiders strike the royal seal, so respond before the next strike lands. Then check the delivered value and advance.",
+  "primary_mechanic": "Counter Tower",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Step-by-step code highlighting",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Protect the royal seal from goblin raiders in Royal Stables: keep the delivered meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 71 seconds while delivered > 0.",
+  "lose_condition": "delivered drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Counter Tower",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M03-X1-T09-5c62c673",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Counter Tower' (Week 1 slot 3), mission type 'Survival Siege', and setting 'Royal Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 8,
+  "trial": 3,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "delivered = delivered + 1",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how delivered changes.",
+    "Step 2: Use the controls to apply the code idea against goblin raiders in Royal Stables.",
+    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while delivered > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2043",
+  "game_title": "Slice Slicer – Ritual Pool Trial",
+  "game_concept": "A programming puzzle set in Eldritch Ruins – Ritual Pool, a still ritual pool: the tomb cartographer must handle echo phantoms while practicing lists. Core idea – Slice Slicer: Cut lists with slices like items[1:4] to grab exactly the right group.",
+  "genre": "programming puzzle",
+  "theme": "Eldritch Ruins – Ritual Pool: a still ritual pool",
+  "core_gameplay_loop": "In Ritual Pool, repeat each round: Cut lists with slices like items[1:4] to grab exactly the right group. Each round costs one action, so plan the step so none are wasted. Then check the slice_ok value and advance.",
+  "primary_mechanic": "Slice Slicer",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Bonus coins for fast correct moves",
+    "Checkpoint flags"
+  ],
+  "player_objective": "Reach the glyph door using at most 22 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The glyph door reached with actions_used <= 22.",
+  "lose_condition": "actions_used exceeds 22 before the glyph door is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Slice Slicer",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M03-X3-T11-3346e719",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Slice Slicer' (Week 7 slot 3), mission type 'Efficiency Trial', and setting 'Ritual Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 3,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "items[1:4]",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how slice_ok changes.",
+    "Step 2: Use the controls to apply the code idea against echo phantoms in Ritual Pool.",
+    "Step 3: Win by meeting the goal: The glyph door reached with actions_used <= 22."
+  ]
+}

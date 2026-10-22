@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2509",
+  "game_title": "Print Tracer – Bazaar Tents Rush",
+  "game_concept": "A arcade set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what giant scorpions changed.",
+  "genre": "arcade",
+  "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
+  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Insert print statements at the right lines to reveal what giant scorpions changed. Each round, a new trade goods challenge appears; solve it to bank points before time drains. Then check the trace_clarity value and advance.",
+  "primary_mechanic": "Print Tracer",
+  "secondary_mechanics": [
+    "Countdown timer with score multiplier",
+    "Limited undo button",
+    "Step-by-step code highlighting"
+  ],
+  "player_objective": "Collect 220 points of trade goods by answering each challenge with the right code concept before the clock runs out.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "score >= 220 within 39 seconds.",
+  "lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Print Tracer",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M04-X2-T09-147acb96",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Resource Rush', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 4,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "print('x =', x)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 39,
+    "target_score": 220,
+    "action_budget": 16,
+    "streak_target": 9,
+    "rival_speed": 0.8,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
+    "Step 3: Win by meeting the goal: score >= 220 within 39 seconds."
+  ]
+}

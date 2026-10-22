@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2049",
+  "game_title": "Length Limit – Glyph Corridor Defense",
+  "game_concept": "A action defense set in Eldritch Ruins – Glyph Corridor, a corridor of glyphs: the relic hunter must handle cursed statues while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Glyph Corridor.",
+  "genre": "action defense",
+  "theme": "Eldritch Ruins – Glyph Corridor: a corridor of glyphs",
+  "core_gameplay_loop": "In Glyph Corridor, repeat each round: Use len() to stop the list from growing past the limit of Glyph Corridor. Each round, cursed statues strike the spirit lantern, so respond before the next strike lands. Then check the capacity value and advance.",
+  "primary_mechanic": "Length Limit",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Hint tokens that reveal one line of code",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Protect the spirit lantern from cursed statues in Glyph Corridor: keep the capacity meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 76 seconds while capacity > 0.",
+  "lose_condition": "capacity drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Length Limit",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M09-X1-T13-c2f535e7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Survival Siege', and setting 'Glyph Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 9,
+  "trial": 9,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "if len(items) < 5:",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how capacity changes.",
+    "Step 2: Use the controls to apply the code idea against cursed statues in Glyph Corridor.",
+    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while capacity > 0."
+  ]
+}

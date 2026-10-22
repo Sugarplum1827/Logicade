@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2614",
+  "game_title": "Print Tracer – Bone Valley Streak",
+  "game_concept": "A quiz RPG set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what mirage spirits changed.",
+  "genre": "quiz RPG",
+  "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
+  "core_gameplay_loop": "In Bone Valley, repeat each round: Insert print statements at the right lines to reveal what mirage spirits changed. Each round poses one decision; a wrong answer breaks the streak. Then check the trace_clarity value and advance.",
+  "primary_mechanic": "Print Tracer",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Hint tokens that reveal one line of code",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about trace_clarity to power up the sand ranger and open the camel pen.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Print Tracer",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M04-X4-T16-665b4f9b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Streak Challenge', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 4,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "print('x =', x)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 71,
+    "target_score": 270,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.85,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.95,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
+    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

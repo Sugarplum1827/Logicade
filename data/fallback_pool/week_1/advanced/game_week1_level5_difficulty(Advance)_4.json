@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0144",
+  "game_title": "Memory Map – Watchtower Ring Streak",
+  "game_concept": "A card battler set in The Kingdom – Watchtower Ring, towers along the town wall: the herald must handle bandits while practicing variables & assignment. Core idea – Memory Map: Place variable cards on a memory board so the town gate reads the right value at run time.",
+  "genre": "card battler",
+  "theme": "The Kingdom – Watchtower Ring: towers along the town wall",
+  "core_gameplay_loop": "In Watchtower Ring, repeat each round: Place variable cards on a memory board so the town gate reads the right value at run time. Each round poses one decision; a wrong answer breaks the streak. Then check the y value and advance.",
+  "primary_mechanic": "Memory Map",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Limited undo button",
+    "Power-up crates for perfect rounds"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about y to power up the herald and open the town gate.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 1 – Variables & Assignment | Level 5 (applied tier): Memory Map",
+  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "unique_identity_key": "W1-M09-X4-T06-08233d76",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Memory Map' (Week 1 slot 9), mission type 'Streak Challenge', and setting 'Watchtower Ring'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 5,
+  "trial": 4,
+  "topic": "Variables & Assignment",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "x = 4\ny = x * 2",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how y changes.",
+    "Step 2: Use the controls to apply the code idea against bandits in Watchtower Ring.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2164",
+  "game_title": "Split Join Assembly – Wind Pass Streak",
+  "game_concept": "A quiz RPG set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Split Join Assembly: Split sentences into words and join them back to assemble orders.",
+  "genre": "quiz RPG",
+  "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
+  "core_gameplay_loop": "In Wind Pass, repeat each round: Split sentences into words and join them back to assemble orders. Each round poses one decision; a wrong answer breaks the streak. Then check the assembly value and advance.",
+  "primary_mechanic": "Split Join Assembly",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Limited undo button"
+  ],
+  "player_objective": "Chain 6 consecutive correct decisions about assembly to power up the summit pilot and open the cliff anchor.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 6.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Split Join Assembly",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M04-X4-T06-2e2049b7",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Split Join Assembly' (Week 8 slot 4), mission type 'Streak Challenge', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 3,
+  "trial": 4,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "'a b c'.split()\n'-'.join(words)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how assembly changes.",
+    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
+    "Step 3: Win by meeting the goal: streak counter reaches 6."
+  ]
+}

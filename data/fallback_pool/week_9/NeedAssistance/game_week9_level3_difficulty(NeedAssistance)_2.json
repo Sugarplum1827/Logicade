@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2462",
+  "game_title": "Exception Rodeo – Palm Grove Trial",
+  "game_concept": "A logic puzzle set in Sand Dunes – Palm Grove, a palm grove: the camel trader must handle dust devils while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
+  "genre": "logic puzzle",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "core_gameplay_loop": "In Palm Grove, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round costs one action, so plan the step so none are wasted. Then check the stability value and advance.",
+  "primary_mechanic": "Exception Rodeo",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Reach the oasis using at most 19 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The oasis reached with actions_used <= 19.",
+  "lose_condition": "actions_used exceeds 19 before the oasis is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Exception Rodeo",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M02-X3-T12-62474468",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Efficiency Trial', and setting 'Palm Grove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 3,
+  "trial": 2,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "try:\n    n = int(text)\nexcept ValueError:\n    n = 0",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 50,
+    "target_score": 130,
+    "action_budget": 19,
+    "streak_target": 6,
+    "rival_speed": 0.6,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 2.7,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stability changes.",
+    "Step 2: Use the controls to apply the code idea against dust devils in Palm Grove.",
+    "Step 3: Win by meeting the goal: The oasis reached with actions_used <= 19."
+  ]
+}

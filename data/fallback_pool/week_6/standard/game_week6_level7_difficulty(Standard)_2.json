@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1692",
+  "game_title": "Keyword Switchboard – Chimney Roofs Defense",
+  "game_concept": "A action defense set in Snowy Hold – Chimney Roofs, snowy chimney rooftops: the sled courier must handle blizzard sprites while practicing functions. Core idea – Keyword Switchboard: Call functions with keyword arguments to wire the right switches.",
+  "genre": "action defense",
+  "theme": "Snowy Hold – Chimney Roofs: snowy chimney rooftops",
+  "core_gameplay_loop": "In Chimney Roofs, repeat each round: Call functions with keyword arguments to wire the right switches. Each round, blizzard sprites strike the larder door, so respond before the next strike lands. Then check the wires value and advance.",
+  "primary_mechanic": "Keyword Switchboard",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the larder door from blizzard sprites in Chimney Roofs: keep the wires meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 48 seconds while wires > 0.",
+  "lose_condition": "wires drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 6 – Functions | Level 7 (applied tier): Keyword Switchboard",
+  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "unique_identity_key": "W6-M12-X1-T10-fc41935f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Keyword Switchboard' (Week 6 slot 12), mission type 'Survival Siege', and setting 'Chimney Roofs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 6,
+  "level": 7,
+  "trial": 2,
+  "topic": "Functions",
+  "region": {
+    "id": "w6_snowy",
+    "name": "Snowy Hold",
+    "banner": "data/fallback_pool/week_6/w6_snowy.png",
+    "mood": "soft bells, wind howls and cozy hearth crackle"
+  },
+  "code_snippet": "move(speed=3, dir='left')",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how wires changes.",
+    "Step 2: Use the controls to apply the code idea against blizzard sprites in Chimney Roofs.",
+    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while wires > 0."
+  ]
+}

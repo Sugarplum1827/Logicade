@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2549",
+  "game_title": "Validation Fortress – Oasis Pool Streak",
+  "game_concept": "A rhythm puzzle set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so giant scorpions can't sneak through.",
+  "genre": "rhythm puzzle",
+  "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
+  "core_gameplay_loop": "In Oasis Pool, repeat each round: Write input checks that reject bad data so giant scorpions can't sneak through. Each round poses one decision; a wrong answer breaks the streak. Then check the fortress value and advance.",
+  "primary_mechanic": "Validation Fortress",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Event log of every action",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Chain 11 consecutive correct decisions about fortress to power up the caravan guide and open the temple door.",
+  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "win_condition": "streak counter reaches 11.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Validation Fortress",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M14-X4-T01-6b89dc1b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Streak Challenge', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 5,
+  "trial": 9,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "while not text.isdigit():",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 34,
+    "target_score": 340,
+    "action_budget": 12,
+    "streak_target": 11,
+    "rival_speed": 1.0,
+    "enemy_wave_count": 5,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how fortress changes.",
+    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
+    "Step 3: Win by meeting the goal: streak counter reaches 11."
+  ]
+}

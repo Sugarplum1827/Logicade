@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0491",
+  "game_title": "Exponent Engine – Obsidian Quarry Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
+  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round costs one action, so plan the step so none are wasted. Then check the engine_power value and advance.",
+  "primary_mechanic": "Exponent Engine",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the ember furnace using at most 17 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The ember furnace reached with actions_used <= 17.",
+  "lose_condition": "actions_used exceeds 17 before the ember furnace is reached, or lives reach 0.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Exponent Engine",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M11-X3-T03-d39fdb8b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Efficiency Trial', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 7,
+  "trial": 1,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power = 2 ** level",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 48,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how engine_power changes.",
+    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
+    "Step 3: Win by meeting the goal: The ember furnace reached with actions_used <= 17."
+  ]
+}

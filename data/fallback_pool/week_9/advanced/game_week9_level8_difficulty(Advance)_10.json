@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2640",
+  "game_title": "Capstone Boss Chain – Sundial Plaza Trial",
+  "game_concept": "A programming puzzle set in Sand Dunes – Sundial Plaza, a giant sundial plaza: the desert nomad must handle sandstorms while practicing debugging & combined skills. Core idea – Capstone Boss Chain: Beat a boss with phases that each demand a different skill from earlier weeks.",
+  "genre": "programming puzzle",
+  "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
+  "core_gameplay_loop": "In Sundial Plaza, repeat each round: Beat a boss with phases that each demand a different skill from earlier weeks. Each round costs one action, so plan the step so none are wasted. Then check the boss_hp value and advance.",
+  "primary_mechanic": "Capstone Boss Chain",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Reduced-motion and color-blind-safe UI",
+    "Mini-tutorial pop-ups"
+  ],
+  "player_objective": "Reach the bazaar gate using at most 14 actions, so every code step counts.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "The bazaar gate reached with actions_used <= 14.",
+  "lose_condition": "actions_used exceeds 14 before the bazaar gate is reached, or lives reach 0.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 8,
+  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Capstone Boss Chain",
+  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "unique_identity_key": "W9-M15-X3-T14-c733348f",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Capstone Boss Chain' (Week 9 slot 15), mission type 'Efficiency Trial', and setting 'Sundial Plaza'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 9,
+  "level": 8,
+  "trial": 10,
+  "topic": "Debugging & Combined Skills",
+  "region": {
+    "id": "w9_desert",
+    "name": "Sand Dunes",
+    "banner": "data/fallback_pool/week_9/w9_desert.png",
+    "mood": "desert oud, hand drums and sandy wind"
+  },
+  "code_snippet": "boss.phase += 1",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 41,
+    "target_score": 490,
+    "action_budget": 14,
+    "streak_target": 13,
+    "rival_speed": 1.15,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.35,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how boss_hp changes.",
+    "Step 2: Use the controls to apply the code idea against sandstorms in Sundial Plaza.",
+    "Step 3: Win by meeting the goal: The bazaar gate reached with actions_used <= 14."
+  ]
+}

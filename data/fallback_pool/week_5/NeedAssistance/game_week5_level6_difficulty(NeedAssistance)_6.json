@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1356",
+  "game_title": "Times Table Garden – Firefly Meadow Defense",
+  "game_concept": "A action defense set in Mystic Forest – Firefly Meadow, a meadow of fireflies: the beast tamer must handle thorn goblins while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of acorns using nested for loops for rows and columns.",
+  "genre": "action defense",
+  "theme": "Mystic Forest – Firefly Meadow: a meadow of fireflies",
+  "core_gameplay_loop": "In Firefly Meadow, repeat each round: Plant a grid of acorns using nested for loops for rows and columns. Each round, thorn goblins strike the elder's door, so respond before the next strike lands. Then check the garden_cells value and advance.",
+  "primary_mechanic": "Times Table Garden",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Mini-tutorial pop-ups",
+    "Event log of every action"
+  ],
+  "player_objective": "Protect the elder's door from thorn goblins in Firefly Meadow: keep the garden_cells meter above zero by applying the concept correctly until the 63-second timer ends.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "Timer reaches 63 seconds while garden_cells > 0.",
+  "lose_condition": "garden_cells drops to 0, or lives reach 0, before the 63-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 6,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Times Table Garden",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M06-X1-T06-289ded9b",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Survival Siege', and setting 'Firefly Meadow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 6,
+  "trial": 6,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "for r in range(3):\n    for c in range(4):\n        plant(r, c)",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 63,
+    "target_score": 210,
+    "action_budget": 21,
+    "streak_target": 8,
+    "rival_speed": 0.75,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.25,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how garden_cells changes.",
+    "Step 2: Use the controls to apply the code idea against thorn goblins in Firefly Meadow.",
+    "Step 3: Win by meeting the goal: Timer reaches 63 seconds while garden_cells > 0."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0305",
+  "game_title": "Comparison Duel – Basalt Stair Trial",
+  "game_concept": "A logic puzzle set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the forge smith's power beats the shield shown by magma slimes.",
+  "genre": "logic puzzle",
+  "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
+  "core_gameplay_loop": "In Basalt Stair, repeat each round: Choose ==, !=, < , > or >= so the forge smith's power beats the shield shown by magma slimes. Each round costs one action, so plan the step so none are wasted. Then check the power value and advance.",
+  "primary_mechanic": "Comparison Duel",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Reach the ash barrier using at most 18 actions, so every code step counts.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "The ash barrier reached with actions_used <= 18.",
+  "lose_condition": "actions_used exceeds 18 before the ash barrier is reached, or lives reach 0.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Comparison Duel",
+  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "unique_identity_key": "W2-M05-X3-T09-64a06f80",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Efficiency Trial', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 2,
+  "level": 1,
+  "trial": 5,
+  "topic": "Data Types & Operators",
+  "region": {
+    "id": "w2_volcano",
+    "name": "Mt. Pyre",
+    "banner": "data/fallback_pool/week_2/w2_volcano.png",
+    "mood": "low war drums, rumbling bass and crackling fire effects"
+  },
+  "code_snippet": "power > shield",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how power changes.",
+    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
+    "Step 3: Win by meeting the goal: The ash barrier reached with actions_used <= 18."
+  ]
+}

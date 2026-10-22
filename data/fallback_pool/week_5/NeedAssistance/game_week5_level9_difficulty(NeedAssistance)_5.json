@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1445",
+  "game_title": "Sum Sprint – Hollow Log Trail Streak",
+  "game_concept": "A rhythm puzzle set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Hollow Log Trail.",
+  "genre": "rhythm puzzle",
+  "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
+  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Accumulate a total across a loop to pay a toll at Hollow Log Trail. Each round poses one decision; a wrong answer breaks the streak. Then check the total value and advance.",
+  "primary_mechanic": "Sum Sprint",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Bonus coins for fast correct moves",
+    "Event log of every action"
+  ],
+  "player_objective": "Chain 9 consecutive correct decisions about total to power up the wood elf archer and open the mushroom ring.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "streak counter reaches 9.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Sum Sprint",
+  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "unique_identity_key": "W5-M05-X4-T05-b47e18c8",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Streak Challenge', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 5,
+  "level": 9,
+  "trial": 5,
+  "topic": "Control Flow: For Loops",
+  "region": {
+    "id": "w5_forest",
+    "name": "Mystic Forest",
+    "banner": "data/fallback_pool/week_5/w5_forest.png",
+    "mood": "airy flutes, birdsong and soft magical chimes"
+  },
+  "code_snippet": "total = 0\nfor x in nums:\n    total += x",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 76,
+    "target_score": 290,
+    "action_budget": 22,
+    "streak_target": 9,
+    "rival_speed": 0.9,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how total changes.",
+    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
+    "Step 3: Win by meeting the goal: streak counter reaches 9."
+  ]
+}

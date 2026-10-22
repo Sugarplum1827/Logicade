@@ -1,0 +1,52 @@
+{
+  "file_id": "game_2398",
+  "game_title": "F-String Herald – Avalanche Slope Defense",
+  "game_concept": "A tower defense set in Frost Peaks – Avalanche Slope, a slope primed for avalanche: the rescue climber must handle ice hawks while practicing strings & dictionaries. Core idea – F-String Herald: Format messages with f-strings that insert live values for announcements.",
+  "genre": "tower defense",
+  "theme": "Frost Peaks – Avalanche Slope: a slope primed for avalanche",
+  "core_gameplay_loop": "In Avalanche Slope, repeat each round: Format messages with f-strings that insert live values for announcements. Each round, ice hawks strike the rescue sled, so respond before the next strike lands. Then check the announcements value and advance.",
+  "primary_mechanic": "F-String Herald",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Event log of every action",
+    "Hint tokens that reveal one line of code"
+  ],
+  "player_objective": "Protect the rescue sled from ice hawks in Avalanche Slope: keep the announcements meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "win_condition": "Timer reaches 46 seconds while announcements > 0.",
+  "lose_condition": "announcements drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "difficulty": "Advance",
+  "estimated_play_time_minutes": 9,
+  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): F-String Herald",
+  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "unique_identity_key": "W8-M13-X1-T04-8f1c0996",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'F-String Herald' (Week 8 slot 13), mission type 'Survival Siege', and setting 'Avalanche Slope'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 8,
+  "level": 10,
+  "trial": 8,
+  "topic": "Strings & Dictionaries",
+  "region": {
+    "id": "w8_peaks",
+    "name": "Frost Peaks",
+    "banner": "data/fallback_pool/week_8/w8_peaks.png",
+    "mood": "thin howling wind, high strings and ice-crack stings"
+  },
+  "code_snippet": "f'{name} scored {pts}'",
+  "game_settings": {
+    "lives": 2,
+    "hint_count": 0,
+    "time_limit_seconds": 46,
+    "target_score": 600,
+    "action_budget": 15,
+    "streak_target": 14,
+    "rival_speed": 1.25,
+    "enemy_wave_count": 6,
+    "enemy_attack_interval_seconds": 1.05,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how announcements changes.",
+    "Step 2: Use the controls to apply the code idea against ice hawks in Avalanche Slope.",
+    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while announcements > 0."
+  ]
+}

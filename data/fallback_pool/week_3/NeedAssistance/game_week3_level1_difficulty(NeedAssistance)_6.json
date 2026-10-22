@@ -1,0 +1,52 @@
+{
+  "file_id": "game_0606",
+  "game_title": "Nested Maze – Tavern Terrace Defense",
+  "game_concept": "A action defense set in Coastal Port – Tavern Terrace, a seaside tavern terrace: the fisher must handle smugglers while practicing conditionals (if / elif / else). Core idea – Nested Maze: Pick routes through nested if statements that branch inside branches.",
+  "genre": "action defense",
+  "theme": "Coastal Port – Tavern Terrace: a seaside tavern terrace",
+  "core_gameplay_loop": "In Tavern Terrace, repeat each round: Pick routes through nested if statements that branch inside branches. Each round, smugglers strike the treasure chest, so respond before the next strike lands. Then check the route_score value and advance.",
+  "primary_mechanic": "Nested Maze",
+  "secondary_mechanics": [
+    "Escalating enemy waves",
+    "Power-up crates for perfect rounds",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Protect the treasure chest from smugglers in Tavern Terrace: keep the route_score meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "win_condition": "Timer reaches 42 seconds while route_score > 0.",
+  "lose_condition": "route_score drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 4,
+  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 1 (intro tier): Nested Maze",
+  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "unique_identity_key": "W3-M06-X1-T16-4bccf305",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Maze' (Week 3 slot 6), mission type 'Survival Siege', and setting 'Tavern Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 3,
+  "level": 1,
+  "trial": 6,
+  "topic": "Conditionals (if / elif / else)",
+  "region": {
+    "id": "w3_coast",
+    "name": "Coastal Port",
+    "banner": "data/fallback_pool/week_3/w3_coast.png",
+    "mood": "sea-shanty accordion with wave and gull ambience"
+  },
+  "code_snippet": "if door:\n    if key:\n        enter()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 42,
+    "target_score": 70,
+    "action_budget": 18,
+    "streak_target": 5,
+    "rival_speed": 0.5,
+    "enemy_wave_count": 2,
+    "enemy_attack_interval_seconds": 3.0,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how route_score changes.",
+    "Step 2: Use the controls to apply the code idea against smugglers in Tavern Terrace.",
+    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while route_score > 0."
+  ]
+}

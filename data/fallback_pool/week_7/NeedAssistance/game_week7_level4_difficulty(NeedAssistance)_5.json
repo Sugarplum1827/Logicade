@@ -1,0 +1,52 @@
+{
+  "file_id": "game_1895",
+  "game_title": "Stack Of Plates – Weathered Gate Streak",
+  "game_concept": "A rhythm puzzle set in Eldritch Ruins – Weathered Gate, a weathered stone gate: the ruin warden must handle eldritch shades while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
+  "genre": "rhythm puzzle",
+  "theme": "Eldritch Ruins – Weathered Gate: a weathered stone gate",
+  "core_gameplay_loop": "In Weathered Gate, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round poses one decision; a wrong answer breaks the streak. Then check the stack_balance value and advance.",
+  "primary_mechanic": "Stack Of Plates",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Step-by-step code highlighting",
+    "Live variable watch panel"
+  ],
+  "player_objective": "Chain 7 consecutive correct decisions about stack_balance to power up the ruin warden and open the relic vault.",
+  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "win_condition": "streak counter reaches 7.",
+  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "difficulty": "Need Assistance",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Stack Of Plates",
+  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "unique_identity_key": "W7-M05-X4-T15-9b135b69",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Streak Challenge', and setting 'Weathered Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 4,
+  "trial": 5,
+  "topic": "Lists",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "stack.append(x)\nstack.pop()",
+  "game_settings": {
+    "lives": 5,
+    "hint_count": 5,
+    "time_limit_seconds": 55,
+    "target_score": 150,
+    "action_budget": 20,
+    "streak_target": 7,
+    "rival_speed": 0.65,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Step 1: Look at the code panel. It shows how stack_balance changes.",
+    "Step 2: Use the controls to apply the code idea against eldritch shades in Weathered Gate.",
+    "Step 3: Win by meeting the goal: streak counter reaches 7."
+  ]
+}
