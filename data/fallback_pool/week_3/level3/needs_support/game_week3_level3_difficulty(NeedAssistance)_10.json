@@ -1,30 +1,30 @@
 {
   "file_id": "game_0670",
-  "game_title": "Discount Rules – Coral Reef Shallows Rush",
+  "game_title": "State tracing · variation 10",
   "game_concept": "A arcade set in Coastal Port – Coral Reef Shallows, reef shallows: the harbor master must handle smugglers while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
-  "genre": "arcade",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Coral Reef Shallows: reef shallows",
-  "core_gameplay_loop": "In Coral Reef Shallows, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round, a new sea charts challenge appears; solve it to bank points before time drains. Then check the profit value and advance.",
-  "primary_mechanic": "Discount Rules",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Collect 130 points of sea charts by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 130 within 50 seconds.",
-  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "player_objective": "State tracing: Trace ACC after every instruction. subtract 14 from each value. Match all 3 streams; preserve their order. Dataset 10, operand 14.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Discount Rules",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: State tracing",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M10-X2-T08-ce5021e0",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Resource Rush', and setting 'Coral Reef Shallows'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 3,
   "trial": 10,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against smugglers in Coral Reef Shallows.",
-    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level3/needs_support/game_week3_level3_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_0670",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 130 points of sea charts by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 130 within 50 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "source_game_title": "Discount Rules – Coral Reef Shallows Rush",
+  "source_primary_mechanic": "Discount Rules",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w3_l3",
+  "source_week": 3,
+  "source_level": 3
 }

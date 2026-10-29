@@ -1,0 +1,57 @@
+{
+  "weeklySamples": [
+    {
+      "week": 4,
+      "trial": 3,
+      "family": "terminal",
+      "status": "PASS program_goals_verified",
+      "objective": "Archive 3, level 1: restore print a greeting. Consume each incoming card and output the named archive records in this order: HEADER, ENTRY, PRINT, RETURN, CLOSE."
+    },
+    {
+      "week": 7,
+      "trial": 3,
+      "family": "terminal",
+      "status": "PASS program_goals_verified",
+      "objective": "Level 1: subtract 6 from each value. Match all 3 input/output streams; preserve their order. Declare resource with INT and store the computed output in it before forwarding."
+    },
+    {
+      "week": 6,
+      "trial": 3,
+      "family": "adventure",
+      "status": "PASS program_goals_verified",
+      "objective": "Route 3: collect 3 crystal(s) and reach beacon (8, 5). Declare steps as 6 and observe it before navigating."
+    },
+    {
+      "week": 8,
+      "trial": 3,
+      "family": "adventure",
+      "status": "PASS program_goals_verified",
+      "objective": "Route 3: collect 3 crystal(s) and reach beacon (1, 1). Demonstrate local shadowing: observe 6 inside the block and 1 outside."
+    },
+    {
+      "week": 9,
+      "trial": 3,
+      "family": "adventure",
+      "status": "PASS program_goals_verified",
+      "objective": "Route 3: collect 3 crystal(s) and reach beacon (8, 5). Demonstrate local shadowing: observe 6 inside the block and 1 outside."
+    }
+  ],
+  "terminal": true,
+  "circuit": {
+    "disconnectedRejected": true,
+    "connectedArithmeticPassed": true
+  },
+  "factory": {
+    "missingPowerRejected": true,
+    "conveyorsRepaired": 3,
+    "quota": 6,
+    "passed": true
+  },
+  "adventure": {
+    "wallRejected": true,
+    "scopeAndWorldGoalsPassed": true,
+    "advancedFinalPassed": true
+  },
+  "pauseHintResume": true,
+  "studyDatabaseWrites": false
+}

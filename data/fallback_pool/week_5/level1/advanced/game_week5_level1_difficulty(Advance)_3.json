@@ -1,30 +1,30 @@
 {
   "file_id": "game_1223",
-  "game_title": "Reverse Countdown – Owl Roost Trial",
+  "game_title": "Branch Assembly 3 · Merge Endpoint",
   "game_concept": "A logic puzzle set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Reverse Countdown: Count backward with range(10, 0, -1) to time perfect launches.",
-  "genre": "logic puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
-  "core_gameplay_loop": "In Owl Roost, repeat each round: Count backward with range(10, 0, -1) to time perfect launches. Each round costs one action, so plan the step so none are wasted. Then check the launch_timing value and advance.",
-  "primary_mechanic": "Reverse Countdown",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Reach the spirit shrine using at most 10 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The spirit shrine reached with actions_used <= 10.",
-  "lose_condition": "actions_used exceeds 10 before the spirit shrine is reached, or lives reach 0.",
+  "player_objective": "Tokens and components: build a valid C source file that prints 6. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 6. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 5 components (3 upper, 2 lower). Set the gold-socket controller batch to 5.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Reverse Countdown",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Tokens and components",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M08-X3-T11-1c137399",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Countdown' (Week 5 slot 8), mission type 'Efficiency Trial', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 1,
   "trial": 3,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how launch_timing changes.",
-    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
-    "Step 3: Win by meeting the goal: The spirit shrine reached with actions_used <= 10."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level1/advanced/game_week5_level1_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_1223",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the spirit shrine using at most 10 actions, so every code step counts.",
+  "source_win_condition": "The spirit shrine reached with actions_used <= 10.",
+  "source_lose_condition": "actions_used exceeds 10 before the spirit shrine is reached, or lives reach 0.",
+  "source_game_title": "Reverse Countdown – Owl Roost Trial",
+  "source_primary_mechanic": "Reverse Countdown",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 3 components via upper_4, upper_6 to output_shared; B: 2 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w5_l1",
+  "source_week": 5,
+  "source_level": 1
 }

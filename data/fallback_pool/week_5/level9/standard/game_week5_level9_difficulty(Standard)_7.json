@@ -1,30 +1,30 @@
 {
   "file_id": "game_1457",
-  "game_title": "Volley Counter – Hollow Log Trail Defense",
+  "game_title": "Branch Assembly 7 · Separate Outputs",
   "game_concept": "A survival strategy set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming cursed treants.",
-  "genre": "survival strategy",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
-  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming cursed treants. Each round, cursed treants strike the mushroom ring, so respond before the next strike lands. Then check the ammo value and advance.",
-  "primary_mechanic": "Volley Counter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Protect the mushroom ring from cursed treants in Hollow Log Trail: keep the ammo meter above zero by applying the concept correctly until the 54-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 54 seconds while ammo > 0.",
-  "lose_condition": "ammo drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "player_objective": "Source organization: build a valid C source file that prints 26. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 13 components (7 upper, 6 lower). Set the gold-socket controller batch to 13.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Volley Counter",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Source organization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M02-X1-T05-8f254331",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Survival Siege', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 9,
   "trial": 7,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how ammo changes.",
-    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
-    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while ammo > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level9/standard/game_week5_level9_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_1457",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the mushroom ring from cursed treants in Hollow Log Trail: keep the ammo meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "source_win_condition": "Timer reaches 54 seconds while ammo > 0.",
+  "source_lose_condition": "ammo drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "source_game_title": "Volley Counter – Hollow Log Trail Defense",
+  "source_primary_mechanic": "Volley Counter",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 7 components via upper_4, upper_6 to output_upper; B: 6 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w5_l9",
+  "source_week": 5,
+  "source_level": 9
 }

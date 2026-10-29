@@ -1,30 +1,30 @@
 {
   "file_id": "game_1550",
-  "game_title": "Function Pipeline – Blizzard Bridge Defense",
+  "game_title": "Blocks and semicolons · variation 10",
   "game_concept": "A survival strategy set in Snowy Hold – Blizzard Bridge, a bridge in a blizzard: the innkeeper must handle snow wraiths while practicing functions. Core idea – Function Pipeline: Chain one function's output into the next to push warm lanterns down a processing line.",
-  "genre": "survival strategy",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Blizzard Bridge: a bridge in a blizzard",
-  "core_gameplay_loop": "In Blizzard Bridge, repeat each round: Chain one function's output into the next to push warm lanterns down a processing line. Each round, snow wraiths strike the hold gate, so respond before the next strike lands. Then check the pipeline value and advance.",
-  "primary_mechanic": "Function Pipeline",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Checkpoint flags",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the hold gate from snow wraiths in Blizzard Bridge: keep the pipeline meter above zero by applying the concept correctly until the 33-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 33 seconds while pipeline > 0.",
-  "lose_condition": "pipeline drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "player_objective": "Maze 10 (15×11, 24 junctions): collect 2 crystal(s) from the branches and reach beacon (12, 6). Use a C main program to Blocks and semicolons. Print [25]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 6 – Functions | Level 2 (intro tier): Function Pipeline",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Blocks and semicolons",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M05-X1-T12-9b35225a",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Function Pipeline' (Week 6 slot 5), mission type 'Survival Siege', and setting 'Blizzard Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 2,
   "trial": 10,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how pipeline changes.",
-    "Step 2: Use the controls to apply the code idea against snow wraiths in Blizzard Bridge.",
-    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while pipeline > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level2/standard/game_week6_level2_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_1550",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the hold gate from snow wraiths in Blizzard Bridge: keep the pipeline meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "source_win_condition": "Timer reaches 33 seconds while pipeline > 0.",
+  "source_lose_condition": "pipeline drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "source_game_title": "Function Pipeline – Blizzard Bridge Defense",
+  "source_primary_mechanic": "Function Pipeline",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w6_l2",
+  "source_week": 6,
+  "source_level": 2
 }

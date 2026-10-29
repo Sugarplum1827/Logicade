@@ -1,30 +1,30 @@
 {
   "file_id": "game_0555",
-  "game_title": "Mixed Type Oracle – Eruption Watch Streak",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A card battler set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before ash wraiths spring the trap.",
-  "genre": "card battler",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
-  "core_gameplay_loop": "In Eruption Watch, repeat each round: Predict the result or error of mixed-type expressions before ash wraiths spring the trap. Each round poses one decision; a wrong answer breaks the streak. Then check the predictions value and advance.",
-  "primary_mechanic": "Mixed Type Oracle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Event log of every action"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about predictions to power up the forge smith and open the lava bridge.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 5: {'a': 10, 'b': 5}; {'a': -5, 'b': -7}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Mixed Type Oracle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M15-X4-T15-b1e08a41",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Streak Challenge', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predictions changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/standard/game_week2_level9_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_0555",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about predictions to power up the forge smith and open the lava bridge.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Mixed Type Oracle – Eruption Watch Streak",
+  "source_primary_mechanic": "Mixed Type Oracle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

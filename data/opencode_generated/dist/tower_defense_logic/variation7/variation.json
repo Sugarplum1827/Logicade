@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "04_tower_defense_logic",
+  "slug": "tower_defense_logic",
+  "display_name": "Tower Defense Logic",
+  "module_family": "tower_defense",
+  "learning_target": "conditionals",
+  "core_brief": "Use conditional rules to place defenders on lanes where incoming enemies need them.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "tower",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Lane defense",
+  "accent": "#ff6b81",
+  "tint": 12053193,
+  "variation_id": "04_tower_defense_logic_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 194518349,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 15,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.crate",
+      "bush": "themes.tower_defense.rock",
+      "slime": "themes.tower_defense.bush",
+      "bee": "themes.tower_defense.crate"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/tower_defense_logic.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

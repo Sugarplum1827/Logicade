@@ -1,0 +1,79 @@
+{
+  "concept_id": "20_alien_laboratory",
+  "slug": "alien_laboratory",
+  "learning_target": "function definitions and parameters",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a function definition?",
+      "options": [
+        "A loop",
+        "A reusable block with a name",
+        "A one-time value",
+        "A type of alien"
+      ],
+      "answer_index": 1,
+      "explanation": "A definition names a reusable block of code and lists its parameters."
+    },
+    {
+      "id": "q2",
+      "question": "What does a parameter do?",
+      "options": [
+        "Passes data into a function",
+        "Names the file",
+        "Prints the result",
+        "Stops the function"
+      ],
+      "answer_index": 0,
+      "explanation": "Parameters receive the arguments supplied when the function is called."
+    },
+    {
+      "id": "q3",
+      "question": "Which is a valid function call with an argument?",
+      "options": [
+        "classify = 'safe'",
+        "classify('safe')",
+        "classify['safe']",
+        "def classify('safe')"
+      ],
+      "answer_index": 1,
+      "explanation": "A call uses the function name followed by parentheses containing the argument."
+    },
+    {
+      "id": "q4",
+      "question": "What does `return` provide?",
+      "options": [
+        "A comment",
+        "A global variable only",
+        "The function's output",
+        "A new loop"
+      ],
+      "answer_index": 2,
+      "explanation": "return sends a value back to the code that called the function."
+    },
+    {
+      "id": "q5",
+      "question": "Why use parameters instead of hard-coding values?",
+      "options": [
+        "To reuse the function with different values",
+        "To make the code longer",
+        "To hide the function",
+        "To avoid all results"
+      ],
+      "answer_index": 0,
+      "explanation": "Parameters make one function flexible enough to handle many inputs."
+    },
+    {
+      "id": "q6",
+      "question": "What is a function's body?",
+      "options": [
+        "Its parameters",
+        "Its return type only",
+        "Its name",
+        "The indented code it runs"
+      ],
+      "answer_index": 3,
+      "explanation": "The body is the indented block executed when the function is called."
+    }
+  ]
+}

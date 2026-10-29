@@ -1,0 +1,611 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v01",
+    "index": 1,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What grade is printed when score = 85?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "READ score",
+        "IF score >= 90 THEN",
+        "  grade = \"A\"",
+        "ELSE IF score >= 80 THEN",
+        "  grade = \"B\"",
+        "ELSE",
+        "  grade = \"C\"",
+        "ENDIF",
+        "PRINT grade"
+      ],
+      "answer": "B",
+      "accept": [
+        "B"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "85 is not at least 90, but it is at least 80, so grade becomes B."
+    },
+    "explanation": "85 is not at least 90, but it is at least 80, so grade becomes B.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v02",
+    "index": 2,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the nested grade decision.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "READ score",
+        "IF score >= 90 THEN",
+        "  grade = \"A\"",
+        "ELSE IF score >= 80 THEN",
+        "  grade = \"B\"",
+        "ELSE",
+        "  grade = \"C\"",
+        "ENDIF"
+      ],
+      "variables": [
+        "score",
+        "grade"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "score": "85",
+            "grade": ""
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "score": "85",
+            "grade": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "score": "85",
+            "grade": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "score": "85",
+            "grade": "B"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "grade"
+      ],
+      "answer": {
+        "score": "85",
+        "grade": "B"
+      },
+      "hint": ""
+    },
+    "explanation": "The first test fails, the second succeeds, and the final ELSE is skipped.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v03",
+    "index": 3,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One condition makes grade A impossible. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "READ score",
+        "IF score >= 80 THEN",
+        "  grade = \"A\"",
+        "ELSE IF score >= 90 THEN",
+        "  grade = \"B\"",
+        "ELSE",
+        "  grade = \"C\"",
+        "ENDIF"
+      ],
+      "answer": 1,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "Checking 80 before 90 sends every score of 80 or more to A. Test the highest range first.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v04",
+    "index": 4,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each score to the grade it receives.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "95"
+        },
+        {
+          "id": "l2",
+          "text": "85"
+        },
+        {
+          "id": "l3",
+          "text": "75"
+        },
+        {
+          "id": "l4",
+          "text": "90"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A"
+        },
+        {
+          "id": "r2",
+          "text": "B"
+        },
+        {
+          "id": "r3",
+          "text": "C"
+        },
+        {
+          "id": "r4",
+          "text": "A"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "At least 90 is A, at least 80 but below 90 is B, and below 80 is C.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v05",
+    "index": 5,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each score into the grade branch it reaches.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "a",
+          "label": "A: score >= 90",
+          "desc": "Top branch"
+        },
+        {
+          "id": "b",
+          "label": "B: 80 <= score < 90",
+          "desc": "Middle branch"
+        },
+        {
+          "id": "c",
+          "label": "C: score < 80",
+          "desc": "Bottom branch"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "95",
+          "bin": "a"
+        },
+        {
+          "id": "i2",
+          "text": "90",
+          "bin": "a"
+        },
+        {
+          "id": "i3",
+          "text": "89",
+          "bin": "b"
+        },
+        {
+          "id": "i4",
+          "text": "80",
+          "bin": "b"
+        },
+        {
+          "id": "i5",
+          "text": "79",
+          "bin": "c"
+        },
+        {
+          "id": "i6",
+          "text": "72",
+          "bin": "c"
+        }
+      ]
+    },
+    "explanation": "The first true test wins. 90 reaches A, 80 reaches B, and 79 falls through to C.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v06",
+    "index": 6,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the nested grade decision.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "READ score",
+        "IF score >= 90 THEN",
+        "  grade = \"A\"",
+        "{{b0}} IF score >= 80 THEN",
+        "  grade = \"B\"",
+        "{{b1}}",
+        "  grade = \"C\"",
+        "{{b2}}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "next decision keyword",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "final false branch keyword",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "closing keyword",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "ELSE"
+        },
+        {
+          "id": "b2",
+          "text": "ELSE"
+        },
+        {
+          "id": "b3",
+          "text": "ENDIF"
+        },
+        {
+          "id": "b4",
+          "text": "ELSE"
+        },
+        {
+          "id": "b5",
+          "text": "ENDIF"
+        },
+        {
+          "id": "b6",
+          "text": "THEN"
+        }
+      ]
+    },
+    "explanation": "Each ELSE IF adds another test; the final ELSE catches everything below 80.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v07",
+    "index": 7,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of reading flowcharts in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the flowchart"
+        },
+        {
+          "id": "s2",
+          "text": "Read the score"
+        },
+        {
+          "id": "s3",
+          "text": "Check whether the score is at least 90"
+        },
+        {
+          "id": "s4",
+          "text": "If not, check whether it is at least 80"
+        },
+        {
+          "id": "s5",
+          "text": "Print the matching grade"
+        },
+        {
+          "id": "s6",
+          "text": "End the flowchart"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "explanation": "Correct order: Start the flowchart → Read the score → Check whether the score is at least 90 → If not, check whether it is at least 80 → Print the matching grade → End the flowchart",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v08",
+    "index": 8,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the second condition in an A/B/C grade flowchart.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "ELSE"
+        },
+        {
+          "id": "t2",
+          "text": "IF"
+        },
+        {
+          "id": "t3",
+          "text": "score"
+        },
+        {
+          "id": "t4",
+          "text": ">="
+        },
+        {
+          "id": "t5",
+          "text": "80"
+        },
+        {
+          "id": "t6",
+          "text": "THEN"
+        },
+        {
+          "id": "t7",
+          "text": "90"
+        },
+        {
+          "id": "t8",
+          "text": "ENDIF"
+        },
+        {
+          "id": "t9",
+          "text": "WHILE"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "After the first condition fails, ELSE IF tests the next range.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v09",
+    "index": 9,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the three-grade flowchart.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 6
+        },
+        {
+          "id": "read",
+          "label": "Read score",
+          "kind": "io",
+          "x": 50,
+          "y": 19
+        },
+        {
+          "id": "first",
+          "label": "score >= 90?",
+          "kind": "decision",
+          "x": 50,
+          "y": 34
+        },
+        {
+          "id": "a",
+          "label": "grade = A",
+          "kind": "process",
+          "x": 24,
+          "y": 50
+        },
+        {
+          "id": "second",
+          "label": "score >= 80?",
+          "kind": "decision",
+          "x": 76,
+          "y": 50
+        },
+        {
+          "id": "b",
+          "label": "grade = B",
+          "kind": "process",
+          "x": 76,
+          "y": 67
+        },
+        {
+          "id": "c",
+          "label": "grade = C",
+          "kind": "process",
+          "x": 76,
+          "y": 82
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 94
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "read"
+        ],
+        [
+          "read",
+          "first"
+        ],
+        [
+          "first",
+          "a"
+        ],
+        [
+          "first",
+          "second"
+        ],
+        [
+          "second",
+          "b"
+        ],
+        [
+          "second",
+          "c"
+        ],
+        [
+          "a",
+          "end"
+        ],
+        [
+          "b",
+          "end"
+        ],
+        [
+          "c",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The left branch is the first match. The right side keeps testing lower ranges.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_reading_v10",
+    "index": 10,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to take the correct branch around the wall.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 5,
+      "rows": 4,
+      "start": {
+        "x": 4,
+        "y": 3,
+        "dir": 3
+      },
+      "goal": {
+        "x": 0,
+        "y": 0
+      },
+      "walls": [
+        {
+          "x": 2,
+          "y": 2
+        },
+        {
+          "x": 2,
+          "y": 1
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 12
+    },
+    "explanation": "A branch is a route choice; only one route reaches the goal.",
+    "concept_slug": "flowchart_reading",
+    "concept_name": "Reading Flowcharts"
+  }
+]

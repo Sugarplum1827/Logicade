@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "39_superhero_city_patrol",
+  "slug": "superhero_city_patrol",
+  "display_name": "Superhero City Patrol",
+  "module_family": "vector_interception",
+  "learning_target": "vectors and directional movement",
+  "core_brief": "Use response vectors to choose the fastest safe route to city emergencies.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "superhero",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Lane defense",
+  "accent": "#ff8fd8",
+  "tint": 15382467,
+  "variation_id": "39_superhero_city_patrol_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 2574696268,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 15,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_day",
+    "zones": [
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night"
+    ],
+    "tile": "themes.urban.tile_grass",
+    "player": "themes.urban.player_c",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/superhero_city_patrol.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

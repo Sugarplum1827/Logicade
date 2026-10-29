@@ -1,30 +1,30 @@
 {
   "file_id": "game_2406",
-  "game_title": "Off By One Autopsy – Bone Valley Defense",
+  "game_title": "Flowchart Lab · Odd numbers, sum, and count",
   "game_concept": "A action defense set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
-  "core_gameplay_loop": "In Bone Valley, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round, mirage spirits strike the camel pen, so respond before the next strike lands. Then check the autopsy value and advance.",
-  "primary_mechanic": "Off By One Autopsy",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Power-up crates for perfect rounds",
     "Live variable watch panel"
   ],
-  "player_objective": "Protect the camel pen from mirage spirits in Bone Valley: keep the autopsy meter above zero by applying the concept correctly until the 42-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 42 seconds while autopsy > 0.",
-  "lose_condition": "autopsy drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "player_objective": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1. Test dataset 6: {'n': 0}; {'n': 14}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Off By One Autopsy",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M06-X1-T16-b3acbd27",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Survival Siege', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how autopsy changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
-    "Step 3: Win by meeting the goal: Timer reaches 42 seconds while autopsy > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/needs_support/game_week9_level1_difficulty(NeedAssistance)_6.json",
+    "variation_id": "canvas_game_2406",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the camel pen from mirage spirits in Bone Valley: keep the autopsy meter above zero by applying the concept correctly until the 42-second timer ends.",
+  "source_win_condition": "Timer reaches 42 seconds while autopsy > 0.",
+  "source_lose_condition": "autopsy drops to 0, or lives reach 0, before the 42-second timer ends.",
+  "source_game_title": "Off By One Autopsy – Bone Valley Defense",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

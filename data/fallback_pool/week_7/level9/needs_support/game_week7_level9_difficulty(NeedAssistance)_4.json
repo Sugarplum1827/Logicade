@@ -1,30 +1,30 @@
 {
   "file_id": "game_2044",
-  "game_title": "Queue Line – Ivy Tower Defense",
+  "game_title": "Declare char · variation 4",
   "game_concept": "A tower defense set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Queue Line: Serve a queue of visitors with pop(0) in first-come order.",
-  "genre": "tower defense",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
-  "core_gameplay_loop": "In Ivy Tower, repeat each round: Serve a queue of visitors with pop(0) in first-come order. Each round, vine horrors strike the sealed archway, so respond before the next strike lands. Then check the queue_calm value and advance.",
-  "primary_mechanic": "Queue Line",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Protect the sealed archway from vine horrors in Ivy Tower: keep the queue_calm meter above zero by applying the concept correctly until the 76-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 76 seconds while queue_calm > 0.",
-  "lose_condition": "queue_calm drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "player_objective": "Declare char: declare resource as char, apply resource + 69, and print each result with %c. Dataset 4 starts with [0, 1, 2, 3]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Queue Line",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare char",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M04-X1-T18-3fdf3fff",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Queue Line' (Week 7 slot 4), mission type 'Survival Siege', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 9,
   "trial": 4,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how queue_calm changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
-    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while queue_calm > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level9/needs_support/game_week7_level9_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_2044",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sealed archway from vine horrors in Ivy Tower: keep the queue_calm meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "source_win_condition": "Timer reaches 76 seconds while queue_calm > 0.",
+  "source_lose_condition": "queue_calm drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "source_game_title": "Queue Line – Ivy Tower Defense",
+  "source_primary_mechanic": "Queue Line",
+  "hint": "Declare before use. char resource = readInput(); creates the named game-port value; printf uses %c.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w7_l9",
+  "source_week": 7,
+  "source_level": 9
 }

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "16_jungle_vine_swinger",
+  "slug": "jungle_vine_swinger",
+  "display_name": "Jungle Vine Swinger",
+  "module_family": "platformer_functions",
+  "learning_target": "functions and reusable actions",
+  "core_brief": "Use functions to trigger vine swings and carry the explorer across gaps.",
+  "mode": "runner",
+  "mode_label": "Route runner",
+  "skin": "jungle",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Route runner",
+  "accent": "#b69cff",
+  "tint": 15382468,
+  "variation_id": "16_jungle_vine_swinger_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 3724492062,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_sunflower",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.wheat",
+      "bush": "themes.farm.rock",
+      "slime": "themes.farm.bush",
+      "bee": "themes.farm.fence"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/jungle_vine_swinger.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

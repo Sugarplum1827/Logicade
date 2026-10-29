@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "14_pirate_island_voyage",
+  "slug": "pirate_island_voyage",
+  "display_name": "Pirate Island Voyage",
+  "module_family": "navigation_adventure",
+  "learning_target": "coordinates and ordered movement",
+  "core_brief": "Use coordinates to steer a ship around reefs and reach marked island destinations.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 12695530,
+  "variation_id": "14_pirate_island_voyage_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 4247028602,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_3",
+    "zones": [
+      "themes.pirate.bg_sea_3",
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2"
+    ],
+    "tile": "themes.pirate.tile_plank",
+    "player": "themes.pirate.player_green",
+    "enemy": "themes.pirate.enemy_grey",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_flag",
+    "obstacles": {
+      "spike": "themes.pirate.cannonball",
+      "bush": "themes.pirate.cannon",
+      "slime": "themes.pirate.cannon",
+      "bee": "themes.pirate.cannonball"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/pirate_island_voyage.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

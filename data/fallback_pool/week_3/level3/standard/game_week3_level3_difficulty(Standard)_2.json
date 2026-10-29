@@ -1,30 +1,30 @@
 {
   "file_id": "game_0672",
-  "game_title": "Branching Tale – Lighthouse Point Trial",
+  "game_title": "State tracing · variation 2",
   "game_concept": "A programming puzzle set in Coastal Port – Lighthouse Point, the lighthouse on the point: the harbor master must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Branching Tale: Make story choices that run different if/elif branches toward different endings.",
-  "genre": "programming puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Lighthouse Point: the lighthouse on the point",
-  "core_gameplay_loop": "In Lighthouse Point, repeat each round: Make story choices that run different if/elif branches toward different endings. Each round costs one action, so plan the step so none are wasted. Then check the story_trust value and advance.",
-  "primary_mechanic": "Branching Tale",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Reach the harbor gate using at most 15 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The harbor gate reached with actions_used <= 15.",
-  "lose_condition": "actions_used exceeds 15 before the harbor gate is reached, or lives reach 0.",
+  "player_objective": "State tracing: Trace ACC after every instruction. subtract 7 from each value. Match all 3 streams; preserve their order. Dataset 2, operand 7.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Branching Tale",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: State tracing",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M12-X3-T02-089cc453",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Branching Tale' (Week 3 slot 12), mission type 'Efficiency Trial', and setting 'Lighthouse Point'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 3,
   "trial": 2,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how story_trust changes.",
-    "Step 2: Use the controls to apply the code idea against rogue waves in Lighthouse Point.",
-    "Step 3: Win by meeting the goal: The harbor gate reached with actions_used <= 15."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level3/standard/game_week3_level3_difficulty(Standard)_2.json",
+    "variation_id": "canvas_game_0672",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the harbor gate using at most 15 actions, so every code step counts.",
+  "source_win_condition": "The harbor gate reached with actions_used <= 15.",
+  "source_lose_condition": "actions_used exceeds 15 before the harbor gate is reached, or lives reach 0.",
+  "source_game_title": "Branching Tale – Lighthouse Point Trial",
+  "source_primary_mechanic": "Branching Tale",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w3_l3",
+  "source_week": 3,
+  "source_level": 3
 }

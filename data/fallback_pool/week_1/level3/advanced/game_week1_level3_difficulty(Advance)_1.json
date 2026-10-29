@@ -2,9 +2,9 @@
   "file_id": "game_0081",
   "game_title": "Score Keeper – Castle Gatehouse Defense",
   "game_concept": "A action defense set in The Kingdom – Castle Gatehouse, the fortified castle gatehouse: the knight must handle goblin raiders while practicing variables & assignment. Core idea – Score Keeper: Update score, lives and ammo variables after every event while goblin raiders close in.",
-  "genre": "action defense",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Castle Gatehouse: the fortified castle gatehouse",
-  "core_gameplay_loop": "In Castle Gatehouse, repeat each round: Update score, lives and ammo variables after every event while goblin raiders close in. Each round, goblin raiders strike the royal vault, so respond before the next strike lands. Then check the score value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Score Keeper",
   "secondary_mechanics": [
     "Escalating enemy waves",
@@ -12,19 +12,19 @@
     "Bonus coins for fast correct moves"
   ],
   "player_objective": "Protect the royal vault from goblin raiders in Castle Gatehouse: keep the score meter above zero by applying the concept correctly until the 29-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "Timer reaches 29 seconds while score > 0.",
   "lose_condition": "score drops to 0, or lives reach 0, before the 29-second timer ends.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 3 (intro tier): Score Keeper",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M06-X1-T01-a27befff",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Score Keeper' (Week 1 slot 6), mission type 'Survival Siege', and setting 'Castle Gatehouse'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 3,
   "trial": 1,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how score changes.",
     "Step 2: Use the controls to apply the code idea against goblin raiders in Castle Gatehouse.",
     "Step 3: Win by meeting the goal: Timer reaches 29 seconds while score > 0."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level3/advanced/game_week1_level3_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_0081",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "35_weather_station_forecaster",
+  "slug": "weather_station_forecaster",
+  "display_name": "Weather Station Forecaster",
+  "module_family": "threshold_simulation",
+  "learning_target": "numeric thresholds and comparisons",
+  "core_brief": "Compare sensor values with thresholds to forecast weather and prepare the station.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "weather",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "System builder",
+  "accent": "#b8e986",
+  "tint": 12053207,
+  "variation_id": "35_weather_station_forecaster_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 2547620617,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_purple",
+    "zones": [
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_red",
+    "enemy": "themes.space.enemy_black",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_yellow",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_big",
+      "bush": "themes.space.meteor_brown_small",
+      "slime": "themes.space.meteor_grey_big",
+      "bee": "themes.space.meteor_brown_small"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/weather_station_forecaster.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

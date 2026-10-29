@@ -4,8 +4,9 @@
 
 window.Telemetry = (function () {
     const buffer = [];
+    let currentSession = {};
 
-    function emit(eventType, fields) {
+    function emit(eventType, fields = {}) {
         const entry = {
             event_id: crypto.randomUUID(),
             event_type: eventType,
@@ -13,6 +14,8 @@ window.Telemetry = (function () {
             entity_id: fields.entity_id ?? null,
             rule_id: fields.rule_id ?? null,
             payload: fields.payload ?? {},
+            created_at: new Date().toISOString(),
+            origin: navigator.onLine ? 'online' : 'offline',
         };
         buffer.push(entry);
         // eslint-disable-next-line no-console
@@ -24,9 +27,10 @@ window.Telemetry = (function () {
         return buffer.slice();
     }
 
-    function reset() {
+    function reset(session = {}) {
         buffer.length = 0;
+        currentSession = { ...session };
     }
 
-    return {emit, snapshot, reset};
+    return {emit, snapshot, reset, session: () => ({ ...currentSession })};
 })();

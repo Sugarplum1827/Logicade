@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "07_cyber_hacker_grid",
+  "slug": "cyber_hacker_grid",
+  "display_name": "Cyber Hacker Grid",
+  "module_family": "grid_stealth",
+  "learning_target": "sequencing and algorithmic flow",
+  "core_brief": "Sequence commands to route a signal through a firewall grid without triggering alarms.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "hacker",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Grid route",
+  "accent": "#4fd1c5",
+  "tint": 14399466,
+  "variation_id": "07_cyber_hacker_grid_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 4112771180,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_black",
+    "zones": [
+      "themes.space.bg_black",
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_blue",
+    "coin": "themes.space.coin_blue",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_big",
+      "slime": "themes.space.meteor_brown_big",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/cyber_hacker_grid.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

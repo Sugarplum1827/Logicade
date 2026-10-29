@@ -1,30 +1,30 @@
 {
   "file_id": "game_1699",
-  "game_title": "Default Armory – Snow Fort Trial",
+  "game_title": "Read and trace · variation 9",
   "game_concept": "A puzzle set in Snowy Hold – Snow Fort, a snowball fort: the firewood keeper must handle yeti raiders while practicing functions. Core idea – Default Armory: Use default parameter values so the armory works even when arguments are missing.",
-  "genre": "puzzle",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Snow Fort: a snowball fort",
-  "core_gameplay_loop": "In Snow Fort, repeat each round: Use default parameter values so the armory works even when arguments are missing. Each round costs one action, so plan the step so none are wasted. Then check the armor value and advance.",
-  "primary_mechanic": "Default Armory",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Checkpoint flags",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Reach the hearth fire using at most 17 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The hearth fire reached with actions_used <= 17.",
-  "lose_condition": "actions_used exceeds 17 before the hearth fire is reached, or lives reach 0.",
+  "player_objective": "Maze 9 (17×13, 32 junctions): collect 3 crystal(s) from the branches and reach beacon (7, 1). Use a C main program to Read and trace. Print [23]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 6 – Functions | Level 7 (applied tier): Default Armory",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Read and trace",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M04-X3-T15-041c9944",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Default Armory' (Week 6 slot 4), mission type 'Efficiency Trial', and setting 'Snow Fort'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 7,
   "trial": 9,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how armor changes.",
-    "Step 2: Use the controls to apply the code idea against yeti raiders in Snow Fort.",
-    "Step 3: Win by meeting the goal: The hearth fire reached with actions_used <= 17."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level7/standard/game_week6_level7_difficulty(Standard)_9.json",
+    "variation_id": "canvas_game_1699",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the hearth fire using at most 17 actions, so every code step counts.",
+  "source_win_condition": "The hearth fire reached with actions_used <= 17.",
+  "source_lose_condition": "actions_used exceeds 17 before the hearth fire is reached, or lives reach 0.",
+  "source_game_title": "Default Armory – Snow Fort Trial",
+  "source_primary_mechanic": "Default Armory",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w6_l7",
+  "source_week": 6,
+  "source_level": 7
 }

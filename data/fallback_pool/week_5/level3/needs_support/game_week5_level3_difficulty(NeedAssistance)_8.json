@@ -1,30 +1,30 @@
 {
   "file_id": "game_1268",
-  "game_title": "Reverse Countdown – Spirit Stream Defense",
+  "game_title": "Branch Assembly 8 · Merge Midpoint",
   "game_concept": "A survival strategy set in Mystic Forest – Spirit Stream, a stream of spirits: the druid must handle thorn goblins while practicing control flow: for loops. Core idea – Reverse Countdown: Count backward with range(10, 0, -1) to time perfect launches.",
-  "genre": "survival strategy",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Spirit Stream: a stream of spirits",
-  "core_gameplay_loop": "In Spirit Stream, repeat each round: Count backward with range(10, 0, -1) to time perfect launches. Each round, thorn goblins strike the vine bridge, so respond before the next strike lands. Then check the launch_timing value and advance.",
-  "primary_mechanic": "Reverse Countdown",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Protect the vine bridge from thorn goblins in Spirit Stream: keep the launch_timing meter above zero by applying the concept correctly until the 50-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 50 seconds while launch_timing > 0.",
-  "lose_condition": "launch_timing drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "player_objective": "Preprocessor directives: build a valid C source file that prints 11. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 6. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 7 components (3 upper, 4 lower). Set the gold-socket controller batch to 7.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Reverse Countdown",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Preprocessor directives",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M08-X1-T14-9338f434",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Countdown' (Week 5 slot 8), mission type 'Survival Siege', and setting 'Spirit Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 3,
   "trial": 8,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how launch_timing changes.",
-    "Step 2: Use the controls to apply the code idea against thorn goblins in Spirit Stream.",
-    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while launch_timing > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level3/needs_support/game_week5_level3_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_1268",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the vine bridge from thorn goblins in Spirit Stream: keep the launch_timing meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "source_win_condition": "Timer reaches 50 seconds while launch_timing > 0.",
+  "source_lose_condition": "launch_timing drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "source_game_title": "Reverse Countdown – Spirit Stream Defense",
+  "source_primary_mechanic": "Reverse Countdown",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 3 components via upper_4, shared_assembler to output_shared; ELSE: 4 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w5_l3",
+  "source_week": 5,
+  "source_level": 3
 }

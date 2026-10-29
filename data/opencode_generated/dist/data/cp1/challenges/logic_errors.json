@@ -1,0 +1,528 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v01",
+    "index": 1,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int average = total / count;",
+        "    printf(\"%d\\n\", average);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "3",
+      "accept": [
+        "3"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The program compiles, but integer division truncates 3.5 to 3."
+    },
+    "explanation": "The program produces 3.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v02",
+    "index": 2,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int average = total / count;",
+        "    printf(\"%d\\n\", average);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "total",
+        "count",
+        "average"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "total": "7",
+            "count": "2",
+            "average": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "total": "7",
+            "count": "2",
+            "average": "3"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "total": "7",
+            "count": "2",
+            "average": "3"
+          }
+        }
+      ],
+      "ask": [
+        "total",
+        "count",
+        "average"
+      ],
+      "answer": {
+        "total": "7",
+        "count": "2",
+        "average": "3"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is total = 7, count = 2, average = 3.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v03",
+    "index": 3,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of logic errors in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Run the program with sample input"
+        },
+        {
+          "id": "s2",
+          "text": "Compare the actual output with the expected output"
+        },
+        {
+          "id": "s3",
+          "text": "Trace the suspicious calculation"
+        },
+        {
+          "id": "s4",
+          "text": "Fix the logic and test again"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Run the program with sample input → Compare the actual output with the expected output → Trace the suspicious calculation → Fix the logic and test again",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v04",
+    "index": 4,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a floating-point average that keeps the decimal part.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "(float)"
+        },
+        {
+          "id": "t2",
+          "text": "total"
+        },
+        {
+          "id": "t3",
+          "text": "/"
+        },
+        {
+          "id": "t4",
+          "text": "count"
+        },
+        {
+          "id": "t5",
+          "text": "(int)"
+        },
+        {
+          "id": "t6",
+          "text": "%"
+        },
+        {
+          "id": "t7",
+          "text": "count++"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The cast makes the division floating-point instead of integer division.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v05",
+    "index": 5,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the inputs and the actual (unintended) average.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int average = total / count;",
+        "    printf(\"%d\\n\", average);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "total",
+          "type": "final value"
+        },
+        {
+          "name": "count",
+          "type": "final value"
+        },
+        {
+          "name": "average",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "7"
+        },
+        {
+          "id": "v2",
+          "text": "2"
+        },
+        {
+          "id": "v3",
+          "text": "3"
+        },
+        {
+          "id": "v4",
+          "text": "8"
+        },
+        {
+          "id": "v5",
+          "text": "6"
+        },
+        {
+          "id": "v6",
+          "text": "1"
+        }
+      ],
+      "answer": {
+        "total": "v1",
+        "count": "v2",
+        "average": "v3"
+      }
+    },
+    "explanation": "The code runs, but integer division stores 3 instead of 3.5.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v06",
+    "index": 6,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each problem as a syntax error or a logic error.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "syntax",
+          "label": "Syntax error",
+          "desc": "The compiler rejects it"
+        },
+        {
+          "id": "logic",
+          "label": "Logic error",
+          "desc": "It compiles but behaves incorrectly"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Missing semicolon",
+          "bin": "syntax"
+        },
+        {
+          "id": "i2",
+          "text": "Integer division used for an average",
+          "bin": "logic"
+        },
+        {
+          "id": "i3",
+          "text": "Unclosed brace",
+          "bin": "syntax"
+        },
+        {
+          "id": "i4",
+          "text": "Condition tests the wrong range",
+          "bin": "logic"
+        },
+        {
+          "id": "i5",
+          "text": "Misspelled variable name",
+          "bin": "syntax"
+        },
+        {
+          "id": "i6",
+          "text": "Loop stops one element early",
+          "bin": "logic"
+        }
+      ]
+    },
+    "explanation": "Syntax errors stop compilation; logic errors survive compilation but fail tests.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v07",
+    "index": 7,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int total = 7, count = 2;",
+        "float average = total / count;",
+        "printf(\"%.2f\\n\", average);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "Both operands are int, so the division truncates before the value reaches the float.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v08",
+    "index": 8,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in main or the expression.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int average = total / count;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Named inputs and result"
+        },
+        {
+          "id": "expression",
+          "label": "Expression scope",
+          "desc": "Division result before storage"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int total",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int count",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int average",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "total / count",
+          "scope": "expression"
+        }
+      ]
+    },
+    "explanation": "The division is a temporary expression; average stores its truncated result.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v09",
+    "index": 9,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each logic errors term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Logic error"
+        },
+        {
+          "id": "l2",
+          "text": "Expected output"
+        },
+        {
+          "id": "l3",
+          "text": "Actual output"
+        },
+        {
+          "id": "l4",
+          "text": "Test case"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Compiles but gives the wrong result"
+        },
+        {
+          "id": "r2",
+          "text": "What the program should produce"
+        },
+        {
+          "id": "r3",
+          "text": "What the program really produces"
+        },
+        {
+          "id": "r4",
+          "text": "Sample input used to compare both outputs"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logic_errors_v10",
+    "index": 10,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the average calculation.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int total = 7, count = 2;",
+        "float average = {{b0}} total / count;",
+        "printf(\"{{b1}}\\n\", average);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "cast that preserves decimals",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "float format specifier",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "(float)"
+        },
+        {
+          "id": "b2",
+          "text": "%.2f"
+        },
+        {
+          "id": "b3",
+          "text": "(int)"
+        },
+        {
+          "id": "b4",
+          "text": "%d"
+        },
+        {
+          "id": "b5",
+          "text": "int"
+        }
+      ]
+    },
+    "explanation": "Casting to float and printing with %.2f produces 3.50.",
+    "concept_slug": "logic_errors",
+    "concept_name": "Logic Errors"
+  }
+]

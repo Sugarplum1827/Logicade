@@ -1,41 +1,41 @@
 {
   "file_id": "game_2593",
-  "game_title": "Program Assembler – Merchant Waystation Streak",
+  "game_title": "Examination practice · C Scope Circuit · Compare local and global · variation 3",
   "game_concept": "A quiz RPG set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Program Assembler: Assemble a working program from shuffled code blocks in the right order.",
-  "genre": "quiz RPG",
+  "genre": "circuit programming workbench",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Assemble a working program from shuffled code blocks in the right order. Each round poses one decision; a wrong answer breaks the streak. Then check the program_ok value and advance.",
-  "primary_mechanic": "Program Assembler",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about program_ok to power up the scarab scholar and open the sundial.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Week 8 examination practice: Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [6, 5], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 5}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Program Assembler",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 8: Compare local and global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M13-X4-T17-c95cfc5f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Program Assembler' (Week 9 slot 13), mission type 'Streak Challenge', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 7,
   "trial": 3,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "blocks = [...]",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 5;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 1;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how program_ok changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level7/standard/game_week9_level7_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_2593",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about program_ok to power up the scarab scholar and open the sundial.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Program Assembler – Merchant Waystation Streak",
+  "source_primary_mechanic": "Program Assembler",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w8_l9",
+  "source_week": 8,
+  "source_level": 9,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "e3d24ea5117213162f352a03c73f9c727ed291bc651588fc3ad039a963628122",
+    "lesson_unchanged": true
+  }
 }

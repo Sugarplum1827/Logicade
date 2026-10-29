@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "39_superhero_city_patrol",
+  "slug": "superhero_city_patrol",
+  "display_name": "Superhero City Patrol",
+  "module_family": "vector_interception",
+  "learning_target": "vectors and directional movement",
+  "core_brief": "Use response vectors to choose the fastest safe route to city emergencies.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "superhero",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Lane defense",
+  "accent": "#ff8fd8",
+  "tint": 15382467,
+  "variation_id": "39_superhero_city_patrol_v03",
+  "index": 3,
+  "title": "Vertical Ascent",
+  "label": "Variation 03: Vertical Ascent",
+  "seed": 2507585792,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "vertical"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_c",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a vertically layered level with at least three distinct heights or floors. A correct response opens the next climb segment; provide safe recovery platforms.",
+    "obstacles": "gaps, lifts or ladders, and one moving vertical hazard; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short climb bursts separated by brief planning pauses."
+  },
+  "question_bank": "../../data/questions/superhero_city_patrol.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

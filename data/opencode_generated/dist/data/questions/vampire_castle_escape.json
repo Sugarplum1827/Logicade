@@ -1,0 +1,79 @@
+{
+  "concept_id": "19_vampire_castle_escape",
+  "slug": "vampire_castle_escape",
+  "learning_target": "variable declaration and assignment",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a variable?",
+      "options": [
+        "A type of door",
+        "A named storage location",
+        "A fixed number",
+        "A comment"
+      ],
+      "answer_index": 1,
+      "explanation": "A variable stores a value under a name so it can be used later."
+    },
+    {
+      "id": "q2",
+      "question": "Which line declares a variable?",
+      "options": [
+        "keys = 0",
+        "keys(0)",
+        "keys == 0",
+        "0 = keys"
+      ],
+      "answer_index": 0,
+      "explanation": "A single equals sign assigns the value 0 to the variable keys."
+    },
+    {
+      "id": "q3",
+      "question": "What does `keys = keys + 1` do?",
+      "options": [
+        "Decreases keys",
+        "Sets keys to 1 always",
+        "Deletes keys",
+        "Increases keys by 1"
+      ],
+      "answer_index": 3,
+      "explanation": "The old value is read, incremented by one, and stored back."
+    },
+    {
+      "id": "q4",
+      "question": "Which is a good variable name?",
+      "options": [
+        "gate_open",
+        "g",
+        "123",
+        "open gate"
+      ],
+      "answer_index": 0,
+      "explanation": "A descriptive name with an underscore is readable and valid."
+    },
+    {
+      "id": "q5",
+      "question": "What happens if you use a variable before assigning it?",
+      "options": [
+        "It becomes zero",
+        "Nothing happens",
+        "An error may occur",
+        "It becomes true"
+      ],
+      "answer_index": 2,
+      "explanation": "Python raises an error when a name has no assigned value yet."
+    },
+    {
+      "id": "q6",
+      "question": "Why assign a value?",
+      "options": [
+        "To open every door",
+        "To store data for later use",
+        "To decorate the castle",
+        "To avoid logic"
+      ],
+      "answer_index": 1,
+      "explanation": "Assignment gives a variable the data it will hold during the program."
+    }
+  ]
+}

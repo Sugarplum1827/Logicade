@@ -1,0 +1,94 @@
+{
+  "game_id": "canvas_circuit",
+  "slug": "circuit",
+  "display_name": "C Scope Circuit Workshop",
+  "variation_id": "canvas_game_2582",
+  "content_revision": "521cc6d8c980ef45285bda8883798b97ef59971341f0f445a566ab9f3baaf512",
+  "content_origin": "authored_fallback_pool",
+  "served_from_pool": true,
+  "variation_title": "Examination practice · C Scope Circuit · Compare local and global · variation 2",
+  "index": 2,
+  "seed": 2070308982,
+  "runtime": "native_canvas",
+  "template_version": "2.0.0",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "week": 9,
+  "level": 7,
+  "difficulty": "needs_support",
+  "mode": "circuit",
+  "mechanic_family": "circuit",
+  "mission_schema_version": 1,
+  "control_flow_type": null,
+  "map_features": null,
+  "routing_topology": null,
+  "branch_targets": null,
+  "source_week": 8,
+  "source_level": 9,
+  "learning_objective_id": "cp1_w8_l9",
+  "lesson": {
+    "summary": "Local and Global Variables",
+    "points": [
+      "Compare local and global",
+      "File-scope variables are declared outside functions; block-scope locals are visible in their block.",
+      "An inner declaration can hide an outer name. Leaving its scope restores the outer declaration.",
+      "Scope differs from lifetime: ordinary automatic locals belong to a block execution; file-scope objects have static storage duration."
+    ],
+    "example": "#include <stdio.h>\nint score = 2;\nint main(void) {\n { int score = 7; printf(\"%d\\n\", score); }\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Scope trace synthesis",
+    "week": 9,
+    "source_week": 8,
+    "source_level": 9,
+    "objective_id": "cp1_w8_l9",
+    "title": "Local and Global Variables",
+    "stage_title": "Compare local and global",
+    "objectives": [
+      "Compare local and global"
+    ],
+    "sources": [
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      8
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "playable": true,
+  "controls": {
+    "summary": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+    "pause": "Escape",
+    "answers": null
+  },
+  "objective": "Week 8 examination practice: Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [4, 3], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 3}. Pass all 3 signal tests.",
+  "title": "Examination practice · C Scope Circuit · Compare local and global · variation 2",
+  "subtitle": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "Compare local and global"
+  ],
+  "win_condition": "The executed design satisfies every input/output and world-state goal.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted; programs are bounded by the mission's execution limits.",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "time_limit_seconds": 0,
+  "formal_assessment": false,
+  "accuracy_basis": "program_execution_goals",
+  "asset_source": "shared LogiCade media and Kenney CC0 assets",
+  "visual_mode": "circuit",
+  "file_id": "game_2582"
+}

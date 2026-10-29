@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_18_c_sequence",
+  "slug": "c_sequence",
+  "display_name": "C Sequence",
+  "learning_target": "predict the result of sequential statements",
+  "core_brief": "Sequential statements run top to bottom, and each assignment uses the current value.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 6,
+  "unit": "C Structure",
+  "group": "code",
+  "skin": "farm",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_sunflower",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.fence",
+      "bush": "themes.farm.rock",
+      "slime": "themes.farm.bush",
+      "bee": "themes.farm.wheat"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "mechanic": "order",
+  "mechanic_label": "Order",
+  "accent": "#ffb27a",
+  "variation_id": "cp1_18_c_sequence_v04",
+  "index": 4,
+  "challenge_index": 4,
+  "challenge_id": "c_sequence_v04",
+  "title": "Order the procedure",
+  "label": "Lab 04: Order the procedure",
+  "seed": 2178125599,
+  "challenge_bank": "../../../data/cp1/challenges/c_sequence.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

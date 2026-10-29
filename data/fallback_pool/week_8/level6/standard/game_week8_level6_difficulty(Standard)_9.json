@@ -1,41 +1,41 @@
 {
   "file_id": "game_2269",
-  "game_title": "Split Join Assembly – Ice Cave Shelter Defense",
+  "game_title": "C Scope Circuit · Nested local blocks · variation 9",
   "game_concept": "A tower defense set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Split Join Assembly: Split sentences into words and join them back to assemble orders.",
-  "genre": "tower defense",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
-  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Split sentences into words and join them back to assemble orders. Each round, falling rocks strike the flag pole, so respond before the next strike lands. Then check the assembly value and advance.",
-  "primary_mechanic": "Split Join Assembly",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Ghost replay of best run",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Protect the flag pole from falling rocks in Ice Cave Shelter: keep the assembly meter above zero by applying the concept correctly until the 45-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 45 seconds while assembly > 0.",
-  "lose_condition": "assembly drops to 0, or lives reach 0, before the 45-second timer ends.",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, trace two nested local scopes. Print the scope trace [19, 17, 11], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 11}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Split Join Assembly",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Nested local blocks",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M04-X1-T13-169c33ea",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Split Join Assembly' (Week 8 slot 4), mission type 'Survival Siege', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 6,
   "trial": 9,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "'a b c'.split()\n'-'.join(words)",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 11;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 17; { int steps = 19; printf(\"%d\\n\", steps); } printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 45,
+    "time_limit_seconds": 0,
     "target_score": 300,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how assembly changes.",
-    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
-    "Step 3: Win by meeting the goal: Timer reaches 45 seconds while assembly > 0."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level6/standard/game_week8_level6_difficulty(Standard)_9.json",
+    "variation_id": "canvas_game_2269",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the flag pole from falling rocks in Ice Cave Shelter: keep the assembly meter above zero by applying the concept correctly until the 45-second timer ends.",
+  "source_win_condition": "Timer reaches 45 seconds while assembly > 0.",
+  "source_lose_condition": "assembly drops to 0, or lives reach 0, before the 45-second timer ends.",
+  "source_game_title": "Split Join Assembly – Ice Cave Shelter Defense",
+  "source_primary_mechanic": "Split Join Assembly",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 45,
+  "learning_objective_id": "cp1_w8_l6",
+  "source_week": 8,
+  "source_level": 6,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "15381db6f74857b29ee0bfe8e26c6f0872e831abbdde97caeb4a04eed0ca659a",
+    "lesson_unchanged": true
+  }
 }

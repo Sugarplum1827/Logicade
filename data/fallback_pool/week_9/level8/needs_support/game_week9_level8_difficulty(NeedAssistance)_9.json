@@ -1,30 +1,30 @@
 {
   "file_id": "game_2619",
-  "game_title": "Edge Case Hunter – Salt Flat Crossing Streak",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A card battler set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
-  "genre": "card battler",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
-  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round poses one decision; a wrong answer breaks the streak. Then check the edge_cases value and advance.",
-  "primary_mechanic": "Edge Case Hunter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Chain 9 consecutive correct decisions about edge_cases to power up the scarab scholar and open the temple door.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 9.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 9: {'a': 14, 'b': 9}; {'a': -9, 'b': -11}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Edge Case Hunter",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M09-X4-T11-37dabf55",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Streak Challenge', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how edge_cases changes.",
-    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
-    "Step 3: Win by meeting the goal: streak counter reaches 9."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/needs_support/game_week9_level8_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_2619",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 9 consecutive correct decisions about edge_cases to power up the scarab scholar and open the temple door.",
+  "source_win_condition": "streak counter reaches 9.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Edge Case Hunter – Salt Flat Crossing Streak",
+  "source_primary_mechanic": "Edge Case Hunter",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

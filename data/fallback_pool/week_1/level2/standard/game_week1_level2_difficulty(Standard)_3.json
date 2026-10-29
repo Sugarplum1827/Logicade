@@ -1,30 +1,30 @@
 {
   "file_id": "game_0043",
-  "game_title": "Print Probe – Throne Hall Streak",
-  "game_concept": "A quiz RPG set in The Kingdom – Throne Hall, the throne hall of the kingdom: the knight must handle mischievous imps while practicing variables & assignment. Core idea – Print Probe: Use print-style probes to reveal hidden variable values before mischievous imps act.",
-  "genre": "quiz RPG",
+  "game_title": "Flowchart Lab · Rectangle area",
+  "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
-  "core_gameplay_loop": "In Throne Hall, repeat each round: Use print-style probes to reveal hidden variable values before mischievous imps act. Each round poses one decision; a wrong answer breaks the streak. Then check the shield value and advance.",
-  "primary_mechanic": "Print Probe",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
+  "primary_mechanic": "Drag-and-drop flowchart construction",
   "secondary_mechanics": [
     "Streak combo meter",
     "Power-up crates for perfect rounds",
     "Ghost replay of best run"
   ],
-  "player_objective": "Chain 8 consecutive correct decisions about shield to power up the knight and open the signal beacon.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 8.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 10, 5; test inputs [{'width': 10, 'height': 5}, {'width': 5, 'height': 6}, {'width': 0, 'height': 7}, {'width': 5, 'height': 8}, {'width': 10, 'height': 9}, {'width': 15, 'height': 10}, {'width': 10, 'height': 10}, {'width': 10, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
+  "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Print Probe",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M13-X4-T07-5fd58eac",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Streak Challenge', and setting 'Throne Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 2,
   "trial": 3,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,18 +35,81 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
     "rival_speed": 0.7,
     "enemy_wave_count": 3,
     "enemy_attack_interval_seconds": 2.55,
-    "starting_score": 0
+    "starting_score": 0,
+    "source_time_limit_seconds": 33
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how shield changes.",
-    "Step 2: Use the controls to apply the code idea against mischievous imps in Throne Hall.",
-    "Step 3: Win by meeting the goal: streak counter reaches 8."
-  ]
+    "Read the requested procedure.",
+    "Drag correctly shaped blocks into the chart and follow the arrows.",
+    "Select Check chart to run example inputs. Revise incorrect steps and try again."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_0043",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_primary_mechanic": "Print Probe",
+  "source_game_title": "Print Probe – Throne Hall Streak",
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 10,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          -5,
+          0,
+          5,
+          10,
+          15
+        ],
+        "layout_seed": 0
+      }
+    },
+    "parameter_fingerprint": "2901e27c67d54b2547f866d4fcc77dc3467ffefa52a2ff7bfb0dd52e57c76cd4",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "dff65afb352a64de8cef6c5d9ec2d282d1bb6090e75115ea003360162ae7ba7b",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 8,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793315896.5435474,
+    "origin": "ollama",
+    "job_id": "beb34fb48f10e4c8f76a29d7a31ea20fb2981d4b5b599a3d66515bda14e6a495",
+    "replaces_revision": "cdf18e13d5333911bca205aa9f868b3e8f3682a3e38b7acb46465377ebc1cb4e"
+  },
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "is_fallback": false,
+  "generated_at": "2026-10-29T23:18:16.543547+00:00"
 }

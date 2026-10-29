@@ -1,0 +1,585 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v01",
+    "index": 1,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c functions in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Declare the function return type and name"
+        },
+        {
+          "id": "s2",
+          "text": "List the parameters"
+        },
+        {
+          "id": "s3",
+          "text": "Return the result from the body"
+        },
+        {
+          "id": "s4",
+          "text": "Call the function with arguments"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Declare the function return type and name → List the parameters → Return the result from the body → Call the function with arguments",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v02",
+    "index": 2,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a function that adds two integers and returns the result.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "add"
+        },
+        {
+          "id": "t3",
+          "text": "("
+        },
+        {
+          "id": "t4",
+          "text": "int a, int b"
+        },
+        {
+          "id": "t5",
+          "text": ")"
+        },
+        {
+          "id": "t6",
+          "text": "{"
+        },
+        {
+          "id": "t7",
+          "text": "return a + b;"
+        },
+        {
+          "id": "t8",
+          "text": "}"
+        },
+        {
+          "id": "t9",
+          "text": "void"
+        },
+        {
+          "id": "t10",
+          "text": "return;"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        },
+        {
+          "id": "slot8",
+          "label": "token 8"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "int add(int a, int b) returns an int; the body returns a + b.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v03",
+    "index": 3,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the arguments and the returned result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int add(int a, int b) {",
+        "    return a + b;",
+        "}",
+        "int main(void) {",
+        "    int result = add(3, 4);",
+        "    printf(\"%d\\n\", result);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "a",
+          "type": "final value"
+        },
+        {
+          "name": "b",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "3"
+        },
+        {
+          "id": "v2",
+          "text": "4"
+        },
+        {
+          "id": "v3",
+          "text": "7"
+        },
+        {
+          "id": "v4",
+          "text": "2"
+        },
+        {
+          "id": "v5",
+          "text": "5"
+        },
+        {
+          "id": "v6",
+          "text": "8"
+        }
+      ],
+      "answer": {
+        "a": "v1",
+        "b": "v2",
+        "result": "v3"
+      }
+    },
+    "explanation": "The call passes 3 and 4; add returns 7, stored in result.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v04",
+    "index": 4,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each part of the program by its role.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "definition",
+          "label": "Function definition",
+          "desc": "Declares the task and its body"
+        },
+        {
+          "id": "call",
+          "label": "Function call",
+          "desc": "Runs the task with arguments"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Displays the returned value"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int add(int a, int b) {",
+          "bin": "definition"
+        },
+        {
+          "id": "i2",
+          "text": "return a + b;",
+          "bin": "definition"
+        },
+        {
+          "id": "i3",
+          "text": "add(3, 4)",
+          "bin": "call"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"%d\\n\", result);",
+          "bin": "output"
+        },
+        {
+          "id": "i5",
+          "text": "int result = add(3, 4);",
+          "bin": "call"
+        },
+        {
+          "id": "i6",
+          "text": "int main(void) {",
+          "bin": "definition"
+        }
+      ]
+    },
+    "explanation": "The definition supplies the body, the call runs it, and printf shows the result.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v05",
+    "index": 5,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int add(int a, int b) {",
+        "    int sum = a + b;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", add(2, 3));",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "add promises to return an int but never uses return, so the value is undefined.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v06",
+    "index": 6,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in global scope, the add function, or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int add(int a, int b) {",
+        "    return a + b;",
+        "}",
+        "int main(void) {",
+        "    int result = add(3, 4);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "global",
+          "label": "Global scope",
+          "desc": "Function names visible to the file"
+        },
+        {
+          "id": "add",
+          "label": "add scope",
+          "desc": "Parameters and locals of add"
+        },
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Locals of main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int add(int a, int b)",
+          "scope": "global"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "global"
+        },
+        {
+          "id": "d3",
+          "text": "a and b",
+          "scope": "add"
+        },
+        {
+          "id": "d4",
+          "text": "int result",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "Function names are global; parameters belong to add and result belongs to main.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v07",
+    "index": 7,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c functions term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Function"
+        },
+        {
+          "id": "l2",
+          "text": "Parameter"
+        },
+        {
+          "id": "l3",
+          "text": "Argument"
+        },
+        {
+          "id": "l4",
+          "text": "Return value"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A named block that performs a task"
+        },
+        {
+          "id": "r2",
+          "text": "A name that receives a value in the function"
+        },
+        {
+          "id": "r3",
+          "text": "A value passed by the caller"
+        },
+        {
+          "id": "r4",
+          "text": "The result handed back to the caller"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v08",
+    "index": 8,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the function and its call.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int add(int a, int b) {",
+        "    {{b0}} a + b;",
+        "}",
+        "int main(void) {",
+        "    int result = add({{b1}}, 4);",
+        "    printf(\"%d\\n\", result);",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "return keyword",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "first argument",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "return"
+        },
+        {
+          "id": "b2",
+          "text": "3"
+        },
+        {
+          "id": "b3",
+          "text": "printf"
+        },
+        {
+          "id": "b4",
+          "text": "4"
+        },
+        {
+          "id": "b5",
+          "text": "void"
+        }
+      ]
+    },
+    "explanation": "The function returns a + b, and the call passes 3 and 4.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v09",
+    "index": 9,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int add(int a, int b) {",
+        "    return a + b;",
+        "}",
+        "int main(void) {",
+        "    int result = add(3, 4);",
+        "    printf(\"%d\\n\", result);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "7",
+      "accept": [
+        "7"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "add receives 3 and 4, returns 7, and main prints that returned value."
+    },
+    "explanation": "The program produces 7.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_functions_intro_v10",
+    "index": 10,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int add(int a, int b) {",
+        "    return a + b;",
+        "}",
+        "int main(void) {",
+        "    int result = add(3, 4);",
+        "    printf(\"%d\\n\", result);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 1,
+          "state": {
+            "a": "3",
+            "b": "4",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "a": "3",
+            "b": "4",
+            "result": "7"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "a": "3",
+            "b": "4",
+            "result": "7"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "result"
+      ],
+      "answer": {
+        "a": "3",
+        "b": "4",
+        "result": "7"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is a = 3, b = 4, result = 7.",
+    "concept_slug": "c_functions_intro",
+    "concept_name": "C Functions"
+  }
+]

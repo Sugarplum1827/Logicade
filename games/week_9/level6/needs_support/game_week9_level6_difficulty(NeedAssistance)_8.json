@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2558",
+  "variation_id": "canvas_game_2558",
+  "week": 9,
+  "level": 6,
+  "trial": 8,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Examination practice · Integer division · variation 8",
+  "display_name": "Register Operations Console",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "Integer division"
+  ],
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Integer division",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 9,
+    "source_week": 7,
+    "source_level": 10,
+    "objective_id": "cp1_w7_l10",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Integer division",
+    "objectives": [
+      "Integer division"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w7_l10",
+  "source_level": 10,
+  "source_week": 7,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 2, and print each result with %d. Dataset 8 starts with [-3, 0, 18, 21]. Match every stream. Use a full main function and a return statement.",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 1601548009,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      4,
+      5,
+      18,
+      21
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 1
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w9_l6_v8_0",
+    "rules": {
+      "max_steps": 800,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w7_l10",
+    "source_level": 10,
+    "focus": "Integer division",
+    "family": "terminal",
+    "language": "c_subset",
+    "title": "Examination practice · Integer division · variation 8",
+    "objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 2, and print each result with %d. Dataset 8 starts with [-3, 0, 18, 21]. Match every stream. Use a full main function and a return statement.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -3,
+          0,
+          18,
+          21
+        ],
+        "expected": [
+          -1,
+          0,
+          9,
+          10
+        ],
+        "required_values": {
+          "resource": 10
+        }
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -2,
+          0,
+          19,
+          21
+        ],
+        "expected": [
+          -1,
+          0,
+          9,
+          10
+        ],
+        "required_values": {
+          "resource": 10
+        }
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -1,
+          0,
+          20,
+          21
+        ],
+        "expected": [
+          0,
+          0,
+          10,
+          10
+        ],
+        "required_values": {
+          "resource": 10
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "C1",
+        "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+      }
+    ],
+    "required_declaration": {
+      "name": "resource",
+      "type": "int"
+    },
+    "reference": {
+      "programs": [
+        "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nint resource = readInput();\nresource = resource / 2;\nprintf(\"%d\\n\", resource);\nreturn 0;\n}"
+      ]
+    },
+    "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+    "source_week": 7
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w9_l6_v8_0",
+      "kind": "program_execution",
+      "prompt": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 2, and print each result with %d. Dataset 8 starts with [-3, 0, 18, 21]. Match every stream. Use a full main function and a return statement."
+    }
+  ],
+  "source_path": "week_9/level6/needs_support/game_week9_level6_difficulty(NeedAssistance)_8.json",
+  "source_topic": "Basic Parts of C and Variable Declarations",
+  "source_learning_alignment": "CP1 Week 7: Integer division",
+  "source_primary_mechanic": "Refactor Rescue",
+  "source_code_snippet": "def f():\n    ..."
+}

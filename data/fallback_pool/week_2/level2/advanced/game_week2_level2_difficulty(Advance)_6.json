@@ -1,30 +1,30 @@
 {
   "file_id": "game_0356",
-  "game_title": "Exponent Engine – Lava Tube Tunnel Streak",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A rhythm puzzle set in Mt. Pyre – Lava Tube Tunnel, a glowing lava tube: the volcanologist must handle lava imps while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
-  "genre": "rhythm puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
-  "core_gameplay_loop": "In Lava Tube Tunnel, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round poses one decision; a wrong answer breaks the streak. Then check the engine_power value and advance.",
-  "primary_mechanic": "Exponent Engine",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about engine_power to power up the volcanologist and open the summit beacon.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read value for station 6, then display the same value without changing it. Test dataset 6: {'value': -6}; {'value': 18}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Exponent Engine",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M11-X4-T14-a3fefcfc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Streak Challenge', and setting 'Lava Tube Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 6,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 26,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how engine_power changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Lava Tube Tunnel.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/advanced/game_week2_level2_difficulty(Advance)_6.json",
+    "variation_id": "canvas_game_0356",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about engine_power to power up the volcanologist and open the summit beacon.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Exponent Engine – Lava Tube Tunnel Streak",
+  "source_primary_mechanic": "Exponent Engine",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 26,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

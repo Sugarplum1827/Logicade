@@ -12,6 +12,7 @@ import App from './App.jsx'
 async function bootstrap() {
   try {
     const res = await fetch('/api/config');
+    if (!res.ok) throw new Error(`API config returned HTTP ${res.status}`);
     window.LOGICADE_CONFIG = await res.json();
   } catch (e) {
     console.warn('[main] using built-in API paths', e);

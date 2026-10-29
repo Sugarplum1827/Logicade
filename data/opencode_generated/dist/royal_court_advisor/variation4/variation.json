@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "29_royal_court_advisor",
+  "slug": "royal_court_advisor",
+  "display_name": "Royal Court Advisor",
+  "module_family": "branching_decisions",
+  "learning_target": "flowcharts and conditional reasoning",
+  "core_brief": "Use flowcharts to advise a digital ruler through policy choices and consequences.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "royal",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Sequence solver",
+  "accent": "#ff8fd8",
+  "tint": 12041194,
+  "variation_id": "29_royal_court_advisor_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 3929677782,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.mine",
+      "slime": "themes.tower_defense.rock",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/royal_court_advisor.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

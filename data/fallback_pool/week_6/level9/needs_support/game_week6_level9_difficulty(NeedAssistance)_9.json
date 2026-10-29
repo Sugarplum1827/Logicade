@@ -1,30 +1,30 @@
 {
   "file_id": "game_1749",
-  "game_title": "Docstring Detective – Cold Larder Defense",
+  "game_title": "Output verification · variation 9",
   "game_concept": "A action defense set in Snowy Hold – Cold Larder, an ice-cellar larder: the hold guard must handle frozen golems while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
-  "genre": "action defense",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Cold Larder: an ice-cellar larder",
-  "core_gameplay_loop": "In Cold Larder, repeat each round: Read docstrings to pick the right function for each case. Each round, frozen golems strike the beacon fire, so respond before the next strike lands. Then check the cases value and advance.",
-  "primary_mechanic": "Docstring Detective",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Hint tokens that reveal one line of code",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Protect the beacon fire from frozen golems in Cold Larder: keep the cases meter above zero by applying the concept correctly until the 76-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 76 seconds while cases > 0.",
-  "lose_condition": "cases drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "player_objective": "Maze 9 (17×11, 30 junctions): collect 1 crystal(s) from the branches and reach beacon (15, 7). Use a C main program to Output verification. Print [46]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 6 – Functions | Level 9 (extended tier): Docstring Detective",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Output verification",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M09-X1-T13-748c55e2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Survival Siege', and setting 'Cold Larder'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 9,
   "trial": 9,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how cases changes.",
-    "Step 2: Use the controls to apply the code idea against frozen golems in Cold Larder.",
-    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while cases > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level9/needs_support/game_week6_level9_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_1749",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the beacon fire from frozen golems in Cold Larder: keep the cases meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "source_win_condition": "Timer reaches 76 seconds while cases > 0.",
+  "source_lose_condition": "cases drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "source_game_title": "Docstring Detective – Cold Larder Defense",
+  "source_primary_mechanic": "Docstring Detective",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w6_l9",
+  "source_week": 6,
+  "source_level": 9
 }

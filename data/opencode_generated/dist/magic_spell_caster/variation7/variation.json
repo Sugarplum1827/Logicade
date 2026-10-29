@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "23_magic_spell_caster",
+  "slug": "magic_spell_caster",
+  "display_name": "Magic Spell Caster",
+  "module_family": "spell_sequence",
+  "learning_target": "syntax structure and command matching",
+  "core_brief": "Assemble syntax-based incantations to cast the correct spell for each obstacle.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "magic",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Sequence solver",
+  "accent": "#ffcf5c",
+  "tint": 15382494,
+  "variation_id": "23_magic_spell_caster_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 1717102548,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 16,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.bush",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.bush"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/magic_spell_caster.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2552",
-  "game_title": "Exception Rodeo – Dust Devil Plain Streak",
+  "game_title": "Examination practice · Integer division · variation 2",
   "game_concept": "A rhythm puzzle set in Sand Dunes – Dust Devil Plain, a plain of dust devils: the camel trader must handle sand wyrms while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
-  "genre": "rhythm puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Dust Devil Plain: a plain of dust devils",
-  "core_gameplay_loop": "In Dust Devil Plain, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round poses one decision; a wrong answer breaks the streak. Then check the stability value and advance.",
-  "primary_mechanic": "Exception Rodeo",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 8 consecutive correct decisions about stability to power up the camel trader and open the water well.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 8.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 4, and print each result with %d. Dataset 2 starts with [-3, 0, 12, 15]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Exception Rodeo",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 7: Integer division",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M02-X4-T18-df5b4ce7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Streak Challenge', and setting 'Dust Devil Plain'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 6,
   "trial": 2,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 63,
+    "time_limit_seconds": 0,
     "target_score": 210,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stability changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dust Devil Plain.",
-    "Step 3: Win by meeting the goal: streak counter reaches 8."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level6/needs_support/game_week9_level6_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_2552",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 8 consecutive correct decisions about stability to power up the camel trader and open the water well.",
+  "source_win_condition": "streak counter reaches 8.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Exception Rodeo – Dust Devil Plain Streak",
+  "source_primary_mechanic": "Exception Rodeo",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 63,
+  "learning_objective_id": "cp1_w7_l10",
+  "source_week": 7,
+  "source_level": 10
 }

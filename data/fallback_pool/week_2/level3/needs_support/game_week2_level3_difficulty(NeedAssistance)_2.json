@@ -1,30 +1,30 @@
 {
   "file_id": "game_0362",
-  "game_title": "Arithmetic Cannon – Geyser Flats Trial",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A logic puzzle set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on fire sprites.",
-  "genre": "logic puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
-  "core_gameplay_loop": "In Geyser Flats, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on fire sprites. Each round costs one action, so plan the step so none are wasted. Then check the damage value and advance.",
-  "primary_mechanic": "Arithmetic Cannon",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Step-by-step code highlighting",
     "Live variable watch panel"
   ],
-  "player_objective": "Reach the forge anvil using at most 19 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The forge anvil reached with actions_used <= 19.",
-  "lose_condition": "actions_used exceeds 19 before the forge anvil is reached, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 2: {'width': 3, 'height': 4}; {'width': 5, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Arithmetic Cannon",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M02-X3-T12-554cd4db",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Efficiency Trial', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 2,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how damage changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
-    "Step 3: Win by meeting the goal: The forge anvil reached with actions_used <= 19."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/needs_support/game_week2_level3_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_0362",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the forge anvil using at most 19 actions, so every code step counts.",
+  "source_win_condition": "The forge anvil reached with actions_used <= 19.",
+  "source_lose_condition": "actions_used exceeds 19 before the forge anvil is reached, or lives reach 0.",
+  "source_game_title": "Arithmetic Cannon – Geyser Flats Trial",
+  "source_primary_mechanic": "Arithmetic Cannon",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

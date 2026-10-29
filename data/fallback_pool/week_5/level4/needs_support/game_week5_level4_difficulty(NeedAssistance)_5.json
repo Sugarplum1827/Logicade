@@ -1,30 +1,30 @@
 {
   "file_id": "game_1295",
-  "game_title": "Sum Sprint – Lantern Path Streak",
+  "game_title": "Branch Assembly 5 · Merge Midpoint",
   "game_concept": "A rhythm puzzle set in Mystic Forest – Lantern Path, a lantern-lit path: the herbalist must handle mischievous sprites while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Lantern Path.",
-  "genre": "rhythm puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Lantern Path: a lantern-lit path",
-  "core_gameplay_loop": "In Lantern Path, repeat each round: Accumulate a total across a loop to pay a toll at Lantern Path. Each round poses one decision; a wrong answer breaks the streak. Then check the total value and advance.",
-  "primary_mechanic": "Sum Sprint",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Step-by-step code highlighting",
     "Live variable watch panel"
   ],
-  "player_objective": "Chain 7 consecutive correct decisions about total to power up the herbalist and open the mushroom ring.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 7.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Header inclusion: build a valid C source file that prints 9. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (3, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 8 components (4 upper, 4 lower). Set the gold-socket controller batch to 8.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Sum Sprint",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Header inclusion",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M05-X4-T15-910478e9",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Streak Challenge', and setting 'Lantern Path'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 4,
   "trial": 5,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how total changes.",
-    "Step 2: Use the controls to apply the code idea against mischievous sprites in Lantern Path.",
-    "Step 3: Win by meeting the goal: streak counter reaches 7."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level4/needs_support/game_week5_level4_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_1295",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 7 consecutive correct decisions about total to power up the herbalist and open the mushroom ring.",
+  "source_win_condition": "streak counter reaches 7.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Sum Sprint – Lantern Path Streak",
+  "source_primary_mechanic": "Sum Sprint",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: A: 4 components via upper_4, shared_assembler to output_shared; B: 4 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w5_l4",
+  "source_week": 5,
+  "source_level": 4
 }

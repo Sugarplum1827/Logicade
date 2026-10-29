@@ -1,30 +1,30 @@
 {
   "file_id": "game_0842",
-  "game_title": "Else Escape – Shipyard Slip Race",
+  "game_title": "Termination · variation 2",
   "game_concept": "A adventure race set in Coastal Port – Shipyard Slip, a shipyard building boats: the fisher must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Else Escape: Handle both branches of if/else: attack one kind of pirate raiders, dodge the other.",
-  "genre": "adventure race",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Shipyard Slip: a shipyard building boats",
-  "core_gameplay_loop": "In Shipyard Slip, repeat each round: Handle both branches of if/else: attack one kind of pirate raiders, dodge the other. Each round the rival advances, and solving the step moves the fisher ahead. Then check the hero_hp value and advance.",
-  "primary_mechanic": "Else Escape",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the dock crane by solving code steps involving hero_hp that move the fisher forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
-  "lose_condition": "The rival reaches the dock crane first, or lives reach 0.",
+  "player_objective": "Termination: Use Step to inspect the loop condition. reduce each positive input to zero by subtracting 1 until the condition fails; every procedure must terminate. Match all 3 streams; preserve their order. Dataset 2, operand 12.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 9 (extended tier): Else Escape",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Termination",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M02-X5-T04-72612407",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Else Escape' (Week 3 slot 2), mission type 'Rival Race', and setting 'Shipyard Slip'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 9,
   "trial": 2,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how hero_hp changes.",
-    "Step 2: Use the controls to apply the code idea against pirate raiders in Shipyard Slip.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level9/needs_support/game_week3_level9_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_0842",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the dock crane by solving code steps involving hero_hp that move the fisher forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "source_lose_condition": "The rival reaches the dock crane first, or lives reach 0.",
+  "source_game_title": "Else Escape – Shipyard Slip Race",
+  "source_primary_mechanic": "Else Escape",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w3_l9",
+  "source_week": 3,
+  "source_level": 9
 }

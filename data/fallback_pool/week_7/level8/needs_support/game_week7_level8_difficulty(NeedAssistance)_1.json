@@ -1,30 +1,30 @@
 {
   "file_id": "game_2011",
-  "game_title": "Backpack Append – Weathered Gate Race",
+  "game_title": "Declare double · variation 1",
   "game_concept": "A racing platformer set in Eldritch Ruins – Weathered Gate, a weathered stone gate: the ruin warden must handle eldritch shades while practicing lists. Core idea – Backpack Append: Use append and remove to manage the ruin warden's backpack list as eldritch shades drop loot.",
-  "genre": "racing platformer",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Weathered Gate: a weathered stone gate",
-  "core_gameplay_loop": "In Weathered Gate, repeat each round: Use append and remove to manage the ruin warden's backpack list as eldritch shades drop loot. Each round the rival advances, and solving the step moves the ruin warden ahead. Then check the bag_space value and advance.",
-  "primary_mechanic": "Backpack Append",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the relic vault by solving code steps involving bag_space that move the ruin warden forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
-  "lose_condition": "The rival reaches the relic vault first, or lives reach 0.",
+  "player_objective": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 1 starts with [-3, 0, 9, 12]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Backpack Append",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare double",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M01-X5-T15-35746af1",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Backpack Append' (Week 7 slot 1), mission type 'Rival Race', and setting 'Weathered Gate'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 8,
   "trial": 1,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how bag_space changes.",
-    "Step 2: Use the controls to apply the code idea against eldritch shades in Weathered Gate.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level8/needs_support/game_week7_level8_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_2011",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the relic vault by solving code steps involving bag_space that move the ruin warden forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "source_lose_condition": "The rival reaches the relic vault first, or lives reach 0.",
+  "source_game_title": "Backpack Append – Weathered Gate Race",
+  "source_primary_mechanic": "Backpack Append",
+  "hint": "Declare before use. double resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w7_l8",
+  "source_week": 7,
+  "source_level": 8
 }

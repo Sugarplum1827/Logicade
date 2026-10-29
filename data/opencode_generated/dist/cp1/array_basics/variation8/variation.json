@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_42_array_basics",
+  "slug": "array_basics",
+  "display_name": "Array Basics",
+  "learning_target": "declare, initialize, and index an array",
+  "core_brief": "An array stores a fixed number of same-type values; the first index is 0.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 12,
+  "unit": "Arrays",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_3",
+    "zones": [
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef",
+    "enemy": "themes.food.enemy_can",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.can",
+      "bush": "themes.food.fish",
+      "slime": "themes.food.fish",
+      "bee": "themes.food.can"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_42_array_basics_v08",
+  "index": 8,
+  "challenge_index": 8,
+  "challenge_id": "array_basics_v08",
+  "title": "Trace the output",
+  "label": "Lab 08: Trace the output",
+  "seed": 1797947139,
+  "challenge_bank": "../../../data/cp1/challenges/array_basics.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

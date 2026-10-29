@@ -1,30 +1,30 @@
 {
   "file_id": "game_1869",
-  "game_title": "Length Limit – Broken Colonnade Streak",
+  "game_title": "Assignment versus equality · variation 9",
   "game_concept": "A card battler set in Eldritch Ruins – Broken Colonnade, a row of broken columns: the relic hunter must handle ghost knights while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Broken Colonnade.",
-  "genre": "card battler",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Broken Colonnade: a row of broken columns",
-  "core_gameplay_loop": "In Broken Colonnade, repeat each round: Use len() to stop the list from growing past the limit of Broken Colonnade. Each round poses one decision; a wrong answer breaks the streak. Then check the capacity value and advance.",
-  "primary_mechanic": "Length Limit",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Hint tokens that reveal one line of code",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 6 consecutive correct decisions about capacity to power up the relic hunter and open the glyph door.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 6.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Assignment versus equality: declare resource as int, apply resource == 12, and print each result with %d. Dataset 9 starts with [-3, 0, 12, 15]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Length Limit",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Assignment versus equality",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M09-X4-T01-8aaa1662",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Streak Challenge', and setting 'Broken Colonnade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 3,
   "trial": 9,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how capacity changes.",
-    "Step 2: Use the controls to apply the code idea against ghost knights in Broken Colonnade.",
-    "Step 3: Win by meeting the goal: streak counter reaches 6."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level3/needs_support/game_week7_level3_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_1869",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 6 consecutive correct decisions about capacity to power up the relic hunter and open the glyph door.",
+  "source_win_condition": "streak counter reaches 6.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Length Limit – Broken Colonnade Streak",
+  "source_primary_mechanic": "Length Limit",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w7_l3",
+  "source_week": 7,
+  "source_level": 3
 }

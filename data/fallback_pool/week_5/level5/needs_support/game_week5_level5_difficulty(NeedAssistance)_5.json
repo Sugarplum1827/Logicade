@@ -1,30 +1,30 @@
 {
   "file_id": "game_1325",
-  "game_title": "Sum Sprint – Stump Court Defense",
+  "game_title": "Branch Assembly 5 · Merge Midpoint",
   "game_concept": "A survival strategy set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Stump Court.",
-  "genre": "survival strategy",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Stump Court: a court around a giant stump",
-  "core_gameplay_loop": "In Stump Court, repeat each round: Accumulate a total across a loop to pay a toll at Stump Court. Each round, shadow wolves strike the herb garden, so respond before the next strike lands. Then check the total value and advance.",
-  "primary_mechanic": "Sum Sprint",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Protect the herb garden from shadow wolves in Stump Court: keep the total meter above zero by applying the concept correctly until the 59-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 59 seconds while total > 0.",
-  "lose_condition": "total drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "player_objective": "Object-like macros: build a valid C source file that prints 10. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 9 components (5 upper, 4 lower). Set the gold-socket controller batch to 9.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Sum Sprint",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Object-like macros",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M05-X1-T17-8a31e946",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Survival Siege', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 5,
   "trial": 5,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how total changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
-    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while total > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level5/needs_support/game_week5_level5_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_1325",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the herb garden from shadow wolves in Stump Court: keep the total meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "source_win_condition": "Timer reaches 59 seconds while total > 0.",
+  "source_lose_condition": "total drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "source_game_title": "Sum Sprint – Stump Court Defense",
+  "source_primary_mechanic": "Sum Sprint",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: A: 5 components via upper_4, shared_assembler to output_shared; B: 4 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w5_l5",
+  "source_week": 5,
+  "source_level": 5
 }

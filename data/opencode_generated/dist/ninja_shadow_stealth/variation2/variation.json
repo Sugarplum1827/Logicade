@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "22_ninja_shadow_stealth",
+  "slug": "ninja_shadow_stealth",
+  "display_name": "Ninja Shadow Stealth",
+  "module_family": "stealth_route",
+  "learning_target": "decision trees and branching choices",
+  "core_brief": "Use decision-tree choices to avoid guards and reach a safe exit.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "ninja",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#6ec6ff",
+  "tint": 13547498,
+  "variation_id": "22_ninja_shadow_stealth_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 947147204,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_dusk",
+    "zones": [
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day"
+    ],
+    "tile": "themes.urban.tile_sidewalk",
+    "player": "themes.urban.player_b",
+    "enemy": "themes.urban.enemy_b",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/ninja_shadow_stealth.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0447",
-  "game_title": "Compound Combo – Cinder Cone Camp Trial",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A programming puzzle set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
-  "genre": "programming puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
-  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round costs one action, so plan the step so none are wasted. Then check the energy value and advance.",
-  "primary_mechanic": "Compound Combo",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Reach the cooling vent using at most 12 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The cooling vent reached with actions_used <= 12.",
-  "lose_condition": "actions_used exceeds 12 before the cooling vent is reached, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score ≥ 54; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 7: {'score': 53}; {'score': 55}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Compound Combo",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M12-X3-T07-fc372884",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Efficiency Trial', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how energy changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
-    "Step 3: Win by meeting the goal: The cooling vent reached with actions_used <= 12."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/advanced/game_week2_level5_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0447",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the cooling vent using at most 12 actions, so every code step counts.",
+  "source_win_condition": "The cooling vent reached with actions_used <= 12.",
+  "source_lose_condition": "actions_used exceeds 12 before the cooling vent is reached, or lives reach 0.",
+  "source_game_title": "Compound Combo – Cinder Cone Camp Trial",
+  "source_primary_mechanic": "Compound Combo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5
 }

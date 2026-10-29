@@ -2,9 +2,9 @@
   "file_id": "game_0088",
   "game_title": "Print Probe – Tavern Quarter Rush",
   "game_concept": "A arcade set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Print Probe: Use print-style probes to reveal hidden variable values before siege rats act.",
-  "genre": "arcade",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
-  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Use print-style probes to reveal hidden variable values before siege rats act. Each round, a new apples challenge appears; solve it to bank points before time drains. Then check the shield value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Print Probe",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
@@ -12,19 +12,19 @@
     "Power-up crates for perfect rounds"
   ],
   "player_objective": "Collect 230 points of apples by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "score >= 230 within 29 seconds.",
   "lose_condition": "Timer hits 0 with score < 230, or lives reach 0.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 3 (intro tier): Print Probe",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M13-X2-T10-13418c0c",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Resource Rush', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 3,
   "trial": 8,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how shield changes.",
     "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
     "Step 3: Win by meeting the goal: score >= 230 within 29 seconds."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level3/advanced/game_week1_level3_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_0088",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0572",
-  "game_title": "Arithmetic Cannon – Crater Lake Edge Rush",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A action puzzle set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on lava imps.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
-  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on lava imps. Each round, a new cooling flasks challenge appears; solve it to bank points before time drains. Then check the damage value and advance.",
-  "primary_mechanic": "Arithmetic Cannon",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Collect 320 points of cooling flasks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 320 within 80 seconds.",
-  "lose_condition": "Timer hits 0 with score < 320, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 2: {'width': 3, 'height': 4}; {'width': 5, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Arithmetic Cannon",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M02-X2-T06-c7b54564",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Resource Rush', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 10,
   "trial": 2,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 80,
+    "time_limit_seconds": 0,
     "target_score": 320,
     "action_budget": 23,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how damage changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
-    "Step 3: Win by meeting the goal: score >= 320 within 80 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level10/needs_support/game_week2_level10_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_0572",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 320 points of cooling flasks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 320 within 80 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 320, or lives reach 0.",
+  "source_game_title": "Arithmetic Cannon – Crater Lake Edge Rush",
+  "source_primary_mechanic": "Arithmetic Cannon",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 80,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

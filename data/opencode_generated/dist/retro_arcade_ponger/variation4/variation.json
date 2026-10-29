@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "34_retro_arcade_ponger",
+  "slug": "retro_arcade_ponger",
+  "display_name": "Retro Arcade Ponger",
+  "module_family": "arcade_paddle",
+  "learning_target": "velocity variables and simple physics",
+  "core_brief": "Adjust velocity variables to guide a paddle and return the ball through target zones.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "pong",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Lane defense",
+  "accent": "#ff6b81",
+  "tint": 12577463,
+  "variation_id": "34_retro_arcade_ponger_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 1980474907,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_purple",
+    "zones": [
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_red",
+    "enemy": "themes.space.enemy_black",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_yellow",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/retro_arcade_ponger.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

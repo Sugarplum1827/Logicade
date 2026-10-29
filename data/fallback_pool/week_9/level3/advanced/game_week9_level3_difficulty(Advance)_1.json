@@ -1,30 +1,30 @@
 {
   "file_id": "game_2481",
-  "game_title": "Off By One Autopsy – Oasis Pool Defense",
+  "game_title": "C Archive · History/classification review",
   "game_concept": "A action defense set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
-  "genre": "action defense",
+  "genre": "CP1 challenge; Week 4 theme pending",
   "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
-  "core_gameplay_loop": "In Oasis Pool, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round, giant scorpions strike the temple door, so respond before the next strike lands. Then check the autopsy value and advance.",
-  "primary_mechanic": "Off By One Autopsy",
+  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the temple door from giant scorpions in Oasis Pool: keep the autopsy meter above zero by applying the concept correctly until the 29-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 29 seconds while autopsy > 0.",
-  "lose_condition": "autopsy drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "player_objective": "Archive variation 1: classify and verify C history, characteristics and language categories for History/classification review.",
+  "controls": "Read each archive record and choose the supported C fact.",
+  "win_condition": "All researched archive facts are correctly identified.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Off By One Autopsy",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 4: History/classification review",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M06-X1-T01-4f4a52b2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Survival Siege', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 3,
   "trial": 1,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Introduction to C: History, Characteristics and Classification",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how autopsy changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
-    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while autopsy > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level3/advanced/game_week9_level3_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_2481",
+    "mode": "pending",
+    "asset_set": "pending",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the temple door from giant scorpions in Oasis Pool: keep the autopsy meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "source_win_condition": "Timer reaches 29 seconds while autopsy > 0.",
+  "source_lose_condition": "autopsy drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "source_game_title": "Off By One Autopsy – Oasis Pool Defense",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w4_l10",
+  "source_week": 4,
+  "source_level": 10
 }

@@ -1,0 +1,513 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v01",
+    "index": 1,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    int total;",
+        "    total = total + 4;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "total is read before it is initialized, so the result is unpredictable.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v02",
+    "index": 2,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each declaration in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int global_total = 0;",
+        "int main(void) {",
+        "    int total = 0;",
+        "    total = total + 4;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Outside main"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int global_total = 0;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "int total = 0;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "total = total + 4;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "global_total is file-scoped; total is a local initialized inside main.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v03",
+    "index": 3,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each initialization term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Initialization"
+        },
+        {
+          "id": "l2",
+          "text": "Uninitialized"
+        },
+        {
+          "id": "l3",
+          "text": "0"
+        },
+        {
+          "id": "l4",
+          "text": "Undefined"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Giving a variable its first value"
+        },
+        {
+          "id": "r2",
+          "text": "Declared but never given a value"
+        },
+        {
+          "id": "r3",
+          "text": "A safe starting value for a sum"
+        },
+        {
+          "id": "r4",
+          "text": "The unpredictable result of reading uninitialized storage"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v04",
+    "index": 4,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the running total.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int {{b0}} = 0;",
+        "total = total {{b1}} 4;",
+        "printf(\"%d\\n\", total);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "variable being summed",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "operation that adds",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "total"
+        },
+        {
+          "id": "b2",
+          "text": "+"
+        },
+        {
+          "id": "b3",
+          "text": "added"
+        },
+        {
+          "id": "b4",
+          "text": "-"
+        },
+        {
+          "id": "b5",
+          "text": "count"
+        }
+      ]
+    },
+    "explanation": "Initialize total to 0, then add 4.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v05",
+    "index": 5,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 0;",
+        "    total = total + 4;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "4",
+      "accept": [
+        "4"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The total starts at 0, then gains 4."
+    },
+    "explanation": "The program produces 4.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v06",
+    "index": 6,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 0;",
+        "    total = total + 4;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "total",
+        "added"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "total": "0",
+            "added": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "total": "4",
+            "added": "4"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "total": "4",
+            "added": "4"
+          }
+        }
+      ],
+      "ask": [
+        "total",
+        "added"
+      ],
+      "answer": {
+        "total": "4",
+        "added": "4"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is total = 4, added = 4.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v07",
+    "index": 7,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of initialization in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Declare the variable"
+        },
+        {
+          "id": "s2",
+          "text": "Give it a starting value"
+        },
+        {
+          "id": "s3",
+          "text": "Use the value in a calculation"
+        },
+        {
+          "id": "s4",
+          "text": "Print the final result"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Declare the variable → Give it a starting value → Use the value in a calculation → Print the final result",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v08",
+    "index": 8,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build an initialized running total.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "total"
+        },
+        {
+          "id": "t3",
+          "text": "="
+        },
+        {
+          "id": "t4",
+          "text": "0"
+        },
+        {
+          "id": "t5",
+          "text": ";"
+        },
+        {
+          "id": "t6",
+          "text": "uninitialized"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Starting at 0 makes the first addition well-defined.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v09",
+    "index": 9,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the starting total and the added value.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 0;",
+        "    total = total + 4;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "total",
+          "type": "final value"
+        },
+        {
+          "name": "added",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "4"
+        },
+        {
+          "id": "v2",
+          "text": "4"
+        },
+        {
+          "id": "v3",
+          "text": "5"
+        },
+        {
+          "id": "v4",
+          "text": "3"
+        }
+      ],
+      "answer": {
+        "total": "v1",
+        "added": "v2"
+      }
+    },
+    "explanation": "total begins at 0 and becomes 4 after the addition.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_initialization_v10",
+    "index": 10,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each pattern as safe or unsafe.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "safe",
+          "label": "Safe",
+          "desc": "The value is defined before use"
+        },
+        {
+          "id": "unsafe",
+          "label": "Unsafe",
+          "desc": "Reads an uninitialized local"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int total = 0;",
+          "bin": "safe"
+        },
+        {
+          "id": "i2",
+          "text": "int total; total = total + 1;",
+          "bin": "unsafe"
+        },
+        {
+          "id": "i3",
+          "text": "int count = 1;",
+          "bin": "safe"
+        },
+        {
+          "id": "i4",
+          "text": "int x; printf(\"%d\", x);",
+          "bin": "unsafe"
+        },
+        {
+          "id": "i5",
+          "text": "int sum = 0; sum = sum + 5;",
+          "bin": "safe"
+        },
+        {
+          "id": "i6",
+          "text": "int y; y = y * 2;",
+          "bin": "unsafe"
+        }
+      ]
+    },
+    "explanation": "A local variable must receive a value before it is read.",
+    "concept_slug": "variable_initialization",
+    "concept_name": "Initialization"
+  }
+]

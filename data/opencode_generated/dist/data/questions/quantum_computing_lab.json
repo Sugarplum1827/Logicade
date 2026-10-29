@@ -1,0 +1,79 @@
+{
+  "concept_id": "50_quantum_computing_lab",
+  "slug": "quantum_computing_lab",
+  "learning_target": "quantum-gate sequencing and computational puzzles",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a quantum gate?",
+      "options": [
+        "A physical door",
+        "A type of computer case",
+        "An operation on a qubit",
+        "A power switch"
+      ],
+      "answer_index": 2,
+      "explanation": "A quantum gate transforms the state of one or more qubits."
+    },
+    {
+      "id": "q2",
+      "question": "What is a qubit?",
+      "options": [
+        "A quantum bit",
+        "A gate",
+        "A classical byte",
+        "A circuit board"
+      ],
+      "answer_index": 0,
+      "explanation": "A qubit is the basic unit of quantum information."
+    },
+    {
+      "id": "q3",
+      "question": "Why does gate order matter?",
+      "options": [
+        "It changes the color",
+        "It avoids all math",
+        "It makes the lab larger",
+        "Different orders produce different results"
+      ],
+      "answer_index": 3,
+      "explanation": "Quantum gates do not always commute, so their order changes the final state."
+    },
+    {
+      "id": "q4",
+      "question": "What is superposition?",
+      "options": [
+        "A gate error",
+        "A qubit with no state",
+        "A classical bit",
+        "A qubit in a combination of states"
+      ],
+      "answer_index": 3,
+      "explanation": "Superposition allows a qubit to hold a combination of basis states."
+    },
+    {
+      "id": "q5",
+      "question": "What should you do before running a circuit?",
+      "options": [
+        "Delete all gates",
+        "Ignore the input",
+        "Check the gate sequence",
+        "Change the target"
+      ],
+      "answer_index": 2,
+      "explanation": "Reviewing the sequence catches ordering mistakes before execution."
+    },
+    {
+      "id": "q6",
+      "question": "What is a target output?",
+      "options": [
+        "A random result",
+        "The state the circuit should produce",
+        "The lab address",
+        "A type of gate"
+      ],
+      "answer_index": 1,
+      "explanation": "The target output is the desired final state used to judge the circuit."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2434",
+  "variation_id": "canvas_game_2434",
+  "week": 9,
+  "level": 2,
+  "trial": 4,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Examination practice · Algorithm synthesis · variation 4",
+  "display_name": "Register Operations Console",
+  "theme": "Sand Dunes – Cactus Flats: flats of tall cacti",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "Algorithm synthesis"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Algorithm synthesis",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 9,
+    "source_week": 3,
+    "source_level": 10,
+    "objective_id": "cp1_w3_l10",
+    "title": "Algorithms",
+    "stage_title": "Algorithm synthesis",
+    "objectives": [
+      "Algorithm synthesis"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l10",
+  "source_level": 10,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Week 3 examination practice: Algorithm synthesis: double every value. Match all 3 streams; preserve their order. Dataset 4, operand 15.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 923549968,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      5,
+      2,
+      17,
+      27
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 0
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w9_l2_v4_0",
+    "rules": {
+      "max_steps": 800,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l10",
+    "source_level": 10,
+    "focus": "Algorithm synthesis",
+    "family": "terminal",
+    "title": "Examination practice · Algorithm synthesis · variation 4",
+    "objective": "Week 3 examination practice: Algorithm synthesis: double every value. Match all 3 streams; preserve their order. Dataset 4, operand 15.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          15,
+          2,
+          -11,
+          13
+        ],
+        "expected": [
+          30,
+          4,
+          -22,
+          26
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -2,
+          15,
+          -3,
+          -13
+        ],
+        "expected": [
+          -4,
+          30,
+          -6,
+          -26
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          3,
+          -4,
+          -14,
+          -1
+        ],
+        "expected": [
+          6,
+          -8,
+          -28,
+          -2
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nMUL 2\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+    "source_week": 3
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w9_l2_v4_0",
+      "kind": "program_execution",
+      "prompt": "Week 3 examination practice: Algorithm synthesis: double every value. Match all 3 streams; preserve their order. Dataset 4, operand 15."
+    }
+  ],
+  "source_path": "week_9/level2/needs_support/game_week9_level2_difficulty(NeedAssistance)_4.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "source_primary_mechanic": "Print Tracer",
+  "source_code_snippet": "print('x =', x)"
+}

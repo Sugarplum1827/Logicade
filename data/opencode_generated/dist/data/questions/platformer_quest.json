@@ -1,0 +1,79 @@
+{
+  "concept_id": "01_platformer_quest",
+  "slug": "platformer_quest",
+  "learning_target": "valid variable names",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which is a valid Python variable name?",
+      "options": [
+        "fast_car",
+        "2fast",
+        "class",
+        "fast-car"
+      ],
+      "answer_index": 0,
+      "explanation": "Names can use letters, digits and underscores, but cannot start with a digit or contain a hyphen."
+    },
+    {
+      "id": "q2",
+      "question": "Why is 'my score' invalid as a variable name?",
+      "options": [
+        "It contains a space",
+        "It uses lowercase letters",
+        "It is too long",
+        "It contains a vowel"
+      ],
+      "answer_index": 0,
+      "explanation": "Spaces are not allowed in variable names. Use an underscore instead, such as my_score."
+    },
+    {
+      "id": "q3",
+      "question": "Which name is invalid?",
+      "options": [
+        "player2",
+        "1st_place",
+        "total",
+        "_count"
+      ],
+      "answer_index": 1,
+      "explanation": "A variable name cannot begin with a digit, so 1st_place is invalid."
+    },
+    {
+      "id": "q4",
+      "question": "Are 'Score' and 'score' the same variable in Python?",
+      "options": [
+        "Only inside functions",
+        "No, Python is case-sensitive",
+        "Only inside loops",
+        "Yes, case is ignored"
+      ],
+      "answer_index": 1,
+      "explanation": "Python treats uppercase and lowercase letters as different, so Score and score are separate names."
+    },
+    {
+      "id": "q5",
+      "question": "Which is a reserved keyword you cannot use as a variable name?",
+      "options": [
+        "name",
+        "value",
+        "for",
+        "data"
+      ],
+      "answer_index": 2,
+      "explanation": "Keywords such as for, if and while are reserved by the language and cannot be used as names."
+    },
+    {
+      "id": "q6",
+      "question": "Which name is valid?",
+      "options": [
+        "my var",
+        "my-var",
+        "my.var",
+        "my_var"
+      ],
+      "answer_index": 3,
+      "explanation": "Underscores are allowed in names; hyphens, dots and spaces are not."
+    }
+  ]
+}

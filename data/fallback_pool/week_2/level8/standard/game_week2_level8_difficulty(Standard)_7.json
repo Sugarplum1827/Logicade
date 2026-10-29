@@ -1,30 +1,30 @@
 {
   "file_id": "game_0527",
-  "game_title": "Arithmetic Cannon – Obsidian Quarry Streak",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A rhythm puzzle set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on smoke serpents.",
-  "genre": "rhythm puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
-  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on smoke serpents. Each round poses one decision; a wrong answer breaks the streak. Then check the damage value and advance.",
-  "primary_mechanic": "Arithmetic Cannon",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Limited undo button",
     "Combo multiplier"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about damage to power up the forge smith and open the ember furnace.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Print every even number from 24 through 46. Trace the update by 2 and the final failed condition. Test dataset 7: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Arithmetic Cannon",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Trace a loop",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M02-X4-T03-5bd18af7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Streak Challenge', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 8,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how damage changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level8/standard/game_week2_level8_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_0527",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about damage to power up the forge smith and open the ember furnace.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Arithmetic Cannon – Obsidian Quarry Streak",
+  "source_primary_mechanic": "Arithmetic Cannon",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w2_l8",
+  "source_week": 2,
+  "source_level": 8
 }

@@ -59,7 +59,10 @@ export class MissionScene extends Phaser.Scene {
       hintCount: 0,
       errorCount: 0,
     };
-    if (window.Telemetry) window.Telemetry.reset();
+    this.attemptId = crypto.randomUUID();
+    if (window.Telemetry) window.Telemetry.reset({
+      attemptId: this.attemptId, studentId: this.registry.get('student_id'), levelId: this.registry.get('level_id'),
+    });
   }
 
   create() {
@@ -521,6 +524,8 @@ export class MissionScene extends Phaser.Scene {
     const normalized = Math.max(0, Math.min(1, this.missionModule.score(this)));
 
     const payload = {
+      student_id: this.registry.get('student_id'),
+      level_id: this.registry.get('level_id'),
       won,
       time: this.state.timer,
       score: normalized,
@@ -530,8 +535,6 @@ export class MissionScene extends Phaser.Scene {
       reason,
       spec: this.spec,
     };
-    window.dispatchEvent(new CustomEvent('logicade:game_over', { detail: payload }));
-
     this.add
       .text(
         this.scale.width / 2,
@@ -553,9 +556,11 @@ export class MissionScene extends Phaser.Scene {
     (async () => {
       try {
         await window.LogiCadeWrite.persistAttempt({
+          attemptId: this.attemptId,
           studentId: this.registry.get('student_id'),
           levelId: this.registry.get('level_id'),
           week: this.registry.get('week'),
+          stageNumber: this.registry.get('level_num'),
           difficulty: this.registry.get('difficulty'),
           spec: this.spec,
           meta: this.registry.get('meta'),
@@ -568,6 +573,8 @@ export class MissionScene extends Phaser.Scene {
         });
       } catch (err) {
         console.error('[MissionScene._finish] persistence failed:', err);
+      } finally {
+        window.dispatchEvent(new CustomEvent('logicade:game_over', { detail: payload }));
       }
     })();
   }

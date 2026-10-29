@@ -11,11 +11,17 @@ export default defineConfig(({ command }) => ({
     emptyOutDir: true,
   },
   server: {
+    fs: {
+      deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/.[sS][tT][aA][tT][eE]/**'],
+    },
     proxy: {
       // Data + assets served by FastAPI
       '/data':        BACKEND,
       '/client':      BACKEND,
       '/vendor':      BACKEND,
+      '/game-builds': BACKEND,
+      '/game-runtime': BACKEND,
+      '/canvas-runtime': BACKEND,
       '/static':      BACKEND,
       '/admin':       BACKEND,
       // API endpoints

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_37_if_else_chains",
+  "slug": "if_else_chains",
+  "display_name": "If/Else Chains",
+  "learning_target": "order ranges in an else-if chain",
+  "core_brief": "An else-if chain tests conditions in order and runs only the first match.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 10,
+  "unit": "Conditionals",
+  "group": "code",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_2",
+    "zones": [
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3",
+      "themes.pirate.bg_sea_1"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_red",
+    "enemy": "themes.pirate.enemy_x",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_flag",
+    "obstacles": {
+      "spike": "themes.pirate.cannonball",
+      "bush": "themes.pirate.fire",
+      "slime": "themes.pirate.fire",
+      "bee": "themes.pirate.cannonball"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "mechanic": "order",
+  "mechanic_label": "Order",
+  "accent": "#ffcf5c",
+  "variation_id": "cp1_37_if_else_chains_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "if_else_chains_v05",
+  "title": "Order the procedure",
+  "label": "Lab 05: Order the procedure",
+  "seed": 1076951095,
+  "challenge_bank": "../../../data/cp1/challenges/if_else_chains.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

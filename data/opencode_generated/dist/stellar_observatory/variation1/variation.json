@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "45_stellar_observatory",
+  "slug": "stellar_observatory",
+  "display_name": "Stellar Observatory",
+  "module_family": "coordinate_observation",
+  "learning_target": "coordinates and pattern matching",
+  "core_brief": "Use telescope coordinates to locate stars and identify a target exoplanet pattern.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "observatory",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Grid route",
+  "accent": "#b8e986",
+  "tint": 13613034,
+  "variation_id": "45_stellar_observatory_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 642899381,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_black",
+    "zones": [
+      "themes.space.bg_black",
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_blue",
+    "coin": "themes.space.coin_blue",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_big",
+      "bush": "themes.space.meteor_brown_small",
+      "slime": "themes.space.meteor_grey_big",
+      "bee": "themes.space.meteor_brown_small"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/stellar_observatory.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

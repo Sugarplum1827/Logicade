@@ -1,30 +1,30 @@
 {
   "file_id": "game_1329",
-  "game_title": "Roll Call Enumerate – Hollow Log Trail Trial",
+  "game_title": "Branch Assembly 9 · Merge Endpoint",
   "game_concept": "A programming puzzle set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
-  "genre": "programming puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
-  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Use enumerate to call out each position and name in a roll call. Each round costs one action, so plan the step so none are wasted. Then check the roll_call value and advance.",
-  "primary_mechanic": "Roll Call Enumerate",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Reach the mushroom ring using at most 20 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The mushroom ring reached with actions_used <= 20.",
-  "lose_condition": "actions_used exceeds 20 before the mushroom ring is reached, or lives reach 0.",
+  "player_objective": "Object-like macros: build a valid C source file that prints 14. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 7 components (4 upper, 3 lower). Set the gold-socket controller batch to 7.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Roll Call Enumerate",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Object-like macros",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M09-X3-T05-978aa513",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Efficiency Trial', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 5,
   "trial": 9,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how roll_call changes.",
-    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
-    "Step 3: Win by meeting the goal: The mushroom ring reached with actions_used <= 20."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level5/needs_support/game_week5_level5_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_1329",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the mushroom ring using at most 20 actions, so every code step counts.",
+  "source_win_condition": "The mushroom ring reached with actions_used <= 20.",
+  "source_lose_condition": "actions_used exceeds 20 before the mushroom ring is reached, or lives reach 0.",
+  "source_game_title": "Roll Call Enumerate – Hollow Log Trail Trial",
+  "source_primary_mechanic": "Roll Call Enumerate",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 4 components via upper_4, upper_6 to output_shared; B: 3 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w5_l5",
+  "source_week": 5,
+  "source_level": 5
 }

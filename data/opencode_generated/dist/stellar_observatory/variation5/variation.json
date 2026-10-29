@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "45_stellar_observatory",
+  "slug": "stellar_observatory",
+  "display_name": "Stellar Observatory",
+  "module_family": "coordinate_observation",
+  "learning_target": "coordinates and pattern matching",
+  "core_brief": "Use telescope coordinates to locate stars and identify a target exoplanet pattern.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "observatory",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Grid route",
+  "accent": "#b8e986",
+  "tint": 13613034,
+  "variation_id": "45_stellar_observatory_v05",
+  "index": 5,
+  "title": "Central Arena",
+  "label": "Variation 05: Central Arena",
+  "seed": 575788905,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "star"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 4
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_black",
+    "zones": [
+      "themes.space.bg_black",
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_blue",
+    "coin": "themes.space.coin_blue",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_big",
+      "bush": "themes.space.meteor_brown_small",
+      "slime": "themes.space.meteor_grey_big",
+      "bee": "themes.space.meteor_brown_small"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a compact arena with a central objective and three distinct approach lanes. The player must respond to a readable sequence of short waves.",
+    "obstacles": "lane-specific hazards and a central objective meter; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "three escalating waves with a short breath between waves."
+  },
+  "question_bank": "../../data/questions/stellar_observatory.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

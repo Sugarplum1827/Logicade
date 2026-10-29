@@ -2,9 +2,9 @@
   "file_id": "game_0204",
   "game_title": "Memory Map – Tavern Quarter Trial",
   "game_concept": "A programming puzzle set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Memory Map: Place variable cards on a memory board so the market bell reads the right value at run time.",
-  "genre": "programming puzzle",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
-  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Place variable cards on a memory board so the market bell reads the right value at run time. Each round costs one action, so plan the step so none are wasted. Then check the y value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Memory Map",
   "secondary_mechanics": [
     "Limited action budget",
@@ -12,19 +12,19 @@
     "Combo multiplier"
   ],
   "player_objective": "Reach the market bell using at most 13 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "The market bell reached with actions_used <= 13.",
   "lose_condition": "actions_used exceeds 13 before the market bell is reached, or lives reach 0.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Memory Map",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M09-X3-T10-2440468e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Memory Map' (Week 1 slot 9), mission type 'Efficiency Trial', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 7,
   "trial": 4,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how y changes.",
     "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
     "Step 3: Win by meeting the goal: The market bell reached with actions_used <= 13."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level7/advanced/game_week1_level7_difficulty(Advance)_4.json",
+    "variation_id": "canvas_game_0204",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

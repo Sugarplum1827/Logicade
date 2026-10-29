@@ -1,30 +1,30 @@
 {
   "file_id": "game_2464",
-  "game_title": "Print Tracer – Buried Temple Steps Streak",
+  "game_title": "C Archive · History/classification review",
   "game_concept": "A quiz RPG set in Sand Dunes – Buried Temple Steps, steps of a half-buried temple: the camel trader must handle sandstorms while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what sandstorms changed.",
-  "genre": "quiz RPG",
+  "genre": "CP1 challenge; Week 4 theme pending",
   "theme": "Sand Dunes – Buried Temple Steps: steps of a half-buried temple",
-  "core_gameplay_loop": "In Buried Temple Steps, repeat each round: Insert print statements at the right lines to reveal what sandstorms changed. Each round poses one decision; a wrong answer breaks the streak. Then check the trace_clarity value and advance.",
-  "primary_mechanic": "Print Tracer",
+  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Chain 6 consecutive correct decisions about trace_clarity to power up the camel trader and open the camel pen.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 6.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Archive variation 4: classify and verify C history, characteristics and language categories for History/classification review.",
+  "controls": "Read each archive record and choose the supported C fact.",
+  "win_condition": "All researched archive facts are correctly identified.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Print Tracer",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 4: History/classification review",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M04-X4-T06-5c77c4c3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Streak Challenge', and setting 'Buried Temple Steps'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 3,
   "trial": 4,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Introduction to C: History, Characteristics and Classification",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
-    "Step 2: Use the controls to apply the code idea against sandstorms in Buried Temple Steps.",
-    "Step 3: Win by meeting the goal: streak counter reaches 6."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level3/needs_support/game_week9_level3_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_2464",
+    "mode": "pending",
+    "asset_set": "pending",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 6 consecutive correct decisions about trace_clarity to power up the camel trader and open the camel pen.",
+  "source_win_condition": "streak counter reaches 6.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Print Tracer – Buried Temple Steps Streak",
+  "source_primary_mechanic": "Print Tracer",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w4_l10",
+  "source_week": 4,
+  "source_level": 10
 }

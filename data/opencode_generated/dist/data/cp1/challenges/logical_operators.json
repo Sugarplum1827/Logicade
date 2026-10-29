@@ -1,0 +1,557 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v01",
+    "index": 1,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int age = 20;",
+        "int member = 1;",
+        "if (age >= 18 && age <= 10) {",
+        "    printf(\"Welcome\\n\");",
+        "}",
+        "return 0;"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "An age cannot be at least 18 and at most 10; the second test should use member or ||.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v02",
+    "index": 2,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the condition.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int age = 20;",
+        "    int member = 1;",
+        "    if (age >= 18 && member) {",
+        "        printf(\"Welcome\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Input variables"
+        },
+        {
+          "id": "condition",
+          "label": "Condition",
+          "desc": "Combined temporary result"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int age = 20;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int member = 1;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "age >= 18",
+          "scope": "condition"
+        },
+        {
+          "id": "d4",
+          "text": "age >= 18 && member",
+          "scope": "condition"
+        }
+      ]
+    },
+    "explanation": "age and member persist in main; each comparison is a temporary condition.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v03",
+    "index": 3,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each logical operators term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "&&"
+        },
+        {
+          "id": "l2",
+          "text": "||"
+        },
+        {
+          "id": "l3",
+          "text": "!"
+        },
+        {
+          "id": "l4",
+          "text": "Short-circuit"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Both conditions must be true"
+        },
+        {
+          "id": "r2",
+          "text": "At least one condition must be true"
+        },
+        {
+          "id": "r3",
+          "text": "Reverses true and false"
+        },
+        {
+          "id": "r4",
+          "text": "Skip the right side when the result is already known"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v04",
+    "index": 4,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the membership test.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int age = 20;",
+        "int member = 1;",
+        "int adult = age {{b0}} 18;",
+        "if (adult {{b1}} member) {",
+        "    printf(\"Welcome\\n\");",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "operator for at least 18",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "operator requiring both conditions",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": ">="
+        },
+        {
+          "id": "b2",
+          "text": "&&"
+        },
+        {
+          "id": "b3",
+          "text": "<="
+        },
+        {
+          "id": "b4",
+          "text": "||"
+        },
+        {
+          "id": "b5",
+          "text": "!"
+        }
+      ]
+    },
+    "explanation": "The visitor must be an adult and a member, so both conditions are required.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v05",
+    "index": 5,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age = 20;",
+        "    int member = 1;",
+        "    if (age >= 18 && member) {",
+        "        printf(\"Welcome\\n\");",
+        "    } else {",
+        "        printf(\"Not allowed\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Welcome",
+      "accept": [
+        "Welcome"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "Both age >= 18 and member are true, so the && condition passes."
+    },
+    "explanation": "The program produces Welcome.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v06",
+    "index": 6,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age = 20;",
+        "    int member = 1;",
+        "    if (age >= 18 && member) {",
+        "        printf(\"Welcome\\n\");",
+        "    } else {",
+        "        printf(\"Not allowed\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "age",
+        "member",
+        "allowed"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "age": "20",
+            "member": "",
+            "allowed": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "age": "20",
+            "member": "1",
+            "allowed": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "age": "20",
+            "member": "1",
+            "allowed": "1"
+          }
+        }
+      ],
+      "ask": [
+        "age",
+        "member",
+        "allowed"
+      ],
+      "answer": {
+        "age": "20",
+        "member": "1",
+        "allowed": "1"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is age = 20, member = 1, allowed = 1.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v07",
+    "index": 7,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of logical operators in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Evaluate the left condition"
+        },
+        {
+          "id": "s2",
+          "text": "Apply short-circuit rules for && or ||"
+        },
+        {
+          "id": "s3",
+          "text": "Evaluate the right condition only when needed"
+        },
+        {
+          "id": "s4",
+          "text": "Produce the combined truth value"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Evaluate the left condition → Apply short-circuit rules for && or || → Evaluate the right condition only when needed → Produce the combined truth value",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v08",
+    "index": 8,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a test for an adult member: age at least 18 and member true.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "age"
+        },
+        {
+          "id": "t2",
+          "text": ">="
+        },
+        {
+          "id": "t3",
+          "text": "18"
+        },
+        {
+          "id": "t4",
+          "text": "&&"
+        },
+        {
+          "id": "t5",
+          "text": "member"
+        },
+        {
+          "id": "t6",
+          "text": "||"
+        },
+        {
+          "id": "t7",
+          "text": "!"
+        },
+        {
+          "id": "t8",
+          "text": "=="
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Both requirements must hold, so the conditions are joined with &&.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v09",
+    "index": 9,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign both inputs and the combined condition result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age = 20;",
+        "    int member = 1;",
+        "    if (age >= 18 && member) {",
+        "        printf(\"Welcome\\n\");",
+        "    } else {",
+        "        printf(\"Not allowed\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "age",
+          "type": "final value"
+        },
+        {
+          "name": "member",
+          "type": "final value"
+        },
+        {
+          "name": "allowed",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "20"
+        },
+        {
+          "id": "v2",
+          "text": "1"
+        },
+        {
+          "id": "v3",
+          "text": "1"
+        },
+        {
+          "id": "v4",
+          "text": "21"
+        },
+        {
+          "id": "v5",
+          "text": "19"
+        },
+        {
+          "id": "v6",
+          "text": "2"
+        }
+      ],
+      "answer": {
+        "age": "v1",
+        "member": "v2",
+        "allowed": "v3"
+      }
+    },
+    "explanation": "20 is an adult and member is true, so allowed is 1.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "logical_operators_v10",
+    "index": 10,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each combined condition as true or false for age = 20 and member = 1.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "true",
+          "label": "True",
+          "desc": "The whole condition passes"
+        },
+        {
+          "id": "false",
+          "label": "False",
+          "desc": "The whole condition fails"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "age >= 18 && member",
+          "bin": "true"
+        },
+        {
+          "id": "i2",
+          "text": "age < 18 || member",
+          "bin": "true"
+        },
+        {
+          "id": "i3",
+          "text": "!member",
+          "bin": "false"
+        },
+        {
+          "id": "i4",
+          "text": "age >= 18 && age <= 10",
+          "bin": "false"
+        },
+        {
+          "id": "i5",
+          "text": "age == 20 || age == 30",
+          "bin": "true"
+        },
+        {
+          "id": "i6",
+          "text": "age < 18 && member",
+          "bin": "false"
+        }
+      ]
+    },
+    "explanation": "&& needs both sides; || needs one; ! reverses the value.",
+    "concept_slug": "logical_operators",
+    "concept_name": "Logical Operators"
+  }
+]

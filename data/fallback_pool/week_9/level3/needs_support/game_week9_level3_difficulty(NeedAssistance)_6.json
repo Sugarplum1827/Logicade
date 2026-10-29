@@ -1,30 +1,30 @@
 {
   "file_id": "game_2466",
-  "game_title": "Off By One Autopsy – Sunset Dunes Race",
+  "game_title": "C Archive · History/classification review",
   "game_concept": "A strategy race set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
-  "genre": "strategy race",
+  "genre": "CP1 challenge; Week 4 theme pending",
   "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
-  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the autopsy value and advance.",
-  "primary_mechanic": "Off By One Autopsy",
+  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the supply tent by solving code steps involving autopsy that move the desert nomad forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.6).",
-  "lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "player_objective": "Archive variation 6: classify and verify C history, characteristics and language categories for History/classification review.",
+  "controls": "Read each archive record and choose the supported C fact.",
+  "win_condition": "All researched archive facts are correctly identified.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Off By One Autopsy",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 4: History/classification review",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M06-X5-T20-175a0b73",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Rival Race', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 3,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Introduction to C: History, Characteristics and Classification",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how autopsy changes.",
-    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.6)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level3/needs_support/game_week9_level3_difficulty(NeedAssistance)_6.json",
+    "variation_id": "canvas_game_2466",
+    "mode": "pending",
+    "asset_set": "pending",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the supply tent by solving code steps involving autopsy that move the desert nomad forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.6).",
+  "source_lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "source_game_title": "Off By One Autopsy – Sunset Dunes Race",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w4_l10",
+  "source_week": 4,
+  "source_level": 10
 }

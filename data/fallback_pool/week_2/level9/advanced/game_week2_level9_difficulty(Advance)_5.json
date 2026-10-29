@@ -1,30 +1,30 @@
 {
   "file_id": "game_0565",
-  "game_title": "Input Interpreter – Ash Rim Trail Race",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A racing platformer set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
-  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the trust value and advance.",
-  "primary_mechanic": "Input Interpreter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Beat a rival AI to the magma valve by solving code steps involving trust that move the fire warden forward.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.2).",
-  "lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 5: {'a': 10, 'b': 5}; {'a': -5, 'b': -7}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Input Interpreter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M10-X5-T01-199e716d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Rival Race', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 43,
+    "time_limit_seconds": 0,
     "target_score": 550,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trust changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.2)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/advanced/game_week2_level9_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_0565",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the magma valve by solving code steps involving trust that move the fire warden forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.2).",
+  "source_lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "source_game_title": "Input Interpreter – Ash Rim Trail Race",
+  "source_primary_mechanic": "Input Interpreter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 43,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

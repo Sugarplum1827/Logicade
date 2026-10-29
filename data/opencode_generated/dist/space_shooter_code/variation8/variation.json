@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "02_space_shooter_code",
+  "slug": "space_shooter_code",
+  "display_name": "Space Shooter Code",
+  "module_family": "top_down_shooter",
+  "learning_target": "syntax recognition",
+  "core_brief": "Choose valid syntax to charge a ship's blaster and clear asteroids before they hit the convoy.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "shooter",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Lane defense",
+  "accent": "#6ec6ff",
+  "tint": 15392695,
+  "variation_id": "02_space_shooter_code_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 1468171738,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_purple",
+    "zones": [
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_red",
+    "enemy": "themes.space.enemy_black",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_yellow",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_big",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_brown_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/space_shooter_code.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

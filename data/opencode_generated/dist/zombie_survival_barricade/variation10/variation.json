@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "12_zombie_survival_barricade",
+  "slug": "zombie_survival_barricade",
+  "display_name": "Zombie Survival Barricade",
+  "module_family": "survival_defense",
+  "learning_target": "Boolean logic and conditions",
+  "core_brief": "Use Boolean rules to choose which windows and doors to barricade as threats approach.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "zombie",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Lane defense",
+  "accent": "#6ec6ff",
+  "tint": 12053206,
+  "variation_id": "12_zombie_survival_barricade_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 4170402220,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.bush",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.bush"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/zombie_survival_barricade.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

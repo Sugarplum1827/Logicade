@@ -1,30 +1,30 @@
 {
   "file_id": "game_0420",
-  "game_title": "Mixed Type Oracle – Crater Lake Edge Race",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A strategy race set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before lava imps spring the trap.",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
-  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Predict the result or error of mixed-type expressions before lava imps spring the trap. Each round the rival advances, and solving the step moves the lava scout ahead. Then check the predictions value and advance.",
-  "primary_mechanic": "Mixed Type Oracle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Beat a rival AI to the smelter by solving code steps involving predictions that move the lava scout forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the smelter first, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > 5; otherwise display At or below. Test dataset 10: {'n': 3}; {'n': 8}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Mixed Type Oracle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M15-X5-T06-ee02f8e7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Rival Race', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 10,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predictions changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/advanced/game_week2_level4_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_0420",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the smelter by solving code steps involving predictions that move the lava scout forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the smelter first, or lives reach 0.",
+  "source_game_title": "Mixed Type Oracle – Crater Lake Edge Race",
+  "source_primary_mechanic": "Mixed Type Oracle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

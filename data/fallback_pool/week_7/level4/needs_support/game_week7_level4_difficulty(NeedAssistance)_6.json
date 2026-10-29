@@ -1,30 +1,30 @@
 {
   "file_id": "game_1896",
-  "game_title": "Shelf Sorter – Overgrown Archway Rush",
+  "game_title": "Multiply state · variation 6",
   "game_concept": "A speed quiz set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of carved tiles from smallest to largest.",
-  "genre": "speed quiz",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
-  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Use sort() to rearrange shelves of carved tiles from smallest to largest. Each round, a new carved tiles challenge appears; solve it to bank points before time drains. Then check the order_score value and advance.",
-  "primary_mechanic": "Shelf Sorter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Collect 150 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 150 within 55 seconds.",
-  "lose_condition": "Timer hits 0 with score < 150, or lives reach 0.",
+  "player_objective": "Multiply state: declare resource as int, apply resource * 2, and print each result with %d. Dataset 6 starts with [-3, 0, 10, 13]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Shelf Sorter",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Multiply state",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M06-X2-T02-61961ee4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Resource Rush', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 4,
   "trial": 6,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how order_score changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
-    "Step 3: Win by meeting the goal: score >= 150 within 55 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level4/needs_support/game_week7_level4_difficulty(NeedAssistance)_6.json",
+    "variation_id": "canvas_game_1896",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 150 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 150 within 55 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 150, or lives reach 0.",
+  "source_game_title": "Shelf Sorter – Overgrown Archway Rush",
+  "source_primary_mechanic": "Shelf Sorter",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w7_l4",
+  "source_week": 7,
+  "source_level": 4
 }

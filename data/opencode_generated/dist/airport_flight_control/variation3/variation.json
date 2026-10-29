@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "37_airport_flight_control",
+  "slug": "airport_flight_control",
+  "display_name": "Airport Flight Control",
+  "module_family": "queue_management",
+  "learning_target": "queues and sequencing",
+  "core_brief": "Use queues and sequencing to guide arrivals to safe runways in order.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "airport",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "System builder",
+  "accent": "#4fd1c5",
+  "tint": 12695530,
+  "variation_id": "37_airport_flight_control_v03",
+  "index": 3,
+  "title": "Vertical Ascent",
+  "label": "Variation 03: Vertical Ascent",
+  "seed": 3116822044,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "vertical"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_c",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a vertically layered level with at least three distinct heights or floors. A correct response opens the next climb segment; provide safe recovery platforms.",
+    "obstacles": "gaps, lifts or ladders, and one moving vertical hazard; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short climb bursts separated by brief planning pauses."
+  },
+  "question_bank": "../../data/questions/airport_flight_control.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

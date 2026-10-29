@@ -2,9 +2,9 @@
   "file_id": "game_0193",
   "game_title": "Print Probe – Dungeon Stairs Streak",
   "game_concept": "A quiz RPG set in The Kingdom – Dungeon Stairs, the castle dungeon stairwell: the baker's apprentice must handle goblin raiders while practicing variables & assignment. Core idea – Print Probe: Use print-style probes to reveal hidden variable values before goblin raiders act.",
-  "genre": "quiz RPG",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Dungeon Stairs: the castle dungeon stairwell",
-  "core_gameplay_loop": "In Dungeon Stairs, repeat each round: Use print-style probes to reveal hidden variable values before goblin raiders act. Each round poses one decision; a wrong answer breaks the streak. Then check the shield value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Print Probe",
   "secondary_mechanics": [
     "Streak combo meter",
@@ -12,19 +12,19 @@
     "Reduced-motion and color-blind-safe UI"
   ],
   "player_objective": "Chain 10 consecutive correct decisions about shield to power up the baker's apprentice and open the signal beacon.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "streak counter reaches 10.",
   "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Print Probe",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M13-X4-T17-87ef29f8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Streak Challenge', and setting 'Dungeon Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 7,
   "trial": 3,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how shield changes.",
     "Step 2: Use the controls to apply the code idea against goblin raiders in Dungeon Stairs.",
     "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level7/standard/game_week1_level7_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_0193",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

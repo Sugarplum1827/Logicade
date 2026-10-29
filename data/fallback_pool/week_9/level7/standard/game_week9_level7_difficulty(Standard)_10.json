@@ -1,41 +1,41 @@
 {
   "file_id": "game_2600",
-  "game_title": "Test Gauntlet – Dune Crest Defense",
+  "game_title": "Examination practice · C Scope Circuit · Compare local and global · variation 10",
   "game_concept": "A survival strategy set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Test Gauntlet: Run small test cases against a function and fix the failing ones.",
-  "genre": "survival strategy",
+  "genre": "circuit programming workbench",
   "theme": "Sand Dunes – Dune Crest: a high dune crest",
-  "core_gameplay_loop": "In Dune Crest, repeat each round: Run small test cases against a function and fix the failing ones. Each round, sand wyrms strike the oasis, so respond before the next strike lands. Then check the tests value and advance.",
-  "primary_mechanic": "Test Gauntlet",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Live variable watch panel",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Protect the oasis from sand wyrms in Dune Crest: keep the tests meter above zero by applying the concept correctly until the 48-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 48 seconds while tests > 0.",
-  "lose_condition": "tests drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "player_objective": "Week 8 examination practice: Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [13, 12], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 12}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Test Gauntlet",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 8: Compare local and global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M05-X1-T02-24d9d3d8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Test Gauntlet' (Week 9 slot 5), mission type 'Survival Siege', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 7,
   "trial": 10,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "assert f(2) == 4",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 12;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 1;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how tests changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
-    "Step 3: Win by meeting the goal: Timer reaches 48 seconds while tests > 0."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level7/standard/game_week9_level7_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_2600",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the oasis from sand wyrms in Dune Crest: keep the tests meter above zero by applying the concept correctly until the 48-second timer ends.",
+  "source_win_condition": "Timer reaches 48 seconds while tests > 0.",
+  "source_lose_condition": "tests drops to 0, or lives reach 0, before the 48-second timer ends.",
+  "source_game_title": "Test Gauntlet – Dune Crest Defense",
+  "source_primary_mechanic": "Test Gauntlet",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w8_l9",
+  "source_week": 8,
+  "source_level": 9,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "8078ad4afd45336245d090a3b55b9983ff6b401da91f14157de1afd52bbe9f32",
+    "lesson_unchanged": true
+  }
 }

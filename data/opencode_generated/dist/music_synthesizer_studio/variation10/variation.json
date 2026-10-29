@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "49_music_synthesizer_studio",
+  "slug": "music_synthesizer_studio",
+  "display_name": "Music Synthesizer Studio",
+  "module_family": "music_sequencer",
+  "learning_target": "frequency, wave forms, and pattern matching",
+  "core_brief": "Adjust frequency and wave settings to compose short patterns that match target sounds.",
+  "mode": "rhythm",
+  "mode_label": "Beat matcher",
+  "skin": "music",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Beat matcher",
+  "accent": "#ff8fd8",
+  "tint": 13429431,
+  "variation_id": "49_music_synthesizer_studio_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 3254265146,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_green",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_big",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_brown_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/music_synthesizer_studio.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

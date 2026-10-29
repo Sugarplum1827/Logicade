@@ -1,30 +1,30 @@
 {
   "file_id": "game_0682",
-  "game_title": "Weather Switch – Coral Reef Shallows Streak",
+  "game_title": "State tracing · variation 2",
   "game_concept": "A quiz RPG set in Coastal Port – Coral Reef Shallows, reef shallows: the harbor master must handle smugglers while practicing conditionals (if / elif / else). Core idea – Weather Switch: Choose tools by checking weather and terrain conditions each turn.",
-  "genre": "quiz RPG",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Coral Reef Shallows: reef shallows",
-  "core_gameplay_loop": "In Coral Reef Shallows, repeat each round: Choose tools by checking weather and terrain conditions each turn. Each round poses one decision; a wrong answer breaks the streak. Then check the gear_ok value and advance.",
-  "primary_mechanic": "Weather Switch",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Live variable watch panel",
     "Combo multiplier"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about gear_ok to power up the harbor master and open the ship's hull.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "State tracing: Trace ACC after every instruction. subtract 8 from each value. Match all 3 streams; preserve their order. Dataset 2, operand 8.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Weather Switch",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: State tracing",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M07-X4-T08-fbbb6a65",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Weather Switch' (Week 3 slot 7), mission type 'Streak Challenge', and setting 'Coral Reef Shallows'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 3,
   "trial": 2,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gear_ok changes.",
-    "Step 2: Use the controls to apply the code idea against smugglers in Coral Reef Shallows.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level3/advanced/game_week3_level3_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_0682",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about gear_ok to power up the harbor master and open the ship's hull.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Weather Switch – Coral Reef Shallows Streak",
+  "source_primary_mechanic": "Weather Switch",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w3_l3",
+  "source_week": 3,
+  "source_level": 3
 }

@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2011",
+  "variation_id": "canvas_game_2011",
+  "week": 7,
+  "level": 8,
+  "trial": 1,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Declare double · variation 1",
+  "display_name": "Register Operations Console",
+  "theme": "Eldritch Ruins – Weathered Gate: a weathered stone gate",
+  "topic": "Basic Parts of C and Variable Declarations",
+  "learning_objectives": [
+    "Declare double"
+  ],
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Declare double",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 7,
+    "source_week": 7,
+    "source_level": 8,
+    "objective_id": "cp1_w7_l8",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Declare double",
+    "objectives": [
+      "Declare double"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w7_l8",
+  "source_level": 8,
+  "source_week": 7,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 1 starts with [-3, 0, 9, 12]. Match every stream. Use a full main function and a return statement.",
+  "hint": "Declare before use. double resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 1335997895,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      10,
+      31,
+      5,
+      18
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 3
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w7_l8_v1_0",
+    "rules": {
+      "max_steps": 740,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w7_l8",
+    "source_level": 8,
+    "focus": "Declare double",
+    "family": "terminal",
+    "language": "c_subset",
+    "title": "Declare double · variation 1",
+    "objective": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 1 starts with [-3, 0, 9, 12]. Match every stream. Use a full main function and a return statement.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -3,
+          0,
+          9,
+          12
+        ],
+        "expected": [
+          -10.5,
+          0.0,
+          31.5,
+          42.0
+        ],
+        "required_values": {
+          "resource": 42.0
+        }
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -2,
+          0,
+          10,
+          12
+        ],
+        "expected": [
+          -7.0,
+          0.0,
+          35.0,
+          42.0
+        ],
+        "required_values": {
+          "resource": 42.0
+        }
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -1,
+          0,
+          11,
+          12
+        ],
+        "expected": [
+          -3.5,
+          0.0,
+          38.5,
+          42.0
+        ],
+        "required_values": {
+          "resource": 42.0
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "C1",
+        "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+      }
+    ],
+    "required_declaration": {
+      "name": "resource",
+      "type": "double"
+    },
+    "reference": {
+      "programs": [
+        "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\ndouble resource = readInput();\nresource = resource * 3.5;\nprintf(\"%.1f\\n\", resource);\nreturn 0;\n}"
+      ]
+    },
+    "hint": "Declare before use. double resource = readInput(); creates the named game-port value; printf uses %.1f.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w7_l8_v1_0",
+      "kind": "program_execution",
+      "prompt": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 1 starts with [-3, 0, 9, 12]. Match every stream. Use a full main function and a return statement."
+    }
+  ],
+  "source_path": "week_7/level8/needs_support/game_week7_level8_difficulty(NeedAssistance)_1.json",
+  "source_topic": "Basic Parts of C and Variable Declarations",
+  "source_learning_alignment": "CP1 Week 7: Declare double",
+  "source_primary_mechanic": "Backpack Append",
+  "source_code_snippet": "bag.append('key')\nbag.remove('rock')"
+}

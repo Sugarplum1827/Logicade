@@ -1,30 +1,30 @@
 {
   "file_id": "game_0550",
-  "game_title": "Input Interpreter – Pyre Summit Streak",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A quiz RPG set in Mt. Pyre – Pyre Summit, the roaring summit: the volcanologist must handle fire sprites while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
-  "genre": "quiz RPG",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Pyre Summit: the roaring summit",
-  "core_gameplay_loop": "In Pyre Summit, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round poses one decision; a wrong answer breaks the streak. Then check the trust value and advance.",
-  "primary_mechanic": "Input Interpreter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Chain 9 consecutive correct decisions about trust to power up the volcanologist and open the obsidian gate.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 9.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 10: {'a': 15, 'b': 10}; {'a': -10, 'b': -12}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Input Interpreter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M10-X4-T20-fb648e94",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Streak Challenge', and setting 'Pyre Summit'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 10,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trust changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Pyre Summit.",
-    "Step 3: Win by meeting the goal: streak counter reaches 9."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/needs_support/game_week2_level9_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_0550",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 9 consecutive correct decisions about trust to power up the volcanologist and open the obsidian gate.",
+  "source_win_condition": "streak counter reaches 9.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Input Interpreter – Pyre Summit Streak",
+  "source_primary_mechanic": "Input Interpreter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

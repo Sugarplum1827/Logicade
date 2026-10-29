@@ -1,0 +1,694 @@
+{
+  "game": {
+    "schema_version": 2,
+    "engine": "logicade_canvas_v2",
+    "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+    "file_id": "game_0471",
+    "variation_id": "canvas_game_0471",
+    "week": 2,
+    "level": 6,
+    "trial": 1,
+    "difficulty": "Advance",
+    "mode": "circuit",
+    "title": "Flowchart Lab · Count up to n",
+    "display_name": "Logic Circuit Workshop",
+    "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+    "topic": "Flowcharting",
+    "learning_objectives": [
+      "Counting loops"
+    ],
+    "lesson": {
+      "summary": "Flowcharting",
+      "points": [
+        "Counting loops",
+        "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+        "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+        "Test both branches and boundary inputs before accepting a chart."
+      ],
+      "example": "Start → Read n → n > 0? → Yes/No output → End",
+      "practice": "Flowchart synthesis",
+      "week": 2,
+      "source_week": 2,
+      "source_level": 6,
+      "objective_id": "cp1_w2_l6",
+      "title": "Flowcharting",
+      "stage_title": "Counting loops",
+      "objectives": [
+        "Counting loops"
+      ],
+      "sources": [
+        {
+          "title": "Victoria Department of Education: flowcharts",
+          "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+        },
+        {
+          "title": "OpenStax: algorithms and programs",
+          "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+        }
+      ],
+      "assessment_kind": "lesson_practice",
+      "coverage": [
+        2
+      ],
+      "exam_coverage": [],
+      "formal_assessment": false
+    },
+    "learning_objective_id": "cp1_w2_l6",
+    "source_level": 6,
+    "source_week": 2,
+    "primary_mechanic": "circuit construction and execution",
+    "objective": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Problem values 10, 5; test inputs [{'n': 0}, {'n': 1}, {'n': 20}, {'n': 10}, {'n': 5}, {'n': 15}].",
+    "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+    "time_limit_seconds": 0,
+    "starting_lives": 2,
+    "seed": 12345,
+    "layout": {
+      "width": 14,
+      "height": 9,
+      "gate_order": [
+        "INPUT",
+        "OR",
+        "XOR",
+        "OUTPUT"
+      ],
+      "switches": [
+        true,
+        false
+      ],
+      "wire_variant": 0
+    },
+    "flowchart": {
+      "schema_version": 1,
+      "scenario_id": "flowchart_7",
+      "source_level": 6,
+      "title": "Count up to n",
+      "prompt": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Problem values 10, 5; test inputs [{'n': 0}, {'n': 1}, {'n': 20}, {'n': 10}, {'n': 5}, {'n': 15}].",
+      "entry": "start",
+      "slots": [
+        {
+          "id": "start",
+          "x": 0.5,
+          "y": 0.06,
+          "number": 1
+        },
+        {
+          "id": "read",
+          "x": 0.5,
+          "y": 0.23,
+          "number": 2
+        },
+        {
+          "id": "initial",
+          "x": 0.5,
+          "y": 0.4,
+          "number": 3
+        },
+        {
+          "id": "decide",
+          "x": 0.5,
+          "y": 0.57,
+          "number": 4
+        },
+        {
+          "id": "work",
+          "x": 0.76,
+          "y": 0.76,
+          "number": 5
+        },
+        {
+          "id": "increase",
+          "x": 0.76,
+          "y": 0.94,
+          "number": 6
+        },
+        {
+          "id": "end",
+          "x": 0.21999999999999997,
+          "y": 0.94,
+          "number": 7
+        }
+      ],
+      "edges": [
+        {
+          "from": "start",
+          "to": "read"
+        },
+        {
+          "from": "read",
+          "to": "initial"
+        },
+        {
+          "from": "initial",
+          "to": "decide"
+        },
+        {
+          "from": "work",
+          "to": "increase"
+        },
+        {
+          "from": "decide",
+          "to": "work",
+          "label": "Yes"
+        },
+        {
+          "from": "increase",
+          "to": "decide",
+          "label": "Loop",
+          "via": [
+            [
+              0.94,
+              0.94
+            ],
+            [
+              0.94,
+              0.57
+            ]
+          ]
+        },
+        {
+          "from": "decide",
+          "to": "end",
+          "label": "No"
+        }
+      ],
+      "pieces": [
+        {
+          "id": "decoy_reset",
+          "label": "Reset result to 0",
+          "kind": "process",
+          "action": {
+            "values": [
+              {
+                "name": "result",
+                "value": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "work",
+          "label": "Write i",
+          "kind": "output",
+          "action": {
+            "value": {
+              "var": "i"
+            }
+          }
+        },
+        {
+          "id": "decide",
+          "label": "i ≤ n?",
+          "kind": "decision",
+          "action": {
+            "test": {
+              "op": "<=",
+              "args": [
+                {
+                  "var": "i"
+                },
+                {
+                  "var": "n"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "read",
+          "label": "Read n",
+          "kind": "input",
+          "action": {
+            "names": [
+              "n"
+            ]
+          }
+        },
+        {
+          "id": "increase",
+          "label": "i = i + 1",
+          "kind": "process",
+          "action": {
+            "values": [
+              {
+                "name": "i",
+                "value": {
+                  "op": "+",
+                  "args": [
+                    {
+                      "var": "i"
+                    },
+                    1
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "initial",
+          "label": "i = 1",
+          "kind": "process",
+          "action": {
+            "values": [
+              {
+                "name": "i",
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "decoy_symbol",
+          "label": "Display i = 1",
+          "kind": "output",
+          "action": {
+            "value": "Not a calculation"
+          }
+        },
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "start",
+          "action": {}
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "end",
+          "action": {}
+        }
+      ],
+      "solution": {
+        "start": "start",
+        "read": "read",
+        "initial": "initial",
+        "decide": "decide",
+        "work": "work",
+        "increase": "increase",
+        "end": "end"
+      },
+      "cases": [
+        {
+          "id": "case_1",
+          "inputs": {
+            "n": 0
+          },
+          "expected": []
+        },
+        {
+          "id": "case_2",
+          "inputs": {
+            "n": 1
+          },
+          "expected": [
+            1
+          ]
+        },
+        {
+          "id": "case_3",
+          "inputs": {
+            "n": 20
+          },
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "id": "case_4",
+          "inputs": {
+            "n": 10
+          },
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "id": "case_5",
+          "inputs": {
+            "n": 5
+          },
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "case_6",
+          "inputs": {
+            "n": 15
+          },
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      ],
+      "max_steps": 1000,
+      "scaffold": false,
+      "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+      "source_file_id": "game_0471",
+      "objective_id": "cp1_w2_l6"
+    },
+    "assets": {
+      "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+      "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+      "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+    },
+    "tasks": [
+      {
+        "id": "start",
+        "kind": "flowchart_node",
+        "prompt": "Build position 1."
+      },
+      {
+        "id": "read",
+        "kind": "flowchart_node",
+        "prompt": "Build position 2."
+      },
+      {
+        "id": "initial",
+        "kind": "flowchart_node",
+        "prompt": "Build position 3."
+      },
+      {
+        "id": "decide",
+        "kind": "flowchart_node",
+        "prompt": "Build position 4."
+      },
+      {
+        "id": "work",
+        "kind": "flowchart_node",
+        "prompt": "Build position 5."
+      },
+      {
+        "id": "increase",
+        "kind": "flowchart_node",
+        "prompt": "Build position 6."
+      },
+      {
+        "id": "end",
+        "kind": "flowchart_node",
+        "prompt": "Build position 7."
+      }
+    ],
+    "source_path": "week_2/level6/advanced/game_week2_level6_difficulty(Advance)_1.json",
+    "source_topic": "Flowcharting",
+    "source_learning_alignment": "CP1 Week 2: Counting loops",
+    "source_primary_mechanic": "Boolean Circuit",
+    "source_code_snippet": "open = key and not alarm",
+    "generation": {
+      "schema_version": 1,
+      "proposal": {
+        "schema_version": 1,
+        "binding": {
+          "week": 2,
+          "level": 6,
+          "source_week": 2,
+          "source_level": 6,
+          "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+          "learning_objective_id": "cp1_w2_l6",
+          "difficulty": "advanced",
+          "mechanic_family": "flowchart",
+          "required_c_type": null
+        },
+        "parameters": {
+          "problem_variant": 4,
+          "primary_value": 10,
+          "secondary_value": 5,
+          "input_values": [
+            -15,
+            -5,
+            0,
+            5,
+            10,
+            15
+          ],
+          "layout_seed": 12345
+        }
+      },
+      "parameter_fingerprint": "fd228abafb47d5f4c18e598b83a5c64c768350bdf5af79a847fe327985c980c4",
+      "model_tag": "qwen2.5:3b",
+      "model_digest": "357c53fb659c",
+      "problem_fingerprint": "c7c62f0cf531c34a50679d7f909a77e1ed6af4d9ad4f44b1268a4406c6d8c284",
+      "runtime_verification": {
+        "passed": true,
+        "cases": 6,
+        "negative_control": true,
+        "verifier": "shipped_canvas_models_v1"
+      },
+      "generated_at": 1793296502.3429246,
+      "origin": "ollama",
+      "job_id": "6f37e693acf5ff02d117909d36e89f04d2ad1987e4ed516946fbf289cb0f25ff",
+      "replaces_revision": "0802c73dfbf258467e6eb38e35e3858399ad495e5581819c33c1cf6125ae52f2"
+    }
+  },
+  "description": {
+    "game_id": "canvas_circuit",
+    "slug": "circuit",
+    "display_name": "Logic Circuit Workshop",
+    "variation_id": "canvas_game_0471",
+    "content_revision": "2ad68f8a84ec00784d3c8dbfe63c42081928fa3a200c1016ae29d49b4d0bd9e6",
+    "content_origin": "llm_verified_pool",
+    "served_from_pool": true,
+    "variation_title": "Flowchart Lab · Count up to n",
+    "index": 1,
+    "seed": 12345,
+    "runtime": "native_canvas",
+    "template_version": "2.0.0",
+    "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+    "week": 2,
+    "level": 6,
+    "difficulty": "advanced",
+    "mode": "circuit",
+    "mechanic_family": "circuit",
+    "mission_schema_version": null,
+    "control_flow_type": null,
+    "map_features": null,
+    "routing_topology": null,
+    "branch_targets": null,
+    "source_week": 2,
+    "source_level": 6,
+    "learning_objective_id": "cp1_w2_l6",
+    "lesson": {
+      "summary": "Flowcharting",
+      "points": [
+        "Counting loops",
+        "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+        "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+        "Test both branches and boundary inputs before accepting a chart."
+      ],
+      "example": "Start → Read n → n > 0? → Yes/No output → End",
+      "practice": "Flowchart synthesis",
+      "week": 2,
+      "source_week": 2,
+      "source_level": 6,
+      "objective_id": "cp1_w2_l6",
+      "title": "Flowcharting",
+      "stage_title": "Counting loops",
+      "objectives": [
+        "Counting loops"
+      ],
+      "sources": [
+        {
+          "title": "Victoria Department of Education: flowcharts",
+          "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+        },
+        {
+          "title": "OpenStax: algorithms and programs",
+          "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+        }
+      ],
+      "assessment_kind": "lesson_practice",
+      "coverage": [
+        2
+      ],
+      "exam_coverage": [],
+      "formal_assessment": false
+    },
+    "playable": true,
+    "controls": {
+      "summary": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+      "pause": "Escape",
+      "answers": "1–4 or click"
+    },
+    "objective": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Problem values 10, 5; test inputs [{'n': 0}, {'n': 1}, {'n': 20}, {'n': 10}, {'n': 5}, {'n': 15}].",
+    "title": "Flowchart Lab · Count up to n",
+    "subtitle": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+    "topic": "Flowcharting",
+    "learning_objectives": [
+      "Counting loops"
+    ],
+    "win_condition": "Build and check a chart that produces the required outputs for every example input.",
+    "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
+    "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "time_limit_seconds": 0,
+    "formal_assessment": false,
+    "accuracy_basis": "flowchart_execution_cases",
+    "asset_source": "shared LogiCade media and Kenney CC0 assets",
+    "visual_mode": "circuit",
+    "file_id": "game_0471"
+  },
+  "source_spec": {
+    "file_id": "game_0471",
+    "game_title": "Flowchart Lab · Count up to n",
+    "game_concept": "A speed quiz set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the cooling vent.",
+    "genre": "Logic circuit and register puzzle",
+    "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
+    "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+    "primary_mechanic": "circuit construction and execution",
+    "secondary_mechanics": [
+      "Countdown timer with score multiplier",
+      "Ghost replay of best run",
+      "Combo multiplier"
+    ],
+    "player_objective": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Problem values 10, 5; test inputs [{'n': 0}, {'n': 1}, {'n': 20}, {'n': 10}, {'n': 5}, {'n': 15}].",
+    "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+    "win_condition": "Construct a complete chart that passes every executable input/output case.",
+    "lose_condition": "The available unsuccessful chart checks are exhausted.",
+    "difficulty": "Advance",
+    "estimated_play_time_minutes": 8,
+    "learning_alignment": "CP1 Week 2: Counting loops",
+    "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
+    "unique_identity_key": "W2-M06-X2-T07-bf19c802",
+    "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Resource Rush', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+    "week": 2,
+    "level": 6,
+    "trial": 1,
+    "topic": "Flowcharting",
+    "region": {
+      "id": "w2_volcano",
+      "name": "Mt. Pyre",
+      "banner": "data/fallback_pool/week_2/w2_volcano.png",
+      "mood": "low war drums, rumbling bass and crackling fire effects"
+    },
+    "code_snippet": "open = key and not alarm",
+    "game_settings": {
+      "lives": 2,
+      "hint_count": 0,
+      "time_limit_seconds": 0,
+      "target_score": 390,
+      "action_budget": 13,
+      "streak_target": 12,
+      "rival_speed": 1.05,
+      "enemy_wave_count": 5,
+      "enemy_attack_interval_seconds": 1.65,
+      "starting_score": 0
+    },
+    "tutorial": [
+      "Read the algorithm.",
+      "Use terminator, input/output, process and decision symbols.",
+      "Test the chart with every example input."
+    ],
+    "canvas_runtime": {
+      "engine": "logicade_canvas_v2",
+      "game_path": "week_2/level6/advanced/game_week2_level6_difficulty(Advance)_1.json",
+      "variation_id": "canvas_game_0471",
+      "mode": "circuit",
+      "asset_set": "circuit",
+      "playable": true,
+      "asset_manifest": "games/assets/manifest.json"
+    },
+    "source_player_objective": "Collect 390 points of ore chunks by answering each challenge with the right code concept before the clock runs out.",
+    "source_win_condition": "score >= 390 within 36 seconds.",
+    "source_lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+    "source_game_title": "Boolean Circuit – Cinder Cone Camp Rush",
+    "source_primary_mechanic": "Boolean Circuit",
+    "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_time_limit_seconds": 36,
+    "learning_objective_id": "cp1_w2_l6",
+    "source_week": 2,
+    "source_level": 6,
+    "canvas_generation": {
+      "schema_version": 1,
+      "proposal": {
+        "schema_version": 1,
+        "binding": {
+          "week": 2,
+          "level": 6,
+          "source_week": 2,
+          "source_level": 6,
+          "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+          "learning_objective_id": "cp1_w2_l6",
+          "difficulty": "advanced",
+          "mechanic_family": "flowchart",
+          "required_c_type": null
+        },
+        "parameters": {
+          "problem_variant": 4,
+          "primary_value": 10,
+          "secondary_value": 5,
+          "input_values": [
+            -15,
+            -5,
+            0,
+            5,
+            10,
+            15
+          ],
+          "layout_seed": 12345
+        }
+      },
+      "parameter_fingerprint": "fd228abafb47d5f4c18e598b83a5c64c768350bdf5af79a847fe327985c980c4",
+      "model_tag": "qwen2.5:3b",
+      "model_digest": "357c53fb659c",
+      "problem_fingerprint": "c7c62f0cf531c34a50679d7f909a77e1ed6af4d9ad4f44b1268a4406c6d8c284",
+      "runtime_verification": {
+        "passed": true,
+        "cases": 6,
+        "negative_control": true,
+        "verifier": "shipped_canvas_models_v1"
+      },
+      "generated_at": 1793296502.3429246,
+      "origin": "ollama",
+      "job_id": "6f37e693acf5ff02d117909d36e89f04d2ad1987e4ed516946fbf289cb0f25ff",
+      "replaces_revision": "0802c73dfbf258467e6eb38e35e3858399ad495e5581819c33c1cf6125ae52f2"
+    },
+    "is_fallback": false,
+    "generated_at": "2026-10-29T17:55:02.342924+00:00"
+  }
+}

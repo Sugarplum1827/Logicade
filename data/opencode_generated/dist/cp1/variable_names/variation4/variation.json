@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_22_variable_names",
+  "slug": "variable_names",
+  "display_name": "Variable Names",
+  "learning_target": "choose valid and meaningful variable names",
+  "core_brief": "C names start with a letter or underscore, use only letters, digits, and underscores, and cannot be keywords.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 7,
+  "unit": "Variables",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_1",
+    "zones": [
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef",
+    "enemy": "themes.food.enemy_fish",
+    "coin": "themes.food.coin_sprinkles",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.can",
+      "bush": "themes.food.fish",
+      "slime": "themes.food.fish",
+      "bee": "themes.food.can"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_22_variable_names_v04",
+  "index": 4,
+  "challenge_index": 4,
+  "challenge_id": "variable_names_v04",
+  "title": "Find the bug",
+  "label": "Lab 04: Find the bug",
+  "seed": 116487259,
+  "challenge_bank": "../../../data/cp1/challenges/variable_names.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

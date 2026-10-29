@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2043",
+  "variation_id": "canvas_game_2043",
+  "week": 7,
+  "level": 9,
+  "trial": 3,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Declare char · variation 3",
+  "display_name": "Register Operations Console",
+  "theme": "Eldritch Ruins – Ritual Pool: a still ritual pool",
+  "topic": "Basic Parts of C and Variable Declarations",
+  "learning_objectives": [
+    "Declare char"
+  ],
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Declare char",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 7,
+    "source_week": 7,
+    "source_level": 9,
+    "objective_id": "cp1_w7_l9",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Declare char",
+    "objectives": [
+      "Declare char"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w7_l9",
+  "source_level": 9,
+  "source_week": 7,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Declare char: declare resource as char, apply resource + 68, and print each result with %c. Dataset 3 starts with [0, 1, 2, 3]. Match every stream. Use a full main function and a return statement.",
+  "hint": "Declare before use. char resource = readInput(); creates the named game-port value; printf uses %c.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 1213853623,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      30,
+      30,
+      16,
+      9
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 3
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w7_l9_v3_0",
+    "rules": {
+      "max_steps": 770,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w7_l9",
+    "source_level": 9,
+    "focus": "Declare char",
+    "family": "terminal",
+    "language": "c_subset",
+    "title": "Declare char · variation 3",
+    "objective": "Declare char: declare resource as char, apply resource + 68, and print each result with %c. Dataset 3 starts with [0, 1, 2, 3]. Match every stream. Use a full main function and a return statement.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": [
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "required_values": {
+          "resource": 71
+        }
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "expected": [
+          "D",
+          "E",
+          "F",
+          "H"
+        ],
+        "required_values": {
+          "resource": 72
+        }
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "expected": [
+          "D",
+          "E",
+          "F",
+          "I"
+        ],
+        "required_values": {
+          "resource": 73
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "C1",
+        "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+      }
+    ],
+    "required_declaration": {
+      "name": "resource",
+      "type": "char"
+    },
+    "reference": {
+      "programs": [
+        "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nchar resource = readInput();\nresource = resource + 68;\nprintf(\"%c\\n\", resource);\nreturn 0;\n}"
+      ]
+    },
+    "hint": "Declare before use. char resource = readInput(); creates the named game-port value; printf uses %c.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w7_l9_v3_0",
+      "kind": "program_execution",
+      "prompt": "Declare char: declare resource as char, apply resource + 68, and print each result with %c. Dataset 3 starts with [0, 1, 2, 3]. Match every stream. Use a full main function and a return statement."
+    }
+  ],
+  "source_path": "week_7/level9/needs_support/game_week7_level9_difficulty(NeedAssistance)_3.json",
+  "source_topic": "Basic Parts of C and Variable Declarations",
+  "source_learning_alignment": "CP1 Week 7: Declare char",
+  "source_primary_mechanic": "Slice Slicer",
+  "source_code_snippet": "items[1:4]"
+}

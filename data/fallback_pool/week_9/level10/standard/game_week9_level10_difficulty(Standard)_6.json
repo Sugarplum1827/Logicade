@@ -1,41 +1,41 @@
 {
   "file_id": "game_2686",
-  "game_title": "Syntax Sweep – Sunset Dunes Race",
+  "game_title": "Examination practice · C Scope Circuit · Scope trace synthesis · variation 6",
   "game_concept": "A racing platformer set in Sand Dunes – Sunset Dunes, dunes at sunset: the desert nomad must handle dust devils while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
-  "genre": "racing platformer",
+  "genre": "circuit programming workbench",
   "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
-  "core_gameplay_loop": "In Sunset Dunes, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the syntax_errors value and advance.",
-  "primary_mechanic": "Syntax Sweep",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Beat a rival AI to the supply tent by solving code steps involving syntax_errors that move the desert nomad forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
-  "lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "player_objective": "Week 8 examination practice: Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [18, 9], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 9}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 10 (extended tier): Syntax Sweep",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 8: Scope trace synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M01-X5-T20-0271117f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Rival Race', and setting 'Sunset Dunes'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 10,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "if x > 3\n    print(x)",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 8;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 18; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 57,
+    "time_limit_seconds": 0,
     "target_score": 460,
     "action_budget": 19,
     "streak_target": 12,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
-    "Step 2: Use the controls to apply the code idea against dust devils in Sunset Dunes.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level10/standard/game_week9_level10_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_2686",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the supply tent by solving code steps involving syntax_errors that move the desert nomad forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "source_lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "source_game_title": "Syntax Sweep – Sunset Dunes Race",
+  "source_primary_mechanic": "Syntax Sweep",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 57,
+  "learning_objective_id": "cp1_w8_l10",
+  "source_week": 8,
+  "source_level": 10,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "8c5cbd6b2609e91fe9d636fd8003dc3723d99a7b0743cbf555de518f583feca5",
+    "lesson_unchanged": true
+  }
 }

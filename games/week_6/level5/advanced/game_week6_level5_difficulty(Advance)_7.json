@@ -1,0 +1,175 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1647",
+  "variation_id": "canvas_game_1647",
+  "week": 6,
+  "level": 5,
+  "trial": 7,
+  "difficulty": "Advance",
+  "mode": "dungeon",
+  "title": "Integer expressions · variation 7",
+  "display_name": "Programming Quest",
+  "theme": "Snowy Hold – Frozen Well: a frozen village well",
+  "topic": "Creating Simple C Programs and Program Structure",
+  "learning_objectives": [
+    "Integer expressions"
+  ],
+  "lesson": {
+    "summary": "Creating Simple C Programs and Program Structure",
+    "points": [
+      "Integer expressions",
+      "A hosted program begins at main. Braces form its body; statements execute in order.",
+      "Construct a short program using declarations, initialization, assignment and printf.",
+      "Adventure movement functions are LogiCade helpers declared in logicade.h, not standard C library functions."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int score = 2;\n score = score + 3;\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Program synthesis",
+    "week": 6,
+    "source_week": 6,
+    "source_level": 5,
+    "objective_id": "cp1_w6_l5",
+    "title": "Creating Simple C Programs and Program Structure",
+    "stage_title": "Integer expressions",
+    "objectives": [
+      "Integer expressions"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      6
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w6_l5",
+  "source_level": 5,
+  "source_week": 6,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Maze 7 (19×13, 36 junctions): collect 3 crystal(s) from the branches and reach beacon (17, 5). Use a C main program to Integer expressions. Print [48]; final file-scope values must be {}.",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 3091181610,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "grid": [
+      "##############",
+      "#.......#....#",
+      "#...#......#.#",
+      "#..#.......#.#",
+      "#S.....!....G#",
+      "#.#....##..#.#",
+      "#..#.........#",
+      "#..........#.#",
+      "##############"
+    ],
+    "seed": 3091181610
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w6_l5_v7_2",
+    "rules": {
+      "max_steps": 650,
+      "max_lines": 60,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 2,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w6_l5",
+    "source_level": 5,
+    "focus": "Integer expressions",
+    "family": "adventure",
+    "language": "c_subset",
+    "title": "Integer expressions · variation 7",
+    "objective": "Maze 7 (19×13, 36 junctions): collect 3 crystal(s) from the branches and reach beacon (17, 5). Use a C main program to Integer expressions. Print [48]; final file-scope values must be {}.",
+    "map": [
+      "###################",
+      "#.#.....#.........#",
+      "#.....#.#.###.###.#",
+      "#.....#...#...#...#",
+      "#.....#####.###.###",
+      "#...#.#.........#.#",
+      "#####.#.#####.###.#",
+      "#.#...#...#.#.#...#",
+      "#.#.#####.#.#.#...#",
+      "#.#.#.....#...#.#.#",
+      "#.#.#.#.###.##....#",
+      "#.....#...........#",
+      "###################"
+    ],
+    "map_features": {
+      "width": 19,
+      "height": 13,
+      "rooms": 3,
+      "junctions": 36,
+      "dead_ends": 4,
+      "cycles": 21
+    },
+    "start": [
+      1,
+      1
+    ],
+    "exit": [
+      17,
+      5
+    ],
+    "gems": [
+      [
+        11,
+        7
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "expected_watch": [
+      48
+    ],
+    "expected_globals": {},
+    "command_budget": 143,
+    "program": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
+    "reference": {
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\n#define LIMIT 14\nint main(void)\n{\nint total = (14 + 10) * 2;\nprintf(\"%d\\n\", total);\nmoveDown(1);\nmoveRight(4);\nmoveDown(5);\nmoveLeft(2);\nmoveDown(4);\nmoveLeft(2);\nmoveUp(4);\nmoveDown(4);\nmoveRight(4);\nmoveUp(2);\nmoveRight(2);\nmoveDown(2);\nmoveRight(4);\nmoveUp(4);\nmoveDown(4);\nmoveRight(6);\nmoveUp(6);\nreturn 0;\n}"
+    },
+    "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+    "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset."
+  },
+  "assets": {
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w6_l5_v7_2",
+      "kind": "program_execution",
+      "prompt": "Maze 7 (19×13, 36 junctions): collect 3 crystal(s) from the branches and reach beacon (17, 5). Use a C main program to Integer expressions. Print [48]; final file-scope values must be {}."
+    }
+  ],
+  "source_path": "week_6/level5/advanced/game_week6_level5_difficulty(Advance)_7.json",
+  "source_topic": "Creating Simple C Programs and Program Structure",
+  "source_learning_alignment": "CP1 Week 6: Integer expressions",
+  "source_primary_mechanic": "Keyword Switchboard",
+  "source_code_snippet": "move(speed=3, dir='left')"
+}

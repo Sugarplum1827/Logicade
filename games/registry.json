@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "folder_pattern": "week_{week}/level{level}/{difficulty}/{fallback_filename}",
+  "shared_runtime": "runtime/",
+  "shared_assets": "assets/manifest.json",
+  "canonical_fallback_records": 2700,
+  "playable_fallback_records": 2460,
+  "week_1_unavailable_records": 240,
+  "modes": {
+    "welcome_video": 30,
+    "tetris": 270,
+    "circuit": 720,
+    "terminal": 660,
+    "pending": 330,
+    "factory": 360,
+    "dungeon": 330
+  },
+  "week_modes": {
+    "1": "welcome_video (stage 1), tetris (stage 2)",
+    "2": "circuit",
+    "3": "terminal",
+    "4": "pending",
+    "5": "factory",
+    "6": "dungeon",
+    "7": "terminal",
+    "8": "circuit",
+    "9": "topic-based examination practice"
+  },
+  "week_9_source_weeks": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 8,
+    "8": 2,
+    "9": 5,
+    "10": 8
+  },
+  "week_4_status": "researched C history and classification archive",
+  "week_1_visible_stages": 2,
+  "asset_source": "vendor/kenney (shared; not copied into each game)"
+}

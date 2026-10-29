@@ -1,30 +1,30 @@
 {
   "file_id": "game_0522",
-  "game_title": "Compound Combo – Geyser Flats Trial",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A programming puzzle set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
-  "genre": "programming puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
-  "core_gameplay_loop": "In Geyser Flats, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round costs one action, so plan the step so none are wasted. Then check the energy value and advance.",
-  "primary_mechanic": "Compound Combo",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Mini-tutorial pop-ups",
     "Event log of every action"
   ],
-  "player_objective": "Reach the forge anvil using at most 18 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The forge anvil reached with actions_used <= 18.",
-  "lose_condition": "actions_used exceeds 18 before the forge anvil is reached, or lives reach 0.",
+  "player_objective": "Print every even number from 14 through 26. Trace the update by 2 and the final failed condition. Test dataset 2: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Compound Combo",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Trace a loop",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M12-X3-T12-0c54dbfd",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Efficiency Trial', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 8,
   "trial": 2,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how energy changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
-    "Step 3: Win by meeting the goal: The forge anvil reached with actions_used <= 18."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level8/standard/game_week2_level8_difficulty(Standard)_2.json",
+    "variation_id": "canvas_game_0522",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the forge anvil using at most 18 actions, so every code step counts.",
+  "source_win_condition": "The forge anvil reached with actions_used <= 18.",
+  "source_lose_condition": "actions_used exceeds 18 before the forge anvil is reached, or lives reach 0.",
+  "source_game_title": "Compound Combo – Geyser Flats Trial",
+  "source_primary_mechanic": "Compound Combo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w2_l8",
+  "source_week": 2,
+  "source_level": 8
 }

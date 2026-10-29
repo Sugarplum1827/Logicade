@@ -1,30 +1,30 @@
 {
   "file_id": "game_0594",
-  "game_title": "Parenthesis Puzzle – Charred Forest Streak",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A card battler set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the smelter.",
-  "genre": "card battler",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
-  "core_gameplay_loop": "In Charred Forest, repeat each round: Place parentheses to make an expression equal the number carved on the smelter. Each round poses one decision; a wrong answer breaks the streak. Then check the puzzle_gap value and advance.",
-  "primary_mechanic": "Parenthesis Puzzle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Chain 14 consecutive correct decisions about puzzle_gap to power up the ash ranger and open the smelter.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 14.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read score. Display Pass when score ≥ 48; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 4: {'score': 47}; {'score': 49}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Parenthesis Puzzle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M09-X4-T16-b27d7585",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Streak Challenge', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 10,
   "trial": 4,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 600,
     "action_budget": 15,
     "streak_target": 14,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
-    "Step 3: Win by meeting the goal: streak counter reaches 14."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level10/advanced/game_week2_level10_difficulty(Advance)_4.json",
+    "variation_id": "canvas_game_0594",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 14 consecutive correct decisions about puzzle_gap to power up the ash ranger and open the smelter.",
+  "source_win_condition": "streak counter reaches 14.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Parenthesis Puzzle – Charred Forest Streak",
+  "source_primary_mechanic": "Parenthesis Puzzle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

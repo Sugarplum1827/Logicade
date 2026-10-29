@@ -1,30 +1,30 @@
 {
   "file_id": "game_0712",
-  "game_title": "Weather Switch – Cliffside Fort Defense",
+  "game_title": "Arithmetic procedures · variation 2",
   "game_concept": "A tower defense set in Coastal Port – Cliffside Fort, a fort on the sea cliffs: the fisher must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Weather Switch: Choose tools by checking weather and terrain conditions each turn.",
-  "genre": "tower defense",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Cliffside Fort: a fort on the sea cliffs",
-  "core_gameplay_loop": "In Cliffside Fort, repeat each round: Choose tools by checking weather and terrain conditions each turn. Each round, rogue waves strike the sea wall, so respond before the next strike lands. Then check the gear_ok value and advance.",
-  "primary_mechanic": "Weather Switch",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Protect the sea wall from rogue waves in Cliffside Fort: keep the gear_ok meter above zero by applying the concept correctly until the 31-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 31 seconds while gear_ok > 0.",
-  "lose_condition": "gear_ok drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "player_objective": "Arithmetic procedures: double every value. Match all 3 streams; preserve their order. Dataset 2, operand 9.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 4 (applied tier): Weather Switch",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Arithmetic procedures",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M07-X1-T10-6de6ed09",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Weather Switch' (Week 3 slot 7), mission type 'Survival Siege', and setting 'Cliffside Fort'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 4,
   "trial": 2,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gear_ok changes.",
-    "Step 2: Use the controls to apply the code idea against rogue waves in Cliffside Fort.",
-    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while gear_ok > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level4/advanced/game_week3_level4_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_0712",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sea wall from rogue waves in Cliffside Fort: keep the gear_ok meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "source_win_condition": "Timer reaches 31 seconds while gear_ok > 0.",
+  "source_lose_condition": "gear_ok drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "source_game_title": "Weather Switch – Cliffside Fort Defense",
+  "source_primary_mechanic": "Weather Switch",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w3_l4",
+  "source_week": 3,
+  "source_level": 4
 }

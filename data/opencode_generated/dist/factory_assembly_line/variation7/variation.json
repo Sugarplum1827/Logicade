@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "17_factory_assembly_line",
+  "slug": "factory_assembly_line",
+  "display_name": "Factory Assembly Line",
+  "module_family": "factory_sorting",
+  "learning_target": "sorting rules and conditionals",
+  "core_brief": "Create sorting rules that send widgets to the correct assembly stations.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "factory",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "System builder",
+  "accent": "#4fd1c5",
+  "tint": 15389367,
+  "variation_id": "17_factory_assembly_line_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 1404670340,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 19,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_day",
+    "zones": [
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night"
+    ],
+    "tile": "themes.urban.tile_grass",
+    "player": "themes.urban.player_c",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/factory_assembly_line.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

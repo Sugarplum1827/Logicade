@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "26_haunted_mansion_explorer",
+  "slug": "haunted_mansion_explorer",
+  "display_name": "Haunted Mansion Explorer",
+  "module_family": "logic_adventure",
+  "learning_target": "flowcharts and branching logic",
+  "core_brief": "Use flowchart logic to complete a sequence of harmless exorcism tasks.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "mansion",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#b69cff",
+  "tint": 13429431,
+  "variation_id": "26_haunted_mansion_explorer_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 1514548011,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_a",
+    "enemy": "themes.urban.enemy_a",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree",
+      "bush": "themes.urban.tree",
+      "slime": "themes.urban.tree_b",
+      "bee": "themes.urban.tree"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/haunted_mansion_explorer.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

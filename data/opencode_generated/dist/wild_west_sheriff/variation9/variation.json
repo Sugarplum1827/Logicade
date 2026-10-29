@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "44_wild_west_sheriff",
+  "slug": "wild_west_sheriff",
+  "display_name": "Wild West Sheriff",
+  "module_family": "branching_decisions",
+  "learning_target": "decision blocks and conditions",
+  "core_brief": "Use decision blocks to select safe responses to outlaw distractions and protect townsfolk.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "sheriff",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Sequence solver",
+  "accent": "#ff6b81",
+  "tint": 12044266,
+  "variation_id": "44_wild_west_sheriff_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 2677203830,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_a",
+    "enemy": "themes.urban.enemy_a",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier",
+      "bush": "themes.urban.barrier_b",
+      "slime": "themes.urban.barrier_b",
+      "bee": "themes.urban.barrier"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/wild_west_sheriff.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

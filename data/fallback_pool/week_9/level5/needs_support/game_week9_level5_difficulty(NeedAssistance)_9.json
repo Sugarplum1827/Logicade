@@ -1,30 +1,30 @@
 {
   "file_id": "game_2529",
-  "game_title": "Edge Case Hunter – Mirage Road Trial",
+  "game_title": "Examination practice · Program synthesis · variation 9",
   "game_concept": "A programming puzzle set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
-  "genre": "programming puzzle",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
-  "core_gameplay_loop": "In Mirage Road, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round costs one action, so plan the step so none are wasted. Then check the edge_cases value and advance.",
-  "primary_mechanic": "Edge Case Hunter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Reach the caravan wagon using at most 20 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The caravan wagon reached with actions_used <= 20.",
-  "lose_condition": "actions_used exceeds 20 before the caravan wagon is reached, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 9 (17×11, 23 junctions): collect 2 crystal(s) from the branches and reach beacon (3, 9). Use a C main program to Program synthesis. Print [1]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Edge Case Hunter",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M09-X3-T05-375628fc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Efficiency Trial', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how edge_cases changes.",
-    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
-    "Step 3: Win by meeting the goal: The caravan wagon reached with actions_used <= 20."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/needs_support/game_week9_level5_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_2529",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the caravan wagon using at most 20 actions, so every code step counts.",
+  "source_win_condition": "The caravan wagon reached with actions_used <= 20.",
+  "source_lose_condition": "actions_used exceeds 20 before the caravan wagon is reached, or lives reach 0.",
+  "source_game_title": "Edge Case Hunter – Mirage Road Trial",
+  "source_primary_mechanic": "Edge Case Hunter",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0536",
-  "game_title": "Exponent Engine – Crater Lake Edge Defense",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A survival strategy set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
-  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round, lava imps strike the smelter, so respond before the next strike lands. Then check the engine_power value and advance.",
-  "primary_mechanic": "Exponent Engine",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Checkpoint flags",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the smelter from lava imps in Crater Lake Edge: keep the engine_power meter above zero by applying the concept correctly until the 41-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 41 seconds while engine_power > 0.",
-  "lose_condition": "engine_power drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "player_objective": "Print every even number from 22 through 42. Trace the update by 2 and the final failed condition. Test dataset 6: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Exponent Engine",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Trace a loop",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M11-X1-T06-53d694d9",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Survival Siege', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 8,
   "trial": 6,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how engine_power changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
-    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while engine_power > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level8/advanced/game_week2_level8_difficulty(Advance)_6.json",
+    "variation_id": "canvas_game_0536",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the smelter from lava imps in Crater Lake Edge: keep the engine_power meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "source_win_condition": "Timer reaches 41 seconds while engine_power > 0.",
+  "source_lose_condition": "engine_power drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "source_game_title": "Exponent Engine – Crater Lake Edge Defense",
+  "source_primary_mechanic": "Exponent Engine",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w2_l8",
+  "source_week": 2,
+  "source_level": 8
 }

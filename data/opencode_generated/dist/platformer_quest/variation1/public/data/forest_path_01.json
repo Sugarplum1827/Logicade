@@ -1,0 +1,95 @@
+{
+  "map_id": "forest_path_01",
+  "biome": "forest",
+  "tile_size": 64,
+  "width": 14,
+  "height": 9,
+  "background": "backgrounds/forest.png",
+  "bounds": {
+    "left": 0,
+    "top": 0,
+    "right": 14,
+    "bottom": 9
+  },
+  "spawn": {
+    "x": 1,
+    "y": 6
+  },
+  "goal": {
+    "x": 12,
+    "y": 6,
+    "sprite": "tiles/flag.png"
+  },
+  "floor": {
+    "y": 7,
+    "sprite": "tiles/grass.png",
+    "subsurface": "tiles/dirt.png",
+    "gaps": [
+      {
+        "x": 8,
+        "width": 1
+      }
+    ]
+  },
+  "obstacles": [
+    {
+      "x": 4,
+      "y": 6,
+      "type": "spike"
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "type": "gap"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "type": "wood_platform"
+    }
+  ],
+  "collectibles": [
+    {
+      "x": 3,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    }
+  ],
+  "enemies": [
+    {
+      "x": 6,
+      "y": 6,
+      "sprite": "enemies/slime_rest.png"
+    }
+  ]
+}

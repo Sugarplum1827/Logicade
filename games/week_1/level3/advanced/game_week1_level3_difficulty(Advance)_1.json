@@ -1,0 +1,282 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0081",
+  "variation_id": "canvas_game_0081",
+  "week": 1,
+  "level": 3,
+  "trial": 1,
+  "difficulty": "Advance",
+  "mode": "tetris",
+  "title": "Flowchart Workshop – Add two numbers",
+  "display_name": "Flowchart Block Puzzle",
+  "theme": "The Kingdom – Castle Gatehouse: the fortified castle gatehouse",
+  "topic": "Orientation",
+  "learning_objectives": [
+    "Controls and mission practice"
+  ],
+  "lesson": {
+    "summary": "Orientation",
+    "points": [
+      "Controls and mission practice",
+      "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+      "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once.",
+      "Stage 2 is guided interface practice; the main flowchart lesson is Week 2."
+    ],
+    "example": "",
+    "practice": "Controls and mission practice",
+    "week": 1,
+    "source_week": 1,
+    "source_level": 2,
+    "objective_id": "cp1_w1_l2",
+    "title": "Orientation",
+    "stage_title": "Controls and mission practice",
+    "objectives": [
+      "Controls and mission practice"
+    ],
+    "sources": [],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      1
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_level": 2,
+  "source_week": 1,
+  "primary_mechanic": "Score Keeper",
+  "objective": "Build a flowchart that reads a and b, adds them, and displays their sum.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 1270641506,
+  "layout": {
+    "interaction": "flowchart_drag_drop",
+    "columns": 12,
+    "rows": 10,
+    "seed": 1270641506
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_1",
+    "source_level": null,
+    "title": "Add two numbers",
+    "prompt": "Build a flowchart that reads a and b, adds them, and displays their sum.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.08,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.5,
+        "y": 0.29,
+        "number": 2
+      },
+      {
+        "id": "calculate",
+        "x": 0.5,
+        "y": 0.5,
+        "number": 3
+      },
+      {
+        "id": "write",
+        "x": 0.5,
+        "y": 0.71,
+        "number": 4
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9199999999999999,
+        "number": 5
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "calculate"
+      },
+      {
+        "from": "calculate",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "end"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "write",
+        "label": "Write sum",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "sum"
+          }
+        }
+      },
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "decoy_symbol",
+        "label": "Display sum = a + b",
+        "kind": "output",
+        "action": {
+          "value": "Not a calculation"
+        }
+      },
+      {
+        "id": "calculate",
+        "label": "sum = a + b",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "sum",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "a"
+                  },
+                  {
+                    "var": "b"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "read",
+        "label": "Read a, b",
+        "kind": "input",
+        "action": {
+          "names": [
+            "a",
+            "b"
+          ]
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "calculate": "calculate",
+      "write": "write",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "a": 2,
+          "b": 3
+        },
+        "expected": [
+          5
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "a": -4,
+          "b": 7
+        },
+        "expected": [
+          3
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "a": 0,
+          "b": 0
+        },
+        "expected": [
+          0
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0081",
+    "objective_id": "cp1_w1_l2"
+  },
+  "assets": {
+    "puzzle_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "block_drop_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/drop_001.ogg",
+    "line_clear_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_002.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "calculate",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5 in the requested chart."
+    }
+  ],
+  "source_path": "week_1/level3/advanced/game_week1_level3_difficulty(Advance)_1.json",
+  "source_topic": "Orientation",
+  "source_learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "source_primary_mechanic": "Score Keeper",
+  "source_code_snippet": "score = score + 10\nlives = lives - 1"
+}

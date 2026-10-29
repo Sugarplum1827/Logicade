@@ -1,30 +1,30 @@
 {
   "file_id": "game_1246",
-  "game_title": "Range Runner – Canopy Walkway Streak",
+  "game_title": "Branch Assembly 6 · Merge Endpoint",
   "game_concept": "A quiz RPG set in Mystic Forest – Canopy Walkway, rope walkways in the canopy: the fairy gardener must handle bramble beasts while practicing control flow: for loops. Core idea – Range Runner: Run a for i in range(n) loop so the fairy gardener moves exactly n steps toward the vine bridge.",
-  "genre": "quiz RPG",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Canopy Walkway: rope walkways in the canopy",
-  "core_gameplay_loop": "In Canopy Walkway, repeat each round: Run a for i in range(n) loop so the fairy gardener moves exactly n steps toward the vine bridge. Each round poses one decision; a wrong answer breaks the streak. Then check the steps_left value and advance.",
-  "primary_mechanic": "Range Runner",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 8 consecutive correct decisions about steps_left to power up the fairy gardener and open the vine bridge.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 8.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Keywords and identifiers: build a valid C source file that prints 12. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 6. IF item value >= 10, send north to the upper branch; ELSE send south to the lower branch. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 5 components (3 upper, 2 lower). Set the gold-socket controller batch to 5.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 2 (intro tier): Range Runner",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Keywords and identifiers",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M01-X4-T04-4bb1f0be",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Range Runner' (Week 5 slot 1), mission type 'Streak Challenge', and setting 'Canopy Walkway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 2,
   "trial": 6,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how steps_left changes.",
-    "Step 2: Use the controls to apply the code idea against bramble beasts in Canopy Walkway.",
-    "Step 3: Win by meeting the goal: streak counter reaches 8."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level2/standard/game_week5_level2_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_1246",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 8 consecutive correct decisions about steps_left to power up the fairy gardener and open the vine bridge.",
+  "source_win_condition": "streak counter reaches 8.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Range Runner – Canopy Walkway Streak",
+  "source_primary_mechanic": "Range Runner",
+  "hint": "IF item value >= 10, send north to the upper branch; ELSE send south to the lower branch. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: IF: 3 components via upper_4, upper_6 to output_shared; ELSE: 2 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w5_l2",
+  "source_week": 5,
+  "source_level": 2
 }

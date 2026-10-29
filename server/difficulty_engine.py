@@ -22,13 +22,18 @@ Notes:
   • Difficulty is fixed for the entire next level — no mid-level changes.
   • First-attempt score is retained as the signal; replays never overwrite.
   • A full-level replay = restarting/replaying the whole level after the
-    first attempt. Individual activity/question retries do NOT count.
+    first successful completion, and completing that replay. Individual
+    activity/question retries do NOT count.
   • Stratum is never an input.
 
 The `total_errors` parameter is part of the public signature for parity with
 §10's "exactly three inputs" wording, but the authoritative table does not
 read it. Callers should still pass it; it is reserved for a future
 revision and is logged in `difficulty_divergence.client_inputs` (§14.10).
+
+The v2 stage policy uses the first evaluated (completed or failed) run as
+accuracy evidence. Abandoned/restarted/incomplete runs remain in raw history
+and never become scored-zero evidence. Thresholds are unchanged.
 """
 
 from __future__ import annotations

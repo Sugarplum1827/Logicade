@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "43_pixel_art_restorer",
+  "slug": "pixel_art_restorer",
+  "display_name": "Pixel Art Restorer",
+  "module_family": "matrix_puzzle",
+  "learning_target": "matrix coordinates and nested loops",
+  "core_brief": "Use nested coordinate loops to restore missing tiles in a small image.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "pixel",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Sequence solver",
+  "accent": "#ffcf5c",
+  "tint": 12053221,
+  "variation_id": "43_pixel_art_restorer_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 99601833,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_sunflower",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.bush",
+      "bush": "themes.farm.wheat",
+      "slime": "themes.farm.fence",
+      "bee": "themes.farm.sunflower"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/pixel_art_restorer.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0399",
-  "game_title": "Parenthesis Puzzle – Obsidian Quarry Defense",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A action defense set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the ember furnace.",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
-  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Place parentheses to make an expression equal the number carved on the ember furnace. Each round, smoke serpents strike the ember furnace, so respond before the next strike lands. Then check the puzzle_gap value and advance.",
-  "primary_mechanic": "Parenthesis Puzzle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Protect the ember furnace from smoke serpents in Obsidian Quarry: keep the puzzle_gap meter above zero by applying the concept correctly until the 55-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 55 seconds while puzzle_gap > 0.",
-  "lose_condition": "puzzle_gap drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "player_objective": "Read n. Display Above when n > 4; otherwise display At or below. Test dataset 9: {'n': 2}; {'n': 7}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Parenthesis Puzzle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M09-X1-T03-b24e9c22",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Survival Siege', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 9,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
-    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while puzzle_gap > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/needs_support/game_week2_level4_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_0399",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the ember furnace from smoke serpents in Obsidian Quarry: keep the puzzle_gap meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "source_win_condition": "Timer reaches 55 seconds while puzzle_gap > 0.",
+  "source_lose_condition": "puzzle_gap drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "source_game_title": "Parenthesis Puzzle – Obsidian Quarry Defense",
+  "source_primary_mechanic": "Parenthesis Puzzle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

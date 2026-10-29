@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "14_pirate_island_voyage",
+  "slug": "pirate_island_voyage",
+  "display_name": "Pirate Island Voyage",
+  "module_family": "navigation_adventure",
+  "learning_target": "coordinates and ordered movement",
+  "core_brief": "Use coordinates to steer a ship around reefs and reach marked island destinations.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 12695530,
+  "variation_id": "14_pirate_island_voyage_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 4028772460,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_1",
+    "zones": [
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_blue",
+    "enemy": "themes.pirate.enemy_shark",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_ship",
+    "obstacles": {
+      "spike": "themes.pirate.nest",
+      "bush": "themes.pirate.fire",
+      "slime": "themes.pirate.fire",
+      "bee": "themes.pirate.nest"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/pirate_island_voyage.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2647",
-  "game_title": "Integration Heist – Sandstone Arch Race",
+  "game_title": "Examination practice · Branch Assembly 7 · Separate Outputs",
   "game_concept": "A racing platformer set in Sand Dunes – Sandstone Arch, a natural sandstone arch: the caravan guide must handle vultures while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstone Arch.",
-  "genre": "racing platformer",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Sandstone Arch: a natural sandstone arch",
-  "core_gameplay_loop": "In Sandstone Arch, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Sandstone Arch. Each round the rival advances, and solving the step moves the caravan guide ahead. Then check the heist value and advance.",
-  "primary_mechanic": "Integration Heist",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the sandstone arch by solving code steps involving heist that move the caravan guide forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
-  "lose_condition": "The rival reaches the sandstone arch first, or lives reach 0.",
+  "player_objective": "Week 5 examination practice: Source organization: build a valid C source file that prints 24. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 12 components (6 upper, 6 lower). Set the gold-socket controller batch to 12.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Integration Heist",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Source organization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M07-X5-T19-c505e8d3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Rival Race', and setting 'Sandstone Arch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 9,
   "trial": 7,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how heist changes.",
-    "Step 2: Use the controls to apply the code idea against vultures in Sandstone Arch.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level9/needs_support/game_week9_level9_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_2647",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the sandstone arch by solving code steps involving heist that move the caravan guide forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "source_lose_condition": "The rival reaches the sandstone arch first, or lives reach 0.",
+  "source_game_title": "Integration Heist – Sandstone Arch Race",
+  "source_primary_mechanic": "Integration Heist",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 6 components via upper_4, upper_6 to output_upper; B: 6 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w5_l9",
+  "source_week": 5,
+  "source_level": 9
 }

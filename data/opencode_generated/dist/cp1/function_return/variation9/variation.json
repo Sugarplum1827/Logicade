@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_47_function_return",
+  "slug": "function_return",
+  "display_name": "Returning Values",
+  "learning_target": "trace which value a function returns",
+  "core_brief": "return immediately ends the function and sends a value back to the caller.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 13,
+  "unit": "Functions",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.bush",
+      "bush": "themes.tower_defense.mine",
+      "slime": "themes.tower_defense.rock",
+      "bee": "themes.tower_defense.bush"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_47_function_return_v09",
+  "index": 9,
+  "challenge_index": 9,
+  "challenge_id": "function_return_v09",
+  "title": "Find the bug",
+  "label": "Lab 09: Find the bug",
+  "seed": 2451415329,
+  "challenge_bank": "../../../data/cp1/challenges/function_return.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

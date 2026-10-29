@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "07_cyber_hacker_grid",
+  "slug": "cyber_hacker_grid",
+  "display_name": "Cyber Hacker Grid",
+  "module_family": "grid_stealth",
+  "learning_target": "sequencing and algorithmic flow",
+  "core_brief": "Sequence commands to route a signal through a firewall grid without triggering alarms.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "hacker",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Grid route",
+  "accent": "#4fd1c5",
+  "tint": 14399466,
+  "variation_id": "07_cyber_hacker_grid_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 4162956942,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_green",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_big",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_brown_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/cyber_hacker_grid.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

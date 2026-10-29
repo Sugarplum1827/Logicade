@@ -1,0 +1,590 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v01",
+    "index": 1,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the linear-search loop.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "i = 0",
+        "WHILE i < length DO",
+        "  IF list[i] {{b0}} target THEN",
+        "    RETURN {{b1}}",
+        "  i = i + {{b2}}",
+        "RETURN -1"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "equality operator",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "found index",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "step size",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "=="
+        },
+        {
+          "id": "b2",
+          "text": "i"
+        },
+        {
+          "id": "b3",
+          "text": "1"
+        },
+        {
+          "id": "b4",
+          "text": "=="
+        },
+        {
+          "id": "b5",
+          "text": "i"
+        },
+        {
+          "id": "b6",
+          "text": "1"
+        }
+      ]
+    },
+    "explanation": "Compare with ==, return the matching index, and move one item at a time.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v02",
+    "index": 2,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of search and sort steps in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start at the first item in the list"
+        },
+        {
+          "id": "s2",
+          "text": "Compare the item with the target"
+        },
+        {
+          "id": "s3",
+          "text": "Stop when the target matches"
+        },
+        {
+          "id": "s4",
+          "text": "Otherwise move to the next item"
+        },
+        {
+          "id": "s5",
+          "text": "If the list ends, report not found"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Start at the first item in the list → Compare the item with the target → Stop when the target matches → Otherwise move to the next item → If the list ends, report not found",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v03",
+    "index": 3,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the linear-search comparison.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "IF"
+        },
+        {
+          "id": "t2",
+          "text": "list[i]"
+        },
+        {
+          "id": "t3",
+          "text": "=="
+        },
+        {
+          "id": "t4",
+          "text": "target"
+        },
+        {
+          "id": "t5",
+          "text": "THEN"
+        },
+        {
+          "id": "t6",
+          "text": "!="
+        },
+        {
+          "id": "t7",
+          "text": "list"
+        },
+        {
+          "id": "t8",
+          "text": "WHILE"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Linear search compares each list item with the target using equality.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v04",
+    "index": 4,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the linear-search flowchart.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 7
+        },
+        {
+          "id": "init",
+          "label": "i = 0",
+          "kind": "process",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "id": "test",
+          "label": "i < length?",
+          "kind": "decision",
+          "x": 50,
+          "y": 37
+        },
+        {
+          "id": "compare",
+          "label": "list[i] == target?",
+          "kind": "decision",
+          "x": 50,
+          "y": 55
+        },
+        {
+          "id": "found",
+          "label": "Return i",
+          "kind": "process",
+          "x": 24,
+          "y": 73
+        },
+        {
+          "id": "next",
+          "label": "i = i + 1",
+          "kind": "process",
+          "x": 76,
+          "y": 73
+        },
+        {
+          "id": "missing",
+          "label": "Return -1",
+          "kind": "process",
+          "x": 50,
+          "y": 88
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 96
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "init"
+        ],
+        [
+          "init",
+          "test"
+        ],
+        [
+          "test",
+          "compare"
+        ],
+        [
+          "compare",
+          "found"
+        ],
+        [
+          "compare",
+          "next"
+        ],
+        [
+          "next",
+          "test"
+        ],
+        [
+          "test",
+          "missing"
+        ],
+        [
+          "found",
+          "end"
+        ],
+        [
+          "missing",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The search checks each index, advances when it does not match, and reports -1 at the end.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v05",
+    "index": 5,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to search the route for the goal.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 6,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 0,
+        "dir": 1
+      },
+      "goal": {
+        "x": 5,
+        "y": 3
+      },
+      "walls": [
+        {
+          "x": 2,
+          "y": 1
+        },
+        {
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 14
+    },
+    "explanation": "The robot checks positions one move at a time, like a linear search.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v06",
+    "index": 6,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "At which index does linear search find 9 in [3, 7, 9]?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "list = [3, 7, 9]",
+        "target = 9",
+        "i = 0",
+        "WHILE i < length DO",
+        "  IF list[i] == target THEN RETURN i",
+        "  i = i + 1",
+        "RETURN -1"
+      ],
+      "answer": "2",
+      "accept": [
+        "2",
+        "index 2"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "Index 0 holds 3, index 1 holds 7, and index 2 holds 9."
+    },
+    "explanation": "Index 0 holds 3, index 1 holds 7, and index 2 holds 9.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v07",
+    "index": 7,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the search and commit the final index.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "list = [3, 7, 9]",
+        "target = 9",
+        "i = 0",
+        "WHILE i < length DO",
+        "  IF list[i] == target THEN RETURN i",
+        "  i = i + 1"
+      ],
+      "variables": [
+        "target",
+        "i"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "target": "9",
+            "i": "0"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "target": "9",
+            "i": "1"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "target": "9",
+            "i": "2"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "target": "9",
+            "i": "2"
+          }
+        }
+      ],
+      "ask": [
+        "target",
+        "i"
+      ],
+      "answer": {
+        "target": "9",
+        "i": "2"
+      },
+      "hint": ""
+    },
+    "explanation": "The loop advances one index at a time and stops at index 2.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v08",
+    "index": 8,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line skips an item in the linear search. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "i = 0",
+        "WHILE i < length DO",
+        "  IF list[i] == target THEN",
+        "    RETURN i",
+        "  i = i + 2",
+        "RETURN -1"
+      ],
+      "answer": 4,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "Adding 2 skips every other item. The index should increase by 1.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v09",
+    "index": 9,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each algorithm step to its purpose.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Compare"
+        },
+        {
+          "id": "l2",
+          "text": "Swap"
+        },
+        {
+          "id": "l3",
+          "text": "Pass"
+        },
+        {
+          "id": "l4",
+          "text": "Return -1"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Check whether two values are equal or ordered"
+        },
+        {
+          "id": "r2",
+          "text": "Exchange two values"
+        },
+        {
+          "id": "r3",
+          "text": "One full trip through the data"
+        },
+        {
+          "id": "r4",
+          "text": "Report that the target was not found"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Comparisons drive both algorithms; swaps only appear in sorting.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_search_sort_v10",
+    "index": 10,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each statement into linear search, bubble sort, or both.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "search",
+          "label": "Linear search",
+          "desc": "Looks for one value"
+        },
+        {
+          "id": "sort",
+          "label": "Bubble sort",
+          "desc": "Puts every value in order"
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "desc": "Uses comparison and repetition"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Checks each item until the target is found",
+          "bin": "search"
+        },
+        {
+          "id": "i2",
+          "text": "Swaps adjacent items that are out of order",
+          "bin": "sort"
+        },
+        {
+          "id": "i3",
+          "text": "Uses a loop to visit the data",
+          "bin": "both"
+        },
+        {
+          "id": "i4",
+          "text": "Compares two values",
+          "bin": "both"
+        },
+        {
+          "id": "i5",
+          "text": "Stops early when the target is found",
+          "bin": "search"
+        },
+        {
+          "id": "i6",
+          "text": "Repeats passes until no swaps are needed",
+          "bin": "sort"
+        }
+      ]
+    },
+    "explanation": "Search finds one item; sort reorders all items; both compare and repeat.",
+    "concept_slug": "algorithm_search_sort",
+    "concept_name": "Search and Sort Steps"
+  }
+]

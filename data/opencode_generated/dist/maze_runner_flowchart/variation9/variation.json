@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "03_maze_runner_flowchart",
+  "slug": "maze_runner_flowchart",
+  "display_name": "Maze Runner Flowchart",
+  "module_family": "grid_path_programming",
+  "learning_target": "sequence and flowchart logic",
+  "core_brief": "Arrange flowchart blocks to guide a courier through a maze to the exit.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "maze",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#ffcf5c",
+  "tint": 13494967,
+  "variation_id": "03_maze_runner_flowchart_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 2658398832,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_a",
+    "enemy": "themes.urban.enemy_a",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/maze_runner_flowchart.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

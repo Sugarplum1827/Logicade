@@ -1,30 +1,30 @@
 {
   "file_id": "game_0406",
-  "game_title": "Type Sorter – Sulfur Springs Trial",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A puzzle set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Type Sorter: Sort falling ash bricks into bins labelled int, float, str and bool before they hit the ground.",
-  "genre": "puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
-  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Sort falling ash bricks into bins labelled int, float, str and bool before they hit the ground. Each round costs one action, so plan the step so none are wasted. Then check the sorted_ok value and advance.",
-  "primary_mechanic": "Type Sorter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Reach the fire shrine using at most 16 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "The fire shrine reached with actions_used <= 16.",
-  "lose_condition": "actions_used exceeds 16 before the fire shrine is reached, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > 1; otherwise display At or below. Test dataset 6: {'n': -1}; {'n': 4}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Type Sorter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M01-X3-T08-e9233145",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Efficiency Trial', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 6,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 39,
+    "time_limit_seconds": 0,
     "target_score": 220,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
-    "Step 3: Win by meeting the goal: The fire shrine reached with actions_used <= 16."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/standard/game_week2_level4_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_0406",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the fire shrine using at most 16 actions, so every code step counts.",
+  "source_win_condition": "The fire shrine reached with actions_used <= 16.",
+  "source_lose_condition": "actions_used exceeds 16 before the fire shrine is reached, or lives reach 0.",
+  "source_game_title": "Type Sorter – Sulfur Springs Trial",
+  "source_primary_mechanic": "Type Sorter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 39,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

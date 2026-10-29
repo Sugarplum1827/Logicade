@@ -1,30 +1,30 @@
 {
   "file_id": "game_2445",
-  "game_title": "Capstone Boss Chain – Oasis Pool Race",
+  "game_title": "Examination practice · Algorithm synthesis · variation 5",
   "game_concept": "A strategy race set in Sand Dunes – Oasis Pool, a blue oasis pool: the caravan guide must handle giant scorpions while practicing debugging & combined skills. Core idea – Capstone Boss Chain: Beat a boss with phases that each demand a different skill from earlier weeks.",
-  "genre": "strategy race",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Oasis Pool: a blue oasis pool",
-  "core_gameplay_loop": "In Oasis Pool, repeat each round: Beat a boss with phases that each demand a different skill from earlier weeks. Each round the rival advances, and solving the step moves the caravan guide ahead. Then check the boss_hp value and advance.",
-  "primary_mechanic": "Capstone Boss Chain",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Power-up crates for perfect rounds",
     "Live variable watch panel"
   ],
-  "player_objective": "Beat a rival AI to the temple door by solving code steps involving boss_hp that move the caravan guide forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
-  "lose_condition": "The rival reaches the temple door first, or lives reach 0.",
+  "player_objective": "Week 3 examination practice: Algorithm synthesis: negate every value. Match all 3 streams; preserve their order. Dataset 5, operand 17.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Capstone Boss Chain",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M15-X5-T01-03a32872",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Capstone Boss Chain' (Week 9 slot 15), mission type 'Rival Race', and setting 'Oasis Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 2,
   "trial": 5,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Algorithms",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how boss_hp changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Oasis Pool.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level2/standard/game_week9_level2_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_2445",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the temple door by solving code steps involving boss_hp that move the caravan guide forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "source_lose_condition": "The rival reaches the temple door first, or lives reach 0.",
+  "source_game_title": "Capstone Boss Chain – Oasis Pool Race",
+  "source_primary_mechanic": "Capstone Boss Chain",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w3_l10",
+  "source_week": 3,
+  "source_level": 10
 }

@@ -1,0 +1,564 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v01",
+    "index": 1,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the sequential sum program.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int a = 2;",
+        "int b = {{b0}};",
+        "int sum = a {{b1}} b;",
+        "printf(\"%d\\n\", {{b2}});"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "second value",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "addition operator",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "value to print",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "3"
+        },
+        {
+          "id": "b2",
+          "text": "+"
+        },
+        {
+          "id": "b3",
+          "text": "sum"
+        },
+        {
+          "id": "b4",
+          "text": "4"
+        },
+        {
+          "id": "b5",
+          "text": "-"
+        },
+        {
+          "id": "b6",
+          "text": "a"
+        }
+      ]
+    },
+    "explanation": "With b = 3 and a + b, sum becomes 5 and is printed.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v02",
+    "index": 2,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 2;",
+        "    int b = 3;",
+        "    int sum = a + b;",
+        "    printf(\"%d\\n\", sum);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "5",
+      "accept": [
+        "5"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "a is 2 and b is 3, so sum becomes 5 before the print."
+    },
+    "explanation": "The program produces 5.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v03",
+    "index": 3,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 2;",
+        "    int b = 3;",
+        "    int sum = a + b;",
+        "    printf(\"%d\\n\", sum);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "sum"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "a": "2",
+            "b": "",
+            "sum": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "a": "2",
+            "b": "3",
+            "sum": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "a": "2",
+            "b": "3",
+            "sum": "5"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "sum"
+      ],
+      "answer": {
+        "a": "2",
+        "b": "3",
+        "sum": "5"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is a = 2, b = 3, sum = 5.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v04",
+    "index": 4,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c sequence in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Declare the first value"
+        },
+        {
+          "id": "s2",
+          "text": "Declare the second value"
+        },
+        {
+          "id": "s3",
+          "text": "Compute the result"
+        },
+        {
+          "id": "s4",
+          "text": "Print the result"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Declare the first value → Declare the second value → Compute the result → Print the result",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v05",
+    "index": 5,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the assignment that multiplies price by quantity.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "total"
+        },
+        {
+          "id": "t2",
+          "text": "="
+        },
+        {
+          "id": "t3",
+          "text": "price"
+        },
+        {
+          "id": "t4",
+          "text": "*"
+        },
+        {
+          "id": "t5",
+          "text": "quantity"
+        },
+        {
+          "id": "t6",
+          "text": ";"
+        },
+        {
+          "id": "t7",
+          "text": "+"
+        },
+        {
+          "id": "t8",
+          "text": "PRINT"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The expression on the right is evaluated first, then stored in total.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v06",
+    "index": 6,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign each value after the statements run in order.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 2;",
+        "    int b = 3;",
+        "    int sum = a + b;",
+        "    printf(\"%d\\n\", sum);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "a",
+          "type": "final value"
+        },
+        {
+          "name": "b",
+          "type": "final value"
+        },
+        {
+          "name": "sum",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "2"
+        },
+        {
+          "id": "v2",
+          "text": "3"
+        },
+        {
+          "id": "v3",
+          "text": "5"
+        },
+        {
+          "id": "v4",
+          "text": "1"
+        },
+        {
+          "id": "v5",
+          "text": "4"
+        },
+        {
+          "id": "v6",
+          "text": "6"
+        }
+      ],
+      "answer": {
+        "a": "v1",
+        "b": "v2",
+        "sum": "v3"
+      }
+    },
+    "explanation": "The declarations set a and b, then sum is computed as 5.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v07",
+    "index": 7,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line by its role in the sequence.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "declare",
+          "label": "Declaration",
+          "desc": "Creates a named variable"
+        },
+        {
+          "id": "assign",
+          "label": "Assignment",
+          "desc": "Computes and stores a value"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Displays a value"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int a = 2;",
+          "bin": "declare"
+        },
+        {
+          "id": "i2",
+          "text": "int b = 3;",
+          "bin": "declare"
+        },
+        {
+          "id": "i3",
+          "text": "sum = a + b;",
+          "bin": "assign"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"%d\\n\", sum);",
+          "bin": "output"
+        },
+        {
+          "id": "i5",
+          "text": "total = price * quantity;",
+          "bin": "assign"
+        },
+        {
+          "id": "i6",
+          "text": "printf(\"Done\\n\");",
+          "bin": "output"
+        }
+      ]
+    },
+    "explanation": "Declarations introduce names, assignments compute values, and printf displays them.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v08",
+    "index": 8,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    sum = a + b;",
+        "    int a = 2;",
+        "    int b = 3;",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "sum is used before it is declared, and a and b do not exist yet.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v09",
+    "index": 9,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each declaration inside or outside main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int global_count = 0;",
+        "int main(void) {",
+        "    int a = 2;",
+        "    int b = 3;",
+        "    int sum = a + b;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Outside main"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int global_count = 0;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int a = 2;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int b = 3;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "int sum = a + b;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "global_count is global; the three working variables are local to main.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_sequence_v10",
+    "index": 10,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c sequence term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Sequence"
+        },
+        {
+          "id": "l2",
+          "text": "Assignment"
+        },
+        {
+          "id": "l3",
+          "text": "Expression"
+        },
+        {
+          "id": "l4",
+          "text": "Statement"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Statements run in written order"
+        },
+        {
+          "id": "r2",
+          "text": "Stores a value in a variable"
+        },
+        {
+          "id": "r3",
+          "text": "A calculation that produces a value"
+        },
+        {
+          "id": "r4",
+          "text": "A complete executable instruction"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_sequence",
+    "concept_name": "C Sequence"
+  }
+]

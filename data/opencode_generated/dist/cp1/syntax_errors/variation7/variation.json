@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_48_syntax_errors",
+  "slug": "syntax_errors",
+  "display_name": "Syntax Errors",
+  "learning_target": "recognize errors the compiler reports",
+  "core_brief": "A syntax error breaks the grammar of C, so the compiler cannot produce an executable.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 14,
+  "unit": "Debugging",
+  "group": "code",
+  "skin": "urban",
+  "theme": "urban",
+  "theme_label": "City",
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_dusk",
+    "zones": [
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_b",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier_b",
+      "bush": "themes.urban.tree",
+      "slime": "themes.urban.tree_b",
+      "bee": "themes.urban.tree"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "mechanic": "sort",
+  "mechanic_label": "Sort",
+  "accent": "#ff8fa3",
+  "variation_id": "cp1_48_syntax_errors_v07",
+  "index": 7,
+  "challenge_index": 7,
+  "challenge_id": "syntax_errors_v07",
+  "title": "Sort into bins",
+  "label": "Lab 07: Sort into bins",
+  "seed": 878050048,
+  "challenge_bank": "../../../data/cp1/challenges/syntax_errors.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

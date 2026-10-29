@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "38_baking_bakery_rush",
+  "slug": "baking_bakery_rush",
+  "display_name": "Baking Bakery Rush",
+  "module_family": "temperature_simulation",
+  "learning_target": "conditionals and thresholds",
+  "core_brief": "Use conditionals to select oven settings and prevent each recipe from over- or under-baking.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "bakery",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#ff9f43",
+  "tint": 15316970,
+  "variation_id": "38_baking_bakery_rush_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 3994338864,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_2",
+    "zones": [
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_ketchup",
+    "coin": "themes.food.coin_sprinkles",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.can",
+      "bush": "themes.food.burger",
+      "slime": "themes.food.burger",
+      "bee": "themes.food.can"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/baking_bakery_rush.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

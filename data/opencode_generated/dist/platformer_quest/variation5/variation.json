@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "01_platformer_quest",
+  "slug": "platformer_quest",
+  "display_name": "Platformer Quest",
+  "module_family": "side_scrolling_platformer",
+  "learning_target": "valid variable names",
+  "core_brief": "Answer programming questions to leap between safe platforms and cross spike gaps.",
+  "mode": "runner",
+  "mode_label": "Route runner",
+  "skin": "platformer",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Route runner",
+  "accent": "#7ee2b8",
+  "tint": 15382455,
+  "variation_id": "01_platformer_quest_v05",
+  "index": 5,
+  "title": "Central Arena",
+  "label": "Variation 05: Central Arena",
+  "seed": 3386210540,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "star"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 4
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_can",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.fence",
+      "bush": "themes.farm.bush",
+      "slime": "themes.farm.rock",
+      "bee": "themes.farm.wheat"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a compact arena with a central objective and three distinct approach lanes. The player must respond to a readable sequence of short waves.",
+    "obstacles": "lane-specific hazards and a central objective meter; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "three escalating waves with a short breath between waves."
+  },
+  "question_bank": "../../data/questions/platformer_quest.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

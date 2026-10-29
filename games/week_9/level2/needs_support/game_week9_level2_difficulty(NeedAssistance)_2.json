@@ -1,0 +1,203 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2432",
+  "variation_id": "canvas_game_2432",
+  "week": 9,
+  "level": 2,
+  "trial": 2,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Examination practice · Algorithm synthesis · variation 2",
+  "display_name": "Register Operations Console",
+  "theme": "Sand Dunes – Dry Well: a nearly dry well",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "Algorithm synthesis"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Algorithm synthesis",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 9,
+    "source_week": 3,
+    "source_level": 10,
+    "objective_id": "cp1_w3_l10",
+    "title": "Algorithms",
+    "stage_title": "Algorithm synthesis",
+    "objectives": [
+      "Algorithm synthesis"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l10",
+  "source_level": 10,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Week 3 examination practice: Algorithm synthesis: add 13 to each value. Match all 3 streams; preserve their order. Dataset 2, operand 13.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 1015007657,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      18,
+      16,
+      7,
+      5
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 1
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w9_l2_v2_0",
+    "rules": {
+      "max_steps": 800,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l10",
+    "source_level": 10,
+    "focus": "Algorithm synthesis",
+    "family": "terminal",
+    "title": "Examination practice · Algorithm synthesis · variation 2",
+    "objective": "Week 3 examination practice: Algorithm synthesis: add 13 to each value. Match all 3 streams; preserve their order. Dataset 2, operand 13.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -5,
+          -6,
+          21,
+          7
+        ],
+        "expected": [
+          8,
+          7,
+          34,
+          20
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -12,
+          -2,
+          11,
+          21
+        ],
+        "expected": [
+          1,
+          11,
+          24,
+          34
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -2,
+          -3,
+          21,
+          -11
+        ],
+        "expected": [
+          11,
+          10,
+          34,
+          2
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nADD 13\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+    "source_week": 3
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w9_l2_v2_0",
+      "kind": "program_execution",
+      "prompt": "Week 3 examination practice: Algorithm synthesis: add 13 to each value. Match all 3 streams; preserve their order. Dataset 2, operand 13."
+    }
+  ],
+  "source_path": "week_9/level2/needs_support/game_week9_level2_difficulty(NeedAssistance)_2.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "source_primary_mechanic": "Exception Rodeo",
+  "source_code_snippet": "try:\n    n = int(text)\nexcept ValueError:\n    n = 0"
+}

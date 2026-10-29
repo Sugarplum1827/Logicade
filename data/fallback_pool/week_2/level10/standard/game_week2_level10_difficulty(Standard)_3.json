@@ -1,30 +1,30 @@
 {
   "file_id": "game_0583",
-  "game_title": "Rounding Range – Obsidian Quarry Race",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A racing platformer set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
-  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round the rival advances, and solving the step moves the forge smith ahead. Then check the slot_matches value and advance.",
-  "primary_mechanic": "Rounding Range",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the ember furnace by solving code steps involving slot_matches that move the forge smith forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
-  "lose_condition": "The rival reaches the ember furnace first, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > -2; otherwise display At or below. Test dataset 3: {'n': -4}; {'n': 1}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Rounding Range",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M13-X5-T03-9e922a7d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Rival Race', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 10,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 57,
+    "time_limit_seconds": 0,
     "target_score": 460,
     "action_budget": 19,
     "streak_target": 12,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how slot_matches changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.1)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level10/standard/game_week2_level10_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_0583",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the ember furnace by solving code steps involving slot_matches that move the forge smith forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.1).",
+  "source_lose_condition": "The rival reaches the ember furnace first, or lives reach 0.",
+  "source_game_title": "Rounding Range – Obsidian Quarry Race",
+  "source_primary_mechanic": "Rounding Range",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 57,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

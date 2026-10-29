@@ -1,30 +1,30 @@
 {
   "file_id": "game_0596",
-  "game_title": "Exponent Engine – Fire Shrine Race",
+  "game_title": "Flowchart Lab · Odd numbers, sum, and count",
   "game_concept": "A adventure race set in Mt. Pyre – Fire Shrine, an ancient fire shrine: the ash ranger must handle cinder bats while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
-  "genre": "adventure race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Fire Shrine: an ancient fire shrine",
-  "core_gameplay_loop": "In Fire Shrine, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round the rival advances, and solving the step moves the ash ranger ahead. Then check the engine_power value and advance.",
-  "primary_mechanic": "Exponent Engine",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Beat a rival AI to the obsidian gate by solving code steps involving engine_power that move the ash ranger forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
-  "lose_condition": "The rival reaches the obsidian gate first, or lives reach 0.",
+  "player_objective": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1. Test dataset 6: {'n': 0}; {'n': 14}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Exponent Engine",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M11-X5-T10-3bbb8972",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Rival Race', and setting 'Fire Shrine'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 10,
   "trial": 6,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 600,
     "action_budget": 15,
     "streak_target": 14,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how engine_power changes.",
-    "Step 2: Use the controls to apply the code idea against cinder bats in Fire Shrine.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level10/advanced/game_week2_level10_difficulty(Advance)_6.json",
+    "variation_id": "canvas_game_0596",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the obsidian gate by solving code steps involving engine_power that move the ash ranger forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "source_lose_condition": "The rival reaches the obsidian gate first, or lives reach 0.",
+  "source_game_title": "Exponent Engine – Fire Shrine Race",
+  "source_primary_mechanic": "Exponent Engine",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

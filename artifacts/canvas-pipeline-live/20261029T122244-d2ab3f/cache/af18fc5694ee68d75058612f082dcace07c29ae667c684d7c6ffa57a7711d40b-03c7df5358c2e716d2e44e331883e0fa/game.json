@@ -1,0 +1,434 @@
+{
+  "game": {
+    "schema_version": 2,
+    "engine": "logicade_canvas_v2",
+    "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+    "file_id": "game_1991",
+    "variation_id": "canvas_game_1991",
+    "week": 7,
+    "level": 7,
+    "trial": 1,
+    "difficulty": "Standard",
+    "mode": "terminal",
+    "title": "Declare float · variation 2",
+    "display_name": "Register Operations Console",
+    "theme": "Eldritch Ruins – Rune Circle: a circle of glowing runes",
+    "topic": "Basic Parts of C and Variable Declarations",
+    "learning_objectives": [
+      "Declare float"
+    ],
+    "lesson": {
+      "summary": "Basic Parts of C and Variable Declarations",
+      "points": [
+        "Declare float",
+        "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+        "Practice int, float, double and char, with suitable printf formats.",
+        "Names are case sensitive. Do not read an uninitialized automatic local."
+      ],
+      "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+      "practice": "Integer division",
+      "week": 7,
+      "source_week": 7,
+      "source_level": 7,
+      "objective_id": "cp1_w7_l7",
+      "title": "Basic Parts of C and Variable Declarations",
+      "stage_title": "Declare float",
+      "objectives": [
+        "Declare float"
+      ],
+      "sources": [
+        {
+          "title": "Harvard CS50: C basics",
+          "url": "https://cs50.harvard.edu/x/notes/1/"
+        },
+        {
+          "title": "GNU C: variables and scope",
+          "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+        }
+      ],
+      "assessment_kind": "lesson_practice",
+      "coverage": [
+        7
+      ],
+      "exam_coverage": [],
+      "formal_assessment": false
+    },
+    "learning_objective_id": "cp1_w7_l7",
+    "source_level": 7,
+    "source_week": 7,
+    "primary_mechanic": "terminal construction and execution",
+    "objective": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement.",
+    "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+    "time_limit_seconds": 0,
+    "starting_lives": 3,
+    "seed": 12345,
+    "layout": {
+      "width": 14,
+      "height": 9,
+      "registers": [
+        25,
+        14,
+        28,
+        21
+      ],
+      "node_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_node": 3
+    },
+    "programming": {
+      "version": 1,
+      "mission_id": "cp1_w7_l7_v2_1",
+      "rules": {
+        "max_steps": 710,
+        "max_lines": 50,
+        "max_nodes": 7
+      },
+      "construction_timer": false,
+      "difficulty_profile": 1,
+      "reference_is_practice_only": true,
+      "objective_id": "cp1_w7_l7",
+      "source_level": 7,
+      "focus": "Declare float",
+      "family": "terminal",
+      "language": "c_subset",
+      "title": "Declare float · variation 2",
+      "objective": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement.",
+      "cases": [
+        {
+          "id": "case_1",
+          "inputs": [
+            -15,
+            0,
+            15,
+            15
+          ],
+          "expected": [
+            0.5,
+            15.5,
+            30.5,
+            30.5
+          ],
+          "required_values": {
+            "resource": 30.5
+          }
+        },
+        {
+          "id": "case_2",
+          "inputs": [
+            15,
+            15,
+            0,
+            -15
+          ],
+          "expected": [
+            30.5,
+            30.5,
+            15.5,
+            0.5
+          ],
+          "required_values": {
+            "resource": 0.5
+          }
+        },
+        {
+          "id": "case_3",
+          "inputs": [
+            -14,
+            1,
+            16,
+            16
+          ],
+          "expected": [
+            1.5,
+            16.5,
+            31.5,
+            31.5
+          ],
+          "required_values": {
+            "resource": 31.5
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "C1",
+          "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+        }
+      ],
+      "required_declaration": {
+        "name": "resource",
+        "type": "float"
+      },
+      "reference": {
+        "programs": [
+          "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nfloat resource = readInput();\nresource = resource + 15.5;\nprintf(\"%.1f\\n\", resource);\nreturn 0;\n}"
+        ]
+      },
+      "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+      "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset."
+    },
+    "assets": {
+      "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+      "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+      "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+    },
+    "tasks": [
+      {
+        "id": "cp1_w7_l7_v2_1",
+        "kind": "program_execution",
+        "prompt": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement."
+      }
+    ],
+    "source_path": "week_7/level7/standard/game_week7_level7_difficulty(Standard)_1.json",
+    "source_topic": "Basic Parts of C and Variable Declarations",
+    "source_learning_alignment": "CP1 Week 7: Declare float",
+    "source_primary_mechanic": "Comprehension Lab",
+    "source_code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nfloat resource = readInput();\nresource = resource + 15.5;\nprintf(\"%.1f\\n\", resource);\nreturn 0;\n}",
+    "generation": {
+      "schema_version": 1,
+      "proposal": {
+        "schema_version": 1,
+        "binding": {
+          "week": 7,
+          "level": 7,
+          "source_week": 7,
+          "source_level": 7,
+          "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+          "learning_objective_id": "cp1_w7_l7",
+          "difficulty": "standard",
+          "mechanic_family": "terminal",
+          "required_c_type": "float"
+        },
+        "parameters": {
+          "problem_variant": 2,
+          "primary_value": 15,
+          "secondary_value": 5,
+          "input_values": [
+            -15,
+            0,
+            15
+          ],
+          "layout_seed": 12345
+        }
+      },
+      "parameter_fingerprint": "fce4b782bc424b14a2c93e6023cc65c94116a02e556f54cdfbace1af0741f75f",
+      "model_tag": "qwen2.5:3b",
+      "model_digest": "357c53fb659c",
+      "problem_fingerprint": "79f95c42083a228741f1ad1101ea6c5f95a6bf0f1442101897efed569237fa8d",
+      "runtime_verification": {
+        "passed": true,
+        "cases": 3,
+        "frames": 16,
+        "negative_control": true,
+        "verifier": "shipped_canvas_models_v1"
+      },
+      "generated_at": 1793276607.6160102,
+      "origin": "ollama",
+      "job_id": "6f5442201018cf90a0849fa78dded68154d3243611d1f9b981ee6c42ca977025",
+      "replaces_revision": "e2663928bcb016cea33039eadc73045ed3ae31ee6149371c10be6c812d787c57"
+    }
+  },
+  "description": {
+    "game_id": "canvas_terminal",
+    "slug": "terminal",
+    "display_name": "Register Operations Console",
+    "variation_id": "canvas_game_1991",
+    "content_revision": "bba7f11564668628d624b97602d036049e5bc7770a996381b708cac486d27759",
+    "variation_title": "Declare float · variation 2",
+    "index": 1,
+    "runtime": "native_canvas",
+    "template_version": "2.0.0",
+    "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+    "week": 7,
+    "level": 7,
+    "difficulty": "standard",
+    "mode": "terminal",
+    "mechanic_family": "terminal",
+    "mission_schema_version": 1,
+    "control_flow_type": null,
+    "map_features": null,
+    "routing_topology": null,
+    "branch_targets": null,
+    "source_week": 7,
+    "source_level": 7,
+    "learning_objective_id": "cp1_w7_l7",
+    "lesson": {
+      "summary": "Basic Parts of C and Variable Declarations",
+      "points": [
+        "Declare float",
+        "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+        "Practice int, float, double and char, with suitable printf formats.",
+        "Names are case sensitive. Do not read an uninitialized automatic local."
+      ],
+      "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+      "practice": "Integer division",
+      "week": 7,
+      "source_week": 7,
+      "source_level": 7,
+      "objective_id": "cp1_w7_l7",
+      "title": "Basic Parts of C and Variable Declarations",
+      "stage_title": "Declare float",
+      "objectives": [
+        "Declare float"
+      ],
+      "sources": [
+        {
+          "title": "Harvard CS50: C basics",
+          "url": "https://cs50.harvard.edu/x/notes/1/"
+        },
+        {
+          "title": "GNU C: variables and scope",
+          "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+        }
+      ],
+      "assessment_kind": "lesson_practice",
+      "coverage": [
+        7
+      ],
+      "exam_coverage": [],
+      "formal_assessment": false
+    },
+    "playable": true,
+    "controls": {
+      "summary": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+      "pause": "Escape",
+      "answers": null
+    },
+    "objective": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement.",
+    "title": "Declare float · variation 2",
+    "subtitle": "Eldritch Ruins – Rune Circle: a circle of glowing runes",
+    "topic": "Basic Parts of C and Variable Declarations",
+    "learning_objectives": [
+      "Declare float"
+    ],
+    "win_condition": "The executed design satisfies every input/output and world-state goal.",
+    "lose_condition": "The available unsuccessful execution checks are exhausted; programs are bounded by the mission's execution limits.",
+    "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+    "time_limit_seconds": 0,
+    "formal_assessment": false,
+    "accuracy_basis": "program_execution_goals",
+    "asset_source": "shared LogiCade media and Kenney CC0 assets",
+    "visual_mode": "terminal",
+    "file_id": "game_1991"
+  },
+  "source_spec": {
+    "file_id": "game_1991",
+    "game_title": "Declare float · variation 2",
+    "game_concept": "A logic puzzle set in Eldritch Ruins – Rune Circle, a circle of glowing runes: the ruin warden must handle echo phantoms while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform ancient keys.",
+    "genre": "terminal programming workbench",
+    "theme": "Eldritch Ruins – Rune Circle: a circle of glowing runes",
+    "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+    "primary_mechanic": "terminal construction and execution",
+    "secondary_mechanics": [
+      "Limited action budget",
+      "Mini-tutorial pop-ups",
+      "Reduced-motion and color-blind-safe UI"
+    ],
+    "player_objective": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+    "win_condition": "The executed solution satisfies every output and world-state check.",
+    "lose_condition": "The available unsuccessful execution checks are exhausted.",
+    "difficulty": "Standard",
+    "estimated_play_time_minutes": 7,
+    "learning_alignment": "CP1 Week 7: Declare float",
+    "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
+    "unique_identity_key": "W7-M11-X3-T03-a3ec3a19",
+    "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Efficiency Trial', and setting 'Rune Circle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+    "week": 7,
+    "level": 7,
+    "trial": 1,
+    "topic": "Basic Parts of C and Variable Declarations",
+    "region": {
+      "id": "w7_ruins",
+      "name": "Eldritch Ruins",
+      "banner": "data/fallback_pool/week_7/w7_ruins.png",
+      "mood": "eerie choir pads and stone-scrape stings"
+    },
+    "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nfloat resource = readInput();\nresource = resource + 15.5;\nprintf(\"%.1f\\n\", resource);\nreturn 0;\n}",
+    "game_settings": {
+      "lives": 3,
+      "hint_count": 2,
+      "time_limit_seconds": 0,
+      "target_score": 340,
+      "action_budget": 17,
+      "streak_target": 10,
+      "rival_speed": 0.95,
+      "enemy_wave_count": 4,
+      "enemy_attack_interval_seconds": 1.8,
+      "starting_score": 0
+    },
+    "tutorial": [
+      "Read the objective, fixtures and command reference.",
+      "Build the circuit or route, or edit the node/adventure program.",
+      "Use Step to inspect state; Run checks the real outputs and goals.",
+      "Revise errors before using the remaining execution checks."
+    ],
+    "canvas_runtime": {
+      "engine": "logicade_canvas_v2",
+      "game_path": "week_7/level7/standard/game_week7_level7_difficulty(Standard)_1.json",
+      "variation_id": "canvas_game_1991",
+      "mode": "terminal",
+      "asset_set": "terminal",
+      "playable": true,
+      "asset_manifest": "games/assets/manifest.json"
+    },
+    "source_player_objective": "Reach the spirit lantern using at most 17 actions, so every code step counts.",
+    "source_win_condition": "The spirit lantern reached with actions_used <= 17.",
+    "source_lose_condition": "actions_used exceeds 17 before the spirit lantern is reached, or lives reach 0.",
+    "source_game_title": "Comprehension Lab – Rune Circle Trial",
+    "source_primary_mechanic": "Comprehension Lab",
+    "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+    "source_time_limit_seconds": 48,
+    "learning_objective_id": "cp1_w7_l7",
+    "source_week": 7,
+    "source_level": 7,
+    "canvas_generation": {
+      "schema_version": 1,
+      "proposal": {
+        "schema_version": 1,
+        "binding": {
+          "week": 7,
+          "level": 7,
+          "source_week": 7,
+          "source_level": 7,
+          "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+          "learning_objective_id": "cp1_w7_l7",
+          "difficulty": "standard",
+          "mechanic_family": "terminal",
+          "required_c_type": "float"
+        },
+        "parameters": {
+          "problem_variant": 2,
+          "primary_value": 15,
+          "secondary_value": 5,
+          "input_values": [
+            -15,
+            0,
+            15
+          ],
+          "layout_seed": 12345
+        }
+      },
+      "parameter_fingerprint": "fce4b782bc424b14a2c93e6023cc65c94116a02e556f54cdfbace1af0741f75f",
+      "model_tag": "qwen2.5:3b",
+      "model_digest": "357c53fb659c",
+      "problem_fingerprint": "79f95c42083a228741f1ad1101ea6c5f95a6bf0f1442101897efed569237fa8d",
+      "runtime_verification": {
+        "passed": true,
+        "cases": 3,
+        "frames": 16,
+        "negative_control": true,
+        "verifier": "shipped_canvas_models_v1"
+      },
+      "generated_at": 1793276607.6160102,
+      "origin": "ollama",
+      "job_id": "6f5442201018cf90a0849fa78dded68154d3243611d1f9b981ee6c42ca977025",
+      "replaces_revision": "e2663928bcb016cea33039eadc73045ed3ae31ee6149371c10be6c812d787c57"
+    }
+  }
+}

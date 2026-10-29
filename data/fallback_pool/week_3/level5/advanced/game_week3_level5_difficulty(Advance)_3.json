@@ -1,30 +1,30 @@
 {
   "file_id": "game_0743",
-  "game_title": "Range Check Bridge – Rope Walk Defense",
+  "game_title": "Negative values · variation 3",
   "game_concept": "A survival strategy set in Coastal Port – Rope Walk, the rope-makers' walk: the sailor must handle jellyfish swarms while practicing conditionals (if / elif / else). Core idea – Range Check Bridge: Test ranges such as 10 <= weight < 20 to let only the right travelers cross.",
-  "genre": "survival strategy",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Rope Walk: the rope-makers' walk",
-  "core_gameplay_loop": "In Rope Walk, repeat each round: Test ranges such as 10 <= weight < 20 to let only the right travelers cross. Each round, jellyfish swarms strike the harbor bell, so respond before the next strike lands. Then check the bridge_load value and advance.",
-  "primary_mechanic": "Range Check Bridge",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Protect the harbor bell from jellyfish swarms in Rope Walk: keep the bridge_load meter above zero by applying the concept correctly until the 34-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 34 seconds while bridge_load > 0.",
-  "lose_condition": "bridge_load drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "player_objective": "Negative values: negate every value. Match all 3 streams; preserve their order. Dataset 3, operand 11.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 5 (applied tier): Range Check Bridge",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Negative values",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M08-X1-T19-5484c69d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Range Check Bridge' (Week 3 slot 8), mission type 'Survival Siege', and setting 'Rope Walk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 5,
   "trial": 3,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how bridge_load changes.",
-    "Step 2: Use the controls to apply the code idea against jellyfish swarms in Rope Walk.",
-    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while bridge_load > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level5/advanced/game_week3_level5_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_0743",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the harbor bell from jellyfish swarms in Rope Walk: keep the bridge_load meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "source_win_condition": "Timer reaches 34 seconds while bridge_load > 0.",
+  "source_lose_condition": "bridge_load drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "source_game_title": "Range Check Bridge – Rope Walk Defense",
+  "source_primary_mechanic": "Range Check Bridge",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w3_l5",
+  "source_week": 3,
+  "source_level": 5
 }

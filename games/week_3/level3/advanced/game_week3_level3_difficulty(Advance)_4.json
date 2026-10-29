@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0684",
+  "variation_id": "canvas_game_0684",
+  "week": 3,
+  "level": 3,
+  "trial": 4,
+  "difficulty": "Advance",
+  "mode": "terminal",
+  "title": "State tracing · variation 4",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Lighthouse Point: the lighthouse on the point",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "State tracing"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "State tracing",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 3,
+    "objective_id": "cp1_w3_l3",
+    "title": "Algorithms",
+    "stage_title": "State tracing",
+    "objectives": [
+      "State tracing"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l3",
+  "source_level": 3,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "State tracing: Trace ACC after every instruction. subtract 10 from each value. Match all 3 streams; preserve their order. Dataset 4, operand 10.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 3980835823,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      15,
+      11,
+      28,
+      8
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 3
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l3_v4_2",
+    "rules": {
+      "max_steps": 590,
+      "max_lines": 60,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 2,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l3",
+    "source_level": 3,
+    "focus": "State tracing",
+    "family": "terminal",
+    "title": "State tracing · variation 4",
+    "objective": "State tracing: Trace ACC after every instruction. subtract 10 from each value. Match all 3 streams; preserve their order. Dataset 4, operand 10.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          9,
+          -2,
+          -11,
+          -3,
+          -1,
+          7
+        ],
+        "expected": [
+          -1,
+          -12,
+          -21,
+          -13,
+          -11,
+          -3
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          7,
+          -5,
+          -7,
+          14,
+          -1,
+          -2
+        ],
+        "expected": [
+          -3,
+          -15,
+          -17,
+          4,
+          -11,
+          -12
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -5,
+          -8,
+          -1,
+          -7,
+          9,
+          7
+        ],
+        "expected": [
+          -15,
+          -18,
+          -11,
+          -17,
+          -1,
+          -3
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nSUB 10\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l3_v4_2",
+      "kind": "program_execution",
+      "prompt": "State tracing: Trace ACC after every instruction. subtract 10 from each value. Match all 3 streams; preserve their order. Dataset 4, operand 10."
+    }
+  ],
+  "source_path": "week_3/level3/advanced/game_week3_level3_difficulty(Advance)_4.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: State tracing",
+  "source_primary_mechanic": "Signal Logic",
+  "source_code_snippet": "if light == 'red':\n    stop()"
+}

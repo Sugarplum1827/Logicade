@@ -1,41 +1,41 @@
 {
   "file_id": "game_2236",
-  "game_title": "Letter Lock – Frozen Waterfall Race",
+  "game_title": "C Scope Circuit · Shadow a global · variation 6",
   "game_concept": "A racing platformer set in Frost Peaks – Frozen Waterfall, a frozen waterfall: the rescue climber must handle frost wyrms while practicing strings & dictionaries. Core idea – Letter Lock: Use string indexing to pull the right letter and crack the lock on the radio mast.",
-  "genre": "racing platformer",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Frozen Waterfall: a frozen waterfall",
-  "core_gameplay_loop": "In Frozen Waterfall, repeat each round: Use string indexing to pull the right letter and crack the lock on the radio mast. Each round the rival advances, and solving the step moves the rescue climber ahead. Then check the lock_letters value and advance.",
-  "primary_mechanic": "Letter Lock",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Ghost replay of best run",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Beat a rival AI to the radio mast by solving code steps involving lock_letters that move the rescue climber forward.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
-  "lose_condition": "The rival reaches the radio mast first, or lives reach 0.",
+  "player_objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, keep local assignments out of a global. Print the scope trace [14, 8], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 8}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Letter Lock",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Shadow a global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M01-X5-T10-58512963",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Letter Lock' (Week 8 slot 1), mission type 'Rival Race', and setting 'Frozen Waterfall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 5,
   "trial": 6,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "word[0]\nword[-1]",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 8;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 13; steps = steps + 1; printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how lock_letters changes.",
-    "Step 2: Use the controls to apply the code idea against frost wyrms in Frozen Waterfall.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level5/standard/game_week8_level5_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_2236",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the radio mast by solving code steps involving lock_letters that move the rescue climber forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "source_lose_condition": "The rival reaches the radio mast first, or lives reach 0.",
+  "source_game_title": "Letter Lock – Frozen Waterfall Race",
+  "source_primary_mechanic": "Letter Lock",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w8_l5",
+  "source_week": 8,
+  "source_level": 5,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "3486174daf97e10e469e4b5748d8069ab6f365c8123bdf6bd088908dad8ec4f8",
+    "lesson_unchanged": true
+  }
 }

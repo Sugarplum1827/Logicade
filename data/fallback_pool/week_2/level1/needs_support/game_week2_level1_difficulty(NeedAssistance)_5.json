@@ -1,30 +1,30 @@
 {
   "file_id": "game_0305",
-  "game_title": "Comparison Duel – Basalt Stair Trial",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A logic puzzle set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the forge smith's power beats the shield shown by magma slimes.",
-  "genre": "logic puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
-  "core_gameplay_loop": "In Basalt Stair, repeat each round: Choose ==, !=, < , > or >= so the forge smith's power beats the shield shown by magma slimes. Each round costs one action, so plan the step so none are wasted. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Reach the ash barrier using at most 18 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The ash barrier reached with actions_used <= 18.",
-  "lose_condition": "actions_used exceeds 18 before the ash barrier is reached, or lives reach 0.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Problem values 15, 5; test inputs [{'a': -10, 'b': 5}, {'a': 0, 'b': 6}, {'a': 20, 'b': 7}, {'a': 15, 'b': 15}, {'a': -15, 'b': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Symbols and sequence",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X3-T09-64a06f80",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Efficiency Trial', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 1,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,71 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
-    "Step 3: Win by meeting the goal: The ash barrier reached with actions_used <= 18."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level1/needs_support/game_week2_level1_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_0305",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the ash barrier using at most 18 actions, so every code step counts.",
+  "source_win_condition": "The ash barrier reached with actions_used <= 18.",
+  "source_lose_condition": "actions_used exceeds 18 before the ash barrier is reached, or lives reach 0.",
+  "source_game_title": "Comparison Duel – Basalt Stair Trial",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l1",
+  "source_week": 2,
+  "source_level": 1,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 1,
+        "source_week": 2,
+        "source_level": 1,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l1",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          0,
+          20
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "99dd5b21dadfbdd2239c37da982f3016967593a12a170e1b5b7be6996ab403e9",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "406d6f856dfe0e70f327df8f994407926a25b41b5729484cce506ccc3dac7c00",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793315965.9070618,
+    "origin": "ollama",
+    "job_id": "eaa51c2ec9d01102958531fa3885024d4440ce24648d770b5373034df53bb81c",
+    "replaces_revision": "bd2c02087bd957ac1b541defbf5c566cc5327ccb3adff3f32837129f00f940ed"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-10-29T23:19:25.907061+00:00"
 }

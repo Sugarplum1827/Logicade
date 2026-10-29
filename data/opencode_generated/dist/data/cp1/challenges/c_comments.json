@@ -1,0 +1,494 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v01",
+    "index": 1,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the value stored and the value printed.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 3 + 4; // sum the values",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "total",
+          "type": "final value"
+        },
+        {
+          "name": "printed",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "7"
+        },
+        {
+          "id": "v2",
+          "text": "7"
+        },
+        {
+          "id": "v3",
+          "text": "8"
+        },
+        {
+          "id": "v4",
+          "text": "6"
+        }
+      ],
+      "answer": {
+        "total": "v1",
+        "printed": "v2"
+      }
+    },
+    "explanation": "The comment has no effect: total is 7 and 7 is printed.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v02",
+    "index": 2,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line as code the compiler runs or a comment it ignores.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "code",
+          "label": "Executed code",
+          "desc": "Affects the program"
+        },
+        {
+          "id": "comment",
+          "label": "Comment",
+          "desc": "Ignored by the compiler"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int total = 3 + 4;",
+          "bin": "code"
+        },
+        {
+          "id": "i2",
+          "text": "// sum the values",
+          "bin": "comment"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"%d\\n\", total);",
+          "bin": "code"
+        },
+        {
+          "id": "i4",
+          "text": "/* temporary note */",
+          "bin": "comment"
+        },
+        {
+          "id": "i5",
+          "text": "return 0;",
+          "bin": "code"
+        },
+        {
+          "id": "i6",
+          "text": "// TODO: add input",
+          "bin": "comment"
+        }
+      ]
+    },
+    "explanation": "Comments document intent but never execute.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v03",
+    "index": 3,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "/* start of a block comment",
+        "int main(void) {",
+        "    printf(\"Hi\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 0,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The block comment is never closed with */, so the compiler reports an error.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v04",
+    "index": 4,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Separate real code from comments.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [],
+      "scopes": [
+        {
+          "id": "code",
+          "label": "Code",
+          "desc": "Compiled into the program"
+        },
+        {
+          "id": "comment",
+          "label": "Comments",
+          "desc": "For human readers only"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int main(void)",
+          "scope": "code"
+        },
+        {
+          "id": "d2",
+          "text": "// calculate the total",
+          "scope": "comment"
+        },
+        {
+          "id": "d3",
+          "text": "total = total + 1;",
+          "scope": "code"
+        },
+        {
+          "id": "d4",
+          "text": "/* end of program */",
+          "scope": "comment"
+        }
+      ]
+    },
+    "explanation": "Only the two code lines are compiled.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v05",
+    "index": 5,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c comments term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "//"
+        },
+        {
+          "id": "l2",
+          "text": "/* ... */"
+        },
+        {
+          "id": "l3",
+          "text": "Comment"
+        },
+        {
+          "id": "l4",
+          "text": "Readable code"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Single-line comment"
+        },
+        {
+          "id": "r2",
+          "text": "Multi-line block comment"
+        },
+        {
+          "id": "r3",
+          "text": "Text for humans, ignored by the compiler"
+        },
+        {
+          "id": "r4",
+          "text": "Code whose purpose is easy to follow"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v06",
+    "index": 6,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the commented program.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int total = 3 + 4; {{b0}} sum the values",
+        "{{b1}}(\" %d\", total);",
+        "return 0;"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "single-line comment marker",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "output function",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "//"
+        },
+        {
+          "id": "b2",
+          "text": "printf"
+        },
+        {
+          "id": "b3",
+          "text": "/*"
+        },
+        {
+          "id": "b4",
+          "text": "scanf"
+        },
+        {
+          "id": "b5",
+          "text": "#"
+        }
+      ]
+    },
+    "explanation": "Use // for a line comment and printf to display the result.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v07",
+    "index": 7,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 3 + 4; // sum the values",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "7",
+      "accept": [
+        "7"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The comment is ignored, so only 3 + 4 affects the result."
+    },
+    "explanation": "The program produces 7.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v08",
+    "index": 8,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 3 + 4; // sum the values",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "total",
+        "printed"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "total": "7",
+            "printed": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "total": "7",
+            "printed": "7"
+          }
+        }
+      ],
+      "ask": [
+        "total",
+        "printed"
+      ],
+      "answer": {
+        "total": "7",
+        "printed": "7"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is total = 7, printed = 7.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v09",
+    "index": 9,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c comments in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Write the statement that performs the work"
+        },
+        {
+          "id": "s2",
+          "text": "Add a comment that explains why"
+        },
+        {
+          "id": "s3",
+          "text": "Compile the program"
+        },
+        {
+          "id": "s4",
+          "text": "Run it and confirm the comment had no effect"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Write the statement that performs the work → Add a comment that explains why → Compile the program → Run it and confirm the comment had no effect",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_comments_v10",
+    "index": 10,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a single-line comment that explains a total calculation.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "//"
+        },
+        {
+          "id": "t2",
+          "text": "add"
+        },
+        {
+          "id": "t3",
+          "text": "the"
+        },
+        {
+          "id": "t4",
+          "text": "items"
+        },
+        {
+          "id": "t5",
+          "text": "/*"
+        },
+        {
+          "id": "t6",
+          "text": "*/"
+        },
+        {
+          "id": "t7",
+          "text": "#"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "// comments run to the end of the line and are ignored by the compiler.",
+    "concept_slug": "c_comments",
+    "concept_name": "C Comments"
+  }
+]

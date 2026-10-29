@@ -1,30 +1,30 @@
 {
   "file_id": "game_1940",
-  "game_title": "Stack Of Plates – Ivy Tower Rush",
+  "game_title": "Signed values · variation 10",
   "game_concept": "A action puzzle set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
-  "genre": "action puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
-  "core_gameplay_loop": "In Ivy Tower, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round, a new carved tiles challenge appears; solve it to bank points before time drains. Then check the stack_balance value and advance.",
-  "primary_mechanic": "Stack Of Plates",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Limited undo button",
     "Combo multiplier"
   ],
-  "player_objective": "Collect 260 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 260 within 42 seconds.",
-  "lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "player_objective": "Signed values: declare resource as int, apply -resource, and print each result with %d. Dataset 10 starts with [-3, 0, 16, 19]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Stack Of Plates",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Signed values",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M05-X2-T18-016a8ce4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Resource Rush', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 5,
   "trial": 10,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stack_balance changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
-    "Step 3: Win by meeting the goal: score >= 260 within 42 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level5/standard/game_week7_level5_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_1940",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 260 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 260 within 42 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "source_game_title": "Stack Of Plates – Ivy Tower Rush",
+  "source_primary_mechanic": "Stack Of Plates",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w7_l5",
+  "source_week": 7,
+  "source_level": 5
 }

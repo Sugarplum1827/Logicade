@@ -1,30 +1,30 @@
 {
   "file_id": "game_0363",
-  "game_title": "Modulo Gate – Vent Garden Defense",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A action defense set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Vent Garden open (even, odd, divisible by 3).",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
-  "core_gameplay_loop": "In Vent Garden, repeat each round: Use % to decide which gates in Vent Garden open (even, odd, divisible by 3). Each round, smoke serpents strike the ash barrier, so respond before the next strike lands. Then check the gates_open value and advance.",
-  "primary_mechanic": "Modulo Gate",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Hint tokens that reveal one line of code",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Protect the ash barrier from smoke serpents in Vent Garden: keep the gates_open meter above zero by applying the concept correctly until the 50-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 50 seconds while gates_open > 0.",
-  "lose_condition": "gates_open drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 21, 5; test inputs [{'width': 15, 'height': 5}, {'width': 10, 'height': 6}, {'width': 20, 'height': 7}, {'width': 21, 'height': 21}, {'width': 21, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Modulo Gate",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M03-X1-T19-1c08a0cb",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Survival Siege', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,71 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gates_open changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
-    "Step 3: Win by meeting the goal: Timer reaches 50 seconds while gates_open > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/needs_support/game_week2_level3_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_0363",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the ash barrier from smoke serpents in Vent Garden: keep the gates_open meter above zero by applying the concept correctly until the 50-second timer ends.",
+  "source_win_condition": "Timer reaches 50 seconds while gates_open > 0.",
+  "source_lose_condition": "gates_open drops to 0, or lives reach 0, before the 50-second timer ends.",
+  "source_game_title": "Modulo Gate – Vent Garden Defense",
+  "source_primary_mechanic": "Modulo Gate",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 3,
+        "source_week": 2,
+        "source_level": 3,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l3",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 21,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          10,
+          20
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "e139e80c2328c9370e9607fbfee36d92ef6522b56efd849a4fb7aeab468eeb39",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "fabc4966a3f503f1eb4674d8725641c16db52fee10ebe644378d896c070bfc58",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793296426.7721646,
+    "origin": "ollama",
+    "job_id": "9e41077ba124b6140a3d47d6b48ef25b02ebbea889f5ae0c1181a9335ee0bff7",
+    "replaces_revision": "22ff5bb9d1576cb11456120f030eb398aba4a8be4b022d5fcf4cf73882430803"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-10-29T17:53:46.772164+00:00"
 }

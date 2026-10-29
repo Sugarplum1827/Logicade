@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "26_haunted_mansion_explorer",
+  "slug": "haunted_mansion_explorer",
+  "display_name": "Haunted Mansion Explorer",
+  "module_family": "logic_adventure",
+  "learning_target": "flowcharts and branching logic",
+  "core_brief": "Use flowchart logic to complete a sequence of harmless exorcism tasks.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "mansion",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#b69cff",
+  "tint": 13429431,
+  "variation_id": "26_haunted_mansion_explorer_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 3611897481,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_day",
+    "zones": [
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night"
+    ],
+    "tile": "themes.urban.tile_grass",
+    "player": "themes.urban.player_b",
+    "enemy": "themes.urban.enemy_b",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier_b",
+      "bush": "themes.urban.tree_b",
+      "slime": "themes.urban.tree",
+      "bee": "themes.urban.tree_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/haunted_mansion_explorer.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

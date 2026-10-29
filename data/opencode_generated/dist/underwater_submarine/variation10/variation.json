@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "08_underwater_submarine",
+  "slug": "underwater_submarine",
+  "display_name": "Underwater Submarine",
+  "module_family": "submarine_exploration",
+  "learning_target": "variables, comparison, and coordinate reasoning",
+  "core_brief": "Use depth variables and sonar readings to navigate safely to a treasure marker.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "submarine",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "mechanic": "Grid route",
+  "accent": "#ff9f43",
+  "tint": 15382481,
+  "variation_id": "08_underwater_submarine_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 2858562512,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_1",
+    "zones": [
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_green",
+    "enemy": "themes.underwater.enemy_grey_long",
+    "coin": "themes.underwater.coin_bubble_a",
+    "goal": "themes.underwater.goal_chest_pearl",
+    "obstacles": {
+      "spike": "themes.underwater.seaweed_orange",
+      "bush": "themes.underwater.seaweed_orange",
+      "slime": "themes.underwater.seaweed_green",
+      "bee": "themes.underwater.seaweed_green"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/underwater_submarine.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

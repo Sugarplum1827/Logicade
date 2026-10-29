@@ -1,0 +1,79 @@
+{
+  "concept_id": "48_retro_rpg_tavern",
+  "slug": "retro_rpg_tavern",
+  "learning_target": "dialogue trees and branching logic",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a dialogue tree?",
+      "options": [
+        "A list of items",
+        "A set of choices leading to outcomes",
+        "A type of tavern",
+        "A loop"
+      ],
+      "answer_index": 1,
+      "explanation": "A dialogue tree branches from each choice toward different responses and outcomes."
+    },
+    {
+      "id": "q2",
+      "question": "What does a branch represent?",
+      "options": [
+        "A choice and its result",
+        "A variable",
+        "A comment",
+        "A fixed ending"
+      ],
+      "answer_index": 0,
+      "explanation": "Each branch is one choice and the path it opens."
+    },
+    {
+      "id": "q3",
+      "question": "Why ask follow-up questions?",
+      "options": [
+        "To learn more clues",
+        "To end the quest",
+        "To avoid dialogue",
+        "To change the language"
+      ],
+      "answer_index": 0,
+      "explanation": "Follow-up questions reveal information needed to complete the quest."
+    },
+    {
+      "id": "q4",
+      "question": "What should you do if a choice leads to a dead end?",
+      "options": [
+        "Repeat the same choice",
+        "Restart the whole game",
+        "Backtrack and try another branch",
+        "Ignore the quest"
+      ],
+      "answer_index": 2,
+      "explanation": "Backtracking lets you explore another branch without losing progress."
+    },
+    {
+      "id": "q5",
+      "question": "What is a quest flag?",
+      "options": [
+        "A type of drink",
+        "A tavern table",
+        "A dialogue color",
+        "A variable that records progress"
+      ],
+      "answer_index": 3,
+      "explanation": "A quest flag stores whether an event has happened or a clue was found."
+    },
+    {
+      "id": "q6",
+      "question": "Why keep track of clues?",
+      "options": [
+        "To change the music",
+        "To unlock the correct ending",
+        "To avoid all choices",
+        "To make the tavern louder"
+      ],
+      "answer_index": 1,
+      "explanation": "Clues determine which dialogue branches and endings become available."
+    }
+  ]
+}

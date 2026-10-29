@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" style="--accent: #ff8fd8; --accent-soft: #ff8fd833">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070d17" />
+    <meta
+      name="description"
+      content="Rhythm Code Beats: Variation 10: Rival Challenge. Practise command order and pattern recognition with six adaptive interactive tasks in LogiCade."
+    />
+    <title>Rhythm Code Beats · Variation 10: Rival Challenge</title>
+    <link rel="icon" href="../../public/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../engine/styles.css" />
+  </head>
+  <body data-track="classic" data-concept="rhythm_code_beats" data-variation="10" data-mode="rhythm">
+    <div class="shell">
+      <header class="topbar">
+        <a class="back" id="catalog-link" href="../../index.html">← All 1,000 variations</a>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../../index.html">Catalog</a> /
+          <a id="concept-link" href="../index.html">Rhythm Code Beats</a> /
+          <strong>Variation 10</strong>
+        </nav>
+        <span class="spacer"></span>
+        <span class="target-pill"><span>Learning target</span> command order and pattern recognition</span>
+      </header>
+
+      <main class="layout">
+        <section class="stage-card" aria-label="Game">
+          <div
+            id="game-root"
+            data-variation="./variation.json"
+            data-questions="../../data/questions/rhythm_code_beats.json"
+            data-manifest="../../public/data/asset_manifest.json"
+            data-asset-base="../../public/"
+            data-catalog="../../index.html"
+          ></div>
+          <div class="stage-foot">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Adaptive local runtime · no network calls</span>
+            <span class="grow"></span>
+            <span class="pill theme">Space art</span>
+            <span class="pill accent" id="mode-label">Beat matcher</span>
+            <span class="pill"><span id="question-count">6</span> activities</span>
+          </div>
+        </section>
+
+        <aside class="info">
+          <div class="card">
+            <p class="eyebrow">LogiCade · Concept 09</p>
+            <h1 id="concept-name">Rhythm Code Beats</h1>
+            <p class="variation-title" id="variation-name">Variation 10: Rival Challenge</p>
+            <p class="brief" id="core-brief">Match code commands to the beat to clear bugs and keep the music loop intact.</p>
+            <p class="target">
+              <strong>Learning target</strong>
+              <span id="learning-target">command order and pattern recognition</span>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">This build</p>
+            <dl class="meta">
+              <div><dt>Track</dt><dd>Classic concepts</dd></div>
+              <div><dt>Presentation</dt><dd>Beat matcher</dd></div>
+              <div><dt>Theme</dt><dd>rhythm</dd></div>
+              <div><dt>Art set</dt><dd>Space</dd></div>
+              <div><dt>Mechanics</dt><dd>6 adaptive tasks</dd></div>
+              <div><dt>Bank</dt><dd>6 local prompts</dd></div>
+              <div><dt>Seed</dt><dd>4258681899</dd></div>
+            </dl>
+            <p class="route-brief"><strong>How it plays.</strong> Each prompt is rebuilt as an interactive task: order the steps, assemble a line, repair a blank, classify ideas, or type the answer from memory. No four-button multiple choice.</p>
+            <p class="fine">Prompts shuffle deterministically from the local bank; the shared runtime adapts each one to the current mechanic.</p>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">Controls</p>
+            <ul class="controls-list">
+              <li><kbd>Click</kbd><span>select, place, or sort a piece</span></li>
+              <li><kbd>Enter</kbd><span>check the answer</span></li>
+              <li><kbd>H</kbd><span>show a hint</span></li>
+              <li><kbd>Esc</kbd><span>pause / resume</span></li>
+              <li><kbd>R</kbd><span>restart the run</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">Navigate</p>
+            <div class="links">
+              <a class="link-row" href="../index.html"><span>All variations in Rhythm Code Beats</span><span class="arrow">→</span></a>
+              <a class="link-row" id="prev-link" href="../variation9/"><span>Previous variation</span><span class="arrow">←</span></a>
+              <span class="link-row is-disabled" id="next-link" aria-disabled="true"><span>Next variation</span><span class="arrow">→</span></span>
+              <a class="link-row" href="../../index.html"><span>Full 1,000-variation catalog</span><span class="arrow">→</span></a>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <div id="fatal-error" class="fatal" role="alert" hidden>
+      <div><strong>The game could not start.</strong><span id="fatal-error-message"></span></div>
+    </div>
+    <p class="sr-only" id="sr-status" role="status" aria-live="polite"></p>
+    <p class="sr-only" id="sr-question" aria-live="polite"></p>
+    <p class="sr-only" id="sr-feedback" aria-live="polite"></p>
+    <noscript><p class="fatal">This game needs JavaScript enabled to run.</p></noscript>
+    <script type="module" src="../../engine/play.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "concept_id": "11_cooking_kitchen_automation",
+  "slug": "cooking_kitchen_automation",
+  "learning_target": "loops and ordered steps",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does recipe order matter?",
+      "options": [
+        "It changes the plate color",
+        "Later steps depend on earlier ones",
+        "It makes the code shorter",
+        "It removes the timer"
+      ],
+      "answer_index": 1,
+      "explanation": "Many recipe steps rely on earlier preparation, so the order changes the result."
+    },
+    {
+      "id": "q2",
+      "question": "Which loop repeats a step four times?",
+      "options": [
+        "print(4)",
+        "def i():",
+        "for i in range(4):",
+        "if i == 4:"
+      ],
+      "answer_index": 2,
+      "explanation": "range(4) produces four iterations, so the loop body runs four times."
+    },
+    {
+      "id": "q3",
+      "question": "What is a nested loop?",
+      "options": [
+        "A loop inside another loop",
+        "A variable",
+        "A comment",
+        "A loop with no body"
+      ],
+      "answer_index": 0,
+      "explanation": "A nested loop is placed inside the body of another loop."
+    },
+    {
+      "id": "q4",
+      "question": "What should you check before repeating a recipe step?",
+      "options": [
+        "The stopping condition",
+        "The timer brand",
+        "The first step only",
+        "The plate color"
+      ],
+      "answer_index": 0,
+      "explanation": "A loop needs a clear stopping condition so it does not repeat forever."
+    },
+    {
+      "id": "q5",
+      "question": "What does `while timer > 0:` do?",
+      "options": [
+        "Runs once",
+        "Creates a list",
+        "Stops immediately",
+        "Repeats while the condition is true"
+      ],
+      "answer_index": 3,
+      "explanation": "The body repeats as long as timer is greater than zero."
+    },
+    {
+      "id": "q6",
+      "question": "Which step should come first?",
+      "options": [
+        "Clean the plate",
+        "Preheat the oven",
+        "Serve the cake",
+        "Frost the cake"
+      ],
+      "answer_index": 1,
+      "explanation": "The oven must be preheated before baking begins."
+    }
+  ]
+}

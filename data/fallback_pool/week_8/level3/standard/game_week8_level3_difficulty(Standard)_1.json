@@ -1,41 +1,41 @@
 {
   "file_id": "game_2171",
-  "game_title": "Key Checkpoint – Rope Line Race",
+  "game_title": "C Scope Circuit · Global initialization · variation 1",
   "game_concept": "A adventure race set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Key Checkpoint: Check key membership with in before reading dictionary values.",
-  "genre": "adventure race",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Rope Line: a long fixed rope line",
-  "core_gameplay_loop": "In Rope Line, repeat each round: Check key membership with in before reading dictionary values. Each round the rival advances, and solving the step moves the avalanche scout ahead. Then check the checkpoint value and advance.",
-  "primary_mechanic": "Key Checkpoint",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Beat a rival AI to the rope bridge by solving code steps involving checkpoint that move the avalanche scout forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
-  "lose_condition": "The rival reaches the rope bridge first, or lives reach 0.",
+  "player_objective": "Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, observe zero-initialized file-scope state. Print the scope trace [6, 0], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 0}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Key Checkpoint",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Global initialization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M11-X5-T15-df0973c1",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Key Checkpoint' (Week 8 slot 11), mission type 'Rival Race', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 3,
   "trial": 1,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "if 'pass' in guests:",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps;\nint main(void)\n{\n  int signal = readInput();\nint local = 6;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how checkpoint changes.",
-    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.75)."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level3/standard/game_week8_level3_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_2171",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the rope bridge by solving code steps involving checkpoint that move the avalanche scout forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
+  "source_lose_condition": "The rival reaches the rope bridge first, or lives reach 0.",
+  "source_game_title": "Key Checkpoint – Rope Line Race",
+  "source_primary_mechanic": "Key Checkpoint",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w8_l3",
+  "source_week": 8,
+  "source_level": 3,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "87d3e35b462945d98ee1305f13b47c21c0d1b6799a6cbd5150914a2c36268963",
+    "lesson_unchanged": true
+  }
 }

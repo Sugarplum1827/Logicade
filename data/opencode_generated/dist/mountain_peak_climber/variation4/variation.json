@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "42_mountain_peak_climber",
+  "slug": "mountain_peak_climber",
+  "display_name": "Mountain Peak Climber",
+  "module_family": "climbing_platformer",
+  "learning_target": "loop iterations and bounds",
+  "core_brief": "Use loop iterations to climb a route while respecting safe stopping points.",
+  "mode": "runner",
+  "mode_label": "Route runner",
+  "skin": "mountain",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Route runner",
+  "accent": "#6ec6ff",
+  "tint": 12053181,
+  "variation_id": "42_mountain_peak_climber_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 3272318583,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_1",
+    "zones": [
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_sprout",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.rock",
+      "bush": "themes.farm.fence",
+      "slime": "themes.farm.wheat",
+      "bee": "themes.farm.bush"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/mountain_peak_climber.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

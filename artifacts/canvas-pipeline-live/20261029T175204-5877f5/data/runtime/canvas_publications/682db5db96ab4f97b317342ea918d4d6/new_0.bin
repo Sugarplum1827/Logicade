@@ -1,0 +1,115 @@
+{
+  "file_id": "game_0043",
+  "game_title": "Flowchart Lab · Rectangle area",
+  "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
+  "genre": "Drag-and-drop executable flowchart puzzle",
+  "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
+  "primary_mechanic": "Drag-and-drop flowchart construction",
+  "secondary_mechanics": [
+    "Streak combo meter",
+    "Power-up crates for perfect rounds",
+    "Ghost replay of best run"
+  ],
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 20, 5; test inputs [{'width': 10, 'height': 5}, {'width': 15, 'height': 6}, {'width': 20, 'height': 7}, {'width': 5, 'height': 8}, {'width': 5, 'height': 9}, {'width': 10, 'height': 10}, {'width': 20, 'height': 20}, {'width': 20, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
+  "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 5,
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
+  "unique_identity_key": "W1-M13-X4-T07-5fd58eac",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Print Probe' (Week 1 slot 13), mission type 'Streak Challenge', and setting 'Throne Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 1,
+  "level": 2,
+  "trial": 3,
+  "topic": "Orientation",
+  "region": {
+    "id": "w1_kingdom",
+    "name": "The Kingdom",
+    "banner": "data/fallback_pool/week_1/w1_kingdom.png",
+    "mood": "bright medieval lute and fanfare with market chatter"
+  },
+  "code_snippet": "print(shield)",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 0,
+    "target_score": 140,
+    "action_budget": 15,
+    "streak_target": 8,
+    "rival_speed": 0.7,
+    "enemy_wave_count": 3,
+    "enemy_attack_interval_seconds": 2.55,
+    "starting_score": 0,
+    "source_time_limit_seconds": 33
+  },
+  "tutorial": [
+    "Read the requested procedure.",
+    "Drag correctly shaped blocks into the chart and follow the arrows.",
+    "Select Check chart to run example inputs. Revise incorrect steps and try again."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_0043",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_primary_mechanic": "Print Probe",
+  "source_game_title": "Print Probe – Throne Hall Streak",
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 20,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          15,
+          20,
+          -5,
+          5,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "0129defb4e339fae395afe3bcc19d64fc94b6f211a93070d48137b628d475924",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "b79f369d7a51965d5bbebbcf443c5cc129dedf68a48e9ddd94b861de371a2b0b",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 8,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793296345.644071,
+    "origin": "ollama",
+    "job_id": "beb34fb48f10e4c8f76a29d7a31ea20fb2981d4b5b599a3d66515bda14e6a495",
+    "replaces_revision": "cdf18e13d5333911bca205aa9f868b3e8f3682a3e38b7acb46465377ebc1cb4e"
+  },
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "is_fallback": false,
+  "generated_at": "2026-10-29T17:52:25.644071+00:00"
+}

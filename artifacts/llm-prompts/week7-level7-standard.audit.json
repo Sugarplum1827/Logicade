@@ -1,0 +1,57 @@
+{
+  "objective": "Declare float",
+  "binding": {
+    "week": 7,
+    "level": 7,
+    "source_week": 7,
+    "source_level": 7,
+    "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+    "learning_objective_id": "cp1_w7_l7",
+    "difficulty": "standard",
+    "mechanic_family": "terminal",
+    "required_c_type": "float"
+  },
+  "prompt_file": "C:\\Users\\Shiela\\OneDrive\\Apps\\Documents\\thesis_System\\Logicade\\artifacts\\llm-prompts\\week7-level7-standard.prompt.txt",
+  "published": false,
+  "model_available": true,
+  "model": "qwen2.5:3b",
+  "proposal": {
+    "schema_version": 1,
+    "binding": {
+      "week": 7,
+      "level": 7,
+      "source_week": 7,
+      "source_level": 7,
+      "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+      "learning_objective_id": "cp1_w7_l7",
+      "difficulty": "standard",
+      "mechanic_family": "terminal",
+      "required_c_type": "float"
+    },
+    "parameters": {
+      "problem_variant": 2,
+      "primary_value": 15,
+      "secondary_value": 5,
+      "input_values": [
+        -10,
+        0,
+        20
+      ],
+      "layout_seed": 12345
+    }
+  },
+  "generation": {
+    "verification_result": "canvas_parameter_proposal",
+    "proposal_valid": true,
+    "runtime_verified": false,
+    "published": false,
+    "requires_runtime_verification": true,
+    "repaired": true,
+    "fallback": false,
+    "attempts": 2,
+    "parameter_fingerprint": "e22ada28ef8fdd154806483270d7ca49e79be3d9b61d9e43df2a2a08c209af66",
+    "learning_objective_id": "cp1_w7_l7",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c"
+  }
+}

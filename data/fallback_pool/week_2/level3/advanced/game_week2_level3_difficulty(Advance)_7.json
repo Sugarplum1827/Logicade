@@ -1,30 +1,30 @@
 {
   "file_id": "game_0387",
-  "game_title": "Compound Combo – Obsidian Quarry Streak",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A card battler set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
-  "genre": "card battler",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
-  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round poses one decision; a wrong answer breaks the streak. Then check the energy value and advance.",
-  "primary_mechanic": "Compound Combo",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about energy to power up the forge smith and open the ember furnace.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 7: {'width': 8, 'height': 9}; {'width': 10, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Compound Combo",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M12-X4-T03-0a1abdda",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Streak Challenge', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how energy changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/advanced/game_week2_level3_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0387",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about energy to power up the forge smith and open the ember furnace.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Compound Combo – Obsidian Quarry Streak",
+  "source_primary_mechanic": "Compound Combo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

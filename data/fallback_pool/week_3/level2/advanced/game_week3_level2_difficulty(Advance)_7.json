@@ -1,30 +1,30 @@
 {
   "file_id": "game_0657",
-  "game_title": "Branching Tale – Harbor Docks Rush",
+  "game_title": "Ordered operations · variation 7",
   "game_concept": "A speed quiz set in Coastal Port – Harbor Docks, busy wooden harbor docks: the sailor must handle rogue crabs while practicing conditionals (if / elif / else). Core idea – Branching Tale: Make story choices that run different if/elif branches toward different endings.",
-  "genre": "speed quiz",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Harbor Docks: busy wooden harbor docks",
-  "core_gameplay_loop": "In Harbor Docks, repeat each round: Make story choices that run different if/elif branches toward different endings. Each round, a new ship ropes challenge appears; solve it to bank points before time drains. Then check the story_trust value and advance.",
-  "primary_mechanic": "Branching Tale",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Ghost replay of best run",
     "Combo multiplier"
   ],
-  "player_objective": "Collect 180 points of ship ropes by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 180 within 26 seconds.",
-  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "player_objective": "Ordered operations: add 12, then double. Match all 3 streams; preserve their order. Dataset 7, operand 12.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 2 (intro tier): Branching Tale",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Ordered operations",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M12-X2-T01-7672ed2e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Branching Tale' (Week 3 slot 12), mission type 'Resource Rush', and setting 'Harbor Docks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 2,
   "trial": 7,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 26,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how story_trust changes.",
-    "Step 2: Use the controls to apply the code idea against rogue crabs in Harbor Docks.",
-    "Step 3: Win by meeting the goal: score >= 180 within 26 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level2/advanced/game_week3_level2_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0657",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 180 points of ship ropes by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 180 within 26 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "source_game_title": "Branching Tale – Harbor Docks Rush",
+  "source_primary_mechanic": "Branching Tale",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 26,
+  "learning_objective_id": "cp1_w3_l2",
+  "source_week": 3,
+  "source_level": 2
 }

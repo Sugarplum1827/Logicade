@@ -2,9 +2,9 @@
   "file_id": "game_0292",
   "game_title": "Constant Guardian – Royal Granary Trial",
   "game_concept": "A puzzle set in The Kingdom – Royal Granary, the king's grain stores: the squire must handle siege rats while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the castle gate.",
-  "genre": "puzzle",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Royal Granary: the king's grain stores",
-  "core_gameplay_loop": "In Royal Granary, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the castle gate. Each round costs one action, so plan the step so none are wasted. Then check the energy value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Constant Guardian",
   "secondary_mechanics": [
     "Limited action budget",
@@ -12,19 +12,19 @@
     "Bonus coins for fast correct moves"
   ],
   "player_objective": "Reach the castle gate using at most 15 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "The castle gate reached with actions_used <= 15.",
   "lose_condition": "actions_used exceeds 15 before the castle gate is reached, or lives reach 0.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 10 (extended tier): Constant Guardian",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M07-X3-T02-57e669cc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Efficiency Trial', and setting 'Royal Granary'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 10,
   "trial": 2,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how energy changes.",
     "Step 2: Use the controls to apply the code idea against siege rats in Royal Granary.",
     "Step 3: Win by meeting the goal: The castle gate reached with actions_used <= 15."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level10/advanced/game_week1_level10_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_0292",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

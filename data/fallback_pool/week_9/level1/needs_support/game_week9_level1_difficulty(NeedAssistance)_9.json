@@ -1,30 +1,30 @@
 {
   "file_id": "game_2409",
-  "game_title": "Edge Case Hunter – Merchant Waystation Race",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A strategy race set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round the rival advances, and solving the step moves the scarab scholar ahead. Then check the edge_cases value and advance.",
-  "primary_mechanic": "Edge Case Hunter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Beat a rival AI to the sundial by solving code steps involving edge_cases that move the scarab scholar forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
-  "lose_condition": "The rival reaches the sundial first, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 9: {'a': 14, 'b': 9}; {'a': -9, 'b': -11}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Edge Case Hunter",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M09-X5-T17-cd79551d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Rival Race', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how edge_cases changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/needs_support/game_week9_level1_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_2409",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the sundial by solving code steps involving edge_cases that move the scarab scholar forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "source_lose_condition": "The rival reaches the sundial first, or lives reach 0.",
+  "source_game_title": "Edge Case Hunter – Merchant Waystation Race",
+  "source_primary_mechanic": "Edge Case Hunter",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

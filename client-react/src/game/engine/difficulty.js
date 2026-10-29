@@ -7,7 +7,7 @@ window.LogiCadeDifficulty = (function () {
      * Apply the §10 threshold table. Boundary is 60% (authoritative),
      * not the 0.50 used in the narrative pseudocode.
      */
-    function nextDifficulty(firstAttemptAccuracy, fullLevelReplays, totalErrors = 0) {
+    function nextDifficulty(firstAttemptAccuracy, fullLevelReplays, _totalErrors = 0) {
         if (typeof firstAttemptAccuracy !== 'number' || firstAttemptAccuracy < 0 || firstAttemptAccuracy > 1) {
             throw new Error('firstAttemptAccuracy must be in [0, 1]');
         }

@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0815",
+  "variation_id": "canvas_game_0815",
+  "week": 3,
+  "level": 8,
+  "trial": 5,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Debug ordering · variation 5",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Fish Market: a fish market full of crates",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "Debug ordering"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Debug ordering",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 8,
+    "objective_id": "cp1_w3_l8",
+    "title": "Algorithms",
+    "stage_title": "Debug ordering",
+    "objectives": [
+      "Debug ordering"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l8",
+  "source_level": 8,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Debug ordering: Repair the reversed arithmetic instructions in the starter. add 14, then double. Match all 3 streams; preserve their order. Dataset 5, operand 14.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 646876630,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      3,
+      31,
+      25,
+      24
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 2
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l8_v5_0",
+    "rules": {
+      "max_steps": 740,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l8",
+    "source_level": 8,
+    "focus": "Debug ordering",
+    "family": "terminal",
+    "title": "Debug ordering · variation 5",
+    "objective": "Debug ordering: Repair the reversed arithmetic instructions in the starter. add 14, then double. Match all 3 streams; preserve their order. Dataset 5, operand 14.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          19,
+          12,
+          8,
+          7
+        ],
+        "expected": [
+          66,
+          52,
+          44,
+          42
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -8,
+          15,
+          10,
+          -14
+        ],
+        "expected": [
+          12,
+          58,
+          48,
+          0
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -8,
+          -7,
+          10,
+          -1
+        ],
+        "expected": [
+          12,
+          14,
+          48,
+          26
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\nMUL 2\nADD 14\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nADD 14\nMUL 2\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l8_v5_0",
+      "kind": "program_execution",
+      "prompt": "Debug ordering: Repair the reversed arithmetic instructions in the starter. add 14, then double. Match all 3 streams; preserve their order. Dataset 5, operand 14."
+    }
+  ],
+  "source_path": "week_3/level8/needs_support/game_week3_level8_difficulty(NeedAssistance)_5.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Debug ordering",
+  "source_primary_mechanic": "Not Negator",
+  "source_code_snippet": "if not alarm_on:"
+}

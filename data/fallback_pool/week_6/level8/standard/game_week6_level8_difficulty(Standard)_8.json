@@ -1,30 +1,30 @@
 {
   "file_id": "game_1728",
-  "game_title": "Return Vault – Chimney Roofs Rush",
+  "game_title": "Repair a short program · variation 8",
   "game_concept": "A speed quiz set in Snowy Hold – Chimney Roofs, snowy chimney rooftops: the sled courier must handle blizzard sprites while practicing functions. Core idea – Return Vault: Use return to send a computed value back to the caller and open the larder door.",
-  "genre": "speed quiz",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Chimney Roofs: snowy chimney rooftops",
-  "core_gameplay_loop": "In Chimney Roofs, repeat each round: Use return to send a computed value back to the caller and open the larder door. Each round, a new flint stones challenge appears; solve it to bank points before time drains. Then check the vault value and advance.",
-  "primary_mechanic": "Return Vault",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Collect 380 points of flint stones by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 380 within 51 seconds.",
-  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "player_objective": "Maze 8 (17×13, 42 junctions): collect 3 crystal(s) from the branches and reach beacon (15, 7). Use a C main program to Repair a short program. Print [27]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Return Vault",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Repair a short program",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M03-X2-T10-c21b0927",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Return Vault' (Week 6 slot 3), mission type 'Resource Rush', and setting 'Chimney Roofs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 8,
   "trial": 8,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how vault changes.",
-    "Step 2: Use the controls to apply the code idea against blizzard sprites in Chimney Roofs.",
-    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level8/standard/game_week6_level8_difficulty(Standard)_8.json",
+    "variation_id": "canvas_game_1728",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 380 points of flint stones by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 380 within 51 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "source_game_title": "Return Vault – Chimney Roofs Rush",
+  "source_primary_mechanic": "Return Vault",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w6_l8",
+  "source_week": 6,
+  "source_level": 8
 }

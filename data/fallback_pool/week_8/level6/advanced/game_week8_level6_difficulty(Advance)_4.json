@@ -1,41 +1,41 @@
 {
   "file_id": "game_2274",
-  "game_title": "Frequency Bazaar – Cliffside Ledge Defense",
+  "game_title": "C Scope Circuit · Nested local blocks · variation 4",
   "game_concept": "A action defense set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Frequency Bazaar: Count how often each item appears using a dictionary.",
-  "genre": "action defense",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
-  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Count how often each item appears using a dictionary. Each round, snow leopards strike the basecamp tent, so respond before the next strike lands. Then check the tally value and advance.",
-  "primary_mechanic": "Frequency Bazaar",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Reduced-motion and color-blind-safe UI",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Protect the basecamp tent from snow leopards in Cliffside Ledge: keep the tally meter above zero by applying the concept correctly until the 36-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 36 seconds while tally > 0.",
-  "lose_condition": "tally drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "player_objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, trace two nested local scopes. Print the scope trace [15, 13, 7], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 7}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 6 (applied tier): Frequency Bazaar",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Nested local blocks",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M09-X1-T08-190ddfd8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Frequency Bazaar' (Week 8 slot 9), mission type 'Survival Siege', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 6,
   "trial": 4,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "count[x] = count.get(x, 0) + 1",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 7;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 13; { int steps = 15; printf(\"%d\\n\", steps); } printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 390,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how tally changes.",
-    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
-    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while tally > 0."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level6/advanced/game_week8_level6_difficulty(Advance)_4.json",
+    "variation_id": "canvas_game_2274",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the basecamp tent from snow leopards in Cliffside Ledge: keep the tally meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "source_win_condition": "Timer reaches 36 seconds while tally > 0.",
+  "source_lose_condition": "tally drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "source_game_title": "Frequency Bazaar – Cliffside Ledge Defense",
+  "source_primary_mechanic": "Frequency Bazaar",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w8_l6",
+  "source_week": 8,
+  "source_level": 6,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "cd406968b6ebf138d6aa270739ad42ebc00e11ec01bb8e2351af0c7201210577",
+    "lesson_unchanged": true
+  }
 }

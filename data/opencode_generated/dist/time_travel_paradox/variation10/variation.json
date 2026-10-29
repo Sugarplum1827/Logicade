@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "18_time_travel_paradox",
+  "slug": "time_travel_paradox",
+  "display_name": "Time Travel Paradox",
+  "module_family": "timeline_puzzle",
+  "learning_target": "sequence, conditions, and cause/effect",
+  "core_brief": "Repair timeline logic by placing events in the correct order across two eras.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "time",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Sequence solver",
+  "accent": "#ff9f43",
+  "tint": 14346935,
+  "variation_id": "18_time_travel_paradox_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 3323566219,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_green",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/time_travel_paradox.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

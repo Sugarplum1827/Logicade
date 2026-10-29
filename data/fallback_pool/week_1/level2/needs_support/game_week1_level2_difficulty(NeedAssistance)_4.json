@@ -1,30 +1,30 @@
 {
   "file_id": "game_0034",
-  "game_title": "Swap Switch – Moat Bridge Rush",
-  "game_concept": "A arcade set in The Kingdom – Moat Bridge, the drawbridge over the moat: the town guard must handle rogue crows while practicing variables & assignment. Core idea – Swap Switch: Swap two variables with a temporary slot to reroute arrows without losing either value.",
-  "genre": "arcade",
+  "game_title": "Flowchart Workshop – Pass or retry",
+  "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
-  "core_gameplay_loop": "In Moat Bridge, repeat each round: Swap two variables with a temporary slot to reroute arrows without losing either value. Each round, a new arrows challenge appears; solve it to bank points before time drains. Then check the a value and advance.",
-  "primary_mechanic": "Swap Switch",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
+  "primary_mechanic": "Drag-and-drop flowchart construction",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Collect 100 points of arrows by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 100 within 46 seconds.",
-  "lose_condition": "Timer hits 0 with score < 100, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score is at least 60; otherwise display Retry.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
+  "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Swap Switch",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M04-X2-T04-b22cd1dc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Swap Switch' (Week 1 slot 4), mission type 'Resource Rush', and setting 'Moat Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 2,
   "trial": 4,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,18 +35,33 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
     "rival_speed": 0.55,
     "enemy_wave_count": 2,
     "enemy_attack_interval_seconds": 2.85,
-    "starting_score": 0
+    "starting_score": 0,
+    "source_time_limit_seconds": 46
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how a changes.",
-    "Step 2: Use the controls to apply the code idea against rogue crows in Moat Bridge.",
-    "Step 3: Win by meeting the goal: score >= 100 within 46 seconds."
-  ]
+    "Read the requested procedure.",
+    "Drag correctly shaped blocks into the chart and follow the arrows.",
+    "Select Check chart to run example inputs. Revise incorrect steps and try again."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level2/needs_support/game_week1_level2_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_0034",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_primary_mechanic": "Swap Switch",
+  "source_game_title": "Swap Switch – Moat Bridge Rush",
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

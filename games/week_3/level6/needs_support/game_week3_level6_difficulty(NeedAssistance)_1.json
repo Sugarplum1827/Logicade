@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0751",
+  "variation_id": "canvas_game_0751",
+  "week": 3,
+  "level": 6,
+  "trial": 1,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Multi-step plans · variation 1",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Smugglers' Bay: a hidden smugglers' bay",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "Multi-step plans"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Multi-step plans",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 6,
+    "objective_id": "cp1_w3_l6",
+    "title": "Algorithms",
+    "stage_title": "Multi-step plans",
+    "objectives": [
+      "Multi-step plans"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l6",
+  "source_level": 6,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Multi-step plans: add 8, then double. Match all 3 streams; preserve their order. Dataset 1, operand 8.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 3838597005,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      16,
+      3,
+      31,
+      16
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 1
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l6_v1_0",
+    "rules": {
+      "max_steps": 680,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l6",
+    "source_level": 6,
+    "focus": "Multi-step plans",
+    "family": "terminal",
+    "title": "Multi-step plans · variation 1",
+    "objective": "Multi-step plans: add 8, then double. Match all 3 streams; preserve their order. Dataset 1, operand 8.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -9,
+          7,
+          11,
+          10
+        ],
+        "expected": [
+          -2,
+          30,
+          38,
+          36
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -1,
+          16,
+          11,
+          -4
+        ],
+        "expected": [
+          14,
+          48,
+          38,
+          8
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          4,
+          11,
+          15,
+          -4
+        ],
+        "expected": [
+          24,
+          38,
+          46,
+          8
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nADD 8\nMUL 2\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l6_v1_0",
+      "kind": "program_execution",
+      "prompt": "Multi-step plans: add 8, then double. Match all 3 streams; preserve their order. Dataset 1, operand 8."
+    }
+  ],
+  "source_path": "week_3/level6/needs_support/game_week3_level6_difficulty(NeedAssistance)_1.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Multi-step plans",
+  "source_primary_mechanic": "Gatekeeper If",
+  "source_code_snippet": "if has_key:\n    open_gate()"
+}

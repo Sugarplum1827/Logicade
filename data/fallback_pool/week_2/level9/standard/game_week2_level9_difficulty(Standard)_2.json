@@ -1,30 +1,30 @@
 {
   "file_id": "game_0552",
-  "game_title": "Compound Combo – Lava Tube Tunnel Race",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A strategy race set in Mt. Pyre – Lava Tube Tunnel, a glowing lava tube: the volcanologist must handle lava imps while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
-  "core_gameplay_loop": "In Lava Tube Tunnel, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round the rival advances, and solving the step moves the volcanologist ahead. Then check the energy value and advance.",
-  "primary_mechanic": "Compound Combo",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the summit beacon by solving code steps involving energy that move the volcanologist forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
-  "lose_condition": "The rival reaches the summit beacon first, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 2: {'a': 7, 'b': 2}; {'a': -2, 'b': -4}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Compound Combo",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M12-X5-T14-9e004f14",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Rival Race', and setting 'Lava Tube Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 2,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how energy changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Lava Tube Tunnel.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/standard/game_week2_level9_difficulty(Standard)_2.json",
+    "variation_id": "canvas_game_0552",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the summit beacon by solving code steps involving energy that move the volcanologist forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "source_lose_condition": "The rival reaches the summit beacon first, or lives reach 0.",
+  "source_game_title": "Compound Combo – Lava Tube Tunnel Race",
+  "source_primary_mechanic": "Compound Combo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

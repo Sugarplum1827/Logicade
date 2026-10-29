@@ -1,30 +1,30 @@
 {
   "file_id": "game_1281",
-  "game_title": "Times Table Garden – Glowing Heartwood Defense",
+  "game_title": "Branch Assembly 1 · Separate Outputs",
   "game_concept": "A action defense set in Mystic Forest – Glowing Heartwood, the glowing ancient tree: the forest ranger must handle shadow wolves while practicing control flow: for loops. Core idea – Times Table Garden: Plant a grid of glowing seeds using nested for loops for rows and columns.",
-  "genre": "action defense",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Glowing Heartwood: the glowing ancient tree",
-  "core_gameplay_loop": "In Glowing Heartwood, repeat each round: Plant a grid of glowing seeds using nested for loops for rows and columns. Each round, shadow wolves strike the spirit shrine, so respond before the next strike lands. Then check the garden_cells value and advance.",
-  "primary_mechanic": "Times Table Garden",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the spirit shrine from shadow wolves in Glowing Heartwood: keep the garden_cells meter above zero by applying the concept correctly until the 29-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 29 seconds while garden_cells > 0.",
-  "lose_condition": "garden_cells drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "player_objective": "Preprocessor directives: build a valid C source file that prints 6. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 8 components (4 upper, 4 lower). Set the gold-socket controller batch to 8.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Times Table Garden",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Preprocessor directives",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M06-X1-T01-2c1bf16d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Times Table Garden' (Week 5 slot 6), mission type 'Survival Siege', and setting 'Glowing Heartwood'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 3,
   "trial": 1,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how garden_cells changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Glowing Heartwood.",
-    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while garden_cells > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level3/advanced/game_week5_level3_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_1281",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the spirit shrine from shadow wolves in Glowing Heartwood: keep the garden_cells meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "source_win_condition": "Timer reaches 29 seconds while garden_cells > 0.",
+  "source_lose_condition": "garden_cells drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "source_game_title": "Times Table Garden – Glowing Heartwood Defense",
+  "source_primary_mechanic": "Times Table Garden",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 4 components via upper_4, upper_6 to output_upper; B: 4 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w5_l3",
+  "source_week": 5,
+  "source_level": 3
 }

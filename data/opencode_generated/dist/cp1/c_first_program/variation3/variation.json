@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_14_c_first_program",
+  "slug": "c_first_program",
+  "display_name": "First C Program",
+  "learning_target": "write and trace a first printf program",
+  "core_brief": "A first program includes stdio.h, opens main, prints a line, and returns zero.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 4,
+  "unit": "C Introduction",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.rock",
+      "bush": "themes.tower_defense.rock",
+      "slime": "themes.tower_defense.bush",
+      "bee": "themes.tower_defense.crate"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "scope",
+  "mechanic_label": "Scope",
+  "accent": "#7ec8ff",
+  "variation_id": "cp1_14_c_first_program_v03",
+  "index": 3,
+  "challenge_index": 3,
+  "challenge_id": "c_first_program_v03",
+  "title": "Split the scopes",
+  "label": "Lab 03: Split the scopes",
+  "seed": 960365754,
+  "challenge_bank": "../../../data/cp1/challenges/c_first_program.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

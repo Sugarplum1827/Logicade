@@ -1,30 +1,30 @@
 {
   "file_id": "game_1997",
-  "game_title": "Index Archery – Broken Colonnade Rush",
+  "game_title": "Declare float · variation 7",
   "game_concept": "A action puzzle set in Eldritch Ruins – Broken Colonnade, a row of broken columns: the relic hunter must handle ghost knights while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
-  "genre": "action puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Broken Colonnade: a row of broken columns",
-  "core_gameplay_loop": "In Broken Colonnade, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round, a new glyph tablets challenge appears; solve it to bank points before time drains. Then check the arrows value and advance.",
-  "primary_mechanic": "Index Archery",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Collect 340 points of glyph tablets by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 48 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Declare float: declare resource as float, apply resource + 7.5, and print each result with %.1f. Dataset 7 starts with [-3, 0, 15, 18]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 7 (applied tier): Index Archery",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare float",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M02-X2-T01-a9a3a1dc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Resource Rush', and setting 'Broken Colonnade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 7,
   "trial": 7,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how arrows changes.",
-    "Step 2: Use the controls to apply the code idea against ghost knights in Broken Colonnade.",
-    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level7/standard/game_week7_level7_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_1997",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of glyph tablets by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 48 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Index Archery – Broken Colonnade Rush",
+  "source_primary_mechanic": "Index Archery",
+  "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w7_l7",
+  "source_week": 7,
+  "source_level": 7
 }

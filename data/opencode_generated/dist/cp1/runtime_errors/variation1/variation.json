@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_50_runtime_errors",
+  "slug": "runtime_errors",
+  "display_name": "Runtime Errors",
+  "learning_target": "guard against division by zero and invalid access",
+  "core_brief": "A runtime error happens while the program runs, often from invalid data or an unsafe operation.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 14,
+  "unit": "Debugging",
+  "group": "code",
+  "skin": "urban",
+  "theme": "urban",
+  "theme_label": "City",
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_grass",
+    "player": "themes.urban.player_b",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier_b",
+      "bush": "themes.urban.tree",
+      "slime": "themes.urban.tree_b",
+      "bee": "themes.urban.tree"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "mechanic": "simulate",
+  "mechanic_label": "Simulate",
+  "accent": "#ff8fa3",
+  "variation_id": "cp1_50_runtime_errors_v01",
+  "index": 1,
+  "challenge_index": 1,
+  "challenge_id": "runtime_errors_v01",
+  "title": "Step the machine",
+  "label": "Lab 01: Step the machine",
+  "seed": 2028086036,
+  "challenge_bank": "../../../data/cp1/challenges/runtime_errors.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

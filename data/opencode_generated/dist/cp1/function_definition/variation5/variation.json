@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_45_function_definition",
+  "slug": "function_definition",
+  "display_name": "Function Definitions",
+  "learning_target": "read a function return type, name, and body",
+  "core_brief": "A function definition states the return type, the name, the parameters, and the body.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 13,
+  "unit": "Functions",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_3",
+    "zones": [
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_tank",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_45_function_definition_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "function_definition_v05",
+  "title": "Trace the output",
+  "label": "Lab 05: Trace the output",
+  "seed": 1374948031,
+  "challenge_bank": "../../../data/cp1/challenges/function_definition.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

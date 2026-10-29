@@ -1,30 +1,30 @@
 {
   "file_id": "game_1643",
-  "game_title": "Call Stack Tower – Sleigh Stables Defense",
+  "game_title": "Integer expressions · variation 3",
   "game_concept": "A survival strategy set in Snowy Hold – Sleigh Stables, the sleigh stables: the hold guard must handle winter bandits while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
-  "genre": "survival strategy",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Sleigh Stables: the sleigh stables",
-  "core_gameplay_loop": "In Sleigh Stables, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Each round, winter bandits strike the chapel bell, so respond before the next strike lands. Then check the stack_height value and advance.",
-  "primary_mechanic": "Call Stack Tower",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Protect the chapel bell from winter bandits in Sleigh Stables: keep the stack_height meter above zero by applying the concept correctly until the 34-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 34 seconds while stack_height > 0.",
-  "lose_condition": "stack_height drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "player_objective": "Maze 3 (19×13, 33 junctions): collect 2 crystal(s) from the branches and reach beacon (17, 1). Use a C main program to Integer expressions. Print [32]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Call Stack Tower",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Integer expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M08-X1-T19-355163c8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Call Stack Tower' (Week 6 slot 8), mission type 'Survival Siege', and setting 'Sleigh Stables'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 5,
   "trial": 3,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stack_height changes.",
-    "Step 2: Use the controls to apply the code idea against winter bandits in Sleigh Stables.",
-    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while stack_height > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level5/advanced/game_week6_level5_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_1643",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the chapel bell from winter bandits in Sleigh Stables: keep the stack_height meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "source_win_condition": "Timer reaches 34 seconds while stack_height > 0.",
+  "source_lose_condition": "stack_height drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "source_game_title": "Call Stack Tower – Sleigh Stables Defense",
+  "source_primary_mechanic": "Call Stack Tower",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w6_l5",
+  "source_week": 6,
+  "source_level": 5
 }

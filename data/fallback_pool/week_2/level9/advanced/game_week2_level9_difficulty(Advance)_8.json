@@ -1,30 +1,30 @@
 {
   "file_id": "game_0568",
-  "game_title": "Rounding Range – Lava River Crossing Streak",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A quiz RPG set in Mt. Pyre – Lava River Crossing, a river of molten rock: the volcanologist must handle cinder bats while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
-  "genre": "quiz RPG",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Lava River Crossing: a river of molten rock",
-  "core_gameplay_loop": "In Lava River Crossing, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round poses one decision; a wrong answer breaks the streak. Then check the slot_matches value and advance.",
-  "primary_mechanic": "Rounding Range",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Live variable watch panel",
     "Combo multiplier"
   ],
-  "player_objective": "Chain 13 consecutive correct decisions about slot_matches to power up the volcanologist and open the forge anvil.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 13.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 8: {'a': 13, 'b': 8}; {'a': -8, 'b': -10}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Rounding Range",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M13-X4-T02-c00b1ec0",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Streak Challenge', and setting 'Lava River Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 8,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 43,
+    "time_limit_seconds": 0,
     "target_score": 550,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how slot_matches changes.",
-    "Step 2: Use the controls to apply the code idea against cinder bats in Lava River Crossing.",
-    "Step 3: Win by meeting the goal: streak counter reaches 13."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/advanced/game_week2_level9_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_0568",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 13 consecutive correct decisions about slot_matches to power up the volcanologist and open the forge anvil.",
+  "source_win_condition": "streak counter reaches 13.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Rounding Range – Lava River Crossing Streak",
+  "source_primary_mechanic": "Rounding Range",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 43,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

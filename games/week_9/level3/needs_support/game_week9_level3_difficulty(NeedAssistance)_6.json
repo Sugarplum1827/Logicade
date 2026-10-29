@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2466",
+  "variation_id": "canvas_game_2466",
+  "week": 9,
+  "level": 3,
+  "trial": 6,
+  "difficulty": "Need Assistance",
+  "mode": "pending",
+  "title": "C Archive · History/classification review",
+  "display_name": "Week 4 Challenge · Theme Pending",
+  "theme": "Sand Dunes – Sunset Dunes: dunes at sunset",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "History/classification review"
+  ],
+  "lesson": {
+    "summary": "Introduction to C: History, Characteristics and Classification",
+    "points": [
+      "History/classification review",
+      "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+      "C is general purpose, procedural and imperative; it is normally compiled.",
+      "Portability needs care with implementation-dependent behavior. Middle-level is an informal classroom label, not an ISO language category."
+    ],
+    "example": "C: Ritchie; Bell Labs; early 1970s; general purpose; procedural.",
+    "practice": "History/classification review",
+    "week": 9,
+    "source_week": 4,
+    "source_level": 10,
+    "objective_id": "cp1_w4_l10",
+    "title": "Introduction to C: History, Characteristics and Classification",
+    "stage_title": "History/classification review",
+    "objectives": [
+      "History/classification review"
+    ],
+    "sources": [
+      {
+        "title": "Dennis Ritchie: The Development of the C Language",
+        "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      4
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w4_l10",
+  "source_level": 10,
+  "source_week": 4,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Archive variation 6: classify and verify C history, characteristics and language categories for History/classification review.",
+  "hint": "Use the Examination Practice: Weeks 2–8 idea and test one choice against the station goal.",
+  "controls": "Click or press 1–4 to answer; Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 3321568241,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "seed": 3321568241,
+    "theme_status": "awaiting_course_decision"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "game_2466_station_1",
+      "prompt": "Archive case 6: Does general-purpose guarantee an identical program works everywhere?",
+      "choices": [
+        "Yes, syntax never matters",
+        "No; portability still needs care",
+        "Yes, without any conditions"
+      ],
+      "answer_index": 1,
+      "explanation": "No; portability still needs care.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l10"
+    },
+    {
+      "id": "game_2466_station_2",
+      "prompt": "Archive case 6: A tool must calculate totals and process files. Why can C be considered?",
+      "choices": [
+        "It is only a page-description format",
+        "It is a general-purpose language",
+        "It supports only one fixed formula"
+      ],
+      "answer_index": 1,
+      "explanation": "It is a general-purpose language.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l10"
+    },
+    {
+      "id": "game_2466_station_3",
+      "prompt": "Archive case 6: Which classification fits C?",
+      "choices": [
+        "Spreadsheet only",
+        "Markup only",
+        "Procedural"
+      ],
+      "answer_index": 2,
+      "explanation": "Procedural.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l10"
+    }
+  ],
+  "source_path": "week_9/level3/needs_support/game_week9_level3_difficulty(NeedAssistance)_6.json",
+  "source_topic": "Introduction to C: History, Characteristics and Classification",
+  "source_learning_alignment": "CP1 Week 4: History/classification review",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "source_code_snippet": "for i in range(len(a) + 1):"
+}

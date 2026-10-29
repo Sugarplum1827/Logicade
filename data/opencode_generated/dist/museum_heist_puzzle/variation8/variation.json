@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "36_museum_heist_puzzle",
+  "slug": "museum_heist_puzzle",
+  "display_name": "Museum Heist Puzzle",
+  "module_family": "security_puzzle",
+  "learning_target": "flowcharts and path planning",
+  "core_brief": "Use flowchart paths to cross laser grids and reach a display without triggering alarms.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "museum",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#b69cff",
+  "tint": 12047850,
+  "variation_id": "36_museum_heist_puzzle_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 2585039597,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_dusk",
+    "zones": [
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day"
+    ],
+    "tile": "themes.urban.tile_sidewalk",
+    "player": "themes.urban.player_d",
+    "enemy": "themes.urban.enemy_d",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier_b",
+      "bush": "themes.urban.tree_b",
+      "slime": "themes.urban.tree",
+      "bee": "themes.urban.tree_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/museum_heist_puzzle.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "50_quantum_computing_lab",
+  "slug": "quantum_computing_lab",
+  "display_name": "Quantum Computing Lab",
+  "module_family": "quantum_gate_puzzle",
+  "learning_target": "quantum-gate sequencing and computational puzzles",
+  "core_brief": "Arrange quantum-gate flow blocks to transform an input state into a target output.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "quantum",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Sequence solver",
+  "accent": "#ff7a7a",
+  "tint": 12053195,
+  "variation_id": "50_quantum_computing_lab_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 727696791,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 20,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_orange",
+    "enemy": "themes.space.enemy_red",
+    "coin": "themes.space.coin_red",
+    "goal": "themes.space.goal_red",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/quantum_computing_lab.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

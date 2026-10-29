@@ -1,30 +1,30 @@
 {
   "file_id": "game_1228",
-  "game_title": "Off By One Fixer – Firefly Meadow Trial",
+  "game_title": "Branch Assembly 8 · Merge Midpoint",
   "game_concept": "A puzzle set in Mystic Forest – Firefly Meadow, a meadow of fireflies: the beast tamer must handle thorn goblins while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
-  "genre": "puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Firefly Meadow: a meadow of fireflies",
-  "core_gameplay_loop": "In Firefly Meadow, repeat each round: Fix range boundaries that skip or overshoot by one. Each round costs one action, so plan the step so none are wasted. Then check the fixes value and advance.",
-  "primary_mechanic": "Off By One Fixer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Limited undo button",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Reach the elder's door using at most 10 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The elder's door reached with actions_used <= 10.",
-  "lose_condition": "actions_used exceeds 10 before the elder's door is reached, or lives reach 0.",
+  "player_objective": "Tokens and components: build a valid C source file that prints 11. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 6. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 7 components (3 upper, 4 lower). Set the gold-socket controller batch to 7.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Off By One Fixer",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Tokens and components",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M13-X3-T06-7d5d2ed8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Efficiency Trial', and setting 'Firefly Meadow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 1,
   "trial": 8,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fixes changes.",
-    "Step 2: Use the controls to apply the code idea against thorn goblins in Firefly Meadow.",
-    "Step 3: Win by meeting the goal: The elder's door reached with actions_used <= 10."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level1/advanced/game_week5_level1_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_1228",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the elder's door using at most 10 actions, so every code step counts.",
+  "source_win_condition": "The elder's door reached with actions_used <= 10.",
+  "source_lose_condition": "actions_used exceeds 10 before the elder's door is reached, or lives reach 0.",
+  "source_game_title": "Off By One Fixer – Firefly Meadow Trial",
+  "source_primary_mechanic": "Off By One Fixer",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 3 components via upper_4, shared_assembler to output_shared; ELSE: 4 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w5_l1",
+  "source_week": 5,
+  "source_level": 1
 }

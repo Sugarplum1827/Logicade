@@ -1,0 +1,549 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v01",
+    "index": 1,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the if body.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int temp = 30;",
+        "    if (temp > 25) {",
+        "        int hot = 1;",
+        "        printf(\"Hot\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "temp and the test"
+        },
+        {
+          "id": "if",
+          "label": "If body",
+          "desc": "hot exists only inside the braces"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int temp = 30;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "if (temp > 25)",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int hot = 1;",
+          "scope": "if"
+        },
+        {
+          "id": "d4",
+          "text": "printf(\"Hot\\n\");",
+          "scope": "if"
+        }
+      ]
+    },
+    "explanation": "temp is local to main; hot is local to the if body.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v02",
+    "index": 2,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each if statements term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "if"
+        },
+        {
+          "id": "l2",
+          "text": "Condition"
+        },
+        {
+          "id": "l3",
+          "text": "Braces"
+        },
+        {
+          "id": "l4",
+          "text": "Body"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Runs a block when its test is true"
+        },
+        {
+          "id": "r2",
+          "text": "The expression inside the parentheses"
+        },
+        {
+          "id": "r3",
+          "text": "Group the statements controlled by if"
+        },
+        {
+          "id": "r4",
+          "text": "The block that runs when the test passes"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v03",
+    "index": 3,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the temperature test.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int temp = 30;",
+        "if (temp {{b0}} {{b1}}) {",
+        "    printf(\"Hot\\n\");",
+        "}",
+        "printf(\"Done\\n\");"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "operator meaning above",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "threshold temperature",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": ">"
+        },
+        {
+          "id": "b2",
+          "text": "25"
+        },
+        {
+          "id": "b3",
+          "text": "<"
+        },
+        {
+          "id": "b4",
+          "text": "30"
+        },
+        {
+          "id": "b5",
+          "text": "20"
+        }
+      ]
+    },
+    "explanation": "Above 25 means strictly greater than 25.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v04",
+    "index": 4,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int temp = 30;",
+        "    if (temp > 25) {",
+        "        printf(\"Hot\\n\");",
+        "    }",
+        "    printf(\"Done\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Hot",
+      "accept": [
+        "Hot"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "30 is above 25, so the body prints Hot; the trace asks for the first line."
+    },
+    "explanation": "The program produces Hot.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v05",
+    "index": 5,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int temp = 30;",
+        "    if (temp > 25) {",
+        "        printf(\"Hot\\n\");",
+        "    }",
+        "    printf(\"Done\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "temp",
+        "advice"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "temp": "30",
+            "advice": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "temp": "30",
+            "advice": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "temp": "30",
+            "advice": "Hot"
+          }
+        }
+      ],
+      "ask": [
+        "temp",
+        "advice"
+      ],
+      "answer": {
+        "temp": "30",
+        "advice": "Hot"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is temp = 30, advice = Hot.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v06",
+    "index": 6,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of if statements in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Evaluate the condition in parentheses"
+        },
+        {
+          "id": "s2",
+          "text": "If true, run the braced body"
+        },
+        {
+          "id": "s3",
+          "text": "If false, skip the body"
+        },
+        {
+          "id": "s4",
+          "text": "Continue with the next statement"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Evaluate the condition in parentheses → If true, run the braced body → If false, skip the body → Continue with the next statement",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v07",
+    "index": 7,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build an if statement header that tests temperature above 25.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "if"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "temp"
+        },
+        {
+          "id": "t4",
+          "text": ">"
+        },
+        {
+          "id": "t5",
+          "text": "25"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": "else"
+        },
+        {
+          "id": "t8",
+          "text": "then"
+        },
+        {
+          "id": "t9",
+          "text": "while"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The condition is in parentheses and uses > for above.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v08",
+    "index": 8,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the temperature and the branch output.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int temp = 30;",
+        "    if (temp > 25) {",
+        "        printf(\"Hot\\n\");",
+        "    }",
+        "    printf(\"Done\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "temp",
+          "type": "final value"
+        },
+        {
+          "name": "advice",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "30"
+        },
+        {
+          "id": "v2",
+          "text": "Hot"
+        },
+        {
+          "id": "v3",
+          "text": "31"
+        },
+        {
+          "id": "v4",
+          "text": "29"
+        },
+        {
+          "id": "v5",
+          "text": "0"
+        }
+      ],
+      "answer": {
+        "temp": "v1",
+        "advice": "v2"
+      }
+    },
+    "explanation": "The condition is true, so advice becomes Hot.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v09",
+    "index": 9,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line as condition, body, or after the if.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "condition",
+          "label": "Condition",
+          "desc": "The test"
+        },
+        {
+          "id": "body",
+          "label": "If body",
+          "desc": "Runs only when true"
+        },
+        {
+          "id": "after",
+          "label": "After the if",
+          "desc": "Runs either way"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "temp > 25",
+          "bin": "condition"
+        },
+        {
+          "id": "i2",
+          "text": "printf(\"Hot\\n\");",
+          "bin": "body"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"Done\\n\");",
+          "bin": "after"
+        },
+        {
+          "id": "i4",
+          "text": "age >= 18",
+          "bin": "condition"
+        },
+        {
+          "id": "i5",
+          "text": "printf(\"Adult\\n\");",
+          "bin": "body"
+        },
+        {
+          "id": "i6",
+          "text": "return 0;",
+          "bin": "after"
+        }
+      ]
+    },
+    "explanation": "Only the braced body is controlled by the if; later statements always run.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_statements_v10",
+    "index": 10,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int temp = 30;",
+        "if (temp > 25);",
+        "{",
+        "    printf(\"Hot\\n\");",
+        "}",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The semicolon ends the if statement, so the braced block always runs.",
+    "concept_slug": "if_statements",
+    "concept_name": "If Statements"
+  }
+]

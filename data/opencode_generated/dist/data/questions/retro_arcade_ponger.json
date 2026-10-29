@@ -1,0 +1,79 @@
+{
+  "concept_id": "34_retro_arcade_ponger",
+  "slug": "retro_arcade_ponger",
+  "learning_target": "velocity variables and simple physics",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is velocity?",
+      "options": [
+        "A fixed position",
+        "A score",
+        "A type of paddle",
+        "Speed in a direction"
+      ],
+      "answer_index": 3,
+      "explanation": "Velocity describes how fast and in which direction an object moves."
+    },
+    {
+      "id": "q2",
+      "question": "If velocity is negative, which way does the ball move?",
+      "options": [
+        "Left or down, depending on the axis",
+        "Always up",
+        "Nowhere",
+        "Always right"
+      ],
+      "answer_index": 0,
+      "explanation": "A negative value moves opposite the positive direction of that axis."
+    },
+    {
+      "id": "q3",
+      "question": "What happens when the ball hits a wall?",
+      "options": [
+        "It disappears",
+        "Its direction reverses",
+        "It stops",
+        "It speeds up forever"
+      ],
+      "answer_index": 1,
+      "explanation": "A bounce reverses the velocity component perpendicular to the wall."
+    },
+    {
+      "id": "q4",
+      "question": "What does `x = x + vx` do?",
+      "options": [
+        "Moves the ball by its velocity",
+        "Deletes vx",
+        "Sets x to zero",
+        "Changes the score"
+      ],
+      "answer_index": 0,
+      "explanation": "Adding the velocity to the position updates where the ball is next."
+    },
+    {
+      "id": "q5",
+      "question": "Why cap the speed?",
+      "options": [
+        "To end the game",
+        "To make the ball invisible",
+        "To keep the game playable",
+        "To remove the paddle"
+      ],
+      "answer_index": 2,
+      "explanation": "A speed cap prevents the ball from becoming too fast to react to."
+    },
+    {
+      "id": "q6",
+      "question": "What is a collision?",
+      "options": [
+        "A velocity value",
+        "When two objects touch",
+        "A type of score",
+        "A wall color"
+      ],
+      "answer_index": 1,
+      "explanation": "A collision occurs when two objects overlap or touch."
+    }
+  ]
+}

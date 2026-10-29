@@ -1,30 +1,30 @@
 {
   "file_id": "game_0597",
-  "game_title": "Compound Combo – Molten Bridge Trial",
+  "game_title": "Flowchart Lab · Count up to n",
   "game_concept": "A programming puzzle set in Mt. Pyre – Molten Bridge, a bridge over magma: the ember mage must handle magma slimes while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
-  "genre": "programming puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Molten Bridge: a bridge over magma",
-  "core_gameplay_loop": "In Molten Bridge, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round costs one action, so plan the step so none are wasted. Then check the energy value and advance.",
-  "primary_mechanic": "Compound Combo",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Live variable watch panel",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Reach the cooling vent using at most 15 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "The cooling vent reached with actions_used <= 15.",
-  "lose_condition": "actions_used exceeds 15 before the cooling vent is reached, or lives reach 0.",
+  "player_objective": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Test dataset 7: {'n': 0}; {'n': 12}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Compound Combo",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M12-X3-T17-7d93b170",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Efficiency Trial', and setting 'Molten Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 10,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 600,
     "action_budget": 15,
     "streak_target": 14,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how energy changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Molten Bridge.",
-    "Step 3: Win by meeting the goal: The cooling vent reached with actions_used <= 15."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level10/advanced/game_week2_level10_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0597",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the cooling vent using at most 15 actions, so every code step counts.",
+  "source_win_condition": "The cooling vent reached with actions_used <= 15.",
+  "source_lose_condition": "actions_used exceeds 15 before the cooling vent is reached, or lives reach 0.",
+  "source_game_title": "Compound Combo – Molten Bridge Trial",
+  "source_primary_mechanic": "Compound Combo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

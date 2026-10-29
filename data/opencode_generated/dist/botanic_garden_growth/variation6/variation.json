@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "41_botanic_garden_growth",
+  "slug": "botanic_garden_growth",
+  "display_name": "Botanic Garden Growth",
+  "module_family": "garden_simulation",
+  "learning_target": "syntax rules and ordered actions",
+  "core_brief": "Apply syntax rules to cross-pollinate plants and grow a set of target flowers.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "garden",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "System builder",
+  "accent": "#7ee2b8",
+  "tint": 14281399,
+  "variation_id": "41_botanic_garden_growth_v06",
+  "index": 6,
+  "title": "Checkpoint Gauntlet",
+  "label": "Variation 06: Checkpoint Gauntlet",
+  "seed": 233414898,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 3,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_3",
+    "zones": [
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_sunflower",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.wheat",
+      "bush": "themes.farm.rock",
+      "slime": "themes.farm.bush",
+      "bee": "themes.farm.fence"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build four short rooms connected by explicit checkpoints. Each room introduces one obstacle rule and the last room combines earlier rules.",
+    "obstacles": "distinct room hazards with a checkpoint after every room; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "quick rooms with a deliberate final synthesis round."
+  },
+  "question_bank": "../../data/questions/botanic_garden_growth.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0541",
-  "game_title": "Type Sorter – Molten Bridge Rush",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A arcade set in Mt. Pyre – Molten Bridge, a bridge over magma: the ember mage must handle magma slimes while practicing data types & operators. Core idea – Type Sorter: Sort falling obsidian shards into bins labelled int, float, str and bool before they hit the ground.",
-  "genre": "arcade",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Molten Bridge: a bridge over magma",
-  "core_gameplay_loop": "In Molten Bridge, repeat each round: Sort falling obsidian shards into bins labelled int, float, str and bool before they hit the ground. Each round, a new obsidian shards challenge appears; solve it to bank points before time drains. Then check the sorted_ok value and advance.",
-  "primary_mechanic": "Type Sorter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Collect 290 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 290 within 76 seconds.",
-  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 1: {'a': 6, 'b': 1}; {'a': -1, 'b': -3}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Type Sorter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M01-X2-T17-799e0417",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Resource Rush', and setting 'Molten Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 1,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Molten Bridge.",
-    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/needs_support/game_week2_level9_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_0541",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 290 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 290 within 76 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "source_game_title": "Type Sorter – Molten Bridge Rush",
+  "source_primary_mechanic": "Type Sorter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

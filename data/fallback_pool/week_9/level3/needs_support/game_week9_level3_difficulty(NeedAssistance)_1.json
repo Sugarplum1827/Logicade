@@ -1,30 +1,30 @@
 {
   "file_id": "game_2461",
-  "game_title": "Syntax Sweep – Mirage Road Race",
+  "game_title": "C Archive · History/classification review",
   "game_concept": "A racing platformer set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
-  "genre": "racing platformer",
+  "genre": "CP1 challenge; Week 4 theme pending",
   "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
-  "core_gameplay_loop": "In Mirage Road, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round the rival advances, and solving the step moves the scarab scholar ahead. Then check the syntax_errors value and advance.",
-  "primary_mechanic": "Syntax Sweep",
+  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Beat a rival AI to the caravan wagon by solving code steps involving syntax_errors that move the scarab scholar forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.6).",
-  "lose_condition": "The rival reaches the caravan wagon first, or lives reach 0.",
+  "player_objective": "Archive variation 1: classify and verify C history, characteristics and language categories for History/classification review.",
+  "controls": "Read each archive record and choose the supported C fact.",
+  "win_condition": "All researched archive facts are correctly identified.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Syntax Sweep",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 4: History/classification review",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M01-X5-T05-fec4c673",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Rival Race', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 3,
   "trial": 1,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Introduction to C: History, Characteristics and Classification",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
-    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.6)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level3/needs_support/game_week9_level3_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_2461",
+    "mode": "pending",
+    "asset_set": "pending",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the caravan wagon by solving code steps involving syntax_errors that move the scarab scholar forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.6).",
+  "source_lose_condition": "The rival reaches the caravan wagon first, or lives reach 0.",
+  "source_game_title": "Syntax Sweep – Mirage Road Race",
+  "source_primary_mechanic": "Syntax Sweep",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w4_l10",
+  "source_week": 4,
+  "source_level": 10
 }

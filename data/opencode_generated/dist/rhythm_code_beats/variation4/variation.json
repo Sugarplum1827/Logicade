@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "09_rhythm_code_beats",
+  "slug": "rhythm_code_beats",
+  "display_name": "Rhythm Code Beats",
+  "module_family": "rhythm_action",
+  "learning_target": "command order and pattern recognition",
+  "core_brief": "Match code commands to the beat to clear bugs and keep the music loop intact.",
+  "mode": "rhythm",
+  "mode_label": "Beat matcher",
+  "skin": "rhythm",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Beat matcher",
+  "accent": "#ff8fd8",
+  "tint": 15386039,
+  "variation_id": "09_rhythm_code_beats_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 4090758614,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_purple",
+    "zones": [
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_red",
+    "enemy": "themes.space.enemy_black",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_yellow",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_big",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_brown_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/rhythm_code_beats.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

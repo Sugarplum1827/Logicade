@@ -1,30 +1,30 @@
 {
   "file_id": "game_2525",
-  "game_title": "Test Gauntlet – Merchant Waystation Defense",
+  "game_title": "Examination practice · Program synthesis · variation 5",
   "game_concept": "A survival strategy set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Test Gauntlet: Run small test cases against a function and fix the failing ones.",
-  "genre": "survival strategy",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Run small test cases against a function and fix the failing ones. Each round, giant scorpions strike the sundial, so respond before the next strike lands. Then check the tests value and advance.",
-  "primary_mechanic": "Test Gauntlet",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Protect the sundial from giant scorpions in Merchant Waystation: keep the tests meter above zero by applying the concept correctly until the 59-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 59 seconds while tests > 0.",
-  "lose_condition": "tests drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "player_objective": "Week 6 examination practice: Maze 5 (17×11, 38 junctions): collect 1 crystal(s) from the branches and reach beacon (15, 7). Use a C main program to Program synthesis. Print [30]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Test Gauntlet",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M05-X1-T17-bd10568d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Test Gauntlet' (Week 9 slot 5), mission type 'Survival Siege', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 5,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how tests changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: Timer reaches 59 seconds while tests > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/needs_support/game_week9_level5_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_2525",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sundial from giant scorpions in Merchant Waystation: keep the tests meter above zero by applying the concept correctly until the 59-second timer ends.",
+  "source_win_condition": "Timer reaches 59 seconds while tests > 0.",
+  "source_lose_condition": "tests drops to 0, or lives reach 0, before the 59-second timer ends.",
+  "source_game_title": "Test Gauntlet – Merchant Waystation Defense",
+  "source_primary_mechanic": "Test Gauntlet",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

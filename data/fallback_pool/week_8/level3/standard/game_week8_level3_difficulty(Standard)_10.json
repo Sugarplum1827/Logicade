@@ -1,41 +1,41 @@
 {
   "file_id": "game_2180",
-  "game_title": "Palindrome Gate – Snowline Trail Trial",
+  "game_title": "C Scope Circuit · Global initialization · variation 10",
   "game_concept": "A logic puzzle set in Frost Peaks – Snowline Trail, the trail at the snowline: the sherpa guide must handle avalanches while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
-  "genre": "logic puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Snowline Trail: the trail at the snowline",
-  "core_gameplay_loop": "In Snowline Trail, repeat each round: Check whether a word reads the same backward to open the gate. Each round costs one action, so plan the step so none are wasted. Then check the gate value and advance.",
-  "primary_mechanic": "Palindrome Gate",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Live variable watch panel",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Reach the rescue sled using at most 15 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The rescue sled reached with actions_used <= 15.",
-  "lose_condition": "actions_used exceeds 15 before the rescue sled is reached, or lives reach 0.",
+  "player_objective": "Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, observe zero-initialized file-scope state. Print the scope trace [15, 0], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 0}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Palindrome Gate",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Global initialization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M05-X3-T14-b9dd0160",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Efficiency Trial', and setting 'Snowline Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 3,
   "trial": 10,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "word == word[::-1]",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps;\nint main(void)\n{\n  int signal = readInput();\nint local = 15;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gate changes.",
-    "Step 2: Use the controls to apply the code idea against avalanches in Snowline Trail.",
-    "Step 3: Win by meeting the goal: The rescue sled reached with actions_used <= 15."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level3/standard/game_week8_level3_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_2180",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the rescue sled using at most 15 actions, so every code step counts.",
+  "source_win_condition": "The rescue sled reached with actions_used <= 15.",
+  "source_lose_condition": "actions_used exceeds 15 before the rescue sled is reached, or lives reach 0.",
+  "source_game_title": "Palindrome Gate – Snowline Trail Trial",
+  "source_primary_mechanic": "Palindrome Gate",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w8_l3",
+  "source_week": 8,
+  "source_level": 3,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "f3ef8565d408ee02c201902cf19ee1f75975a38c30a0e837b7155a515b2717cf",
+    "lesson_unchanged": true
+  }
 }

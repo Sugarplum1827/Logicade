@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "26_haunted_mansion_explorer",
+  "slug": "haunted_mansion_explorer",
+  "display_name": "Haunted Mansion Explorer",
+  "module_family": "logic_adventure",
+  "learning_target": "flowcharts and branching logic",
+  "core_brief": "Use flowchart logic to complete a sequence of harmless exorcism tasks.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "mansion",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#b69cff",
+  "tint": 13429431,
+  "variation_id": "26_haunted_mansion_explorer_v05",
+  "index": 5,
+  "title": "Central Arena",
+  "label": "Variation 05: Central Arena",
+  "seed": 1447437535,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "star"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 4
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_dusk",
+    "zones": [
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day"
+    ],
+    "tile": "themes.urban.tile_sidewalk",
+    "player": "themes.urban.player_a",
+    "enemy": "themes.urban.enemy_a",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree",
+      "bush": "themes.urban.tree",
+      "slime": "themes.urban.tree_b",
+      "bee": "themes.urban.tree"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a compact arena with a central objective and three distinct approach lanes. The player must respond to a readable sequence of short waves.",
+    "obstacles": "lane-specific hazards and a central objective meter; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "three escalating waves with a short breath between waves."
+  },
+  "question_bank": "../../data/questions/haunted_mansion_explorer.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

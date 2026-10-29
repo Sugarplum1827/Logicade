@@ -1,30 +1,30 @@
 {
   "file_id": "game_2492",
-  "game_title": "Exception Rodeo – Sundial Plaza Race",
+  "game_title": "Examination practice · Branch Assembly 2 · Merge Midpoint",
   "game_concept": "A adventure race set in Sand Dunes – Sundial Plaza, a giant sundial plaza: the desert nomad must handle sandstorms while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
-  "genre": "adventure race",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
-  "core_gameplay_loop": "In Sundial Plaza, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the stability value and advance.",
-  "primary_mechanic": "Exception Rodeo",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the bazaar gate by solving code steps involving stability that move the desert nomad forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
-  "lose_condition": "The rival reaches the bazaar gate first, or lives reach 0.",
+  "player_objective": "Week 5 examination practice: Build and verify a source file: build a valid C source file that prints 15. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 5. IF item value >= 13, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 14 components (7 upper, 7 lower). Set the gold-socket controller batch to 14.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Exception Rodeo",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M02-X5-T14-2ef81c28",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Rival Race', and setting 'Sundial Plaza'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 4,
   "trial": 2,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stability changes.",
-    "Step 2: Use the controls to apply the code idea against sandstorms in Sundial Plaza.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level4/needs_support/game_week9_level4_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_2492",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the bazaar gate by solving code steps involving stability that move the desert nomad forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "source_lose_condition": "The rival reaches the bazaar gate first, or lives reach 0.",
+  "source_game_title": "Exception Rodeo – Sundial Plaza Race",
+  "source_primary_mechanic": "Exception Rodeo",
+  "hint": "IF item value >= 13, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 7 components via upper_4, shared_assembler to output_shared; ELSE: 7 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

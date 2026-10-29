@@ -1,30 +1,30 @@
 {
   "file_id": "game_1384",
-  "game_title": "Squad Marcher – Spirit Stream Rush",
+  "game_title": "Branch Assembly 4 · Separate Outputs",
   "game_concept": "A arcade set in Mystic Forest – Spirit Stream, a stream of spirits: the druid must handle thorn goblins while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
-  "genre": "arcade",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Spirit Stream: a stream of spirits",
-  "core_gameplay_loop": "In Spirit Stream, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round, a new acorns challenge appears; solve it to bank points before time drains. Then check the squad_ready value and advance.",
-  "primary_mechanic": "Squad Marcher",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Collect 240 points of acorns by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 240 within 67 seconds.",
-  "lose_condition": "Timer hits 0 with score < 240, or lives reach 0.",
+  "player_objective": "Declarations and statements: build a valid C source file that prints 16. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 5. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 10 components (5 upper, 5 lower). Set the gold-socket controller batch to 10.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Squad Marcher",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Declarations and statements",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M04-X2-T14-b8f80f46",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Resource Rush', and setting 'Spirit Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 7,
   "trial": 4,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 67,
+    "time_limit_seconds": 0,
     "target_score": 240,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how squad_ready changes.",
-    "Step 2: Use the controls to apply the code idea against thorn goblins in Spirit Stream.",
-    "Step 3: Win by meeting the goal: score >= 240 within 67 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level7/needs_support/game_week5_level7_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_1384",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 240 points of acorns by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 240 within 67 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 240, or lives reach 0.",
+  "source_game_title": "Squad Marcher – Spirit Stream Rush",
+  "source_primary_mechanic": "Squad Marcher",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 5 components via upper_4, upper_6 to output_upper; ELSE: 5 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 67,
+  "learning_objective_id": "cp1_w5_l7",
+  "source_week": 5,
+  "source_level": 7
 }

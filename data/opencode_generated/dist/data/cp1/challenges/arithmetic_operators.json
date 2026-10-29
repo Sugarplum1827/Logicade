@@ -1,0 +1,525 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v01",
+    "index": 1,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the expression for seven remainder two.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "7"
+        },
+        {
+          "id": "t2",
+          "text": "%"
+        },
+        {
+          "id": "t3",
+          "text": "2"
+        },
+        {
+          "id": "t4",
+          "text": "/"
+        },
+        {
+          "id": "t5",
+          "text": "*"
+        },
+        {
+          "id": "t6",
+          "text": "=="
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The modulus operator % returns the remainder after division.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v02",
+    "index": 2,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the operands and the evaluated result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 7, b = 2;",
+        "    int result = a + b * 3;",
+        "    printf(\"%d\\n\", result);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "a",
+          "type": "final value"
+        },
+        {
+          "name": "b",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "7"
+        },
+        {
+          "id": "v2",
+          "text": "2"
+        },
+        {
+          "id": "v3",
+          "text": "13"
+        },
+        {
+          "id": "v4",
+          "text": "8"
+        },
+        {
+          "id": "v5",
+          "text": "6"
+        },
+        {
+          "id": "v6",
+          "text": "3"
+        }
+      ],
+      "answer": {
+        "a": "v1",
+        "b": "v2",
+        "result": "v3"
+      }
+    },
+    "explanation": "Multiplication happens first, so result is 7 + 6 = 13.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v03",
+    "index": 3,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each expression by the operation that runs first.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "multiply",
+          "label": "Multiply or divide first",
+          "desc": "Higher precedence"
+        },
+        {
+          "id": "add",
+          "label": "Add or subtract first",
+          "desc": "Lower precedence"
+        },
+        {
+          "id": "paren",
+          "label": "Parentheses first",
+          "desc": "Explicit grouping"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "2 + 3 * 4",
+          "bin": "multiply"
+        },
+        {
+          "id": "i2",
+          "text": "10 - 6 / 2",
+          "bin": "multiply"
+        },
+        {
+          "id": "i3",
+          "text": "(2 + 3) * 4",
+          "bin": "paren"
+        },
+        {
+          "id": "i4",
+          "text": "7 % 3 + 1",
+          "bin": "multiply"
+        },
+        {
+          "id": "i5",
+          "text": "8 + 2 - 1",
+          "bin": "add"
+        },
+        {
+          "id": "i6",
+          "text": "(10 - 4) / 2",
+          "bin": "paren"
+        }
+      ]
+    },
+    "explanation": "Parentheses override the usual order; otherwise * / % run before + -.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v04",
+    "index": 4,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int a = 7, b = 2;",
+        "int remainder = a % b;",
+        "printf(\"%d\\n\", remainder);",
+        "float bad = 7.5 % 2;",
+        "return 0;"
+      ],
+      "answer": 3,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The modulus operator requires integer operands; 7.5 is a float.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v05",
+    "index": 5,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the expression.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int a = 7, b = 2;",
+        "    int result = a + b * 3;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Named variables"
+        },
+        {
+          "id": "expression",
+          "label": "Expression scope",
+          "desc": "Temporary intermediate value"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int a = 7;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int b = 2;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int result",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "b * 3",
+          "scope": "expression"
+        }
+      ]
+    },
+    "explanation": "b * 3 is a temporary expression value; the named variables belong to main.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v06",
+    "index": 6,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each arithmetic operators term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "+"
+        },
+        {
+          "id": "l2",
+          "text": "*"
+        },
+        {
+          "id": "l3",
+          "text": "/"
+        },
+        {
+          "id": "l4",
+          "text": "%"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Addition"
+        },
+        {
+          "id": "r2",
+          "text": "Multiplication"
+        },
+        {
+          "id": "r3",
+          "text": "Division"
+        },
+        {
+          "id": "r4",
+          "text": "Remainder after integer division"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v07",
+    "index": 7,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the precedence expression.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int result = 2 {{b0}} 3 {{b1}} 4;",
+        "printf(\"%d\\n\", result);",
+        "// expected 14"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "operator that adds before multiplying",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "higher-precedence operator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "+"
+        },
+        {
+          "id": "b2",
+          "text": "*"
+        },
+        {
+          "id": "b3",
+          "text": "%"
+        },
+        {
+          "id": "b4",
+          "text": "-"
+        },
+        {
+          "id": "b5",
+          "text": "/"
+        }
+      ]
+    },
+    "explanation": "2 + 3 * 4 is 2 + 12 = 14 because multiplication runs first.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v08",
+    "index": 8,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 7, b = 2;",
+        "    int result = a + b * 3;",
+        "    printf(\"%d\\n\", result);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "13",
+      "accept": [
+        "13"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "b * 3 is 6, then a + 6 is 13."
+    },
+    "explanation": "The program produces 13.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v09",
+    "index": 9,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 7, b = 2;",
+        "    int result = a + b * 3;",
+        "    printf(\"%d\\n\", result);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "a": "7",
+            "b": "2",
+            "result": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "a": "7",
+            "b": "2",
+            "result": "13"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "a": "7",
+            "b": "2",
+            "result": "13"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "result"
+      ],
+      "answer": {
+        "a": "7",
+        "b": "2",
+        "result": "13"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is a = 7, b = 2, result = 13.",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "arithmetic_operators_v10",
+    "index": 10,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of arithmetic operators in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Evaluate parentheses first"
+        },
+        {
+          "id": "s2",
+          "text": "Evaluate multiplication, division, and modulus"
+        },
+        {
+          "id": "s3",
+          "text": "Evaluate addition and subtraction"
+        },
+        {
+          "id": "s4",
+          "text": "Store the final result"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Evaluate parentheses first → Evaluate multiplication, division, and modulus → Evaluate addition and subtraction → Store the final result",
+    "concept_slug": "arithmetic_operators",
+    "concept_name": "Arithmetic Operators"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_24_variable_assignment",
+  "slug": "variable_assignment",
+  "display_name": "Assignment",
+  "learning_target": "use = to store a value and == to compare",
+  "core_brief": "The single equals sign stores a value; the double equals sign compares two values.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 7,
+  "unit": "Variables",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_3",
+    "zones": [
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_can",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.fish",
+      "bush": "themes.food.ketchup",
+      "slime": "themes.food.can",
+      "bee": "themes.food.ketchup"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "repair",
+  "mechanic_label": "Repair",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_24_variable_assignment_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "variable_assignment_v05",
+  "title": "Repair the program",
+  "label": "Lab 05: Repair the program",
+  "seed": 1258751546,
+  "challenge_bank": "../../../data/cp1/challenges/variable_assignment.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0159",
+  "variation_id": "canvas_game_0159",
+  "week": 1,
+  "level": 6,
+  "trial": 9,
+  "difficulty": "Need Assistance",
+  "mode": "tetris",
+  "title": "Flowchart Workshop – Find the larger number",
+  "display_name": "Flowchart Block Puzzle",
+  "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
+  "topic": "Orientation",
+  "learning_objectives": [
+    "Controls and mission practice"
+  ],
+  "lesson": {
+    "summary": "Orientation",
+    "points": [
+      "Controls and mission practice",
+      "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+      "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once.",
+      "Stage 2 is guided interface practice; the main flowchart lesson is Week 2."
+    ],
+    "example": "",
+    "practice": "Controls and mission practice",
+    "week": 1,
+    "source_week": 1,
+    "source_level": 2,
+    "objective_id": "cp1_w1_l2",
+    "title": "Orientation",
+    "stage_title": "Controls and mission practice",
+    "objectives": [
+      "Controls and mission practice"
+    ],
+    "sources": [],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      1
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_level": 2,
+  "source_week": 1,
+  "primary_mechanic": "Memory Map",
+  "objective": "Read a and b. Display a when a is greater than b; otherwise display b.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 1973172347,
+  "layout": {
+    "interaction": "flowchart_drag_drop",
+    "columns": 12,
+    "rows": 10,
+    "seed": 1973172347
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_9",
+    "source_level": null,
+    "title": "Find the larger number",
+    "prompt": "Read a and b. Display a when a is greater than b; otherwise display b.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.08,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.5,
+        "y": 0.27,
+        "number": 2
+      },
+      {
+        "id": "decide",
+        "x": 0.5,
+        "y": 0.47,
+        "number": 3
+      },
+      {
+        "id": "yes",
+        "x": 0.24,
+        "y": 0.68,
+        "number": 4
+      },
+      {
+        "id": "no",
+        "x": 0.76,
+        "y": 0.68,
+        "number": 5
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9,
+        "number": 6
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "decide"
+      },
+      {
+        "from": "decide",
+        "to": "yes",
+        "label": "Yes"
+      },
+      {
+        "from": "decide",
+        "to": "no",
+        "label": "No"
+      },
+      {
+        "from": "yes",
+        "to": "end"
+      },
+      {
+        "from": "no",
+        "to": "end"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "no",
+        "label": "Write b",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "b"
+          }
+        }
+      },
+      {
+        "id": "yes",
+        "label": "Write a",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "a"
+          }
+        }
+      },
+      {
+        "id": "decide",
+        "label": "a > b?",
+        "kind": "decision",
+        "action": {
+          "test": {
+            "op": ">",
+            "args": [
+              {
+                "var": "a"
+              },
+              {
+                "var": "b"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "read",
+        "label": "Read a, b",
+        "kind": "input",
+        "action": {
+          "names": [
+            "a",
+            "b"
+          ]
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "decide": "decide",
+      "yes": "yes",
+      "no": "no",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "a": 9,
+          "b": 2
+        },
+        "expected": [
+          9
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "a": 2,
+          "b": 9
+        },
+        "expected": [
+          9
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "a": 4,
+          "b": 4
+        },
+        "expected": [
+          4
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "a": -3,
+          "b": -1
+        },
+        "expected": [
+          -1
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": true,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0159",
+    "objective_id": "cp1_w1_l2"
+  },
+  "assets": {
+    "puzzle_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "block_drop_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/drop_001.ogg",
+    "line_clear_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_002.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "decide",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "yes",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    },
+    {
+      "id": "no",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 6 in the requested chart."
+    }
+  ],
+  "source_path": "week_1/level6/needs_support/game_week1_level6_difficulty(NeedAssistance)_9.json",
+  "source_topic": "Orientation",
+  "source_learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "source_primary_mechanic": "Memory Map",
+  "source_code_snippet": "x = 4\ny = x * 2"
+}

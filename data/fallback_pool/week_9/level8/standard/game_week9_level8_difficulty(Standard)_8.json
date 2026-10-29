@@ -1,30 +1,30 @@
 {
   "file_id": "game_2628",
-  "game_title": "Logic Detective – Dry Well Rush",
+  "game_title": "Flowchart Lab · Sum from 1 to n",
   "game_concept": "A speed quiz set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Logic Detective: Trace code that runs but gives the wrong answer and fix the logic bug.",
-  "genre": "speed quiz",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Dry Well: a nearly dry well",
-  "core_gameplay_loop": "In Dry Well, repeat each round: Trace code that runs but gives the wrong answer and fix the logic bug. Each round, a new sand maps challenge appears; solve it to bank points before time drains. Then check the clues value and advance.",
-  "primary_mechanic": "Logic Detective",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Collect 380 points of sand maps by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 380 within 51 seconds.",
-  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 8: {'n': 0}; {'n': 13}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Logic Detective",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M03-X2-T10-306ba6db",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Logic Detective' (Week 9 slot 3), mission type 'Resource Rush', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 8,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how clues changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
-    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/standard/game_week9_level8_difficulty(Standard)_8.json",
+    "variation_id": "canvas_game_2628",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 380 points of sand maps by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 380 within 51 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "source_game_title": "Logic Detective – Dry Well Rush",
+  "source_primary_mechanic": "Logic Detective",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

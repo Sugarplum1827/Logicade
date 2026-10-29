@@ -1,30 +1,30 @@
 {
   "file_id": "game_0350",
-  "game_title": "Comparison Duel – Geyser Flats Defense",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A survival strategy set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the lava scout's power beats the shield shown by fire sprites.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
-  "core_gameplay_loop": "In Geyser Flats, repeat each round: Choose ==, !=, < , > or >= so the lava scout's power beats the shield shown by fire sprites. Each round, fire sprites strike the forge anvil, so respond before the next strike lands. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Checkpoint flags",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the forge anvil from fire sprites in Geyser Flats: keep the power meter above zero by applying the concept correctly until the 33-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 33 seconds while power > 0.",
-  "lose_condition": "power drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "player_objective": "Read value for station 10, then display the same value without changing it. Test dataset 10: {'value': -10}; {'value': 30}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X1-T12-25db99de",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Survival Siege', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 10,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
-    "Step 3: Win by meeting the goal: Timer reaches 33 seconds while power > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/standard/game_week2_level2_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_0350",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the forge anvil from fire sprites in Geyser Flats: keep the power meter above zero by applying the concept correctly until the 33-second timer ends.",
+  "source_win_condition": "Timer reaches 33 seconds while power > 0.",
+  "source_lose_condition": "power drops to 0, or lives reach 0, before the 33-second timer ends.",
+  "source_game_title": "Comparison Duel – Geyser Flats Defense",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

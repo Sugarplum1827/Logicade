@@ -1,30 +1,30 @@
 {
   "file_id": "game_2553",
-  "game_title": "Logic Detective – Mirage Road Rush",
+  "game_title": "Examination practice · Integer division · variation 3",
   "game_concept": "A speed quiz set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Logic Detective: Trace code that runs but gives the wrong answer and fix the logic bug.",
-  "genre": "speed quiz",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
-  "core_gameplay_loop": "In Mirage Road, repeat each round: Trace code that runs but gives the wrong answer and fix the logic bug. Each round, a new scarab charms challenge appears; solve it to bank points before time drains. Then check the clues value and advance.",
-  "primary_mechanic": "Logic Detective",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Collect 210 points of scarab charms by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 210 within 63 seconds.",
-  "lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "player_objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 5, and print each result with %d. Dataset 3 starts with [-3, 0, 13, 16]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Logic Detective",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 7: Integer division",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M03-X2-T05-c922fc0e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Logic Detective' (Week 9 slot 3), mission type 'Resource Rush', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 6,
   "trial": 3,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 63,
+    "time_limit_seconds": 0,
     "target_score": 210,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how clues changes.",
-    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
-    "Step 3: Win by meeting the goal: score >= 210 within 63 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level6/needs_support/game_week9_level6_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_2553",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 210 points of scarab charms by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 210 within 63 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "source_game_title": "Logic Detective – Mirage Road Rush",
+  "source_primary_mechanic": "Logic Detective",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 63,
+  "learning_objective_id": "cp1_w7_l10",
+  "source_week": 7,
+  "source_level": 10
 }

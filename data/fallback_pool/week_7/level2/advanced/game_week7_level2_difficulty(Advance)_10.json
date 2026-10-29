@@ -1,30 +1,30 @@
 {
   "file_id": "game_1860",
-  "game_title": "Mutation Mystery – Overgrown Archway Defense",
+  "game_title": "Initialize and add · variation 10",
   "game_concept": "A action defense set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
-  "genre": "action defense",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
-  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round, vine horrors strike the rune gate, so respond before the next strike lands. Then check the mutation_safe value and advance.",
-  "primary_mechanic": "Mutation Mystery",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Reduced-motion and color-blind-safe UI",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Protect the rune gate from vine horrors in Overgrown Archway: keep the mutation_safe meter above zero by applying the concept correctly until the 26-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 26 seconds while mutation_safe > 0.",
-  "lose_condition": "mutation_safe drops to 0, or lives reach 0, before the 26-second timer ends.",
+  "player_objective": "Initialize and add: declare resource as int, apply resource + 14, and print each result with %d. Dataset 10 starts with [-3, 0, 14, 17]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Mutation Mystery",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Initialize and add",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M15-X1-T02-dcdf99c7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Survival Siege', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 2,
   "trial": 10,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 26,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
-    "Step 3: Win by meeting the goal: Timer reaches 26 seconds while mutation_safe > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level2/advanced/game_week7_level2_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_1860",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the rune gate from vine horrors in Overgrown Archway: keep the mutation_safe meter above zero by applying the concept correctly until the 26-second timer ends.",
+  "source_win_condition": "Timer reaches 26 seconds while mutation_safe > 0.",
+  "source_lose_condition": "mutation_safe drops to 0, or lives reach 0, before the 26-second timer ends.",
+  "source_game_title": "Mutation Mystery – Overgrown Archway Defense",
+  "source_primary_mechanic": "Mutation Mystery",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 26,
+  "learning_objective_id": "cp1_w7_l2",
+  "source_week": 7,
+  "source_level": 2
 }

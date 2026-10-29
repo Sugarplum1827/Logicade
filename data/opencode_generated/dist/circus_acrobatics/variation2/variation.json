@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "28_circus_acrobatics",
+  "slug": "circus_acrobatics",
+  "display_name": "Circus Acrobatics",
+  "module_family": "timing_platformer",
+  "learning_target": "loop bounds and iteration",
+  "core_brief": "Set loop boundaries to time flips, catches, and safe landings during a performance.",
+  "mode": "runner",
+  "mode_label": "Route runner",
+  "skin": "circus",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Route runner",
+  "accent": "#ff9f43",
+  "tint": 12051178,
+  "variation_id": "28_circus_acrobatics_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 115915536,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.bush",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.bush"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/circus_acrobatics.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

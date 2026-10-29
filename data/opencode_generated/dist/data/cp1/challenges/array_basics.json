@@ -1,0 +1,539 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v01",
+    "index": 1,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build an integer array of three scores initialized to 10, 20, and 30.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "scores[3]"
+        },
+        {
+          "id": "t3",
+          "text": "="
+        },
+        {
+          "id": "t4",
+          "text": "{10, 20, 30}"
+        },
+        {
+          "id": "t5",
+          "text": ";"
+        },
+        {
+          "id": "t6",
+          "text": "scores(3)"
+        },
+        {
+          "id": "t7",
+          "text": "float"
+        },
+        {
+          "id": "t8",
+          "text": "[3]"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The size goes in square brackets and the initial values go in braces.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v02",
+    "index": 2,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign each element and the value selected by index 1.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int scores[3] = {10, 20, 30};",
+        "    printf(\"%d\\n\", scores[1]);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "scores[0]",
+          "type": "final value"
+        },
+        {
+          "name": "scores[1]",
+          "type": "final value"
+        },
+        {
+          "name": "scores[2]",
+          "type": "final value"
+        },
+        {
+          "name": "chosen",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "10"
+        },
+        {
+          "id": "v2",
+          "text": "20"
+        },
+        {
+          "id": "v3",
+          "text": "30"
+        },
+        {
+          "id": "v4",
+          "text": "20"
+        },
+        {
+          "id": "v5",
+          "text": "11"
+        },
+        {
+          "id": "v6",
+          "text": "9"
+        },
+        {
+          "id": "v7",
+          "text": "21"
+        }
+      ],
+      "answer": {
+        "scores[0]": "v1",
+        "scores[1]": "v2",
+        "scores[2]": "v3",
+        "chosen": "v4"
+      }
+    },
+    "explanation": "The array holds 10, 20, and 30; index 1 selects the second value, 20.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v03",
+    "index": 3,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each index as valid or out of bounds for int scores[3].",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "valid",
+          "label": "Valid index",
+          "desc": "0, 1, or 2"
+        },
+        {
+          "id": "invalid",
+          "label": "Out of bounds",
+          "desc": "Outside the array"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "scores[0]",
+          "bin": "valid"
+        },
+        {
+          "id": "i2",
+          "text": "scores[1]",
+          "bin": "valid"
+        },
+        {
+          "id": "i3",
+          "text": "scores[2]",
+          "bin": "valid"
+        },
+        {
+          "id": "i4",
+          "text": "scores[3]",
+          "bin": "invalid"
+        },
+        {
+          "id": "i5",
+          "text": "scores[-1]",
+          "bin": "invalid"
+        },
+        {
+          "id": "i6",
+          "text": "scores[5]",
+          "bin": "invalid"
+        }
+      ]
+    },
+    "explanation": "A size-3 array uses indexes 0 through 2 only.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v04",
+    "index": 4,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int scores[3] = {10, 20, 30};",
+        "printf(\"%d\\n\", scores[3]);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "A three-element array has valid indexes 0, 1, and 2. Index 3 is out of bounds.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v05",
+    "index": 5,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the array storage.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int scores[3] = {10, 20, 30};",
+        "    int chosen = scores[1];",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Named variables"
+        },
+        {
+          "id": "array",
+          "label": "Array elements",
+          "desc": "scores[0] through scores[2]"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int scores[3]",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int chosen",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "scores[0]",
+          "scope": "array"
+        },
+        {
+          "id": "d4",
+          "text": "scores[1]",
+          "scope": "array"
+        }
+      ]
+    },
+    "explanation": "The array name is a main variable; its elements are storage inside that array.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v06",
+    "index": 6,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each array basics term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Array"
+        },
+        {
+          "id": "l2",
+          "text": "Element"
+        },
+        {
+          "id": "l3",
+          "text": "Index"
+        },
+        {
+          "id": "l4",
+          "text": "Zero-based"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A fixed-size collection of same-type values"
+        },
+        {
+          "id": "r2",
+          "text": "One value stored in the array"
+        },
+        {
+          "id": "r3",
+          "text": "The position used to access an element"
+        },
+        {
+          "id": "r4",
+          "text": "The first element is at index 0"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v07",
+    "index": 7,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the array declaration and access.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int scores{{b0}} = {10, 20, 30};",
+        "printf(\"%d\\n\", scores[{{b1}}]);",
+        "// print the second element"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "array size in brackets",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "index of the second element",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "[3]"
+        },
+        {
+          "id": "b2",
+          "text": "1"
+        },
+        {
+          "id": "b3",
+          "text": "(3)"
+        },
+        {
+          "id": "b4",
+          "text": "[2]"
+        },
+        {
+          "id": "b5",
+          "text": "3"
+        }
+      ]
+    },
+    "explanation": "The size is [3] and the second element is at index 1.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v08",
+    "index": 8,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int scores[3] = {10, 20, 30};",
+        "    printf(\"%d\\n\", scores[1]);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "20",
+      "accept": [
+        "20"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "Index 1 is the second element, so scores[1] is 20."
+    },
+    "explanation": "The program produces 20.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v09",
+    "index": 9,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int scores[3] = {10, 20, 30};",
+        "    printf(\"%d\\n\", scores[1]);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "scores[0]",
+        "scores[1]",
+        "scores[2]",
+        "chosen"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "scores[0]": "10",
+            "scores[1]": "20",
+            "scores[2]": "30",
+            "chosen": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "scores[0]": "10",
+            "scores[1]": "20",
+            "scores[2]": "30",
+            "chosen": "20"
+          }
+        }
+      ],
+      "ask": [
+        "scores[0]",
+        "scores[1]",
+        "scores[2]",
+        "chosen"
+      ],
+      "answer": {
+        "scores[0]": "10",
+        "scores[1]": "20",
+        "scores[2]": "30",
+        "chosen": "20"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is scores[0] = 10, scores[1] = 20, scores[2] = 30, chosen = 20.",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_basics_v10",
+    "index": 10,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of array basics in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Choose the element type"
+        },
+        {
+          "id": "s2",
+          "text": "Give the array a name and size"
+        },
+        {
+          "id": "s3",
+          "text": "Initialize the elements"
+        },
+        {
+          "id": "s4",
+          "text": "Access an element with a valid index"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Choose the element type → Give the array a name and size → Initialize the elements → Access an element with a valid index",
+    "concept_slug": "array_basics",
+    "concept_name": "Array Basics"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "concept_id": "46_candy_kingdom_defender",
+  "slug": "candy_kingdom_defender",
+  "learning_target": "Boolean logic and conditions",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does `and` require?",
+      "options": [
+        "Only the first",
+        "Neither condition true",
+        "One condition true",
+        "Both conditions true"
+      ],
+      "answer_index": 3,
+      "explanation": "A and B is true only when both A and B are true."
+    },
+    {
+      "id": "q2",
+      "question": "What does `or` require?",
+      "options": [
+        "Neither condition true",
+        "Only the second",
+        "At least one condition true",
+        "Both conditions true"
+      ],
+      "answer_index": 2,
+      "explanation": "A or B is true when at least one of the conditions is true."
+    },
+    {
+      "id": "q3",
+      "question": "What does `not` do?",
+      "options": [
+        "Reverses a Boolean value",
+        "Deletes a variable",
+        "Creates a loop",
+        "Doubles a number"
+      ],
+      "answer_index": 0,
+      "explanation": "The not operator turns True into False and False into True."
+    },
+    {
+      "id": "q4",
+      "question": "Which condition activates a shield when the gate is low and enemies are near?",
+      "options": [
+        "gate_low or enemies_near",
+        "gate_low and enemies_near",
+        "not gate_low",
+        "enemies_near == False"
+      ],
+      "answer_index": 1,
+      "explanation": "Both conditions must be true, so the and operator is correct."
+    },
+    {
+      "id": "q5",
+      "question": "What is `True and False`?",
+      "options": [
+        "False",
+        "0",
+        "1",
+        "True"
+      ],
+      "answer_index": 0,
+      "explanation": "The and operator is false when either value is false."
+    },
+    {
+      "id": "q6",
+      "question": "Why use Boolean rules for defenses?",
+      "options": [
+        "To make the castle prettier",
+        "To activate the right defense automatically",
+        "To change the language",
+        "To avoid all decisions"
+      ],
+      "answer_index": 1,
+      "explanation": "Boolean rules turn threat conditions into clear defensive actions."
+    }
+  ]
+}

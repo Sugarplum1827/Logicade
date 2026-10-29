@@ -1,30 +1,30 @@
 {
   "file_id": "game_1802",
-  "game_title": "Index Archery – Cracked Obelisk Streak",
+  "game_title": "Declare int · variation 2",
   "game_concept": "A rhythm puzzle set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Index Archery: Hit targets by choosing the right list index, including negative ones.",
-  "genre": "rhythm puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
-  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Hit targets by choosing the right list index, including negative ones. Each round poses one decision; a wrong answer breaks the streak. Then check the arrows value and advance.",
-  "primary_mechanic": "Index Archery",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Chain 5 consecutive correct decisions about arrows to power up the rune scholar and open the sealed archway.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 5.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Declare int: declare resource as int, apply resource, and print each result with %d. Dataset 2 starts with [-3, 0, 3, 6]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Index Archery",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare int",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M02-X4-T08-b8803d04",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Index Archery' (Week 7 slot 2), mission type 'Streak Challenge', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 1,
   "trial": 2,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how arrows changes.",
-    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
-    "Step 3: Win by meeting the goal: streak counter reaches 5."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level1/needs_support/game_week7_level1_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_1802",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 5 consecutive correct decisions about arrows to power up the rune scholar and open the sealed archway.",
+  "source_win_condition": "streak counter reaches 5.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Index Archery – Cracked Obelisk Streak",
+  "source_primary_mechanic": "Index Archery",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w7_l1",
+  "source_week": 7,
+  "source_level": 1
 }

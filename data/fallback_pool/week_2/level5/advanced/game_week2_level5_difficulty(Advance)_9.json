@@ -1,30 +1,30 @@
 {
   "file_id": "game_0449",
-  "game_title": "Unit Trader – Ash Rim Trail Streak",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A rhythm puzzle set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of obsidian shards is fair.",
-  "genre": "rhythm puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
-  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Convert units using expressions so each trade of obsidian shards is fair. Each round poses one decision; a wrong answer breaks the streak. Then check the fair_trades value and advance.",
-  "primary_mechanic": "Unit Trader",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about fair_trades to power up the fire warden and open the magma valve.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read score. Display Pass when score ≥ 58; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 9: {'score': 57}; {'score': 59}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Unit Trader",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M14-X4-T01-e868d1f8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Streak Challenge', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 9,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fair_trades changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/advanced/game_week2_level5_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_0449",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about fair_trades to power up the fire warden and open the magma valve.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Unit Trader – Ash Rim Trail Streak",
+  "source_primary_mechanic": "Unit Trader",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5
 }

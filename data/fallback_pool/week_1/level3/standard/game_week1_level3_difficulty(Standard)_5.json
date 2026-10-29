@@ -2,9 +2,9 @@
   "file_id": "game_0075",
   "game_title": "Uninitialized Hunt – Market Square Rush",
   "game_concept": "A speed quiz set in The Kingdom – Market Square, a bustling cobbled market square: the royal scribe must handle thieves while practicing variables & assignment. Core idea – Uninitialized Hunt: Find variables used before assignment and fix them before thieves exploit the gap.",
-  "genre": "speed quiz",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Market Square: a bustling cobbled market square",
-  "core_gameplay_loop": "In Market Square, repeat each round: Find variables used before assignment and fix them before thieves exploit the gap. Each round, a new scrolls challenge appears; solve it to bank points before time drains. Then check the bugs_fixed value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Uninitialized Hunt",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
@@ -12,19 +12,19 @@
     "Event log of every action"
   ],
   "player_objective": "Collect 180 points of scrolls by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "score >= 180 within 36 seconds.",
   "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 3 (intro tier): Uninitialized Hunt",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M15-X2-T03-e660fe66",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Uninitialized Hunt' (Week 1 slot 15), mission type 'Resource Rush', and setting 'Market Square'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 3,
   "trial": 5,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how bugs_fixed changes.",
     "Step 2: Use the controls to apply the code idea against thieves in Market Square.",
     "Step 3: Win by meeting the goal: score >= 180 within 36 seconds."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level3/standard/game_week1_level3_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_0075",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

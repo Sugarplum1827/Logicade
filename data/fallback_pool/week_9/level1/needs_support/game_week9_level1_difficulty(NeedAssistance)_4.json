@@ -1,30 +1,30 @@
 {
   "file_id": "game_2404",
-  "game_title": "Print Tracer – Dune Crest Race",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A racing platformer set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what sand wyrms changed.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Dune Crest: a high dune crest",
-  "core_gameplay_loop": "In Dune Crest, repeat each round: Insert print statements at the right lines to reveal what sand wyrms changed. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the trace_clarity value and advance.",
-  "primary_mechanic": "Print Tracer",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Beat a rival AI to the oasis by solving code steps involving trace_clarity that move the desert nomad forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
-  "lose_condition": "The rival reaches the oasis first, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score ≥ 48; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 4: {'score': 47}; {'score': 49}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Print Tracer",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M04-X5-T02-06b5057a",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Rival Race', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 4,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/needs_support/game_week9_level1_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_2404",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the oasis by solving code steps involving trace_clarity that move the desert nomad forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "source_lose_condition": "The rival reaches the oasis first, or lives reach 0.",
+  "source_game_title": "Print Tracer – Dune Crest Race",
+  "source_primary_mechanic": "Print Tracer",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

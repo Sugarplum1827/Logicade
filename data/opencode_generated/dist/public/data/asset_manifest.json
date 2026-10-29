@@ -1,0 +1,1335 @@
+{
+  "pack_id": "logicade-starter-01",
+  "pack_version": "1.0.0",
+  "engine": "Phaser",
+  "license": "CC0-1.0",
+  "attribution": "Kenney New Platformer Pack 1.1 and seven Kenney CC0 theme packs (attribution appreciated, not required)",
+  "source_license_file": "LICENSE-Kenney-New-Platformer-Pack.txt",
+  "asset_count": 182,
+  "assets": [
+    {
+      "id": "characters.green_idle",
+      "path": "assets/characters/green_idle.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_idle.png"
+    },
+    {
+      "id": "characters.green_walk_a",
+      "path": "assets/characters/green_walk_a.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_walk_a.png"
+    },
+    {
+      "id": "characters.green_walk_b",
+      "path": "assets/characters/green_walk_b.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_walk_b.png"
+    },
+    {
+      "id": "characters.green_jump",
+      "path": "assets/characters/green_jump.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_jump.png"
+    },
+    {
+      "id": "characters.green_hit",
+      "path": "assets/characters/green_hit.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_hit.png"
+    },
+    {
+      "id": "characters.beige_idle",
+      "path": "assets/characters/beige_idle.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_beige_idle.png"
+    },
+    {
+      "id": "characters.beige_walk_a",
+      "path": "assets/characters/beige_walk_a.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_beige_walk_a.png"
+    },
+    {
+      "id": "characters.beige_walk_b",
+      "path": "assets/characters/beige_walk_b.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_beige_walk_b.png"
+    },
+    {
+      "id": "enemies.slime_rest",
+      "path": "assets/enemies/slime_rest.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/slime_block_rest.png"
+    },
+    {
+      "id": "enemies.slime_walk_a",
+      "path": "assets/enemies/slime_walk_a.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/slime_normal_walk_a.png"
+    },
+    {
+      "id": "enemies.slime_walk_b",
+      "path": "assets/enemies/slime_walk_b.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/slime_normal_walk_b.png"
+    },
+    {
+      "id": "enemies.bee_rest",
+      "path": "assets/enemies/bee_rest.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/bee_rest.png"
+    },
+    {
+      "id": "enemies.bee_fly_a",
+      "path": "assets/enemies/bee_fly_a.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/bee_a.png"
+    },
+    {
+      "id": "enemies.bee_fly_b",
+      "path": "assets/enemies/bee_fly_b.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/bee_b.png"
+    },
+    {
+      "id": "backgrounds.forest",
+      "path": "assets/backgrounds/forest.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_trees.png"
+    },
+    {
+      "id": "backgrounds.hills",
+      "path": "assets/backgrounds/hills.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_hills.png"
+    },
+    {
+      "id": "backgrounds.cave",
+      "path": "assets/backgrounds/cave.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_mushrooms.png"
+    },
+    {
+      "id": "backgrounds.desert",
+      "path": "assets/backgrounds/desert.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_desert.png"
+    },
+    {
+      "id": "tiles.grass",
+      "path": "assets/tiles/grass.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/grass.png"
+    },
+    {
+      "id": "tiles.dirt",
+      "path": "assets/tiles/dirt.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/terrain_dirt_block.png"
+    },
+    {
+      "id": "tiles.stone",
+      "path": "assets/tiles/stone.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/brick_grey.png"
+    },
+    {
+      "id": "tiles.wood",
+      "path": "assets/tiles/wood.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/bridge_logs.png"
+    },
+    {
+      "id": "tiles.spikes",
+      "path": "assets/tiles/spikes.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/block_spikes.png"
+    },
+    {
+      "id": "tiles.coin",
+      "path": "assets/tiles/coin.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/coin_gold.png"
+    },
+    {
+      "id": "tiles.flag",
+      "path": "assets/tiles/flag.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/flag_green_a.png"
+    },
+    {
+      "id": "tiles.bush",
+      "path": "assets/tiles/bush.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/bush.png"
+    },
+    {
+      "id": "audio.jump",
+      "path": "assets/audio/jump.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_jump.ogg"
+    },
+    {
+      "id": "audio.coin",
+      "path": "assets/audio/coin.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_coin.ogg"
+    },
+    {
+      "id": "audio.hurt",
+      "path": "assets/audio/hurt.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_hurt.ogg"
+    },
+    {
+      "id": "audio.goal",
+      "path": "assets/audio/goal.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_gem.ogg"
+    },
+    {
+      "id": "audio.impact",
+      "path": "assets/audio/impact.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_bump.ogg"
+    },
+    {
+      "id": "themes.space.bg_black",
+      "path": "assets/themes/space/bg_black.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/backgrounds/black.png"
+    },
+    {
+      "id": "themes.space.bg_blue",
+      "path": "assets/themes/space/bg_blue.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/backgrounds/blue.png"
+    },
+    {
+      "id": "themes.space.bg_dark_purple",
+      "path": "assets/themes/space/bg_dark_purple.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/backgrounds/dark_purple.png"
+    },
+    {
+      "id": "themes.space.bg_purple",
+      "path": "assets/themes/space/bg_purple.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/backgrounds/purple.png"
+    },
+    {
+      "id": "themes.space.player_blue",
+      "path": "assets/themes/space/player_blue.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/player_ship_1_blue.png"
+    },
+    {
+      "id": "themes.space.player_green",
+      "path": "assets/themes/space/player_green.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/player_ship_2_green.png"
+    },
+    {
+      "id": "themes.space.player_orange",
+      "path": "assets/themes/space/player_orange.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/player_ship_3_orange.png"
+    },
+    {
+      "id": "themes.space.player_red",
+      "path": "assets/themes/space/player_red.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/player_ship_1_red.png"
+    },
+    {
+      "id": "themes.space.enemy_blue",
+      "path": "assets/themes/space/enemy_blue.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/enemies/enemy_blue_1.png"
+    },
+    {
+      "id": "themes.space.enemy_green",
+      "path": "assets/themes/space/enemy_green.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/enemies/enemy_green_2.png"
+    },
+    {
+      "id": "themes.space.enemy_red",
+      "path": "assets/themes/space/enemy_red.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/enemies/enemy_red_3.png"
+    },
+    {
+      "id": "themes.space.enemy_black",
+      "path": "assets/themes/space/enemy_black.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/enemies/enemy_black_4.png"
+    },
+    {
+      "id": "themes.space.coin_blue",
+      "path": "assets/themes/space/coin_blue.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/power_ups/powerup_blue_star.png"
+    },
+    {
+      "id": "themes.space.coin_green",
+      "path": "assets/themes/space/coin_green.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/power_ups/powerup_green_star.png"
+    },
+    {
+      "id": "themes.space.coin_red",
+      "path": "assets/themes/space/coin_red.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/power_ups/powerup_red_star.png"
+    },
+    {
+      "id": "themes.space.coin_yellow",
+      "path": "assets/themes/space/coin_yellow.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/power_ups/powerup_yellow_star.png"
+    },
+    {
+      "id": "themes.space.goal_blue",
+      "path": "assets/themes/space/goal_blue.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/ufo_blue.png"
+    },
+    {
+      "id": "themes.space.goal_green",
+      "path": "assets/themes/space/goal_green.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/ufo_green.png"
+    },
+    {
+      "id": "themes.space.goal_red",
+      "path": "assets/themes/space/goal_red.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/ufo_red.png"
+    },
+    {
+      "id": "themes.space.goal_yellow",
+      "path": "assets/themes/space/goal_yellow.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/ufo_yellow.png"
+    },
+    {
+      "id": "themes.space.meteor_grey_big",
+      "path": "assets/themes/space/meteor_grey_big.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/meteors/meteor_grey_big_1.png"
+    },
+    {
+      "id": "themes.space.meteor_brown_big",
+      "path": "assets/themes/space/meteor_brown_big.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/meteors/meteor_brown_big_2.png"
+    },
+    {
+      "id": "themes.space.meteor_grey_med",
+      "path": "assets/themes/space/meteor_grey_med.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/meteors/meteor_grey_med_1.png"
+    },
+    {
+      "id": "themes.space.meteor_brown_small",
+      "path": "assets/themes/space/meteor_brown_small.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/meteors/meteor_brown_small_1.png"
+    },
+    {
+      "id": "themes.space.follower",
+      "path": "assets/themes/space/follower.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "assets/kenney/sprites/space_shooter_remastered/player_ship_2_blue.png"
+    },
+    {
+      "id": "themes.space.tile_blue",
+      "path": "assets/themes/space/tile_blue.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.space.tile_purple",
+      "path": "assets/themes/space/tile_purple.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.space.tile_steel",
+      "path": "assets/themes/space/tile_steel.png",
+      "category": "themes",
+      "theme": "space",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.underwater.tile_sand",
+      "path": "assets/themes/underwater/tile_sand.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/terrain_sand_top_a.png"
+    },
+    {
+      "id": "themes.underwater.tile_dirt",
+      "path": "assets/themes/underwater/tile_dirt.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/terrain_dirt_top_a.png"
+    },
+    {
+      "id": "themes.underwater.player_blue",
+      "path": "assets/themes/underwater/player_blue.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_blue.png"
+    },
+    {
+      "id": "themes.underwater.player_green",
+      "path": "assets/themes/underwater/player_green.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_green.png"
+    },
+    {
+      "id": "themes.underwater.player_orange",
+      "path": "assets/themes/underwater/player_orange.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_orange.png"
+    },
+    {
+      "id": "themes.underwater.player_pink",
+      "path": "assets/themes/underwater/player_pink.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_pink.png"
+    },
+    {
+      "id": "themes.underwater.enemy_red",
+      "path": "assets/themes/underwater/enemy_red.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_red.png"
+    },
+    {
+      "id": "themes.underwater.enemy_grey_long",
+      "path": "assets/themes/underwater/enemy_grey_long.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_grey_long_a.png"
+    },
+    {
+      "id": "themes.underwater.enemy_grey",
+      "path": "assets/themes/underwater/enemy_grey.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_grey.png"
+    },
+    {
+      "id": "themes.underwater.enemy_brown",
+      "path": "assets/themes/underwater/enemy_brown.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_brown.png"
+    },
+    {
+      "id": "themes.underwater.coin_bubble_a",
+      "path": "assets/themes/underwater/coin_bubble_a.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/bubble_a.png"
+    },
+    {
+      "id": "themes.underwater.coin_bubble_b",
+      "path": "assets/themes/underwater/coin_bubble_b.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/bubble_b.png"
+    },
+    {
+      "id": "themes.underwater.coin_bubble_c",
+      "path": "assets/themes/underwater/coin_bubble_c.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/bubble_c.png"
+    },
+    {
+      "id": "themes.underwater.rock_a",
+      "path": "assets/themes/underwater/rock_a.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/rock_a.png"
+    },
+    {
+      "id": "themes.underwater.rock_b",
+      "path": "assets/themes/underwater/rock_b.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/rock_b.png"
+    },
+    {
+      "id": "themes.underwater.seaweed_green",
+      "path": "assets/themes/underwater/seaweed_green.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/seaweed_green_a.png"
+    },
+    {
+      "id": "themes.underwater.seaweed_orange",
+      "path": "assets/themes/underwater/seaweed_orange.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/seaweed_orange_a.png"
+    },
+    {
+      "id": "themes.underwater.follower",
+      "path": "assets/themes/underwater/follower.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "assets/kenney/sprites/fish_pack_2/1x/fish_orange.png"
+    },
+    {
+      "id": "themes.underwater.bg_reef_1",
+      "path": "assets/themes/underwater/bg_reef_1.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.underwater.bg_reef_2",
+      "path": "assets/themes/underwater/bg_reef_2.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.underwater.bg_reef_3",
+      "path": "assets/themes/underwater/bg_reef_3.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.underwater.goal_chest_gold",
+      "path": "assets/themes/underwater/goal_chest_gold.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.underwater.goal_chest_pearl",
+      "path": "assets/themes/underwater/goal_chest_pearl.png",
+      "category": "themes",
+      "theme": "underwater",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.player_green",
+      "path": "assets/themes/pirate/player_green.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_7.png"
+    },
+    {
+      "id": "themes.pirate.player_blue",
+      "path": "assets/themes/pirate/player_blue.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_10.png"
+    },
+    {
+      "id": "themes.pirate.player_red",
+      "path": "assets/themes/pirate/player_red.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_9.png"
+    },
+    {
+      "id": "themes.pirate.player_yellow",
+      "path": "assets/themes/pirate/player_yellow.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_6.png"
+    },
+    {
+      "id": "themes.pirate.enemy_grey",
+      "path": "assets/themes/pirate/enemy_grey.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_14.png"
+    },
+    {
+      "id": "themes.pirate.enemy_shark",
+      "path": "assets/themes/pirate/enemy_shark.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_20.png"
+    },
+    {
+      "id": "themes.pirate.enemy_cross",
+      "path": "assets/themes/pirate/enemy_cross.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_21.png"
+    },
+    {
+      "id": "themes.pirate.enemy_x",
+      "path": "assets/themes/pirate/enemy_x.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_22.png"
+    },
+    {
+      "id": "themes.pirate.goal_ship",
+      "path": "assets/themes/pirate/goal_ship.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/ship_1.png"
+    },
+    {
+      "id": "themes.pirate.cannonball",
+      "path": "assets/themes/pirate/cannonball.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ship_parts/1x/cannon_ball.png"
+    },
+    {
+      "id": "themes.pirate.cannon",
+      "path": "assets/themes/pirate/cannon.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ship_parts/1x/cannon.png"
+    },
+    {
+      "id": "themes.pirate.nest",
+      "path": "assets/themes/pirate/nest.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ship_parts/1x/nest.png"
+    },
+    {
+      "id": "themes.pirate.fire",
+      "path": "assets/themes/pirate/fire.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/effects/1x/fire_1.png"
+    },
+    {
+      "id": "themes.pirate.follower",
+      "path": "assets/themes/pirate/follower.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "assets/kenney/sprites/pirate_pack/ships/1x/dinghy_small_1.png"
+    },
+    {
+      "id": "themes.pirate.bg_sea_1",
+      "path": "assets/themes/pirate/bg_sea_1.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.bg_sea_2",
+      "path": "assets/themes/pirate/bg_sea_2.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.bg_sea_3",
+      "path": "assets/themes/pirate/bg_sea_3.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.tile_plank",
+      "path": "assets/themes/pirate/tile_plank.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.tile_sand",
+      "path": "assets/themes/pirate/tile_sand.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.coin_doubloon",
+      "path": "assets/themes/pirate/coin_doubloon.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.pirate.goal_flag",
+      "path": "assets/themes/pirate/goal_flag.png",
+      "category": "themes",
+      "theme": "pirate",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.farm.tile_soil",
+      "path": "assets/themes/farm/tile_soil.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0000.png"
+    },
+    {
+      "id": "themes.farm.tile_grass",
+      "path": "assets/themes/farm/tile_grass.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0016.png"
+    },
+    {
+      "id": "themes.farm.player_pumpkin",
+      "path": "assets/themes/farm/player_pumpkin.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0004.png"
+    },
+    {
+      "id": "themes.farm.player_jack",
+      "path": "assets/themes/farm/player_jack.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0005.png"
+    },
+    {
+      "id": "themes.farm.enemy_can",
+      "path": "assets/themes/farm/enemy_can.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0026.png"
+    },
+    {
+      "id": "themes.farm.enemy_sunflower",
+      "path": "assets/themes/farm/enemy_sunflower.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0020.png"
+    },
+    {
+      "id": "themes.farm.enemy_bucket",
+      "path": "assets/themes/farm/enemy_bucket.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0027.png"
+    },
+    {
+      "id": "themes.farm.enemy_sprout",
+      "path": "assets/themes/farm/enemy_sprout.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0036.png"
+    },
+    {
+      "id": "themes.farm.coin_tomato",
+      "path": "assets/themes/farm/coin_tomato.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0057.png"
+    },
+    {
+      "id": "themes.farm.coin_pumpkin",
+      "path": "assets/themes/farm/coin_pumpkin.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0055.png"
+    },
+    {
+      "id": "themes.farm.goal_tree",
+      "path": "assets/themes/farm/goal_tree.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0093.png"
+    },
+    {
+      "id": "themes.farm.wheat",
+      "path": "assets/themes/farm/wheat.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0058.png"
+    },
+    {
+      "id": "themes.farm.rock",
+      "path": "assets/themes/farm/rock.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0111.png"
+    },
+    {
+      "id": "themes.farm.fence",
+      "path": "assets/themes/farm/fence.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0038.png"
+    },
+    {
+      "id": "themes.farm.bush",
+      "path": "assets/themes/farm/bush.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0054.png"
+    },
+    {
+      "id": "themes.farm.sunflower",
+      "path": "assets/themes/farm/sunflower.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0020.png"
+    },
+    {
+      "id": "themes.farm.follower",
+      "path": "assets/themes/farm/follower.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "assets/kenney/sprites/pixel_platformer_farm_expansion/tiles/tile_0005.png"
+    },
+    {
+      "id": "themes.farm.bg_farm_1",
+      "path": "assets/themes/farm/bg_farm_1.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.farm.bg_farm_2",
+      "path": "assets/themes/farm/bg_farm_2.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.farm.bg_farm_3",
+      "path": "assets/themes/farm/bg_farm_3.png",
+      "category": "themes",
+      "theme": "farm",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.food.tile_floor",
+      "path": "assets/themes/food/tile_floor.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0000.png"
+    },
+    {
+      "id": "themes.food.player_chef",
+      "path": "assets/themes/food/player_chef.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0085.png"
+    },
+    {
+      "id": "themes.food.player_chef_alt",
+      "path": "assets/themes/food/player_chef_alt.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0086.png"
+    },
+    {
+      "id": "themes.food.enemy_fish",
+      "path": "assets/themes/food/enemy_fish.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0061.png"
+    },
+    {
+      "id": "themes.food.enemy_ketchup",
+      "path": "assets/themes/food/enemy_ketchup.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0042.png"
+    },
+    {
+      "id": "themes.food.enemy_can",
+      "path": "assets/themes/food/enemy_can.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0059.png"
+    },
+    {
+      "id": "themes.food.coin_donut",
+      "path": "assets/themes/food/coin_donut.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0013.png"
+    },
+    {
+      "id": "themes.food.coin_sprinkles",
+      "path": "assets/themes/food/coin_sprinkles.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0014.png"
+    },
+    {
+      "id": "themes.food.coin_cupcake",
+      "path": "assets/themes/food/coin_cupcake.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0043.png"
+    },
+    {
+      "id": "themes.food.goal_cake",
+      "path": "assets/themes/food/goal_cake.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0109.png"
+    },
+    {
+      "id": "themes.food.burger",
+      "path": "assets/themes/food/burger.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0093.png"
+    },
+    {
+      "id": "themes.food.fish",
+      "path": "assets/themes/food/fish.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0063.png"
+    },
+    {
+      "id": "themes.food.can",
+      "path": "assets/themes/food/can.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0059.png"
+    },
+    {
+      "id": "themes.food.ketchup",
+      "path": "assets/themes/food/ketchup.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0042.png"
+    },
+    {
+      "id": "themes.food.follower",
+      "path": "assets/themes/food/follower.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "assets/kenney/sprites/pixel_platformer_food_expansion/tiles/tile_0086.png"
+    },
+    {
+      "id": "themes.food.bg_kitchen_1",
+      "path": "assets/themes/food/bg_kitchen_1.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.food.bg_kitchen_2",
+      "path": "assets/themes/food/bg_kitchen_2.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.food.bg_kitchen_3",
+      "path": "assets/themes/food/bg_kitchen_3.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.food.tile_checker",
+      "path": "assets/themes/food/tile_checker.png",
+      "category": "themes",
+      "theme": "food",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.player_a",
+      "path": "assets/themes/urban/player_a.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0023.png"
+    },
+    {
+      "id": "themes.urban.player_b",
+      "path": "assets/themes/urban/player_b.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0050.png"
+    },
+    {
+      "id": "themes.urban.player_c",
+      "path": "assets/themes/urban/player_c.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0061.png"
+    },
+    {
+      "id": "themes.urban.player_d",
+      "path": "assets/themes/urban/player_d.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0080.png"
+    },
+    {
+      "id": "themes.urban.enemy_a",
+      "path": "assets/themes/urban/enemy_a.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0104.png"
+    },
+    {
+      "id": "themes.urban.enemy_b",
+      "path": "assets/themes/urban/enemy_b.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0105.png"
+    },
+    {
+      "id": "themes.urban.enemy_c",
+      "path": "assets/themes/urban/enemy_c.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0106.png"
+    },
+    {
+      "id": "themes.urban.enemy_d",
+      "path": "assets/themes/urban/enemy_d.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0107.png"
+    },
+    {
+      "id": "themes.urban.goal_door",
+      "path": "assets/themes/urban/goal_door.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0256.png"
+    },
+    {
+      "id": "themes.urban.barrier",
+      "path": "assets/themes/urban/barrier.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0290.png"
+    },
+    {
+      "id": "themes.urban.barrier_b",
+      "path": "assets/themes/urban/barrier_b.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0291.png"
+    },
+    {
+      "id": "themes.urban.tree",
+      "path": "assets/themes/urban/tree.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0264.png"
+    },
+    {
+      "id": "themes.urban.tree_b",
+      "path": "assets/themes/urban/tree_b.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0265.png"
+    },
+    {
+      "id": "themes.urban.follower",
+      "path": "assets/themes/urban/follower.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "assets/kenney/sprites/rpg_urban_pack/tiles/tile_0024.png"
+    },
+    {
+      "id": "themes.urban.bg_city_day",
+      "path": "assets/themes/urban/bg_city_day.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.bg_city_dusk",
+      "path": "assets/themes/urban/bg_city_dusk.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.bg_city_night",
+      "path": "assets/themes/urban/bg_city_night.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.tile_grass",
+      "path": "assets/themes/urban/tile_grass.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.tile_sidewalk",
+      "path": "assets/themes/urban/tile_sidewalk.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.tile_asphalt",
+      "path": "assets/themes/urban/tile_asphalt.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.urban.coin_token",
+      "path": "assets/themes/urban/coin_token.png",
+      "category": "themes",
+      "theme": "urban",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.tower_defense.tile_grass",
+      "path": "assets/themes/tower_defense/tile_grass.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_024.png"
+    },
+    {
+      "id": "themes.tower_defense.player_rocket",
+      "path": "assets/themes/tower_defense/player_rocket.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_251.png"
+    },
+    {
+      "id": "themes.tower_defense.player_rocket_alt",
+      "path": "assets/themes/tower_defense/player_rocket_alt.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_252.png"
+    },
+    {
+      "id": "themes.tower_defense.enemy_turret_red",
+      "path": "assets/themes/tower_defense/enemy_turret_red.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_250.png"
+    },
+    {
+      "id": "themes.tower_defense.enemy_turret_grey",
+      "path": "assets/themes/tower_defense/enemy_turret_grey.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_203.png"
+    },
+    {
+      "id": "themes.tower_defense.enemy_tank",
+      "path": "assets/themes/tower_defense/enemy_tank.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_205.png"
+    },
+    {
+      "id": "themes.tower_defense.coin_gold",
+      "path": "assets/themes/tower_defense/coin_gold.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_261.png"
+    },
+    {
+      "id": "themes.tower_defense.coin_gem",
+      "path": "assets/themes/tower_defense/coin_gem.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_266.png"
+    },
+    {
+      "id": "themes.tower_defense.goal_tower_green",
+      "path": "assets/themes/tower_defense/goal_tower_green.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_248.png"
+    },
+    {
+      "id": "themes.tower_defense.goal_tower_blue",
+      "path": "assets/themes/tower_defense/goal_tower_blue.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_206.png"
+    },
+    {
+      "id": "themes.tower_defense.bush",
+      "path": "assets/themes/tower_defense/bush.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_130.png"
+    },
+    {
+      "id": "themes.tower_defense.rock",
+      "path": "assets/themes/tower_defense/rock.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_135.png"
+    },
+    {
+      "id": "themes.tower_defense.mine",
+      "path": "assets/themes/tower_defense/mine.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_247.png"
+    },
+    {
+      "id": "themes.tower_defense.follower",
+      "path": "assets/themes/tower_defense/follower.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "assets/kenney/sprites/tower_defense_top_down/1x/tower_defense_tile_250.png"
+    },
+    {
+      "id": "themes.tower_defense.bg_td_1",
+      "path": "assets/themes/tower_defense/bg_td_1.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.tower_defense.bg_td_2",
+      "path": "assets/themes/tower_defense/bg_td_2.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.tower_defense.bg_td_3",
+      "path": "assets/themes/tower_defense/bg_td_3.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.tower_defense.tile_grid",
+      "path": "assets/themes/tower_defense/tile_grid.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    },
+    {
+      "id": "themes.tower_defense.crate",
+      "path": "assets/themes/tower_defense/crate.png",
+      "category": "themes",
+      "theme": "tower_defense",
+      "source": "generated by scripts/import-theme-assets.mjs"
+    }
+  ],
+  "maps": [
+    {
+      "id": "forest_path_01",
+      "path": "maps/forest_path_01.json",
+      "width": 14,
+      "height": 9,
+      "biome": "forest"
+    },
+    {
+      "id": "cave_path_01",
+      "path": "maps/cave_path_01.json",
+      "width": 14,
+      "height": 9,
+      "biome": "cave"
+    }
+  ],
+  "audio_events": {
+    "jump": "assets/audio/jump.ogg",
+    "collect": "assets/audio/coin.ogg",
+    "hurt": "assets/audio/hurt.ogg",
+    "complete": "assets/audio/goal.ogg",
+    "obstacle": "assets/audio/impact.ogg"
+  },
+  "notes": [
+    "Animations use reusable sprite frames; no per-session media generation is required.",
+    "Map layouts and audio event mappings are fixed pack data.",
+    "Keep this asset pack independent from learner identity and assessment records."
+  ],
+  "theme_license_directory": "licenses/kenney/",
+  "theme_asset_count": 151,
+  "themes": {
+    "space": {
+      "label": "Space",
+      "note": "Space Shooter Remastered ships, meteors, power-ups, and nebula tiles",
+      "license": "licenses/kenney/space_shooter_remastered.txt",
+      "path": "assets/themes/space/",
+      "asset_count": 28
+    },
+    "underwater": {
+      "label": "Underwater",
+      "note": "Fish Pack 2 fish, rocks, seaweed, and reef terrain",
+      "license": "licenses/kenney/fish_pack_2.txt",
+      "path": "assets/themes/underwater/",
+      "asset_count": 23
+    },
+    "pirate": {
+      "label": "Pirate",
+      "note": "Pirate Pack ships, cannons, flags, sand tiles, and effects",
+      "license": "licenses/kenney/pirate_pack.txt",
+      "path": "assets/themes/pirate/",
+      "asset_count": 21
+    },
+    "farm": {
+      "label": "Farm",
+      "note": "Pixel Platformer Farm Expansion crops, pumpkins, tools, and trees",
+      "license": "licenses/kenney/pixel_platformer_farm_expansion.txt",
+      "path": "assets/themes/farm/",
+      "asset_count": 20
+    },
+    "food": {
+      "label": "Kitchen",
+      "note": "Pixel Platformer Food Expansion chefs, burgers, donuts, and cakes",
+      "license": "licenses/kenney/pixel_platformer_food_expansion.txt",
+      "path": "assets/themes/food/",
+      "asset_count": 19
+    },
+    "urban": {
+      "label": "City",
+      "note": "RPG Urban Pack people, signs, doors, barriers, and pavement tiles",
+      "license": "licenses/kenney/rpg_urban_pack.txt",
+      "path": "assets/themes/urban/",
+      "asset_count": 21
+    },
+    "tower_defense": {
+      "label": "Defense",
+      "note": "Tower Defense Top Down turrets, rockets, mines, terrain, and UI icons",
+      "license": "licenses/kenney/tower_defense_top_down.txt",
+      "path": "assets/themes/tower_defense/",
+      "asset_count": 19
+    }
+  }
+}

@@ -1,0 +1,509 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v01",
+    "index": 1,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line as a valid first-program line or a broken one.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "valid",
+          "label": "Valid C",
+          "desc": "Compiles as written"
+        },
+        {
+          "id": "broken",
+          "label": "Broken C",
+          "desc": "Contains a syntax error"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "#include <stdio.h>",
+          "bin": "valid"
+        },
+        {
+          "id": "i2",
+          "text": "printf(\"Hello\\n\");",
+          "bin": "valid"
+        },
+        {
+          "id": "i3",
+          "text": "int main(void) {",
+          "bin": "valid"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"Hello\\n)",
+          "bin": "broken"
+        },
+        {
+          "id": "i5",
+          "text": "return 0",
+          "bin": "broken"
+        },
+        {
+          "id": "i6",
+          "text": "printf(\"Hello);",
+          "bin": "broken"
+        }
+      ]
+    },
+    "explanation": "Calls need balanced parentheses and a semicolon; strings need closing quotes.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v02",
+    "index": 2,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hello\\n);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The format string is missing its closing quote.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v03",
+    "index": 3,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item at file scope or inside main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hello\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Outside any function"
+        },
+        {
+          "id": "main",
+          "label": "Inside main",
+          "desc": "Local statements"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "#include <stdio.h>",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "printf(\"Hello\\n\");",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "return 0;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "The header and function definition are top-level; its body is local to main.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v04",
+    "index": 4,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each first c program term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "<stdio.h>"
+        },
+        {
+          "id": "l2",
+          "text": "main"
+        },
+        {
+          "id": "l3",
+          "text": "printf"
+        },
+        {
+          "id": "l4",
+          "text": "\\n"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Header that declares printf"
+        },
+        {
+          "id": "r2",
+          "text": "Entry point of the program"
+        },
+        {
+          "id": "r3",
+          "text": "Writes output to the screen"
+        },
+        {
+          "id": "r4",
+          "text": "Newline escape sequence"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v05",
+    "index": 5,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the first program.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    {{b0}}(\"Hello\\n\"){{b1}}",
+        "    return 0;",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "output function",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "statement terminator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "printf"
+        },
+        {
+          "id": "b2",
+          "text": ";"
+        },
+        {
+          "id": "b3",
+          "text": "scanf"
+        },
+        {
+          "id": "b4",
+          "text": ":"
+        },
+        {
+          "id": "b5",
+          "text": "return"
+        }
+      ]
+    },
+    "explanation": "printf prints the message and the semicolon ends the statement.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v06",
+    "index": 6,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hello\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Hello",
+      "accept": [
+        "Hello"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "\\n moves the cursor to a new line after the word Hello."
+    },
+    "explanation": "The program produces Hello.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v07",
+    "index": 7,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hello\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "text",
+        "finished"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "text": "Hello",
+            "finished": "no"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "text": "Hello",
+            "finished": "yes"
+          }
+        }
+      ],
+      "ask": [
+        "text",
+        "finished"
+      ],
+      "answer": {
+        "text": "Hello",
+        "finished": "yes"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is text = Hello, finished = yes.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v08",
+    "index": 8,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of first c program in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Include stdio.h"
+        },
+        {
+          "id": "s2",
+          "text": "Open main"
+        },
+        {
+          "id": "s3",
+          "text": "Declare the message value"
+        },
+        {
+          "id": "s4",
+          "text": "Print the message"
+        },
+        {
+          "id": "s5",
+          "text": "Return zero and close main"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Include stdio.h → Open main → Declare the message value → Print the message → Return zero and close main",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v09",
+    "index": 9,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the printf statement that prints Hello followed by a newline.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "printf"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "\"Hello\\n\""
+        },
+        {
+          "id": "t4",
+          "text": ")"
+        },
+        {
+          "id": "t5",
+          "text": ";"
+        },
+        {
+          "id": "t6",
+          "text": "scanf"
+        },
+        {
+          "id": "t7",
+          "text": "\"Hello\""
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "printf takes a format string, and \\n adds the newline.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_first_program_v10",
+    "index": 10,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the printed text and whether main has finished.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hello\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "text",
+          "type": "final value"
+        },
+        {
+          "name": "finished",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "Hello"
+        },
+        {
+          "id": "v2",
+          "text": "yes"
+        },
+        {
+          "id": "v3",
+          "text": "0"
+        },
+        {
+          "id": "v4",
+          "text": "error"
+        }
+      ],
+      "answer": {
+        "text": "v1",
+        "finished": "v2"
+      }
+    },
+    "explanation": "The program prints Hello and then returns 0, so it finishes successfully.",
+    "concept_slug": "c_first_program",
+    "concept_name": "First C Program"
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "46_candy_kingdom_defender",
+  "slug": "candy_kingdom_defender",
+  "display_name": "Candy Kingdom Defender",
+  "module_family": "boolean_defense",
+  "learning_target": "Boolean logic and conditions",
+  "core_brief": "Use Boolean statements to decide which castle defenses activate against each wave.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "defender",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Lane defense",
+  "accent": "#b69cff",
+  "tint": 15382493,
+  "variation_id": "46_candy_kingdom_defender_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 1568514669,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.crate",
+      "bush": "themes.tower_defense.rock",
+      "slime": "themes.tower_defense.bush",
+      "bee": "themes.tower_defense.crate"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/candy_kingdom_defender.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

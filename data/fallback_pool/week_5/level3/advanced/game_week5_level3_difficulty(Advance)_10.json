@@ -1,30 +1,30 @@
 {
   "file_id": "game_1290",
-  "game_title": "Loop Picker – Canopy Walkway Trial",
+  "game_title": "Branch Assembly 10 · Separate Outputs",
   "game_concept": "A programming puzzle set in Mystic Forest – Canopy Walkway, rope walkways in the canopy: the fairy gardener must handle bramble beasts while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
-  "genre": "programming puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Canopy Walkway: rope walkways in the canopy",
-  "core_gameplay_loop": "In Canopy Walkway, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round costs one action, so plan the step so none are wasted. Then check the picks_right value and advance.",
-  "primary_mechanic": "Loop Picker",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Ghost replay of best run",
     "Combo multiplier"
   ],
-  "player_objective": "Reach the vine bridge using at most 11 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The vine bridge reached with actions_used <= 11.",
-  "lose_condition": "actions_used exceeds 11 before the vine bridge is reached, or lives reach 0.",
+  "player_objective": "Preprocessor directives: build a valid C source file that prints 15. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 0 and lower path on row 6. IF item value >= 16, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 8 components (4 upper, 4 lower). Set the gold-socket controller batch to 8.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Loop Picker",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Preprocessor directives",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M15-X3-T04-97ab0eda",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Efficiency Trial', and setting 'Canopy Walkway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 3,
   "trial": 10,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how picks_right changes.",
-    "Step 2: Use the controls to apply the code idea against bramble beasts in Canopy Walkway.",
-    "Step 3: Win by meeting the goal: The vine bridge reached with actions_used <= 11."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level3/advanced/game_week5_level3_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_1290",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the vine bridge using at most 11 actions, so every code step counts.",
+  "source_win_condition": "The vine bridge reached with actions_used <= 11.",
+  "source_lose_condition": "actions_used exceeds 11 before the vine bridge is reached, or lives reach 0.",
+  "source_game_title": "Loop Picker – Canopy Walkway Trial",
+  "source_primary_mechanic": "Loop Picker",
+  "hint": "IF item value >= 16, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 4 components via upper_4, upper_6 to output_upper; ELSE: 4 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w5_l3",
+  "source_week": 5,
+  "source_level": 3
 }

@@ -1,41 +1,41 @@
 {
   "file_id": "game_2297",
-  "game_title": "Phrase Slicer – Basecamp Ridge Rush",
+  "game_title": "C Scope Circuit · Update visible state · variation 7",
   "game_concept": "A action puzzle set in Frost Peaks – Basecamp Ridge, the basecamp on a ridge: the mountaineer must handle yetis while practicing strings & dictionaries. Core idea – Phrase Slicer: Slice strings to cut messages into exactly the needed pieces.",
-  "genre": "action puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Basecamp Ridge: the basecamp on a ridge",
-  "core_gameplay_loop": "In Basecamp Ridge, repeat each round: Slice strings to cut messages into exactly the needed pieces. Each round, a new oxygen tanks challenge appears; solve it to bank points before time drains. Then check the phrase_ok value and advance.",
-  "primary_mechanic": "Phrase Slicer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Collect 340 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 48 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, use a main-local to update a global. Print the scope trace [25, 16], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'shared': 25}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Phrase Slicer",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Update visible state",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M02-X2-T01-f696a205",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Phrase Slicer' (Week 8 slot 2), mission type 'Resource Rush', and setting 'Basecamp Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 7,
   "trial": 7,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "msg[2:6]",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint shared = 9;\nint main(void)\n{\n  int signal = readInput();\nint steps = 16;\nshared = shared + steps;\nprintf(\"%d\\n\", shared);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how phrase_ok changes.",
-    "Step 2: Use the controls to apply the code idea against yetis in Basecamp Ridge.",
-    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level7/standard/game_week8_level7_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_2297",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 48 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Phrase Slicer – Basecamp Ridge Rush",
+  "source_primary_mechanic": "Phrase Slicer",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w8_l7",
+  "source_week": 8,
+  "source_level": 7,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "43063a503e95190346129d5ed4e8b95a5aeca9f65ace7c4ed4632783dc5a5720",
+    "lesson_unchanged": true
+  }
 }

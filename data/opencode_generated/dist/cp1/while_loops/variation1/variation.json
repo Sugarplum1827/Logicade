@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_39_while_loops",
+  "slug": "while_loops",
+  "display_name": "While Loops",
+  "learning_target": "trace a while loop and its update",
+  "core_brief": "A while loop tests before each pass; the body must move the condition toward false.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 11,
+  "unit": "Loops",
+  "group": "code",
+  "skin": "farm",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_sunflower",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.fence",
+      "bush": "themes.farm.rock",
+      "slime": "themes.farm.bush",
+      "bee": "themes.farm.wheat"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#ffb27a",
+  "variation_id": "cp1_39_while_loops_v01",
+  "index": 1,
+  "challenge_index": 1,
+  "challenge_id": "while_loops_v01",
+  "title": "Trace the output",
+  "label": "Lab 01: Trace the output",
+  "seed": 2219077233,
+  "challenge_bank": "../../../data/cp1/challenges/while_loops.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

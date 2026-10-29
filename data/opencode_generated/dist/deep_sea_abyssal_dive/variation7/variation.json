@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "31_deep_sea_abyssal_dive",
+  "slug": "deep_sea_abyssal_dive",
+  "display_name": "Deep Sea Abyssal Dive",
+  "module_family": "repair_simulation",
+  "learning_target": "error handling and recovery",
+  "core_brief": "Use error handling steps to diagnose and patch hull leaks during a deep dive.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "deep_sea",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "mechanic": "Sequence solver",
+  "accent": "#7ee2b8",
+  "tint": 15382481,
+  "variation_id": "31_deep_sea_abyssal_dive_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 2411313777,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 19,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_1",
+    "zones": [
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3"
+    ],
+    "tile": "themes.underwater.tile_sand",
+    "player": "themes.underwater.player_orange",
+    "enemy": "themes.underwater.enemy_grey",
+    "coin": "themes.underwater.coin_bubble_a",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.seaweed_green",
+      "bush": "themes.underwater.rock_a",
+      "slime": "themes.underwater.seaweed_orange",
+      "bee": "themes.underwater.seaweed_orange"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/deep_sea_abyssal_dive.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

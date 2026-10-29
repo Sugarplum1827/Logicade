@@ -2,9 +2,9 @@
   "file_id": "game_0216",
   "game_title": "Score Keeper – Tavern Quarter Race",
   "game_concept": "A strategy race set in The Kingdom – Tavern Quarter, the lively tavern district: the town guard must handle siege rats while practicing variables & assignment. Core idea – Score Keeper: Update score, lives and ammo variables after every event while siege rats close in.",
-  "genre": "strategy race",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Tavern Quarter: the lively tavern district",
-  "core_gameplay_loop": "In Tavern Quarter, repeat each round: Update score, lives and ammo variables after every event while siege rats close in. Each round the rival advances, and solving the step moves the town guard ahead. Then check the score value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Score Keeper",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
@@ -12,19 +12,19 @@
     "Reduced-motion and color-blind-safe UI"
   ],
   "player_objective": "Beat a rival AI to the market bell by solving code steps involving score that move the town guard forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
   "lose_condition": "The rival reaches the market bell first, or lives reach 0.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Score Keeper",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M06-X5-T10-ccf9c270",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Score Keeper' (Week 1 slot 6), mission type 'Rival Race', and setting 'Tavern Quarter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 8,
   "trial": 6,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how score changes.",
     "Step 2: Use the controls to apply the code idea against siege rats in Tavern Quarter.",
     "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level8/needs_support/game_week1_level8_difficulty(NeedAssistance)_6.json",
+    "variation_id": "canvas_game_0216",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

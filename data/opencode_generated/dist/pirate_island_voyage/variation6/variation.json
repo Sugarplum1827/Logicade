@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "14_pirate_island_voyage",
+  "slug": "pirate_island_voyage",
+  "display_name": "Pirate Island Voyage",
+  "module_family": "navigation_adventure",
+  "learning_target": "coordinates and ordered movement",
+  "core_brief": "Use coordinates to steer a ship around reefs and reach marked island destinations.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 12695530,
+  "variation_id": "14_pirate_island_voyage_v06",
+  "index": 6,
+  "title": "Checkpoint Gauntlet",
+  "label": "Variation 06: Checkpoint Gauntlet",
+  "seed": 4028919555,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 3,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_3",
+    "zones": [
+      "themes.pirate.bg_sea_3",
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_blue",
+    "enemy": "themes.pirate.enemy_shark",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_ship",
+    "obstacles": {
+      "spike": "themes.pirate.cannon",
+      "bush": "themes.pirate.nest",
+      "slime": "themes.pirate.cannonball",
+      "bee": "themes.pirate.cannon"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "brief": {
+    "map": "Build four short rooms connected by explicit checkpoints. Each room introduces one obstacle rule and the last room combines earlier rules.",
+    "obstacles": "distinct room hazards with a checkpoint after every room; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "quick rooms with a deliberate final synthesis round."
+  },
+  "question_bank": "../../data/questions/pirate_island_voyage.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

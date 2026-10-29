@@ -1,41 +1,41 @@
 {
   "file_id": "game_2355",
-  "game_title": "Cipher Decoder – Rope Line Streak",
+  "game_title": "C Scope Circuit · Compare local and global · variation 5",
   "game_concept": "A card battler set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
-  "genre": "card battler",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Rope Line: a long fixed rope line",
-  "core_gameplay_loop": "In Rope Line, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round poses one decision; a wrong answer breaks the streak. Then check the decoded value and advance.",
-  "primary_mechanic": "Cipher Decoder",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Event log of every action"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about decoded to power up the avalanche scout and open the rope bridge.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [8, 7], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 7}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 9 (extended tier): Cipher Decoder",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Compare local and global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M15-X4-T15-372af6b2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Streak Challenge', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 9,
   "trial": 5,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "chr(ord('a') + 1)",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 7;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 1;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how decoded changes.",
-    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level9/standard/game_week8_level9_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_2355",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about decoded to power up the avalanche scout and open the rope bridge.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Cipher Decoder – Rope Line Streak",
+  "source_primary_mechanic": "Cipher Decoder",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w8_l9",
+  "source_week": 8,
+  "source_level": 9,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "f033159afbfeb8966edcf2928759175df8d132ccc7ed25778ec49551fac204b3",
+    "lesson_unchanged": true
+  }
 }

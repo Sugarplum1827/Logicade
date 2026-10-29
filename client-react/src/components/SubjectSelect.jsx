@@ -12,7 +12,7 @@ const DEFAULT_SUBJECTS = [
   { id: 'intro', title: 'Intro to Computing', desc: 'Learn the basics of hardware and software.', image: null },
 ];
 
-export default function SubjectSelect({ studentId, onSelectSubject, onLogout }) {
+export default function SubjectSelect({ studentId, onSelectSubject, onLogout, tutorial }) {
   const [showLogout, setShowLogout] = useState(false);
   const [subjects, setSubjects] = useState(
     DEFAULT_SUBJECTS.map((s, i) => ({ ...s, unlocked: i === 0 })),
@@ -47,6 +47,7 @@ export default function SubjectSelect({ studentId, onSelectSubject, onLogout }) 
 
   return (
     <div className="subject-select-screen">
+      {tutorial}
       {showLogout && (
         <LogoutModal
           onConfirm={onLogout}

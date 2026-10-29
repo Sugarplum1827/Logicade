@@ -1,4 +1,4 @@
-// §14.1 IndexedDB schema. One database, eight object stores.
+// §14.1 IndexedDB schema. One database, local event and research stores.
 // Stores:
 //   students          — { student_id, ... }
 //   levels            — { level_id, ... }
@@ -11,10 +11,11 @@
 
 window.LogiCadeDB = (function () {
     const DB_NAME = 'logicade';
-    const DB_VERSION = 2;
+    const DB_VERSION = 3;
     const STORES = [
         'students', 'levels', 'attempts', 'events',
         'level_summary', 'week_summary', 'student_summary', 'sync_queue', 'coin_transactions',
+        'difficulty_decisions',
     ];
 
     let dbPromise = null;
@@ -33,6 +34,7 @@ window.LogiCadeDB = (function () {
             else if (store === 'week_summary') keyPath = ['student_id', 'week'];
             else if (store === 'student_summary') keyPath = 'student_id';
             else if (store === 'coin_transactions') keyPath = 'transaction_id';
+            else if (store === 'difficulty_decisions') keyPath = 'decision_id';
 
             const objStore = db.createObjectStore(store, {keyPath});
 
@@ -51,19 +53,41 @@ window.LogiCadeDB = (function () {
             if (store === 'coin_transactions') {
                 objStore.createIndex('student_id', 'student_id', {unique: false});
             }
+            if (store === 'difficulty_decisions') {
+                objStore.createIndex('student_id', 'student_id', {unique: false});
+                objStore.createIndex('previous_level_id', 'previous_level_id', {unique: false});
+            }
         }
     }
 
     function openDB() {
         if (dbPromise) return dbPromise;
-        dbPromise = new Promise((resolve, reject) => {
+        let pending;
+        pending = new Promise((resolve, reject) => {
             const req = indexedDB.open(DB_NAME, DB_VERSION);
             req.onupgradeneeded = (e) => _upgrade(e.target.result);
-            req.onsuccess = () => resolve(req.result);
-            req.onerror = () => reject(req.error);
-            req.onblocked = () => reject(new Error('indexedDB upgrade blocked by another tab'));
+            req.onsuccess = () => {
+                const db = req.result;
+                db.onversionchange = () => {
+                    db.close();
+                    if (dbPromise === pending) dbPromise = null;
+                };
+                db.onclose = () => {
+                    if (dbPromise === pending) dbPromise = null;
+                };
+                resolve(db);
+            };
+            req.onerror = () => {
+                if (dbPromise === pending) dbPromise = null;
+                reject(req.error);
+            };
+            req.onblocked = () => {
+                if (dbPromise === pending) dbPromise = null;
+                reject(new Error('IndexedDB upgrade is blocked by another open tab. Close other LogiCade tabs and reload.'));
+            };
         });
-        return dbPromise;
+        dbPromise = pending;
+        return pending;
     }
 
     return {openDB, DB_NAME, DB_VERSION};

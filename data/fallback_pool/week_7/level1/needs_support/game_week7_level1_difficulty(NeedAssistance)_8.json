@@ -1,30 +1,30 @@
 {
   "file_id": "game_1808",
-  "game_title": "Matrix Map – Whisper Stones Rush",
+  "game_title": "Declare int · variation 8",
   "game_concept": "A action puzzle set in Eldritch Ruins – Whisper Stones, standing whisper stones: the scholar mage must handle vine horrors while practicing lists. Core idea – Matrix Map: Navigate a list of lists as rows and columns of a map.",
-  "genre": "action puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Whisper Stones: standing whisper stones",
-  "core_gameplay_loop": "In Whisper Stones, repeat each round: Navigate a list of lists as rows and columns of a map. Each round, a new carved tiles challenge appears; solve it to bank points before time drains. Then check the map_cells value and advance.",
-  "primary_mechanic": "Matrix Map",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Collect 70 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 70 within 42 seconds.",
-  "lose_condition": "Timer hits 0 with score < 70, or lives reach 0.",
+  "player_objective": "Declare int: declare resource as int, apply resource, and print each result with %d. Dataset 8 starts with [-3, 0, 9, 12]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 7 – Lists | Level 1 (intro tier): Matrix Map",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare int",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M08-X2-T10-b94c2799",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Matrix Map' (Week 7 slot 8), mission type 'Resource Rush', and setting 'Whisper Stones'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 1,
   "trial": 8,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how map_cells changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Whisper Stones.",
-    "Step 3: Win by meeting the goal: score >= 70 within 42 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level1/needs_support/game_week7_level1_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_1808",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 70 points of carved tiles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 70 within 42 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 70, or lives reach 0.",
+  "source_game_title": "Matrix Map – Whisper Stones Rush",
+  "source_primary_mechanic": "Matrix Map",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w7_l1",
+  "source_week": 7,
+  "source_level": 1
 }

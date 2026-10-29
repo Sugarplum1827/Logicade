@@ -1,0 +1,567 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v01",
+    "index": 1,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the pass/fail decision.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 8
+        },
+        {
+          "id": "read",
+          "label": "Read score",
+          "kind": "io",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "id": "test",
+          "label": "score >= 75?",
+          "kind": "decision",
+          "x": 50,
+          "y": 42
+        },
+        {
+          "id": "pass",
+          "label": "Print Pass",
+          "kind": "process",
+          "x": 24,
+          "y": 64
+        },
+        {
+          "id": "fail",
+          "label": "Print Fail",
+          "kind": "process",
+          "x": 76,
+          "y": 64
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 88
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "read"
+        ],
+        [
+          "read",
+          "test"
+        ],
+        [
+          "test",
+          "pass"
+        ],
+        [
+          "test",
+          "fail"
+        ],
+        [
+          "pass",
+          "end"
+        ],
+        [
+          "fail",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "Both branches leave the diamond, but only one runs for a given score.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v02",
+    "index": 2,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to choose a clear route around the obstacle.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 5,
+      "rows": 5,
+      "start": {
+        "x": 0,
+        "y": 4,
+        "dir": 0
+      },
+      "goal": {
+        "x": 4,
+        "y": 0
+      },
+      "walls": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 3,
+          "y": 2
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 14
+    },
+    "explanation": "The robot tests each move; blocked moves are like a false branch.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v03",
+    "index": 3,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What is printed when score = 82?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "READ score",
+        "IF score >= 75 THEN",
+        "  PRINT \"Pass\"",
+        "ELSE",
+        "  PRINT \"Fail\"",
+        "ENDIF"
+      ],
+      "answer": "Pass",
+      "accept": [
+        "Pass"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "82 >= 75 is true, so the true branch prints Pass."
+    },
+    "explanation": "82 >= 75 is true, so the true branch prints Pass.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v04",
+    "index": 4,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the pass/fail decision.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "READ score",
+        "IF score >= 75 THEN",
+        "  result = \"Pass\"",
+        "ELSE",
+        "  result = \"Fail\"",
+        "ENDIF"
+      ],
+      "variables": [
+        "score",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "score": "82",
+            "result": ""
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "score": "82",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "score": "82",
+            "result": "Pass"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "score": "82",
+            "result": "Pass"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "result"
+      ],
+      "answer": {
+        "score": "82",
+        "result": "Pass"
+      },
+      "hint": ""
+    },
+    "explanation": "The condition is true, so only the true branch runs.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v05",
+    "index": 5,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line makes both branches do the same thing. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "READ score",
+        "IF score >= 75 THEN",
+        "  PRINT \"Pass\"",
+        "ELSE",
+        "  PRINT \"Pass\"",
+        "ENDIF"
+      ],
+      "answer": 4,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "The ELSE branch should print a different result, such as Fail.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v06",
+    "index": 6,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each decision term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Condition"
+        },
+        {
+          "id": "l2",
+          "text": "True branch"
+        },
+        {
+          "id": "l3",
+          "text": "False branch"
+        },
+        {
+          "id": "l4",
+          "text": "Diamond"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A yes/no test"
+        },
+        {
+          "id": "r2",
+          "text": "Steps taken when the test passes"
+        },
+        {
+          "id": "r3",
+          "text": "Steps taken when the test fails"
+        },
+        {
+          "id": "r4",
+          "text": "The flowchart symbol for a decision"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "A decision splits the flow into two labelled paths.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v07",
+    "index": 7,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each item into the condition, true branch, or false branch.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "condition",
+          "label": "Condition",
+          "desc": "The yes/no question"
+        },
+        {
+          "id": "true",
+          "label": "True branch",
+          "desc": "Runs when the condition is true"
+        },
+        {
+          "id": "false",
+          "label": "False branch",
+          "desc": "Runs when the condition is false"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "score >= 75",
+          "bin": "condition"
+        },
+        {
+          "id": "i2",
+          "text": "PRINT \"Pass\"",
+          "bin": "true"
+        },
+        {
+          "id": "i3",
+          "text": "PRINT \"Fail\"",
+          "bin": "false"
+        },
+        {
+          "id": "i4",
+          "text": "score < 75",
+          "bin": "condition"
+        },
+        {
+          "id": "i5",
+          "text": "PRINT \"Retry\"",
+          "bin": "false"
+        },
+        {
+          "id": "i6",
+          "text": "PRINT \"You passed\"",
+          "bin": "true"
+        }
+      ]
+    },
+    "explanation": "The diamond holds the condition; each outgoing arrow leads to one branch.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v08",
+    "index": 8,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the pass/fail decision.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "READ score",
+        "IF score {{b0}} 75 THEN",
+        "  PRINT \"Pass\"",
+        "{{b1}}",
+        "  PRINT \"Fail\"",
+        "{{b2}}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "comparison operator",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "false branch keyword",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "closing keyword",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": ">="
+        },
+        {
+          "id": "b2",
+          "text": "ELSE"
+        },
+        {
+          "id": "b3",
+          "text": "ENDIF"
+        },
+        {
+          "id": "b4",
+          "text": ">="
+        },
+        {
+          "id": "b5",
+          "text": "ELSE"
+        },
+        {
+          "id": "b6",
+          "text": "ENDIF"
+        }
+      ]
+    },
+    "explanation": "Use >= for at least, ELSE for the false branch, and ENDIF to close the decision.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v09",
+    "index": 9,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of flowchart decisions in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the flowchart"
+        },
+        {
+          "id": "s2",
+          "text": "Read the score"
+        },
+        {
+          "id": "s3",
+          "text": "Ask whether the score is at least 75"
+        },
+        {
+          "id": "s4",
+          "text": "Follow the true branch when it is"
+        },
+        {
+          "id": "s5",
+          "text": "Follow the false branch when it is not"
+        },
+        {
+          "id": "s6",
+          "text": "End the flowchart"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "explanation": "Correct order: Start the flowchart → Read the score → Ask whether the score is at least 75 → Follow the true branch when it is → Follow the false branch when it is not → End the flowchart",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_decision_v10",
+    "index": 10,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the condition for a passing score of at least 75.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "IF"
+        },
+        {
+          "id": "t2",
+          "text": "score"
+        },
+        {
+          "id": "t3",
+          "text": ">="
+        },
+        {
+          "id": "t4",
+          "text": "75"
+        },
+        {
+          "id": "t5",
+          "text": "THEN"
+        },
+        {
+          "id": "t6",
+          "text": ">"
+        },
+        {
+          "id": "t7",
+          "text": "ELSE"
+        },
+        {
+          "id": "t8",
+          "text": "ENDIF"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "At least 75 means greater than or equal to 75, written >=.",
+    "concept_slug": "flowchart_decision",
+    "concept_name": "Flowchart Decisions"
+  }
+]

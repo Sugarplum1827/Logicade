@@ -1,0 +1,518 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v01",
+    "index": 1,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the command that compiles hello.c into hello.exe.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "gcc"
+        },
+        {
+          "id": "t2",
+          "text": "hello.c"
+        },
+        {
+          "id": "t3",
+          "text": "-o"
+        },
+        {
+          "id": "t4",
+          "text": "hello"
+        },
+        {
+          "id": "t5",
+          "text": "run"
+        },
+        {
+          "id": "t6",
+          "text": ".exe"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "gcc takes the source file, -o names the output, and the result is an executable.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v02",
+    "index": 2,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the state after compiling and running the program.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Build ok\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "source",
+          "type": "final value"
+        },
+        {
+          "name": "executable",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "ready"
+        },
+        {
+          "id": "v2",
+          "text": "created"
+        },
+        {
+          "id": "v3",
+          "text": "Build ok"
+        },
+        {
+          "id": "v4",
+          "text": "0"
+        },
+        {
+          "id": "v5",
+          "text": "error"
+        }
+      ],
+      "answer": {
+        "source": "v1",
+        "executable": "v2",
+        "result": "v3"
+      }
+    },
+    "explanation": "The compiler creates an executable; running it produces Build ok.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v03",
+    "index": 3,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each step as source, compile, or run.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "source",
+          "label": "Source time",
+          "desc": "Work on the .c file"
+        },
+        {
+          "id": "compile",
+          "label": "Compile time",
+          "desc": "Translate and link"
+        },
+        {
+          "id": "run",
+          "label": "Run time",
+          "desc": "Execute the finished program"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Write hello.c",
+          "bin": "source"
+        },
+        {
+          "id": "i2",
+          "text": "Fix a missing semicolon",
+          "bin": "source"
+        },
+        {
+          "id": "i3",
+          "text": "Run gcc hello.c -o hello",
+          "bin": "compile"
+        },
+        {
+          "id": "i4",
+          "text": "Link library code",
+          "bin": "compile"
+        },
+        {
+          "id": "i5",
+          "text": "Launch hello.exe",
+          "bin": "run"
+        },
+        {
+          "id": "i6",
+          "text": "See Build ok on screen",
+          "bin": "run"
+        }
+      ]
+    },
+    "explanation": "Editing is source time, gcc acts at compile time, and the executable runs later.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v04",
+    "index": 4,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Build ok\\n\")",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The compiler rejects the missing semicolon, so no executable is produced.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v05",
+    "index": 5,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Separate the source file from the build products.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [],
+      "scopes": [
+        {
+          "id": "source",
+          "label": "Source files",
+          "desc": "Written by the programmer"
+        },
+        {
+          "id": "build",
+          "label": "Build products",
+          "desc": "Created by the compiler"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "hello.c",
+          "scope": "source"
+        },
+        {
+          "id": "d2",
+          "text": "notes.txt",
+          "scope": "source"
+        },
+        {
+          "id": "d3",
+          "text": "hello.exe",
+          "scope": "build"
+        },
+        {
+          "id": "d4",
+          "text": "hello.o",
+          "scope": "build"
+        }
+      ]
+    },
+    "explanation": "The .c file is source; .o and .exe files are generated during the build.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v06",
+    "index": 6,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each compiling c term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Source code"
+        },
+        {
+          "id": "l2",
+          "text": "Compiler"
+        },
+        {
+          "id": "l3",
+          "text": "Executable"
+        },
+        {
+          "id": "l4",
+          "text": "Syntax error"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "The .c file written by the programmer"
+        },
+        {
+          "id": "r2",
+          "text": "Translates source into machine instructions"
+        },
+        {
+          "id": "r3",
+          "text": "The runnable program produced by linking"
+        },
+        {
+          "id": "r4",
+          "text": "A rule violation reported before running"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v07",
+    "index": 7,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the compile command.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "{{b0}} hello.c {{b1}} hello",
+        "hello.exe"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "compiler command",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "output flag",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "gcc"
+        },
+        {
+          "id": "b2",
+          "text": "-o"
+        },
+        {
+          "id": "b3",
+          "text": "run"
+        },
+        {
+          "id": "b4",
+          "text": "-c"
+        },
+        {
+          "id": "b5",
+          "text": "clang"
+        }
+      ]
+    },
+    "explanation": "gcc hello.c -o hello compiles the source and names the executable hello.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v08",
+    "index": 8,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Build ok\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Build ok",
+      "accept": [
+        "Build ok"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "Compilation does not change the printed text; the executable still prints the message."
+    },
+    "explanation": "The program produces Build ok.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v09",
+    "index": 9,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Build ok\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "source",
+        "executable",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "source": "ready",
+            "executable": "",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "source": "ready",
+            "executable": "created",
+            "result": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "source": "ready",
+            "executable": "created",
+            "result": "Build ok"
+          }
+        }
+      ],
+      "ask": [
+        "source",
+        "executable",
+        "result"
+      ],
+      "answer": {
+        "source": "ready",
+        "executable": "created",
+        "result": "Build ok"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is source = ready, executable = created, result = Build ok.",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_compilation_v10",
+    "index": 10,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of compiling c in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Write the C source file"
+        },
+        {
+          "id": "s2",
+          "text": "Run the compiler on the source"
+        },
+        {
+          "id": "s3",
+          "text": "Fix any reported syntax errors"
+        },
+        {
+          "id": "s4",
+          "text": "Link the program into an executable"
+        },
+        {
+          "id": "s5",
+          "text": "Run the executable"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Write the C source file → Run the compiler on the source → Fix any reported syntax errors → Link the program into an executable → Run the executable",
+    "concept_slug": "c_compilation",
+    "concept_name": "Compiling C"
+  }
+]

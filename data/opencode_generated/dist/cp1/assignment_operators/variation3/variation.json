@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_33_assignment_operators",
+  "slug": "assignment_operators",
+  "display_name": "Assignment Operators",
+  "learning_target": "read compound assignment operators",
+  "core_brief": "score += 5 is shorthand for score = score + 5; the operator updates the same variable.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 9,
+  "unit": "Operators",
+  "group": "code",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_33_assignment_operators_v03",
+  "index": 3,
+  "challenge_index": 3,
+  "challenge_id": "assignment_operators_v03",
+  "title": "Find the bug",
+  "label": "Lab 03: Find the bug",
+  "seed": 4212133061,
+  "challenge_bank": "../../../data/cp1/challenges/assignment_operators.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

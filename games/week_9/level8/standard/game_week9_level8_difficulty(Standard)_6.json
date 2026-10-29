@@ -1,0 +1,532 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2626",
+  "variation_id": "canvas_game_2626",
+  "week": 9,
+  "level": 8,
+  "trial": 6,
+  "difficulty": "Standard",
+  "mode": "circuit",
+  "title": "Flowchart Workshop – Odd numbers, sum, and count",
+  "display_name": "Logic Circuit Workshop",
+  "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "Flowchart synthesis"
+  ],
+  "lesson": {
+    "summary": "Flowcharting",
+    "points": [
+      "Flowchart synthesis",
+      "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+      "Test both branches and boundary inputs before accepting a chart."
+    ],
+    "example": "Start → Read n → n > 0? → Yes/No output → End",
+    "practice": "Flowchart synthesis",
+    "week": 9,
+    "source_week": 2,
+    "source_level": 10,
+    "objective_id": "cp1_w2_l10",
+    "title": "Flowcharting",
+    "stage_title": "Flowchart synthesis",
+    "objectives": [
+      "Flowchart synthesis"
+    ],
+    "sources": [
+      {
+        "title": "Victoria Department of Education: flowcharts",
+        "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+      },
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      2
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w2_l10",
+  "source_level": 10,
+  "source_week": 2,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1. Test dataset 6: {'n': 0}; {'n': 14}.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 4151389107,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "gate_order": [
+      "INPUT",
+      "AND",
+      "NOT",
+      "OUTPUT"
+    ],
+    "switches": [
+      false,
+      false
+    ],
+    "wire_variant": 2
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_6",
+    "source_level": 10,
+    "title": "Odd numbers, sum, and count",
+    "prompt": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1. Test dataset 6: {'n': 0}; {'n': 14}.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.06,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.5,
+        "y": 0.19,
+        "number": 2
+      },
+      {
+        "id": "initial",
+        "x": 0.5,
+        "y": 0.32,
+        "number": 3
+      },
+      {
+        "id": "decide",
+        "x": 0.5,
+        "y": 0.46,
+        "number": 4
+      },
+      {
+        "id": "write",
+        "x": 0.77,
+        "y": 0.6,
+        "number": 5
+      },
+      {
+        "id": "sum",
+        "x": 0.77,
+        "y": 0.72,
+        "number": 6
+      },
+      {
+        "id": "count",
+        "x": 0.77,
+        "y": 0.84,
+        "number": 7
+      },
+      {
+        "id": "increase",
+        "x": 0.77,
+        "y": 0.96,
+        "number": 8
+      },
+      {
+        "id": "total",
+        "x": 0.21999999999999997,
+        "y": 0.6,
+        "number": 9
+      },
+      {
+        "id": "amount",
+        "x": 0.21999999999999997,
+        "y": 0.77,
+        "number": 10
+      },
+      {
+        "id": "end",
+        "x": 0.21999999999999997,
+        "y": 0.94,
+        "number": 11
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "initial"
+      },
+      {
+        "from": "initial",
+        "to": "decide"
+      },
+      {
+        "from": "write",
+        "to": "sum"
+      },
+      {
+        "from": "sum",
+        "to": "count"
+      },
+      {
+        "from": "count",
+        "to": "increase"
+      },
+      {
+        "from": "total",
+        "to": "amount"
+      },
+      {
+        "from": "amount",
+        "to": "end"
+      },
+      {
+        "from": "decide",
+        "to": "write",
+        "label": "Yes"
+      },
+      {
+        "from": "decide",
+        "to": "total",
+        "label": "No"
+      },
+      {
+        "from": "increase",
+        "to": "decide",
+        "label": "Loop",
+        "via": [
+          [
+            0.94,
+            0.96
+          ],
+          [
+            0.94,
+            0.46
+          ]
+        ]
+      }
+    ],
+    "pieces": [
+      {
+        "id": "amount",
+        "label": "Write count",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "count"
+          }
+        }
+      },
+      {
+        "id": "increase",
+        "label": "i = i + 2",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "i",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "i"
+                  },
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "decide",
+        "label": "i < n?",
+        "kind": "decision",
+        "action": {
+          "test": {
+            "op": "<",
+            "args": [
+              {
+                "var": "i"
+              },
+              {
+                "var": "n"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "write",
+        "label": "Write i",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "i"
+          }
+        }
+      },
+      {
+        "id": "total",
+        "label": "Write sum",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "sum"
+          }
+        }
+      },
+      {
+        "id": "initial",
+        "label": "sum = 0; count = 0; i = 1",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "sum",
+              "value": 0
+            },
+            {
+              "name": "count",
+              "value": 0
+            },
+            {
+              "name": "i",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "sum",
+        "label": "sum = sum + i",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "sum",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "sum"
+                  },
+                  {
+                    "var": "i"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "count",
+        "label": "count = count + 1",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "count",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "count"
+                  },
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "read",
+        "label": "Read n",
+        "kind": "input",
+        "action": {
+          "names": [
+            "n"
+          ]
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "initial": "initial",
+      "decide": "decide",
+      "write": "write",
+      "sum": "sum",
+      "count": "count",
+      "increase": "increase",
+      "total": "total",
+      "amount": "amount",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "n": 0
+        },
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "n": 1
+        },
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "n": 9
+        },
+        "expected": [
+          1,
+          3,
+          5,
+          7,
+          16,
+          4
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "n": 14
+        },
+        "expected": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          49,
+          7
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_2626",
+    "objective_id": "cp1_w2_l10"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "initial",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "decide",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5 in the requested chart."
+    },
+    {
+      "id": "sum",
+      "kind": "flowchart_node",
+      "prompt": "Build position 6 in the requested chart."
+    },
+    {
+      "id": "count",
+      "kind": "flowchart_node",
+      "prompt": "Build position 7 in the requested chart."
+    },
+    {
+      "id": "increase",
+      "kind": "flowchart_node",
+      "prompt": "Build position 8 in the requested chart."
+    },
+    {
+      "id": "total",
+      "kind": "flowchart_node",
+      "prompt": "Build position 9 in the requested chart."
+    },
+    {
+      "id": "amount",
+      "kind": "flowchart_node",
+      "prompt": "Build position 10 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 11 in the requested chart."
+    }
+  ],
+  "source_path": "week_9/level8/standard/game_week9_level8_difficulty(Standard)_6.json",
+  "source_topic": "Flowcharting",
+  "source_learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "source_primary_mechanic": "Syntax Sweep",
+  "source_code_snippet": "if x > 3\n    print(x)"
+}

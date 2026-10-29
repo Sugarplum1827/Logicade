@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0725",
+  "variation_id": "canvas_game_0725",
+  "week": 3,
+  "level": 5,
+  "trial": 5,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Negative values · variation 5",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Pearl Divers' Lagoon: a lagoon of pearl divers",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "Negative values"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Negative values",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 5,
+    "objective_id": "cp1_w3_l5",
+    "title": "Algorithms",
+    "stage_title": "Negative values",
+    "objectives": [
+      "Negative values"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l5",
+  "source_level": 5,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Negative values: negate every value. Match all 3 streams; preserve their order. Dataset 5, operand 11.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 2180244334,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      27,
+      3,
+      11,
+      9
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 2
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l5_v5_0",
+    "rules": {
+      "max_steps": 650,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l5",
+    "source_level": 5,
+    "focus": "Negative values",
+    "family": "terminal",
+    "title": "Negative values · variation 5",
+    "objective": "Negative values: negate every value. Match all 3 streams; preserve their order. Dataset 5, operand 11.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          8,
+          0,
+          5,
+          4
+        ],
+        "expected": [
+          -8,
+          0,
+          -5,
+          -4
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          7,
+          -7,
+          -6,
+          16
+        ],
+        "expected": [
+          -7,
+          7,
+          6,
+          -16
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          0,
+          8,
+          11,
+          -2
+        ],
+        "expected": [
+          0,
+          -8,
+          -11,
+          2
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nNEG\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l5_v5_0",
+      "kind": "program_execution",
+      "prompt": "Negative values: negate every value. Match all 3 streams; preserve their order. Dataset 5, operand 11."
+    }
+  ],
+  "source_path": "week_3/level5/needs_support/game_week3_level5_difficulty(NeedAssistance)_5.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Negative values",
+  "source_primary_mechanic": "Not Negator",
+  "source_code_snippet": "if not alarm_on:"
+}

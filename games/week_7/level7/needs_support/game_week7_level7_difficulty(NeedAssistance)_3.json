@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1983",
+  "variation_id": "canvas_game_1983",
+  "week": 7,
+  "level": 7,
+  "trial": 3,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Declare float · variation 3",
+  "display_name": "Register Operations Console",
+  "theme": "Eldritch Ruins – Echoing Courtyard: an echoing courtyard",
+  "topic": "Basic Parts of C and Variable Declarations",
+  "learning_objectives": [
+    "Declare float"
+  ],
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Declare float",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 7,
+    "source_week": 7,
+    "source_level": 7,
+    "objective_id": "cp1_w7_l7",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Declare float",
+    "objectives": [
+      "Declare float"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w7_l7",
+  "source_level": 7,
+  "source_week": 7,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Declare float: declare resource as float, apply resource + 3.5, and print each result with %.1f. Dataset 3 starts with [-3, 0, 10, 13]. Match every stream. Use a full main function and a return statement.",
+  "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 4199237502,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      18,
+      0,
+      23,
+      27
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 2
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w7_l7_v3_0",
+    "rules": {
+      "max_steps": 710,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w7_l7",
+    "source_level": 7,
+    "focus": "Declare float",
+    "family": "terminal",
+    "language": "c_subset",
+    "title": "Declare float · variation 3",
+    "objective": "Declare float: declare resource as float, apply resource + 3.5, and print each result with %.1f. Dataset 3 starts with [-3, 0, 10, 13]. Match every stream. Use a full main function and a return statement.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -3,
+          0,
+          10,
+          13
+        ],
+        "expected": [
+          0.5,
+          3.5,
+          13.5,
+          16.5
+        ],
+        "required_values": {
+          "resource": 16.5
+        }
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -2,
+          0,
+          11,
+          13
+        ],
+        "expected": [
+          1.5,
+          3.5,
+          14.5,
+          16.5
+        ],
+        "required_values": {
+          "resource": 16.5
+        }
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -1,
+          0,
+          12,
+          13
+        ],
+        "expected": [
+          2.5,
+          3.5,
+          15.5,
+          16.5
+        ],
+        "required_values": {
+          "resource": 16.5
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "C1",
+        "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+      }
+    ],
+    "required_declaration": {
+      "name": "resource",
+      "type": "float"
+    },
+    "reference": {
+      "programs": [
+        "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nfloat resource = readInput();\nresource = resource + 3.5;\nprintf(\"%.1f\\n\", resource);\nreturn 0;\n}"
+      ]
+    },
+    "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w7_l7_v3_0",
+      "kind": "program_execution",
+      "prompt": "Declare float: declare resource as float, apply resource + 3.5, and print each result with %.1f. Dataset 3 starts with [-3, 0, 10, 13]. Match every stream. Use a full main function and a return statement."
+    }
+  ],
+  "source_path": "week_7/level7/needs_support/game_week7_level7_difficulty(NeedAssistance)_3.json",
+  "source_topic": "Basic Parts of C and Variable Declarations",
+  "source_learning_alignment": "CP1 Week 7: Declare float",
+  "source_primary_mechanic": "Slice Slicer",
+  "source_code_snippet": "items[1:4]"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "08_underwater_submarine",
+  "slug": "underwater_submarine",
+  "display_name": "Underwater Submarine",
+  "module_family": "submarine_exploration",
+  "learning_target": "variables, comparison, and coordinate reasoning",
+  "core_brief": "Use depth variables and sonar readings to navigate safely to a treasure marker.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "submarine",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "mechanic": "Grid route",
+  "accent": "#ff9f43",
+  "tint": 15382481,
+  "variation_id": "08_underwater_submarine_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 2925820083,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_2",
+    "zones": [
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3",
+      "themes.underwater.bg_reef_1"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_green",
+    "enemy": "themes.underwater.enemy_grey_long",
+    "coin": "themes.underwater.coin_bubble_b",
+    "goal": "themes.underwater.goal_chest_pearl",
+    "obstacles": {
+      "spike": "themes.underwater.rock_b",
+      "bush": "themes.underwater.seaweed_green",
+      "slime": "themes.underwater.rock_a",
+      "bee": "themes.underwater.rock_b"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/underwater_submarine.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

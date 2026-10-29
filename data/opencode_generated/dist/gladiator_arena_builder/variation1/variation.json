@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "30_gladiator_arena_builder",
+  "slug": "gladiator_arena_builder",
+  "display_name": "Gladiator Arena Builder",
+  "module_family": "array_arena",
+  "learning_target": "arrays and indexes",
+  "core_brief": "Use array indexes to place the right training units in matching arena positions.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "gladiator",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Sequence solver",
+  "accent": "#ff7a7a",
+  "tint": 14465002,
+  "variation_id": "30_gladiator_arena_builder_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 3475682526,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.mine",
+      "slime": "themes.tower_defense.rock",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/gladiator_arena_builder.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

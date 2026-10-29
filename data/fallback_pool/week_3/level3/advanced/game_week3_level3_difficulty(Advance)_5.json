@@ -1,30 +1,30 @@
 {
   "file_id": "game_0685",
-  "game_title": "Discount Rules – Customs House Trial",
+  "game_title": "State tracing · variation 5",
   "game_concept": "A puzzle set in Coastal Port – Customs House, the port customs house: the shipwright must handle rogue crabs while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
-  "genre": "puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Customs House: the port customs house",
-  "core_gameplay_loop": "In Customs House, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round costs one action, so plan the step so none are wasted. Then check the profit value and advance.",
-  "primary_mechanic": "Discount Rules",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Checkpoint flags",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Reach the harbor bell using at most 11 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The harbor bell reached with actions_used <= 11.",
-  "lose_condition": "actions_used exceeds 11 before the harbor bell is reached, or lives reach 0.",
+  "player_objective": "State tracing: Trace ACC after every instruction. subtract 11 from each value. Match all 3 streams; preserve their order. Dataset 5, operand 11.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Discount Rules",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: State tracing",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M10-X3-T09-0b74b5d6",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Efficiency Trial', and setting 'Customs House'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 3,
   "trial": 5,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against rogue crabs in Customs House.",
-    "Step 3: Win by meeting the goal: The harbor bell reached with actions_used <= 11."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level3/advanced/game_week3_level3_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_0685",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the harbor bell using at most 11 actions, so every code step counts.",
+  "source_win_condition": "The harbor bell reached with actions_used <= 11.",
+  "source_lose_condition": "actions_used exceeds 11 before the harbor bell is reached, or lives reach 0.",
+  "source_game_title": "Discount Rules – Customs House Trial",
+  "source_primary_mechanic": "Discount Rules",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w3_l3",
+  "source_week": 3,
+  "source_level": 3
 }

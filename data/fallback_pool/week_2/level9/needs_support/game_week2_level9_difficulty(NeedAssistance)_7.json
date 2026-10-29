@@ -1,30 +1,30 @@
 {
   "file_id": "game_0547",
-  "game_title": "String Glue – Vent Garden Race",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A racing platformer set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – String Glue: Concatenate string pieces to forge passwords and spell names.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
-  "core_gameplay_loop": "In Vent Garden, repeat each round: Concatenate string pieces to forge passwords and spell names. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the spell_ok value and advance.",
-  "primary_mechanic": "String Glue",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the ash barrier by solving code steps involving spell_ok that move the fire warden forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
-  "lose_condition": "The rival reaches the ash barrier first, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 7: {'a': 12, 'b': 7}; {'a': -7, 'b': -9}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): String Glue",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M07-X5-T19-b4a552ed",
   "duplicate_check_notes": "Unique combination of primary mechanic 'String Glue' (Week 2 slot 7), mission type 'Rival Race', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how spell_ok changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/needs_support/game_week2_level9_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_0547",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the ash barrier by solving code steps involving spell_ok that move the fire warden forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "source_lose_condition": "The rival reaches the ash barrier first, or lives reach 0.",
+  "source_game_title": "String Glue – Vent Garden Race",
+  "source_primary_mechanic": "String Glue",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

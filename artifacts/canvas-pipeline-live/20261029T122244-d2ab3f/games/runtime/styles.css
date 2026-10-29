@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+html, body, #game-shell { width:100%; height:100%; margin:0; overflow:hidden; background:#07111d; }
+body { color:#f4f1de; font-family: system-ui, "Segoe UI", sans-serif; }
+#game { display:block; width:100%; height:100%; touch-action:manipulation; outline:none; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.lesson-guide{padding:10px;margin:10px 0;border:1px solid #78929e;border-radius:6px;background:#142731;color:#edf3ed;font:14px/1.5 system-ui}.lesson-guide summary{cursor:pointer;font-weight:700;color:#ffe397}.lesson-guide h2{font-size:17px}.lesson-guide pre{white-space:pre-wrap;background:#07151d;padding:10px;overflow-wrap:anywhere}.lesson-guide a{display:block;color:#8ce2ee;margin:5px 0}.lesson-guide-dock{position:fixed;top:6px;right:10px;z-index:20;max-width:min(420px,90vw);max-height:80vh;overflow:auto;box-shadow:0 5px 20px #0009}.lesson-guide-dock:not([open]){font-size:12px;max-width:280px}.c-source-builder{border:1px solid #798a87;padding:10px;margin:12px 0}.c-source-builder pre{white-space:pre-wrap;background:#07151d;color:#e6f4e6;padding:8px}.c-source-builder button{font-size:12px}.c-source-builder select{max-width:100%}

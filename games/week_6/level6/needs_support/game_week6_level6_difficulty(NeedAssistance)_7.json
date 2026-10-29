@@ -1,0 +1,169 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1657",
+  "variation_id": "canvas_game_1657",
+  "week": 6,
+  "level": 6,
+  "trial": 7,
+  "difficulty": "Need Assistance",
+  "mode": "dungeon",
+  "title": "Formatted output · variation 7",
+  "display_name": "Programming Quest",
+  "theme": "Snowy Hold – Cold Larder: an ice-cellar larder",
+  "topic": "Creating Simple C Programs and Program Structure",
+  "learning_objectives": [
+    "Formatted output"
+  ],
+  "lesson": {
+    "summary": "Creating Simple C Programs and Program Structure",
+    "points": [
+      "Formatted output",
+      "A hosted program begins at main. Braces form its body; statements execute in order.",
+      "Construct a short program using declarations, initialization, assignment and printf.",
+      "Adventure movement functions are LogiCade helpers declared in logicade.h, not standard C library functions."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int score = 2;\n score = score + 3;\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Program synthesis",
+    "week": 6,
+    "source_week": 6,
+    "source_level": 6,
+    "objective_id": "cp1_w6_l6",
+    "title": "Creating Simple C Programs and Program Structure",
+    "stage_title": "Formatted output",
+    "objectives": [
+      "Formatted output"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      6
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w6_l6",
+  "source_level": 6,
+  "source_week": 6,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Maze 7 (15×11, 31 junctions): collect 2 crystal(s) from the branches and reach beacon (10, 9). Use a C main program to Formatted output. Print [21]; final file-scope values must be {}.",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 358413123,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "grid": [
+      "##############",
+      "#..#.#...#...#",
+      "#...#..#.##..#",
+      "#............#",
+      "#S..........G#",
+      "#..#.!.#.....#",
+      "#......#.#...#",
+      "#.....#......#",
+      "##############"
+    ],
+    "seed": 358413123
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w6_l6_v7_0",
+    "rules": {
+      "max_steps": 680,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w6_l6",
+    "source_level": 6,
+    "focus": "Formatted output",
+    "family": "adventure",
+    "language": "c_subset",
+    "title": "Formatted output · variation 7",
+    "objective": "Maze 7 (15×11, 31 junctions): collect 2 crystal(s) from the branches and reach beacon (10, 9). Use a C main program to Formatted output. Print [21]; final file-scope values must be {}.",
+    "map": [
+      "###############",
+      "#.......#.....#",
+      "#######....##.#",
+      "#.............#",
+      "#..##.##....###",
+      "#...#...#.#...#",
+      "#...###.#.##..#",
+      "#.#.#...#.....#",
+      "#.#.#..######.#",
+      "#...#.........#",
+      "###############"
+    ],
+    "map_features": {
+      "width": 15,
+      "height": 11,
+      "rooms": 2,
+      "junctions": 31,
+      "dead_ends": 1,
+      "cycles": 19
+    },
+    "start": [
+      1,
+      1
+    ],
+    "exit": [
+      10,
+      9
+    ],
+    "gems": [
+      [
+        11,
+        9
+      ],
+      [
+        9,
+        9
+      ]
+    ],
+    "expected_watch": [
+      21
+    ],
+    "expected_globals": {},
+    "command_budget": 94,
+    "program": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
+    "reference": {
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\n#define LIMIT 13\nint main(void)\n{\nint total = 13 + 8;\nprintf(\"%d\\n\", total);\nmoveRight(6);\nmoveDown(1);\nmoveRight(3);\nmoveDown(1);\nmoveRight(1);\nmoveDown(2);\nmoveRight(2);\nmoveDown(4);\nmoveLeft(4);\nmoveRight(1);\nreturn 0;\n}"
+    },
+    "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+    "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset."
+  },
+  "assets": {
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w6_l6_v7_0",
+      "kind": "program_execution",
+      "prompt": "Maze 7 (15×11, 31 junctions): collect 2 crystal(s) from the branches and reach beacon (10, 9). Use a C main program to Formatted output. Print [21]; final file-scope values must be {}."
+    }
+  ],
+  "source_path": "week_6/level6/needs_support/game_week6_level6_difficulty(NeedAssistance)_7.json",
+  "source_topic": "Creating Simple C Programs and Program Structure",
+  "source_learning_alignment": "CP1 Week 6: Formatted output",
+  "source_primary_mechanic": "Scope Sanctuary",
+  "source_code_snippet": "x = 1\ndef f():\n    x = 2"
+}

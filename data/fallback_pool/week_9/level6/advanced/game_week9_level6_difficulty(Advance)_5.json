@@ -1,30 +1,30 @@
 {
   "file_id": "game_2575",
-  "game_title": "Code Reading Relay – Camel Trail Streak",
+  "game_title": "Examination practice · Integer division · variation 5",
   "game_concept": "A quiz RPG set in Sand Dunes – Camel Trail, a camel trail: the oasis keeper must handle scarab swarms while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
-  "genre": "quiz RPG",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Camel Trail: a camel trail",
-  "core_gameplay_loop": "In Camel Trail, repeat each round: Read short programs as a relay and predict their output line by line. Each round poses one decision; a wrong answer breaks the streak. Then check the predicted value and advance.",
-  "primary_mechanic": "Code Reading Relay",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Limited undo button",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Chain 12 consecutive correct decisions about predicted to power up the oasis keeper and open the caravan wagon.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 12.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 3, and print each result with %d. Dataset 5 starts with [-3, 0, 17, 20]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Code Reading Relay",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 7: Integer division",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M10-X4-T15-468ac7d9",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Streak Challenge', and setting 'Camel Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 6,
   "trial": 5,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 390,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predicted changes.",
-    "Step 2: Use the controls to apply the code idea against scarab swarms in Camel Trail.",
-    "Step 3: Win by meeting the goal: streak counter reaches 12."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level6/advanced/game_week9_level6_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_2575",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 12 consecutive correct decisions about predicted to power up the oasis keeper and open the caravan wagon.",
+  "source_win_condition": "streak counter reaches 12.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Code Reading Relay – Camel Trail Streak",
+  "source_primary_mechanic": "Code Reading Relay",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w7_l10",
+  "source_week": 7,
+  "source_level": 10
 }

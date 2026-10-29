@@ -1,0 +1,79 @@
+{
+  "concept_id": "35_weather_station_forecaster",
+  "slug": "weather_station_forecaster",
+  "learning_target": "numeric thresholds and comparisons",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a threshold?",
+      "options": [
+        "A type of cloud",
+        "A forecast",
+        "A boundary value that triggers a decision",
+        "A thermometer"
+      ],
+      "answer_index": 2,
+      "explanation": "A threshold is the boundary where a condition changes from false to true."
+    },
+    {
+      "id": "q2",
+      "question": "If the threshold is 30 and the reading is 32, which branch runs?",
+      "options": [
+        "Neither",
+        "Both",
+        "The above-threshold branch",
+        "The below-threshold branch"
+      ],
+      "answer_index": 2,
+      "explanation": "32 is above 30, so the above-threshold branch is selected."
+    },
+    {
+      "id": "q3",
+      "question": "Which comparison means \"at least 30\"?",
+      "options": [
+        ">= 30",
+        "== 30",
+        "> 30",
+        "< 30"
+      ],
+      "answer_index": 0,
+      "explanation": "The >= operator includes values equal to 30 as well as larger ones."
+    },
+    {
+      "id": "q4",
+      "question": "Why use thresholds?",
+      "options": [
+        "To change the weather",
+        "To make the station louder",
+        "To avoid all data",
+        "To make consistent decisions"
+      ],
+      "answer_index": 3,
+      "explanation": "Thresholds turn raw readings into consistent, repeatable decisions."
+    },
+    {
+      "id": "q5",
+      "question": "What should you do with a reading exactly at the threshold?",
+      "options": [
+        "Delete it",
+        "Ignore it",
+        "Always forecast rain",
+        "Use the inclusive rule you defined"
+      ],
+      "answer_index": 3,
+      "explanation": "The comparison operator decides whether the boundary value is included."
+    },
+    {
+      "id": "q6",
+      "question": "What is a false alarm?",
+      "options": [
+        "A missing sensor",
+        "A warning when no danger exists",
+        "A correct forecast",
+        "A calm day"
+      ],
+      "answer_index": 1,
+      "explanation": "A false alarm warns about a condition that is not actually present."
+    }
+  ]
+}

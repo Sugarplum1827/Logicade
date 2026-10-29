@@ -1,30 +1,30 @@
 {
   "file_id": "game_0496",
-  "game_title": "Type Sorter – Lava Tube Tunnel Streak",
+  "game_title": "Flowchart Lab · Sum from 1 to n",
   "game_concept": "A quiz RPG set in Mt. Pyre – Lava Tube Tunnel, a glowing lava tube: the volcanologist must handle lava imps while practicing data types & operators. Core idea – Type Sorter: Sort falling cooling flasks into bins labelled int, float, str and bool before they hit the ground.",
-  "genre": "quiz RPG",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
-  "core_gameplay_loop": "In Lava Tube Tunnel, repeat each round: Sort falling cooling flasks into bins labelled int, float, str and bool before they hit the ground. Each round poses one decision; a wrong answer breaks the streak. Then check the sorted_ok value and advance.",
-  "primary_mechanic": "Type Sorter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Live variable watch panel",
     "Combo multiplier"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about sorted_ok to power up the volcanologist and open the summit beacon.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 6: {'n': 0}; {'n': 11}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Type Sorter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Accumulators",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M01-X4-T14-e7904ecd",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Streak Challenge', and setting 'Lava Tube Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 7,
   "trial": 6,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Lava Tube Tunnel.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level7/standard/game_week2_level7_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_0496",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about sorted_ok to power up the volcanologist and open the summit beacon.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Type Sorter – Lava Tube Tunnel Streak",
+  "source_primary_mechanic": "Type Sorter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w2_l7",
+  "source_week": 2,
+  "source_level": 7
 }

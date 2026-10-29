@@ -1,0 +1,428 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2320",
+  "variation_id": "canvas_game_2320",
+  "week": 8,
+  "level": 8,
+  "trial": 10,
+  "difficulty": "Need Assistance",
+  "mode": "circuit",
+  "title": "C Scope Circuit · Restore visibility · variation 10",
+  "display_name": "C Scope Circuit Workshop",
+  "theme": "Frost Peaks – Glacier Lake: a lake of glacier melt",
+  "topic": "Local and Global Variables",
+  "learning_objectives": [
+    "Restore visibility"
+  ],
+  "lesson": {
+    "summary": "Local and Global Variables",
+    "points": [
+      "Restore visibility",
+      "File-scope variables are declared outside functions; block-scope locals are visible in their block.",
+      "An inner declaration can hide an outer name. Leaving its scope restores the outer declaration.",
+      "Scope differs from lifetime: ordinary automatic locals belong to a block execution; file-scope objects have static storage duration."
+    ],
+    "example": "#include <stdio.h>\nint score = 2;\nint main(void) {\n { int score = 7; printf(\"%d\\n\", score); }\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Scope trace synthesis",
+    "week": 8,
+    "source_week": 8,
+    "source_level": 8,
+    "objective_id": "cp1_w8_l8",
+    "title": "Local and Global Variables",
+    "stage_title": "Restore visibility",
+    "objectives": [
+      "Restore visibility"
+    ],
+    "sources": [
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      8
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w8_l8",
+  "source_level": 8,
+  "source_week": 8,
+  "primary_mechanic": "circuit construction and execution",
+  "objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, separate sibling local lifetimes. Print the scope trace [19, 22, 11], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 11}. Pass all 3 signal tests.",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 3114985461,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "gate_order": [
+      "INPUT",
+      "AND",
+      "XOR",
+      "OUTPUT"
+    ],
+    "switches": [
+      true,
+      false
+    ],
+    "wire_variant": 1
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w8_l8_v10_0",
+    "rules": {
+      "max_steps": 740,
+      "max_lines": 40,
+      "max_nodes": 12
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w8_l8",
+    "source_level": 8,
+    "focus": "Restore visibility",
+    "family": "circuit",
+    "language": "c_subset",
+    "circuit_kind": "scope_controller",
+    "title": "C Scope Circuit · Restore visibility · variation 10",
+    "objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, separate sibling local lifetimes. Print the scope trace [19, 22, 11], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 11}. Pass all 3 signal tests.",
+    "nodes": [
+      {
+        "id": "input",
+        "type": "INPUT",
+        "label": "Sensor",
+        "x": 0.02,
+        "y": 0.34,
+        "fixed": true
+      },
+      {
+        "id": "controller",
+        "type": "MCU",
+        "label": "Scope C",
+        "x": 0.19,
+        "y": 0.34
+      },
+      {
+        "id": "split",
+        "type": "SPLITTER",
+        "label": "Broadcast",
+        "x": 0.36,
+        "y": 0.34
+      },
+      {
+        "id": "branch_1",
+        "type": "MCU",
+        "label": "Branch 1",
+        "x": 0.526795872405376,
+        "y": 0.08
+      },
+      {
+        "id": "branch_2",
+        "type": "MCU",
+        "label": "Branch 2",
+        "x": 0.5217635593482999,
+        "y": 0.7
+      },
+      {
+        "id": "merge",
+        "type": "MERGER",
+        "label": "Sum all",
+        "x": 0.7,
+        "y": 0.34
+      },
+      {
+        "id": "loop",
+        "type": "LOOP",
+        "label": "Feedback",
+        "passes": 3,
+        "x": 0.85,
+        "y": 0.34
+      },
+      {
+        "id": "output",
+        "type": "OUTPUT",
+        "label": "Probe",
+        "x": 0.96,
+        "y": 0.68,
+        "fixed": true
+      }
+    ],
+    "wires": [
+      [
+        "input",
+        "controller"
+      ],
+      [
+        "controller",
+        "split"
+      ]
+    ],
+    "palette": [
+      "MCU",
+      "SPLITTER",
+      "MERGER",
+      "LOOP"
+    ],
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          19
+        ],
+        "expected": [
+          19,
+          22,
+          11,
+          201
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -19
+        ],
+        "expected": [
+          19,
+          22,
+          11,
+          -103
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          30
+        ],
+        "expected": [
+          19,
+          22,
+          11,
+          289
+        ]
+      }
+    ],
+    "programs": {
+      "controller": "#include <stdio.h>\n#include \"logicade.h\"\n// Add the required file-scope declaration here.\nint main(void)\n{\n  int signal = readInput();\n  // Complete the scope task and print its trace.\n  writeOutput(signal);\n  return 0;\n}",
+      "branch_1": "#include \"logicade.h\"\nint main(void)\n{\n  int signal = readInput();\n  // Read one signal; add 3; write one result. Each invocation starts fresh C scopes.\n  writeOutput(signal);\n  return 0;\n}",
+      "branch_2": "#include \"logicade.h\"\nint main(void)\n{\n  int signal = readInput();\n  // Read one signal; add 4; write one result. Each invocation starts fresh C scopes.\n  writeOutput(signal);\n  return 0;\n}"
+    },
+    "expected_globals": {
+      "steps": 11
+    },
+    "scope_trace_length": 3,
+    "signal_network": {
+      "version": 2,
+      "branch_ids": [
+        "branch_1",
+        "branch_2"
+      ],
+      "branch_tasks": {
+        "branch_1": {
+          "operation": "add",
+          "operand": 3,
+          "description": "Read one signal; add 3; write one result. Each invocation starts fresh C scopes."
+        },
+        "branch_2": {
+          "operation": "add",
+          "operand": 4,
+          "description": "Read one signal; add 4; write one result. Each invocation starts fresh C scopes."
+        }
+      },
+      "merge_mode": "sum",
+      "passes": 3,
+      "required_wires": [
+        [
+          "input",
+          "controller"
+        ],
+        [
+          "controller",
+          "split"
+        ],
+        [
+          "split",
+          "branch_1"
+        ],
+        [
+          "split",
+          "branch_2"
+        ],
+        [
+          "branch_1",
+          "merge"
+        ],
+        [
+          "branch_2",
+          "merge"
+        ],
+        [
+          "merge",
+          "loop"
+        ],
+        [
+          "loop",
+          "split"
+        ],
+        [
+          "loop",
+          "output"
+        ]
+      ],
+      "max_queue": 32
+    },
+    "scope_contract": {
+      "global_names": [
+        "steps"
+      ],
+      "local_name": "steps",
+      "minimum_depth": 2,
+      "sibling_blocks": true,
+      "zero_initialized_global": false
+    },
+    "reference": {
+      "nodes": [
+        {
+          "id": "input",
+          "type": "INPUT",
+          "label": "Sensor",
+          "x": 0.02,
+          "y": 0.34,
+          "fixed": true
+        },
+        {
+          "id": "controller",
+          "type": "MCU",
+          "label": "Scope C",
+          "x": 0.19,
+          "y": 0.34
+        },
+        {
+          "id": "split",
+          "type": "SPLITTER",
+          "label": "Broadcast",
+          "x": 0.36,
+          "y": 0.34
+        },
+        {
+          "id": "branch_1",
+          "type": "MCU",
+          "label": "Branch 1",
+          "x": 0.526795872405376,
+          "y": 0.08
+        },
+        {
+          "id": "branch_2",
+          "type": "MCU",
+          "label": "Branch 2",
+          "x": 0.5217635593482999,
+          "y": 0.7
+        },
+        {
+          "id": "merge",
+          "type": "MERGER",
+          "label": "Sum all",
+          "x": 0.7,
+          "y": 0.34
+        },
+        {
+          "id": "loop",
+          "type": "LOOP",
+          "label": "Feedback",
+          "passes": 3,
+          "x": 0.85,
+          "y": 0.34
+        },
+        {
+          "id": "output",
+          "type": "OUTPUT",
+          "label": "Probe",
+          "x": 0.96,
+          "y": 0.68,
+          "fixed": true
+        }
+      ],
+      "wires": [
+        [
+          "input",
+          "controller"
+        ],
+        [
+          "controller",
+          "split"
+        ],
+        [
+          "split",
+          "branch_1"
+        ],
+        [
+          "split",
+          "branch_2"
+        ],
+        [
+          "branch_1",
+          "merge"
+        ],
+        [
+          "branch_2",
+          "merge"
+        ],
+        [
+          "merge",
+          "loop"
+        ],
+        [
+          "loop",
+          "split"
+        ],
+        [
+          "loop",
+          "output"
+        ]
+      ],
+      "programs": {
+        "controller": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 11;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 19; printf(\"%d\\n\", steps); }\n{ int steps = 22; printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
+        "branch_1": "#include \"logicade.h\"\nint adjustment = 3;\nint main(void)\n{\n  int signal = readInput();\n  { int local = adjustment; signal = signal + local; }\n  writeOutput(signal);\n  return 0;\n}",
+        "branch_2": "#include \"logicade.h\"\nint adjustment = 4;\nint main(void)\n{\n  int signal = readInput();\n  { int local = adjustment; signal = signal + local; }\n  writeOutput(signal);\n  return 0;\n}"
+      },
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 11;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 19; printf(\"%d\\n\", steps); }\n{ int steps = 22; printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}"
+    },
+    "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+    "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w8_l8_v10_0",
+      "kind": "program_execution",
+      "prompt": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, separate sibling local lifetimes. Print the scope trace [19, 22, 11], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 11}. Pass all 3 signal tests."
+    }
+  ],
+  "source_path": "week_8/level8/needs_support/game_week8_level8_difficulty(NeedAssistance)_10.json",
+  "source_topic": "Local and Global Variables",
+  "source_learning_alignment": "CP1 Week 8: Restore visibility",
+  "source_primary_mechanic": "Safe Get Scout",
+  "source_code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 11;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 19; printf(\"%d\\n\", steps); }\n{ int steps = 22; printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "15ed255f6ceb4cd1d6f1139c4ef96cac8ac31fc70e256e46b519a485395d7dc9",
+    "lesson_unchanged": true
+  }
+}

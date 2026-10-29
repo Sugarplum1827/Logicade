@@ -1,30 +1,30 @@
 {
   "file_id": "game_0564",
-  "game_title": "Parenthesis Puzzle – Lava Tube Tunnel Rush",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A speed quiz set in Mt. Pyre – Lava Tube Tunnel, a glowing lava tube: the volcanologist must handle lava imps while practicing data types & operators. Core idea – Parenthesis Puzzle: Place parentheses to make an expression equal the number carved on the summit beacon.",
-  "genre": "speed quiz",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
-  "core_gameplay_loop": "In Lava Tube Tunnel, repeat each round: Place parentheses to make an expression equal the number carved on the summit beacon. Each round, a new cooling flasks challenge appears; solve it to bank points before time drains. Then check the puzzle_gap value and advance.",
-  "primary_mechanic": "Parenthesis Puzzle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Live variable watch panel",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Collect 550 points of cooling flasks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 550 within 43 seconds.",
-  "lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 4: {'a': 9, 'b': 4}; {'a': -4, 'b': -6}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Parenthesis Puzzle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M09-X2-T14-ddd4ffeb",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Parenthesis Puzzle' (Week 2 slot 9), mission type 'Resource Rush', and setting 'Lava Tube Tunnel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 4,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 43,
+    "time_limit_seconds": 0,
     "target_score": 550,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how puzzle_gap changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Lava Tube Tunnel.",
-    "Step 3: Win by meeting the goal: score >= 550 within 43 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/advanced/game_week2_level9_difficulty(Advance)_4.json",
+    "variation_id": "canvas_game_0564",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 550 points of cooling flasks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 550 within 43 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 550, or lives reach 0.",
+  "source_game_title": "Parenthesis Puzzle – Lava Tube Tunnel Rush",
+  "source_primary_mechanic": "Parenthesis Puzzle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 43,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

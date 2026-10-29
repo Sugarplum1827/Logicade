@@ -1,0 +1,264 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0354",
+  "variation_id": "canvas_game_0354",
+  "week": 2,
+  "level": 2,
+  "trial": 4,
+  "difficulty": "Advance",
+  "mode": "circuit",
+  "title": "Flowchart Workshop – Input and output",
+  "display_name": "Logic Circuit Workshop",
+  "theme": "Mt. Pyre – Pyre Summit: the roaring summit",
+  "topic": "Flowcharting",
+  "learning_objectives": [
+    "Input/output"
+  ],
+  "lesson": {
+    "summary": "Flowcharting",
+    "points": [
+      "Input/output",
+      "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+      "Test both branches and boundary inputs before accepting a chart."
+    ],
+    "example": "Start → Read n → n > 0? → Yes/No output → End",
+    "practice": "Flowchart synthesis",
+    "week": 2,
+    "source_week": 2,
+    "source_level": 2,
+    "objective_id": "cp1_w2_l2",
+    "title": "Flowcharting",
+    "stage_title": "Input/output",
+    "objectives": [
+      "Input/output"
+    ],
+    "sources": [
+      {
+        "title": "Victoria Department of Education: flowcharts",
+        "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+      },
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      2
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w2_l2",
+  "source_level": 2,
+  "source_week": 2,
+  "primary_mechanic": "circuit construction and execution",
+  "objective": "Read value for station 4, then display the same value without changing it. Test dataset 4: {'value': -4}; {'value': 12}.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 3277501444,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "gate_order": [
+      "INPUT",
+      "OR",
+      "XOR",
+      "OUTPUT"
+    ],
+    "switches": [
+      true,
+      false
+    ],
+    "wire_variant": 4
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_1",
+    "source_level": 2,
+    "title": "Input and output",
+    "prompt": "Read value for station 4, then display the same value without changing it. Test dataset 4: {'value': -4}; {'value': 12}.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.45,
+        "y": 0.08,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.45,
+        "y": 0.36,
+        "number": 2
+      },
+      {
+        "id": "write",
+        "x": 0.45,
+        "y": 0.6399999999999999,
+        "number": 3
+      },
+      {
+        "id": "end",
+        "x": 0.45,
+        "y": 0.9199999999999999,
+        "number": 4
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "end"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "read",
+        "label": "Read value",
+        "kind": "input",
+        "action": {
+          "names": [
+            "value"
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "write",
+        "label": "Write value",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "value"
+          }
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "decoy_symbol",
+        "label": "Display Read value",
+        "kind": "output",
+        "action": {
+          "value": "Not a calculation"
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "write": "write",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "value": -4
+        },
+        "expected": [
+          -4
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "value": 0
+        },
+        "expected": [
+          0
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "value": 11
+        },
+        "expected": [
+          11
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "value": 12
+        },
+        "expected": [
+          12
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0354",
+    "objective_id": "cp1_w2_l2"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    }
+  ],
+  "source_path": "week_2/level2/advanced/game_week2_level2_difficulty(Advance)_4.json",
+  "source_topic": "Flowcharting",
+  "source_learning_alignment": "CP1 Week 2: Input/output",
+  "source_primary_mechanic": "Parenthesis Puzzle",
+  "source_code_snippet": "(2 + 3) * 4"
+}

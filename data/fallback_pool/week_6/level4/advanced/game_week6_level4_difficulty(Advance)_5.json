@@ -1,30 +1,30 @@
 {
   "file_id": "game_1615",
-  "game_title": "Boolean Guards – Firewood Stacks Race",
+  "game_title": "Ordered assignment · variation 5",
   "game_concept": "A racing platformer set in Snowy Hold – Firewood Stacks, towering firewood stacks: the frost mage must handle winter bandits while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
-  "genre": "racing platformer",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Firewood Stacks: towering firewood stacks",
-  "core_gameplay_loop": "In Firewood Stacks, repeat each round: Write functions returning True or False that guard checkpoints. Each round the rival advances, and solving the step moves the frost mage ahead. Then check the guards value and advance.",
-  "primary_mechanic": "Boolean Guards",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Live variable watch panel",
     "Combo multiplier"
   ],
-  "player_objective": "Beat a rival AI to the frozen well by solving code steps involving guards that move the frost mage forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the frozen well first, or lives reach 0.",
+  "player_objective": "Maze 5 (17×13, 49 junctions): collect 3 crystal(s) from the branches and reach beacon (13, 11). Use a C main program to Ordered assignment. Print [38]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 6 – Functions | Level 4 (applied tier): Boolean Guards",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Ordered assignment",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M10-X5-T11-f4f063b4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Rival Race', and setting 'Firewood Stacks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 4,
   "trial": 5,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how guards changes.",
-    "Step 2: Use the controls to apply the code idea against winter bandits in Firewood Stacks.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level4/advanced/game_week6_level4_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_1615",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the frozen well by solving code steps involving guards that move the frost mage forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the frozen well first, or lives reach 0.",
+  "source_game_title": "Boolean Guards – Firewood Stacks Race",
+  "source_primary_mechanic": "Boolean Guards",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w6_l4",
+  "source_week": 6,
+  "source_level": 4
 }

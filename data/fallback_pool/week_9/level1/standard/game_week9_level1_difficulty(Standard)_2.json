@@ -1,30 +1,30 @@
 {
   "file_id": "game_2412",
-  "game_title": "Algorithm Race – Dust Devil Plain Streak",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A card battler set in Sand Dunes – Dust Devil Plain, a plain of dust devils: the camel trader must handle sand wyrms while practicing debugging & combined skills. Core idea – Algorithm Race: Choose the faster of two approaches (loop vs formula) to out-pace a rival process.",
-  "genre": "card battler",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Dust Devil Plain: a plain of dust devils",
-  "core_gameplay_loop": "In Dust Devil Plain, repeat each round: Choose the faster of two approaches (loop vs formula) to out-pace a rival process. Each round poses one decision; a wrong answer breaks the streak. Then check the speed value and advance.",
-  "primary_mechanic": "Algorithm Race",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Chain 7 consecutive correct decisions about speed to power up the camel trader and open the water well.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 7.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 2: {'width': 3, 'height': 4}; {'width': 5, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Algorithm Race",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M12-X4-T18-3188eafd",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Algorithm Race' (Week 9 slot 12), mission type 'Streak Challenge', and setting 'Dust Devil Plain'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 2,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 30,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 14,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how speed changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dust Devil Plain.",
-    "Step 3: Win by meeting the goal: streak counter reaches 7."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/standard/game_week9_level1_difficulty(Standard)_2.json",
+    "variation_id": "canvas_game_2412",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 7 consecutive correct decisions about speed to power up the camel trader and open the water well.",
+  "source_win_condition": "streak counter reaches 7.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Algorithm Race – Dust Devil Plain Streak",
+  "source_primary_mechanic": "Algorithm Race",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 30,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

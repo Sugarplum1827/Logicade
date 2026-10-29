@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1546",
+  "variation_id": "canvas_game_1546",
+  "week": 6,
+  "level": 2,
+  "trial": 6,
+  "difficulty": "Standard",
+  "mode": "dungeon",
+  "title": "Blocks and semicolons · variation 6",
+  "display_name": "Programming Quest",
+  "theme": "Snowy Hold – Frosted Chapel: a frosted chapel",
+  "topic": "Creating Simple C Programs and Program Structure",
+  "learning_objectives": [
+    "Blocks and semicolons"
+  ],
+  "lesson": {
+    "summary": "Creating Simple C Programs and Program Structure",
+    "points": [
+      "Blocks and semicolons",
+      "A hosted program begins at main. Braces form its body; statements execute in order.",
+      "Construct a short program using declarations, initialization, assignment and printf.",
+      "Adventure movement functions are LogiCade helpers declared in logicade.h, not standard C library functions."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int score = 2;\n score = score + 3;\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Program synthesis",
+    "week": 6,
+    "source_week": 6,
+    "source_level": 2,
+    "objective_id": "cp1_w6_l2",
+    "title": "Creating Simple C Programs and Program Structure",
+    "stage_title": "Blocks and semicolons",
+    "objectives": [
+      "Blocks and semicolons"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      6
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w6_l2",
+  "source_level": 2,
+  "source_week": 6,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Maze 6 (15×11, 26 junctions): collect 1 crystal(s) from the branches and reach beacon (11, 3). Use a C main program to Blocks and semicolons. Print [17]; final file-scope values must be {}.",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 3123265331,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "grid": [
+      "##############",
+      "#.#......##..#",
+      "#.....##.#...#",
+      "#..#.........#",
+      "#S..........G#",
+      "#..#!........#",
+      "#...#...#....#",
+      "#.....##..#..#",
+      "##############"
+    ],
+    "seed": 3123265331
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w6_l2_v6_1",
+    "rules": {
+      "max_steps": 560,
+      "max_lines": 50,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 1,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w6_l2",
+    "source_level": 2,
+    "focus": "Blocks and semicolons",
+    "family": "adventure",
+    "language": "c_subset",
+    "title": "Blocks and semicolons · variation 6",
+    "objective": "Maze 6 (15×11, 26 junctions): collect 1 crystal(s) from the branches and reach beacon (11, 3). Use a C main program to Blocks and semicolons. Print [17]; final file-scope values must be {}.",
+    "map": [
+      "###############",
+      "#.#.......#...#",
+      "#....####.#.#.#",
+      "#.....#.#.#.#.#",
+      "#..##.#.#.###.#",
+      "#.....#.#.#...#",
+      "#######.#.#.###",
+      "#.....#.......#",
+      "#.#.###....##.#",
+      "#.#...........#",
+      "###############"
+    ],
+    "map_features": {
+      "width": 15,
+      "height": 11,
+      "rooms": 2,
+      "junctions": 26,
+      "dead_ends": 5,
+      "cycles": 14
+    },
+    "start": [
+      1,
+      1
+    ],
+    "exit": [
+      11,
+      3
+    ],
+    "gems": [
+      [
+        1,
+        9
+      ]
+    ],
+    "expected_watch": [
+      17
+    ],
+    "expected_globals": {},
+    "command_budget": 153,
+    "program": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
+    "reference": {
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\n#define LIMIT 9\nint main(void)\n{\nint total = 9;\n{ total = total + 8; }\nprintf(\"%d\\n\", total);\nmoveDown(1);\nmoveRight(3);\nmoveUp(1);\nmoveRight(5);\nmoveDown(6);\nmoveLeft(2);\nmoveDown(2);\nmoveLeft(4);\nmoveUp(2);\nmoveLeft(2);\nmoveDown(2);\nmoveUp(2);\nmoveRight(2);\nmoveDown(2);\nmoveRight(7);\nmoveUp(2);\nmoveRight(1);\nmoveUp(2);\nmoveRight(2);\nmoveUp(4);\nmoveLeft(2);\nmoveDown(2);\nreturn 0;\n}"
+    },
+    "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+    "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset."
+  },
+  "assets": {
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w6_l2_v6_1",
+      "kind": "program_execution",
+      "prompt": "Maze 6 (15×11, 26 junctions): collect 1 crystal(s) from the branches and reach beacon (11, 3). Use a C main program to Blocks and semicolons. Print [17]; final file-scope values must be {}."
+    }
+  ],
+  "source_path": "week_6/level2/standard/game_week6_level2_difficulty(Standard)_6.json",
+  "source_topic": "Creating Simple C Programs and Program Structure",
+  "source_learning_alignment": "CP1 Week 6: Blocks and semicolons",
+  "source_primary_mechanic": "Spell Forge",
+  "source_code_snippet": "def cast():\n    attack()\ncast()"
+}

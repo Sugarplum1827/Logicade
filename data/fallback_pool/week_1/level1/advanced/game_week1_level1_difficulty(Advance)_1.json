@@ -1,30 +1,30 @@
 {
   "file_id": "game_0021",
-  "game_title": "Score Keeper – Dungeon Stairs Rush",
-  "game_concept": "A speed quiz set in The Kingdom – Dungeon Stairs, the castle dungeon stairwell: the baker's apprentice must handle goblin raiders while practicing variables & assignment. Core idea – Score Keeper: Update score, lives and ammo variables after every event while goblin raiders close in.",
-  "genre": "speed quiz",
+  "game_title": "LogiCade Prologue",
+  "game_concept": "A full-screen welcome cinematic introduces LogiCade and its learning journey.",
+  "genre": "Full-screen welcome video",
   "theme": "The Kingdom – Dungeon Stairs: the castle dungeon stairwell",
-  "core_gameplay_loop": "In Dungeon Stairs, repeat each round: Update score, lives and ammo variables after every event while goblin raiders close in. Each round, a new grain sacks challenge appears; solve it to bank points before time drains. Then check the score value and advance.",
-  "primary_mechanic": "Score Keeper",
+  "core_gameplay_loop": "Watch the full-screen LogiCade prologue; completion unlocks the flowchart stage.",
+  "primary_mechanic": "Welcome video",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Reduced-motion and color-blind-safe UI",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Collect 130 points of grain sacks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 130 within 24 seconds.",
-  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "player_objective": "Watch the LogiCade prologue to completion before entering the first learning challenge.",
+  "controls": "Full-screen video; no pause or skip controls. Click only if sound autoplay is blocked.",
+  "win_condition": "The prologue video reaches its end.",
+  "lose_condition": "The video is closed before completion.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Score Keeper",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Welcome video",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M06-X2-T17-716702e4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Score Keeper' (Week 1 slot 6), mission type 'Resource Rush', and setting 'Dungeon Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 1,
   "trial": 1,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,20 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how score changes.",
-    "Step 2: Use the controls to apply the code idea against goblin raiders in Dungeon Stairs.",
-    "Step 3: Win by meeting the goal: score >= 130 within 24 seconds."
-  ]
+    "Watch the full-screen prologue.",
+    "The video has no skip or pause controls.",
+    "When it ends, continue to Stage 2."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level1/advanced/game_week1_level1_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_0021",
+    "mode": "welcome_video",
+    "asset_set": "welcome_video",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l1",
+  "source_week": 1,
+  "source_level": 1
 }

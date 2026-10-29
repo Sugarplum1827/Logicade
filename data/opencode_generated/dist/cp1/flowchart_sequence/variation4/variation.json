@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_02_flowchart_sequence",
+  "slug": "flowchart_sequence",
+  "display_name": "Flowchart Sequence",
+  "learning_target": "order a straight-line flowchart",
+  "core_brief": "Follow one path from start to end, with every step in the right order.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 2,
+  "unit": "Flowcharting",
+  "group": "flow",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_02_flowchart_sequence_v04",
+  "index": 4,
+  "challenge_index": 4,
+  "challenge_id": "flowchart_sequence_v04",
+  "title": "Trace the output",
+  "label": "Lab 04: Trace the output",
+  "seed": 2723934735,
+  "challenge_bank": "../../../data/cp1/challenges/flowchart_sequence.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

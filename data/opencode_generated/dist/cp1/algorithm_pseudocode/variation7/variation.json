@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_07_algorithm_pseudocode",
+  "slug": "algorithm_pseudocode",
+  "display_name": "Pseudocode",
+  "learning_target": "read and repair pseudocode",
+  "core_brief": "Pseudocode uses plain-language keywords to describe an algorithm before coding.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 3,
+  "unit": "Algorithms",
+  "group": "flow",
+  "skin": "underwater",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_1",
+    "zones": [
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_orange",
+    "enemy": "themes.underwater.enemy_brown",
+    "coin": "themes.underwater.coin_bubble_b",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.rock_a",
+      "bush": "themes.underwater.seaweed_orange",
+      "slime": "themes.underwater.seaweed_green",
+      "bee": "themes.underwater.rock_a"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "mechanic": "flow",
+  "mechanic_label": "Wire",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_07_algorithm_pseudocode_v07",
+  "index": 7,
+  "challenge_index": 7,
+  "challenge_id": "algorithm_pseudocode_v07",
+  "title": "Wire the flowchart",
+  "label": "Lab 07: Wire the flowchart",
+  "seed": 3451353575,
+  "challenge_bank": "../../../data/cp1/challenges/algorithm_pseudocode.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

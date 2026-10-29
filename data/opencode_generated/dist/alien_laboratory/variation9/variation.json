@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "20_alien_laboratory",
+  "slug": "alien_laboratory",
+  "display_name": "Alien Laboratory",
+  "module_family": "creature_lab",
+  "learning_target": "function definitions and parameters",
+  "core_brief": "Define simple functions to create and safely classify original test creatures.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "alien",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Sequence solver",
+  "accent": "#ff7a7a",
+  "tint": 12053220,
+  "variation_id": "20_alien_laboratory_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 3712128359,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_black",
+    "zones": [
+      "themes.space.bg_black",
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_blue",
+    "coin": "themes.space.coin_blue",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/alien_laboratory.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

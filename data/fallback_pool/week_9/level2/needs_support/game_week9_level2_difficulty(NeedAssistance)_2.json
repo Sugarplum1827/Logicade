@@ -1,30 +1,30 @@
 {
   "file_id": "game_2432",
-  "game_title": "Exception Rodeo – Dry Well Defense",
+  "game_title": "Examination practice · Algorithm synthesis · variation 2",
   "game_concept": "A survival strategy set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
-  "genre": "survival strategy",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Dry Well: a nearly dry well",
-  "core_gameplay_loop": "In Dry Well, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round, sand wyrms strike the supply tent, so respond before the next strike lands. Then check the stability value and advance.",
-  "primary_mechanic": "Exception Rodeo",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Protect the supply tent from sand wyrms in Dry Well: keep the stability meter above zero by applying the concept correctly until the 46-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 46 seconds while stability > 0.",
-  "lose_condition": "stability drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "player_objective": "Week 3 examination practice: Algorithm synthesis: add 13 to each value. Match all 3 streams; preserve their order. Dataset 2, operand 13.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Exception Rodeo",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M02-X1-T10-428dc4eb",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Survival Siege', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 2,
   "trial": 2,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Algorithms",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stability changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
-    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while stability > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level2/needs_support/game_week9_level2_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_2432",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the supply tent from sand wyrms in Dry Well: keep the stability meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "source_win_condition": "Timer reaches 46 seconds while stability > 0.",
+  "source_lose_condition": "stability drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "source_game_title": "Exception Rodeo – Dry Well Defense",
+  "source_primary_mechanic": "Exception Rodeo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w3_l10",
+  "source_week": 3,
+  "source_level": 10
 }

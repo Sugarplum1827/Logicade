@@ -1,0 +1,534 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v01",
+    "index": 1,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "const int MAX = 100;",
+        "int main(void) {",
+        "    int score = 10;",
+        "    const int PASS = 50;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Available to the whole file"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Available only inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "const int MAX = 100;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int score = 10;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "const int PASS = 50;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "int main(void)",
+          "scope": "file"
+        }
+      ]
+    },
+    "explanation": "MAX is global; score and PASS are local to main.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v02",
+    "index": 2,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each variables and constants term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Variable"
+        },
+        {
+          "id": "l2",
+          "text": "Constant"
+        },
+        {
+          "id": "l3",
+          "text": "Declaration"
+        },
+        {
+          "id": "l4",
+          "text": "Initialization"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A value that can change"
+        },
+        {
+          "id": "r2",
+          "text": "A value fixed after definition"
+        },
+        {
+          "id": "r3",
+          "text": "Introduces a name and type"
+        },
+        {
+          "id": "r4",
+          "text": "Provides the first value"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v03",
+    "index": 3,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the score program and its constant.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int score = 10;",
+        "score = score {{b0}} 5;",
+        "{{b1}} int PASS = 50;",
+        "printf(\"%d\\n\", score);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "operation that adds",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "read-only keyword",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "+"
+        },
+        {
+          "id": "b2",
+          "text": "const"
+        },
+        {
+          "id": "b3",
+          "text": "-"
+        },
+        {
+          "id": "b4",
+          "text": "static"
+        },
+        {
+          "id": "b5",
+          "text": "let"
+        }
+      ]
+    },
+    "explanation": "Add 5 to score, and declare PASS with const.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v04",
+    "index": 4,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    const int PASS = 50;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "15",
+      "accept": [
+        "15"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "score starts at 10 and gains 5; PASS is declared but not printed."
+    },
+    "explanation": "The program produces 15.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v05",
+    "index": 5,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    const int PASS = 50;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "score",
+        "pass"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "score": "10",
+            "pass": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "score": "15",
+            "pass": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "score": "15",
+            "pass": "50"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "pass"
+      ],
+      "answer": {
+        "score": "15",
+        "pass": "50"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is score = 15, pass = 50.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v06",
+    "index": 6,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of variables and constants in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Declare the variable"
+        },
+        {
+          "id": "s2",
+          "text": "Give it an initial value"
+        },
+        {
+          "id": "s3",
+          "text": "Change it when the program needs a new value"
+        },
+        {
+          "id": "s4",
+          "text": "Declare constants with const so they cannot change"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Declare the variable → Give it an initial value → Change it when the program needs a new value → Declare constants with const so they cannot change",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v07",
+    "index": 7,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a constant named PASS with the value 50.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "const"
+        },
+        {
+          "id": "t2",
+          "text": "int"
+        },
+        {
+          "id": "t3",
+          "text": "PASS"
+        },
+        {
+          "id": "t4",
+          "text": "="
+        },
+        {
+          "id": "t5",
+          "text": "50"
+        },
+        {
+          "id": "t6",
+          "text": ";"
+        },
+        {
+          "id": "t7",
+          "text": "var"
+        },
+        {
+          "id": "t8",
+          "text": "let"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "const marks the value as read-only; any later assignment is a compile error.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v08",
+    "index": 8,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the changing score and the fixed pass mark.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    const int PASS = 50;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "score",
+          "type": "final value"
+        },
+        {
+          "name": "pass",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "15"
+        },
+        {
+          "id": "v2",
+          "text": "50"
+        },
+        {
+          "id": "v3",
+          "text": "16"
+        },
+        {
+          "id": "v4",
+          "text": "14"
+        },
+        {
+          "id": "v5",
+          "text": "51"
+        }
+      ],
+      "answer": {
+        "score": "v1",
+        "pass": "v2"
+      }
+    },
+    "explanation": "score changes from 10 to 15; PASS is fixed at 50.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v09",
+    "index": 9,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each statement as declaring a variable or a constant.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "variable",
+          "label": "Variable",
+          "desc": "Can be reassigned"
+        },
+        {
+          "id": "constant",
+          "label": "Constant",
+          "desc": "Read-only after definition"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int score = 10;",
+          "bin": "variable"
+        },
+        {
+          "id": "i2",
+          "text": "score = score + 5;",
+          "bin": "variable"
+        },
+        {
+          "id": "i3",
+          "text": "const int PASS = 50;",
+          "bin": "constant"
+        },
+        {
+          "id": "i4",
+          "text": "const float PI = 3.14f;",
+          "bin": "constant"
+        },
+        {
+          "id": "i5",
+          "text": "int lives = 3;",
+          "bin": "variable"
+        },
+        {
+          "id": "i6",
+          "text": "const char GRADE = 'A';",
+          "bin": "constant"
+        }
+      ]
+    },
+    "explanation": "The const keyword makes a name read-only.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_variables_constants_v10",
+    "index": 10,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    const int PASS = 50;",
+        "    PASS = 60;",
+        "    printf(\"%d\\n\", PASS);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "A const variable cannot be assigned after its declaration.",
+    "concept_slug": "c_variables_constants",
+    "concept_name": "Variables and Constants"
+  }
+]

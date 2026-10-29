@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "46_candy_kingdom_defender",
+  "slug": "candy_kingdom_defender",
+  "display_name": "Candy Kingdom Defender",
+  "module_family": "boolean_defense",
+  "learning_target": "Boolean logic and conditions",
+  "core_brief": "Use Boolean statements to decide which castle defenses activate against each wave.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "defender",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Lane defense",
+  "accent": "#b69cff",
+  "tint": 15382493,
+  "variation_id": "46_candy_kingdom_defender_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 1417516098,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.mine",
+      "slime": "themes.tower_defense.rock",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/candy_kingdom_defender.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" style="--accent: #6ec6ff; --accent-soft: #6ec6ff33">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070d17" />
+    <meta
+      name="description"
+      content="Mountain Peak Climber: Variation 02: Loopback Circuit. Practise loop iterations and bounds with six adaptive interactive tasks in LogiCade."
+    />
+    <title>Mountain Peak Climber · Variation 02: Loopback Circuit</title>
+    <link rel="icon" href="../../public/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../engine/styles.css" />
+  </head>
+  <body data-track="classic" data-concept="mountain_peak_climber" data-variation="2" data-mode="runner">
+    <div class="shell">
+      <header class="topbar">
+        <a class="back" id="catalog-link" href="../../index.html">← All 1,000 variations</a>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../../index.html">Catalog</a> /
+          <a id="concept-link" href="../index.html">Mountain Peak Climber</a> /
+          <strong>Variation 02</strong>
+        </nav>
+        <span class="spacer"></span>
+        <span class="target-pill"><span>Learning target</span> loop iterations and bounds</span>
+      </header>
+
+      <main class="layout">
+        <section class="stage-card" aria-label="Game">
+          <div
+            id="game-root"
+            data-variation="./variation.json"
+            data-questions="../../data/questions/mountain_peak_climber.json"
+            data-manifest="../../public/data/asset_manifest.json"
+            data-asset-base="../../public/"
+            data-catalog="../../index.html"
+          ></div>
+          <div class="stage-foot">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Adaptive local runtime · no network calls</span>
+            <span class="grow"></span>
+            <span class="pill theme">Farm art</span>
+            <span class="pill accent" id="mode-label">Route runner</span>
+            <span class="pill"><span id="question-count">6</span> activities</span>
+          </div>
+        </section>
+
+        <aside class="info">
+          <div class="card">
+            <p class="eyebrow">LogiCade · Concept 42</p>
+            <h1 id="concept-name">Mountain Peak Climber</h1>
+            <p class="variation-title" id="variation-name">Variation 02: Loopback Circuit</p>
+            <p class="brief" id="core-brief">Use loop iterations to climb a route while respecting safe stopping points.</p>
+            <p class="target">
+              <strong>Learning target</strong>
+              <span id="learning-target">loop iterations and bounds</span>
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">This build</p>
+            <dl class="meta">
+              <div><dt>Track</dt><dd>Classic concepts</dd></div>
+              <div><dt>Presentation</dt><dd>Route runner</dd></div>
+              <div><dt>Theme</dt><dd>mountain</dd></div>
+              <div><dt>Art set</dt><dd>Farm</dd></div>
+              <div><dt>Mechanics</dt><dd>6 adaptive tasks</dd></div>
+              <div><dt>Bank</dt><dd>6 local prompts</dd></div>
+              <div><dt>Seed</dt><dd>3238763345</dd></div>
+            </dl>
+            <p class="route-brief"><strong>How it plays.</strong> Each prompt is rebuilt as an interactive task: order the steps, assemble a line, repair a blank, classify ideas, or type the answer from memory. No four-button multiple choice.</p>
+            <p class="fine">Prompts shuffle deterministically from the local bank; the shared runtime adapts each one to the current mechanic.</p>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">Controls</p>
+            <ul class="controls-list">
+              <li><kbd>Click</kbd><span>select, place, or sort a piece</span></li>
+              <li><kbd>Enter</kbd><span>check the answer</span></li>
+              <li><kbd>H</kbd><span>show a hint</span></li>
+              <li><kbd>Esc</kbd><span>pause / resume</span></li>
+              <li><kbd>R</kbd><span>restart the run</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">Navigate</p>
+            <div class="links">
+              <a class="link-row" href="../index.html"><span>All variations in Mountain Peak Climber</span><span class="arrow">→</span></a>
+              <a class="link-row" id="prev-link" href="../variation1/"><span>Previous variation</span><span class="arrow">←</span></a>
+              <a class="link-row" id="next-link" href="../variation3/"><span>Next variation</span><span class="arrow">→</span></a>
+              <a class="link-row" href="../../index.html"><span>Full 1,000-variation catalog</span><span class="arrow">→</span></a>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <div id="fatal-error" class="fatal" role="alert" hidden>
+      <div><strong>The game could not start.</strong><span id="fatal-error-message"></span></div>
+    </div>
+    <p class="sr-only" id="sr-status" role="status" aria-live="polite"></p>
+    <p class="sr-only" id="sr-question" aria-live="polite"></p>
+    <p class="sr-only" id="sr-feedback" aria-live="polite"></p>
+    <noscript><p class="fatal">This game needs JavaScript enabled to run.</p></noscript>
+    <script type="module" src="../../engine/play.js"></script>
+  </body>
+</html>

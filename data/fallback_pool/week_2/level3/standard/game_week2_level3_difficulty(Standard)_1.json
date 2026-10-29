@@ -1,30 +1,30 @@
 {
   "file_id": "game_0371",
-  "game_title": "Exponent Engine – Eruption Watch Race",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A adventure race set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
-  "genre": "adventure race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
-  "core_gameplay_loop": "In Eruption Watch, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round the rival advances, and solving the step moves the forge smith ahead. Then check the engine_power value and advance.",
-  "primary_mechanic": "Exponent Engine",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Beat a rival AI to the lava bridge by solving code steps involving engine_power that move the forge smith forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
-  "lose_condition": "The rival reaches the lava bridge first, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 1: {'width': 2, 'height': 3}; {'width': 4, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Exponent Engine",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M11-X5-T15-977334de",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Rival Race', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 1,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how engine_power changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.75)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/standard/game_week2_level3_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_0371",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the lava bridge by solving code steps involving engine_power that move the forge smith forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
+  "source_lose_condition": "The rival reaches the lava bridge first, or lives reach 0.",
+  "source_game_title": "Exponent Engine – Eruption Watch Race",
+  "source_primary_mechanic": "Exponent Engine",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

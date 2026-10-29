@@ -1,30 +1,30 @@
 {
   "file_id": "game_1385",
-  "game_title": "Sum Sprint – Glowing Heartwood Race",
+  "game_title": "Branch Assembly 5 · Merge Midpoint",
   "game_concept": "A adventure race set in Mystic Forest – Glowing Heartwood, the glowing ancient tree: the forest ranger must handle shadow wolves while practicing control flow: for loops. Core idea – Sum Sprint: Accumulate a total across a loop to pay a toll at Glowing Heartwood.",
-  "genre": "adventure race",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Glowing Heartwood: the glowing ancient tree",
-  "core_gameplay_loop": "In Glowing Heartwood, repeat each round: Accumulate a total across a loop to pay a toll at Glowing Heartwood. Each round the rival advances, and solving the step moves the forest ranger ahead. Then check the total value and advance.",
-  "primary_mechanic": "Sum Sprint",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Beat a rival AI to the spirit shrine by solving code steps involving total that move the forest ranger forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
-  "lose_condition": "The rival reaches the spirit shrine first, or lives reach 0.",
+  "player_objective": "Declarations and statements: build a valid C source file that prints 18. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 11 components (6 upper, 5 lower). Set the gold-socket controller batch to 11.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Sum Sprint",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Declarations and statements",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M05-X5-T01-f1011dde",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Sum Sprint' (Week 5 slot 5), mission type 'Rival Race', and setting 'Glowing Heartwood'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 7,
   "trial": 5,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 67,
+    "time_limit_seconds": 0,
     "target_score": 240,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how total changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Glowing Heartwood.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level7/needs_support/game_week5_level7_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_1385",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the spirit shrine by solving code steps involving total that move the forest ranger forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "source_lose_condition": "The rival reaches the spirit shrine first, or lives reach 0.",
+  "source_game_title": "Sum Sprint – Glowing Heartwood Race",
+  "source_primary_mechanic": "Sum Sprint",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: A: 6 components via upper_4, shared_assembler to output_shared; B: 5 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 67,
+  "learning_objective_id": "cp1_w5_l7",
+  "source_week": 5,
+  "source_level": 7
 }

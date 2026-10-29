@@ -1,30 +1,30 @@
 {
   "file_id": "game_0418",
-  "game_title": "Rounding Range – Geyser Flats Streak",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A quiz RPG set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
-  "genre": "quiz RPG",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
-  "core_gameplay_loop": "In Geyser Flats, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round poses one decision; a wrong answer breaks the streak. Then check the slot_matches value and advance.",
-  "primary_mechanic": "Rounding Range",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Checkpoint flags",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about slot_matches to power up the lava scout and open the forge anvil.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read n. Display Above when n > 3; otherwise display At or below. Test dataset 8: {'n': 1}; {'n': 6}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Rounding Range",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M13-X4-T12-405635fa",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Streak Challenge', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 8,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how slot_matches changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/advanced/game_week2_level4_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_0418",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about slot_matches to power up the lava scout and open the forge anvil.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Rounding Range – Geyser Flats Streak",
+  "source_primary_mechanic": "Rounding Range",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

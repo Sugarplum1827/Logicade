@@ -1,30 +1,30 @@
 {
   "file_id": "game_0839",
-  "game_title": "Truth Table Tiles – Merchant Wharf Race",
+  "game_title": "Debug ordering · variation 9",
   "game_concept": "A adventure race set in Coastal Port – Merchant Wharf, the merchant wharf: the sailor must handle storm gulls while practicing conditionals (if / elif / else). Core idea – Truth Table Tiles: Fill in truth-table tiles for and/or/not to light the correct path.",
-  "genre": "adventure race",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Merchant Wharf: the merchant wharf",
-  "core_gameplay_loop": "In Merchant Wharf, repeat each round: Fill in truth-table tiles for and/or/not to light the correct path. Each round the rival advances, and solving the step moves the sailor ahead. Then check the table_score value and advance.",
-  "primary_mechanic": "Truth Table Tiles",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Ghost replay of best run",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Beat a rival AI to the signal flag by solving code steps involving table_score that move the sailor forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
-  "lose_condition": "The rival reaches the signal flag first, or lives reach 0.",
+  "player_objective": "Debug ordering: Repair the reversed arithmetic instructions in the starter. add 20, then double. Match all 3 streams; preserve their order. Dataset 9, operand 20.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Truth Table Tiles",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Debug ordering",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M14-X5-T07-41b3cbe5",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Truth Table Tiles' (Week 3 slot 14), mission type 'Rival Race', and setting 'Merchant Wharf'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 8,
   "trial": 9,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how table_score changes.",
-    "Step 2: Use the controls to apply the code idea against storm gulls in Merchant Wharf.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level8/advanced/game_week3_level8_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_0839",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the signal flag by solving code steps involving table_score that move the sailor forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "source_lose_condition": "The rival reaches the signal flag first, or lives reach 0.",
+  "source_game_title": "Truth Table Tiles – Merchant Wharf Race",
+  "source_primary_mechanic": "Truth Table Tiles",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w3_l8",
+  "source_week": 3,
+  "source_level": 8
 }

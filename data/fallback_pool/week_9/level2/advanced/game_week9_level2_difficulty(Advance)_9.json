@@ -1,30 +1,30 @@
 {
   "file_id": "game_2459",
-  "game_title": "Validation Fortress – Camel Trail Trial",
+  "game_title": "Examination practice · Algorithm synthesis · variation 9",
   "game_concept": "A logic puzzle set in Sand Dunes – Camel Trail, a camel trail: the oasis keeper must handle scarab swarms while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so scarab swarms can't sneak through.",
-  "genre": "logic puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Camel Trail: a camel trail",
-  "core_gameplay_loop": "In Camel Trail, repeat each round: Write input checks that reject bad data so scarab swarms can't sneak through. Each round costs one action, so plan the step so none are wasted. Then check the fortress value and advance.",
-  "primary_mechanic": "Validation Fortress",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Limited undo button",
     "Combo multiplier"
   ],
-  "player_objective": "Reach the caravan wagon using at most 11 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "The caravan wagon reached with actions_used <= 11.",
-  "lose_condition": "actions_used exceeds 11 before the caravan wagon is reached, or lives reach 0.",
+  "player_objective": "Week 3 examination practice: Algorithm synthesis: multiply every value by 5. Match all 3 streams; preserve their order. Dataset 9, operand 22.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 2 (intro tier): Validation Fortress",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M14-X3-T15-5c0efc70",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Efficiency Trial', and setting 'Camel Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 2,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Algorithms",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 26,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fortress changes.",
-    "Step 2: Use the controls to apply the code idea against scarab swarms in Camel Trail.",
-    "Step 3: Win by meeting the goal: The caravan wagon reached with actions_used <= 11."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level2/advanced/game_week9_level2_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_2459",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the caravan wagon using at most 11 actions, so every code step counts.",
+  "source_win_condition": "The caravan wagon reached with actions_used <= 11.",
+  "source_lose_condition": "actions_used exceeds 11 before the caravan wagon is reached, or lives reach 0.",
+  "source_game_title": "Validation Fortress – Camel Trail Trial",
+  "source_primary_mechanic": "Validation Fortress",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 26,
+  "learning_objective_id": "cp1_w3_l10",
+  "source_week": 3,
+  "source_level": 10
 }

@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1166",
+  "variation_id": "canvas_game_1166",
+  "week": 4,
+  "level": 9,
+  "trial": 6,
+  "difficulty": "Advance",
+  "mode": "pending",
+  "title": "C Archive · Characteristics and limits",
+  "display_name": "Week 4 Challenge · Theme Pending",
+  "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
+  "topic": "Introduction to C: History, Characteristics and Classification",
+  "learning_objectives": [
+    "Characteristics and limits"
+  ],
+  "lesson": {
+    "summary": "Introduction to C: History, Characteristics and Classification",
+    "points": [
+      "Characteristics and limits",
+      "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+      "C is general purpose, procedural and imperative; it is normally compiled.",
+      "Portability needs care with implementation-dependent behavior. Middle-level is an informal classroom label, not an ISO language category."
+    ],
+    "example": "C: Ritchie; Bell Labs; early 1970s; general purpose; procedural.",
+    "practice": "History/classification review",
+    "week": 4,
+    "source_week": 4,
+    "source_level": 9,
+    "objective_id": "cp1_w4_l9",
+    "title": "Introduction to C: History, Characteristics and Classification",
+    "stage_title": "Characteristics and limits",
+    "objectives": [
+      "Characteristics and limits"
+    ],
+    "sources": [
+      {
+        "title": "Dennis Ritchie: The Development of the C Language",
+        "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      4
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w4_l9",
+  "source_level": 9,
+  "source_week": 4,
+  "primary_mechanic": "Continue Gate",
+  "objective": "Archive variation 6: classify and verify C history, characteristics and language categories for Characteristics and limits.",
+  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
+  "controls": "Click or press 1–4 to answer; Escape pauses.",
+  "time_limit_seconds": 43,
+  "starting_lives": 2,
+  "seed": 234872830,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "seed": 234872830,
+    "theme_status": "awaiting_course_decision"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "game_1166_station_1",
+      "prompt": "Archive case 6: Is middle-level an official ISO C language category?",
+      "choices": [
+        "Yes, it is a variable type",
+        "No; it is an informal teaching description",
+        "Yes, it is a header",
+        "Yes, it is a compiler mode"
+      ],
+      "answer_index": 1,
+      "explanation": "No; it is an informal teaching description.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l9"
+    },
+    {
+      "id": "game_1166_station_2",
+      "prompt": "Archive case 6: Which limitation should a learner recognize?",
+      "choices": [
+        "All syntax errors are harmless",
+        "Output never needs checking",
+        "Compilation alone does not establish program correctness",
+        "Every accepted program meets every goal"
+      ],
+      "answer_index": 2,
+      "explanation": "Compilation alone does not establish program correctness.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l9"
+    },
+    {
+      "id": "game_1166_station_3",
+      "prompt": "Archive case 6: An archive describes middle-level as a required ISO compiler setting. What should be corrected?",
+      "choices": [
+        "Middle-level is an informal teaching label",
+        "It is a built-in C type",
+        "It is the name of main",
+        "It is a required header"
+      ],
+      "answer_index": 0,
+      "explanation": "Middle-level is an informal teaching label.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l9"
+    }
+  ],
+  "source_path": "week_4/level9/advanced/game_week4_level9_difficulty(Advance)_6.json",
+  "source_topic": "Introduction to C: History, Characteristics and Classification",
+  "source_learning_alignment": "CP1 Week 4: Characteristics and limits",
+  "source_primary_mechanic": "Continue Gate",
+  "source_code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue"
+}

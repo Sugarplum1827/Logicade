@@ -1,0 +1,575 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v01",
+    "index": 1,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each if/else chains term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "else if"
+        },
+        {
+          "id": "l2",
+          "text": "else"
+        },
+        {
+          "id": "l3",
+          "text": "First match"
+        },
+        {
+          "id": "l4",
+          "text": "Range order"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Adds another test after a failed condition"
+        },
+        {
+          "id": "r2",
+          "text": "Catches every remaining case"
+        },
+        {
+          "id": "r3",
+          "text": "The only branch that runs"
+        },
+        {
+          "id": "r4",
+          "text": "Specific or highest ranges must come first"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v02",
+    "index": 2,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the grade chain order.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "if (score {{b0}} 90) {",
+        "    printf(\"A\\n\");",
+        "} else if (score {{b1}} 80) {",
+        "    printf(\"B\\n\");",
+        "} else {",
+        "    printf(\"C\\n\");",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "operator for at least 90",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "operator for at least 80",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": ">="
+        },
+        {
+          "id": "b2",
+          "text": ">="
+        },
+        {
+          "id": "b3",
+          "text": "<="
+        },
+        {
+          "id": "b4",
+          "text": ">"
+        },
+        {
+          "id": "b5",
+          "text": "=="
+        }
+      ]
+    },
+    "explanation": "The highest range is tested first, then the next range.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v03",
+    "index": 3,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 85;",
+        "    if (score >= 90) {",
+        "        printf(\"A\\n\");",
+        "    } else if (score >= 80) {",
+        "        printf(\"B\\n\");",
+        "    } else {",
+        "        printf(\"C\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "B",
+      "accept": [
+        "B"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "85 fails the A test but passes the 80 test, so B runs."
+    },
+    "explanation": "The program produces B.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v04",
+    "index": 4,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 85;",
+        "    if (score >= 90) {",
+        "        printf(\"A\\n\");",
+        "    } else if (score >= 80) {",
+        "        printf(\"B\\n\");",
+        "    } else {",
+        "        printf(\"C\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "score",
+        "grade"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "score": "85",
+            "grade": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "score": "85",
+            "grade": ""
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "score": "85",
+            "grade": "B"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "grade"
+      ],
+      "answer": {
+        "score": "85",
+        "grade": "B"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is score = 85, grade = B.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v05",
+    "index": 5,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of if/else chains in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Test the highest or most specific range first"
+        },
+        {
+          "id": "s2",
+          "text": "Continue with else if when the test fails"
+        },
+        {
+          "id": "s3",
+          "text": "Use else for everything that remains"
+        },
+        {
+          "id": "s4",
+          "text": "Run only the first matching branch"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Test the highest or most specific range first → Continue with else if when the test fails → Use else for everything that remains → Run only the first matching branch",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v06",
+    "index": 6,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the second test in an A/B/C grade chain.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "else"
+        },
+        {
+          "id": "t2",
+          "text": "if"
+        },
+        {
+          "id": "t3",
+          "text": "("
+        },
+        {
+          "id": "t4",
+          "text": "score"
+        },
+        {
+          "id": "t5",
+          "text": ">="
+        },
+        {
+          "id": "t6",
+          "text": "80"
+        },
+        {
+          "id": "t7",
+          "text": ")"
+        },
+        {
+          "id": "t8",
+          "text": "elseif"
+        },
+        {
+          "id": "t9",
+          "text": "then"
+        },
+        {
+          "id": "t10",
+          "text": "while"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "else if adds another test after the first condition fails.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v07",
+    "index": 7,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the score and the first matching grade.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 85;",
+        "    if (score >= 90) {",
+        "        printf(\"A\\n\");",
+        "    } else if (score >= 80) {",
+        "        printf(\"B\\n\");",
+        "    } else {",
+        "        printf(\"C\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "score",
+          "type": "final value"
+        },
+        {
+          "name": "grade",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "85"
+        },
+        {
+          "id": "v2",
+          "text": "B"
+        },
+        {
+          "id": "v3",
+          "text": "86"
+        },
+        {
+          "id": "v4",
+          "text": "84"
+        },
+        {
+          "id": "v5",
+          "text": "0"
+        }
+      ],
+      "answer": {
+        "score": "v1",
+        "grade": "v2"
+      }
+    },
+    "explanation": "The first test fails, the second passes, and the else is skipped.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v08",
+    "index": 8,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each score into the grade branch it reaches.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "a",
+          "label": "A: at least 90",
+          "desc": "First branch"
+        },
+        {
+          "id": "b",
+          "label": "B: 80 to 89",
+          "desc": "Second branch"
+        },
+        {
+          "id": "c",
+          "label": "C: below 80",
+          "desc": "Else branch"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "95",
+          "bin": "a"
+        },
+        {
+          "id": "i2",
+          "text": "90",
+          "bin": "a"
+        },
+        {
+          "id": "i3",
+          "text": "89",
+          "bin": "b"
+        },
+        {
+          "id": "i4",
+          "text": "80",
+          "bin": "b"
+        },
+        {
+          "id": "i5",
+          "text": "79",
+          "bin": "c"
+        },
+        {
+          "id": "i6",
+          "text": "60",
+          "bin": "c"
+        }
+      ]
+    },
+    "explanation": "Only the first matching branch runs, so the ranges must not overlap out of order.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v09",
+    "index": 9,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int score = 85;",
+        "if (score >= 80) {",
+        "    printf(\"A\\n\");",
+        "} else if (score >= 90) {",
+        "    printf(\"B\\n\");",
+        "}",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "Testing 80 before 90 sends every score of 80 or more to A, so B is unreachable.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "if_else_chains_v10",
+    "index": 10,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each grade assignment in the branch where it runs.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int score = 85;",
+        "if (score >= 90) {",
+        "    char grade = 'A';",
+        "} else if (score >= 80) {",
+        "    char grade = 'B';",
+        "} else {",
+        "    char grade = 'C';",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "a",
+          "label": "A branch",
+          "desc": "score >= 90"
+        },
+        {
+          "id": "b",
+          "label": "B branch",
+          "desc": "80 <= score < 90"
+        },
+        {
+          "id": "c",
+          "label": "Else branch",
+          "desc": "score < 80"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "char grade = 'A';",
+          "scope": "a"
+        },
+        {
+          "id": "d2",
+          "text": "char grade = 'B';",
+          "scope": "b"
+        },
+        {
+          "id": "d3",
+          "text": "char grade = 'C';",
+          "scope": "c"
+        },
+        {
+          "id": "d4",
+          "text": "if (score >= 90)",
+          "scope": "a"
+        }
+      ]
+    },
+    "explanation": "Each grade declaration belongs to the branch that assigns it.",
+    "concept_slug": "if_else_chains",
+    "concept_name": "If/Else Chains"
+  }
+]

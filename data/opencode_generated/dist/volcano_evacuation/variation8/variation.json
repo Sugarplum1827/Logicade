@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "24_volcano_evacuation",
+  "slug": "volcano_evacuation",
+  "display_name": "Volcano Evacuation",
+  "module_family": "evacuation_routing",
+  "learning_target": "loops and repeated movement",
+  "core_brief": "Use loops to guide groups of citizens along safe evacuation routes.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "volcano",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 15382711,
+  "variation_id": "24_volcano_evacuation_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 1288281825,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_sprout",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.bush",
+      "bush": "themes.farm.wheat",
+      "slime": "themes.farm.fence",
+      "bee": "themes.farm.sunflower"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/volcano_evacuation.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

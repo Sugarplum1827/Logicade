@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "07_cyber_hacker_grid",
+  "slug": "cyber_hacker_grid",
+  "display_name": "Cyber Hacker Grid",
+  "module_family": "grid_stealth",
+  "learning_target": "sequencing and algorithmic flow",
+  "core_brief": "Sequence commands to route a signal through a firewall grid without triggering alarms.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "hacker",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Grid route",
+  "accent": "#4fd1c5",
+  "tint": 14399466,
+  "variation_id": "07_cyber_hacker_grid_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 4246992132,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_black",
+    "zones": [
+      "themes.space.bg_black",
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_blue",
+    "coin": "themes.space.coin_blue",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_big",
+      "slime": "themes.space.meteor_brown_big",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/cyber_hacker_grid.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

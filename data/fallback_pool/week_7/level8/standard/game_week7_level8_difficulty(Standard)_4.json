@@ -1,30 +1,30 @@
 {
   "file_id": "game_2024",
-  "game_title": "Stat Market – Fallen Statue Garden Streak",
+  "game_title": "Declare double · variation 4",
   "game_concept": "A rhythm puzzle set in Eldritch Ruins – Fallen Statue Garden, a garden of fallen statues: the spirit seeker must handle stone sentinels while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
-  "genre": "rhythm puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Fallen Statue Garden: a garden of fallen statues",
-  "core_gameplay_loop": "In Fallen Statue Garden, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round poses one decision; a wrong answer breaks the streak. Then check the profit value and advance.",
-  "primary_mechanic": "Stat Market",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about profit to power up the spirit seeker and open the ancient lock.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 4 starts with [-3, 0, 13, 16]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Stat Market",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare double",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M14-X4-T06-86a521d9",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Streak Challenge', and setting 'Fallen Statue Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 8,
   "trial": 4,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against stone sentinels in Fallen Statue Garden.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level8/standard/game_week7_level8_difficulty(Standard)_4.json",
+    "variation_id": "canvas_game_2024",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about profit to power up the spirit seeker and open the ancient lock.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Stat Market – Fallen Statue Garden Streak",
+  "source_primary_mechanic": "Stat Market",
+  "hint": "Declare before use. double resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w7_l8",
+  "source_week": 7,
+  "source_level": 8
 }

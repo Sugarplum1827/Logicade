@@ -1,0 +1,352 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0311",
+  "variation_id": "canvas_game_0311",
+  "week": 2,
+  "level": 1,
+  "trial": 1,
+  "difficulty": "Standard",
+  "mode": "circuit",
+  "title": "Flowchart Lab · Add two numbers",
+  "display_name": "Logic Circuit Workshop",
+  "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
+  "topic": "Flowcharting",
+  "learning_objectives": [
+    "Symbols and sequence"
+  ],
+  "lesson": {
+    "summary": "Flowcharting",
+    "points": [
+      "Symbols and sequence",
+      "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+      "Test both branches and boundary inputs before accepting a chart."
+    ],
+    "example": "Start → Read n → n > 0? → Yes/No output → End",
+    "practice": "Flowchart synthesis",
+    "week": 2,
+    "source_week": 2,
+    "source_level": 1,
+    "objective_id": "cp1_w2_l1",
+    "title": "Flowcharting",
+    "stage_title": "Symbols and sequence",
+    "objectives": [
+      "Symbols and sequence"
+    ],
+    "sources": [
+      {
+        "title": "Victoria Department of Education: flowcharts",
+        "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+      },
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      2
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w2_l1",
+  "source_level": 1,
+  "source_week": 2,
+  "primary_mechanic": "circuit construction and execution",
+  "objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Problem values 15, 5; test inputs [{'a': -10, 'b': 5}, {'a': 0, 'b': 6}, {'a': 15, 'b': 7}, {'a': 15, 'b': 15}, {'a': -15, 'b': 5}].",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 12345,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "gate_order": [
+      "INPUT",
+      "OR",
+      "NOT",
+      "OUTPUT"
+    ],
+    "switches": [
+      false,
+      true
+    ],
+    "wire_variant": 0
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_1",
+    "source_level": 1,
+    "title": "Add two numbers",
+    "prompt": "Build a flowchart that reads a and b, adds them, and displays their sum. Problem values 15, 5; test inputs [{'a': -10, 'b': 5}, {'a': 0, 'b': 6}, {'a': 15, 'b': 7}, {'a': 15, 'b': 15}, {'a': -15, 'b': 5}].",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.08,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.5,
+        "y": 0.29,
+        "number": 2
+      },
+      {
+        "id": "calculate",
+        "x": 0.5,
+        "y": 0.5,
+        "number": 3
+      },
+      {
+        "id": "write",
+        "x": 0.5,
+        "y": 0.71,
+        "number": 4
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9199999999999999,
+        "number": 5
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "calculate"
+      },
+      {
+        "from": "calculate",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "end"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "read",
+        "label": "Read a, b",
+        "kind": "input",
+        "action": {
+          "names": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      {
+        "id": "calculate",
+        "label": "sum = a + b",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "sum",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "a"
+                  },
+                  {
+                    "var": "b"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "write",
+        "label": "Write sum",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "sum"
+          }
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "calculate": "calculate",
+      "write": "write",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "a": -10,
+          "b": 5
+        },
+        "expected": [
+          -5
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "a": 0,
+          "b": 6
+        },
+        "expected": [
+          6
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "a": 15,
+          "b": 7
+        },
+        "expected": [
+          22
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "a": 15,
+          "b": 15
+        },
+        "expected": [
+          30
+        ]
+      },
+      {
+        "id": "case_5",
+        "inputs": {
+          "a": -15,
+          "b": 5
+        },
+        "expected": [
+          -10
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0311",
+    "objective_id": "cp1_w2_l1"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2."
+    },
+    {
+      "id": "calculate",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5."
+    }
+  ],
+  "source_path": "week_2/level1/standard/game_week2_level1_difficulty(Standard)_1.json",
+  "source_topic": "Flowcharting",
+  "source_learning_alignment": "CP1 Week 2: Symbols and sequence",
+  "source_primary_mechanic": "Exponent Engine",
+  "source_code_snippet": "power = 2 ** level",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 1,
+        "source_week": 2,
+        "source_level": 1,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l1",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          0,
+          15
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "35c505c26acc28eaced34b13534794110730652cd98b709873da74eab3232add",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "37cc522e9b078658a79d18cc7db5b43a1e94854c366992cae712d04b20156af4",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793296217.456876,
+    "origin": "ollama",
+    "job_id": "bfd01928412b85c56eef10f50d959cc6c6f91624def0950e17a7ec3aa0978437",
+    "replaces_revision": "fe98250e25d757dc7c8adce80e6af36511fd8b8a0b64d4a0123662be0941a996"
+  }
+}

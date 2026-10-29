@@ -1,41 +1,41 @@
 {
   "file_id": "game_2301",
-  "game_title": "Vowel Counter – Cloud Sea Overlook Streak",
+  "game_title": "C Scope Circuit · Update visible state · variation 1",
   "game_concept": "A card battler set in Frost Peaks – Cloud Sea Overlook, an overlook above the clouds: the avalanche scout must handle yetis while practicing strings & dictionaries. Core idea – Vowel Counter: Count vowels in words by looping over characters.",
-  "genre": "card battler",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Cloud Sea Overlook: an overlook above the clouds",
-  "core_gameplay_loop": "In Cloud Sea Overlook, repeat each round: Count vowels in words by looping over characters. Each round poses one decision; a wrong answer breaks the streak. Then check the vowels value and advance.",
-  "primary_mechanic": "Vowel Counter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 12 consecutive correct decisions about vowels to power up the avalanche scout and open the pass gate.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 12.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, use a main-local to update a global. Print the scope trace [15, 11], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'shared': 15}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 7 (applied tier): Vowel Counter",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Update visible state",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M06-X4-T09-765e7baa",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Vowel Counter' (Week 8 slot 6), mission type 'Streak Challenge', and setting 'Cloud Sea Overlook'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 7,
   "trial": 1,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "for ch in word:\n    if ch in 'aeiou':",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint shared = 4;\nint main(void)\n{\n  int signal = readInput();\nint steps = 11;\nshared = shared + steps;\nprintf(\"%d\\n\", shared);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 38,
+    "time_limit_seconds": 0,
     "target_score": 440,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how vowels changes.",
-    "Step 2: Use the controls to apply the code idea against yetis in Cloud Sea Overlook.",
-    "Step 3: Win by meeting the goal: streak counter reaches 12."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level7/advanced/game_week8_level7_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_2301",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 12 consecutive correct decisions about vowels to power up the avalanche scout and open the pass gate.",
+  "source_win_condition": "streak counter reaches 12.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Vowel Counter – Cloud Sea Overlook Streak",
+  "source_primary_mechanic": "Vowel Counter",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 38,
+  "learning_objective_id": "cp1_w8_l7",
+  "source_week": 8,
+  "source_level": 7,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "84e74d70ece8eca0805a511896b4a4e04bb3c1a1b5053ef53b52cfec1ab1d31a",
+    "lesson_unchanged": true
+  }
 }

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_30_global_scope",
+  "slug": "global_scope",
+  "display_name": "Global Scope",
+  "learning_target": "read and reason about global variables",
+  "core_brief": "A global variable is declared outside every function and is visible to the whole file.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 8,
+  "unit": "Scope",
+  "group": "code",
+  "skin": "underwater",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_2",
+    "zones": [
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3",
+      "themes.underwater.bg_reef_1"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_orange",
+    "enemy": "themes.underwater.enemy_brown",
+    "coin": "themes.underwater.coin_bubble_c",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.rock_a",
+      "bush": "themes.underwater.seaweed_orange",
+      "slime": "themes.underwater.seaweed_green",
+      "bee": "themes.underwater.rock_a"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#a8e6cf",
+  "variation_id": "cp1_30_global_scope_v10",
+  "index": 10,
+  "challenge_index": 10,
+  "challenge_id": "global_scope_v10",
+  "title": "Trace the output",
+  "label": "Lab 10: Trace the output",
+  "seed": 347149609,
+  "challenge_bank": "../../../data/cp1/challenges/global_scope.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

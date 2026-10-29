@@ -1,30 +1,30 @@
 {
   "file_id": "game_0044",
-  "game_title": "Trace Table Race – Wall Battlements Rush",
-  "game_concept": "A action puzzle set in The Kingdom – Wall Battlements, the high battlements: the squire must handle bandits while practicing variables & assignment. Core idea – Trace Table Race: Fill a trace table showing each variable after every line of a mini program.",
-  "genre": "action puzzle",
+  "game_title": "Flowchart Lab · Rectangle area",
+  "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Wall Battlements: the high battlements",
-  "core_gameplay_loop": "In Wall Battlements, repeat each round: Fill a trace table showing each variable after every line of a mini program. Each round, a new banners challenge appears; solve it to bank points before time drains. Then check the trace_rows_correct value and advance.",
-  "primary_mechanic": "Trace Table Race",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
+  "primary_mechanic": "Drag-and-drop flowchart construction",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Collect 140 points of banners by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 140 within 33 seconds.",
-  "lose_condition": "Timer hits 0 with score < 140, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 10, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
+  "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Trace Table Race",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M14-X2-T14-eab7b126",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Trace Table Race' (Week 1 slot 14), mission type 'Resource Rush', and setting 'Wall Battlements'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 2,
   "trial": 4,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,18 +35,78 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
     "rival_speed": 0.7,
     "enemy_wave_count": 3,
     "enemy_attack_interval_seconds": 2.55,
-    "starting_score": 0
+    "starting_score": 0,
+    "source_time_limit_seconds": 33
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trace_rows_correct changes.",
-    "Step 2: Use the controls to apply the code idea against bandits in Wall Battlements.",
-    "Step 3: Win by meeting the goal: score >= 140 within 33 seconds."
-  ]
+    "Read the requested procedure.",
+    "Drag correctly shaped blocks into the chart and follow the arrows.",
+    "Select Check chart to run example inputs. Revise incorrect steps and try again."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_4.json",
+    "variation_id": "canvas_game_0044",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_primary_mechanic": "Trace Table Race",
+  "source_game_title": "Trace Table Race – Wall Battlements Rush",
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          5,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "77df5b033753455a94a8d45169a59be3b4a619cc18dd1e050f679f87830db0d5",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "16870833cec402baabf8d22285f3e5d0a21d971325c6626d765faa660ac6b72e",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793314549.8636067,
+    "origin": "ollama",
+    "job_id": "28be710f218f6a4c1bbd54b5f916f7c026f36a3c456c7dec6ecd81f8a11d3f79",
+    "replaces_revision": "d5a30805edcf9b2a88b3bce171cb06a6ece8629822c5323cc3f8f4fdded23fb6"
+  },
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "is_fallback": false,
+  "generated_at": "2026-10-29T22:55:49.863606+00:00"
 }

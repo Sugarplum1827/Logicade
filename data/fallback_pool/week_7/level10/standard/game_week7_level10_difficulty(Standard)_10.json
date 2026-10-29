@@ -1,30 +1,30 @@
 {
   "file_id": "game_2090",
-  "game_title": "Stack Of Plates – Cracked Obelisk Rush",
+  "game_title": "Integer division · variation 10",
   "game_concept": "A action puzzle set in Eldritch Ruins – Cracked Obelisk, a cracked obelisk: the rune scholar must handle crypt crawlers while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
-  "genre": "action puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Cracked Obelisk: a cracked obelisk",
-  "core_gameplay_loop": "In Cracked Obelisk, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round, a new spirit candles challenge appears; solve it to bank points before time drains. Then check the stack_balance value and advance.",
-  "primary_mechanic": "Stack Of Plates",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 460 points of spirit candles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 460 within 57 seconds.",
-  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "player_objective": "Integer division: declare resource as int, apply resource / 4, and print each result with %d. Dataset 10 starts with [-3, 0, 21, 24]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 7 – Lists | Level 10 (extended tier): Stack Of Plates",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Integer division",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M05-X2-T08-aa9a056e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Resource Rush', and setting 'Cracked Obelisk'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 10,
   "trial": 10,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 57,
+    "time_limit_seconds": 0,
     "target_score": 460,
     "action_budget": 19,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stack_balance changes.",
-    "Step 2: Use the controls to apply the code idea against crypt crawlers in Cracked Obelisk.",
-    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level10/standard/game_week7_level10_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_2090",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 460 points of spirit candles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 460 within 57 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "source_game_title": "Stack Of Plates – Cracked Obelisk Rush",
+  "source_primary_mechanic": "Stack Of Plates",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 57,
+  "learning_objective_id": "cp1_w7_l10",
+  "source_week": 7,
+  "source_level": 10
 }

@@ -2,9 +2,9 @@
   "file_id": "game_0263",
   "game_title": "Inventory Slots – Throne Hall Streak",
   "game_concept": "A rhythm puzzle set in The Kingdom – Throne Hall, the throne hall of the kingdom: the knight must handle mischievous imps while practicing variables & assignment. Core idea – Inventory Slots: Store each item in its own variable and choose which one to spend against mischievous imps.",
-  "genre": "rhythm puzzle",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
-  "core_gameplay_loop": "In Throne Hall, repeat each round: Store each item in its own variable and choose which one to spend against mischievous imps. Each round poses one decision; a wrong answer breaks the streak. Then check the potion value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Inventory Slots",
   "secondary_mechanics": [
     "Streak combo meter",
@@ -12,19 +12,19 @@
     "Mini-tutorial pop-ups"
   ],
   "player_objective": "Chain 13 consecutive correct decisions about potion to power up the knight and open the signal beacon.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "streak counter reaches 13.",
   "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Inventory Slots",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M08-X4-T07-f2fb41b6",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Inventory Slots' (Week 1 slot 8), mission type 'Streak Challenge', and setting 'Throne Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 9,
   "trial": 3,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how potion changes.",
     "Step 2: Use the controls to apply the code idea against mischievous imps in Throne Hall.",
     "Step 3: Win by meeting the goal: streak counter reaches 13."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level9/advanced/game_week1_level9_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_0263",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

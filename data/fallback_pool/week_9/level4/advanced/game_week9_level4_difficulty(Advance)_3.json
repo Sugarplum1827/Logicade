@@ -1,30 +1,30 @@
 {
   "file_id": "game_2513",
-  "game_title": "Refactor Rescue – Merchant Waystation Streak",
+  "game_title": "Examination practice · Branch Assembly 3 · Merge Endpoint",
   "game_concept": "A rhythm puzzle set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
-  "genre": "rhythm puzzle",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Clean up messy duplicated code into tidy functions without changing its behavior. Each round poses one decision; a wrong answer breaks the streak. Then check the clean_score value and advance.",
-  "primary_mechanic": "Refactor Rescue",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Live variable watch panel",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Chain 11 consecutive correct decisions about clean_score to power up the scarab scholar and open the sundial.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 11.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Week 5 examination practice: Build and verify a source file: build a valid C source file that prints 17. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (3, 3), with the upper processing path on row 1 and lower path on row 6. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 14 components (7 upper, 7 lower). Set the gold-socket controller batch to 14.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Refactor Rescue",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M08-X4-T17-3f9627f7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Refactor Rescue' (Week 9 slot 8), mission type 'Streak Challenge', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 4,
   "trial": 3,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how clean_score changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: streak counter reaches 11."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level4/advanced/game_week9_level4_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_2513",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 11 consecutive correct decisions about clean_score to power up the scarab scholar and open the sundial.",
+  "source_win_condition": "streak counter reaches 11.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Refactor Rescue – Merchant Waystation Streak",
+  "source_primary_mechanic": "Refactor Rescue",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 7 components via upper_4, upper_6 to output_shared; B: 7 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

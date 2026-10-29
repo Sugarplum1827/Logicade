@@ -1,0 +1,546 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v01",
+    "index": 1,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 10, count = 0;",
+        "    if (count != 0) {",
+        "        printf(\"%d\\n\", total / count);",
+        "    } else {",
+        "        printf(\"undefined\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "count",
+        "safe"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "count": "0",
+            "safe": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "count": "0",
+            "safe": "no"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "count": "0",
+            "safe": "yes"
+          }
+        }
+      ],
+      "ask": [
+        "count",
+        "safe"
+      ],
+      "answer": {
+        "count": "0",
+        "safe": "yes"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is count = 0, safe = yes.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v02",
+    "index": 2,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of runtime errors in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Identify operations that can fail at run time"
+        },
+        {
+          "id": "s2",
+          "text": "Check the input before the operation"
+        },
+        {
+          "id": "s3",
+          "text": "Guard against zero, null, or out-of-range values"
+        },
+        {
+          "id": "s4",
+          "text": "Run the program with edge-case input"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Identify operations that can fail at run time → Check the input before the operation → Guard against zero, null, or out-of-range values → Run the program with edge-case input",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v03",
+    "index": 3,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a guard that only divides when count is not zero.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "if"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "count"
+        },
+        {
+          "id": "t4",
+          "text": "!="
+        },
+        {
+          "id": "t5",
+          "text": "0"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": "count = 0"
+        },
+        {
+          "id": "t8",
+          "text": "while"
+        },
+        {
+          "id": "t9",
+          "text": "else"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Checking count != 0 prevents division by zero.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v04",
+    "index": 4,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the divisor and whether the safe branch ran.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 10, count = 0;",
+        "    if (count != 0) {",
+        "        printf(\"%d\\n\", total / count);",
+        "    } else {",
+        "        printf(\"undefined\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "count",
+          "type": "final value"
+        },
+        {
+          "name": "safe",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "0"
+        },
+        {
+          "id": "v2",
+          "text": "yes"
+        },
+        {
+          "id": "v3",
+          "text": "1"
+        },
+        {
+          "id": "v4",
+          "text": "-1"
+        },
+        {
+          "id": "v5",
+          "text": "error"
+        }
+      ],
+      "answer": {
+        "count": "v1",
+        "safe": "v2"
+      }
+    },
+    "explanation": "The guard detects zero and prevents the division.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v05",
+    "index": 5,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each operation as safe or unsafe without a guard.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "safe",
+          "label": "Safe",
+          "desc": "Valid for the given values"
+        },
+        {
+          "id": "unsafe",
+          "label": "Unsafe",
+          "desc": "Can fail at run time"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "total / count with count = 0",
+          "bin": "unsafe"
+        },
+        {
+          "id": "i2",
+          "text": "total / count with count = 2",
+          "bin": "safe"
+        },
+        {
+          "id": "i3",
+          "text": "values[3] on a size-3 array",
+          "bin": "unsafe"
+        },
+        {
+          "id": "i4",
+          "text": "values[2] on a size-3 array",
+          "bin": "safe"
+        },
+        {
+          "id": "i5",
+          "text": "scanf(\"%d\", &age)",
+          "bin": "safe"
+        },
+        {
+          "id": "i6",
+          "text": "scanf(\"%d\", age)",
+          "bin": "unsafe"
+        }
+      ]
+    },
+    "explanation": "Zero divisors, out-of-bounds indexes, and missing addresses can all fail at run time.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v06",
+    "index": 6,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int total = 10, count = 0;",
+        "int average = total / count;",
+        "printf(\"%d\\n\", average);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "Dividing by zero is undefined behavior and usually terminates the program.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v07",
+    "index": 7,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the guarded branch.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int total = 10, count = 0;",
+        "    if (count != 0) {",
+        "        int result = total / count;",
+        "        printf(\"%d\\n\", result);",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "total, count, and the guard"
+        },
+        {
+          "id": "guard",
+          "label": "Guarded branch",
+          "desc": "result exists only when division is safe"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int total = 10;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int count = 0;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int result = total / count;",
+          "scope": "guard"
+        },
+        {
+          "id": "d4",
+          "text": "printf(\"%d\\n\", result);",
+          "scope": "guard"
+        }
+      ]
+    },
+    "explanation": "result is declared inside the safe branch, where it is only used after the guard passes.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v08",
+    "index": 8,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each runtime errors term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Runtime error"
+        },
+        {
+          "id": "l2",
+          "text": "Division by zero"
+        },
+        {
+          "id": "l3",
+          "text": "Guard"
+        },
+        {
+          "id": "l4",
+          "text": "Edge case"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A failure that happens while running"
+        },
+        {
+          "id": "r2",
+          "text": "An invalid arithmetic operation"
+        },
+        {
+          "id": "r3",
+          "text": "A check that prevents an unsafe operation"
+        },
+        {
+          "id": "r4",
+          "text": "Input at the boundary, such as zero"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v09",
+    "index": 9,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the division guard.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int total = 10, count = 0;",
+        "if (count {{b0}} 0) {",
+        "    printf(\"%d\\n\", total / count);",
+        "} else {",
+        "    printf(\"{{b1}}\\n\");",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "operator that checks for a nonzero divisor",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "message when division is impossible",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "!="
+        },
+        {
+          "id": "b2",
+          "text": "undefined"
+        },
+        {
+          "id": "b3",
+          "text": "=="
+        },
+        {
+          "id": "b4",
+          "text": "10"
+        },
+        {
+          "id": "b5",
+          "text": "safe"
+        }
+      ]
+    },
+    "explanation": "Divide only when count is not zero; otherwise report that the result is undefined.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "runtime_errors_v10",
+    "index": 10,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 10, count = 0;",
+        "    if (count != 0) {",
+        "        printf(\"%d\\n\", total / count);",
+        "    } else {",
+        "        printf(\"undefined\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "undefined",
+      "accept": [
+        "undefined"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "count is zero, so the guard skips the division and prints undefined."
+    },
+    "explanation": "The program produces undefined.",
+    "concept_slug": "runtime_errors",
+    "concept_name": "Runtime Errors"
+  }
+]

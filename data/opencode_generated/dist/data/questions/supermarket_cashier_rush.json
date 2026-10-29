@@ -1,0 +1,79 @@
+{
+  "concept_id": "21_supermarket_cashier_rush",
+  "slug": "supermarket_cashier_rush",
+  "learning_target": "arithmetic and order of operations",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is `2 + 3 * 4`?",
+      "options": [
+        "10",
+        "24",
+        "20",
+        "14"
+      ],
+      "answer_index": 3,
+      "explanation": "Multiplication happens before addition, so 3 * 4 is 12 and 2 + 12 is 14."
+    },
+    {
+      "id": "q2",
+      "question": "What is `(2 + 3) * 4`?",
+      "options": [
+        "10",
+        "14",
+        "20",
+        "24"
+      ],
+      "answer_index": 2,
+      "explanation": "Parentheses are evaluated first, giving 5 * 4 = 20."
+    },
+    {
+      "id": "q3",
+      "question": "If one item costs 3 and you buy 4, what is the total?",
+      "options": [
+        "34",
+        "1",
+        "12",
+        "7"
+      ],
+      "answer_index": 2,
+      "explanation": "Four items at 3 each cost 4 * 3 = 12."
+    },
+    {
+      "id": "q4",
+      "question": "You pay 20 for a 14 total. What is the change?",
+      "options": [
+        "34",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer_index": 3,
+      "explanation": "Change is the amount paid minus the total: 20 - 14 = 6."
+    },
+    {
+      "id": "q5",
+      "question": "What does `//` do in Python?",
+      "options": [
+        "Addition",
+        "Floor division",
+        "Remainder",
+        "Multiplication"
+      ],
+      "answer_index": 1,
+      "explanation": "The // operator divides and rounds down to a whole number."
+    },
+    {
+      "id": "q6",
+      "question": "What is `10 % 3`?",
+      "options": [
+        "1",
+        "10",
+        "3",
+        "0"
+      ],
+      "answer_index": 0,
+      "explanation": "The % operator returns the remainder after division, which is 1."
+    }
+  ]
+}

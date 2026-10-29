@@ -1,30 +1,30 @@
 {
   "file_id": "game_0553",
-  "game_title": "Rounding Range – Ash Rim Trail Trial",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A puzzle set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
-  "genre": "puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
-  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round costs one action, so plan the step so none are wasted. Then check the slot_matches value and advance.",
-  "primary_mechanic": "Rounding Range",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Reach the magma valve using at most 18 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The magma valve reached with actions_used <= 18.",
-  "lose_condition": "actions_used exceeds 18 before the magma valve is reached, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 3: {'a': 8, 'b': 3}; {'a': -3, 'b': -5}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Rounding Range",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M13-X3-T01-84dd97f3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Efficiency Trial', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how slot_matches changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
-    "Step 3: Win by meeting the goal: The magma valve reached with actions_used <= 18."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/standard/game_week2_level9_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_0553",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the magma valve using at most 18 actions, so every code step counts.",
+  "source_win_condition": "The magma valve reached with actions_used <= 18.",
+  "source_lose_condition": "actions_used exceeds 18 before the magma valve is reached, or lives reach 0.",
+  "source_game_title": "Rounding Range – Ash Rim Trail Trial",
+  "source_primary_mechanic": "Rounding Range",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

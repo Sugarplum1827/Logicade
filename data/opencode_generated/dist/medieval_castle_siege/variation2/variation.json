@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "13_medieval_castle_siege",
+  "slug": "medieval_castle_siege",
+  "display_name": "Medieval Castle Siege",
+  "module_family": "tactical_siege",
+  "learning_target": "flowchart commands and sequence",
+  "core_brief": "Use flowchart commands to direct archers and protect the castle gate through enemy waves.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "siege",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Lane defense",
+  "accent": "#ffcf5c",
+  "tint": 12048106,
+  "variation_id": "13_medieval_castle_siege_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 3642517893,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.crate",
+      "bush": "themes.tower_defense.rock",
+      "slime": "themes.tower_defense.bush",
+      "bee": "themes.tower_defense.crate"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/medieval_castle_siege.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

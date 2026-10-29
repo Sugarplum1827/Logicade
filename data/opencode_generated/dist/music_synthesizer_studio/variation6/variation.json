@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "49_music_synthesizer_studio",
+  "slug": "music_synthesizer_studio",
+  "display_name": "Music Synthesizer Studio",
+  "module_family": "music_sequencer",
+  "learning_target": "frequency, wave forms, and pattern matching",
+  "core_brief": "Adjust frequency and wave settings to compose short patterns that match target sounds.",
+  "mode": "rhythm",
+  "mode_label": "Beat matcher",
+  "skin": "music",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Beat matcher",
+  "accent": "#ff8fd8",
+  "tint": 13429431,
+  "variation_id": "49_music_synthesizer_studio_v06",
+  "index": 6,
+  "title": "Checkpoint Gauntlet",
+  "label": "Variation 06: Checkpoint Gauntlet",
+  "seed": 771427797,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 3,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_green",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_big",
+      "bush": "themes.space.meteor_brown_small",
+      "slime": "themes.space.meteor_grey_big",
+      "bee": "themes.space.meteor_brown_small"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build four short rooms connected by explicit checkpoints. Each room introduces one obstacle rule and the last room combines earlier rules.",
+    "obstacles": "distinct room hazards with a checkpoint after every room; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "quick rooms with a deliberate final synthesis round."
+  },
+  "question_bank": "../../data/questions/music_synthesizer_studio.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2047",
-  "game_title": "Search Scout – Moonstone Terrace Race",
+  "game_title": "Declare char · variation 7",
   "game_concept": "A racing platformer set in Eldritch Ruins – Moonstone Terrace, a terrace of moonstone: the relic hunter must handle echo phantoms while practicing lists. Core idea – Search Scout: Use in and index() to find where a hidden item sits in a list.",
-  "genre": "racing platformer",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Moonstone Terrace: a terrace of moonstone",
-  "core_gameplay_loop": "In Moonstone Terrace, repeat each round: Use in and index() to find where a hidden item sits in a list. Each round the rival advances, and solving the step moves the relic hunter ahead. Then check the found value and advance.",
-  "primary_mechanic": "Search Scout",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the heart stone by solving code steps involving found that move the relic hunter forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
-  "lose_condition": "The rival reaches the heart stone first, or lives reach 0.",
+  "player_objective": "Declare char: declare resource as char, apply resource + 72, and print each result with %c. Dataset 7 starts with [0, 1, 2, 3]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Search Scout",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare char",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M07-X5-T19-eaa039d8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Search Scout' (Week 7 slot 7), mission type 'Rival Race', and setting 'Moonstone Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 9,
   "trial": 7,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how found changes.",
-    "Step 2: Use the controls to apply the code idea against echo phantoms in Moonstone Terrace.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level9/needs_support/game_week7_level9_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_2047",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the heart stone by solving code steps involving found that move the relic hunter forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "source_lose_condition": "The rival reaches the heart stone first, or lives reach 0.",
+  "source_game_title": "Search Scout – Moonstone Terrace Race",
+  "source_primary_mechanic": "Search Scout",
+  "hint": "Declare before use. char resource = readInput(); creates the named game-port value; printf uses %c.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w7_l9",
+  "source_week": 7,
+  "source_level": 9
 }

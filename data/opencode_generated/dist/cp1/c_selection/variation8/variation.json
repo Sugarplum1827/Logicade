@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_19_c_selection",
+  "slug": "c_selection",
+  "display_name": "C Selection",
+  "learning_target": "trace an if/else selection",
+  "core_brief": "An if test chooses one branch; else supplies the path when the test is false.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 6,
+  "unit": "C Structure",
+  "group": "code",
+  "skin": "farm",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_can",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.rock",
+      "bush": "themes.farm.wheat",
+      "slime": "themes.farm.fence",
+      "bee": "themes.farm.sunflower"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "mechanic": "scope",
+  "mechanic_label": "Scope",
+  "accent": "#ffb27a",
+  "variation_id": "cp1_19_c_selection_v08",
+  "index": 8,
+  "challenge_index": 8,
+  "challenge_id": "c_selection_v08",
+  "title": "Split the scopes",
+  "label": "Lab 08: Split the scopes",
+  "seed": 539852842,
+  "challenge_bank": "../../../data/cp1/challenges/c_selection.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2545",
-  "game_title": "Code Reading Relay – Scarab Burrow Rush",
+  "game_title": "Examination practice · Program synthesis · variation 5",
   "game_concept": "A arcade set in Sand Dunes – Scarab Burrow, a scarab burrow: the caravan guide must handle desert bandits while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
-  "genre": "arcade",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Scarab Burrow: a scarab burrow",
-  "core_gameplay_loop": "In Scarab Burrow, repeat each round: Read short programs as a relay and predict their output line by line. Each round, a new scarab charms challenge appears; solve it to bank points before time drains. Then check the predicted value and advance.",
-  "primary_mechanic": "Code Reading Relay",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 340 points of scarab charms by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 34 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 5 (21×15, 49 junctions): collect 3 crystal(s) from the branches and reach beacon (19, 13). Use a C main program to Program synthesis. Print [34]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Code Reading Relay",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M10-X2-T13-190237ec",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Resource Rush', and setting 'Scarab Burrow'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 5,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predicted changes.",
-    "Step 2: Use the controls to apply the code idea against desert bandits in Scarab Burrow.",
-    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/advanced/game_week9_level5_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_2545",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of scarab charms by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 34 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Code Reading Relay – Scarab Burrow Rush",
+  "source_primary_mechanic": "Code Reading Relay",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

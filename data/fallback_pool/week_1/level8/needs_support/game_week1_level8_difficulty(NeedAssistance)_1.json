@@ -2,9 +2,9 @@
   "file_id": "game_0211",
   "game_title": "Variable Crates – Harvest Fields Race",
   "game_concept": "A racing platformer set in The Kingdom – Harvest Fields, farm fields beyond the walls: the royal scribe must handle mischievous imps while practicing variables & assignment. Core idea – Variable Crates: Drag collected coins into labelled variable crates, then read each crate's value to feed the drawbridge.",
-  "genre": "racing platformer",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Harvest Fields: farm fields beyond the walls",
-  "core_gameplay_loop": "In Harvest Fields, repeat each round: Drag collected coins into labelled variable crates, then read each crate's value to feed the drawbridge. Each round the rival advances, and solving the step moves the royal scribe ahead. Then check the crate_b value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Variable Crates",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
@@ -12,19 +12,19 @@
     "Limited undo button"
   ],
   "player_objective": "Beat a rival AI to the drawbridge by solving code steps involving crate_b that move the royal scribe forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
   "lose_condition": "The rival reaches the drawbridge first, or lives reach 0.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 8 (extended tier): Variable Crates",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M01-X5-T15-62c2245c",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Variable Crates' (Week 1 slot 1), mission type 'Rival Race', and setting 'Harvest Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 8,
   "trial": 1,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how crate_b changes.",
     "Step 2: Use the controls to apply the code idea against mischievous imps in Harvest Fields.",
     "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level8/needs_support/game_week1_level8_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_0211",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

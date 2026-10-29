@@ -1,30 +1,30 @@
 {
   "file_id": "game_0526",
-  "game_title": "Type Sorter – Charred Forest Defense",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A tower defense set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Type Sorter: Sort falling ash bricks into bins labelled int, float, str and bool before they hit the ground.",
-  "genre": "tower defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
-  "core_gameplay_loop": "In Charred Forest, repeat each round: Sort falling ash bricks into bins labelled int, float, str and bool before they hit the ground. Each round, ember hounds strike the smelter, so respond before the next strike lands. Then check the sorted_ok value and advance.",
-  "primary_mechanic": "Type Sorter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Protect the smelter from ember hounds in Charred Forest: keep the sorted_ok meter above zero by applying the concept correctly until the 51-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 51 seconds while sorted_ok > 0.",
-  "lose_condition": "sorted_ok drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "player_objective": "Print every even number from 22 through 42. Trace the update by 2 and the final failed condition. Test dataset 6: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Type Sorter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Trace a loop",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M01-X1-T16-ef10b938",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Sorter' (Week 2 slot 1), mission type 'Survival Siege', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 8,
   "trial": 6,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how sorted_ok changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
-    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while sorted_ok > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level8/standard/game_week2_level8_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_0526",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the smelter from ember hounds in Charred Forest: keep the sorted_ok meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "source_win_condition": "Timer reaches 51 seconds while sorted_ok > 0.",
+  "source_lose_condition": "sorted_ok drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "source_game_title": "Type Sorter – Charred Forest Defense",
+  "source_primary_mechanic": "Type Sorter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w2_l8",
+  "source_week": 2,
+  "source_level": 8
 }

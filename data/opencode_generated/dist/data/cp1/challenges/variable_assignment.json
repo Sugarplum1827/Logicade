@@ -1,0 +1,528 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v01",
+    "index": 1,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each expression as assignment or comparison.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "assign",
+          "label": "Assignment",
+          "desc": "Stores a value"
+        },
+        {
+          "id": "compare",
+          "label": "Comparison",
+          "desc": "Produces true or false"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "score = 20;",
+          "bin": "assign"
+        },
+        {
+          "id": "i2",
+          "text": "score == 20",
+          "bin": "compare"
+        },
+        {
+          "id": "i3",
+          "text": "total = total + 1;",
+          "bin": "assign"
+        },
+        {
+          "id": "i4",
+          "text": "age >= 18",
+          "bin": "compare"
+        },
+        {
+          "id": "i5",
+          "text": "name = \"Ada\";",
+          "bin": "assign"
+        },
+        {
+          "id": "i6",
+          "text": "count != 0",
+          "bin": "compare"
+        }
+      ]
+    },
+    "explanation": "One equals sign assigns; two equals signs or a relational operator compares.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v02",
+    "index": 2,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int score = 10;",
+        "score == 20;",
+        "printf(\"%d\\n\", score);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "score == 20 compares but does not assign, so score stays 10.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v03",
+    "index": 3,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in main or file scope.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int high_score = 100;",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Outside main"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int high_score = 100;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "int score = 10;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "score = score + 5;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "high_score is global; score and its update live in main.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v04",
+    "index": 4,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each assignment term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "="
+        },
+        {
+          "id": "l2",
+          "text": "=="
+        },
+        {
+          "id": "l3",
+          "text": "LHS"
+        },
+        {
+          "id": "l4",
+          "text": "RHS"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Assignment operator"
+        },
+        {
+          "id": "r2",
+          "text": "Equality comparison operator"
+        },
+        {
+          "id": "r3",
+          "text": "The variable that receives the value"
+        },
+        {
+          "id": "r4",
+          "text": "The expression that is evaluated first"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v05",
+    "index": 5,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the score update.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int score = 10;",
+        "score {{b0}} score + 5;",
+        "printf(\"%d\\n\", {{b1}});"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "assignment operator",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "updated variable",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "="
+        },
+        {
+          "id": "b2",
+          "text": "score"
+        },
+        {
+          "id": "b3",
+          "text": "=="
+        },
+        {
+          "id": "b4",
+          "text": "5"
+        },
+        {
+          "id": "b5",
+          "text": "total"
+        }
+      ]
+    },
+    "explanation": "The single = stores the new value in score.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v06",
+    "index": 6,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "15",
+      "accept": [
+        "15"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "score starts at 10, the assignment adds 5, and the new value is 15."
+    },
+    "explanation": "The program produces 15.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v07",
+    "index": 7,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "score",
+        "previous"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "score": "10",
+            "previous": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "score": "15",
+            "previous": "10"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "score": "15",
+            "previous": "10"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "previous"
+      ],
+      "answer": {
+        "score": "15",
+        "previous": "10"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is score = 15, previous = 10.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v08",
+    "index": 8,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of assignment in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Evaluate the expression on the right"
+        },
+        {
+          "id": "s2",
+          "text": "Store the result in the variable on the left"
+        },
+        {
+          "id": "s3",
+          "text": "Replace the old value"
+        },
+        {
+          "id": "s4",
+          "text": "Use == only when comparing"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Evaluate the expression on the right → Store the result in the variable on the left → Replace the old value → Use == only when comparing",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v09",
+    "index": 9,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the statement that adds 5 to score and stores the new value.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "score"
+        },
+        {
+          "id": "t2",
+          "text": "="
+        },
+        {
+          "id": "t3",
+          "text": "score"
+        },
+        {
+          "id": "t4",
+          "text": "+"
+        },
+        {
+          "id": "t5",
+          "text": "5"
+        },
+        {
+          "id": "t6",
+          "text": ";"
+        },
+        {
+          "id": "t7",
+          "text": "=="
+        },
+        {
+          "id": "t8",
+          "text": "score++"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The right side reads the old score, adds 5, and assigns the result back.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_assignment_v10",
+    "index": 10,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the new score and the value it replaced.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score = score + 5;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "score",
+          "type": "final value"
+        },
+        {
+          "name": "previous",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "15"
+        },
+        {
+          "id": "v2",
+          "text": "10"
+        },
+        {
+          "id": "v3",
+          "text": "16"
+        },
+        {
+          "id": "v4",
+          "text": "14"
+        },
+        {
+          "id": "v5",
+          "text": "11"
+        }
+      ],
+      "answer": {
+        "score": "v1",
+        "previous": "v2"
+      }
+    },
+    "explanation": "The old value was 10; assignment replaces it with 15.",
+    "concept_slug": "variable_assignment",
+    "concept_name": "Assignment"
+  }
+]

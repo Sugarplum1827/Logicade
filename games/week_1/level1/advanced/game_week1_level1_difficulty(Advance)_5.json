@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0025",
+  "variation_id": "canvas_game_0025",
+  "week": 1,
+  "level": 1,
+  "trial": 5,
+  "difficulty": "Advance",
+  "mode": "welcome_video",
+  "title": "LogiCade Prologue",
+  "display_name": "LogiCade Prologue",
+  "theme": "The Kingdom – Blacksmith Row: a street of busy forges",
+  "topic": "Platform Orientation",
+  "learning_objectives": [
+    "Learn the platform controls, missions, and progression."
+  ],
+  "lesson": {
+    "summary": "Orientation",
+    "points": [
+      "Welcome video",
+      "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+      "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once.",
+      "Stage 2 is guided interface practice; the main flowchart lesson is Week 2."
+    ],
+    "example": "",
+    "practice": "Controls and mission practice",
+    "week": 1,
+    "source_week": 1,
+    "source_level": 1,
+    "objective_id": "cp1_w1_l1",
+    "title": "Orientation",
+    "stage_title": "Welcome video",
+    "objectives": [
+      "Welcome video"
+    ],
+    "sources": [],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      1
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w1_l1",
+  "source_level": 1,
+  "source_week": 1,
+  "primary_mechanic": "LogiCade Prologue",
+  "objective": "Watch the LogiCade prologue to completion before entering the first learning challenge.",
+  "hint": "Use the Platform Orientation idea and test one choice against the station goal.",
+  "controls": "Full-screen video; no pause or skip controls. Click only if sound autoplay is blocked.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 1820454454,
+  "layout": {
+    "video_asset": "/canvas-runtime/assets/logicade_prologue.mp4",
+    "fit": "cover",
+    "controls": false
+  },
+  "assets": {
+    "welcome_video": "/canvas-runtime/assets/logicade_prologue.mp4"
+  },
+  "tasks": [
+    {
+      "id": "game_0025_welcome",
+      "prompt": "Watch the LogiCade prologue to learn how to begin.",
+      "choices": [
+        "Continue"
+      ],
+      "answer_index": 0,
+      "explanation": "The video completion opens the next stage."
+    }
+  ],
+  "source_path": "week_1/level1/advanced/game_week1_level1_difficulty(Advance)_5.json",
+  "source_topic": "Orientation",
+  "source_learning_alignment": "CP1 Week 1: Welcome video",
+  "source_primary_mechanic": "Welcome video",
+  "source_code_snippet": "b = a\na = 9"
+}

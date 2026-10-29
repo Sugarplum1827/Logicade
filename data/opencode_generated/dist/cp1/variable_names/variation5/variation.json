@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_22_variable_names",
+  "slug": "variable_names",
+  "display_name": "Variable Names",
+  "learning_target": "choose valid and meaningful variable names",
+  "core_brief": "C names start with a letter or underscore, use only letters, digits, and underscores, and cannot be keywords.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 7,
+  "unit": "Variables",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_2",
+    "zones": [
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_ketchup",
+    "coin": "themes.food.coin_cupcake",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.ketchup",
+      "bush": "themes.food.can",
+      "slime": "themes.food.ketchup",
+      "bee": "themes.food.fish"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "scope",
+  "mechanic_label": "Scope",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_22_variable_names_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "variable_names_v05",
+  "title": "Split the scopes",
+  "label": "Lab 05: Split the scopes",
+  "seed": 116398996,
+  "challenge_bank": "../../../data/cp1/challenges/variable_names.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

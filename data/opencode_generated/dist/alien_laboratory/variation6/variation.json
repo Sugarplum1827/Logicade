@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "20_alien_laboratory",
+  "slug": "alien_laboratory",
+  "display_name": "Alien Laboratory",
+  "module_family": "creature_lab",
+  "learning_target": "function definitions and parameters",
+  "core_brief": "Define simple functions to create and safely classify original test creatures.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "alien",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Sequence solver",
+  "accent": "#ff7a7a",
+  "tint": 12053220,
+  "variation_id": "20_alien_laboratory_v06",
+  "index": 6,
+  "title": "Checkpoint Gauntlet",
+  "label": "Variation 06: Checkpoint Gauntlet",
+  "seed": 3527574550,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 3,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_green",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_big",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_brown_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build four short rooms connected by explicit checkpoints. Each room introduces one obstacle rule and the last room combines earlier rules.",
+    "obstacles": "distinct room hazards with a checkpoint after every room; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "quick rooms with a deliberate final synthesis round."
+  },
+  "question_bank": "../../data/questions/alien_laboratory.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

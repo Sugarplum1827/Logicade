@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "archive": "game_week2_level1_difficulty(NeedAssistance)_5.zip",
+  "source_file_id": "game_0305",
+  "game_id": "canvas_circuit",
+  "slug": "circuit",
+  "display_name": "Logic Circuit Workshop",
+  "variation_id": "canvas_game_0305",
+  "content_revision": "b06f555a2a8112f7617f08cf401c5fd33f0eb9fc3a61f6d1848da1c855de37b0",
+  "content_origin": "llm_verified_pool",
+  "served_from_pool": true,
+  "variation_title": "Flowchart Lab · Add two numbers",
+  "index": 5,
+  "seed": 12345,
+  "runtime": "logicade_canvas_game_v2",
+  "template_version": "2.0.0",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "week": 2,
+  "level": 1,
+  "difficulty": "needs_support",
+  "mode": "circuit",
+  "mechanic_family": "circuit",
+  "mission_schema_version": null,
+  "control_flow_type": null,
+  "map_features": null,
+  "routing_topology": null,
+  "branch_targets": null,
+  "source_week": 2,
+  "source_level": 1,
+  "learning_objective_id": "cp1_w2_l1",
+  "lesson": {
+    "summary": "Flowcharting",
+    "points": [
+      "Symbols and sequence",
+      "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+      "Test both branches and boundary inputs before accepting a chart."
+    ],
+    "example": "Start → Read n → n > 0? → Yes/No output → End",
+    "practice": "Flowchart synthesis",
+    "week": 2,
+    "source_week": 2,
+    "source_level": 1,
+    "objective_id": "cp1_w2_l1",
+    "title": "Flowcharting",
+    "stage_title": "Symbols and sequence",
+    "objectives": [
+      "Symbols and sequence"
+    ],
+    "sources": [
+      {
+        "title": "Victoria Department of Education: flowcharts",
+        "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+      },
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      2
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "playable": true,
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Problem values 15, 5; test inputs [{'a': -10, 'b': 5}, {'a': 0, 'b': 6}, {'a': 20, 'b': 7}, {'a': 15, 'b': 15}, {'a': -15, 'b': 5}].",
+  "game_slug": "circuit",
+  "game_title": "Flowchart Lab · Add two numbers",
+  "asset_source": "/vendor/kenney/"
+}

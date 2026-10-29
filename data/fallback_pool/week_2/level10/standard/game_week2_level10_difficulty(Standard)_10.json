@@ -1,30 +1,30 @@
 {
   "file_id": "game_0590",
-  "game_title": "Comparison Duel – Sulfur Springs Rush",
+  "game_title": "Flowchart Lab · Temperature converter",
   "game_concept": "A action puzzle set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the volcanologist's power beats the shield shown by ember hounds.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
-  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Choose ==, !=, < , > or >= so the volcanologist's power beats the shield shown by ember hounds. Each round, a new ash bricks challenge appears; solve it to bank points before time drains. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 460 points of ash bricks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 460 within 57 seconds.",
-  "lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "player_objective": "Read a temperature C in Celsius. Calculate F = C × 9 / 5 + 32 and display F. Test dataset 10: {'C': -10}; {'C': 30}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 10 (extended tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X2-T08-b134b189",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Resource Rush', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 10,
   "trial": 10,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 57,
+    "time_limit_seconds": 0,
     "target_score": 460,
     "action_budget": 19,
     "streak_target": 12,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
-    "Step 3: Win by meeting the goal: score >= 460 within 57 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level10/standard/game_week2_level10_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_0590",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 460 points of ash bricks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 460 within 57 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 460, or lives reach 0.",
+  "source_game_title": "Comparison Duel – Sulfur Springs Rush",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 57,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

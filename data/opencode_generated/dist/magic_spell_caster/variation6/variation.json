@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "23_magic_spell_caster",
+  "slug": "magic_spell_caster",
+  "display_name": "Magic Spell Caster",
+  "module_family": "spell_sequence",
+  "learning_target": "syntax structure and command matching",
+  "core_brief": "Assemble syntax-based incantations to cast the correct spell for each obstacle.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "magic",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Sequence solver",
+  "accent": "#ffcf5c",
+  "tint": 15382494,
+  "variation_id": "23_magic_spell_caster_v06",
+  "index": 6,
+  "title": "Checkpoint Gauntlet",
+  "label": "Variation 06: Checkpoint Gauntlet",
+  "seed": 1733880167,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 3,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_3",
+    "zones": [
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_tank",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.rock",
+      "bush": "themes.tower_defense.bush",
+      "slime": "themes.tower_defense.mine",
+      "bee": "themes.tower_defense.mine"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build four short rooms connected by explicit checkpoints. Each room introduces one obstacle rule and the last room combines earlier rules.",
+    "obstacles": "distinct room hazards with a checkpoint after every room; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "quick rooms with a deliberate final synthesis round."
+  },
+  "question_bank": "../../data/questions/magic_spell_caster.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

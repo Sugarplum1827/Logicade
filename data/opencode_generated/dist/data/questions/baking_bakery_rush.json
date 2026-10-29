@@ -1,0 +1,79 @@
+{
+  "concept_id": "38_baking_bakery_rush",
+  "slug": "baking_bakery_rush",
+  "learning_target": "conditionals and thresholds",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does `if temperature > 200:` check?",
+      "options": [
+        "Whether the oven is off",
+        "Whether the cake is ready",
+        "Whether the timer is set",
+        "Whether the oven is above 200"
+      ],
+      "answer_index": 3,
+      "explanation": "The condition is true when the temperature is greater than 200."
+    },
+    {
+      "id": "q2",
+      "question": "What is a threshold in baking?",
+      "options": [
+        "A target temperature or time",
+        "A mixing bowl",
+        "A recipe name",
+        "A type of flour"
+      ],
+      "answer_index": 0,
+      "explanation": "A threshold is a boundary such as a minimum safe temperature or time."
+    },
+    {
+      "id": "q3",
+      "question": "What should happen if the timer reaches zero?",
+      "options": [
+        "Increase the heat",
+        "Ignore it",
+        "Add more batter",
+        "Remove the item"
+      ],
+      "answer_index": 3,
+      "explanation": "Removing the item at zero prevents over-baking."
+    },
+    {
+      "id": "q4",
+      "question": "Why use `elif`?",
+      "options": [
+        "To stop the oven",
+        "To change the language",
+        "To check another condition",
+        "To repeat the recipe"
+      ],
+      "answer_index": 2,
+      "explanation": "elif tests a second condition when the first one is false."
+    },
+    {
+      "id": "q5",
+      "question": "What is a safe range?",
+      "options": [
+        "Only the maximum",
+        "A minimum and maximum that avoid burning",
+        "Only the minimum",
+        "Any temperature"
+      ],
+      "answer_index": 1,
+      "explanation": "A safe range keeps the food between under- and over-baking limits."
+    },
+    {
+      "id": "q6",
+      "question": "What should you do before changing oven settings?",
+      "options": [
+        "Guess randomly",
+        "Turn everything off",
+        "Check the recipe and current state",
+        "Open all doors"
+      ],
+      "answer_index": 2,
+      "explanation": "Checking the recipe and current state prevents a harmful adjustment."
+    }
+  ]
+}

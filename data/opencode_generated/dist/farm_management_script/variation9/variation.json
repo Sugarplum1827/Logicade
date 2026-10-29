@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "05_farm_management_script",
+  "slug": "farm_management_script",
+  "display_name": "Farm Management Script",
+  "module_family": "resource_management",
+  "learning_target": "loops and repeated instructions",
+  "core_brief": "Use loops to water, tend, and harvest crops in the right order before weather changes.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "farm",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "System builder",
+  "accent": "#b8e986",
+  "tint": 12051434,
+  "variation_id": "05_farm_management_script_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 3439152869,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_3",
+    "zones": [
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_can",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.bush",
+      "bush": "themes.farm.wheat",
+      "slime": "themes.farm.fence",
+      "bee": "themes.farm.sunflower"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/farm_management_script.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

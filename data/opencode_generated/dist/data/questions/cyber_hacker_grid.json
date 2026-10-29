@@ -1,0 +1,79 @@
+{
+  "concept_id": "07_cyber_hacker_grid",
+  "slug": "cyber_hacker_grid",
+  "learning_target": "sequencing and algorithmic flow",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is an algorithm?",
+      "options": [
+        "A finite sequence of steps",
+        "A type of cable",
+        "A color scheme",
+        "A random guess"
+      ],
+      "answer_index": 0,
+      "explanation": "An algorithm is a clear, finite sequence of steps that solves a problem."
+    },
+    {
+      "id": "q2",
+      "question": "What does a loop help you avoid?",
+      "options": [
+        "Repeating the same code by hand",
+        "Writing comments",
+        "Using variables",
+        "Making decisions"
+      ],
+      "answer_index": 0,
+      "explanation": "A loop repeats work automatically instead of duplicating the same lines."
+    },
+    {
+      "id": "q3",
+      "question": "What is the first step in debugging a sequence?",
+      "options": [
+        "Add more loops",
+        "Find where the result first goes wrong",
+        "Delete all code",
+        "Rename every variable"
+      ],
+      "answer_index": 1,
+      "explanation": "Trace the sequence until the first incorrect state, then fix that step."
+    },
+    {
+      "id": "q4",
+      "question": "What does a conditional branch do?",
+      "options": [
+        "Repeats forever",
+        "Chooses a path based on a condition",
+        "Ends the program",
+        "Stores a list"
+      ],
+      "answer_index": 1,
+      "explanation": "A conditional checks a condition and chooses which block to run next."
+    },
+    {
+      "id": "q5",
+      "question": "Which command order moves right and then up?",
+      "options": [
+        "up(); right()",
+        "up(); up()",
+        "right(); right()",
+        "right(); up()"
+      ],
+      "answer_index": 3,
+      "explanation": "Commands run in order, so right() must come before up()."
+    },
+    {
+      "id": "q6",
+      "question": "Why trace a program by hand?",
+      "options": [
+        "To change its color",
+        "To make it run faster",
+        "To check each step's state",
+        "To avoid using a computer"
+      ],
+      "answer_index": 2,
+      "explanation": "Hand tracing reveals the value of each variable at every step."
+    }
+  ]
+}

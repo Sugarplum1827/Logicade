@@ -1,0 +1,569 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v01",
+    "index": 1,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each input/output term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "scanf"
+        },
+        {
+          "id": "l2",
+          "text": "printf"
+        },
+        {
+          "id": "l3",
+          "text": "%d"
+        },
+        {
+          "id": "l4",
+          "text": "&variable"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Read formatted input"
+        },
+        {
+          "id": "r2",
+          "text": "Write formatted output"
+        },
+        {
+          "id": "r3",
+          "text": "Integer conversion"
+        },
+        {
+          "id": "r4",
+          "text": "Address passed to scanf"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "The format specifier must match the variable type, and scanf needs the address.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v02",
+    "index": 2,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each step as input, process, or output.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "input",
+          "label": "Input",
+          "desc": "Gets data into the program"
+        },
+        {
+          "id": "process",
+          "label": "Process",
+          "desc": "Transforms data"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Displays a result"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "scanf(\"%d\", &n);",
+          "bin": "input"
+        },
+        {
+          "id": "i2",
+          "text": "result = n * 2;",
+          "bin": "process"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"%d\", result);",
+          "bin": "output"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"Enter n: \");",
+          "bin": "output"
+        },
+        {
+          "id": "i5",
+          "text": "n = n + 1;",
+          "bin": "process"
+        },
+        {
+          "id": "i6",
+          "text": "&n in scanf",
+          "bin": "input"
+        }
+      ]
+    },
+    "explanation": "scanf brings data in, arithmetic transforms it, and printf displays it.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v03",
+    "index": 3,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the input-process-output program.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int n;",
+        "{{b0}}(\"%d\", &n);",
+        "int result = n {{b1}} 2;",
+        "printf(\"%d\", {{b2}});",
+        "return 0;"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "input function",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "operation for doubling",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "value to display",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "scanf"
+        },
+        {
+          "id": "b2",
+          "text": "*"
+        },
+        {
+          "id": "b3",
+          "text": "result"
+        },
+        {
+          "id": "b4",
+          "text": "scanf"
+        },
+        {
+          "id": "b5",
+          "text": "*"
+        },
+        {
+          "id": "b6",
+          "text": "result"
+        }
+      ]
+    },
+    "explanation": "Read n, multiply by 2, and print the result.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v04",
+    "index": 4,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of input, process, output in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Prompt the user for a number"
+        },
+        {
+          "id": "s2",
+          "text": "Read the number into a variable"
+        },
+        {
+          "id": "s3",
+          "text": "Multiply the number by two"
+        },
+        {
+          "id": "s4",
+          "text": "Display the doubled value"
+        },
+        {
+          "id": "s5",
+          "text": "End the program"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Prompt the user for a number → Read the number into a variable → Multiply the number by two → Display the doubled value → End the program",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v05",
+    "index": 5,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the C input statement that reads an integer into age.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "scanf"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "\"%d\""
+        },
+        {
+          "id": "t4",
+          "text": ","
+        },
+        {
+          "id": "t5",
+          "text": "&age"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": ";"
+        },
+        {
+          "id": "t8",
+          "text": "printf"
+        },
+        {
+          "id": "t9",
+          "text": "\"%s\""
+        },
+        {
+          "id": "t10",
+          "text": "age"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "scanf reads input; %d expects an int; &age passes the address of age.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v06",
+    "index": 6,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the input-process-output flowchart.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 8
+        },
+        {
+          "id": "prompt",
+          "label": "Prompt for n",
+          "kind": "io",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "id": "read",
+          "label": "Read n",
+          "kind": "io",
+          "x": 50,
+          "y": 36
+        },
+        {
+          "id": "double",
+          "label": "result = n × 2",
+          "kind": "process",
+          "x": 50,
+          "y": 52
+        },
+        {
+          "id": "print",
+          "label": "Print result",
+          "kind": "io",
+          "x": 50,
+          "y": 70
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 86
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "prompt"
+        ],
+        [
+          "prompt",
+          "read"
+        ],
+        [
+          "read",
+          "double"
+        ],
+        [
+          "double",
+          "print"
+        ],
+        [
+          "print",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The program reads before it processes, and prints only after the result exists.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v07",
+    "index": 7,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to move from its input square to the output goal.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 5,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 3,
+        "dir": 1
+      },
+      "goal": {
+        "x": 4,
+        "y": 0
+      },
+      "walls": [
+        {
+          "x": 2,
+          "y": 1
+        },
+        {
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 12
+    },
+    "explanation": "The robot processes one command at a time until it reaches the output.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v08",
+    "index": 8,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What is printed when the input is 7?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "int n;",
+        "scanf(\"%d\", &n);",
+        "int result = n * 2;",
+        "printf(\"%d\", result);"
+      ],
+      "answer": "14",
+      "accept": [
+        "14"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The input 7 is doubled to 14 and printed."
+    },
+    "explanation": "The input 7 is doubled to 14 and printed.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v09",
+    "index": 9,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the input-process-output program.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "int n;",
+        "scanf(\"%d\", &n);",
+        "int result = n * 2;",
+        "printf(\"%d\", result);"
+      ],
+      "variables": [
+        "n",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "n": "7",
+            "result": ""
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "n": "7",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "n": "7",
+            "result": "14"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "n": "7",
+            "result": "14"
+          }
+        }
+      ],
+      "ask": [
+        "n",
+        "result"
+      ],
+      "answer": {
+        "n": "7",
+        "result": "14"
+      },
+      "hint": ""
+    },
+    "explanation": "After reading 7, the program stores 14 in result.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_io_v10",
+    "index": 10,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line uses the wrong conversion for an int. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int age;",
+        "scanf(\"%f\", &age);",
+        "printf(\"%d\", age);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "age is an int, so scanf needs %d. %f expects a float.",
+    "concept_slug": "algorithm_io",
+    "concept_name": "Input, Process, Output"
+  }
+]

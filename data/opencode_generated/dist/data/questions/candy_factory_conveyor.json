@@ -1,0 +1,79 @@
+{
+  "concept_id": "32_candy_factory_conveyor",
+  "slug": "candy_factory_conveyor",
+  "learning_target": "conditionals and comparisons",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does `if shape == 'star':` do?",
+      "options": [
+        "Creates a star",
+        "Stops the conveyor",
+        "Runs for all shapes",
+        "Runs the block for star-shaped sweets"
+      ],
+      "answer_index": 3,
+      "explanation": "The block runs only when the shape equals star."
+    },
+    {
+      "id": "q2",
+      "question": "Which comparison checks whether size is greater than 5?",
+      "options": [
+        "size = 5",
+        "size < 5",
+        "size > 5",
+        "size != 5"
+      ],
+      "answer_index": 2,
+      "explanation": "The > operator is true when size is greater than 5."
+    },
+    {
+      "id": "q3",
+      "question": "What does an `else` block do?",
+      "options": [
+        "Handles only stars",
+        "Handles all other shapes",
+        "Stops the line",
+        "Creates a new shape"
+      ],
+      "answer_index": 1,
+      "explanation": "else catches every case not matched by earlier conditions."
+    },
+    {
+      "id": "q4",
+      "question": "Why sort by shape and size?",
+      "options": [
+        "To change the colors",
+        "To slow the conveyor",
+        "To make the candy sweeter",
+        "To send each sweet to the right bin"
+      ],
+      "answer_index": 3,
+      "explanation": "Multiple properties make the sorting rule more precise."
+    },
+    {
+      "id": "q5",
+      "question": "What is a comparison operator?",
+      "options": [
+        "A bin",
+        "A conveyor belt",
+        "A symbol that compares values",
+        "A type of candy"
+      ],
+      "answer_index": 2,
+      "explanation": "Operators such as >, < and == compare two values."
+    },
+    {
+      "id": "q6",
+      "question": "What should happen to an unrecognized shape?",
+      "options": [
+        "Send it to a review bin",
+        "Paint it red",
+        "Crush it immediately",
+        "Ignore it"
+      ],
+      "answer_index": 0,
+      "explanation": "A review bin keeps unmatched items from being lost or mishandled."
+    }
+  ]
+}

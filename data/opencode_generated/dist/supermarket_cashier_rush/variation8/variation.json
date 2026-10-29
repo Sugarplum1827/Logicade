@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "21_supermarket_cashier_rush",
+  "slug": "supermarket_cashier_rush",
+  "display_name": "Supermarket Cashier Rush",
+  "module_family": "arithmetic_shop",
+  "learning_target": "arithmetic and order of operations",
+  "core_brief": "Use arithmetic to total groceries, return change, and keep checkout orders moving.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "shop",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "System builder",
+  "accent": "#7ee2b8",
+  "tint": 12044522,
+  "variation_id": "21_supermarket_cashier_rush_v08",
+  "index": 8,
+  "title": "Switchboard Grid",
+  "label": "Variation 08: Switchboard Grid",
+  "seed": 2385130592,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "snake"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": true,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_dusk",
+    "zones": [
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day"
+    ],
+    "tile": "themes.urban.tile_sidewalk",
+    "player": "themes.urban.player_d",
+    "enemy": "themes.urban.enemy_d",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a compact tile grid with switches that change walls or routes. The player plans a short path, submits it, then watches the route resolve one step at a time.",
+    "obstacles": "switchable barriers, dead ends, and one alternate path; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "thoughtful planning followed by a quick route playback."
+  },
+  "question_bank": "../../data/questions/supermarket_cashier_rush.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

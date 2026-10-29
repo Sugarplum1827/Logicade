@@ -1,30 +1,30 @@
 {
   "file_id": "game_0830",
-  "game_title": "Not Negator – Shipyard Slip Trial",
+  "game_title": "Debug ordering · variation 10",
   "game_concept": "A logic puzzle set in Coastal Port – Shipyard Slip, a shipyard building boats: the fisher must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Not Negator: Use not to flip alarms and traps so the fisher slips through safely.",
-  "genre": "logic puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Shipyard Slip: a shipyard building boats",
-  "core_gameplay_loop": "In Shipyard Slip, repeat each round: Use not to flip alarms and traps so the fisher slips through safely. Each round costs one action, so plan the step so none are wasted. Then check the stealth value and advance.",
-  "primary_mechanic": "Not Negator",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Reach the dock crane using at most 18 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "The dock crane reached with actions_used <= 18.",
-  "lose_condition": "actions_used exceeds 18 before the dock crane is reached, or lives reach 0.",
+  "player_objective": "Debug ordering: Repair the reversed arithmetic instructions in the starter. add 20, then double. Match all 3 streams; preserve their order. Dataset 10, operand 20.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Not Negator",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Debug ordering",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M05-X3-T04-d1347e51",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Not Negator' (Week 3 slot 5), mission type 'Efficiency Trial', and setting 'Shipyard Slip'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 8,
   "trial": 10,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stealth changes.",
-    "Step 2: Use the controls to apply the code idea against pirate raiders in Shipyard Slip.",
-    "Step 3: Win by meeting the goal: The dock crane reached with actions_used <= 18."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level8/standard/game_week3_level8_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_0830",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the dock crane using at most 18 actions, so every code step counts.",
+  "source_win_condition": "The dock crane reached with actions_used <= 18.",
+  "source_lose_condition": "actions_used exceeds 18 before the dock crane is reached, or lives reach 0.",
+  "source_game_title": "Not Negator – Shipyard Slip Trial",
+  "source_primary_mechanic": "Not Negator",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w3_l8",
+  "source_week": 3,
+  "source_level": 8
 }

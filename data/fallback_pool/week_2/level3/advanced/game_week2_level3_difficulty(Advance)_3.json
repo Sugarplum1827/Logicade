@@ -1,30 +1,30 @@
 {
   "file_id": "game_0383",
-  "game_title": "Type Cast Forge – Eruption Watch Rush",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A action puzzle set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
-  "core_gameplay_loop": "In Eruption Watch, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round, a new ore chunks challenge appears; solve it to bank points before time drains. Then check the forge_heat value and advance.",
-  "primary_mechanic": "Type Cast Forge",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Checkpoint flags",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Collect 230 points of ore chunks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 230 within 29 seconds.",
-  "lose_condition": "Timer hits 0 with score < 230, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 3: {'width': 4, 'height': 5}; {'width': 6, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Type Cast Forge",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M08-X2-T15-ece66fb4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Resource Rush', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how forge_heat changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
-    "Step 3: Win by meeting the goal: score >= 230 within 29 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/advanced/game_week2_level3_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_0383",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 230 points of ore chunks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 230 within 29 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 230, or lives reach 0.",
+  "source_game_title": "Type Cast Forge – Eruption Watch Rush",
+  "source_primary_mechanic": "Type Cast Forge",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

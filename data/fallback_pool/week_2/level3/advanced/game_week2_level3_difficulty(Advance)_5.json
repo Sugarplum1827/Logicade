@@ -1,30 +1,30 @@
 {
   "file_id": "game_0385",
-  "game_title": "Input Interpreter – Basalt Stair Trial",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A puzzle set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
-  "genre": "puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
-  "core_gameplay_loop": "In Basalt Stair, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round costs one action, so plan the step so none are wasted. Then check the trust value and advance.",
-  "primary_mechanic": "Input Interpreter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Checkpoint flags",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Reach the ash barrier using at most 11 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The ash barrier reached with actions_used <= 11.",
-  "lose_condition": "actions_used exceeds 11 before the ash barrier is reached, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 5: {'width': 6, 'height': 7}; {'width': 8, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Input Interpreter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M10-X3-T09-f0d82448",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Efficiency Trial', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trust changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
-    "Step 3: Win by meeting the goal: The ash barrier reached with actions_used <= 11."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/advanced/game_week2_level3_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_0385",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the ash barrier using at most 11 actions, so every code step counts.",
+  "source_win_condition": "The ash barrier reached with actions_used <= 11.",
+  "source_lose_condition": "actions_used exceeds 11 before the ash barrier is reached, or lives reach 0.",
+  "source_game_title": "Input Interpreter – Basalt Stair Trial",
+  "source_primary_mechanic": "Input Interpreter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

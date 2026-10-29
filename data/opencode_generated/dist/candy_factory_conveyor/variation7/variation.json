@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "32_candy_factory_conveyor",
+  "slug": "candy_factory_conveyor",
+  "display_name": "Candy Factory Conveyor",
+  "module_family": "conveyor_sorting",
+  "learning_target": "conditionals and comparisons",
+  "core_brief": "Use conditionals to sort sweets by shape and send each batch to the correct bin.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "candy_factory",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#6ec6ff",
+  "tint": 15386295,
+  "variation_id": "32_candy_factory_conveyor_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 3707863661,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 15,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_1",
+    "zones": [
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef",
+    "enemy": "themes.food.enemy_fish",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.ketchup",
+      "bush": "themes.food.ketchup",
+      "slime": "themes.food.can",
+      "bee": "themes.food.ketchup"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/candy_factory_conveyor.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

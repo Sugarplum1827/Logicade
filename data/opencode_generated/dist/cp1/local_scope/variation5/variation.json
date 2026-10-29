@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_29_local_scope",
+  "slug": "local_scope",
+  "display_name": "Local Scope",
+  "learning_target": "identify where a local variable can be used",
+  "core_brief": "A local variable exists only inside the function or block that declares it.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 8,
+  "unit": "Scope",
+  "group": "code",
+  "skin": "underwater",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_1",
+    "zones": [
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_orange",
+    "enemy": "themes.underwater.enemy_brown",
+    "coin": "themes.underwater.coin_bubble_b",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.rock_a",
+      "bush": "themes.underwater.seaweed_orange",
+      "slime": "themes.underwater.seaweed_green",
+      "bee": "themes.underwater.rock_a"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "mechanic": "vars",
+  "mechanic_label": "Vault",
+  "accent": "#a8e6cf",
+  "variation_id": "cp1_29_local_scope_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "local_scope_v05",
+  "title": "Fill the variable vault",
+  "label": "Lab 05: Fill the variable vault",
+  "seed": 1920772015,
+  "challenge_bank": "../../../data/cp1/challenges/local_scope.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

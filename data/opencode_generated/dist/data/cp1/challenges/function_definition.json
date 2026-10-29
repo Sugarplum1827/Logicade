@@ -1,0 +1,561 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v01",
+    "index": 1,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int square(int n) {",
+        "    int result = n * n;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", square(4));",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "square promises an int but never returns one; result is only a local variable.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v02",
+    "index": 2,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in square or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int square(int n) {",
+        "    return n * n;",
+        "}",
+        "int main(void) {",
+        "    int answer = square(4);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "square",
+          "label": "square scope",
+          "desc": "Parameter n"
+        },
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Local answer"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int n",
+          "scope": "square"
+        },
+        {
+          "id": "d2",
+          "text": "return n * n;",
+          "scope": "square"
+        },
+        {
+          "id": "d3",
+          "text": "int answer",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "square(4)",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "n lives in square; answer lives in main.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v03",
+    "index": 3,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each function definitions term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Return type"
+        },
+        {
+          "id": "l2",
+          "text": "Function name"
+        },
+        {
+          "id": "l3",
+          "text": "Parameter"
+        },
+        {
+          "id": "l4",
+          "text": "Body"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "The type of value the function sends back"
+        },
+        {
+          "id": "r2",
+          "text": "The identifier used to call it"
+        },
+        {
+          "id": "r3",
+          "text": "A typed name in the definition"
+        },
+        {
+          "id": "r4",
+          "text": "The braced statements that do the work"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v04",
+    "index": 4,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the square function.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "{{b0}} square(int n) {",
+        "    {{b1}} n * n;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", square(4));",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "return type",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "keyword that sends the value back",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "int"
+        },
+        {
+          "id": "b2",
+          "text": "return"
+        },
+        {
+          "id": "b3",
+          "text": "void"
+        },
+        {
+          "id": "b4",
+          "text": "print"
+        },
+        {
+          "id": "b5",
+          "text": "result"
+        }
+      ]
+    },
+    "explanation": "The function returns an int with the return keyword.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v05",
+    "index": 5,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int square(int n) {",
+        "    return n * n;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", square(4));",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "16",
+      "accept": [
+        "16"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "square receives 4 and returns 4 * 4 = 16."
+    },
+    "explanation": "The program produces 16.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v06",
+    "index": 6,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int square(int n) {",
+        "    return n * n;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", square(4));",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "n",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 1,
+          "state": {
+            "n": "4",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "n": "4",
+            "result": "16"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "n": "4",
+            "result": "16"
+          }
+        }
+      ],
+      "ask": [
+        "n",
+        "result"
+      ],
+      "answer": {
+        "n": "4",
+        "result": "16"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is n = 4, result = 16.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v07",
+    "index": 7,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of function definitions in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Write the return type"
+        },
+        {
+          "id": "s2",
+          "text": "Write the function name"
+        },
+        {
+          "id": "s3",
+          "text": "List the parameters in parentheses"
+        },
+        {
+          "id": "s4",
+          "text": "Write the body in braces and return a value"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Write the return type → Write the function name → List the parameters in parentheses → Write the body in braces and return a value",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v08",
+    "index": 8,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a function that squares an integer.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "square"
+        },
+        {
+          "id": "t3",
+          "text": "("
+        },
+        {
+          "id": "t4",
+          "text": "int n"
+        },
+        {
+          "id": "t5",
+          "text": ")"
+        },
+        {
+          "id": "t6",
+          "text": "{"
+        },
+        {
+          "id": "t7",
+          "text": "return n * n;"
+        },
+        {
+          "id": "t8",
+          "text": "}"
+        },
+        {
+          "id": "t9",
+          "text": "void"
+        },
+        {
+          "id": "t10",
+          "text": "return;"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        },
+        {
+          "id": "slot8",
+          "label": "token 8"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "square takes an int and returns an int.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v09",
+    "index": 9,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the parameter and the returned value.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int square(int n) {",
+        "    return n * n;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", square(4));",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "n",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "4"
+        },
+        {
+          "id": "v2",
+          "text": "16"
+        },
+        {
+          "id": "v3",
+          "text": "5"
+        },
+        {
+          "id": "v4",
+          "text": "3"
+        },
+        {
+          "id": "v5",
+          "text": "17"
+        }
+      ],
+      "answer": {
+        "n": "v1",
+        "result": "v2"
+      }
+    },
+    "explanation": "The argument 4 becomes n, and the function returns 16.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_definition_v10",
+    "index": 10,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each part of square by its role.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "signature",
+          "label": "Signature",
+          "desc": "Return type, name, and parameter"
+        },
+        {
+          "id": "body",
+          "label": "Body",
+          "desc": "Statements inside the braces"
+        },
+        {
+          "id": "call",
+          "label": "Call",
+          "desc": "Uses the function from main"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int square(int n)",
+          "bin": "signature"
+        },
+        {
+          "id": "i2",
+          "text": "return n * n;",
+          "bin": "body"
+        },
+        {
+          "id": "i3",
+          "text": "square(4)",
+          "bin": "call"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"%d\\n\", square(4));",
+          "bin": "call"
+        },
+        {
+          "id": "i5",
+          "text": "int main(void)",
+          "bin": "signature"
+        },
+        {
+          "id": "i6",
+          "text": "return 0;",
+          "bin": "body"
+        }
+      ]
+    },
+    "explanation": "The signature names the function and its types; the body performs the work.",
+    "concept_slug": "function_definition",
+    "concept_name": "Function Definitions"
+  }
+]

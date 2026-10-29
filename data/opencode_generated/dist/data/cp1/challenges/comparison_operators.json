@@ -1,0 +1,523 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v01",
+    "index": 1,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "With a = 5 and b = 8, sort each test as true or false.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "true",
+          "label": "True (1)",
+          "desc": "The comparison holds"
+        },
+        {
+          "id": "false",
+          "label": "False (0)",
+          "desc": "The comparison does not hold"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "a < b",
+          "bin": "true"
+        },
+        {
+          "id": "i2",
+          "text": "a == b",
+          "bin": "false"
+        },
+        {
+          "id": "i3",
+          "text": "b >= 8",
+          "bin": "true"
+        },
+        {
+          "id": "i4",
+          "text": "a != b",
+          "bin": "true"
+        },
+        {
+          "id": "i5",
+          "text": "a > b",
+          "bin": "false"
+        },
+        {
+          "id": "i6",
+          "text": "b <= 7",
+          "bin": "false"
+        }
+      ]
+    },
+    "explanation": "5 is less than 8, equal to neither 8 nor greater, and different from 8.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v02",
+    "index": 2,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int a = 5, b = 8;",
+        "if (a = b) {",
+        "    printf(\"equal\\n\");",
+        "}",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The single = assigns b to a; equality needs ==.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v03",
+    "index": 3,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the condition.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int a = 5, b = 8;",
+        "    if (a < b) {",
+        "        printf(\"yes\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Named variables"
+        },
+        {
+          "id": "condition",
+          "label": "Condition",
+          "desc": "Temporary comparison result"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int a = 5;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int b = 8;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "a < b",
+          "scope": "condition"
+        },
+        {
+          "id": "d4",
+          "text": "printf(\"yes\\n\");",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "The comparison is evaluated in the if condition; the variables live in main.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v04",
+    "index": 4,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each comparison operators term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "=="
+        },
+        {
+          "id": "l2",
+          "text": "!="
+        },
+        {
+          "id": "l3",
+          "text": "<"
+        },
+        {
+          "id": "l4",
+          "text": ">="
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Equal to"
+        },
+        {
+          "id": "r2",
+          "text": "Not equal to"
+        },
+        {
+          "id": "r3",
+          "text": "Less than"
+        },
+        {
+          "id": "r4",
+          "text": "Greater than or equal to"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v05",
+    "index": 5,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the comparison tests.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int a = 5, b = 8;",
+        "int less = a {{b0}} b;",
+        "int equal = a {{b1}} b;",
+        "printf(\"%d %d\\n\", less, equal);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "less-than operator",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "equality operator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "<"
+        },
+        {
+          "id": "b2",
+          "text": "=="
+        },
+        {
+          "id": "b3",
+          "text": ">"
+        },
+        {
+          "id": "b4",
+          "text": "="
+        },
+        {
+          "id": "b5",
+          "text": "=>"
+        }
+      ]
+    },
+    "explanation": "5 is less than 8, and 5 is not equal to 8.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v06",
+    "index": 6,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 5, b = 8;",
+        "    printf(\"%d\\n\", a < b);",
+        "    printf(\"%d\\n\", a == b);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "1",
+      "accept": [
+        "1"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "5 < 8 is true, printed as 1; the second line prints 0 but the trace asks for the first."
+    },
+    "explanation": "The program produces 1.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v07",
+    "index": 7,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 5, b = 8;",
+        "    printf(\"%d\\n\", a < b);",
+        "    printf(\"%d\\n\", a == b);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "less"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "a": "5",
+            "b": "8",
+            "less": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "a": "5",
+            "b": "8",
+            "less": "1"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "a": "5",
+            "b": "8",
+            "less": "1"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "less"
+      ],
+      "answer": {
+        "a": "5",
+        "b": "8",
+        "less": "1"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is a = 5, b = 8, less = 1.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v08",
+    "index": 8,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of comparison operators in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Evaluate the left operand"
+        },
+        {
+          "id": "s2",
+          "text": "Evaluate the right operand"
+        },
+        {
+          "id": "s3",
+          "text": "Apply the comparison"
+        },
+        {
+          "id": "s4",
+          "text": "Use the 1 or 0 result in the condition"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Evaluate the left operand → Evaluate the right operand → Apply the comparison → Use the 1 or 0 result in the condition",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v09",
+    "index": 9,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the test for a score that is at least 50.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "score"
+        },
+        {
+          "id": "t2",
+          "text": ">="
+        },
+        {
+          "id": "t3",
+          "text": "50"
+        },
+        {
+          "id": "t4",
+          "text": "=>"
+        },
+        {
+          "id": "t5",
+          "text": "="
+        },
+        {
+          "id": "t6",
+          "text": "=="
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The >= operator means greater than or equal to.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "comparison_operators_v10",
+    "index": 10,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the operands and the true comparison result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 5, b = 8;",
+        "    printf(\"%d\\n\", a < b);",
+        "    printf(\"%d\\n\", a == b);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "a",
+          "type": "final value"
+        },
+        {
+          "name": "b",
+          "type": "final value"
+        },
+        {
+          "name": "less",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "5"
+        },
+        {
+          "id": "v2",
+          "text": "8"
+        },
+        {
+          "id": "v3",
+          "text": "1"
+        },
+        {
+          "id": "v4",
+          "text": "6"
+        },
+        {
+          "id": "v5",
+          "text": "4"
+        },
+        {
+          "id": "v6",
+          "text": "9"
+        }
+      ],
+      "answer": {
+        "a": "v1",
+        "b": "v2",
+        "less": "v3"
+      }
+    },
+    "explanation": "5 is less than 8, so the comparison yields 1.",
+    "concept_slug": "comparison_operators",
+    "concept_name": "Comparison Operators"
+  }
+]

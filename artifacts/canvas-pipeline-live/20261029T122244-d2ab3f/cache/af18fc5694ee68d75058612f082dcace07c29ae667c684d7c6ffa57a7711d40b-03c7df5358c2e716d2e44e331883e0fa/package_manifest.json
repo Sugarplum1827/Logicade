@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "archive": "game_week7_level7_difficulty(Standard)_1.zip",
+  "source_file_id": "game_1991",
+  "game_id": "canvas_terminal",
+  "slug": "terminal",
+  "display_name": "Register Operations Console",
+  "variation_id": "canvas_game_1991",
+  "content_revision": "bba7f11564668628d624b97602d036049e5bc7770a996381b708cac486d27759",
+  "variation_title": "Declare float · variation 2",
+  "index": 1,
+  "runtime": "logicade_canvas_game_v2",
+  "template_version": "2.0.0",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "week": 7,
+  "level": 7,
+  "difficulty": "standard",
+  "mode": "terminal",
+  "mechanic_family": "terminal",
+  "mission_schema_version": 1,
+  "control_flow_type": null,
+  "map_features": null,
+  "routing_topology": null,
+  "branch_targets": null,
+  "source_week": 7,
+  "source_level": 7,
+  "learning_objective_id": "cp1_w7_l7",
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Declare float",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 7,
+    "source_week": 7,
+    "source_level": 7,
+    "objective_id": "cp1_w7_l7",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Declare float",
+    "objectives": [
+      "Declare float"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "playable": true,
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "objective": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement.",
+  "game_slug": "terminal",
+  "game_title": "Declare float · variation 2",
+  "asset_source": "/vendor/kenney/"
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_1438",
-  "game_title": "Off By One Fixer – Moonlit Clearing Rush",
+  "game_title": "Branch Assembly 8 · Merge Midpoint",
   "game_concept": "A arcade set in Mystic Forest – Moonlit Clearing, a moonlit clearing: the druid must handle bramble beasts while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
-  "genre": "arcade",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Moonlit Clearing: a moonlit clearing",
-  "core_gameplay_loop": "In Moonlit Clearing, repeat each round: Fix range boundaries that skip or overshoot by one. Each round, a new healing herbs challenge appears; solve it to bank points before time drains. Then check the fixes value and advance.",
-  "primary_mechanic": "Off By One Fixer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Collect 490 points of healing herbs by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 490 within 41 seconds.",
-  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "player_objective": "Expression statements: build a valid C source file that prints 29. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 6. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 14 components (7 upper, 7 lower). Set the gold-socket controller batch to 14.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 8 (extended tier): Off By One Fixer",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Expression statements",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M13-X2-T20-c26bf1b7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Resource Rush', and setting 'Moonlit Clearing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 8,
   "trial": 8,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fixes changes.",
-    "Step 2: Use the controls to apply the code idea against bramble beasts in Moonlit Clearing.",
-    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level8/advanced/game_week5_level8_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_1438",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 490 points of healing herbs by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 490 within 41 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "source_game_title": "Off By One Fixer – Moonlit Clearing Rush",
+  "source_primary_mechanic": "Off By One Fixer",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 7 components via upper_4, shared_assembler to output_shared; ELSE: 7 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w5_l8",
+  "source_week": 5,
+  "source_level": 8
 }

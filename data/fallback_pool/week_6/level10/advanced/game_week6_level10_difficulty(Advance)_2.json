@@ -1,30 +1,30 @@
 {
   "file_id": "game_1792",
-  "game_title": "Scope Sanctuary – Ice Market Trial",
+  "game_title": "Program synthesis · variation 2",
   "game_concept": "A puzzle set in Snowy Hold – Ice Market, a market under icicles: the snow ranger must handle blizzard sprites while practicing functions. Core idea – Scope Sanctuary: Distinguish local from global variables to keep flint stones safe from blizzard sprites.",
-  "genre": "puzzle",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Ice Market: a market under icicles",
-  "core_gameplay_loop": "In Ice Market, repeat each round: Distinguish local from global variables to keep flint stones safe from blizzard sprites. Each round costs one action, so plan the step so none are wasted. Then check the scope_safe value and advance.",
-  "primary_mechanic": "Scope Sanctuary",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Reach the hold gate using at most 15 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "The hold gate reached with actions_used <= 15.",
-  "lose_condition": "actions_used exceeds 15 before the hold gate is reached, or lives reach 0.",
+  "player_objective": "Maze 2 (21×15, 69 junctions): collect 3 crystal(s) from the branches and reach beacon (17, 13). Use a C main program to Program synthesis. Print [17]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Scope Sanctuary",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M07-X3-T02-faf10d44",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Scope Sanctuary' (Week 6 slot 7), mission type 'Efficiency Trial', and setting 'Ice Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 10,
   "trial": 2,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 600,
     "action_budget": 15,
     "streak_target": 14,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how scope_safe changes.",
-    "Step 2: Use the controls to apply the code idea against blizzard sprites in Ice Market.",
-    "Step 3: Win by meeting the goal: The hold gate reached with actions_used <= 15."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level10/advanced/game_week6_level10_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_1792",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the hold gate using at most 15 actions, so every code step counts.",
+  "source_win_condition": "The hold gate reached with actions_used <= 15.",
+  "source_lose_condition": "actions_used exceeds 15 before the hold gate is reached, or lives reach 0.",
+  "source_game_title": "Scope Sanctuary – Ice Market Trial",
+  "source_primary_mechanic": "Scope Sanctuary",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

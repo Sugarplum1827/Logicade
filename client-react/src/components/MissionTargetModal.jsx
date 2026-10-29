@@ -20,7 +20,15 @@ function toDisplayText(value) {
   return '';
 }
 
-export default function MissionTargetModal({ spec, onStart, onCancel }) {
+function formatGameLabel(value) {
+  return String(value || '')
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export default function MissionTargetModal({ spec, onStart, onCancel, starting = false, error = '' }) {
   let objectives;
   if (
     Array.isArray(spec?.secondary_objectives) &&
@@ -40,25 +48,25 @@ export default function MissionTargetModal({ spec, onStart, onCancel }) {
   // Pad/trim to exactly 3 rows so the layout is stable
   const rows = [0, 1, 2].map((i) => toDisplayText(objectives[i]) || null);
 
-  const hintText =
-    toDisplayText(spec?.player_objective) ||
-    toDisplayText(spec?.hint) ||
-    'Deploy your troops and clear the level.';
-
   return (
     <div
       className="modal-overlay"
       style={{ zIndex: 2000, background: 'rgba(0, 0, 0, .42)' }}
       onClick={(event) => {
-        if (!event.target.closest('.rok-content')) onCancel?.();
+        // Footer controls belong to the dialog too. Only the actual backdrop
+        // cancels; bubbling a Start click must never release its active lease.
+        if (event.target === event.currentTarget && !starting) onCancel?.();
       }}
     >
-      <div className="rok-modal" role="dialog" aria-modal="true" aria-label="Mission Target">
-        <div className="rok-ribbon">Mission Target</div>
+      <div className="rok-modal mission-target-modal" role="dialog" aria-modal="true" aria-label="Mission Target">
 
         <div className="rok-content">
-          <p className="rok-hint">{hintText}</p>
-
+          {spec?.phaser_template?.display_name && (
+            <div className="rok-template-choice" aria-label="Selected game template">
+              <strong>{spec.phaser_template.display_name}</strong>
+              <span>{formatGameLabel(spec.phaser_template.variation_title || spec.phaser_template.variation_id)}</span>
+            </div>
+          )}
           <div className="rok-objectives">
             {rows.map((text, i) =>
               text ? (
@@ -75,16 +83,18 @@ export default function MissionTargetModal({ spec, onStart, onCancel }) {
             <div
               style={{
                 width: '100%',
-                background: 'rgba(0,0,0,0.05)',
+                maxWidth: '100%',
+                boxSizing: 'border-box',
+                overflowWrap: 'anywhere',
                 padding: '12px 18px',
                 borderRadius: '8px',
-                marginBottom: '20px',
-                fontSize: '17px',
+                marginBottom: '5px',
+                fontSize: '14px',
                 lineHeight: 1.3,
               }}
             >
               {spec.win_condition && (
-                <div style={{ marginBottom: spec.lose_condition ? 6 : 0 }}>
+                <div style={{ margin: spec.lose_condition ? 6 : 0 }}>
                   <strong style={{ color: '#2e7d32' }}>✔ Win:</strong>{' '}
                   {toDisplayText(spec.win_condition)}
                 </div>
@@ -108,13 +118,14 @@ export default function MissionTargetModal({ spec, onStart, onCancel }) {
         </div>
 
         <div className="rok-footer">
-          <button className="rok-btn-cancel" onClick={onCancel}>
+          <button className="rok-btn-cancel" onClick={onCancel} disabled={starting}>
             CANCEL
           </button>
-          <button className="rok-btn-start" onClick={onStart}>
-            START
+          <button className="rok-btn-start" onClick={onStart} disabled={starting}>
+            {starting ? 'PREPARING GAME…' : 'START'}
           </button>
         </div>
+        {error && <p role="alert" className="mission-start-error">{error}</p>}
       </div>
     </div>
   );

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "18_time_travel_paradox",
+  "slug": "time_travel_paradox",
+  "display_name": "Time Travel Paradox",
+  "module_family": "timeline_puzzle",
+  "learning_target": "sequence, conditions, and cause/effect",
+  "core_brief": "Repair timeline logic by placing events in the correct order across two eras.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "time",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Sequence solver",
+  "accent": "#ff9f43",
+  "tint": 14346935,
+  "variation_id": "18_time_travel_paradox_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 3189198172,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_green",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_big",
+      "slime": "themes.space.meteor_brown_big",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/time_travel_paradox.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

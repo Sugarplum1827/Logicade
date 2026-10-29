@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "24_volcano_evacuation",
+  "slug": "volcano_evacuation",
+  "display_name": "Volcano Evacuation",
+  "module_family": "evacuation_routing",
+  "learning_target": "loops and repeated movement",
+  "core_brief": "Use loops to guide groups of citizens along safe evacuation routes.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "volcano",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 15382711,
+  "variation_id": "24_volcano_evacuation_v05",
+  "index": 5,
+  "title": "Central Arena",
+  "label": "Variation 05: Central Arena",
+  "seed": 1204393730,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "star"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 4
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_2",
+    "zones": [
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_can",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.wheat",
+      "bush": "themes.farm.rock",
+      "slime": "themes.farm.bush",
+      "bee": "themes.farm.fence"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a compact arena with a central objective and three distinct approach lanes. The player must respond to a readable sequence of short waves.",
+    "obstacles": "lane-specific hazards and a central objective meter; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "three escalating waves with a short breath between waves."
+  },
+  "question_bank": "../../data/questions/volcano_evacuation.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

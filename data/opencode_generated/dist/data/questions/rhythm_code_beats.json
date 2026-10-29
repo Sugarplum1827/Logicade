@@ -1,0 +1,79 @@
+{
+  "concept_id": "09_rhythm_code_beats",
+  "slug": "rhythm_code_beats",
+  "learning_target": "command order and pattern recognition",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does command order control?",
+      "options": [
+        "The color of the screen",
+        "The volume only",
+        "The file size",
+        "The sequence of actions"
+      ],
+      "answer_index": 3,
+      "explanation": "Commands execute in the order they are written, so order changes the result."
+    },
+    {
+      "id": "q2",
+      "question": "The pattern is A, B, A, B. What comes next?",
+      "options": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "answer_index": 2,
+      "explanation": "The pattern alternates A and B, so after B comes A."
+    },
+    {
+      "id": "q3",
+      "question": "What is a loop in music code?",
+      "options": [
+        "A repeated section",
+        "A broken speaker",
+        "A random sound",
+        "A single note"
+      ],
+      "answer_index": 0,
+      "explanation": "A loop repeats a section of music or commands."
+    },
+    {
+      "id": "q4",
+      "question": "What does a rest command do?",
+      "options": [
+        "Doubles the tempo",
+        "Changes the instrument",
+        "Stops the program",
+        "Adds silence"
+      ],
+      "answer_index": 3,
+      "explanation": "A rest is a pause or silence in the rhythm."
+    },
+    {
+      "id": "q5",
+      "question": "Why align commands to beats?",
+      "options": [
+        "To make code longer",
+        "To keep timing consistent",
+        "To avoid variables",
+        "To change the language"
+      ],
+      "answer_index": 1,
+      "explanation": "Aligning commands to beats keeps the music synchronized."
+    },
+    {
+      "id": "q6",
+      "question": "Which sequence plays two beats and then a rest?",
+      "options": [
+        "rest(); rest(); beat()",
+        "rest(); beat()",
+        "beat(); beat(); rest()",
+        "beat(); rest(); rest()"
+      ],
+      "answer_index": 2,
+      "explanation": "Two beat calls followed by one rest call match the requested pattern."
+    }
+  ]
+}

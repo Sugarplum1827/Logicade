@@ -242,7 +242,7 @@ export class LevelCompleteScene extends Phaser.Scene {
     try {
       const r = await fetch('/serve', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('logicade_session_token') || ''}` },
         body: JSON.stringify({
           student_id: studentId,
           week,

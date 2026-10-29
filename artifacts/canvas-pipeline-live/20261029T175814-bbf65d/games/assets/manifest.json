@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "asset_policy": "Shared vendor files are referenced by URL and are not copied into each game definition or package.",
+  "license": "Kenney assets used here are CC0; retain each pack's bundled license file.",
+  "sources": {
+    "welcome_video": "/canvas-runtime/assets/logicade_prologue.mp4",
+    "factory_tile": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0017.png",
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png",
+    "puzzle_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "block_drop_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/drop_001.ogg",
+    "line_clear_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_002.ogg",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png"
+  },
+  "modes": {
+    "welcome_video": [
+      "welcome_video"
+    ],
+    "tetris": [
+      "puzzle_tile",
+      "block_drop_sound",
+      "line_clear_sound",
+      "success_sound",
+      "error_sound"
+    ],
+    "factory": [
+      "factory_tile",
+      "success_sound",
+      "error_sound"
+    ],
+    "terminal": [
+      "terminal_tile",
+      "success_sound",
+      "error_sound"
+    ],
+    "circuit": [
+      "terminal_tile",
+      "success_sound",
+      "error_sound"
+    ],
+    "pending": [
+      "terminal_tile",
+      "success_sound",
+      "error_sound"
+    ],
+    "dungeon": [
+      "dungeon_tile",
+      "wall_tile",
+      "hero_sprite",
+      "success_sound",
+      "error_sound"
+    ]
+  },
+  "source_notes": {
+    "kenney": "Existing local CC0 packs in vendor/kenney; shared by URL rather than copied per game.",
+    "welcome_video": "Shared LogiCade prologue video; one copy in games/assets."
+  },
+  "libraries": {
+    "weekly_ui": "/canvas-runtime/assets/weekly-ui-manifest.json"
+  }
+}

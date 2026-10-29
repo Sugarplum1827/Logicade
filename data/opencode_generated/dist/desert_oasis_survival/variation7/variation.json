@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "27_desert_oasis_survival",
+  "slug": "desert_oasis_survival",
+  "display_name": "Desert Oasis Survival",
+  "module_family": "resource_survival",
+  "learning_target": "resource allocation and algorithmic choices",
+  "core_brief": "Allocate water and supplies across a route so the expedition reaches an oasis.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "desert",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "System builder",
+  "accent": "#4fd1c5",
+  "tint": 12053194,
+  "variation_id": "27_desert_oasis_survival_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 3496418627,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 14,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_1",
+    "zones": [
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_bucket",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.rock",
+      "bush": "themes.farm.fence",
+      "slime": "themes.farm.wheat",
+      "bee": "themes.farm.bush"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/desert_oasis_survival.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

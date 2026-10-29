@@ -1,30 +1,30 @@
 {
   "file_id": "game_1525",
-  "game_title": "Boolean Guards – Hearth Hall Streak",
+  "game_title": "The main function · variation 5",
   "game_concept": "A quiz RPG set in Snowy Hold – Hearth Hall, a warm hearth hall: the frost mage must handle frozen golems while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
-  "genre": "quiz RPG",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Hearth Hall: a warm hearth hall",
-  "core_gameplay_loop": "In Hearth Hall, repeat each round: Write functions returning True or False that guard checkpoints. Each round poses one decision; a wrong answer breaks the streak. Then check the guards value and advance.",
-  "primary_mechanic": "Boolean Guards",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Chain 9 consecutive correct decisions about guards to power up the frost mage and open the hearth fire.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 9.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Maze 5 (17×13, 39 junctions): collect 3 crystal(s) from the branches and reach beacon (5, 11). Use a C main program to The main function. Print [8]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 6 – Functions | Level 1 (intro tier): Boolean Guards",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: The main function",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M10-X4-T05-4b71b8a0",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Streak Challenge', and setting 'Hearth Hall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 1,
   "trial": 5,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how guards changes.",
-    "Step 2: Use the controls to apply the code idea against frozen golems in Hearth Hall.",
-    "Step 3: Win by meeting the goal: streak counter reaches 9."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level1/advanced/game_week6_level1_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_1525",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 9 consecutive correct decisions about guards to power up the frost mage and open the hearth fire.",
+  "source_win_condition": "streak counter reaches 9.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Boolean Guards – Hearth Hall Streak",
+  "source_primary_mechanic": "Boolean Guards",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w6_l1",
+  "source_week": 6,
+  "source_level": 1
 }

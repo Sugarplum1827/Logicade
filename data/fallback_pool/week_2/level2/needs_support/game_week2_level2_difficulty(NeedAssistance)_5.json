@@ -1,30 +1,30 @@
 {
   "file_id": "game_0335",
-  "game_title": "Comparison Duel – Smoke Ridge Race",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A adventure race set in Mt. Pyre – Smoke Ridge, a ridge shrouded in ash: the ember mage must handle smoke serpents while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the ember mage's power beats the shield shown by smoke serpents.",
-  "genre": "adventure race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
-  "core_gameplay_loop": "In Smoke Ridge, repeat each round: Choose ==, !=, < , > or >= so the ember mage's power beats the shield shown by smoke serpents. Each round the rival advances, and solving the step moves the ember mage ahead. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Beat a rival AI to the magma valve by solving code steps involving power that move the ember mage forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.55).",
-  "lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "player_objective": "Read value for station 5, then display the same value without changing it. Test dataset 5: {'value': -5}; {'value': 15}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X5-T11-bd644c3b",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Rival Race', and setting 'Smoke Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Smoke Ridge.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.55)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/needs_support/game_week2_level2_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_0335",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the magma valve by solving code steps involving power that move the ember mage forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.55).",
+  "source_lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "source_game_title": "Comparison Duel – Smoke Ridge Race",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

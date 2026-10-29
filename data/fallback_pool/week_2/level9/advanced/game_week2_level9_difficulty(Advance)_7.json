@@ -1,30 +1,30 @@
 {
   "file_id": "game_0567",
-  "game_title": "Compound Combo – Eruption Watch Defense",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A action defense set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Compound Combo: Chain +=, -=, *= updates to hit a target value exactly.",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
-  "core_gameplay_loop": "In Eruption Watch, repeat each round: Chain +=, -=, *= updates to hit a target value exactly. Each round, ash wraiths strike the lava bridge, so respond before the next strike lands. Then check the energy value and advance.",
-  "primary_mechanic": "Compound Combo",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Protect the lava bridge from ash wraiths in Eruption Watch: keep the energy meter above zero by applying the concept correctly until the 43-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 43 seconds while energy > 0.",
-  "lose_condition": "energy drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 7: {'a': 12, 'b': 7}; {'a': -7, 'b': -9}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Compound Combo",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M12-X1-T15-0da44249",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Compound Combo' (Week 2 slot 12), mission type 'Survival Siege', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 43,
+    "time_limit_seconds": 0,
     "target_score": 550,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how energy changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
-    "Step 3: Win by meeting the goal: Timer reaches 43 seconds while energy > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/advanced/game_week2_level9_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0567",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the lava bridge from ash wraiths in Eruption Watch: keep the energy meter above zero by applying the concept correctly until the 43-second timer ends.",
+  "source_win_condition": "Timer reaches 43 seconds while energy > 0.",
+  "source_lose_condition": "energy drops to 0, or lives reach 0, before the 43-second timer ends.",
+  "source_game_title": "Compound Combo – Eruption Watch Defense",
+  "source_primary_mechanic": "Compound Combo",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 43,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

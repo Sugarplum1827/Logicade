@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "38_baking_bakery_rush",
+  "slug": "baking_bakery_rush",
+  "display_name": "Baking Bakery Rush",
+  "module_family": "temperature_simulation",
+  "learning_target": "conditionals and thresholds",
+  "core_brief": "Use conditionals to select oven settings and prevent each recipe from over- or under-baking.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "bakery",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#ff9f43",
+  "tint": 15316970,
+  "variation_id": "38_baking_bakery_rush_v09",
+  "index": 9,
+  "title": "Three-Zone Expedition",
+  "label": "Variation 09: Three-Zone Expedition",
+  "seed": 4011116483,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": true,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_3",
+    "zones": [
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef",
+    "enemy": "themes.food.enemy_can",
+    "coin": "themes.food.coin_cupcake",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.fish",
+      "bush": "themes.food.can",
+      "slime": "themes.food.ketchup",
+      "bee": "themes.food.fish"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build three connected zones with different local layouts, all serving the same learning objective. A collectible clue in each zone teaches a useful rule.",
+    "obstacles": "zone-specific obstacles and a final combined challenge; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short introduction, two quicker zones, then a capstone."
+  },
+  "question_bank": "../../data/questions/baking_bakery_rush.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

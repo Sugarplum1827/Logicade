@@ -1,0 +1,109 @@
+{
+  "map_id": "cave_path_01",
+  "biome": "cave",
+  "tile_size": 64,
+  "width": 14,
+  "height": 9,
+  "background": "backgrounds/cave.png",
+  "bounds": {
+    "left": 0,
+    "top": 0,
+    "right": 14,
+    "bottom": 9
+  },
+  "spawn": {
+    "x": 1,
+    "y": 6
+  },
+  "goal": {
+    "x": 12,
+    "y": 6,
+    "sprite": "tiles/flag.png"
+  },
+  "floor": {
+    "y": 7,
+    "sprite": "tiles/grass.png",
+    "subsurface": "tiles/dirt.png",
+    "gaps": [
+      {
+        "x": 3,
+        "width": 1
+      },
+      {
+        "x": 9,
+        "width": 1
+      }
+    ]
+  },
+  "obstacles": [
+    {
+      "x": 3,
+      "y": 6,
+      "type": "gap"
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "type": "spike"
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "type": "gap"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "type": "stone_platform"
+    }
+  ],
+  "collectibles": [
+    {
+      "x": 2,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "sprite": "tiles/coin.png"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "sprite": "tiles/coin.png"
+    }
+  ],
+  "enemies": [
+    {
+      "x": 5,
+      "y": 6,
+      "sprite": "enemies/bee_rest.png"
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "sprite": "enemies/slime_rest.png"
+    }
+  ]
+}

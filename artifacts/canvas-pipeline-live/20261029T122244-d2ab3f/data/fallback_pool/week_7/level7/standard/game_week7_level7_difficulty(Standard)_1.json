@@ -1,0 +1,115 @@
+{
+  "file_id": "game_1991",
+  "game_title": "Declare float · variation 2",
+  "game_concept": "A logic puzzle set in Eldritch Ruins – Rune Circle, a circle of glowing runes: the ruin warden must handle echo phantoms while practicing lists. Core idea – Comprehension Lab: Build new lists in one line with list comprehensions to transform ancient keys.",
+  "genre": "terminal programming workbench",
+  "theme": "Eldritch Ruins – Rune Circle: a circle of glowing runes",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
+  "secondary_mechanics": [
+    "Limited action budget",
+    "Mini-tutorial pop-ups",
+    "Reduced-motion and color-blind-safe UI"
+  ],
+  "player_objective": "Declare float: declare resource as float, apply resource + 15.5, and print each result with %.1f. Dataset 2 starts with [-15, 0, 15, 15]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
+  "difficulty": "Standard",
+  "estimated_play_time_minutes": 7,
+  "learning_alignment": "CP1 Week 7: Declare float",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
+  "unique_identity_key": "W7-M11-X3-T03-a3ec3a19",
+  "duplicate_check_notes": "Unique combination of primary mechanic 'Comprehension Lab' (Week 7 slot 11), mission type 'Efficiency Trial', and setting 'Rune Circle'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
+  "week": 7,
+  "level": 7,
+  "trial": 1,
+  "topic": "Basic Parts of C and Variable Declarations",
+  "region": {
+    "id": "w7_ruins",
+    "name": "Eldritch Ruins",
+    "banner": "data/fallback_pool/week_7/w7_ruins.png",
+    "mood": "eerie choir pads and stone-scrape stings"
+  },
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nfloat resource = readInput();\nresource = resource + 15.5;\nprintf(\"%.1f\\n\", resource);\nreturn 0;\n}",
+  "game_settings": {
+    "lives": 3,
+    "hint_count": 2,
+    "time_limit_seconds": 0,
+    "target_score": 340,
+    "action_budget": 17,
+    "streak_target": 10,
+    "rival_speed": 0.95,
+    "enemy_wave_count": 4,
+    "enemy_attack_interval_seconds": 1.8,
+    "starting_score": 0
+  },
+  "tutorial": [
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level7/standard/game_week7_level7_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_1991",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the spirit lantern using at most 17 actions, so every code step counts.",
+  "source_win_condition": "The spirit lantern reached with actions_used <= 17.",
+  "source_lose_condition": "actions_used exceeds 17 before the spirit lantern is reached, or lives reach 0.",
+  "source_game_title": "Comprehension Lab – Rune Circle Trial",
+  "source_primary_mechanic": "Comprehension Lab",
+  "hint": "Declare before use. float resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w7_l7",
+  "source_week": 7,
+  "source_level": 7,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 7,
+        "level": 7,
+        "source_week": 7,
+        "source_level": 7,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w7_l7",
+        "difficulty": "standard",
+        "mechanic_family": "terminal",
+        "required_c_type": "float"
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          0,
+          15
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "fce4b782bc424b14a2c93e6023cc65c94116a02e556f54cdfbace1af0741f75f",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "79f95c42083a228741f1ad1101ea6c5f95a6bf0f1442101897efed569237fa8d",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 3,
+      "frames": 16,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793276607.6160102,
+    "origin": "ollama",
+    "job_id": "6f5442201018cf90a0849fa78dded68154d3243611d1f9b981ee6c42ca977025",
+    "replaces_revision": "e2663928bcb016cea33039eadc73045ed3ae31ee6149371c10be6c812d787c57"
+  }
+}

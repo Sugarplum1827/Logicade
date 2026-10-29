@@ -1,30 +1,30 @@
 {
   "file_id": "game_1671",
-  "game_title": "Helper Factory – Frozen Well Rush",
+  "game_title": "Formatted output · variation 1",
   "game_concept": "A speed quiz set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Helper Factory: Refactor repeated code into helper functions to save time during a rush.",
-  "genre": "speed quiz",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Frozen Well: a frozen village well",
-  "core_gameplay_loop": "In Frozen Well, repeat each round: Refactor repeated code into helper functions to save time during a rush. Each round, a new firewood challenge appears; solve it to bank points before time drains. Then check the refactor_score value and advance.",
-  "primary_mechanic": "Helper Factory",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Ghost replay of best run",
     "Combo multiplier"
   ],
-  "player_objective": "Collect 390 points of firewood by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 390 within 36 seconds.",
-  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "player_objective": "Maze 1 (19×15, 49 junctions): collect 1 crystal(s) from the branches and reach beacon (1, 3). Use a C main program to Formatted output. Print [13]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Helper Factory",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Formatted output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M06-X2-T07-404e1c33",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Helper Factory' (Week 6 slot 6), mission type 'Resource Rush', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 6,
   "trial": 1,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 390,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how refactor_score changes.",
-    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
-    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level6/advanced/game_week6_level6_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_1671",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 390 points of firewood by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 390 within 36 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "source_game_title": "Helper Factory – Frozen Well Rush",
+  "source_primary_mechanic": "Helper Factory",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w6_l6",
+  "source_week": 6,
+  "source_level": 6
 }

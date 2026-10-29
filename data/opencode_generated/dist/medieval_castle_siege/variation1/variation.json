@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "13_medieval_castle_siege",
+  "slug": "medieval_castle_siege",
+  "display_name": "Medieval Castle Siege",
+  "module_family": "tactical_siege",
+  "learning_target": "flowchart commands and sequence",
+  "core_brief": "Use flowchart commands to direct archers and protect the castle gate through enemy waves.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "siege",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Lane defense",
+  "accent": "#ffcf5c",
+  "tint": 12048106,
+  "variation_id": "13_medieval_castle_siege_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 3592185036,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.bush",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.bush"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/medieval_castle_siege.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

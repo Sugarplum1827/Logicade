@@ -1,0 +1,556 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v01",
+    "index": 1,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the assignment that calculates the rectangle area.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "area"
+        },
+        {
+          "id": "t2",
+          "text": "="
+        },
+        {
+          "id": "t3",
+          "text": "width"
+        },
+        {
+          "id": "t4",
+          "text": "*"
+        },
+        {
+          "id": "t5",
+          "text": "height"
+        },
+        {
+          "id": "t6",
+          "text": "+"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The area of a rectangle is width times height; the result is stored in area.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v02",
+    "index": 2,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the straight-line area flowchart.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 8
+        },
+        {
+          "id": "width",
+          "label": "Read width",
+          "kind": "io",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "id": "height",
+          "label": "Read height",
+          "kind": "io",
+          "x": 50,
+          "y": 36
+        },
+        {
+          "id": "area",
+          "label": "area = width × height",
+          "kind": "process",
+          "x": 50,
+          "y": 52
+        },
+        {
+          "id": "print",
+          "label": "Print area",
+          "kind": "io",
+          "x": 50,
+          "y": 70
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 86
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "width"
+        ],
+        [
+          "width",
+          "height"
+        ],
+        [
+          "height",
+          "area"
+        ],
+        [
+          "area",
+          "print"
+        ],
+        [
+          "print",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "A sequence has one path: start, read, calculate, print, end.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v03",
+    "index": 3,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to walk the straight-line route.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 5,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 0,
+        "dir": 1
+      },
+      "goal": {
+        "x": 4,
+        "y": 3
+      },
+      "walls": [
+        {
+          "x": 1,
+          "y": 1
+        },
+        {
+          "x": 3,
+          "y": 1
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 12
+    },
+    "explanation": "The robot follows one ordered route, just like a sequence flowchart.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v04",
+    "index": 4,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What does the procedure print when width = 4 and height = 5?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "READ width",
+        "READ height",
+        "area = width * height",
+        "PRINT area"
+      ],
+      "answer": "20",
+      "accept": [
+        "20"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "4 × 5 = 20."
+    },
+    "explanation": "4 × 5 = 20.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v05",
+    "index": 5,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the rectangle procedure.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "READ width",
+        "READ height",
+        "area = width * height",
+        "PRINT area"
+      ],
+      "variables": [
+        "width",
+        "height",
+        "area"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "width": "4",
+            "height": "5",
+            "area": ""
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "width": "4",
+            "height": "5",
+            "area": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "width": "4",
+            "height": "5",
+            "area": "20"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "width": "4",
+            "height": "5",
+            "area": "20"
+          }
+        }
+      ],
+      "ask": [
+        "width",
+        "height",
+        "area"
+      ],
+      "answer": {
+        "width": "4",
+        "height": "5",
+        "area": "20"
+      },
+      "hint": ""
+    },
+    "explanation": "The multiplication stores 20 in area before the print step.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v06",
+    "index": 6,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the straight-line procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "READ width",
+        "READ height",
+        "area = width + height",
+        "PRINT area",
+        "END"
+      ],
+      "answer": 2,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "The area of a rectangle uses multiplication, not addition.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v07",
+    "index": 7,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each sequence term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Sequence"
+        },
+        {
+          "id": "l2",
+          "text": "Start terminal"
+        },
+        {
+          "id": "l3",
+          "text": "Process box"
+        },
+        {
+          "id": "l4",
+          "text": "Flow line"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Steps run one after another"
+        },
+        {
+          "id": "r2",
+          "text": "The entry point of the flowchart"
+        },
+        {
+          "id": "r3",
+          "text": "A calculation or action"
+        },
+        {
+          "id": "r4",
+          "text": "An arrow showing the next step"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "A sequence has one entry, one exit, and no branching.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v08",
+    "index": 8,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each step into the input, process, or output part of the sequence.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "input",
+          "label": "Input",
+          "desc": "Read data into the program"
+        },
+        {
+          "id": "process",
+          "label": "Process",
+          "desc": "Calculate or change data"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Display a result"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Read width",
+          "bin": "input"
+        },
+        {
+          "id": "i2",
+          "text": "Read height",
+          "bin": "input"
+        },
+        {
+          "id": "i3",
+          "text": "area = width * height",
+          "bin": "process"
+        },
+        {
+          "id": "i4",
+          "text": "Print area",
+          "bin": "output"
+        },
+        {
+          "id": "i5",
+          "text": "Print width",
+          "bin": "output"
+        },
+        {
+          "id": "i6",
+          "text": "area = area + 1",
+          "bin": "process"
+        }
+      ]
+    },
+    "explanation": "The two reads are input, the multiplication is process, and the prints are output.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v09",
+    "index": 9,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the area pseudocode.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "READ {{b0}}",
+        "READ height",
+        "{{b1}} = width * height",
+        "PRINT {{b2}}",
+        "END"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "first measurement",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "result variable",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "value to display",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "width"
+        },
+        {
+          "id": "b2",
+          "text": "area"
+        },
+        {
+          "id": "b3",
+          "text": "area"
+        },
+        {
+          "id": "b4",
+          "text": "width"
+        },
+        {
+          "id": "b5",
+          "text": "area"
+        },
+        {
+          "id": "b6",
+          "text": "height"
+        }
+      ]
+    },
+    "explanation": "Width and height are read, then multiplied and stored in area.",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_sequence_v10",
+    "index": 10,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of flowchart sequence in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the flowchart"
+        },
+        {
+          "id": "s2",
+          "text": "Read the width"
+        },
+        {
+          "id": "s3",
+          "text": "Read the height"
+        },
+        {
+          "id": "s4",
+          "text": "Multiply width by height"
+        },
+        {
+          "id": "s5",
+          "text": "Display the area"
+        },
+        {
+          "id": "s6",
+          "text": "End the flowchart"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "explanation": "Correct order: Start the flowchart → Read the width → Read the height → Multiply width by height → Display the area → End the flowchart",
+    "concept_slug": "flowchart_sequence",
+    "concept_name": "Flowchart Sequence"
+  }
+]

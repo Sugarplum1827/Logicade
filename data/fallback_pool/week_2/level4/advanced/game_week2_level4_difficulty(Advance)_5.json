@@ -1,30 +1,30 @@
 {
   "file_id": "game_0415",
-  "game_title": "Input Interpreter – Smoke Ridge Race",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A racing platformer set in Mt. Pyre – Smoke Ridge, a ridge shrouded in ash: the ember mage must handle smoke serpents while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
-  "core_gameplay_loop": "In Smoke Ridge, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round the rival advances, and solving the step moves the ember mage ahead. Then check the trust value and advance.",
-  "primary_mechanic": "Input Interpreter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Live variable watch panel",
     "Combo multiplier"
   ],
-  "player_objective": "Beat a rival AI to the magma valve by solving code steps involving trust that move the ember mage forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > 0; otherwise display At or below. Test dataset 5: {'n': -2}; {'n': 3}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Input Interpreter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M10-X5-T11-7f947933",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Rival Race', and setting 'Smoke Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trust changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Smoke Ridge.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/advanced/game_week2_level4_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_0415",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the magma valve by solving code steps involving trust that move the ember mage forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "source_game_title": "Input Interpreter – Smoke Ridge Race",
+  "source_primary_mechanic": "Input Interpreter",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2514",
-  "game_title": "Edge Case Hunter – Cactus Flats Rush",
+  "game_title": "Examination practice · Branch Assembly 4 · Separate Outputs",
   "game_concept": "A speed quiz set in Sand Dunes – Cactus Flats, flats of tall cacti: the sand ranger must handle dust devils while practicing debugging & combined skills. Core idea – Edge Case Hunter: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code.",
-  "genre": "speed quiz",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Cactus Flats: flats of tall cacti",
-  "core_gameplay_loop": "In Cactus Flats, repeat each round: Find inputs like 0, empty lists, and negative numbers that break otherwise correct code. Each round, a new dates challenge appears; solve it to bank points before time drains. Then check the edge_cases value and advance.",
-  "primary_mechanic": "Edge Case Hunter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Collect 290 points of dates by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 290 within 31 seconds.",
-  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "player_objective": "Week 5 examination practice: Build and verify a source file: build a valid C source file that prints 17. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 5. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 15 components (7 upper, 8 lower). Set the gold-socket controller batch to 15.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Edge Case Hunter",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M09-X2-T04-00193c48",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Edge Case Hunter' (Week 9 slot 9), mission type 'Resource Rush', and setting 'Cactus Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 4,
   "trial": 4,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how edge_cases changes.",
-    "Step 2: Use the controls to apply the code idea against dust devils in Cactus Flats.",
-    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level4/advanced/game_week9_level4_difficulty(Advance)_4.json",
+    "variation_id": "canvas_game_2514",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 290 points of dates by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 290 within 31 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "source_game_title": "Edge Case Hunter – Cactus Flats Rush",
+  "source_primary_mechanic": "Edge Case Hunter",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 7 components via upper_4, upper_6 to output_upper; ELSE: 8 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

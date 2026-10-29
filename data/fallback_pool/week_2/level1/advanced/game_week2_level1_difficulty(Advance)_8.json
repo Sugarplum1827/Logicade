@@ -1,30 +1,30 @@
 {
   "file_id": "game_0328",
-  "game_title": "Rounding Range – Crater Lake Edge Trial",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A puzzle set in Mt. Pyre – Crater Lake Edge, the edge of a glowing crater: the lava scout must handle lava imps while practicing data types & operators. Core idea – Rounding Range: Use round() and abs() to snap messy measurements into valid slots.",
-  "genre": "puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Crater Lake Edge: the edge of a glowing crater",
-  "core_gameplay_loop": "In Crater Lake Edge, repeat each round: Use round() and abs() to snap messy measurements into valid slots. Each round costs one action, so plan the step so none are wasted. Then check the slot_matches value and advance.",
-  "primary_mechanic": "Rounding Range",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Limited undo button",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Reach the smelter using at most 10 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The smelter reached with actions_used <= 10.",
-  "lose_condition": "actions_used exceeds 10 before the smelter is reached, or lives reach 0.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 8: {'a': 8, 'b': 10}; {'a': 0, 'b': 16}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Rounding Range",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Symbols and sequence",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M13-X3-T06-b01a856f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rounding Range' (Week 2 slot 13), mission type 'Efficiency Trial', and setting 'Crater Lake Edge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 1,
   "trial": 8,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how slot_matches changes.",
-    "Step 2: Use the controls to apply the code idea against lava imps in Crater Lake Edge.",
-    "Step 3: Win by meeting the goal: The smelter reached with actions_used <= 10."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level1/advanced/game_week2_level1_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_0328",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the smelter using at most 10 actions, so every code step counts.",
+  "source_win_condition": "The smelter reached with actions_used <= 10.",
+  "source_lose_condition": "actions_used exceeds 10 before the smelter is reached, or lives reach 0.",
+  "source_game_title": "Rounding Range – Crater Lake Edge Trial",
+  "source_primary_mechanic": "Rounding Range",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w2_l1",
+  "source_week": 2,
+  "source_level": 1
 }

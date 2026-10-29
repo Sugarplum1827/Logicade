@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "23_magic_spell_caster",
+  "slug": "magic_spell_caster",
+  "display_name": "Magic Spell Caster",
+  "module_family": "spell_sequence",
+  "learning_target": "syntax structure and command matching",
+  "core_brief": "Assemble syntax-based incantations to cast the correct spell for each obstacle.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "magic",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "mechanic": "Sequence solver",
+  "accent": "#ffcf5c",
+  "tint": 15382494,
+  "variation_id": "23_magic_spell_caster_v05",
+  "index": 5,
+  "title": "Central Arena",
+  "label": "Variation 05: Central Arena",
+  "seed": 1750657786,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "star"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 4
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.mine",
+      "slime": "themes.tower_defense.rock",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "brief": {
+    "map": "Build a compact arena with a central objective and three distinct approach lanes. The player must respond to a readable sequence of short waves.",
+    "obstacles": "lane-specific hazards and a central objective meter; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "three escalating waves with a short breath between waves."
+  },
+  "question_bank": "../../data/questions/magic_spell_caster.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

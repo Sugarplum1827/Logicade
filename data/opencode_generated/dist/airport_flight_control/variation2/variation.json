@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "37_airport_flight_control",
+  "slug": "airport_flight_control",
+  "display_name": "Airport Flight Control",
+  "module_family": "queue_management",
+  "learning_target": "queues and sequencing",
+  "core_brief": "Use queues and sequencing to guide arrivals to safe runways in order.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "airport",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "System builder",
+  "accent": "#4fd1c5",
+  "tint": 12695530,
+  "variation_id": "37_airport_flight_control_v02",
+  "index": 2,
+  "title": "Loopback Circuit",
+  "label": "Variation 02: Loopback Circuit",
+  "seed": 3133599663,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "loop"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_dusk",
+    "zones": [
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day"
+    ],
+    "tile": "themes.urban.tile_sidewalk",
+    "player": "themes.urban.player_b",
+    "enemy": "themes.urban.enemy_b",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree",
+      "bush": "themes.urban.tree",
+      "slime": "themes.urban.tree_b",
+      "bee": "themes.urban.tree"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a looping route that returns to one earlier landmark before reaching the exit. Make the repeated section change state after each successful answer.",
+    "obstacles": "repeat hazards, loop gates, and one changing checkpoint; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "steady rhythm with a faster second pass."
+  },
+  "question_bank": "../../data/questions/airport_flight_control.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

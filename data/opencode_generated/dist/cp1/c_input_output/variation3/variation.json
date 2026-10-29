@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_17_c_input_output",
+  "slug": "c_input_output",
+  "display_name": "C Input and Output",
+  "learning_target": "read input with scanf and print with printf",
+  "core_brief": "scanf reads formatted input into a variable address; printf writes formatted output.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 5,
+  "unit": "C Components",
+  "group": "code",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_2",
+    "zones": [
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3",
+      "themes.pirate.bg_sea_1"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_green",
+    "enemy": "themes.pirate.enemy_shark",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_flag",
+    "obstacles": {
+      "spike": "themes.pirate.nest",
+      "bush": "themes.pirate.cannon",
+      "slime": "themes.pirate.cannon",
+      "bee": "themes.pirate.nest"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#ffcf5c",
+  "variation_id": "cp1_17_c_input_output_v03",
+  "index": 3,
+  "challenge_index": 3,
+  "challenge_id": "c_input_output_v03",
+  "title": "Trace the output",
+  "label": "Lab 03: Trace the output",
+  "seed": 530167765,
+  "challenge_bank": "../../../data/cp1/challenges/c_input_output.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

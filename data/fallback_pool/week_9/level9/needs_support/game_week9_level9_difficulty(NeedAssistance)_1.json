@@ -1,30 +1,30 @@
 {
   "file_id": "game_2641",
-  "game_title": "Syntax Sweep – Merchant Waystation Rush",
+  "game_title": "Examination practice · Branch Assembly 1 · Separate Outputs",
   "game_concept": "A arcade set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
-  "genre": "arcade",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round, a new trade goods challenge appears; solve it to bank points before time drains. Then check the syntax_errors value and advance.",
-  "primary_mechanic": "Syntax Sweep",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Collect 290 points of trade goods by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 290 within 76 seconds.",
-  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "player_objective": "Week 5 examination practice: Source organization: build a valid C source file that prints 12. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 12 components (6 upper, 6 lower). Set the gold-socket controller batch to 12.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 9 (extended tier): Syntax Sweep",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Source organization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M01-X2-T17-3fe1aa3c",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Resource Rush', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 9,
   "trial": 1,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: score >= 290 within 76 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level9/needs_support/game_week9_level9_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_2641",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 290 points of trade goods by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 290 within 76 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "source_game_title": "Syntax Sweep – Merchant Waystation Rush",
+  "source_primary_mechanic": "Syntax Sweep",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 6 components via upper_4, upper_6 to output_upper; B: 6 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w5_l9",
+  "source_week": 5,
+  "source_level": 9
 }

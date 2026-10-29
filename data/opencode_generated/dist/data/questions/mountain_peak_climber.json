@@ -1,0 +1,79 @@
+{
+  "concept_id": "42_mountain_peak_climber",
+  "slug": "mountain_peak_climber",
+  "learning_target": "loop iterations and bounds",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a loop iteration?",
+      "options": [
+        "A type of rope",
+        "The final peak",
+        "One pass through the loop",
+        "A checkpoint"
+      ],
+      "answer_index": 2,
+      "explanation": "Each execution of the loop body is one iteration."
+    },
+    {
+      "id": "q2",
+      "question": "How many steps does `for i in range(4):` take?",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "5"
+      ],
+      "answer_index": 0,
+      "explanation": "range(4) produces four iterations."
+    },
+    {
+      "id": "q3",
+      "question": "What happens if the loop bound is too low?",
+      "options": [
+        "You fall",
+        "Nothing happens",
+        "You climb forever",
+        "You stop before the goal"
+      ],
+      "answer_index": 3,
+      "explanation": "Too few iterations leave the climb short of the target."
+    },
+    {
+      "id": "q4",
+      "question": "What is a safe stopping point?",
+      "options": [
+        "A random ledge",
+        "The steepest slope",
+        "The edge of a cliff",
+        "A checkpoint"
+      ],
+      "answer_index": 3,
+      "explanation": "A checkpoint is a designed, safe place to pause."
+    },
+    {
+      "id": "q5",
+      "question": "Why check the bound before climbing?",
+      "options": [
+        "To make the mountain taller",
+        "To ensure enough steps",
+        "To avoid checkpoints",
+        "To change the weather"
+      ],
+      "answer_index": 1,
+      "explanation": "Checking the bound confirms the plan has enough iterations to reach the goal."
+    },
+    {
+      "id": "q6",
+      "question": "What is an off-by-one error?",
+      "options": [
+        "A type of rope",
+        "A weather change",
+        "A loop that runs one too many or too few times",
+        "A missing mountain"
+      ],
+      "answer_index": 2,
+      "explanation": "An off-by-one error is a boundary mistake of exactly one step."
+    }
+  ]
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0445",
-  "game_title": "Input Interpreter – Pumice Pass Rush",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A arcade set in Mt. Pyre – Pumice Pass, a narrow pumice pass: the fire warden must handle molten golems while practicing data types & operators. Core idea – Input Interpreter: Read simulated input() answers from villagers, cast them, and respond correctly.",
-  "genre": "arcade",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Pumice Pass: a narrow pumice pass",
-  "core_gameplay_loop": "In Pumice Pass, repeat each round: Read simulated input() answers from villagers, cast them, and respond correctly. Each round, a new sulfur crystals challenge appears; solve it to bank points before time drains. Then check the trust value and advance.",
-  "primary_mechanic": "Input Interpreter",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 340 points of sulfur crystals by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 34 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score >= 20; otherwise display Retry. Test both branches and the boundary. Problem values 15, 5; test inputs [{'score': 19}, {'score': 20}, {'score': 21}, {'score': -15}, {'score': 0}, {'score': 15}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Input Interpreter",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M10-X2-T13-f6bc2fc8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Input Interpreter' (Week 2 slot 10), mission type 'Resource Rush', and setting 'Pumice Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,71 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trust changes.",
-    "Step 2: Use the controls to apply the code idea against molten golems in Pumice Pass.",
-    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/advanced/game_week2_level5_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_0445",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of sulfur crystals by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 34 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Input Interpreter – Pumice Pass Rush",
+  "source_primary_mechanic": "Input Interpreter",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 5,
+        "source_week": 2,
+        "source_level": 5,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l5",
+        "difficulty": "advanced",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          0,
+          15
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "23b1269f9f1990623ff5aa5bb17dc158d16cd5f3e906dd951659c108f9cbc07b",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "ed8c21528268619a928a5653c8f32266429a0fb4fc66af3f0f318d05900cb221",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 6,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793296568.5903695,
+    "origin": "ollama",
+    "job_id": "3a6a1335c5cdfa4506ddf1cc951293ffd1dbb45827c0bd83b9770bb7005b056a",
+    "replaces_revision": "00045be49d3b2eb1de938126247d817e7ae3c88276337075bdb5e04f3673b8de"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-10-29T17:56:08.590369+00:00"
 }

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0338",
-  "game_title": "Type Cast Forge – Geyser Flats Streak",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A rhythm puzzle set in Mt. Pyre – Geyser Flats, erupting geyser flats: the lava scout must handle fire sprites while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
-  "genre": "rhythm puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
-  "core_gameplay_loop": "In Geyser Flats, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round poses one decision; a wrong answer breaks the streak. Then check the forge_heat value and advance.",
-  "primary_mechanic": "Type Cast Forge",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 6 consecutive correct decisions about forge_heat to power up the lava scout and open the forge anvil.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 6.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read value for station 8, then display the same value without changing it. Test dataset 8: {'value': -8}; {'value': 24}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Type Cast Forge",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M08-X4-T12-7bb1b4d4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Streak Challenge', and setting 'Geyser Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 8,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how forge_heat changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Geyser Flats.",
-    "Step 3: Win by meeting the goal: streak counter reaches 6."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/needs_support/game_week2_level2_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_0338",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 6 consecutive correct decisions about forge_heat to power up the lava scout and open the forge anvil.",
+  "source_win_condition": "streak counter reaches 6.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Type Cast Forge – Geyser Flats Streak",
+  "source_primary_mechanic": "Type Cast Forge",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

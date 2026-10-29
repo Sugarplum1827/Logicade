@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "33_eco_park_conservation",
+  "slug": "eco_park_conservation",
+  "display_name": "Eco-Park Conservation",
+  "module_family": "ecosystem_simulation",
+  "learning_target": "flowcharts and systems reasoning",
+  "core_brief": "Use flowchart choices to balance habitats and keep wildlife needs in range.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "eco",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "System builder",
+  "accent": "#ffcf5c",
+  "tint": 15133367,
+  "variation_id": "33_eco_park_conservation_v07",
+  "index": 7,
+  "title": "Moving Corridor",
+  "label": "Variation 07: Moving Corridor",
+  "seed": 2505976886,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 25,
+    "approach_s": 18,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_1",
+    "zones": [
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_bucket",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.wheat",
+      "bush": "themes.farm.rock",
+      "slime": "themes.farm.bush",
+      "bee": "themes.farm.fence"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a forward-moving corridor in which the route scrolls continuously. Keep answer UI stationary and pause movement while the learner reads or submits an answer.",
+    "obstacles": "moving barriers, timed openings, and safe waiting bays; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "smooth continuous travel interrupted by answer pauses."
+  },
+  "question_bank": "../../data/questions/eco_park_conservation.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

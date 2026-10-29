@@ -1,30 +1,30 @@
 {
   "file_id": "game_1466",
-  "game_title": "Max Finder Derby – Bramble Maze Trial",
+  "game_title": "Branch Assembly 6 · Merge Endpoint",
   "game_concept": "A logic puzzle set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Max Finder Derby: Track the biggest value seen so far while looping over contestants.",
-  "genre": "logic puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
-  "core_gameplay_loop": "In Bramble Maze, repeat each round: Track the biggest value seen so far while looping over contestants. Each round costs one action, so plan the step so none are wasted. Then check the best value and advance.",
-  "primary_mechanic": "Max Finder Derby",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Live variable watch panel",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Reach the root gate using at most 14 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The root gate reached with actions_used <= 14.",
-  "lose_condition": "actions_used exceeds 14 before the root gate is reached, or lives reach 0.",
+  "player_objective": "Source organization: build a valid C source file that prints 26. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 6. IF item value >= 18, send north to the upper branch; ELSE send south to the lower branch. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 13 components (7 upper, 6 lower). Set the gold-socket controller batch to 13.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Max Finder Derby",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Source organization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M11-X3-T08-3a046c42",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Max Finder Derby' (Week 5 slot 11), mission type 'Efficiency Trial', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 9,
   "trial": 6,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 43,
+    "time_limit_seconds": 0,
     "target_score": 550,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how best changes.",
-    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
-    "Step 3: Win by meeting the goal: The root gate reached with actions_used <= 14."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level9/advanced/game_week5_level9_difficulty(Advance)_6.json",
+    "variation_id": "canvas_game_1466",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the root gate using at most 14 actions, so every code step counts.",
+  "source_win_condition": "The root gate reached with actions_used <= 14.",
+  "source_lose_condition": "actions_used exceeds 14 before the root gate is reached, or lives reach 0.",
+  "source_game_title": "Max Finder Derby – Bramble Maze Trial",
+  "source_primary_mechanic": "Max Finder Derby",
+  "hint": "IF item value >= 18, send north to the upper branch; ELSE send south to the lower branch. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: IF: 7 components via upper_4, upper_6 to output_shared; ELSE: 6 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 43,
+  "learning_objective_id": "cp1_w5_l9",
+  "source_week": 5,
+  "source_level": 9
 }

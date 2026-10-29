@@ -1,30 +1,30 @@
 {
   "file_id": "game_0880",
-  "game_title": "Discount Rules – Lighthouse Point Defense",
+  "game_title": "Algorithm synthesis · variation 10",
   "game_concept": "A tower defense set in Coastal Port – Lighthouse Point, the lighthouse on the point: the harbor master must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
-  "genre": "tower defense",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Lighthouse Point: the lighthouse on the point",
-  "core_gameplay_loop": "In Lighthouse Point, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round, rogue waves strike the harbor gate, so respond before the next strike lands. Then check the profit value and advance.",
-  "primary_mechanic": "Discount Rules",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Protect the harbor gate from rogue waves in Lighthouse Point: keep the profit meter above zero by applying the concept correctly until the 80-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 80 seconds while profit > 0.",
-  "lose_condition": "profit drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "player_objective": "Algorithm synthesis: square each value. Match all 3 streams; preserve their order. Dataset 10, operand 21.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 10 (extended tier): Discount Rules",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M10-X1-T02-9ac1b7e7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Survival Siege', and setting 'Lighthouse Point'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 10,
   "trial": 10,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 80,
+    "time_limit_seconds": 0,
     "target_score": 320,
     "action_budget": 23,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against rogue waves in Lighthouse Point.",
-    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while profit > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level10/needs_support/game_week3_level10_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_0880",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the harbor gate from rogue waves in Lighthouse Point: keep the profit meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "source_win_condition": "Timer reaches 80 seconds while profit > 0.",
+  "source_lose_condition": "profit drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "source_game_title": "Discount Rules – Lighthouse Point Defense",
+  "source_primary_mechanic": "Discount Rules",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 80,
+  "learning_objective_id": "cp1_w3_l10",
+  "source_week": 3,
+  "source_level": 10
 }

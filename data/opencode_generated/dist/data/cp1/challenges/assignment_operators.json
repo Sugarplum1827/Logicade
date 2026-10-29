@@ -1,0 +1,513 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v01",
+    "index": 1,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the intermediate and final scores.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score += 5;",
+        "    score *= 2;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "score",
+          "type": "final value"
+        },
+        {
+          "name": "after_add",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "30"
+        },
+        {
+          "id": "v2",
+          "text": "15"
+        },
+        {
+          "id": "v3",
+          "text": "31"
+        },
+        {
+          "id": "v4",
+          "text": "29"
+        },
+        {
+          "id": "v5",
+          "text": "16"
+        }
+      ],
+      "answer": {
+        "score": "v1",
+        "after_add": "v2"
+      }
+    },
+    "explanation": "The addition produces 15; multiplication then doubles it to 30.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v02",
+    "index": 2,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each statement as a correct or incorrect compound assignment.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "correct",
+          "label": "Correct",
+          "desc": "Updates the variable as intended"
+        },
+        {
+          "id": "incorrect",
+          "label": "Incorrect",
+          "desc": "Does not add to the variable"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "score += 5;",
+          "bin": "correct"
+        },
+        {
+          "id": "i2",
+          "text": "score -= 2;",
+          "bin": "correct"
+        },
+        {
+          "id": "i3",
+          "text": "score *= 2;",
+          "bin": "correct"
+        },
+        {
+          "id": "i4",
+          "text": "score =+ 5;",
+          "bin": "incorrect"
+        },
+        {
+          "id": "i5",
+          "text": "score = -2;",
+          "bin": "incorrect"
+        },
+        {
+          "id": "i6",
+          "text": "score == 5;",
+          "bin": "incorrect"
+        }
+      ]
+    },
+    "explanation": "The compound operators are +=, -=, and *=; =+ assigns a positive value.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v03",
+    "index": 3,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int score = 10;",
+        "score =+ 5;",
+        "printf(\"%d\\n\", score);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "=+ is parsed as assigning positive 5, not as adding 5. Use +=.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v04",
+    "index": 4,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the expression.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int score = 10;",
+        "    score += 5;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "The named score variable"
+        },
+        {
+          "id": "expression",
+          "label": "Expression scope",
+          "desc": "The value added on the right"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int score = 10;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "score += 5;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "5 in score += 5",
+          "scope": "expression"
+        },
+        {
+          "id": "d4",
+          "text": "score after the update",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "score persists in main; 5 is just the right-hand operand.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v05",
+    "index": 5,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each assignment operators term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "="
+        },
+        {
+          "id": "l2",
+          "text": "+="
+        },
+        {
+          "id": "l3",
+          "text": "-="
+        },
+        {
+          "id": "l4",
+          "text": "*="
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Assign the right side"
+        },
+        {
+          "id": "r2",
+          "text": "Add and assign"
+        },
+        {
+          "id": "r3",
+          "text": "Subtract and assign"
+        },
+        {
+          "id": "r4",
+          "text": "Multiply and assign"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v06",
+    "index": 6,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the score updates.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int score = 10;",
+        "score {{b0}} 5;",
+        "score {{b1}} 2;",
+        "printf(\"%d\\n\", score);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "add-and-assign operator",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "multiply-and-assign operator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "+="
+        },
+        {
+          "id": "b2",
+          "text": "*="
+        },
+        {
+          "id": "b3",
+          "text": "=+"
+        },
+        {
+          "id": "b4",
+          "text": "=-"
+        },
+        {
+          "id": "b5",
+          "text": "=="
+        }
+      ]
+    },
+    "explanation": "+= 5 makes 15, then *= 2 makes 30.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v07",
+    "index": 7,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score += 5;",
+        "    score *= 2;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "30",
+      "accept": [
+        "30"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "score becomes 15 after += 5, then doubles to 30."
+    },
+    "explanation": "The program produces 30.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v08",
+    "index": 8,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 10;",
+        "    score += 5;",
+        "    score *= 2;",
+        "    printf(\"%d\\n\", score);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "score",
+        "after_add"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "score": "10",
+            "after_add": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "score": "15",
+            "after_add": "15"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "score": "30",
+            "after_add": "15"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "after_add"
+      ],
+      "answer": {
+        "score": "30",
+        "after_add": "15"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is score = 30, after_add = 15.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v09",
+    "index": 9,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of assignment operators in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Read the current value of the variable"
+        },
+        {
+          "id": "s2",
+          "text": "Apply the operation on the right"
+        },
+        {
+          "id": "s3",
+          "text": "Store the result back in the same variable"
+        },
+        {
+          "id": "s4",
+          "text": "Continue with the updated value"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Read the current value of the variable → Apply the operation on the right → Store the result back in the same variable → Continue with the updated value",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "assignment_operators_v10",
+    "index": 10,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the compound assignment that adds 5 to score.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "score"
+        },
+        {
+          "id": "t2",
+          "text": "+="
+        },
+        {
+          "id": "t3",
+          "text": "5"
+        },
+        {
+          "id": "t4",
+          "text": ";"
+        },
+        {
+          "id": "t5",
+          "text": "=+"
+        },
+        {
+          "id": "t6",
+          "text": "=="
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "+= adds the right side to the variable and stores the result.",
+    "concept_slug": "assignment_operators",
+    "concept_name": "Assignment Operators"
+  }
+]

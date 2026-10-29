@@ -1,30 +1,30 @@
 {
   "file_id": "game_1945",
-  "game_title": "Reverse Parade – Glyph Corridor Rush",
+  "game_title": "Signed values · variation 5",
   "game_concept": "A arcade set in Eldritch Ruins – Glyph Corridor, a corridor of glyphs: the relic hunter must handle cursed statues while practicing lists. Core idea – Reverse Parade: Reverse the order of a parade list with reverse() or slicing.",
-  "genre": "arcade",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Glyph Corridor: a corridor of glyphs",
-  "core_gameplay_loop": "In Glyph Corridor, repeat each round: Reverse the order of a parade list with reverse() or slicing. Each round, a new chalk marks challenge appears; solve it to bank points before time drains. Then check the parade_ok value and advance.",
-  "primary_mechanic": "Reverse Parade",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 340 points of chalk marks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 34 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Signed values: declare resource as int, apply -resource, and print each result with %d. Dataset 5 starts with [-3, 0, 12, 15]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 5 (applied tier): Reverse Parade",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Signed values",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M10-X2-T13-50692d84",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Reverse Parade' (Week 7 slot 10), mission type 'Resource Rush', and setting 'Glyph Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 5,
   "trial": 5,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how parade_ok changes.",
-    "Step 2: Use the controls to apply the code idea against cursed statues in Glyph Corridor.",
-    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level5/advanced/game_week7_level5_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_1945",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of chalk marks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 34 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Reverse Parade – Glyph Corridor Rush",
+  "source_primary_mechanic": "Reverse Parade",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w7_l5",
+  "source_week": 7,
+  "source_level": 5
 }

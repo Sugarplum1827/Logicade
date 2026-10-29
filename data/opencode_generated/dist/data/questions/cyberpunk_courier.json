@@ -1,0 +1,79 @@
+{
+  "concept_id": "25_cyberpunk_courier",
+  "slug": "cyberpunk_courier",
+  "learning_target": "API endpoint concepts and data routing",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is an API endpoint?",
+      "options": [
+        "A type of package",
+        "A delivery truck",
+        "A password",
+        "A URL where a service receives requests"
+      ],
+      "answer_index": 3,
+      "explanation": "An endpoint is a specific address where an API accepts requests."
+    },
+    {
+      "id": "q2",
+      "question": "What does a GET request usually do?",
+      "options": [
+        "Encrypts a file",
+        "Retrieves data",
+        "Creates a user",
+        "Deletes data"
+      ],
+      "answer_index": 1,
+      "explanation": "GET is used to read or retrieve data from a server."
+    },
+    {
+      "id": "q3",
+      "question": "What does a POST request usually do?",
+      "options": [
+        "Changes the URL",
+        "Reads only",
+        "Sends data to create or update",
+        "Deletes everything"
+      ],
+      "answer_index": 2,
+      "explanation": "POST sends data to the server, often to create or update a resource."
+    },
+    {
+      "id": "q4",
+      "question": "What does status code 404 mean?",
+      "options": [
+        "Not found",
+        "Server error",
+        "Success",
+        "Unauthorized"
+      ],
+      "answer_index": 0,
+      "explanation": "404 means the requested resource could not be found."
+    },
+    {
+      "id": "q5",
+      "question": "Why validate a route before sending?",
+      "options": [
+        "To avoid delivering to the wrong endpoint",
+        "To slow the network",
+        "To make the package heavier",
+        "To change the city"
+      ],
+      "answer_index": 0,
+      "explanation": "Validating the endpoint prevents misdelivered or rejected requests."
+    },
+    {
+      "id": "q6",
+      "question": "What is a payload?",
+      "options": [
+        "The response time",
+        "The data sent in a request",
+        "The courier's name",
+        "The delivery address"
+      ],
+      "answer_index": 1,
+      "explanation": "The payload is the body of data carried by a request."
+    }
+  ]
+}

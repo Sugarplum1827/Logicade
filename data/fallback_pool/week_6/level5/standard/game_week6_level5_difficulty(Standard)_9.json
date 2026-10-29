@@ -1,30 +1,30 @@
 {
   "file_id": "game_1639",
-  "game_title": "Default Armory – Firewood Stacks Streak",
+  "game_title": "Integer expressions · variation 9",
   "game_concept": "A quiz RPG set in Snowy Hold – Firewood Stacks, towering firewood stacks: the frost mage must handle winter bandits while practicing functions. Core idea – Default Armory: Use default parameter values so the armory works even when arguments are missing.",
-  "genre": "quiz RPG",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Firewood Stacks: towering firewood stacks",
-  "core_gameplay_loop": "In Firewood Stacks, repeat each round: Use default parameter values so the armory works even when arguments are missing. Each round poses one decision; a wrong answer breaks the streak. Then check the armor value and advance.",
-  "primary_mechanic": "Default Armory",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Chain 9 consecutive correct decisions about armor to power up the frost mage and open the frozen well.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 9.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Maze 9 (17×11, 26 junctions): collect 1 crystal(s) from the branches and reach beacon (9, 9). Use a C main program to Integer expressions. Print [52]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Default Armory",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Integer expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M04-X4-T11-032814ad",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Default Armory' (Week 6 slot 4), mission type 'Streak Challenge', and setting 'Firewood Stacks'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 5,
   "trial": 9,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how armor changes.",
-    "Step 2: Use the controls to apply the code idea against winter bandits in Firewood Stacks.",
-    "Step 3: Win by meeting the goal: streak counter reaches 9."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level5/standard/game_week6_level5_difficulty(Standard)_9.json",
+    "variation_id": "canvas_game_1639",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 9 consecutive correct decisions about armor to power up the frost mage and open the frozen well.",
+  "source_win_condition": "streak counter reaches 9.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Default Armory – Firewood Stacks Streak",
+  "source_primary_mechanic": "Default Armory",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w6_l5",
+  "source_week": 6,
+  "source_level": 5
 }

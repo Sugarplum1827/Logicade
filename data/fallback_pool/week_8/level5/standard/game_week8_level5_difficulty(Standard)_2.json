@@ -1,41 +1,41 @@
 {
   "file_id": "game_2232",
-  "game_title": "Nested Registry – Wind Pass Rush",
+  "game_title": "C Scope Circuit · Shadow a global · variation 2",
   "game_concept": "A speed quiz set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
-  "genre": "speed quiz",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
-  "core_gameplay_loop": "In Wind Pass, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, a new pitons challenge appears; solve it to bank points before time drains. Then check the registry value and advance.",
-  "primary_mechanic": "Nested Registry",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Collect 260 points of pitons by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 260 within 42 seconds.",
-  "lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "player_objective": "Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, keep local assignments out of a global. Print the scope trace [10, 4], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 4}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 5 (applied tier): Nested Registry",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Shadow a global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M12-X2-T06-e87db5b7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Resource Rush', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 5,
   "trial": 2,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "town['inn']['rooms']",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 4;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 9; steps = steps + 1; printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how registry changes.",
-    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
-    "Step 3: Win by meeting the goal: score >= 260 within 42 seconds."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level5/standard/game_week8_level5_difficulty(Standard)_2.json",
+    "variation_id": "canvas_game_2232",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 260 points of pitons by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 260 within 42 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "source_game_title": "Nested Registry – Wind Pass Rush",
+  "source_primary_mechanic": "Nested Registry",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w8_l5",
+  "source_week": 8,
+  "source_level": 5,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "e2b32fe4aba34a5ed61d23a53204999929089e5cfe2781a20285b9a8a62cc265",
+    "lesson_unchanged": true
+  }
 }

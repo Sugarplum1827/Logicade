@@ -1,41 +1,41 @@
 {
   "file_id": "game_2157",
-  "game_title": "Nested Registry – Basecamp Ridge Rush",
+  "game_title": "C Scope Circuit · Main-local declarations · variation 7",
   "game_concept": "A speed quiz set in Frost Peaks – Basecamp Ridge, the basecamp on a ridge: the mountaineer must handle yetis while practicing strings & dictionaries. Core idea – Nested Registry: Navigate dictionaries inside dictionaries to find the right record.",
-  "genre": "speed quiz",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Basecamp Ridge: the basecamp on a ridge",
-  "core_gameplay_loop": "In Basecamp Ridge, repeat each round: Navigate dictionaries inside dictionaries to find the right record. Each round, a new oxygen tanks challenge appears; solve it to bank points before time drains. Then check the registry value and advance.",
-  "primary_mechanic": "Nested Registry",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Ghost replay of best run",
     "Combo multiplier"
   ],
-  "player_objective": "Collect 180 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 180 within 26 seconds.",
-  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "player_objective": "Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, declare a main-local alongside a global. Print the scope trace [12, 10], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 10}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): Nested Registry",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Main-local declarations",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M12-X2-T01-4c63fe24",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Nested Registry' (Week 8 slot 12), mission type 'Resource Rush', and setting 'Basecamp Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 2,
   "trial": 7,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "town['inn']['rooms']",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 10;\nint main(void)\n{\n  int signal = readInput();\nint local = 12;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 26,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how registry changes.",
-    "Step 2: Use the controls to apply the code idea against yetis in Basecamp Ridge.",
-    "Step 3: Win by meeting the goal: score >= 180 within 26 seconds."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level2/advanced/game_week8_level2_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_2157",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 180 points of oxygen tanks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 180 within 26 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "source_game_title": "Nested Registry – Basecamp Ridge Rush",
+  "source_primary_mechanic": "Nested Registry",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 26,
+  "learning_objective_id": "cp1_w8_l2",
+  "source_week": 8,
+  "source_level": 2,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "d154b04f389dd9bb2c6f7407c8c2490b89066091746d94141d1af94692b43999",
+    "lesson_unchanged": true
+  }
 }

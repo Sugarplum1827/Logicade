@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0649",
+  "variation_id": "canvas_game_0649",
+  "week": 3,
+  "level": 2,
+  "trial": 9,
+  "difficulty": "Standard",
+  "mode": "terminal",
+  "title": "Ordered operations · variation 9",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Tidepool Cove: a tidepool cove",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "Ordered operations"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Ordered operations",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 2,
+    "objective_id": "cp1_w3_l2",
+    "title": "Algorithms",
+    "stage_title": "Ordered operations",
+    "objectives": [
+      "Ordered operations"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l2",
+  "source_level": 2,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Ordered operations: add 13, then double. Match all 3 streams; preserve their order. Dataset 9, operand 13.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 2311691180,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      10,
+      7,
+      25,
+      7
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 0
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l2_v9_1",
+    "rules": {
+      "max_steps": 560,
+      "max_lines": 50,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 1,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l2",
+    "source_level": 2,
+    "focus": "Ordered operations",
+    "family": "terminal",
+    "title": "Ordered operations · variation 9",
+    "objective": "Ordered operations: add 13, then double. Match all 3 streams; preserve their order. Dataset 9, operand 13.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          0,
+          3,
+          2,
+          12,
+          -1
+        ],
+        "expected": [
+          26,
+          32,
+          30,
+          50,
+          24
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          10,
+          12,
+          -5,
+          -3,
+          1
+        ],
+        "expected": [
+          46,
+          50,
+          16,
+          20,
+          28
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          4,
+          5,
+          1,
+          8,
+          -1
+        ],
+        "expected": [
+          34,
+          36,
+          28,
+          42,
+          24
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nADD 13\nMUL 2\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l2_v9_1",
+      "kind": "program_execution",
+      "prompt": "Ordered operations: add 13, then double. Match all 3 streams; preserve their order. Dataset 9, operand 13."
+    }
+  ],
+  "source_path": "week_3/level2/standard/game_week3_level2_difficulty(Standard)_9.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Ordered operations",
+  "source_primary_mechanic": "And/Or Locks",
+  "source_code_snippet": "if red and (blue or green):"
+}

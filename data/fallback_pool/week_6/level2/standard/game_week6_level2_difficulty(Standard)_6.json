@@ -1,30 +1,30 @@
 {
   "file_id": "game_1546",
-  "game_title": "Spell Forge – Frosted Chapel Streak",
+  "game_title": "Blocks and semicolons · variation 6",
   "game_concept": "A quiz RPG set in Snowy Hold – Frosted Chapel, a frosted chapel: the sled courier must handle snow wraiths while practicing functions. Core idea – Spell Forge: Define a function once, then call it to cast the same spell repeatedly against snow wraiths.",
-  "genre": "quiz RPG",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Frosted Chapel: a frosted chapel",
-  "core_gameplay_loop": "In Frosted Chapel, repeat each round: Define a function once, then call it to cast the same spell repeatedly against snow wraiths. Each round poses one decision; a wrong answer breaks the streak. Then check the spells value and advance.",
-  "primary_mechanic": "Spell Forge",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 8 consecutive correct decisions about spells to power up the sled courier and open the sleigh.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 8.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Maze 6 (15×11, 26 junctions): collect 1 crystal(s) from the branches and reach beacon (11, 3). Use a C main program to Blocks and semicolons. Print [17]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 6 – Functions | Level 2 (intro tier): Spell Forge",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Blocks and semicolons",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M01-X4-T04-ad751576",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Spell Forge' (Week 6 slot 1), mission type 'Streak Challenge', and setting 'Frosted Chapel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 2,
   "trial": 6,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how spells changes.",
-    "Step 2: Use the controls to apply the code idea against snow wraiths in Frosted Chapel.",
-    "Step 3: Win by meeting the goal: streak counter reaches 8."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level2/standard/game_week6_level2_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_1546",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 8 consecutive correct decisions about spells to power up the sled courier and open the sleigh.",
+  "source_win_condition": "streak counter reaches 8.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Spell Forge – Frosted Chapel Streak",
+  "source_primary_mechanic": "Spell Forge",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w6_l2",
+  "source_week": 6,
+  "source_level": 2
 }

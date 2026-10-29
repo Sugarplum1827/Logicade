@@ -1,30 +1,30 @@
 {
   "file_id": "game_1353",
-  "game_title": "Stride Selector – Hollow Log Trail Rush",
+  "game_title": "Branch Assembly 3 · Merge Endpoint",
   "game_concept": "A speed quiz set in Mystic Forest – Hollow Log Trail, a trail through hollow logs: the wood elf archer must handle cursed treants while practicing control flow: for loops. Core idea – Stride Selector: Use range(start, stop, step) to hit only the right stepping stones.",
-  "genre": "speed quiz",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Hollow Log Trail: a trail through hollow logs",
-  "core_gameplay_loop": "In Hollow Log Trail, repeat each round: Use range(start, stop, step) to hit only the right stepping stones. Each round, a new moss bundles challenge appears; solve it to bank points before time drains. Then check the stones value and advance.",
-  "primary_mechanic": "Stride Selector",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Collect 210 points of moss bundles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 210 within 63 seconds.",
-  "lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "player_objective": "main and blocks: build a valid C source file that prints 8. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (3, 3), with the upper processing path on row 1 and lower path on row 6. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 8 components (4 upper, 4 lower). Set the gold-socket controller batch to 8.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Stride Selector",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: main and blocks",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M03-X2-T05-262c4fae",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stride Selector' (Week 5 slot 3), mission type 'Resource Rush', and setting 'Hollow Log Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 6,
   "trial": 3,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 63,
+    "time_limit_seconds": 0,
     "target_score": 210,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stones changes.",
-    "Step 2: Use the controls to apply the code idea against cursed treants in Hollow Log Trail.",
-    "Step 3: Win by meeting the goal: score >= 210 within 63 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level6/needs_support/game_week5_level6_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_1353",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 210 points of moss bundles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 210 within 63 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "source_game_title": "Stride Selector – Hollow Log Trail Rush",
+  "source_primary_mechanic": "Stride Selector",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 4 components via upper_4, upper_6 to output_shared; B: 4 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 63,
+  "learning_objective_id": "cp1_w5_l6",
+  "source_week": 5,
+  "source_level": 6
 }

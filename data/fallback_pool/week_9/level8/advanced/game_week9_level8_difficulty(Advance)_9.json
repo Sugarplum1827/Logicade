@@ -1,30 +1,30 @@
 {
   "file_id": "game_2639",
-  "game_title": "Validation Fortress – Sandstorm Pass Race",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A adventure race set in Sand Dunes – Sandstorm Pass, a pass in a sandstorm: the caravan guide must handle scarab swarms while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so scarab swarms can't sneak through.",
-  "genre": "adventure race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Sandstorm Pass: a pass in a sandstorm",
-  "core_gameplay_loop": "In Sandstorm Pass, repeat each round: Write input checks that reject bad data so scarab swarms can't sneak through. Each round the rival advances, and solving the step moves the caravan guide ahead. Then check the fortress value and advance.",
-  "primary_mechanic": "Validation Fortress",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Ghost replay of best run",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Beat a rival AI to the sundial by solving code steps involving fortress that move the caravan guide forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
-  "lose_condition": "The rival reaches the sundial first, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 9: {'a': 14, 'b': 9}; {'a': -9, 'b': -11}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Validation Fortress",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M14-X5-T07-d4ab1eab",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Rival Race', and setting 'Sandstorm Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fortress changes.",
-    "Step 2: Use the controls to apply the code idea against scarab swarms in Sandstorm Pass.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/advanced/game_week9_level8_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_2639",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the sundial by solving code steps involving fortress that move the caravan guide forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "source_lose_condition": "The rival reaches the sundial first, or lives reach 0.",
+  "source_game_title": "Validation Fortress – Sandstorm Pass Race",
+  "source_primary_mechanic": "Validation Fortress",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

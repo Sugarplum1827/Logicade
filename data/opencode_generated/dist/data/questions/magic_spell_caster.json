@@ -1,0 +1,79 @@
+{
+  "concept_id": "23_magic_spell_caster",
+  "slug": "magic_spell_caster",
+  "learning_target": "syntax structure and command matching",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which spell call is valid?",
+      "options": [
+        "cast 'fire'",
+        "cast('fire')",
+        "cast = 'fire'",
+        "cast['fire']"
+      ],
+      "answer_index": 1,
+      "explanation": "A function call uses parentheses around its string argument."
+    },
+    {
+      "id": "q2",
+      "question": "What does a syntax error mean?",
+      "options": [
+        "The code breaks the language rules",
+        "The screen is dark",
+        "The answer is correct",
+        "The spell is too strong"
+      ],
+      "answer_index": 0,
+      "explanation": "A syntax error means the code is not written in a form the language accepts."
+    },
+    {
+      "id": "q3",
+      "question": "Which line has matching brackets?",
+      "options": [
+        "spell{3)",
+        "spell(3)",
+        "spell[3)",
+        "spell(3]"
+      ],
+      "answer_index": 1,
+      "explanation": "The opening parenthesis must be closed by a matching closing parenthesis."
+    },
+    {
+      "id": "q4",
+      "question": "What does a function argument do?",
+      "options": [
+        "Changes the language",
+        "Ends the game",
+        "Provides input to the spell",
+        "Names the wizard"
+      ],
+      "answer_index": 2,
+      "explanation": "An argument supplies a value that the function uses when it runs."
+    },
+    {
+      "id": "q5",
+      "question": "Why match command names exactly?",
+      "options": [
+        "It increases mana",
+        "It avoids all errors",
+        "It makes the spell prettier",
+        "The computer looks for the exact name"
+      ],
+      "answer_index": 3,
+      "explanation": "Names are case-sensitive and must match the defined function exactly."
+    },
+    {
+      "id": "q6",
+      "question": "What should you check first in a broken spell?",
+      "options": [
+        "Brackets and quotes",
+        "The player's name",
+        "The background color",
+        "The music volume"
+      ],
+      "answer_index": 0,
+      "explanation": "Unmatched brackets or quotes are common causes of syntax errors."
+    }
+  ]
+}

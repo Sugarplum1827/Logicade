@@ -1,41 +1,41 @@
 {
   "file_id": "game_2609",
-  "game_title": "Validation Fortress – Mirage Road Trial",
+  "game_title": "Examination practice · C Scope Circuit · Compare local and global · variation 9",
   "game_concept": "A logic puzzle set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so desert bandits can't sneak through.",
-  "genre": "logic puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
-  "core_gameplay_loop": "In Mirage Road, repeat each round: Write input checks that reject bad data so desert bandits can't sneak through. Each round costs one action, so plan the step so none are wasted. Then check the fortress value and advance.",
-  "primary_mechanic": "Validation Fortress",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Reach the caravan wagon using at most 13 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The caravan wagon reached with actions_used <= 13.",
-  "lose_condition": "actions_used exceeds 13 before the caravan wagon is reached, or lives reach 0.",
+  "player_objective": "Week 8 examination practice: Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [13, 12], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 12}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Validation Fortress",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 8: Compare local and global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M14-X3-T05-bd303ca7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Efficiency Trial', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 7,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "while not text.isdigit():",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 12;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 1;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 38,
+    "time_limit_seconds": 0,
     "target_score": 440,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fortress changes.",
-    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
-    "Step 3: Win by meeting the goal: The caravan wagon reached with actions_used <= 13."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level7/advanced/game_week9_level7_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_2609",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the caravan wagon using at most 13 actions, so every code step counts.",
+  "source_win_condition": "The caravan wagon reached with actions_used <= 13.",
+  "source_lose_condition": "actions_used exceeds 13 before the caravan wagon is reached, or lives reach 0.",
+  "source_game_title": "Validation Fortress – Mirage Road Trial",
+  "source_primary_mechanic": "Validation Fortress",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 38,
+  "learning_objective_id": "cp1_w8_l9",
+  "source_week": 8,
+  "source_level": 9,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "dc2781149d9c2fdb9801fd78eccef56eddc0eb8c052e086751030251291cc716",
+    "lesson_unchanged": true
+  }
 }

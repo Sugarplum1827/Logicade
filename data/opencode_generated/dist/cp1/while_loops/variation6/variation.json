@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_39_while_loops",
+  "slug": "while_loops",
+  "display_name": "While Loops",
+  "learning_target": "trace a while loop and its update",
+  "core_brief": "A while loop tests before each pass; the body must move the condition toward false.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 11,
+  "unit": "Loops",
+  "group": "code",
+  "skin": "farm",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_1",
+    "zones": [
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_bucket",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.bush",
+      "bush": "themes.farm.fence",
+      "slime": "themes.farm.wheat",
+      "bee": "themes.farm.bush"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "mechanic": "sort",
+  "mechanic_label": "Sort",
+  "accent": "#ffb27a",
+  "variation_id": "cp1_39_while_loops_v06",
+  "index": 6,
+  "challenge_index": 6,
+  "challenge_id": "while_loops_v06",
+  "title": "Sort into bins",
+  "label": "Lab 06: Sort into bins",
+  "seed": 2219263244,
+  "challenge_bank": "../../../data/cp1/challenges/while_loops.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

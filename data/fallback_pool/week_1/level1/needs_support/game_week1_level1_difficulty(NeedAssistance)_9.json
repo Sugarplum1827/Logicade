@@ -1,30 +1,30 @@
 {
   "file_id": "game_0009",
-  "game_title": "Memory Map – Dungeon Stairs Race",
-  "game_concept": "A strategy race set in The Kingdom – Dungeon Stairs, the castle dungeon stairwell: the baker's apprentice must handle goblin raiders while practicing variables & assignment. Core idea – Memory Map: Place variable cards on a memory board so the signal beacon reads the right value at run time.",
-  "genre": "strategy race",
+  "game_title": "LogiCade Prologue",
+  "game_concept": "A full-screen welcome cinematic introduces LogiCade and its learning journey.",
+  "genre": "Full-screen welcome video",
   "theme": "The Kingdom – Dungeon Stairs: the castle dungeon stairwell",
-  "core_gameplay_loop": "In Dungeon Stairs, repeat each round: Place variable cards on a memory board so the signal beacon reads the right value at run time. Each round the rival advances, and solving the step moves the baker's apprentice ahead. Then check the y value and advance.",
-  "primary_mechanic": "Memory Map",
+  "core_gameplay_loop": "Watch the full-screen LogiCade prologue; completion unlocks the flowchart stage.",
+  "primary_mechanic": "Welcome video",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Beat a rival AI to the signal beacon by solving code steps involving y that move the baker's apprentice forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
-  "lose_condition": "The rival reaches the signal beacon first, or lives reach 0.",
+  "player_objective": "Watch the LogiCade prologue to completion before entering the first learning challenge.",
+  "controls": "Full-screen video; no pause or skip controls. Click only if sound autoplay is blocked.",
+  "win_condition": "The prologue video reaches its end.",
+  "lose_condition": "The video is closed before completion.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Memory Map",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Welcome video",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M09-X5-T17-7c53ac86",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Memory Map' (Week 1 slot 9), mission type 'Rival Race', and setting 'Dungeon Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 1,
   "trial": 9,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,20 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how y changes.",
-    "Step 2: Use the controls to apply the code idea against goblin raiders in Dungeon Stairs.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
-  ]
+    "Watch the full-screen prologue.",
+    "The video has no skip or pause controls.",
+    "When it ends, continue to Stage 2."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level1/needs_support/game_week1_level1_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_0009",
+    "mode": "welcome_video",
+    "asset_set": "welcome_video",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l1",
+  "source_week": 1,
+  "source_level": 1
 }

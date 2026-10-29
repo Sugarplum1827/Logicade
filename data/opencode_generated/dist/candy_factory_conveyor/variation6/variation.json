@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "32_candy_factory_conveyor",
+  "slug": "candy_factory_conveyor",
+  "display_name": "Candy Factory Conveyor",
+  "module_family": "conveyor_sorting",
+  "learning_target": "conditionals and comparisons",
+  "core_brief": "Use conditionals to sort sweets by shape and send each batch to the correct bin.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "candy_factory",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#6ec6ff",
+  "tint": 15386295,
+  "variation_id": "32_candy_factory_conveyor_v06",
+  "index": 6,
+  "title": "Checkpoint Gauntlet",
+  "label": "Variation 06: Checkpoint Gauntlet",
+  "seed": 3691086042,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 3,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_3",
+    "zones": [
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_can",
+    "coin": "themes.food.coin_cupcake",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.burger",
+      "bush": "themes.food.fish",
+      "slime": "themes.food.fish",
+      "bee": "themes.food.burger"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build four short rooms connected by explicit checkpoints. Each room introduces one obstacle rule and the last room combines earlier rules.",
+    "obstacles": "distinct room hazards with a checkpoint after every room; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "quick rooms with a deliberate final synthesis round."
+  },
+  "question_bank": "../../data/questions/candy_factory_conveyor.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

@@ -1,30 +1,28 @@
 {
   "file_id": "game_0015",
-  "game_title": "Uninitialized Hunt – Orchard Lane Trial",
-  "game_concept": "A programming puzzle set in The Kingdom – Orchard Lane, the royal orchard lane: the knight must handle thieves while practicing variables & assignment. Core idea – Uninitialized Hunt: Find variables used before assignment and fix them before thieves exploit the gap.",
-  "genre": "programming puzzle",
+  "game_title": "LogiCade Prologue",
+  "game_concept": "A full-screen welcome cinematic introduces LogiCade and its learning journey.",
+  "genre": "Full-screen welcome video",
   "theme": "The Kingdom – Orchard Lane: the royal orchard lane",
-  "core_gameplay_loop": "In Orchard Lane, repeat each round: Find variables used before assignment and fix them before thieves exploit the gap. Each round costs one action, so plan the step so none are wasted. Then check the bugs_fixed value and advance.",
-  "primary_mechanic": "Uninitialized Hunt",
+  "core_gameplay_loop": "Watch the full-screen LogiCade prologue; completion unlocks the flowchart stage.",
+  "primary_mechanic": "Welcome video",
   "secondary_mechanics": [
-    "Limited action budget",
-    "Hint tokens that reveal one line of code",
-    "Reduced-motion and color-blind-safe UI"
+    "Thief Defense"
   ],
-  "player_objective": "Reach the royal seal using at most 14 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The royal seal reached with actions_used <= 14.",
-  "lose_condition": "actions_used exceeds 14 before the royal seal is reached, or lives reach 0.",
+  "player_objective": "Watch the LogiCade prologue to completion before entering the first learning challenge.",
+  "controls": "Full-screen video; no pause or skip controls. Click only if sound autoplay is blocked.",
+  "win_condition": "The prologue video reaches its end.",
+  "lose_condition": "The video is closed before completion.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 1 (intro tier): Uninitialized Hunt",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Welcome video",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M15-X3-T19-97fc85c2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Uninitialized Hunt' (Week 1 slot 15), mission type 'Efficiency Trial', and setting 'Orchard Lane'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 1,
   "trial": 5,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,7 +33,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 30,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 14,
     "streak_target": 7,
@@ -45,8 +43,26 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how bugs_fixed changes.",
-    "Step 2: Use the controls to apply the code idea against thieves in Orchard Lane.",
-    "Step 3: Win by meeting the goal: The royal seal reached with actions_used <= 14."
-  ]
+    "Watch the full-screen prologue.",
+    "The video has no skip or pause controls.",
+    "When it ends, continue to Stage 2."
+  ],
+  "mission_type": "Efficiency Trial",
+  "game_id": "game_0015",
+  "is_fallback": false,
+  "game_type": "Efficiency Trial",
+  "generated_at": "2026-10-22T12:21:36.985791+00:00",
+  "source_path": "data/fallback_pool/week_1/level1/standard/game_week1_level1_difficulty(Standard)_5.json",
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level1/standard/game_week1_level1_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_0015",
+    "mode": "welcome_video",
+    "asset_set": "welcome_video",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l1",
+  "source_week": 1,
+  "source_level": 1
 }

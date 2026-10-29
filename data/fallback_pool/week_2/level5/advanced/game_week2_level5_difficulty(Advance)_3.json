@@ -1,30 +1,30 @@
 {
   "file_id": "game_0443",
-  "game_title": "Type Cast Forge – Vent Garden Defense",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A survival strategy set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Type Cast Forge: Convert text to numbers with int() or float() before adding, or the forge explodes.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
-  "core_gameplay_loop": "In Vent Garden, repeat each round: Convert text to numbers with int() or float() before adding, or the forge explodes. Each round, smoke serpents strike the ash barrier, so respond before the next strike lands. Then check the forge_heat value and advance.",
-  "primary_mechanic": "Type Cast Forge",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Protect the ash barrier from smoke serpents in Vent Garden: keep the forge_heat meter above zero by applying the concept correctly until the 34-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 34 seconds while forge_heat > 0.",
-  "lose_condition": "forge_heat drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "player_objective": "Read score. Display Pass when score ≥ 46; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 3: {'score': 45}; {'score': 47}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Type Cast Forge",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M08-X1-T19-2f245031",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Type Cast Forge' (Week 2 slot 8), mission type 'Survival Siege', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how forge_heat changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
-    "Step 3: Win by meeting the goal: Timer reaches 34 seconds while forge_heat > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/advanced/game_week2_level5_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_0443",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the ash barrier from smoke serpents in Vent Garden: keep the forge_heat meter above zero by applying the concept correctly until the 34-second timer ends.",
+  "source_win_condition": "Timer reaches 34 seconds while forge_heat > 0.",
+  "source_lose_condition": "forge_heat drops to 0, or lives reach 0, before the 34-second timer ends.",
+  "source_game_title": "Type Cast Forge – Vent Garden Defense",
+  "source_primary_mechanic": "Type Cast Forge",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5
 }

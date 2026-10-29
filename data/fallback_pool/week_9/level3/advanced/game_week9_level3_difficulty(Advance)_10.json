@@ -1,30 +1,30 @@
 {
   "file_id": "game_2490",
-  "game_title": "Capstone Boss Chain – Cactus Flats Trial",
+  "game_title": "C Archive · History/classification review",
   "game_concept": "A programming puzzle set in Sand Dunes – Cactus Flats, flats of tall cacti: the sand ranger must handle dust devils while practicing debugging & combined skills. Core idea – Capstone Boss Chain: Beat a boss with phases that each demand a different skill from earlier weeks.",
-  "genre": "programming puzzle",
+  "genre": "CP1 challenge; Week 4 theme pending",
   "theme": "Sand Dunes – Cactus Flats: flats of tall cacti",
-  "core_gameplay_loop": "In Cactus Flats, repeat each round: Beat a boss with phases that each demand a different skill from earlier weeks. Each round costs one action, so plan the step so none are wasted. Then check the boss_hp value and advance.",
-  "primary_mechanic": "Capstone Boss Chain",
+  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Ghost replay of best run",
     "Combo multiplier"
   ],
-  "player_objective": "Reach the bazaar gate using at most 11 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The bazaar gate reached with actions_used <= 11.",
-  "lose_condition": "actions_used exceeds 11 before the bazaar gate is reached, or lives reach 0.",
+  "player_objective": "Archive variation 10: classify and verify C history, characteristics and language categories for History/classification review.",
+  "controls": "Read each archive record and choose the supported C fact.",
+  "win_condition": "All researched archive facts are correctly identified.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Capstone Boss Chain",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 4: History/classification review",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M15-X3-T04-5211b783",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Capstone Boss Chain' (Week 9 slot 15), mission type 'Efficiency Trial', and setting 'Cactus Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 3,
   "trial": 10,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Introduction to C: History, Characteristics and Classification",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how boss_hp changes.",
-    "Step 2: Use the controls to apply the code idea against dust devils in Cactus Flats.",
-    "Step 3: Win by meeting the goal: The bazaar gate reached with actions_used <= 11."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level3/advanced/game_week9_level3_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_2490",
+    "mode": "pending",
+    "asset_set": "pending",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the bazaar gate using at most 11 actions, so every code step counts.",
+  "source_win_condition": "The bazaar gate reached with actions_used <= 11.",
+  "source_lose_condition": "actions_used exceeds 11 before the bazaar gate is reached, or lives reach 0.",
+  "source_game_title": "Capstone Boss Chain – Cactus Flats Trial",
+  "source_primary_mechanic": "Capstone Boss Chain",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w4_l10",
+  "source_week": 4,
+  "source_level": 10
 }

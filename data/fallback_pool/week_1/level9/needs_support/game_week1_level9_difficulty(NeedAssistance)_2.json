@@ -2,9 +2,9 @@
   "file_id": "game_0242",
   "game_title": "Reassign Relay – Moat Bridge Race",
   "game_concept": "A adventure race set in The Kingdom – Moat Bridge, the drawbridge over the moat: the town guard must handle rogue crows while practicing variables & assignment. Core idea – Reassign Relay: Overwrite a variable with a fresh value each round so the old number vanishes before rogue crows can use it.",
-  "genre": "adventure race",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
-  "core_gameplay_loop": "In Moat Bridge, repeat each round: Overwrite a variable with a fresh value each round so the old number vanishes before rogue crows can use it. Each round the rival advances, and solving the step moves the town guard ahead. Then check the wave_target value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Reassign Relay",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
@@ -12,19 +12,19 @@
     "Limited undo button"
   ],
   "player_objective": "Beat a rival AI to the granary door by solving code steps involving wave_target that move the town guard forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
   "lose_condition": "The rival reaches the granary door first, or lives reach 0.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 9 (extended tier): Reassign Relay",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M02-X5-T04-a3828503",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Reassign Relay' (Week 1 slot 2), mission type 'Rival Race', and setting 'Moat Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 9,
   "trial": 2,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how wave_target changes.",
     "Step 2: Use the controls to apply the code idea against rogue crows in Moat Bridge.",
     "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level9/needs_support/game_week1_level9_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_0242",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

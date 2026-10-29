@@ -1,0 +1,331 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0155",
+  "variation_id": "canvas_game_0155",
+  "week": 1,
+  "level": 6,
+  "trial": 5,
+  "difficulty": "Need Assistance",
+  "mode": "tetris",
+  "title": "Flowchart Workshop – Even numbers from 9 to 100",
+  "display_name": "Flowchart Block Puzzle",
+  "theme": "The Kingdom – Orchard Lane: the royal orchard lane",
+  "topic": "Orientation",
+  "learning_objectives": [
+    "Controls and mission practice"
+  ],
+  "lesson": {
+    "summary": "Orientation",
+    "points": [
+      "Controls and mission practice",
+      "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+      "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once.",
+      "Stage 2 is guided interface practice; the main flowchart lesson is Week 2."
+    ],
+    "example": "",
+    "practice": "Controls and mission practice",
+    "week": 1,
+    "source_week": 1,
+    "source_level": 2,
+    "objective_id": "cp1_w1_l2",
+    "title": "Orientation",
+    "stage_title": "Controls and mission practice",
+    "objectives": [
+      "Controls and mission practice"
+    ],
+    "sources": [],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      1
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_level": 2,
+  "source_week": 1,
+  "primary_mechanic": "Name Tag Match",
+  "objective": "Build a flowchart that prints every even number between 9 and 100, including 100. Start at 10 and increase by 2.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 922493358,
+  "layout": {
+    "interaction": "flowchart_drag_drop",
+    "columns": 12,
+    "rows": 10,
+    "seed": 922493358
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_5",
+    "source_level": null,
+    "title": "Even numbers from 9 to 100",
+    "prompt": "Build a flowchart that prints every even number between 9 and 100, including 100. Start at 10 and increase by 2.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.06,
+        "number": 1
+      },
+      {
+        "id": "initial",
+        "x": 0.5,
+        "y": 0.236,
+        "number": 2
+      },
+      {
+        "id": "write",
+        "x": 0.5,
+        "y": 0.412,
+        "number": 3
+      },
+      {
+        "id": "increase",
+        "x": 0.5,
+        "y": 0.5880000000000001,
+        "number": 4
+      },
+      {
+        "id": "decide",
+        "x": 0.5,
+        "y": 0.764,
+        "number": 5
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9400000000000002,
+        "number": 6
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "initial"
+      },
+      {
+        "from": "initial",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "increase"
+      },
+      {
+        "from": "increase",
+        "to": "decide"
+      },
+      {
+        "from": "decide",
+        "to": "write",
+        "label": "Yes",
+        "via": [
+          [
+            0.86,
+            0.77
+          ],
+          [
+            0.86,
+            0.412
+          ]
+        ]
+      },
+      {
+        "from": "decide",
+        "to": "end",
+        "label": "No"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "initial",
+        "label": "i = 10",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "i",
+              "value": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "write",
+        "label": "Write i",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "i"
+          }
+        }
+      },
+      {
+        "id": "increase",
+        "label": "i = i + 2",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "i",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "i"
+                  },
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "decide",
+        "label": "i ≤ 100?",
+        "kind": "decision",
+        "action": {
+          "test": {
+            "op": "<=",
+            "args": [
+              {
+                "var": "i"
+              },
+              100
+            ]
+          }
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "initial": "initial",
+      "write": "write",
+      "increase": "increase",
+      "decide": "decide",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {},
+        "expected": [
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42,
+          44,
+          46,
+          48,
+          50,
+          52,
+          54,
+          56,
+          58,
+          60,
+          62,
+          64,
+          66,
+          68,
+          70,
+          72,
+          74,
+          76,
+          78,
+          80,
+          82,
+          84,
+          86,
+          88,
+          90,
+          92,
+          94,
+          96,
+          98,
+          100
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": true,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0155",
+    "objective_id": "cp1_w1_l2"
+  },
+  "assets": {
+    "puzzle_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "block_drop_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/drop_001.ogg",
+    "line_clear_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_002.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "initial",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "increase",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    },
+    {
+      "id": "decide",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 6 in the requested chart."
+    }
+  ],
+  "source_path": "week_1/level6/needs_support/game_week1_level6_difficulty(NeedAssistance)_5.json",
+  "source_topic": "Orientation",
+  "source_learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "source_primary_mechanic": "Name Tag Match",
+  "source_code_snippet": "speed = 12\nname = 'Rex'"
+}

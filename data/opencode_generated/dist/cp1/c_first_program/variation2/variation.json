@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_14_c_first_program",
+  "slug": "c_first_program",
+  "display_name": "First C Program",
+  "learning_target": "write and trace a first printf program",
+  "core_brief": "A first program includes stdio.h, opens main, prints a line, and returns zero.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 4,
+  "unit": "C Introduction",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#7ec8ff",
+  "variation_id": "cp1_14_c_first_program_v02",
+  "index": 2,
+  "challenge_index": 2,
+  "challenge_id": "c_first_program_v02",
+  "title": "Find the bug",
+  "label": "Lab 02: Find the bug",
+  "seed": 960422513,
+  "challenge_bank": "../../../data/cp1/challenges/c_first_program.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

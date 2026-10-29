@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_05_flowchart_reading",
+  "slug": "flowchart_reading",
+  "display_name": "Reading Flowcharts",
+  "learning_target": "follow a multi-branch flowchart",
+  "core_brief": "Trace nested decisions and predict which branch a value takes.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 2,
+  "unit": "Flowcharting",
+  "group": "flow",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_blue",
+    "zones": [
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_red",
+    "enemy": "themes.space.enemy_blue",
+    "coin": "themes.space.coin_red",
+    "goal": "themes.space.goal_yellow",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_small",
+      "slime": "themes.space.meteor_grey_big",
+      "bee": "themes.space.meteor_brown_small"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "simulate",
+  "mechanic_label": "Simulate",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_05_flowchart_reading_v02",
+  "index": 2,
+  "challenge_index": 2,
+  "challenge_id": "flowchart_reading_v02",
+  "title": "Step the machine",
+  "label": "Lab 02: Step the machine",
+  "seed": 2300781994,
+  "challenge_bank": "../../../data/cp1/challenges/flowchart_reading.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

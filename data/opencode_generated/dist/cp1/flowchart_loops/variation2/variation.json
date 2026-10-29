@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_04_flowchart_loops",
+  "slug": "flowchart_loops",
+  "display_name": "Flowchart Loops",
+  "learning_target": "read a loop condition and its back edge",
+  "core_brief": "A loop repeats a body while its condition stays true, then exits.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 2,
+  "unit": "Flowcharting",
+  "group": "flow",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "trace",
+  "mechanic_label": "Trace",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_04_flowchart_loops_v02",
+  "index": 2,
+  "challenge_index": 2,
+  "challenge_id": "flowchart_loops_v02",
+  "title": "Trace the output",
+  "label": "Lab 02: Trace the output",
+  "seed": 3874202395,
+  "challenge_bank": "../../../data/cp1/challenges/flowchart_loops.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation1/",
+    "next": "../variation3/"
+  }
+}

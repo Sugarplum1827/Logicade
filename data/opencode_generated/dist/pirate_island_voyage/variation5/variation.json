@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "14_pirate_island_voyage",
+  "slug": "pirate_island_voyage",
+  "display_name": "Pirate Island Voyage",
+  "module_family": "navigation_adventure",
+  "learning_target": "coordinates and ordered movement",
+  "core_brief": "Use coordinates to steer a ship around reefs and reach marked island destinations.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 12695530,
+  "variation_id": "14_pirate_island_voyage_v05",
+  "index": 5,
+  "title": "Central Arena",
+  "label": "Variation 05: Central Arena",
+  "seed": 4045697174,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "star"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 4
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_2",
+    "zones": [
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3",
+      "themes.pirate.bg_sea_1"
+    ],
+    "tile": "themes.pirate.tile_plank",
+    "player": "themes.pirate.player_green",
+    "enemy": "themes.pirate.enemy_grey",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_flag",
+    "obstacles": {
+      "spike": "themes.pirate.cannonball",
+      "bush": "themes.pirate.cannon",
+      "slime": "themes.pirate.cannon",
+      "bee": "themes.pirate.cannonball"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "brief": {
+    "map": "Build a compact arena with a central objective and three distinct approach lanes. The player must respond to a readable sequence of short waves.",
+    "obstacles": "lane-specific hazards and a central objective meter; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "three escalating waves with a short breath between waves."
+  },
+  "question_bank": "../../data/questions/pirate_island_voyage.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

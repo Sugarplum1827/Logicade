@@ -1,30 +1,30 @@
 {
   "file_id": "game_2541",
-  "game_title": "Off By One Autopsy – Mirage Road Race",
+  "game_title": "Examination practice · Program synthesis · variation 1",
   "game_concept": "A strategy race set in Sand Dunes – Mirage Road, a road of shimmering mirages: the scarab scholar must handle desert bandits while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
-  "genre": "strategy race",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Mirage Road: a road of shimmering mirages",
-  "core_gameplay_loop": "In Mirage Road, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round the rival advances, and solving the step moves the scarab scholar ahead. Then check the autopsy value and advance.",
-  "primary_mechanic": "Off By One Autopsy",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Reduced-motion and color-blind-safe UI",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Beat a rival AI to the caravan wagon by solving code steps involving autopsy that move the scarab scholar forward.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
-  "lose_condition": "The rival reaches the caravan wagon first, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 1 (21×15, 69 junctions): collect 2 crystal(s) from the branches and reach beacon (1, 7). Use a C main program to Program synthesis. Print [13]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Off By One Autopsy",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M06-X5-T05-5c3d548d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Rival Race', and setting 'Mirage Road'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 1,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how autopsy changes.",
-    "Step 2: Use the controls to apply the code idea against desert bandits in Mirage Road.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.0)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/advanced/game_week9_level5_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_2541",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the caravan wagon by solving code steps involving autopsy that move the scarab scholar forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.0).",
+  "source_lose_condition": "The rival reaches the caravan wagon first, or lives reach 0.",
+  "source_game_title": "Off By One Autopsy – Mirage Road Race",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1727",
+  "variation_id": "canvas_game_1727",
+  "week": 6,
+  "level": 8,
+  "trial": 7,
+  "difficulty": "Standard",
+  "mode": "dungeon",
+  "title": "Repair a short program · variation 7",
+  "display_name": "Programming Quest",
+  "theme": "Snowy Hold – Snowdrift Barracks: barracks half buried in snow",
+  "topic": "Creating Simple C Programs and Program Structure",
+  "learning_objectives": [
+    "Repair a short program"
+  ],
+  "lesson": {
+    "summary": "Creating Simple C Programs and Program Structure",
+    "points": [
+      "Repair a short program",
+      "A hosted program begins at main. Braces form its body; statements execute in order.",
+      "Construct a short program using declarations, initialization, assignment and printf.",
+      "Adventure movement functions are LogiCade helpers declared in logicade.h, not standard C library functions."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int score = 2;\n score = score + 3;\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Program synthesis",
+    "week": 6,
+    "source_week": 6,
+    "source_level": 8,
+    "objective_id": "cp1_w6_l8",
+    "title": "Creating Simple C Programs and Program Structure",
+    "stage_title": "Repair a short program",
+    "objectives": [
+      "Repair a short program"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      6
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w6_l8",
+  "source_level": 8,
+  "source_week": 6,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Maze 7 (17×13, 49 junctions): collect 2 crystal(s) from the branches and reach beacon (13, 11). Use a C main program to Repair a short program. Print [25]; final file-scope values must be {}.",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 3816057183,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "grid": [
+      "##############",
+      "#.......#.#..#",
+      "#.........#..#",
+      "#....#.......#",
+      "#S..........G#",
+      "#...!...#..#.#",
+      "#..#..#......#",
+      "#.###........#",
+      "##############"
+    ],
+    "seed": 3816057183
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w6_l8_v7_1",
+    "rules": {
+      "max_steps": 740,
+      "max_lines": 50,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 1,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w6_l8",
+    "source_level": 8,
+    "focus": "Repair a short program",
+    "family": "adventure",
+    "language": "c_subset",
+    "title": "Repair a short program · variation 7",
+    "objective": "Maze 7 (17×13, 49 junctions): collect 2 crystal(s) from the branches and reach beacon (13, 11). Use a C main program to Repair a short program. Print [25]; final file-scope values must be {}.",
+    "map": [
+      "#################",
+      "#.........#.....#",
+      "#..##.#####.#.###",
+      "#...#.......#...#",
+      "###.#.######....#",
+      "#...#...........#",
+      "#.#####.#.##....#",
+      "#.#.....#...#...#",
+      "#.###.....#####.#",
+      "#.#.......#.....#",
+      "#.#.##....#.#...#",
+      "#...#...#...#...#",
+      "#################"
+    ],
+    "map_features": {
+      "width": 17,
+      "height": 13,
+      "rooms": 3,
+      "junctions": 49,
+      "dead_ends": 5,
+      "cycles": 30
+    },
+    "start": [
+      1,
+      1
+    ],
+    "exit": [
+      13,
+      11
+    ],
+    "gems": [
+      [
+        15,
+        1
+      ],
+      [
+        5,
+        11
+      ]
+    ],
+    "expected_watch": [
+      25
+    ],
+    "expected_globals": {},
+    "command_budget": 147,
+    "program": "#include <stdio.h>\n#include \"logicade.h\"\n#define LIMIT 16\nint main(void)\n{\nint total = 16;\ntotal = total - 9;\nprintf(\"%d\\n\", total);\nmoveRight(4);\nmoveDown(2);\nmoveRight(6);\nmoveUp(2);\nmoveRight(4);\nmoveLeft(2);\nmoveDown(3);\nmoveLeft(1);\nmoveDown(1);\nmoveLeft(5);\nmoveDown(2);\nmoveLeft(1);\nmoveDown(4);\nmoveLeft(1);\nmoveRight(2);\nmoveUp(1);\nmoveRight(2);\nmoveDown(1);\nmoveRight(2);\nmoveUp(2);\nmoveRight(2);\nmoveDown(2);\nreturn 0;\n}",
+    "reference": {
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\n#define LIMIT 16\nint main(void)\n{\nint total = 16;\ntotal = total + 9;\nprintf(\"%d\\n\", total);\nmoveRight(4);\nmoveDown(2);\nmoveRight(6);\nmoveUp(2);\nmoveRight(4);\nmoveLeft(2);\nmoveDown(3);\nmoveLeft(1);\nmoveDown(1);\nmoveLeft(5);\nmoveDown(2);\nmoveLeft(1);\nmoveDown(4);\nmoveLeft(1);\nmoveRight(2);\nmoveUp(1);\nmoveRight(2);\nmoveDown(1);\nmoveRight(2);\nmoveUp(2);\nmoveRight(2);\nmoveDown(2);\nreturn 0;\n}"
+    },
+    "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+    "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset."
+  },
+  "assets": {
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w6_l8_v7_1",
+      "kind": "program_execution",
+      "prompt": "Maze 7 (17×13, 49 junctions): collect 2 crystal(s) from the branches and reach beacon (13, 11). Use a C main program to Repair a short program. Print [25]; final file-scope values must be {}."
+    }
+  ],
+  "source_path": "week_6/level8/standard/game_week6_level8_difficulty(Standard)_7.json",
+  "source_topic": "Creating Simple C Programs and Program Structure",
+  "source_learning_alignment": "CP1 Week 6: Repair a short program",
+  "source_primary_mechanic": "Parameter Potion",
+  "source_code_snippet": "def brew(herb, amount):"
+}

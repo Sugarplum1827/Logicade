@@ -1,30 +1,30 @@
 {
   "file_id": "game_0033",
-  "game_title": "Counter Tower – Dungeon Stairs Streak",
-  "game_concept": "A card battler set in The Kingdom – Dungeon Stairs, the castle dungeon stairwell: the baker's apprentice must handle goblin raiders while practicing variables & assignment. Core idea – Counter Tower: Increase a counter variable every time grain sacks reach the signal beacon, stacking the tower higher.",
-  "genre": "card battler",
+  "game_title": "Flowchart Workshop – Positive or not?",
+  "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Dungeon Stairs: the castle dungeon stairwell",
-  "core_gameplay_loop": "In Dungeon Stairs, repeat each round: Increase a counter variable every time grain sacks reach the signal beacon, stacking the tower higher. Each round poses one decision; a wrong answer breaks the streak. Then check the delivered value and advance.",
-  "primary_mechanic": "Counter Tower",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
+  "primary_mechanic": "Drag-and-drop flowchart construction",
   "secondary_mechanics": [
     "Streak combo meter",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Chain 6 consecutive correct decisions about delivered to power up the baker's apprentice and open the signal beacon.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 6.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read n. Display Positive when n is greater than zero; otherwise display Not positive.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
+  "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Counter Tower",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M03-X4-T17-098d1179",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Counter Tower' (Week 1 slot 3), mission type 'Streak Challenge', and setting 'Dungeon Stairs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 2,
   "trial": 3,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,18 +35,33 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
     "rival_speed": 0.55,
     "enemy_wave_count": 2,
     "enemy_attack_interval_seconds": 2.85,
-    "starting_score": 0
+    "starting_score": 0,
+    "source_time_limit_seconds": 46
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how delivered changes.",
-    "Step 2: Use the controls to apply the code idea against goblin raiders in Dungeon Stairs.",
-    "Step 3: Win by meeting the goal: streak counter reaches 6."
-  ]
+    "Read the requested procedure.",
+    "Drag correctly shaped blocks into the chart and follow the arrows.",
+    "Select Check chart to run example inputs. Revise incorrect steps and try again."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level2/needs_support/game_week1_level2_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_0033",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_primary_mechanic": "Counter Tower",
+  "source_game_title": "Counter Tower – Dungeon Stairs Streak",
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

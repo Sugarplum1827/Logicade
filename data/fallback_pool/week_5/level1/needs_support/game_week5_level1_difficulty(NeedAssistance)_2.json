@@ -1,30 +1,30 @@
 {
   "file_id": "game_1202",
-  "game_title": "Volley Counter – Bramble Maze Streak",
+  "game_title": "Branch Assembly 2 · Merge Midpoint",
   "game_concept": "A rhythm puzzle set in Mystic Forest – Bramble Maze, a maze of brambles: the druid must handle wasp swarms while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming wasp swarms.",
-  "genre": "rhythm puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Bramble Maze: a maze of brambles",
-  "core_gameplay_loop": "In Bramble Maze, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming wasp swarms. Each round poses one decision; a wrong answer breaks the streak. Then check the ammo value and advance.",
-  "primary_mechanic": "Volley Counter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Chain 5 consecutive correct decisions about ammo to power up the druid and open the root gate.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 5.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Tokens and components: build a valid C source file that prints 3. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 5. IF item value >= 4, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 5 components (3 upper, 2 lower). Set the gold-socket controller batch to 5.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Volley Counter",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Tokens and components",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M02-X4-T08-a998dcfa",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Streak Challenge', and setting 'Bramble Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 1,
   "trial": 2,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how ammo changes.",
-    "Step 2: Use the controls to apply the code idea against wasp swarms in Bramble Maze.",
-    "Step 3: Win by meeting the goal: streak counter reaches 5."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level1/needs_support/game_week5_level1_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_1202",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 5 consecutive correct decisions about ammo to power up the druid and open the root gate.",
+  "source_win_condition": "streak counter reaches 5.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Volley Counter – Bramble Maze Streak",
+  "source_primary_mechanic": "Volley Counter",
+  "hint": "IF item value >= 4, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 3 components via upper_4, shared_assembler to output_shared; ELSE: 2 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w5_l1",
+  "source_week": 5,
+  "source_level": 1
 }

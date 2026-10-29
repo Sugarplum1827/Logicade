@@ -1,41 +1,41 @@
 {
   "file_id": "game_2605",
-  "game_title": "Code Reading Relay – Merchant Waystation Defense",
+  "game_title": "Examination practice · C Scope Circuit · Compare local and global · variation 5",
   "game_concept": "A tower defense set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Code Reading Relay: Read short programs as a relay and predict their output line by line.",
-  "genre": "tower defense",
+  "genre": "circuit programming workbench",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Read short programs as a relay and predict their output line by line. Each round, giant scorpions strike the sundial, so respond before the next strike lands. Then check the predicted value and advance.",
-  "primary_mechanic": "Code Reading Relay",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the sundial from giant scorpions in Merchant Waystation: keep the predicted meter above zero by applying the concept correctly until the 38-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 38 seconds while predicted > 0.",
-  "lose_condition": "predicted drops to 0, or lives reach 0, before the 38-second timer ends.",
+  "player_objective": "Week 8 examination practice: Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [9, 8], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 8}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Code Reading Relay",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 8: Compare local and global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M10-X1-T17-2250b077",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Code Reading Relay' (Week 9 slot 10), mission type 'Survival Siege', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 7,
   "trial": 5,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "for i in range(3):\n    print(i)",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 8;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 1;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 38,
+    "time_limit_seconds": 0,
     "target_score": 440,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predicted changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: Timer reaches 38 seconds while predicted > 0."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level7/advanced/game_week9_level7_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_2605",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sundial from giant scorpions in Merchant Waystation: keep the predicted meter above zero by applying the concept correctly until the 38-second timer ends.",
+  "source_win_condition": "Timer reaches 38 seconds while predicted > 0.",
+  "source_lose_condition": "predicted drops to 0, or lives reach 0, before the 38-second timer ends.",
+  "source_game_title": "Code Reading Relay – Merchant Waystation Defense",
+  "source_primary_mechanic": "Code Reading Relay",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 38,
+  "learning_objective_id": "cp1_w8_l9",
+  "source_week": 8,
+  "source_level": 9,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "23b15bd06546507d1a3acb5dcf87dbe2f2da31e801fac5d13f8342e5845429a5",
+    "lesson_unchanged": true
+  }
 }

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_28_type_conversion",
+  "slug": "type_conversion",
+  "display_name": "Type Conversion",
+  "learning_target": "predict integer division and use an explicit cast",
+  "core_brief": "Mixing types converts values; integer division truncates, while a cast can force decimal division.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 7,
+  "unit": "Variables",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_2",
+    "zones": [
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_ketchup",
+    "coin": "themes.food.coin_cupcake",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.fish",
+      "bush": "themes.food.ketchup",
+      "slime": "themes.food.can",
+      "bee": "themes.food.ketchup"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "assemble",
+  "mechanic_label": "Assemble",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_28_type_conversion_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "type_conversion_v05",
+  "title": "Assemble the line",
+  "label": "Lab 05: Assemble the line",
+  "seed": 3492094462,
+  "challenge_bank": "../../../data/cp1/challenges/type_conversion.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

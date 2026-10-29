@@ -1,0 +1,551 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v01",
+    "index": 1,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in main or the swap block.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int a = 3, b = 5;",
+        "    {",
+        "        int temp = a;",
+        "        a = b;",
+        "        b = temp;",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "a and b live through the whole function"
+        },
+        {
+          "id": "block",
+          "label": "Swap block",
+          "desc": "temp exists only inside the braces"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int a = 3, b = 5;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int temp = a;",
+          "scope": "block"
+        },
+        {
+          "id": "d3",
+          "text": "a = b;",
+          "scope": "block"
+        },
+        {
+          "id": "d4",
+          "text": "b = temp;",
+          "scope": "block"
+        }
+      ]
+    },
+    "explanation": "a and b are declared in main; temp is confined to the inner block.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v02",
+    "index": 2,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each swapping values term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "temp"
+        },
+        {
+          "id": "l2",
+          "text": "Swap"
+        },
+        {
+          "id": "l3",
+          "text": "Old value"
+        },
+        {
+          "id": "l4",
+          "text": "Assignment order"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Temporary storage used to preserve a value"
+        },
+        {
+          "id": "r2",
+          "text": "Exchange the values of two variables"
+        },
+        {
+          "id": "r3",
+          "text": "The value that must be saved before overwriting"
+        },
+        {
+          "id": "r4",
+          "text": "The sequence that makes the swap safe"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v03",
+    "index": 3,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the swap sequence.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int temp = {{b0}};",
+        "a = {{b1}};",
+        "b = {{b2}};"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "value to save",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "value moved into a",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "saved value moved into b",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "a"
+        },
+        {
+          "id": "b2",
+          "text": "b"
+        },
+        {
+          "id": "b3",
+          "text": "temp"
+        },
+        {
+          "id": "b4",
+          "text": "b"
+        },
+        {
+          "id": "b5",
+          "text": "a"
+        },
+        {
+          "id": "b6",
+          "text": "0"
+        }
+      ]
+    },
+    "explanation": "Save a, copy b into a, then copy temp into b.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v04",
+    "index": 4,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 3, b = 5;",
+        "    int temp = a;",
+        "    a = b;",
+        "    b = temp;",
+        "    printf(\"%d %d\\n\", a, b);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "5 3",
+      "accept": [
+        "5 3"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "temp saves 3, a becomes 5, then b receives the saved 3."
+    },
+    "explanation": "The program produces 5 3.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v05",
+    "index": 5,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 3, b = 5;",
+        "    int temp = a;",
+        "    a = b;",
+        "    b = temp;",
+        "    printf(\"%d %d\\n\", a, b);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "temp"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "a": "3",
+            "b": "5",
+            "temp": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "a": "3",
+            "b": "5",
+            "temp": "3"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "a": "5",
+            "b": "5",
+            "temp": "3"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "a": "5",
+            "b": "3",
+            "temp": "3"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "temp"
+      ],
+      "answer": {
+        "a": "5",
+        "b": "3",
+        "temp": "3"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is a = 5, b = 3, temp = 3.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v06",
+    "index": 6,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of swapping values in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Copy the first value into a temporary"
+        },
+        {
+          "id": "s2",
+          "text": "Copy the second value into the first variable"
+        },
+        {
+          "id": "s3",
+          "text": "Copy the temporary into the second variable"
+        },
+        {
+          "id": "s4",
+          "text": "Print both values to confirm the swap"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Copy the first value into a temporary → Copy the second value into the first variable → Copy the temporary into the second variable → Print both values to confirm the swap",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v07",
+    "index": 7,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the first step of a safe swap using temp.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "temp"
+        },
+        {
+          "id": "t2",
+          "text": "="
+        },
+        {
+          "id": "t3",
+          "text": "a"
+        },
+        {
+          "id": "t4",
+          "text": ";"
+        },
+        {
+          "id": "t5",
+          "text": "b"
+        },
+        {
+          "id": "t6",
+          "text": "=="
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Saving a in temp preserves it before a is overwritten.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v08",
+    "index": 8,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the values after the swap completes.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int a = 3, b = 5;",
+        "    int temp = a;",
+        "    a = b;",
+        "    b = temp;",
+        "    printf(\"%d %d\\n\", a, b);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "a",
+          "type": "final value"
+        },
+        {
+          "name": "b",
+          "type": "final value"
+        },
+        {
+          "name": "temp",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "5"
+        },
+        {
+          "id": "v2",
+          "text": "3"
+        },
+        {
+          "id": "v3",
+          "text": "3"
+        },
+        {
+          "id": "v4",
+          "text": "6"
+        },
+        {
+          "id": "v5",
+          "text": "4"
+        },
+        {
+          "id": "v6",
+          "text": "2"
+        }
+      ],
+      "answer": {
+        "a": "v1",
+        "b": "v2",
+        "temp": "v3"
+      }
+    },
+    "explanation": "The swap exchanges a and b; temp still holds the old a.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v09",
+    "index": 9,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each swap line as safe or destructive.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "safe",
+          "label": "Safe step",
+          "desc": "Preserves both values"
+        },
+        {
+          "id": "destructive",
+          "label": "Destructive step",
+          "desc": "Loses a value"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "temp = a;",
+          "bin": "safe"
+        },
+        {
+          "id": "i2",
+          "text": "a = b;",
+          "bin": "safe"
+        },
+        {
+          "id": "i3",
+          "text": "b = temp;",
+          "bin": "safe"
+        },
+        {
+          "id": "i4",
+          "text": "a = b; b = a;",
+          "bin": "destructive"
+        },
+        {
+          "id": "i5",
+          "text": "b = a; a = b;",
+          "bin": "destructive"
+        },
+        {
+          "id": "i6",
+          "text": "a = temp; without saving temp",
+          "bin": "destructive"
+        }
+      ]
+    },
+    "explanation": "A safe swap saves the first value before either variable is overwritten.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_swap_v10",
+    "index": 10,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int a = 3, b = 5;",
+        "a = b;",
+        "b = a;",
+        "printf(\"%d %d\\n\", a, b);"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "Without temp, a is overwritten by 5, so the original 3 is lost.",
+    "concept_slug": "variable_swap",
+    "concept_name": "Swapping Values"
+  }
+]

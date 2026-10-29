@@ -1,41 +1,41 @@
 {
   "file_id": "game_2220",
-  "game_title": "Cipher Decoder – Wind Pass Race",
+  "game_title": "C Scope Circuit · Read global state · variation 10",
   "game_concept": "A strategy race set in Frost Peaks – Wind Pass, a howling mountain pass: the summit pilot must handle avalanches while practicing strings & dictionaries. Core idea – Cipher Decoder: Shift characters using ord/chr operations to decode secret notes.",
-  "genre": "strategy race",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Wind Pass: a howling mountain pass",
-  "core_gameplay_loop": "In Wind Pass, repeat each round: Shift characters using ord/chr operations to decode secret notes. Each round the rival advances, and solving the step moves the summit pilot ahead. Then check the decoded value and advance.",
-  "primary_mechanic": "Cipher Decoder",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Beat a rival AI to the cliff anchor by solving code steps involving decoded that move the summit pilot forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the cliff anchor first, or lives reach 0.",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, read global state in a local expression. Print the scope trace [30, 13], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 13}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 4 (applied tier): Cipher Decoder",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Read global state",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M15-X5-T06-d09c6536",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Cipher Decoder' (Week 8 slot 15), mission type 'Rival Race', and setting 'Wind Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 4,
   "trial": 10,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "chr(ord('a') + 1)",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 13;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 17;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how decoded changes.",
-    "Step 2: Use the controls to apply the code idea against avalanches in Wind Pass.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level4/advanced/game_week8_level4_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_2220",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the cliff anchor by solving code steps involving decoded that move the summit pilot forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the cliff anchor first, or lives reach 0.",
+  "source_game_title": "Cipher Decoder – Wind Pass Race",
+  "source_primary_mechanic": "Cipher Decoder",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w8_l4",
+  "source_week": 8,
+  "source_level": 4,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "89f3704df17ed6e412836bcaaa634f76d78c5b8f7431a063664bf1d12163925e",
+    "lesson_unchanged": true
+  }
 }

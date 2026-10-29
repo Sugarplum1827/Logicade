@@ -1,30 +1,30 @@
 {
   "file_id": "game_1920",
-  "game_title": "Mutation Mystery – Fallen Statue Garden Race",
+  "game_title": "Multiply state · variation 10",
   "game_concept": "A strategy race set in Eldritch Ruins – Fallen Statue Garden, a garden of fallen statues: the spirit seeker must handle stone sentinels while practicing lists. Core idea – Mutation Mystery: Spot when two names point to the same list and when copy() is needed.",
-  "genre": "strategy race",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Fallen Statue Garden: a garden of fallen statues",
-  "core_gameplay_loop": "In Fallen Statue Garden, repeat each round: Spot when two names point to the same list and when copy() is needed. Each round the rival advances, and solving the step moves the spirit seeker ahead. Then check the mutation_safe value and advance.",
-  "primary_mechanic": "Mutation Mystery",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Beat a rival AI to the ancient lock by solving code steps involving mutation_safe that move the spirit seeker forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the ancient lock first, or lives reach 0.",
+  "player_objective": "Multiply state: declare resource as int, apply resource * 3, and print each result with %d. Dataset 10 starts with [-3, 0, 16, 19]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Mutation Mystery",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Multiply state",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M15-X5-T06-70110eef",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Mutation Mystery' (Week 7 slot 15), mission type 'Rival Race', and setting 'Fallen Statue Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 4,
   "trial": 10,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how mutation_safe changes.",
-    "Step 2: Use the controls to apply the code idea against stone sentinels in Fallen Statue Garden.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level4/advanced/game_week7_level4_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_1920",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the ancient lock by solving code steps involving mutation_safe that move the spirit seeker forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the ancient lock first, or lives reach 0.",
+  "source_game_title": "Mutation Mystery – Fallen Statue Garden Race",
+  "source_primary_mechanic": "Mutation Mystery",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w7_l4",
+  "source_week": 7,
+  "source_level": 4
 }

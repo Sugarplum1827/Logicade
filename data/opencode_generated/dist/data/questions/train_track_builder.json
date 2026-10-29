@@ -1,0 +1,79 @@
+{
+  "concept_id": "15_train_track_builder",
+  "slug": "train_track_builder",
+  "learning_target": "flowcharts and sequencing",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does a track switch do?",
+      "options": [
+        "Paints the train",
+        "Chooses between tracks",
+        "Stops the train forever",
+        "Changes the cargo"
+      ],
+      "answer_index": 1,
+      "explanation": "A switch directs a train from one track to another."
+    },
+    {
+      "id": "q2",
+      "question": "What is a sequence?",
+      "options": [
+        "Steps in order",
+        "A type of station",
+        "A random set",
+        "A single step"
+      ],
+      "answer_index": 0,
+      "explanation": "A sequence is an ordered list of steps or events."
+    },
+    {
+      "id": "q3",
+      "question": "What should a track plan include?",
+      "options": [
+        "Only curves",
+        "No switches",
+        "A start, route, and destination",
+        "Ten engines"
+      ],
+      "answer_index": 2,
+      "explanation": "A complete plan shows where the train starts, how it travels, and where it ends."
+    },
+    {
+      "id": "q4",
+      "question": "What happens if two trains share a track without planning?",
+      "options": [
+        "Free cargo",
+        "Faster travel",
+        "More stations",
+        "A collision"
+      ],
+      "answer_index": 3,
+      "explanation": "Without sequencing, two trains can occupy the same track and collide."
+    },
+    {
+      "id": "q5",
+      "question": "Which block checks whether a track is clear?",
+      "options": [
+        "Process",
+        "Start",
+        "End",
+        "Decision"
+      ],
+      "answer_index": 3,
+      "explanation": "A decision block checks the condition and chooses a safe branch."
+    },
+    {
+      "id": "q6",
+      "question": "Why test a route before running it?",
+      "options": [
+        "To make it longer",
+        "To avoid switches",
+        "To catch conflicts early",
+        "To change the station"
+      ],
+      "answer_index": 2,
+      "explanation": "Testing reveals conflicts before real trains are affected."
+    }
+  ]
+}

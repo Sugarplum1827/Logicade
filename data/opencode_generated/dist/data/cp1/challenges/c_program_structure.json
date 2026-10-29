@@ -1,0 +1,547 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v01",
+    "index": 1,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c program structure in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Include the stdio library"
+        },
+        {
+          "id": "s2",
+          "text": "Open the main function"
+        },
+        {
+          "id": "s3",
+          "text": "Print a message"
+        },
+        {
+          "id": "s4",
+          "text": "Return zero to report success"
+        },
+        {
+          "id": "s5",
+          "text": "Close the main function"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Include the stdio library → Open the main function → Print a message → Return zero to report success → Close the main function",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v02",
+    "index": 2,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the smallest complete C program skeleton.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "#include"
+        },
+        {
+          "id": "t2",
+          "text": "<stdio.h>"
+        },
+        {
+          "id": "t3",
+          "text": "int"
+        },
+        {
+          "id": "t4",
+          "text": "main()"
+        },
+        {
+          "id": "t5",
+          "text": "{"
+        },
+        {
+          "id": "t6",
+          "text": "return 0;"
+        },
+        {
+          "id": "t7",
+          "text": "}"
+        },
+        {
+          "id": "t8",
+          "text": "#define"
+        },
+        {
+          "id": "t9",
+          "text": "END"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "A minimal C program includes a header, defines main, and returns 0.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v03",
+    "index": 3,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the message printed and the value returned by main.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "",
+        "int main(void) {",
+        "    printf(\"Hello, C!\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "message",
+          "type": "final value"
+        },
+        {
+          "name": "exit_code",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "Hello, C!"
+        },
+        {
+          "id": "v2",
+          "text": "0"
+        },
+        {
+          "id": "v3",
+          "text": "error"
+        },
+        {
+          "id": "v4",
+          "text": "1"
+        },
+        {
+          "id": "v5",
+          "text": "-1"
+        }
+      ],
+      "answer": {
+        "message": "v1",
+        "exit_code": "v2"
+      }
+    },
+    "explanation": "printf produces Hello, C! and main returns 0 to signal success.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v04",
+    "index": 4,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each C item by its role in the program.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "directive",
+          "label": "Preprocessor directive",
+          "desc": "Runs before compilation"
+        },
+        {
+          "id": "function",
+          "label": "Function",
+          "desc": "Groups statements under a name"
+        },
+        {
+          "id": "statement",
+          "label": "Statement",
+          "desc": "An executable action"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "#include <stdio.h>",
+          "bin": "directive"
+        },
+        {
+          "id": "i2",
+          "text": "int main(void)",
+          "bin": "function"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"Hi\");",
+          "bin": "statement"
+        },
+        {
+          "id": "i4",
+          "text": "return 0;",
+          "bin": "statement"
+        },
+        {
+          "id": "i5",
+          "text": "#define SIZE 5",
+          "bin": "directive"
+        },
+        {
+          "id": "i6",
+          "text": "scanf(\"%d\", &n);",
+          "bin": "statement"
+        }
+      ]
+    },
+    "explanation": "Directives start with #, functions group statements, and statements end with semicolons.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v05",
+    "index": 5,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hi\\n\")",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The printf statement is missing its terminating semicolon.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v06",
+    "index": 6,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in the file scope or the main function.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    printf(\"Hello\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Headers and top-level declarations"
+        },
+        {
+          "id": "main",
+          "label": "main function",
+          "desc": "Statements inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "#include <stdio.h>",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "printf(\"Hello\\n\");",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "return 0;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "The include and main definition sit at file scope; its body statements belong to main.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v07",
+    "index": 7,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c program structure term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "#include"
+        },
+        {
+          "id": "l2",
+          "text": "main"
+        },
+        {
+          "id": "l3",
+          "text": "printf"
+        },
+        {
+          "id": "l4",
+          "text": "return 0"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Brings a library header into the program"
+        },
+        {
+          "id": "r2",
+          "text": "The function where execution begins"
+        },
+        {
+          "id": "r3",
+          "text": "Writes formatted text to the screen"
+        },
+        {
+          "id": "r4",
+          "text": "Reports successful completion"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v08",
+    "index": 8,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the C program skeleton.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "{{b0}} <stdio.h>",
+        "int {{b1}}(void) {",
+        "    printf(\"Hello\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "header directive",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "entry function",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "#include"
+        },
+        {
+          "id": "b2",
+          "text": "main"
+        },
+        {
+          "id": "b3",
+          "text": "#define"
+        },
+        {
+          "id": "b4",
+          "text": "void"
+        },
+        {
+          "id": "b5",
+          "text": "stdio"
+        }
+      ]
+    },
+    "explanation": "The program includes stdio.h and defines the main entry function.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v09",
+    "index": 9,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "",
+        "int main(void) {",
+        "    printf(\"Hello, C!\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Hello, C!",
+      "accept": [
+        "Hello C!",
+        "Hello, C!"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "printf writes exactly the text between its quotes, and \\n starts a new line."
+    },
+    "explanation": "The program produces Hello, C!.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_program_structure_v10",
+    "index": 10,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "",
+        "int main(void) {",
+        "    printf(\"Hello, C!\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "message",
+        "exit_code"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "message": "",
+            "exit_code": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "message": "Hello, C!",
+            "exit_code": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "message": "Hello, C!",
+            "exit_code": "0"
+          }
+        }
+      ],
+      "ask": [
+        "message",
+        "exit_code"
+      ],
+      "answer": {
+        "message": "Hello, C!",
+        "exit_code": "0"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is message = Hello, C!, exit_code = 0.",
+    "concept_slug": "c_program_structure",
+    "concept_name": "C Program Structure"
+  }
+]

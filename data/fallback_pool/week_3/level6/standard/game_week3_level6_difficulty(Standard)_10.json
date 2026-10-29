@@ -1,30 +1,30 @@
 {
   "file_id": "game_0770",
-  "game_title": "Not Negator – Sunken Wreck Streak",
+  "game_title": "Multi-step plans · variation 10",
   "game_concept": "A rhythm puzzle set in Coastal Port – Sunken Wreck, a wreck beneath the waves: the harbor master must handle pirate raiders while practicing conditionals (if / elif / else). Core idea – Not Negator: Use not to flip alarms and traps so the harbor master slips through safely.",
-  "genre": "rhythm puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Sunken Wreck: a wreck beneath the waves",
-  "core_gameplay_loop": "In Sunken Wreck, repeat each round: Use not to flip alarms and traps so the harbor master slips through safely. Each round poses one decision; a wrong answer breaks the streak. Then check the stealth value and advance.",
-  "primary_mechanic": "Not Negator",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about stealth to power up the harbor master and open the sea wall.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Multi-step plans: add 18, then double. Match all 3 streams; preserve their order. Dataset 10, operand 18.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 6 (applied tier): Not Negator",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Multi-step plans",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M05-X4-T20-fafca9c6",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Not Negator' (Week 3 slot 5), mission type 'Streak Challenge', and setting 'Sunken Wreck'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 6,
   "trial": 10,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 45,
+    "time_limit_seconds": 0,
     "target_score": 300,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stealth changes.",
-    "Step 2: Use the controls to apply the code idea against pirate raiders in Sunken Wreck.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level6/standard/game_week3_level6_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_0770",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about stealth to power up the harbor master and open the sea wall.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Not Negator – Sunken Wreck Streak",
+  "source_primary_mechanic": "Not Negator",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 45,
+  "learning_objective_id": "cp1_w3_l6",
+  "source_week": 3,
+  "source_level": 6
 }

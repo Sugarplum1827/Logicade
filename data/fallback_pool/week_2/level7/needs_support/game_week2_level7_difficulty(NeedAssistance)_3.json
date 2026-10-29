@@ -1,30 +1,30 @@
 {
   "file_id": "game_0483",
-  "game_title": "Modulo Gate – Cinder Cone Camp Streak",
+  "game_title": "Flowchart Lab · Sum from 1 to n",
   "game_concept": "A card battler set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Cinder Cone Camp open (even, odd, divisible by 3).",
-  "genre": "card battler",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
-  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Use % to decide which gates in Cinder Cone Camp open (even, odd, divisible by 3). Each round poses one decision; a wrong answer breaks the streak. Then check the gates_open value and advance.",
-  "primary_mechanic": "Modulo Gate",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Hint tokens that reveal one line of code",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 8 consecutive correct decisions about gates_open to power up the fire warden and open the cooling vent.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 8.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 3: {'n': 0}; {'n': 8}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Modulo Gate",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Accumulators",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M03-X4-T07-0e9403f2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Streak Challenge', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 7,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 67,
+    "time_limit_seconds": 0,
     "target_score": 240,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gates_open changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
-    "Step 3: Win by meeting the goal: streak counter reaches 8."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level7/needs_support/game_week2_level7_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_0483",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 8 consecutive correct decisions about gates_open to power up the fire warden and open the cooling vent.",
+  "source_win_condition": "streak counter reaches 8.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Modulo Gate – Cinder Cone Camp Streak",
+  "source_primary_mechanic": "Modulo Gate",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 67,
+  "learning_objective_id": "cp1_w2_l7",
+  "source_week": 2,
+  "source_level": 7
 }

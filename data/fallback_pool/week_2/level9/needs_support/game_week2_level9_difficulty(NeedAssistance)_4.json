@@ -1,30 +1,30 @@
 {
   "file_id": "game_0544",
-  "game_title": "Divide Or Floor – Ore Smelter Defense",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A tower defense set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Divide Or Floor: Pick / or // to split heat shields evenly among allies without leaving fractions.",
-  "genre": "tower defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
-  "core_gameplay_loop": "In Ore Smelter, repeat each round: Pick / or // to split heat shields evenly among allies without leaving fractions. Each round, cinder bats strike the fire shrine, so respond before the next strike lands. Then check the share value and advance.",
-  "primary_mechanic": "Divide Or Floor",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Protect the fire shrine from cinder bats in Ore Smelter: keep the share meter above zero by applying the concept correctly until the 76-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 76 seconds while share > 0.",
-  "lose_condition": "share drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 4: {'a': 9, 'b': 4}; {'a': -4, 'b': -6}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Divide Or Floor",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M04-X1-T18-6448e0a3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Divide Or Floor' (Week 2 slot 4), mission type 'Survival Siege', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 4,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how share changes.",
-    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
-    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while share > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/needs_support/game_week2_level9_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_0544",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the fire shrine from cinder bats in Ore Smelter: keep the share meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "source_win_condition": "Timer reaches 76 seconds while share > 0.",
+  "source_lose_condition": "share drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "source_game_title": "Divide Or Floor – Ore Smelter Defense",
+  "source_primary_mechanic": "Divide Or Floor",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

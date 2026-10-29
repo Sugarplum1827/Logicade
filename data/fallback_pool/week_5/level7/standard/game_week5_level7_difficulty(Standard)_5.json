@@ -1,30 +1,30 @@
 {
   "file_id": "game_1395",
-  "game_title": "Loop Picker – Owl Roost Race",
+  "game_title": "Branch Assembly 5 · Merge Midpoint",
   "game_concept": "A strategy race set in Mystic Forest – Owl Roost, a night-time owl roost: the wood elf archer must handle bog toads while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
-  "genre": "strategy race",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
-  "core_gameplay_loop": "In Owl Roost, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round the rival advances, and solving the step moves the wood elf archer ahead. Then check the picks_right value and advance.",
-  "primary_mechanic": "Loop Picker",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Beat a rival AI to the spirit shrine by solving code steps involving picks_right that move the wood elf archer forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the spirit shrine first, or lives reach 0.",
+  "player_objective": "Declarations and statements: build a valid C source file that prints 20. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 12 components (6 upper, 6 lower). Set the gold-socket controller batch to 12.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 7 (applied tier): Loop Picker",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Declarations and statements",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M15-X5-T11-2c4dfc51",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Rival Race', and setting 'Owl Roost'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 7,
   "trial": 5,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how picks_right changes.",
-    "Step 2: Use the controls to apply the code idea against bog toads in Owl Roost.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level7/standard/game_week5_level7_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_1395",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the spirit shrine by solving code steps involving picks_right that move the wood elf archer forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the spirit shrine first, or lives reach 0.",
+  "source_game_title": "Loop Picker – Owl Roost Race",
+  "source_primary_mechanic": "Loop Picker",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: A: 6 components via upper_4, shared_assembler to output_shared; B: 6 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w5_l7",
+  "source_week": 5,
+  "source_level": 7
 }

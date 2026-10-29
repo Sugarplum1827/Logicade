@@ -1,30 +1,30 @@
 {
   "file_id": "game_1444",
-  "game_title": "Squad Marcher – Herbalist Hut Defense",
+  "game_title": "Branch Assembly 4 · Separate Outputs",
   "game_concept": "A tower defense set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Squad Marcher: Loop through a squad list with for ally in squad so each member gets its job.",
-  "genre": "tower defense",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
-  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Loop through a squad list with for ally in squad so each member gets its job. Each round, giant beetles strike the root gate, so respond before the next strike lands. Then check the squad_ready value and advance.",
-  "primary_mechanic": "Squad Marcher",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Protect the root gate from giant beetles in Herbalist Hut: keep the squad_ready meter above zero by applying the concept correctly until the 76-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 76 seconds while squad_ready > 0.",
-  "lose_condition": "squad_ready drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "player_objective": "Source organization: build a valid C source file that prints 18. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 5. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 12 components (6 upper, 6 lower). Set the gold-socket controller batch to 12.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 9 (extended tier): Squad Marcher",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Source organization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M04-X1-T18-2f9e8e01",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Squad Marcher' (Week 5 slot 4), mission type 'Survival Siege', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 9,
   "trial": 4,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how squad_ready changes.",
-    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
-    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while squad_ready > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level9/needs_support/game_week5_level9_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_1444",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the root gate from giant beetles in Herbalist Hut: keep the squad_ready meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "source_win_condition": "Timer reaches 76 seconds while squad_ready > 0.",
+  "source_lose_condition": "squad_ready drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "source_game_title": "Squad Marcher – Herbalist Hut Defense",
+  "source_primary_mechanic": "Squad Marcher",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 6 components via upper_4, upper_6 to output_upper; ELSE: 6 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w5_l9",
+  "source_week": 5,
+  "source_level": 9
 }

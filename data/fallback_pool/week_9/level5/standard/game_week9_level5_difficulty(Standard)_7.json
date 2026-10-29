@@ -1,30 +1,30 @@
 {
   "file_id": "game_2537",
-  "game_title": "Exception Rodeo – Merchant Waystation Trial",
+  "game_title": "Examination practice · Program synthesis · variation 7",
   "game_concept": "A logic puzzle set in Sand Dunes – Merchant Waystation, a waystation for merchants: the scarab scholar must handle giant scorpions while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
-  "genre": "logic puzzle",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
-  "core_gameplay_loop": "In Merchant Waystation, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round costs one action, so plan the step so none are wasted. Then check the stability value and advance.",
-  "primary_mechanic": "Exception Rodeo",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Reach the sundial using at most 16 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The sundial reached with actions_used <= 16.",
-  "lose_condition": "actions_used exceeds 16 before the sundial is reached, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 7 (19×13, 49 junctions): collect 1 crystal(s) from the branches and reach beacon (17, 11). Use a C main program to Program synthesis. Print [40]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Exception Rodeo",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M02-X3-T17-e375ec24",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Efficiency Trial', and setting 'Merchant Waystation'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 7,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stability changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Merchant Waystation.",
-    "Step 3: Win by meeting the goal: The sundial reached with actions_used <= 16."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/standard/game_week9_level5_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_2537",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the sundial using at most 16 actions, so every code step counts.",
+  "source_win_condition": "The sundial reached with actions_used <= 16.",
+  "source_lose_condition": "actions_used exceeds 16 before the sundial is reached, or lives reach 0.",
+  "source_game_title": "Exception Rodeo – Merchant Waystation Trial",
+  "source_primary_mechanic": "Exception Rodeo",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

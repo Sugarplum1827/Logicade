@@ -1,30 +1,30 @@
 {
   "file_id": "game_0896",
-  "game_title": "Rule Duel – Cliffside Fort Race",
+  "game_title": "Algorithm synthesis · variation 6",
   "game_concept": "A adventure race set in Coastal Port – Cliffside Fort, a fort on the sea cliffs: the fisher must handle rogue waves while practicing conditionals (if / elif / else). Core idea – Rule Duel: Write rules that beat the AI's chosen move in a best-of-rounds duel.",
-  "genre": "adventure race",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Cliffside Fort: a fort on the sea cliffs",
-  "core_gameplay_loop": "In Cliffside Fort, repeat each round: Write rules that beat the AI's chosen move in a best-of-rounds duel. Each round the rival advances, and solving the step moves the fisher ahead. Then check the duel_hp value and advance.",
-  "primary_mechanic": "Rule Duel",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Beat a rival AI to the sea wall by solving code steps involving duel_hp that move the fisher forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
-  "lose_condition": "The rival reaches the sea wall first, or lives reach 0.",
+  "player_objective": "Algorithm synthesis: add 19, then double. Match all 3 streams; preserve their order. Dataset 6, operand 19.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 10 (extended tier): Rule Duel",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Algorithm synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M11-X5-T10-a1a3cc1f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rule Duel' (Week 3 slot 11), mission type 'Rival Race', and setting 'Cliffside Fort'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 10,
   "trial": 6,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 600,
     "action_budget": 15,
     "streak_target": 14,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how duel_hp changes.",
-    "Step 2: Use the controls to apply the code idea against rogue waves in Cliffside Fort.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.25)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level10/advanced/game_week3_level10_difficulty(Advance)_6.json",
+    "variation_id": "canvas_game_0896",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the sea wall by solving code steps involving duel_hp that move the fisher forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.25).",
+  "source_lose_condition": "The rival reaches the sea wall first, or lives reach 0.",
+  "source_game_title": "Rule Duel – Cliffside Fort Race",
+  "source_primary_mechanic": "Rule Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w3_l10",
+  "source_week": 3,
+  "source_level": 10
 }

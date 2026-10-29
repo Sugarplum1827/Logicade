@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_01_flowchart_symbols",
+  "slug": "flowchart_symbols",
+  "display_name": "Flowchart Symbols",
+  "learning_target": "match flowchart symbols to their roles",
+  "core_brief": "Read the shape, know the job: terminals, input/output, processes, and decisions.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 2,
+  "unit": "Flowcharting",
+  "group": "flow",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_01_flowchart_symbols_v07",
+  "index": 7,
+  "challenge_index": 7,
+  "challenge_id": "flowchart_symbols_v07",
+  "title": "Find the bug",
+  "label": "Lab 07: Find the bug",
+  "seed": 283521,
+  "challenge_bank": "../../../data/cp1/challenges/flowchart_symbols.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

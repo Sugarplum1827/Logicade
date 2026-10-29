@@ -1,30 +1,30 @@
 {
   "file_id": "game_0790",
-  "game_title": "Discount Rules – Tavern Terrace Race",
+  "game_title": "Compare procedures · variation 10",
   "game_concept": "A racing platformer set in Coastal Port – Tavern Terrace, a seaside tavern terrace: the fisher must handle smugglers while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
-  "genre": "racing platformer",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Tavern Terrace: a seaside tavern terrace",
-  "core_gameplay_loop": "In Tavern Terrace, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round the rival advances, and solving the step moves the fisher ahead. Then check the profit value and advance.",
-  "primary_mechanic": "Discount Rules",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Power-up crates for perfect rounds",
     "Ghost replay of best run"
   ],
-  "player_objective": "Beat a rival AI to the treasure chest by solving code steps involving profit that move the fisher forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
-  "lose_condition": "The rival reaches the treasure chest first, or lives reach 0.",
+  "player_objective": "Compare procedures: Compare doubling before addition with addition before doubling. double, then add 18. Match all 3 streams; preserve their order. Dataset 10, operand 18.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 7 (applied tier): Discount Rules",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Compare procedures",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M10-X5-T16-fd94789d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Rival Race', and setting 'Tavern Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 7,
   "trial": 10,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 67,
+    "time_limit_seconds": 0,
     "target_score": 240,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against smugglers in Tavern Terrace.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level7/needs_support/game_week3_level7_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_0790",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the treasure chest by solving code steps involving profit that move the fisher forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "source_lose_condition": "The rival reaches the treasure chest first, or lives reach 0.",
+  "source_game_title": "Discount Rules – Tavern Terrace Race",
+  "source_primary_mechanic": "Discount Rules",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 67,
+  "learning_objective_id": "cp1_w3_l7",
+  "source_week": 3,
+  "source_level": 7
 }

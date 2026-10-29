@@ -1,0 +1,79 @@
+{
+  "concept_id": "37_airport_flight_control",
+  "slug": "airport_flight_control",
+  "learning_target": "queues and sequencing",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a queue?",
+      "options": [
+        "A runway",
+        "A random pile",
+        "A first-in, first-out line",
+        "A type of plane"
+      ],
+      "answer_index": 2,
+      "explanation": "A queue removes items in the same order they were added."
+    },
+    {
+      "id": "q2",
+      "question": "Which plane should land first in a FIFO queue?",
+      "options": [
+        "The largest plane",
+        "The one that arrived first",
+        "The one with the most fuel",
+        "A random plane"
+      ],
+      "answer_index": 1,
+      "explanation": "FIFO means first in, first out, so the earliest arrival goes first."
+    },
+    {
+      "id": "q3",
+      "question": "What does sequencing ensure?",
+      "options": [
+        "More planes",
+        "Random arrivals",
+        "The correct order of operations",
+        "Faster fuel burn"
+      ],
+      "answer_index": 2,
+      "explanation": "Sequencing puts operations in a safe, intentional order."
+    },
+    {
+      "id": "q4",
+      "question": "Why separate arrivals and departures?",
+      "options": [
+        "To make the airport louder",
+        "To change the weather",
+        "To reduce the queue",
+        "To avoid runway conflicts"
+      ],
+      "answer_index": 3,
+      "explanation": "Separating flows prevents two aircraft from needing the same runway at once."
+    },
+    {
+      "id": "q5",
+      "question": "What is a priority queue?",
+      "options": [
+        "A queue ordered by importance",
+        "A flight plan",
+        "A queue with no order",
+        "A type of runway"
+      ],
+      "answer_index": 0,
+      "explanation": "A priority queue serves higher-priority items before lower-priority ones."
+    },
+    {
+      "id": "q6",
+      "question": "What should happen when a runway is busy?",
+      "options": [
+        "Double the speed",
+        "Land immediately",
+        "Ignore the tower",
+        "Hold the next plane"
+      ],
+      "answer_index": 3,
+      "explanation": "Holding the next plane prevents a collision on the runway."
+    }
+  ]
+}

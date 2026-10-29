@@ -1,41 +1,41 @@
 {
   "file_id": "game_2379",
-  "game_title": "Frequency Bazaar – Rope Line Trial",
+  "game_title": "C Scope Circuit · Scope trace synthesis · variation 9",
   "game_concept": "A programming puzzle set in Frost Peaks – Rope Line, a long fixed rope line: the avalanche scout must handle storm winds while practicing strings & dictionaries. Core idea – Frequency Bazaar: Count how often each item appears using a dictionary.",
-  "genre": "programming puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Rope Line: a long fixed rope line",
-  "core_gameplay_loop": "In Rope Line, repeat each round: Count how often each item appears using a dictionary. Each round costs one action, so plan the step so none are wasted. Then check the tally value and advance.",
-  "primary_mechanic": "Frequency Bazaar",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Reach the rope bridge using at most 23 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The rope bridge reached with actions_used <= 23.",
-  "lose_condition": "actions_used exceeds 23 before the rope bridge is reached, or lives reach 0.",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [20, 11], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 11}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Frequency Bazaar",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Scope trace synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M09-X3-T15-e1ba3357",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Frequency Bazaar' (Week 8 slot 9), mission type 'Efficiency Trial', and setting 'Rope Line'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 10,
   "trial": 9,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "count[x] = count.get(x, 0) + 1",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 10;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 20; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 80,
+    "time_limit_seconds": 0,
     "target_score": 320,
     "action_budget": 23,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how tally changes.",
-    "Step 2: Use the controls to apply the code idea against storm winds in Rope Line.",
-    "Step 3: Win by meeting the goal: The rope bridge reached with actions_used <= 23."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level10/needs_support/game_week8_level10_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_2379",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the rope bridge using at most 23 actions, so every code step counts.",
+  "source_win_condition": "The rope bridge reached with actions_used <= 23.",
+  "source_lose_condition": "actions_used exceeds 23 before the rope bridge is reached, or lives reach 0.",
+  "source_game_title": "Frequency Bazaar – Rope Line Trial",
+  "source_primary_mechanic": "Frequency Bazaar",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 80,
+  "learning_objective_id": "cp1_w8_l10",
+  "source_week": 8,
+  "source_level": 10,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "b3e4810a0ceac9b04a052da6d31ca3712b1df455d99abd6577abc127b346c784",
+    "lesson_unchanged": true
+  }
 }

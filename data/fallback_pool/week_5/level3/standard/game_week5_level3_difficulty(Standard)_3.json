@@ -1,30 +1,30 @@
 {
   "file_id": "game_1273",
-  "game_title": "Off By One Fixer – Waterfall Pool Defense",
+  "game_title": "Branch Assembly 3 · Merge Endpoint",
   "game_concept": "A tower defense set in Mystic Forest – Waterfall Pool, a pool below a waterfall: the herbalist must handle shadow wolves while practicing control flow: for loops. Core idea – Off By One Fixer: Fix range boundaries that skip or overshoot by one.",
-  "genre": "tower defense",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Waterfall Pool: a pool below a waterfall",
-  "core_gameplay_loop": "In Waterfall Pool, repeat each round: Fix range boundaries that skip or overshoot by one. Each round, shadow wolves strike the seed vault, so respond before the next strike lands. Then check the fixes value and advance.",
-  "primary_mechanic": "Off By One Fixer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Mini-tutorial pop-ups",
     "Checkpoint flags"
   ],
-  "player_objective": "Protect the seed vault from shadow wolves in Waterfall Pool: keep the fixes meter above zero by applying the concept correctly until the 36-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 36 seconds while fixes > 0.",
-  "lose_condition": "fixes drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "player_objective": "Preprocessor directives: build a valid C source file that prints 7. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 6. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 6 components (3 upper, 3 lower). Set the gold-socket controller batch to 6.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 3 (intro tier): Off By One Fixer",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Preprocessor directives",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M13-X1-T09-f9188f13",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Fixer' (Week 5 slot 13), mission type 'Survival Siege', and setting 'Waterfall Pool'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 3,
   "trial": 3,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fixes changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Waterfall Pool.",
-    "Step 3: Win by meeting the goal: Timer reaches 36 seconds while fixes > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level3/standard/game_week5_level3_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_1273",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the seed vault from shadow wolves in Waterfall Pool: keep the fixes meter above zero by applying the concept correctly until the 36-second timer ends.",
+  "source_win_condition": "Timer reaches 36 seconds while fixes > 0.",
+  "source_lose_condition": "fixes drops to 0, or lives reach 0, before the 36-second timer ends.",
+  "source_game_title": "Off By One Fixer – Waterfall Pool Defense",
+  "source_primary_mechanic": "Off By One Fixer",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 3 components via upper_4, upper_6 to output_shared; B: 3 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w5_l3",
+  "source_week": 5,
+  "source_level": 3
 }

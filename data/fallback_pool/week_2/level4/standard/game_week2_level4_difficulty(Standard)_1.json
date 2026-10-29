@@ -1,30 +1,30 @@
 {
   "file_id": "game_0401",
-  "game_title": "Exponent Engine – Molten Bridge Rush",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A action puzzle set in Mt. Pyre – Molten Bridge, a bridge over magma: the ember mage must handle magma slimes while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Molten Bridge: a bridge over magma",
-  "core_gameplay_loop": "In Molten Bridge, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round, a new obsidian shards challenge appears; solve it to bank points before time drains. Then check the engine_power value and advance.",
-  "primary_mechanic": "Exponent Engine",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Collect 220 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 220 within 39 seconds.",
-  "lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > -4; otherwise display At or below. Test dataset 1: {'n': -6}; {'n': -1}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Exponent Engine",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M11-X2-T17-9dd4d61b",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Resource Rush', and setting 'Molten Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 1,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 39,
+    "time_limit_seconds": 0,
     "target_score": 220,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how engine_power changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Molten Bridge.",
-    "Step 3: Win by meeting the goal: score >= 220 within 39 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/standard/game_week2_level4_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_0401",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 220 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 220 within 39 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "source_game_title": "Exponent Engine – Molten Bridge Rush",
+  "source_primary_mechanic": "Exponent Engine",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 39,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

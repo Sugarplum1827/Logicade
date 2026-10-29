@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "36_museum_heist_puzzle",
+  "slug": "museum_heist_puzzle",
+  "display_name": "Museum Heist Puzzle",
+  "module_family": "security_puzzle",
+  "learning_target": "flowcharts and path planning",
+  "core_brief": "Use flowchart paths to cross laser grids and reach a display without triggering alarms.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "museum",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "Grid route",
+  "accent": "#b69cff",
+  "tint": 12047850,
+  "variation_id": "36_museum_heist_puzzle_v03",
+  "index": 3,
+  "title": "Vertical Ascent",
+  "label": "Variation 03: Vertical Ascent",
+  "seed": 2400485788,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "vertical"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_night",
+    "zones": [
+      "themes.urban.bg_city_night",
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk"
+    ],
+    "tile": "themes.urban.tile_asphalt",
+    "player": "themes.urban.player_c",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.tree_b",
+      "bush": "themes.urban.barrier",
+      "slime": "themes.urban.barrier",
+      "bee": "themes.urban.barrier_b"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a vertically layered level with at least three distinct heights or floors. A correct response opens the next climb segment; provide safe recovery platforms.",
+    "obstacles": "gaps, lifts or ladders, and one moving vertical hazard; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short climb bursts separated by brief planning pauses."
+  },
+  "question_bank": "../../data/questions/museum_heist_puzzle.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

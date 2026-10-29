@@ -1,0 +1,558 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v01",
+    "index": 1,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each value as a match or no match for target = 9.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "match",
+          "label": "Match",
+          "desc": "Equal to 9"
+        },
+        {
+          "id": "nomatch",
+          "label": "No match",
+          "desc": "Not equal to 9"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "values[0] = 3",
+          "bin": "nomatch"
+        },
+        {
+          "id": "i2",
+          "text": "values[1] = 7",
+          "bin": "nomatch"
+        },
+        {
+          "id": "i3",
+          "text": "values[2] = 9",
+          "bin": "match"
+        },
+        {
+          "id": "i4",
+          "text": "values[3] = 11",
+          "bin": "nomatch"
+        },
+        {
+          "id": "i5",
+          "text": "values[4] = 13",
+          "bin": "nomatch"
+        },
+        {
+          "id": "i6",
+          "text": "9",
+          "bin": "match"
+        }
+      ]
+    },
+    "explanation": "Only the element equal to 9 stops the search with a match.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v02",
+    "index": 2,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int values[5] = {3, 7, 9, 11, 13};",
+        "int target = 9;",
+        "for (int i = 0; i < 5; i += 2) {",
+        "    if (values[i] == target) {",
+        "        printf(\"%d\\n\", i);",
+        "    }",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "Increasing i by 2 skips every other element, so odd indexes like 2 may be missed.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v03",
+    "index": 3,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in main or the search loop.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int values[5] = {3, 7, 9, 11, 13};",
+        "    int found = -1;",
+        "    for (int i = 0; i < 5; i++) {",
+        "        if (values[i] == 9) found = i;",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "values and found"
+        },
+        {
+          "id": "loop",
+          "label": "Loop scope",
+          "desc": "i and the current test"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int values[5]",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int found = -1;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int i = 0",
+          "scope": "loop"
+        },
+        {
+          "id": "d4",
+          "text": "values[i] == 9",
+          "scope": "loop"
+        }
+      ]
+    },
+    "explanation": "i advances only inside the loop; found keeps the result for main.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v04",
+    "index": 4,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each array search term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Linear search"
+        },
+        {
+          "id": "l2",
+          "text": "Target"
+        },
+        {
+          "id": "l3",
+          "text": "Found index"
+        },
+        {
+          "id": "l4",
+          "text": "-1"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Checks elements one by one"
+        },
+        {
+          "id": "r2",
+          "text": "The value being searched for"
+        },
+        {
+          "id": "r3",
+          "text": "The position of the matching element"
+        },
+        {
+          "id": "r4",
+          "text": "A sentinel meaning not found"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v05",
+    "index": 5,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the linear search.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int found = -1;",
+        "for (int i = 0; i < 5; i{{b0}}) {",
+        "    if (values[i] {{b1}} target) {",
+        "        found = i;",
+        "        break;",
+        "    }",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "single-step increment",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "equality operator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "++"
+        },
+        {
+          "id": "b2",
+          "text": "=="
+        },
+        {
+          "id": "b3",
+          "text": "+= 2"
+        },
+        {
+          "id": "b4",
+          "text": "="
+        },
+        {
+          "id": "b5",
+          "text": "!="
+        }
+      ]
+    },
+    "explanation": "Visit every index one at a time and compare with ==.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v06",
+    "index": 6,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int values[5] = {3, 7, 9, 11, 13};",
+        "    int target = 9;",
+        "    int found = -1;",
+        "    for (int i = 0; i < 5; i++) {",
+        "        if (values[i] == target) {",
+        "            found = i;",
+        "            break;",
+        "        }",
+        "    }",
+        "    printf(\"%d\\n\", found);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "2",
+      "accept": [
+        "2"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The target 9 is the third element, at index 2."
+    },
+    "explanation": "The program produces 2.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v07",
+    "index": 7,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int values[5] = {3, 7, 9, 11, 13};",
+        "    int target = 9;",
+        "    int found = -1;",
+        "    for (int i = 0; i < 5; i++) {",
+        "        if (values[i] == target) {",
+        "            found = i;",
+        "            break;",
+        "        }",
+        "    }",
+        "    printf(\"%d\\n\", found);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "i",
+        "found"
+      ],
+      "steps": [
+        {
+          "line": 5,
+          "state": {
+            "i": "0",
+            "found": "-1"
+          }
+        },
+        {
+          "line": 7,
+          "state": {
+            "i": "2",
+            "found": "2"
+          }
+        },
+        {
+          "line": 9,
+          "state": {
+            "i": "2",
+            "found": "2"
+          }
+        }
+      ],
+      "ask": [
+        "i",
+        "found"
+      ],
+      "answer": {
+        "i": "2",
+        "found": "2"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is i = 2, found = 2.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v08",
+    "index": 8,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of array search in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the index at zero"
+        },
+        {
+          "id": "s2",
+          "text": "Compare the current element with the target"
+        },
+        {
+          "id": "s3",
+          "text": "Return the index when it matches"
+        },
+        {
+          "id": "s4",
+          "text": "Return -1 if the loop ends without a match"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Start the index at zero → Compare the current element with the target → Return the index when it matches → Return -1 if the loop ends without a match",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v09",
+    "index": 9,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the linear-search comparison.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "if"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "values[i]"
+        },
+        {
+          "id": "t4",
+          "text": "=="
+        },
+        {
+          "id": "t5",
+          "text": "target"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": "="
+        },
+        {
+          "id": "t8",
+          "text": "!="
+        },
+        {
+          "id": "t9",
+          "text": "while"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Each element is compared with the target using equality.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "array_search_v10",
+    "index": 10,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the matching index and the saved found value.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int values[5] = {3, 7, 9, 11, 13};",
+        "    int target = 9;",
+        "    int found = -1;",
+        "    for (int i = 0; i < 5; i++) {",
+        "        if (values[i] == target) {",
+        "            found = i;",
+        "            break;",
+        "        }",
+        "    }",
+        "    printf(\"%d\\n\", found);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "i",
+          "type": "final value"
+        },
+        {
+          "name": "found",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "2"
+        },
+        {
+          "id": "v2",
+          "text": "2"
+        },
+        {
+          "id": "v3",
+          "text": "3"
+        },
+        {
+          "id": "v4",
+          "text": "1"
+        }
+      ],
+      "answer": {
+        "i": "v1",
+        "found": "v2"
+      }
+    },
+    "explanation": "The loop breaks at index 2 and stores that index in found.",
+    "concept_slug": "array_search",
+    "concept_name": "Array Search"
+  }
+]

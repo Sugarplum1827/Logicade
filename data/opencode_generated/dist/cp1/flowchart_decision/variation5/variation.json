@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_03_flowchart_decision",
+  "slug": "flowchart_decision",
+  "display_name": "Flowchart Decisions",
+  "learning_target": "trace and wire a two-way decision",
+  "core_brief": "A diamond asks a question; the program follows exactly one branch.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 2,
+  "unit": "Flowcharting",
+  "group": "flow",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_03_flowchart_decision_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "flowchart_decision_v05",
+  "title": "Find the bug",
+  "label": "Lab 05: Find the bug",
+  "seed": 1150419889,
+  "challenge_bank": "../../../data/cp1/challenges/flowchart_decision.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

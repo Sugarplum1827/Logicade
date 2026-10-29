@@ -1,30 +1,30 @@
 {
   "file_id": "game_2522",
-  "game_title": "Exception Rodeo – Bone Valley Rush",
+  "game_title": "Examination practice · Program synthesis · variation 2",
   "game_concept": "A action puzzle set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
-  "genre": "action puzzle",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
-  "core_gameplay_loop": "In Bone Valley, repeat each round: Wrap risky code in try/except to catch runtime errors without crashing. Each round, a new rope bundles challenge appears; solve it to bank points before time drains. Then check the stability value and advance.",
-  "primary_mechanic": "Exception Rodeo",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Collect 180 points of rope bundles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 180 within 59 seconds.",
-  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 2 (17×11, 29 junctions): collect 1 crystal(s) from the branches and reach beacon (13, 9). Use a C main program to Program synthesis. Print [15]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Exception Rodeo",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M02-X2-T16-6c574222",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Resource Rush', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 2,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stability changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
-    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/needs_support/game_week9_level5_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_2522",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 180 points of rope bundles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 180 within 59 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "source_game_title": "Exception Rodeo – Bone Valley Rush",
+  "source_primary_mechanic": "Exception Rodeo",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

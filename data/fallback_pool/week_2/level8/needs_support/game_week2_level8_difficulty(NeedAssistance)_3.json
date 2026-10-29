@@ -1,30 +1,30 @@
 {
   "file_id": "game_0513",
-  "game_title": "Modulo Gate – Basalt Stair Defense",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A action defense set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Basalt Stair open (even, odd, divisible by 3).",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
-  "core_gameplay_loop": "In Basalt Stair, repeat each round: Use % to decide which gates in Basalt Stair open (even, odd, divisible by 3). Each round, magma slimes strike the ash barrier, so respond before the next strike lands. Then check the gates_open value and advance.",
-  "primary_mechanic": "Modulo Gate",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Protect the ash barrier from magma slimes in Basalt Stair: keep the gates_open meter above zero by applying the concept correctly until the 71-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 71 seconds while gates_open > 0.",
-  "lose_condition": "gates_open drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "player_objective": "Print every even number from 16 through 30. Trace the update by 2 and the final failed condition. Test dataset 3: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Modulo Gate",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Trace a loop",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M03-X1-T09-526cbe74",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Survival Siege', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 8,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gates_open changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
-    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while gates_open > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level8/needs_support/game_week2_level8_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_0513",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the ash barrier from magma slimes in Basalt Stair: keep the gates_open meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "source_win_condition": "Timer reaches 71 seconds while gates_open > 0.",
+  "source_lose_condition": "gates_open drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "source_game_title": "Modulo Gate – Basalt Stair Defense",
+  "source_primary_mechanic": "Modulo Gate",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w2_l8",
+  "source_week": 2,
+  "source_level": 8
 }

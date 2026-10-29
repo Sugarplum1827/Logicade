@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_10_algorithm_search_sort",
+  "slug": "algorithm_search_sort",
+  "display_name": "Search and Sort Steps",
+  "learning_target": "trace linear search and bubble sort",
+  "core_brief": "Search looks for one value; sort rearranges all values into order.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 3,
+  "unit": "Algorithms",
+  "group": "flow",
+  "skin": "underwater",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_3",
+    "zones": [
+      "themes.underwater.bg_reef_3",
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2"
+    ],
+    "tile": "themes.underwater.tile_sand",
+    "player": "themes.underwater.player_pink",
+    "enemy": "themes.underwater.enemy_red",
+    "coin": "themes.underwater.coin_bubble_a",
+    "goal": "themes.underwater.goal_chest_pearl",
+    "obstacles": {
+      "spike": "themes.underwater.rock_b",
+      "bush": "themes.underwater.rock_a",
+      "slime": "themes.underwater.seaweed_orange",
+      "bee": "themes.underwater.seaweed_orange"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "mechanic": "assemble",
+  "mechanic_label": "Assemble",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_10_algorithm_search_sort_v03",
+  "index": 3,
+  "challenge_index": 3,
+  "challenge_id": "algorithm_search_sort_v03",
+  "title": "Assemble the line",
+  "label": "Lab 03: Assemble the line",
+  "seed": 2954650622,
+  "challenge_bank": "../../../data/cp1/challenges/algorithm_search_sort.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

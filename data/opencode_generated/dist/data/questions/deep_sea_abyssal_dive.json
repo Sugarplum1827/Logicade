@@ -1,0 +1,79 @@
+{
+  "concept_id": "31_deep_sea_abyssal_dive",
+  "slug": "deep_sea_abyssal_dive",
+  "learning_target": "error handling and recovery",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is error handling?",
+      "options": [
+        "Making errors faster",
+        "Planning for and recovering from failures",
+        "Deleting the code",
+        "Ignoring all errors"
+      ],
+      "answer_index": 1,
+      "explanation": "Error handling detects failures and defines a safe response."
+    },
+    {
+      "id": "q2",
+      "question": "What does a `try` block do?",
+      "options": [
+        "Always fails",
+        "Creates a loop",
+        "Runs code that might fail",
+        "Stops the program"
+      ],
+      "answer_index": 2,
+      "explanation": "A try block contains code that may raise an exception."
+    },
+    {
+      "id": "q3",
+      "question": "What does an `except` block handle?",
+      "options": [
+        "A comment",
+        "A normal result",
+        "A variable",
+        "An error raised in the try block"
+      ],
+      "answer_index": 3,
+      "explanation": "The except block runs when the matching exception occurs."
+    },
+    {
+      "id": "q4",
+      "question": "What should you do first when a leak is detected?",
+      "options": [
+        "Locate and isolate it",
+        "Increase speed",
+        "Ignore it",
+        "Surface immediately"
+      ],
+      "answer_index": 0,
+      "explanation": "Finding and isolating the leak prevents further damage."
+    },
+    {
+      "id": "q5",
+      "question": "Why log errors?",
+      "options": [
+        "To hide the problem",
+        "To diagnose and prevent repeats",
+        "To make the log longer",
+        "To change the pressure"
+      ],
+      "answer_index": 1,
+      "explanation": "Error logs preserve details that help diagnose and prevent future failures."
+    },
+    {
+      "id": "q6",
+      "question": "What is a safe fallback?",
+      "options": [
+        "Return to a stable depth",
+        "Disable alarms",
+        "Keep diving deeper",
+        "Open all valves"
+      ],
+      "answer_index": 0,
+      "explanation": "Returning to a stable depth reduces pressure and gives time to repair."
+    }
+  ]
+}

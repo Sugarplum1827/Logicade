@@ -1,30 +1,30 @@
 {
   "file_id": "game_1207",
-  "game_title": "Pattern Painter – Fairy Ring Glade Streak",
+  "game_title": "Branch Assembly 7 · Separate Outputs",
   "game_concept": "A quiz RPG set in Mystic Forest – Fairy Ring Glade, a glade ringed by mushrooms: the herbalist must handle bog toads while practicing control flow: for loops. Core idea – Pattern Painter: Print growing star triangles with nested loops to decorate the fairy lantern.",
-  "genre": "quiz RPG",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Fairy Ring Glade: a glade ringed by mushrooms",
-  "core_gameplay_loop": "In Fairy Ring Glade, repeat each round: Print growing star triangles with nested loops to decorate the fairy lantern. Each round poses one decision; a wrong answer breaks the streak. Then check the pattern_rows value and advance.",
-  "primary_mechanic": "Pattern Painter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Checkpoint flags"
   ],
-  "player_objective": "Chain 5 consecutive correct decisions about pattern_rows to power up the herbalist and open the fairy lantern.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 5.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Tokens and components: build a valid C source file that prints 8. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 4 components (2 upper, 2 lower). Set the gold-socket controller batch to 4.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Pattern Painter",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Tokens and components",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M07-X4-T03-2881286f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Pattern Painter' (Week 5 slot 7), mission type 'Streak Challenge', and setting 'Fairy Ring Glade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 1,
   "trial": 7,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how pattern_rows changes.",
-    "Step 2: Use the controls to apply the code idea against bog toads in Fairy Ring Glade.",
-    "Step 3: Win by meeting the goal: streak counter reaches 5."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level1/needs_support/game_week5_level1_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_1207",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 5 consecutive correct decisions about pattern_rows to power up the herbalist and open the fairy lantern.",
+  "source_win_condition": "streak counter reaches 5.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Pattern Painter – Fairy Ring Glade Streak",
+  "source_primary_mechanic": "Pattern Painter",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 2 components via upper_4, upper_6 to output_upper; B: 2 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w5_l1",
+  "source_week": 5,
+  "source_level": 1
 }

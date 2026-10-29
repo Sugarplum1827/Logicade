@@ -1,30 +1,30 @@
 {
   "file_id": "game_1718",
-  "game_title": "Call Stack Tower – Frosted Chapel Defense",
+  "game_title": "Repair a short program · variation 8",
   "game_concept": "A survival strategy set in Snowy Hold – Frosted Chapel, a frosted chapel: the sled courier must handle snow wraiths while practicing functions. Core idea – Call Stack Tower: Trace nested function calls as stacked blocks and unwind them in order.",
-  "genre": "survival strategy",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Frosted Chapel: a frosted chapel",
-  "core_gameplay_loop": "In Frosted Chapel, repeat each round: Trace nested function calls as stacked blocks and unwind them in order. Each round, snow wraiths strike the sleigh, so respond before the next strike lands. Then check the stack_height value and advance.",
-  "primary_mechanic": "Call Stack Tower",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Protect the sleigh from snow wraiths in Frosted Chapel: keep the stack_height meter above zero by applying the concept correctly until the 71-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 71 seconds while stack_height > 0.",
-  "lose_condition": "stack_height drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "player_objective": "Maze 8 (15×11, 29 junctions): collect 2 crystal(s) from the branches and reach beacon (13, 1). Use a C main program to Repair a short program. Print [25]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Call Stack Tower",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Repair a short program",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M08-X1-T04-f597a41e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Call Stack Tower' (Week 6 slot 8), mission type 'Survival Siege', and setting 'Frosted Chapel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 8,
   "trial": 8,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stack_height changes.",
-    "Step 2: Use the controls to apply the code idea against snow wraiths in Frosted Chapel.",
-    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while stack_height > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level8/needs_support/game_week6_level8_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_1718",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sleigh from snow wraiths in Frosted Chapel: keep the stack_height meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "source_win_condition": "Timer reaches 71 seconds while stack_height > 0.",
+  "source_lose_condition": "stack_height drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "source_game_title": "Call Stack Tower – Frosted Chapel Defense",
+  "source_primary_mechanic": "Call Stack Tower",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w6_l8",
+  "source_week": 6,
+  "source_level": 8
 }

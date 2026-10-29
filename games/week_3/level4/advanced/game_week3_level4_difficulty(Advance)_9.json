@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0719",
+  "variation_id": "canvas_game_0719",
+  "week": 3,
+  "level": 4,
+  "trial": 9,
+  "difficulty": "Advance",
+  "mode": "terminal",
+  "title": "Arithmetic procedures · variation 9",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Rope Walk: the rope-makers' walk",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "Arithmetic procedures"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Arithmetic procedures",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 4,
+    "objective_id": "cp1_w3_l4",
+    "title": "Algorithms",
+    "stage_title": "Arithmetic procedures",
+    "objectives": [
+      "Arithmetic procedures"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l4",
+  "source_level": 4,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Arithmetic procedures: double every value. Match all 3 streams; preserve their order. Dataset 9, operand 16.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 2209410289,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      24,
+      10,
+      30,
+      2
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 1
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l4_v9_2",
+    "rules": {
+      "max_steps": 620,
+      "max_lines": 60,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 2,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l4",
+    "source_level": 4,
+    "focus": "Arithmetic procedures",
+    "family": "terminal",
+    "title": "Arithmetic procedures · variation 9",
+    "objective": "Arithmetic procedures: double every value. Match all 3 streams; preserve their order. Dataset 9, operand 16.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          13,
+          0,
+          -9,
+          3,
+          1,
+          14
+        ],
+        "expected": [
+          26,
+          0,
+          -18,
+          6,
+          2,
+          28
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -7,
+          3,
+          7,
+          -10,
+          4,
+          -3
+        ],
+        "expected": [
+          -14,
+          6,
+          14,
+          -20,
+          8,
+          -6
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          3,
+          -5,
+          -3,
+          15,
+          -1,
+          -2
+        ],
+        "expected": [
+          6,
+          -10,
+          -6,
+          30,
+          -2,
+          -4
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nMUL 2\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l4_v9_2",
+      "kind": "program_execution",
+      "prompt": "Arithmetic procedures: double every value. Match all 3 streams; preserve their order. Dataset 9, operand 16."
+    }
+  ],
+  "source_path": "week_3/level4/advanced/game_week3_level4_difficulty(Advance)_9.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Arithmetic procedures",
+  "source_primary_mechanic": "Truth Table Tiles",
+  "source_code_snippet": "True and False  # False"
+}

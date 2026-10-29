@@ -1,0 +1,670 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1211",
+  "variation_id": "canvas_game_1211",
+  "week": 5,
+  "level": 1,
+  "trial": 1,
+  "difficulty": "Standard",
+  "mode": "factory",
+  "title": "Branch Assembly 1 · Separate Outputs",
+  "display_name": "Code Assembly Factory",
+  "theme": "Mystic Forest – Owl Roost: a night-time owl roost",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
+  "learning_objectives": [
+    "Tokens and components"
+  ],
+  "lesson": {
+    "summary": "C Components, Keywords, Preprocessor and Organization",
+    "points": [
+      "Tokens and components",
+      "int and return are keywords; main and printf are identifiers, not keywords.",
+      "Preprocessing precedes compilation. #include supplies header content; #define specifies token replacement.",
+      "Organize directives, a main definition, declarations, statements and braces. Source construction is checked separately from the factory analogy."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int total = 3;\n printf(\"%d\\n\", total);\n return 0;\n}",
+    "practice": "Build and verify a source file",
+    "week": 5,
+    "source_week": 5,
+    "source_level": 1,
+    "objective_id": "cp1_w5_l1",
+    "title": "C Components, Keywords, Preprocessor and Organization",
+    "stage_title": "Tokens and components",
+    "objectives": [
+      "Tokens and components"
+    ],
+    "sources": [
+      {
+        "title": "GCC: header inclusion",
+        "url": "https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html"
+      },
+      {
+        "title": "GCC: object-like macros",
+        "url": "https://gcc.gnu.org/onlinedocs/cpp/Object-like-Macros.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      5
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w5_l1",
+  "source_level": 1,
+  "source_week": 5,
+  "primary_mechanic": "factory construction and execution",
+  "objective": "Tokens and components: build a valid C source file that prints 3. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 5 components (3 upper, 2 lower). Set the gold-socket controller batch to 5.",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 3 components via upper_4, upper_6 to output_upper; B: 2 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 3387816279,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "route_variant": 3,
+    "blocked_cells": [
+      [
+        4,
+        4
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "stations": [
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        12,
+        4
+      ]
+    ]
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w5_l1_v1_1",
+    "rules": {
+      "max_steps": 930,
+      "max_lines": 50,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 1,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w5_l1",
+    "source_level": 1,
+    "focus": "Tokens and components",
+    "family": "factory",
+    "title": "Branch Assembly 1 · Separate Outputs",
+    "objective": "Tokens and components: build a valid C source file that prints 3. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 5 components (3 upper, 2 lower). Set the gold-socket controller batch to 5.",
+    "width": 11,
+    "height": 7,
+    "machines": [
+      {
+        "id": "power",
+        "x": 0,
+        "y": 0,
+        "type": "generator",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "source",
+        "x": 1,
+        "y": 3,
+        "type": "source",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "upper_rise_2",
+        "x": 2,
+        "y": 2,
+        "type": "belt",
+        "dir": "N",
+        "fixed": false
+      },
+      {
+        "id": "upper_3",
+        "x": 3,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "upper_4",
+        "x": 4,
+        "y": 1,
+        "type": "smelter",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "upper_5",
+        "x": 5,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "upper_6",
+        "x": 6,
+        "y": 1,
+        "type": "assembler",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "upper_7",
+        "x": 7,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "output_upper",
+        "x": 9,
+        "y": 1,
+        "type": "output",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "lower_rise_4",
+        "x": 2,
+        "y": 4,
+        "type": "belt",
+        "dir": "S",
+        "fixed": false
+      },
+      {
+        "id": "lower_3",
+        "x": 3,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_4",
+        "x": 4,
+        "y": 5,
+        "type": "smelter",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "lower_5",
+        "x": 5,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_6",
+        "x": 6,
+        "y": 5,
+        "type": "assembler",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "lower_7",
+        "x": 7,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_tail",
+        "x": 8,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "output_lower",
+        "x": 9,
+        "y": 5,
+        "type": "output",
+        "dir": "E",
+        "fixed": true
+      }
+    ],
+    "wires": [],
+    "target": 5,
+    "ore": 9,
+    "ore_values": [
+      7,
+      3,
+      7,
+      3,
+      7,
+      3,
+      7,
+      3,
+      7
+    ],
+    "build_budget": 16,
+    "recipes": {
+      "smelter": {
+        "input": "ore",
+        "output": "plate",
+        "ticks": 3
+      },
+      "assembler": {
+        "input": "plate",
+        "output": "component",
+        "ticks": 3
+      }
+    },
+    "controller": {
+      "schema_version": 1,
+      "socket": [
+        0,
+        1
+      ],
+      "required_kind": "if_else"
+    },
+    "controller_lesson": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked.",
+    "routing": {
+      "version": 1,
+      "topology": "separate_outputs",
+      "fork": {
+        "id": "junction",
+        "type": "splitter",
+        "position": [
+          2,
+          3
+        ],
+        "branches": [
+          "A",
+          "B"
+        ]
+      },
+      "merge": null,
+      "targets": [
+        {
+          "id": "A",
+          "label": "Upper branch",
+          "target": 3,
+          "via": [
+            "upper_4",
+            "upper_6"
+          ],
+          "output": "output_upper"
+        },
+        {
+          "id": "B",
+          "label": "Lower branch",
+          "target": 2,
+          "via": [
+            "lower_4",
+            "lower_6"
+          ],
+          "output": "output_lower"
+        }
+      ]
+    },
+    "reference": {
+      "machines": [
+        {
+          "id": "power",
+          "x": 0,
+          "y": 0,
+          "type": "generator",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "source",
+          "x": 1,
+          "y": 3,
+          "type": "source",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "junction",
+          "x": 2,
+          "y": 3,
+          "type": "splitter",
+          "dir": "E",
+          "fixed": false,
+          "outputs": {
+            "A": "N",
+            "B": "S"
+          }
+        },
+        {
+          "id": "upper_rise_2",
+          "x": 2,
+          "y": 2,
+          "type": "belt",
+          "dir": "N",
+          "fixed": false
+        },
+        {
+          "id": "upper_corner",
+          "x": 2,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_3",
+          "x": 3,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_4",
+          "x": 4,
+          "y": 1,
+          "type": "smelter",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "upper_5",
+          "x": 5,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_6",
+          "x": 6,
+          "y": 1,
+          "type": "assembler",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "upper_7",
+          "x": 7,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_tail",
+          "x": 8,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "output_upper",
+          "x": 9,
+          "y": 1,
+          "type": "output",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "lower_rise_4",
+          "x": 2,
+          "y": 4,
+          "type": "belt",
+          "dir": "S",
+          "fixed": false
+        },
+        {
+          "id": "lower_corner",
+          "x": 2,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_3",
+          "x": 3,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_4",
+          "x": 4,
+          "y": 5,
+          "type": "smelter",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "lower_5",
+          "x": 5,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_6",
+          "x": 6,
+          "y": 5,
+          "type": "assembler",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "lower_7",
+          "x": 7,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_tail",
+          "x": 8,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "output_lower",
+          "x": 9,
+          "y": 5,
+          "type": "output",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "controller",
+          "x": 0,
+          "y": 1,
+          "type": "if_else",
+          "quota": 5,
+          "dir": "E",
+          "fixed": false
+        }
+      ],
+      "wires": [
+        [
+          "power",
+          "source"
+        ],
+        [
+          "power",
+          "junction"
+        ],
+        [
+          "power",
+          "upper_4"
+        ],
+        [
+          "power",
+          "upper_6"
+        ],
+        [
+          "power",
+          "lower_4"
+        ],
+        [
+          "power",
+          "lower_6"
+        ],
+        [
+          "power",
+          "controller"
+        ]
+      ],
+      "source_order": [
+        "header",
+        "macro",
+        "main",
+        "body",
+        "output",
+        "return"
+      ],
+      "c_categories": {
+        "int": "keyword",
+        "return": "keyword",
+        "main": "identifier",
+        "printf": "identifier",
+        "#include": "directive",
+        "#define": "directive"
+      }
+    },
+    "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 3 components via upper_4, upper_6 to output_upper; B: 2 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+    "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+    "source_exercise": {
+      "title": "Tokens and components",
+      "focus": "Tokens and components",
+      "objective_id": "cp1_w5_l1",
+      "prompt": "Tokens and components: build a valid C source file that prints 3. Put preprocessing before main; keep declarations and statements inside its body.",
+      "categories": {
+        "int": "keyword",
+        "return": "keyword",
+        "main": "identifier",
+        "printf": "identifier",
+        "#include": "directive",
+        "#define": "directive"
+      },
+      "program": "#include <stdio.h>\n#define LIMIT 3\nint main(void)\n{\nint total = 3;\nprintf(\"%d\\n\", total);\nreturn 0;\n}",
+      "expected": [
+        3
+      ],
+      "parts": [
+        {
+          "id": "header",
+          "label": "Preprocessor include",
+          "code": "#include <stdio.h>"
+        },
+        {
+          "id": "macro",
+          "label": "Object-like macro",
+          "code": "#define LIMIT 3"
+        },
+        {
+          "id": "main",
+          "label": "Main function and opening block",
+          "code": "int main(void)\n{"
+        },
+        {
+          "id": "body",
+          "label": "Declaration and statements",
+          "code": "int total = 3;"
+        },
+        {
+          "id": "output",
+          "label": "Library call and semicolon",
+          "code": "printf(\"%d\\n\", total);"
+        },
+        {
+          "id": "return",
+          "label": "Return statement and closing block",
+          "code": "return 0;\n}"
+        }
+      ],
+      "reference_order": [
+        "header",
+        "macro",
+        "main",
+        "body",
+        "output",
+        "return"
+      ]
+    }
+  },
+  "assets": {
+    "factory_tile": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0017.png",
+    "machine_source": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0100.png",
+    "machine_smelter": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0102.png",
+    "machine_assembler": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0112.png",
+    "machine_generator": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0120.png",
+    "machine_output": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0101.png",
+    "machine_if_else": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0102.png",
+    "machine_while": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0100.png",
+    "machine_for": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0112.png",
+    "machine_splitter": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0104.png",
+    "machine_router": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0105.png",
+    "machine_merger": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0106.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w5_l1_v1_1",
+      "kind": "program_execution",
+      "prompt": "Tokens and components: build a valid C source file that prints 3. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 1 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 5 components (3 upper, 2 lower). Set the gold-socket controller batch to 5."
+    }
+  ],
+  "source_path": "week_5/level1/standard/game_week5_level1_difficulty(Standard)_1.json",
+  "source_topic": "C Components, Keywords, Preprocessor and Organization",
+  "source_learning_alignment": "CP1 Week 5: Tokens and components",
+  "source_primary_mechanic": "Max Finder Derby",
+  "source_code_snippet": "best = 0\nfor x in scores:\n    if x > best:\n        best = x"
+}

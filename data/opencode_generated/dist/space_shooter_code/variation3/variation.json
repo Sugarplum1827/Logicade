@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "02_space_shooter_code",
+  "slug": "space_shooter_code",
+  "display_name": "Space Shooter Code",
+  "module_family": "top_down_shooter",
+  "learning_target": "syntax recognition",
+  "core_brief": "Choose valid syntax to charge a ship's blaster and clear asteroids before they hit the convoy.",
+  "mode": "lane_defense",
+  "mode_label": "Lane defense",
+  "skin": "shooter",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Lane defense",
+  "accent": "#6ec6ff",
+  "tint": 15392695,
+  "variation_id": "02_space_shooter_code_v03",
+  "index": 3,
+  "title": "Vertical Ascent",
+  "label": "Variation 03: Vertical Ascent",
+  "seed": 1317173167,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "vertical"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_orange",
+    "enemy": "themes.space.enemy_red",
+    "coin": "themes.space.coin_red",
+    "goal": "themes.space.goal_red",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a vertically layered level with at least three distinct heights or floors. A correct response opens the next climb segment; provide safe recovery platforms.",
+    "obstacles": "gaps, lifts or ladders, and one moving vertical hazard; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short climb bursts separated by brief planning pauses."
+  },
+  "question_bank": "../../data/questions/space_shooter_code.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

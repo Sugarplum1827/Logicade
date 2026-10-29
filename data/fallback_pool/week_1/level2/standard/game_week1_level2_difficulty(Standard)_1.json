@@ -1,30 +1,30 @@
 {
   "file_id": "game_0041",
-  "game_title": "Rename Rush – Archery Yard Trial",
-  "game_concept": "A logic puzzle set in The Kingdom – Archery Yard, the garrison archery yard: the knight must handle shadow scouts while practicing variables & assignment. Core idea – Rename Rush: Pick valid variable names (no spaces, no leading digits) to unlock doors across the area.",
-  "genre": "logic puzzle",
+  "game_title": "Flowchart Workshop – Add two numbers",
+  "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Archery Yard: the garrison archery yard",
-  "core_gameplay_loop": "In Archery Yard, repeat each round: Pick valid variable names (no spaces, no leading digits) to unlock doors across the area. Each round costs one action, so plan the step so none are wasted. Then check the valid_names value and advance.",
-  "primary_mechanic": "Rename Rush",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
+  "primary_mechanic": "Drag-and-drop flowchart construction",
   "secondary_mechanics": [
     "Limited action budget",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Reach the wall banner using at most 15 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The wall banner reached with actions_used <= 15.",
-  "lose_condition": "actions_used exceeds 15 before the wall banner is reached, or lives reach 0.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
+  "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 2 (intro tier): Rename Rush",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M11-X3-T13-53500bef",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Rename Rush' (Week 1 slot 11), mission type 'Efficiency Trial', and setting 'Archery Yard'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 2,
   "trial": 1,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -35,18 +35,33 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
     "rival_speed": 0.7,
     "enemy_wave_count": 3,
     "enemy_attack_interval_seconds": 2.55,
-    "starting_score": 0
+    "starting_score": 0,
+    "source_time_limit_seconds": 33
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how valid_names changes.",
-    "Step 2: Use the controls to apply the code idea against shadow scouts in Archery Yard.",
-    "Step 3: Win by meeting the goal: The wall banner reached with actions_used <= 15."
-  ]
+    "Read the requested procedure.",
+    "Drag correctly shaped blocks into the chart and follow the arrows.",
+    "Select Check chart to run example inputs. Revise incorrect steps and try again."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_0041",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_primary_mechanic": "Rename Rush",
+  "source_game_title": "Rename Rush – Archery Yard Trial",
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

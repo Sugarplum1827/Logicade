@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_16_c_variables_constants",
+  "slug": "c_variables_constants",
+  "display_name": "Variables and Constants",
+  "learning_target": "distinguish variables from constants",
+  "core_brief": "A variable can change during a run; a constant is fixed once it is defined.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 5,
+  "unit": "C Components",
+  "group": "code",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_1",
+    "zones": [
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3"
+    ],
+    "tile": "themes.pirate.tile_plank",
+    "player": "themes.pirate.player_yellow",
+    "enemy": "themes.pirate.enemy_grey",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_ship",
+    "obstacles": {
+      "spike": "themes.pirate.cannon",
+      "bush": "themes.pirate.cannonball",
+      "slime": "themes.pirate.nest",
+      "bee": "themes.pirate.fire"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "mechanic": "scope",
+  "mechanic_label": "Scope",
+  "accent": "#ffcf5c",
+  "variation_id": "cp1_16_c_variables_constants_v01",
+  "index": 1,
+  "challenge_index": 1,
+  "challenge_id": "c_variables_constants_v01",
+  "title": "Split the scopes",
+  "label": "Lab 01: Split the scopes",
+  "seed": 2101378198,
+  "challenge_bank": "../../../data/cp1/challenges/c_variables_constants.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

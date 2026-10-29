@@ -1,30 +1,30 @@
 {
   "file_id": "game_2550",
-  "game_title": "Capstone Boss Chain – Scorpion Canyon Rush",
+  "game_title": "Examination practice · Program synthesis · variation 10",
   "game_concept": "A speed quiz set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Capstone Boss Chain: Beat a boss with phases that each demand a different skill from earlier weeks.",
-  "genre": "speed quiz",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
-  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Beat a boss with phases that each demand a different skill from earlier weeks. Each round, a new rope bundles challenge appears; solve it to bank points before time drains. Then check the boss_hp value and advance.",
-  "primary_mechanic": "Capstone Boss Chain",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Live variable watch panel",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Collect 340 points of rope bundles by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 34 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 10 (21×15, 51 junctions): collect 2 crystal(s) from the branches and reach beacon (19, 8). Use a C main program to Program synthesis. Print [23]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Capstone Boss Chain",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M15-X2-T08-f17ece70",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Capstone Boss Chain' (Week 9 slot 15), mission type 'Resource Rush', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 10,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 34,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how boss_hp changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
-    "Step 3: Win by meeting the goal: score >= 340 within 34 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/advanced/game_week9_level5_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_2550",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of rope bundles by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 34 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Capstone Boss Chain – Scorpion Canyon Rush",
+  "source_primary_mechanic": "Capstone Boss Chain",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 34,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

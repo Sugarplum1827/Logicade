@@ -25,7 +25,10 @@ export class GameScene extends Phaser.Scene {
       attempts: 1,
       paused: false,
     };
-    if (window.Telemetry) window.Telemetry.reset();
+    this.attemptId = crypto.randomUUID();
+    if (window.Telemetry) window.Telemetry.reset({
+      attemptId: this.attemptId, studentId: this.registry.get('student_id'), levelId: this.registry.get('level_id'),
+    });
   }
 
   create() {
@@ -410,7 +413,7 @@ export class GameScene extends Phaser.Scene {
   _applyEffect(effectStr, ruleIndex) {
     const s = String(effectStr).trim();
 
-    let m = s.match(/^score\s*([+\-]=)\s*(\d+)$/);
+    let m = s.match(/^score\s*([+-]=)\s*(\d+)$/);
     if (m) {
       const delta = m[1] === '+=' ? parseFloat(m[2]) : -parseFloat(m[2]);
       this.state.score += delta;
@@ -589,6 +592,8 @@ export class GameScene extends Phaser.Scene {
     const safeScore = Math.max(0, Math.min(1, this.state.score / maxScore));
 
     const payload = {
+      student_id: this.registry.get('student_id'),
+      level_id: this.registry.get('level_id'),
       won,
       time: this.state.timer,
       score: safeScore,
@@ -597,8 +602,6 @@ export class GameScene extends Phaser.Scene {
       hint_count: this.state.hintCount,
       spec: this.spec,
     };
-    window.dispatchEvent(new CustomEvent('logicade:game_over', { detail: payload }));
-
     this.add
       .text(
         this.scale.width / 2,
@@ -620,9 +623,11 @@ export class GameScene extends Phaser.Scene {
     (async () => {
       try {
         await window.LogiCadeWrite.persistAttempt({
+          attemptId: this.attemptId,
           studentId: this.registry.get('student_id'),
           levelId: this.registry.get('level_id'),
           week: this.registry.get('week'),
+          stageNumber: this.registry.get('level_num'),
           difficulty: this.registry.get('difficulty'),
           spec: this.spec,
           meta: this.registry.get('meta'),
@@ -635,6 +640,8 @@ export class GameScene extends Phaser.Scene {
         });
       } catch (err) {
         console.error('[finish] persistence failed:', err);
+      } finally {
+        window.dispatchEvent(new CustomEvent('logicade:game_over', { detail: payload }));
       }
     })();
   }

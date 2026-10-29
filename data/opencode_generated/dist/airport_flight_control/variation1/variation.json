@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "37_airport_flight_control",
+  "slug": "airport_flight_control",
+  "display_name": "Airport Flight Control",
+  "module_family": "queue_management",
+  "learning_target": "queues and sequencing",
+  "core_brief": "Use queues and sequencing to guide arrivals to safe runways in order.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "airport",
+  "theme": "urban",
+  "theme_label": "City",
+  "mechanic": "System builder",
+  "accent": "#4fd1c5",
+  "tint": 12695530,
+  "variation_id": "37_airport_flight_control_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 3150377282,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_day",
+    "zones": [
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night"
+    ],
+    "tile": "themes.urban.tile_grass",
+    "player": "themes.urban.player_a",
+    "enemy": "themes.urban.enemy_a",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier",
+      "bush": "themes.urban.barrier_b",
+      "slime": "themes.urban.barrier_b",
+      "bee": "themes.urban.barrier"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/airport_flight_control.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

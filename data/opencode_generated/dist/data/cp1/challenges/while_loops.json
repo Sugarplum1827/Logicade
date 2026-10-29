@@ -1,0 +1,578 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v01",
+    "index": 1,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int n = 3;",
+        "    int total = 0;",
+        "    while (n > 0) {",
+        "        total = total + n;",
+        "        n = n - 1;",
+        "    }",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "6",
+      "accept": [
+        "6"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The loop adds 3, then 2, then 1; total is 6 when n reaches 0."
+    },
+    "explanation": "The program produces 6.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v02",
+    "index": 2,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int n = 3;",
+        "    int total = 0;",
+        "    while (n > 0) {",
+        "        total = total + n;",
+        "        n = n - 1;",
+        "    }",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "n",
+        "total"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "n": "3",
+            "total": "0"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "n": "3",
+            "total": "3"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "n": "2",
+            "total": "5"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "n": "1",
+            "total": "6"
+          }
+        },
+        {
+          "line": 6,
+          "state": {
+            "n": "0",
+            "total": "6"
+          }
+        }
+      ],
+      "ask": [
+        "n",
+        "total"
+      ],
+      "answer": {
+        "n": "0",
+        "total": "6"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is n = 0, total = 6.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v03",
+    "index": 3,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of while loops in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Initialize the loop variable"
+        },
+        {
+          "id": "s2",
+          "text": "Test the condition"
+        },
+        {
+          "id": "s3",
+          "text": "Run the body"
+        },
+        {
+          "id": "s4",
+          "text": "Update the variable and test again"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Initialize the loop variable → Test the condition → Run the body → Update the variable and test again",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v04",
+    "index": 4,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a while loop that runs while n is greater than zero.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "while"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "n"
+        },
+        {
+          "id": "t4",
+          "text": ">"
+        },
+        {
+          "id": "t5",
+          "text": "0"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": "until"
+        },
+        {
+          "id": "t8",
+          "text": "do"
+        },
+        {
+          "id": "t9",
+          "text": "n--"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The condition is checked before every pass.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v05",
+    "index": 5,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the final counter and total.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int n = 3;",
+        "    int total = 0;",
+        "    while (n > 0) {",
+        "        total = total + n;",
+        "        n = n - 1;",
+        "    }",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "n",
+          "type": "final value"
+        },
+        {
+          "name": "total",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "0"
+        },
+        {
+          "id": "v2",
+          "text": "6"
+        },
+        {
+          "id": "v3",
+          "text": "1"
+        },
+        {
+          "id": "v4",
+          "text": "-1"
+        },
+        {
+          "id": "v5",
+          "text": "7"
+        }
+      ],
+      "answer": {
+        "n": "v1",
+        "total": "v2"
+      }
+    },
+    "explanation": "n counts down to 0 after the last update; total is 6.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v06",
+    "index": 6,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each part of the while loop by its role.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "init",
+          "label": "Before the loop",
+          "desc": "Sets the starting state"
+        },
+        {
+          "id": "test",
+          "label": "Condition",
+          "desc": "Checked before each pass"
+        },
+        {
+          "id": "body",
+          "label": "Body",
+          "desc": "Repeats while true"
+        },
+        {
+          "id": "update",
+          "label": "Update",
+          "desc": "Changes the loop variable"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int n = 3;",
+          "bin": "init"
+        },
+        {
+          "id": "i2",
+          "text": "n > 0",
+          "bin": "test"
+        },
+        {
+          "id": "i3",
+          "text": "total = total + n;",
+          "bin": "body"
+        },
+        {
+          "id": "i4",
+          "text": "n = n - 1;",
+          "bin": "update"
+        },
+        {
+          "id": "i5",
+          "text": "int total = 0;",
+          "bin": "init"
+        },
+        {
+          "id": "i6",
+          "text": "printf(\"%d\", total); after the loop",
+          "bin": "init"
+        }
+      ]
+    },
+    "explanation": "Initialization happens once; the test, body, and update repeat.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v07",
+    "index": 7,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int n = 3;",
+        "int total = 0;",
+        "while (n > 0) {",
+        "    total = total + n;",
+        "}",
+        "printf(\"%d\\n\", total);"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The body never changes n, so the condition stays true forever.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v08",
+    "index": 8,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each name in main or the loop body.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int n = 3;",
+        "    int total = 0;",
+        "    while (n > 0) {",
+        "        int step = n;",
+        "        total = total + step;",
+        "        n = n - 1;",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "n and total persist"
+        },
+        {
+          "id": "loop",
+          "label": "Loop body",
+          "desc": "step exists only inside"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int n = 3;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int total = 0;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int step = n;",
+          "scope": "loop"
+        },
+        {
+          "id": "d4",
+          "text": "total = total + step;",
+          "scope": "loop"
+        }
+      ]
+    },
+    "explanation": "step is recreated on every pass and disappears when the loop ends.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v09",
+    "index": 9,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each while loops term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "while"
+        },
+        {
+          "id": "l2",
+          "text": "Condition"
+        },
+        {
+          "id": "l3",
+          "text": "Update"
+        },
+        {
+          "id": "l4",
+          "text": "Infinite loop"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Tests before each pass"
+        },
+        {
+          "id": "r2",
+          "text": "Decides whether the body runs"
+        },
+        {
+          "id": "r3",
+          "text": "Moves the loop toward ending"
+        },
+        {
+          "id": "r4",
+          "text": "A loop whose condition never becomes false"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "while_loops_v10",
+    "index": 10,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the countdown loop.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int n = 3;",
+        "int total = 0;",
+        "while (n {{b0}} 0) {",
+        "    total = total + n;",
+        "    n = n {{b1}} 1;",
+        "}",
+        "printf(\"%d\\n\", total);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "comparison for counting down",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "operation that decreases n",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": ">"
+        },
+        {
+          "id": "b2",
+          "text": "-"
+        },
+        {
+          "id": "b3",
+          "text": "<"
+        },
+        {
+          "id": "b4",
+          "text": "+"
+        },
+        {
+          "id": "b5",
+          "text": "=="
+        }
+      ]
+    },
+    "explanation": "Counting down uses n > 0 and n = n - 1.",
+    "concept_slug": "while_loops",
+    "concept_name": "While Loops"
+  }
+]

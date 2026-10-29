@@ -1,30 +1,30 @@
 {
   "file_id": "game_2494",
-  "game_title": "Print Tracer – Scorpion Canyon Defense",
+  "game_title": "Examination practice · Branch Assembly 4 · Separate Outputs",
   "game_concept": "A tower defense set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what mirage spirits changed.",
-  "genre": "tower defense",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
-  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Insert print statements at the right lines to reveal what mirage spirits changed. Each round, mirage spirits strike the water well, so respond before the next strike lands. Then check the trace_clarity value and advance.",
-  "primary_mechanic": "Print Tracer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Protect the water well from mirage spirits in Scorpion Canyon: keep the trace_clarity meter above zero by applying the concept correctly until the 55-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 55 seconds while trace_clarity > 0.",
-  "lose_condition": "trace_clarity drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "player_objective": "Week 5 examination practice: Build and verify a source file: build a valid C source file that prints 15. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 5. IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 13 components (6 upper, 7 lower). Set the gold-socket controller batch to 13.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Print Tracer",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M04-X1-T08-d1ad1424",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Survival Siege', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 4,
   "trial": 4,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
-    "Step 3: Win by meeting the goal: Timer reaches 55 seconds while trace_clarity > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level4/needs_support/game_week9_level4_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_2494",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the water well from mirage spirits in Scorpion Canyon: keep the trace_clarity meter above zero by applying the concept correctly until the 55-second timer ends.",
+  "source_win_condition": "Timer reaches 55 seconds while trace_clarity > 0.",
+  "source_lose_condition": "trace_clarity drops to 0, or lives reach 0, before the 55-second timer ends.",
+  "source_game_title": "Print Tracer – Scorpion Canyon Defense",
+  "source_primary_mechanic": "Print Tracer",
+  "hint": "IF item value is even, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 6 components via upper_4, upper_6 to output_upper; ELSE: 7 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

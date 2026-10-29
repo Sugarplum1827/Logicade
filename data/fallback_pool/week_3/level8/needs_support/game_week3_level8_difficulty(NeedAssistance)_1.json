@@ -1,30 +1,30 @@
 {
   "file_id": "game_0811",
-  "game_title": "Gatekeeper If – Storm Breakwater Race",
+  "game_title": "Debug ordering · variation 1",
   "game_concept": "A racing platformer set in Coastal Port – Storm Breakwater, a breakwater in a storm: the shipwright must handle storm gulls while practicing conditionals (if / elif / else). Core idea – Gatekeeper If: Write a single if condition that opens the gate only for friendly visitors.",
-  "genre": "racing platformer",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Storm Breakwater: a breakwater in a storm",
-  "core_gameplay_loop": "In Storm Breakwater, repeat each round: Write a single if condition that opens the gate only for friendly visitors. Each round the rival advances, and solving the step moves the shipwright ahead. Then check the gate_integrity value and advance.",
-  "primary_mechanic": "Gatekeeper If",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the lighthouse lamp by solving code steps involving gate_integrity that move the shipwright forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
-  "lose_condition": "The rival reaches the lighthouse lamp first, or lives reach 0.",
+  "player_objective": "Debug ordering: Repair the reversed arithmetic instructions in the starter. add 10, then double. Match all 3 streams; preserve their order. Dataset 1, operand 10.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 8 (extended tier): Gatekeeper If",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Debug ordering",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M01-X5-T15-51bc6c9c",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Gatekeeper If' (Week 3 slot 1), mission type 'Rival Race', and setting 'Storm Breakwater'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 8,
   "trial": 1,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gate_integrity changes.",
-    "Step 2: Use the controls to apply the code idea against storm gulls in Storm Breakwater.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level8/needs_support/game_week3_level8_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_0811",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the lighthouse lamp by solving code steps involving gate_integrity that move the shipwright forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "source_lose_condition": "The rival reaches the lighthouse lamp first, or lives reach 0.",
+  "source_game_title": "Gatekeeper If – Storm Breakwater Race",
+  "source_primary_mechanic": "Gatekeeper If",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w3_l8",
+  "source_week": 3,
+  "source_level": 8
 }

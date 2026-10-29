@@ -1,30 +1,30 @@
 {
   "file_id": "game_0498",
-  "game_title": "Modulo Gate – Sulfur Springs Race",
+  "game_title": "Flowchart Lab · Sum from 1 to n",
   "game_concept": "A strategy race set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Sulfur Springs open (even, odd, divisible by 3).",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
-  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Use % to decide which gates in Sulfur Springs open (even, odd, divisible by 3). Each round the rival advances, and solving the step moves the volcanologist ahead. Then check the gates_open value and advance.",
-  "primary_mechanic": "Modulo Gate",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Live variable watch panel",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Beat a rival AI to the fire shrine by solving code steps involving gates_open that move the volcanologist forward.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the fire shrine first, or lives reach 0.",
+  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 8: {'n': 0}; {'n': 13}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Modulo Gate",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Accumulators",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M03-X5-T08-6b5c0ecd",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Rival Race', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 7,
   "trial": 8,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gates_open changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level7/standard/game_week2_level7_difficulty(Standard)_8.json",
+    "variation_id": "canvas_game_0498",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the fire shrine by solving code steps involving gates_open that move the volcanologist forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the fire shrine first, or lives reach 0.",
+  "source_game_title": "Modulo Gate – Sulfur Springs Race",
+  "source_primary_mechanic": "Modulo Gate",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w2_l7",
+  "source_week": 2,
+  "source_level": 7
 }

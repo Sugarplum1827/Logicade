@@ -1,30 +1,30 @@
 {
   "file_id": "game_2631",
-  "game_title": "Off By One Autopsy – Salt Flat Crossing Defense",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A action defense set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
-  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round, vultures strike the temple door, so respond before the next strike lands. Then check the autopsy value and advance.",
-  "primary_mechanic": "Off By One Autopsy",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Live variable watch panel",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Protect the temple door from vultures in Salt Flat Crossing: keep the autopsy meter above zero by applying the concept correctly until the 41-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 41 seconds while autopsy > 0.",
-  "lose_condition": "autopsy drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 1: {'a': 1, 'b': 3}; {'a': 0, 'b': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Off By One Autopsy",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M06-X1-T11-a30aa43d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Survival Siege', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 1,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how autopsy changes.",
-    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
-    "Step 3: Win by meeting the goal: Timer reaches 41 seconds while autopsy > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/advanced/game_week9_level8_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_2631",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the temple door from vultures in Salt Flat Crossing: keep the autopsy meter above zero by applying the concept correctly until the 41-second timer ends.",
+  "source_win_condition": "Timer reaches 41 seconds while autopsy > 0.",
+  "source_lose_condition": "autopsy drops to 0, or lives reach 0, before the 41-second timer ends.",
+  "source_game_title": "Off By One Autopsy – Salt Flat Crossing Defense",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

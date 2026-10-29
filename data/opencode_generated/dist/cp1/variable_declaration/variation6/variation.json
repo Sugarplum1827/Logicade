@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_23_variable_declaration",
+  "slug": "variable_declaration",
+  "display_name": "Declaring Variables",
+  "learning_target": "declare a variable with a type and name",
+  "core_brief": "A declaration gives C a type and a name; the compiler reserves storage for the value.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 7,
+  "unit": "Variables",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_2",
+    "zones": [
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_ketchup",
+    "coin": "themes.food.coin_cupcake",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.ketchup",
+      "bush": "themes.food.can",
+      "slime": "themes.food.ketchup",
+      "bee": "themes.food.fish"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "repair",
+  "mechanic_label": "Repair",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_23_variable_declaration_v06",
+  "index": 6,
+  "challenge_index": 6,
+  "challenge_id": "variable_declaration_v06",
+  "title": "Repair the program",
+  "label": "Lab 06: Repair the program",
+  "seed": 2832146972,
+  "challenge_bank": "../../../data/cp1/challenges/variable_declaration.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation5/",
+    "next": "../variation7/"
+  }
+}

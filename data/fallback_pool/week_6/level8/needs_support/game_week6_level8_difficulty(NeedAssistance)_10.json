@@ -1,30 +1,30 @@
 {
   "file_id": "game_1720",
-  "game_title": "Boolean Guards – Northern Wall Rush",
+  "game_title": "Repair a short program · variation 10",
   "game_concept": "A arcade set in Snowy Hold – Northern Wall, the northern wall: the innkeeper must handle blizzard sprites while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
-  "genre": "arcade",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Northern Wall: the northern wall",
-  "core_gameplay_loop": "In Northern Wall, repeat each round: Write functions returning True or False that guard checkpoints. Each round, a new flint stones challenge appears; solve it to bank points before time drains. Then check the guards value and advance.",
-  "primary_mechanic": "Boolean Guards",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Mini-tutorial pop-ups",
     "Checkpoint flags"
   ],
-  "player_objective": "Collect 270 points of flint stones by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "score >= 270 within 71 seconds.",
-  "lose_condition": "Timer hits 0 with score < 270, or lives reach 0.",
+  "player_objective": "Maze 10 (15×11, 20 junctions): collect 1 crystal(s) from the branches and reach beacon (11, 3). Use a C main program to Repair a short program. Print [29]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 6 – Functions | Level 8 (extended tier): Boolean Guards",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Repair a short program",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M10-X2-T18-cd0d1cd9",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Resource Rush', and setting 'Northern Wall'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 8,
   "trial": 10,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how guards changes.",
-    "Step 2: Use the controls to apply the code idea against blizzard sprites in Northern Wall.",
-    "Step 3: Win by meeting the goal: score >= 270 within 71 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level8/needs_support/game_week6_level8_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_1720",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 270 points of flint stones by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 270 within 71 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 270, or lives reach 0.",
+  "source_game_title": "Boolean Guards – Northern Wall Rush",
+  "source_primary_mechanic": "Boolean Guards",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w6_l8",
+  "source_week": 6,
+  "source_level": 8
 }

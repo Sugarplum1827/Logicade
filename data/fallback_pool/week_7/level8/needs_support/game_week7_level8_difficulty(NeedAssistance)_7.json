@@ -1,30 +1,30 @@
 {
   "file_id": "game_2017",
-  "game_title": "Search Scout – Pillar Maze Trial",
+  "game_title": "Declare double · variation 7",
   "game_concept": "A puzzle set in Eldritch Ruins – Pillar Maze, a maze of pillars: the tomb cartographer must handle ghost knights while practicing lists. Core idea – Search Scout: Use in and index() to find where a hidden item sits in a list.",
-  "genre": "puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Pillar Maze: a maze of pillars",
-  "core_gameplay_loop": "In Pillar Maze, repeat each round: Use in and index() to find where a hidden item sits in a list. Each round costs one action, so plan the step so none are wasted. Then check the found value and advance.",
-  "primary_mechanic": "Search Scout",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Reach the obelisk using at most 22 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The obelisk reached with actions_used <= 22.",
-  "lose_condition": "actions_used exceeds 22 before the obelisk is reached, or lives reach 0.",
+  "player_objective": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 7 starts with [-3, 0, 15, 18]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Search Scout",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare double",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M07-X3-T17-020deb16",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Search Scout' (Week 7 slot 7), mission type 'Efficiency Trial', and setting 'Pillar Maze'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 8,
   "trial": 7,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how found changes.",
-    "Step 2: Use the controls to apply the code idea against ghost knights in Pillar Maze.",
-    "Step 3: Win by meeting the goal: The obelisk reached with actions_used <= 22."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level8/needs_support/game_week7_level8_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_2017",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the obelisk using at most 22 actions, so every code step counts.",
+  "source_win_condition": "The obelisk reached with actions_used <= 22.",
+  "source_lose_condition": "actions_used exceeds 22 before the obelisk is reached, or lives reach 0.",
+  "source_game_title": "Search Scout – Pillar Maze Trial",
+  "source_primary_mechanic": "Search Scout",
+  "hint": "Declare before use. double resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w7_l8",
+  "source_week": 7,
+  "source_level": 8
 }

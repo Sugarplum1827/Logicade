@@ -1,0 +1,568 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v01",
+    "index": 1,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    float price = \"9.5\";",
+        "    printf(\"%f\\n\", price);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "A float literal uses digits without quotes; double quotes make it a string.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v02",
+    "index": 2,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each declaration in file scope or inside main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int count = 0;",
+        "int main(void) {",
+        "    int age = 20;",
+        "    char grade = 'A';",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Declared outside main"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Declared inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int count = 0;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int age = 20;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "char grade = 'A';",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "int main(void)",
+          "scope": "file"
+        }
+      ]
+    },
+    "explanation": "count is global; age and grade are local variables of main.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v03",
+    "index": 3,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c data types term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "int"
+        },
+        {
+          "id": "l2",
+          "text": "float"
+        },
+        {
+          "id": "l3",
+          "text": "char"
+        },
+        {
+          "id": "l4",
+          "text": "%d"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Whole numbers such as 42"
+        },
+        {
+          "id": "r2",
+          "text": "Numbers with a decimal point such as 9.5"
+        },
+        {
+          "id": "r3",
+          "text": "A single character such as A"
+        },
+        {
+          "id": "r4",
+          "text": "printf specifier for an int"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v04",
+    "index": 4,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the declarations and their format specifiers.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "{{b0}} age = 20;",
+        "float price = {{b1}};",
+        "char grade = 'A';",
+        "printf(\"{{b2}}\\n\", age);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "whole-number type",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "decimal literal",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "integer specifier",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "int"
+        },
+        {
+          "id": "b2",
+          "text": "9.5f"
+        },
+        {
+          "id": "b3",
+          "text": "%d"
+        },
+        {
+          "id": "b4",
+          "text": "char"
+        },
+        {
+          "id": "b5",
+          "text": "\"9.5\""
+        },
+        {
+          "id": "b6",
+          "text": "%s"
+        }
+      ]
+    },
+    "explanation": "Use int for age, a float literal for price, and %d to print an int.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v05",
+    "index": 5,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age = 20;",
+        "    float price = 9.5f;",
+        "    char grade = 'A';",
+        "    printf(\"%d\\n\", age + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "21",
+      "accept": [
+        "21"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "age is 20, so age + 1 evaluates to 21. price and grade are unused here."
+    },
+    "explanation": "The program produces 21.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v06",
+    "index": 6,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age = 20;",
+        "    float price = 9.5f;",
+        "    char grade = 'A';",
+        "    printf(\"%d\\n\", age + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "age",
+        "price",
+        "grade",
+        "next"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "age": "20",
+            "price": "",
+            "grade": "",
+            "next": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "age": "20",
+            "price": "9.5",
+            "grade": "A",
+            "next": ""
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "age": "20",
+            "price": "9.5",
+            "grade": "A",
+            "next": "21"
+          }
+        }
+      ],
+      "ask": [
+        "age",
+        "price",
+        "grade",
+        "next"
+      ],
+      "answer": {
+        "age": "20",
+        "price": "9.5",
+        "grade": "A",
+        "next": "21"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is age = 20, price = 9.5, grade = A, next = 21.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v07",
+    "index": 7,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c data types in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Choose the type that matches the data"
+        },
+        {
+          "id": "s2",
+          "text": "Declare the variable"
+        },
+        {
+          "id": "s3",
+          "text": "Assign a compatible literal"
+        },
+        {
+          "id": "s4",
+          "text": "Use the correct printf specifier"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Choose the type that matches the data → Declare the variable → Assign a compatible literal → Use the correct printf specifier",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v08",
+    "index": 8,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build an integer declaration for a player age of 20.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "age"
+        },
+        {
+          "id": "t3",
+          "text": "="
+        },
+        {
+          "id": "t4",
+          "text": "20"
+        },
+        {
+          "id": "t5",
+          "text": ";"
+        },
+        {
+          "id": "t6",
+          "text": "float"
+        },
+        {
+          "id": "t7",
+          "text": "char"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Whole-number ages use int and a %d format specifier.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v09",
+    "index": 9,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign each declared value and the computed next value.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age = 20;",
+        "    float price = 9.5f;",
+        "    char grade = 'A';",
+        "    printf(\"%d\\n\", age + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "age",
+          "type": "final value"
+        },
+        {
+          "name": "price",
+          "type": "final value"
+        },
+        {
+          "name": "grade",
+          "type": "final value"
+        },
+        {
+          "name": "next",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "20"
+        },
+        {
+          "id": "v2",
+          "text": "9.5"
+        },
+        {
+          "id": "v3",
+          "text": "A"
+        },
+        {
+          "id": "v4",
+          "text": "21"
+        },
+        {
+          "id": "v5",
+          "text": "19"
+        },
+        {
+          "id": "v6",
+          "text": "0"
+        },
+        {
+          "id": "v7",
+          "text": "error"
+        }
+      ],
+      "answer": {
+        "age": "v1",
+        "price": "v2",
+        "grade": "v3",
+        "next": "v4"
+      }
+    },
+    "explanation": "age holds 20, price holds 9.5, grade holds A, and next holds 21.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_data_types_v10",
+    "index": 10,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each value into the C type that fits it.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "int",
+          "label": "int",
+          "desc": "Whole numbers"
+        },
+        {
+          "id": "float",
+          "label": "float",
+          "desc": "Decimal numbers"
+        },
+        {
+          "id": "char",
+          "label": "char",
+          "desc": "Single characters"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "20",
+          "bin": "int"
+        },
+        {
+          "id": "i2",
+          "text": "9.5",
+          "bin": "float"
+        },
+        {
+          "id": "i3",
+          "text": "A",
+          "bin": "char"
+        },
+        {
+          "id": "i4",
+          "text": "-3",
+          "bin": "int"
+        },
+        {
+          "id": "i5",
+          "text": "0.25",
+          "bin": "float"
+        },
+        {
+          "id": "i6",
+          "text": "z",
+          "bin": "char"
+        }
+      ]
+    },
+    "explanation": "Whole numbers use int, decimals use float, and single characters use char.",
+    "concept_slug": "c_data_types",
+    "concept_name": "C Data Types"
+  }
+]

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2405",
-  "game_title": "Test Gauntlet – Bazaar Tents Trial",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A logic puzzle set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Test Gauntlet: Run small test cases against a function and fix the failing ones.",
-  "genre": "logic puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
-  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Run small test cases against a function and fix the failing ones. Each round costs one action, so plan the step so none are wasted. Then check the tests value and advance.",
-  "primary_mechanic": "Test Gauntlet",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Reach the sandstone arch using at most 18 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The sandstone arch reached with actions_used <= 18.",
-  "lose_condition": "actions_used exceeds 18 before the sandstone arch is reached, or lives reach 0.",
+  "player_objective": "Print every even number from 20 through 38. Trace the update by 2 and the final failed condition. Test dataset 5: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Test Gauntlet",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M05-X3-T09-75879be9",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Test Gauntlet' (Week 9 slot 5), mission type 'Efficiency Trial', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 5,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how tests changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
-    "Step 3: Win by meeting the goal: The sandstone arch reached with actions_used <= 18."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/needs_support/game_week9_level1_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_2405",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the sandstone arch using at most 18 actions, so every code step counts.",
+  "source_win_condition": "The sandstone arch reached with actions_used <= 18.",
+  "source_lose_condition": "actions_used exceeds 18 before the sandstone arch is reached, or lives reach 0.",
+  "source_game_title": "Test Gauntlet – Bazaar Tents Trial",
+  "source_primary_mechanic": "Test Gauntlet",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

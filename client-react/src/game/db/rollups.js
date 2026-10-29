@@ -57,8 +57,10 @@ window.LogiCadeRollups = (function () {
             let totalActivityRetries = 0;
             let totalTimeSec = 0;
             let completedAny = false;
+            let fullLevelReplays = 0;
 
             for (const a of atts) {
+                if (completedAny && a.completed) fullLevelReplays += 1;
                 bestScore = Math.max(bestScore, a.score ?? 0);
                 totalErrors += a.error_count ?? 0;
                 totalHints += a.hint_count ?? 0;
@@ -80,6 +82,7 @@ window.LogiCadeRollups = (function () {
                 best_score: bestScore,
                 total_attempts: totalAttempts,
                 repeats_this_level: repeats,
+                full_level_replays: fullLevelReplays,
                 total_errors: totalErrors,
                 total_hints: totalHints,
                 total_activity_retries: totalActivityRetries,

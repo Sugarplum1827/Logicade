@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "31_deep_sea_abyssal_dive",
+  "slug": "deep_sea_abyssal_dive",
+  "display_name": "Deep Sea Abyssal Dive",
+  "module_family": "repair_simulation",
+  "learning_target": "error handling and recovery",
+  "core_brief": "Use error handling steps to diagnose and patch hull leaks during a deep dive.",
+  "mode": "sequence",
+  "mode_label": "Sequence solver",
+  "skin": "deep_sea",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "mechanic": "Sequence solver",
+  "accent": "#7ee2b8",
+  "tint": 15382481,
+  "variation_id": "31_deep_sea_abyssal_dive_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 2444869015,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_1",
+    "zones": [
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3"
+    ],
+    "tile": "themes.underwater.tile_sand",
+    "player": "themes.underwater.player_blue",
+    "enemy": "themes.underwater.enemy_red",
+    "coin": "themes.underwater.coin_bubble_a",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.rock_b",
+      "bush": "themes.underwater.seaweed_green",
+      "slime": "themes.underwater.rock_a",
+      "bee": "themes.underwater.rock_b"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/deep_sea_abyssal_dive.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

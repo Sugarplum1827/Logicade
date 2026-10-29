@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_34_comparison_operators",
+  "slug": "comparison_operators",
+  "display_name": "Comparison Operators",
+  "learning_target": "evaluate relational and equality tests",
+  "core_brief": "Comparisons produce 1 for true and 0 for false in C.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 9,
+  "unit": "Operators",
+  "group": "code",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue"
+    ],
+    "tile": "themes.space.tile_purple",
+    "player": "themes.space.player_blue",
+    "enemy": "themes.space.enemy_green",
+    "coin": "themes.space.coin_yellow",
+    "goal": "themes.space.goal_blue",
+    "obstacles": {
+      "spike": "themes.space.meteor_grey_med",
+      "bush": "themes.space.meteor_grey_med",
+      "slime": "themes.space.meteor_grey_med",
+      "bee": "themes.space.meteor_grey_med"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "match",
+  "mechanic_label": "Match",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_34_comparison_operators_v04",
+  "index": 4,
+  "challenge_index": 4,
+  "challenge_id": "comparison_operators_v04",
+  "title": "Match the pairs",
+  "label": "Lab 04: Match the pairs",
+  "seed": 2641045743,
+  "challenge_bank": "../../../data/cp1/challenges/comparison_operators.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

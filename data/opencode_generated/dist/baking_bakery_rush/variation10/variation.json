@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "38_baking_bakery_rush",
+  "slug": "baking_bakery_rush",
+  "display_name": "Baking Bakery Rush",
+  "module_family": "temperature_simulation",
+  "learning_target": "conditionals and thresholds",
+  "core_brief": "Use conditionals to select oven settings and prevent each recipe from over- or under-baking.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "bakery",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#ff9f43",
+  "tint": 15316970,
+  "variation_id": "38_baking_bakery_rush_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 4229372625,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 15,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_1",
+    "zones": [
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_fish",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.ketchup",
+      "bush": "themes.food.ketchup",
+      "slime": "themes.food.can",
+      "bee": "themes.food.ketchup"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/baking_bakery_rush.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

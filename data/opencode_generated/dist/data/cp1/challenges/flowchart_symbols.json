@@ -1,0 +1,568 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v01",
+    "index": 1,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of flowchart symbols in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the flowchart with a terminal symbol"
+        },
+        {
+          "id": "s2",
+          "text": "Read the input with an input/output symbol"
+        },
+        {
+          "id": "s3",
+          "text": "Process the value in a rectangle"
+        },
+        {
+          "id": "s4",
+          "text": "Ask a yes/no question in a diamond"
+        },
+        {
+          "id": "s5",
+          "text": "Show the result and end at a terminal"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Start the flowchart with a terminal symbol → Read the input with an input/output symbol → Process the value in a rectangle → Ask a yes/no question in a diamond → Show the result and end at a terminal",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v02",
+    "index": 2,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the pseudocode for a decision that checks whether a number is positive.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "IF"
+        },
+        {
+          "id": "t2",
+          "text": "number"
+        },
+        {
+          "id": "t3",
+          "text": ">"
+        },
+        {
+          "id": "t4",
+          "text": "0"
+        },
+        {
+          "id": "t5",
+          "text": "THEN"
+        },
+        {
+          "id": "t6",
+          "text": "ELSE"
+        },
+        {
+          "id": "t7",
+          "text": "ENDIF"
+        },
+        {
+          "id": "t8",
+          "text": "WHILE"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "A decision is written as a condition followed by THEN. The diamond in a flowchart represents this test.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v03",
+    "index": 3,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the flowchart for a positive-number test.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 8
+        },
+        {
+          "id": "read",
+          "label": "Read n",
+          "kind": "io",
+          "x": 50,
+          "y": 23
+        },
+        {
+          "id": "test",
+          "label": "n > 0?",
+          "kind": "decision",
+          "x": 50,
+          "y": 42
+        },
+        {
+          "id": "yes",
+          "label": "Print positive",
+          "kind": "process",
+          "x": 24,
+          "y": 64
+        },
+        {
+          "id": "no",
+          "label": "Print not positive",
+          "kind": "process",
+          "x": 76,
+          "y": 64
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 88
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "read"
+        ],
+        [
+          "read",
+          "test"
+        ],
+        [
+          "test",
+          "yes"
+        ],
+        [
+          "test",
+          "no"
+        ],
+        [
+          "yes",
+          "end"
+        ],
+        [
+          "no",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The decision has two outgoing paths; both branches finish at End.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v04",
+    "index": 4,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to follow a short sequence to the goal.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 5,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 3,
+        "dir": 1
+      },
+      "goal": {
+        "x": 4,
+        "y": 0
+      },
+      "walls": [
+        {
+          "x": 2,
+          "y": 1
+        },
+        {
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 12
+    },
+    "explanation": "Commands run in order, just like steps in a sequence flowchart.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v05",
+    "index": 5,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What does this pseudocode print when n = 5?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "READ n",
+        "IF n > 0 THEN",
+        "  PRINT \"positive\"",
+        "ELSE",
+        "  PRINT \"not positive\"",
+        "ENDIF"
+      ],
+      "answer": "positive",
+      "accept": [
+        "positive"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "5 is greater than 0, so the true branch runs and prints positive."
+    },
+    "explanation": "5 is greater than 0, so the true branch runs and prints positive.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v06",
+    "index": 6,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the decision and commit the final values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "READ n",
+        "IF n > 0 THEN",
+        "  result = \"positive\"",
+        "ELSE",
+        "  result = \"not positive\"",
+        "ENDIF",
+        "PRINT result"
+      ],
+      "variables": [
+        "n",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "n": "5",
+            "result": ""
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "n": "5",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "n": "5",
+            "result": "positive"
+          }
+        },
+        {
+          "line": 6,
+          "state": {
+            "n": "5",
+            "result": "positive"
+          }
+        }
+      ],
+      "ask": [
+        "n",
+        "result"
+      ],
+      "answer": {
+        "n": "5",
+        "result": "positive"
+      },
+      "hint": ""
+    },
+    "explanation": "The condition is true, so result becomes positive.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v07",
+    "index": 7,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the flowchart pseudocode. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "READ n",
+        "IF n > 0 THEN",
+        "  PRINT \"positive\"",
+        "ELSE",
+        "  PRINT \"not positive\"",
+        "END"
+      ],
+      "answer": 5,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "A decision opened with IF must close with ENDIF, not END.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v08",
+    "index": 8,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each symbol to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Oval"
+        },
+        {
+          "id": "l2",
+          "text": "Parallelogram"
+        },
+        {
+          "id": "l3",
+          "text": "Rectangle"
+        },
+        {
+          "id": "l4",
+          "text": "Diamond"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Start or end point"
+        },
+        {
+          "id": "r2",
+          "text": "Input or output"
+        },
+        {
+          "id": "r3",
+          "text": "Process or action"
+        },
+        {
+          "id": "r4",
+          "text": "Decision or condition"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "The shape tells the reader what kind of step the box performs.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v09",
+    "index": 9,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each flowchart element by its role.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "terminal",
+          "label": "Terminal",
+          "desc": "Start or end"
+        },
+        {
+          "id": "io",
+          "label": "Input / output",
+          "desc": "Read or display data"
+        },
+        {
+          "id": "process",
+          "label": "Process",
+          "desc": "Perform a calculation or action"
+        },
+        {
+          "id": "decision",
+          "label": "Decision",
+          "desc": "Ask a yes/no question"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Oval labelled Start",
+          "bin": "terminal"
+        },
+        {
+          "id": "i2",
+          "text": "Parallelogram labelled Read age",
+          "bin": "io"
+        },
+        {
+          "id": "i3",
+          "text": "Rectangle labelled total = total + 1",
+          "bin": "process"
+        },
+        {
+          "id": "i4",
+          "text": "Diamond labelled score >= 75?",
+          "bin": "decision"
+        },
+        {
+          "id": "i5",
+          "text": "Oval labelled End",
+          "bin": "terminal"
+        },
+        {
+          "id": "i6",
+          "text": "Parallelogram labelled Print total",
+          "bin": "io"
+        }
+      ]
+    },
+    "explanation": "Ovals mark start/end, parallelograms handle input/output, rectangles process, and diamonds decide.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_symbols_v10",
+    "index": 10,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the decision pseudocode.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "READ {{b0}}",
+        "IF {{b1}} > 0 THEN",
+        "  PRINT \"positive\"",
+        "{{b2}}",
+        "  PRINT \"not positive\"",
+        "ENDIF"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "value read",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "tested value",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "false branch keyword",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "n"
+        },
+        {
+          "id": "b2",
+          "text": "n"
+        },
+        {
+          "id": "b3",
+          "text": "ELSE"
+        },
+        {
+          "id": "b4",
+          "text": "n"
+        },
+        {
+          "id": "b5",
+          "text": "ELSE"
+        },
+        {
+          "id": "b6",
+          "text": "THEN"
+        }
+      ]
+    },
+    "explanation": "The same value n is read and tested; ELSE introduces the false branch.",
+    "concept_slug": "flowchart_symbols",
+    "concept_name": "Flowchart Symbols"
+  }
+]

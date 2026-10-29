@@ -1,30 +1,30 @@
 {
   "file_id": "game_2626",
-  "game_title": "Syntax Sweep – Bone Valley Defense",
+  "game_title": "Flowchart Lab · Odd numbers, sum, and count",
   "game_concept": "A tower defense set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
-  "genre": "tower defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
-  "core_gameplay_loop": "In Bone Valley, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round, mirage spirits strike the camel pen, so respond before the next strike lands. Then check the syntax_errors value and advance.",
-  "primary_mechanic": "Syntax Sweep",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Protect the camel pen from mirage spirits in Bone Valley: keep the syntax_errors meter above zero by applying the concept correctly until the 51-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 51 seconds while syntax_errors > 0.",
-  "lose_condition": "syntax_errors drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "player_objective": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1. Test dataset 6: {'n': 0}; {'n': 14}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Syntax Sweep",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M01-X1-T16-ac55d85f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Survival Siege', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
-    "Step 3: Win by meeting the goal: Timer reaches 51 seconds while syntax_errors > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/standard/game_week9_level8_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_2626",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the camel pen from mirage spirits in Bone Valley: keep the syntax_errors meter above zero by applying the concept correctly until the 51-second timer ends.",
+  "source_win_condition": "Timer reaches 51 seconds while syntax_errors > 0.",
+  "source_lose_condition": "syntax_errors drops to 0, or lives reach 0, before the 51-second timer ends.",
+  "source_game_title": "Syntax Sweep – Bone Valley Defense",
+  "source_primary_mechanic": "Syntax Sweep",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

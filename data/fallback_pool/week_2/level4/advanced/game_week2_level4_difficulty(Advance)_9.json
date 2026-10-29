@@ -1,30 +1,30 @@
 {
   "file_id": "game_0419",
-  "game_title": "Unit Trader – Vent Garden Rush",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A action puzzle set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of fire gems is fair.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
-  "core_gameplay_loop": "In Vent Garden, repeat each round: Convert units using expressions so each trade of fire gems is fair. Each round, a new fire gems challenge appears; solve it to bank points before time drains. Then check the fair_trades value and advance.",
-  "primary_mechanic": "Unit Trader",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Ghost replay of best run",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Collect 290 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 290 within 31 seconds.",
-  "lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > 4; otherwise display At or below. Test dataset 9: {'n': 2}; {'n': 7}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Unit Trader",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M14-X2-T19-68619858",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Resource Rush', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 9,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fair_trades changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
-    "Step 3: Win by meeting the goal: score >= 290 within 31 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/advanced/game_week2_level4_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_0419",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 290 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 290 within 31 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 290, or lives reach 0.",
+  "source_game_title": "Unit Trader – Vent Garden Rush",
+  "source_primary_mechanic": "Unit Trader",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

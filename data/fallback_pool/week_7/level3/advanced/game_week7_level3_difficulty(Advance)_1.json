@@ -1,30 +1,30 @@
 {
   "file_id": "game_1881",
-  "game_title": "Shelf Sorter – Broken Colonnade Defense",
+  "game_title": "Assignment versus equality · variation 1",
   "game_concept": "A action defense set in Eldritch Ruins – Broken Colonnade, a row of broken columns: the relic hunter must handle ghost knights while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of glyph tablets from smallest to largest.",
-  "genre": "action defense",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Broken Colonnade: a row of broken columns",
-  "core_gameplay_loop": "In Broken Colonnade, repeat each round: Use sort() to rearrange shelves of glyph tablets from smallest to largest. Each round, ghost knights strike the glyph door, so respond before the next strike lands. Then check the order_score value and advance.",
-  "primary_mechanic": "Shelf Sorter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the glyph door from ghost knights in Broken Colonnade: keep the order_score meter above zero by applying the concept correctly until the 29-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 29 seconds while order_score > 0.",
-  "lose_condition": "order_score drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "player_objective": "Assignment versus equality: declare resource as int, apply resource == 6, and print each result with %d. Dataset 1 starts with [-3, 0, 6, 9]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 3 (intro tier): Shelf Sorter",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Assignment versus equality",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M06-X1-T01-fe404ab4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Survival Siege', and setting 'Broken Colonnade'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 3,
   "trial": 1,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how order_score changes.",
-    "Step 2: Use the controls to apply the code idea against ghost knights in Broken Colonnade.",
-    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while order_score > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level3/advanced/game_week7_level3_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_1881",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the glyph door from ghost knights in Broken Colonnade: keep the order_score meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "source_win_condition": "Timer reaches 29 seconds while order_score > 0.",
+  "source_lose_condition": "order_score drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "source_game_title": "Shelf Sorter – Broken Colonnade Defense",
+  "source_primary_mechanic": "Shelf Sorter",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w7_l3",
+  "source_week": 7,
+  "source_level": 3
 }

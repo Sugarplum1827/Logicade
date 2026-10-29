@@ -1,30 +1,30 @@
 {
   "file_id": "game_0625",
-  "game_title": "Discount Rules – Tidepool Cove Streak",
+  "game_title": "Inputs and outputs · variation 5",
   "game_concept": "A quiz RPG set in Coastal Port – Tidepool Cove, a tidepool cove: the dock cartographer must handle kraken tentacles while practicing conditionals (if / elif / else). Core idea – Discount Rules: Apply shop rules like if total >= 100 to give each customer the right discount.",
-  "genre": "quiz RPG",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Tidepool Cove: a tidepool cove",
-  "core_gameplay_loop": "In Tidepool Cove, repeat each round: Apply shop rules like if total >= 100 to give each customer the right discount. Each round poses one decision; a wrong answer breaks the streak. Then check the profit value and advance.",
-  "primary_mechanic": "Discount Rules",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Chain 9 consecutive correct decisions about profit to power up the dock cartographer and open the lighthouse lamp.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 9.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Inputs and outputs: relay each value unchanged. Match all 3 streams; preserve their order. Dataset 5, operand 9.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 1 (intro tier): Discount Rules",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Inputs and outputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M10-X4-T05-e1c783d8",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Discount Rules' (Week 3 slot 10), mission type 'Streak Challenge', and setting 'Tidepool Cove'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 1,
   "trial": 5,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against kraken tentacles in Tidepool Cove.",
-    "Step 3: Win by meeting the goal: streak counter reaches 9."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level1/advanced/game_week3_level1_difficulty(Advance)_5.json",
+    "variation_id": "canvas_game_0625",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 9 consecutive correct decisions about profit to power up the dock cartographer and open the lighthouse lamp.",
+  "source_win_condition": "streak counter reaches 9.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Discount Rules – Tidepool Cove Streak",
+  "source_primary_mechanic": "Discount Rules",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w3_l1",
+  "source_week": 3,
+  "source_level": 1
 }

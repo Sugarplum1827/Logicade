@@ -1,0 +1,541 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v01",
+    "index": 1,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in repeat or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "void repeat(int times) {",
+        "    for (int i = 0; i < times; i++) {",
+        "        printf(\"Hi\\n\");",
+        "    }",
+        "}",
+        "int main(void) {",
+        "    repeat(2);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "repeat",
+          "label": "repeat scope",
+          "desc": "times and the loop counter"
+        },
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "The call site"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int times",
+          "scope": "repeat"
+        },
+        {
+          "id": "d2",
+          "text": "int i",
+          "scope": "repeat"
+        },
+        {
+          "id": "d3",
+          "text": "printf(\"Hi\\n\");",
+          "scope": "repeat"
+        },
+        {
+          "id": "d4",
+          "text": "repeat(2)",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "Parameters and loop counters belong to repeat; the call is made from main.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v02",
+    "index": 2,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each function parameters term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Parameter"
+        },
+        {
+          "id": "l2",
+          "text": "Argument"
+        },
+        {
+          "id": "l3",
+          "text": "Pass by value"
+        },
+        {
+          "id": "l4",
+          "text": "Arity"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "The name declared in the function header"
+        },
+        {
+          "id": "r2",
+          "text": "The value supplied at the call site"
+        },
+        {
+          "id": "r3",
+          "text": "The caller value is copied into the parameter"
+        },
+        {
+          "id": "r4",
+          "text": "The number of arguments a call must supply"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v03",
+    "index": 3,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the parameter and the call.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "void repeat(int {{b0}}) {",
+        "    for (int i = 0; i < times; i++) {",
+        "        printf(\"Hi\\n\");",
+        "    }",
+        "}",
+        "int main(void) {",
+        "    repeat({{b1}});",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "parameter name used in the body",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "argument controlling the repeat count",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "times"
+        },
+        {
+          "id": "b2",
+          "text": "2"
+        },
+        {
+          "id": "b3",
+          "text": "count"
+        },
+        {
+          "id": "b4",
+          "text": "3"
+        },
+        {
+          "id": "b5",
+          "text": "i"
+        }
+      ]
+    },
+    "explanation": "The parameter is times and the call passes 2.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v04",
+    "index": 4,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "void repeat(int times) {",
+        "    for (int i = 0; i < times; i++) {",
+        "        printf(\"Hi\\n\");",
+        "    }",
+        "}",
+        "int main(void) {",
+        "    repeat(2);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Hi",
+      "accept": [
+        "Hi"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "repeat runs twice; the trace asks for the first printed line, Hi."
+    },
+    "explanation": "The program produces Hi.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v05",
+    "index": 5,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "void repeat(int times) {",
+        "    for (int i = 0; i < times; i++) {",
+        "        printf(\"Hi\\n\");",
+        "    }",
+        "}",
+        "int main(void) {",
+        "    repeat(2);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "times",
+        "printed"
+      ],
+      "steps": [
+        {
+          "line": 1,
+          "state": {
+            "times": "2",
+            "printed": "0"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "times": "2",
+            "printed": "1"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "times": "2",
+            "printed": "2"
+          }
+        }
+      ],
+      "ask": [
+        "times",
+        "printed"
+      ],
+      "answer": {
+        "times": "2",
+        "printed": "2"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is times = 2, printed = 2.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v06",
+    "index": 6,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of function parameters in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Declare the parameter list"
+        },
+        {
+          "id": "s2",
+          "text": "Call the function with matching arguments"
+        },
+        {
+          "id": "s3",
+          "text": "Copy each argument into its parameter"
+        },
+        {
+          "id": "s4",
+          "text": "Use the parameter inside the body"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Declare the parameter list → Call the function with matching arguments → Copy each argument into its parameter → Use the parameter inside the body",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v07",
+    "index": 7,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a function header with one integer parameter named times.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "void"
+        },
+        {
+          "id": "t2",
+          "text": "repeat"
+        },
+        {
+          "id": "t3",
+          "text": "("
+        },
+        {
+          "id": "t4",
+          "text": "int times"
+        },
+        {
+          "id": "t5",
+          "text": ")"
+        },
+        {
+          "id": "t6",
+          "text": "times"
+        },
+        {
+          "id": "t7",
+          "text": "return"
+        },
+        {
+          "id": "t8",
+          "text": "call"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The parameter declares the type and name that the body will use.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v08",
+    "index": 8,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the received parameter and the number of lines printed.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "void repeat(int times) {",
+        "    for (int i = 0; i < times; i++) {",
+        "        printf(\"Hi\\n\");",
+        "    }",
+        "}",
+        "int main(void) {",
+        "    repeat(2);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "times",
+          "type": "final value"
+        },
+        {
+          "name": "printed",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "2"
+        },
+        {
+          "id": "v2",
+          "text": "2"
+        },
+        {
+          "id": "v3",
+          "text": "3"
+        },
+        {
+          "id": "v4",
+          "text": "1"
+        }
+      ],
+      "answer": {
+        "times": "v1",
+        "printed": "v2"
+      }
+    },
+    "explanation": "The argument 2 is copied into times, so the body prints twice.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v09",
+    "index": 9,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each item as a parameter or an argument.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "parameter",
+          "label": "Parameter",
+          "desc": "Appears in the definition"
+        },
+        {
+          "id": "argument",
+          "label": "Argument",
+          "desc": "Appears in the call"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int times in repeat(int times)",
+          "bin": "parameter"
+        },
+        {
+          "id": "i2",
+          "text": "2 in repeat(2)",
+          "bin": "argument"
+        },
+        {
+          "id": "i3",
+          "text": "int n in square(int n)",
+          "bin": "parameter"
+        },
+        {
+          "id": "i4",
+          "text": "4 in square(4)",
+          "bin": "argument"
+        },
+        {
+          "id": "i5",
+          "text": "int a, int b in add(int a, int b)",
+          "bin": "parameter"
+        },
+        {
+          "id": "i6",
+          "text": "3 in add(3, 4)",
+          "bin": "argument"
+        }
+      ]
+    },
+    "explanation": "The definition declares parameters; the call supplies arguments.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_parameters_v10",
+    "index": 10,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "void repeat(int times) {",
+        "    for (int i = 0; i < times; i++) {",
+        "        printf(\"Hi\\n\");",
+        "    }",
+        "}",
+        "int main(void) {",
+        "    repeat();",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 6,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "repeat requires one int argument, but the call supplies none.",
+    "concept_slug": "function_parameters",
+    "concept_name": "Function Parameters"
+  }
+]

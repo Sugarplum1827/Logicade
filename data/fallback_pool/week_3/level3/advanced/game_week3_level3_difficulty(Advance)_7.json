@@ -1,30 +1,30 @@
 {
   "file_id": "game_0687",
-  "game_title": "Branching Tale – Fish Market Streak",
+  "game_title": "State tracing · variation 7",
   "game_concept": "A card battler set in Coastal Port – Fish Market, a fish market full of crates: the shipwright must handle jellyfish swarms while practicing conditionals (if / elif / else). Core idea – Branching Tale: Make story choices that run different if/elif branches toward different endings.",
-  "genre": "card battler",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Fish Market: a fish market full of crates",
-  "core_gameplay_loop": "In Fish Market, repeat each round: Make story choices that run different if/elif branches toward different endings. Each round poses one decision; a wrong answer breaks the streak. Then check the story_trust value and advance.",
-  "primary_mechanic": "Branching Tale",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Chain 10 consecutive correct decisions about story_trust to power up the shipwright and open the ferry.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "streak counter reaches 10.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "State tracing: Trace ACC after every instruction. subtract 13 from each value. Match all 3 streams; preserve their order. Dataset 7, operand 13.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 3 (intro tier): Branching Tale",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: State tracing",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M12-X4-T03-4d1fc33f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Branching Tale' (Week 3 slot 12), mission type 'Streak Challenge', and setting 'Fish Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 3,
   "trial": 7,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how story_trust changes.",
-    "Step 2: Use the controls to apply the code idea against jellyfish swarms in Fish Market.",
-    "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level3/advanced/game_week3_level3_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0687",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 10 consecutive correct decisions about story_trust to power up the shipwright and open the ferry.",
+  "source_win_condition": "streak counter reaches 10.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Branching Tale – Fish Market Streak",
+  "source_primary_mechanic": "Branching Tale",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w3_l3",
+  "source_week": 3,
+  "source_level": 3
 }

@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1068",
+  "variation_id": "canvas_game_1068",
+  "week": 4,
+  "level": 6,
+  "trial": 8,
+  "difficulty": "Standard",
+  "mode": "pending",
+  "title": "C Archive · Imperative operations",
+  "display_name": "Week 4 Challenge · Theme Pending",
+  "theme": "Shadow Cave – Mushroom Cavern: a cavern of glowing mushrooms",
+  "topic": "Introduction to C: History, Characteristics and Classification",
+  "learning_objectives": [
+    "Imperative operations"
+  ],
+  "lesson": {
+    "summary": "Introduction to C: History, Characteristics and Classification",
+    "points": [
+      "Imperative operations",
+      "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+      "C is general purpose, procedural and imperative; it is normally compiled.",
+      "Portability needs care with implementation-dependent behavior. Middle-level is an informal classroom label, not an ISO language category."
+    ],
+    "example": "C: Ritchie; Bell Labs; early 1970s; general purpose; procedural.",
+    "practice": "History/classification review",
+    "week": 4,
+    "source_week": 4,
+    "source_level": 6,
+    "objective_id": "cp1_w4_l6",
+    "title": "Introduction to C: History, Characteristics and Classification",
+    "stage_title": "Imperative operations",
+    "objectives": [
+      "Imperative operations"
+    ],
+    "sources": [
+      {
+        "title": "Dennis Ritchie: The Development of the C Language",
+        "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      4
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w4_l6",
+  "source_level": 6,
+  "source_week": 4,
+  "primary_mechanic": "Stamina Climb",
+  "objective": "Archive variation 8: classify and verify C history, characteristics and language categories for Imperative operations.",
+  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
+  "controls": "Click or press 1–4 to answer; Escape pauses.",
+  "time_limit_seconds": 45,
+  "starting_lives": 3,
+  "seed": 3797276281,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "seed": 3797276281,
+    "theme_status": "awaiting_course_decision"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "game_1068_station_1",
+      "prompt": "Archive case 8: Which action illustrates a state change?",
+      "choices": [
+        "Rename the lesson title",
+        "Assign a new value to a variable",
+        "Change the editor theme",
+        "Resize a screenshot"
+      ],
+      "answer_index": 1,
+      "explanation": "Assign a new value to a variable.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l6"
+    },
+    {
+      "id": "game_1068_station_2",
+      "prompt": "Archive case 8: Why does instruction order matter?",
+      "choices": [
+        "Later steps can use values changed by earlier steps",
+        "Only the font matters",
+        "All orders produce the same result",
+        "Computers ignore assignments"
+      ],
+      "answer_index": 0,
+      "explanation": "Later steps can use values changed by earlier steps.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l6"
+    },
+    {
+      "id": "game_1068_station_3",
+      "prompt": "Archive case 8: A trace shows count changing from 2 to 3 after an assignment. What idea does this illustrate?",
+      "choices": [
+        "Font selection",
+        "Imperative state change",
+        "File compression",
+        "Header inclusion"
+      ],
+      "answer_index": 1,
+      "explanation": "Imperative state change.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l6"
+    }
+  ],
+  "source_path": "week_4/level6/standard/game_week4_level6_difficulty(Standard)_8.json",
+  "source_topic": "Introduction to C: History, Characteristics and Classification",
+  "source_learning_alignment": "CP1 Week 4: Imperative operations",
+  "source_primary_mechanic": "Stamina Climb",
+  "source_code_snippet": "while stamina > 0:\n    climb()"
+}

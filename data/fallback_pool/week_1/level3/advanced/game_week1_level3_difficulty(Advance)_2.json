@@ -2,9 +2,9 @@
   "file_id": "game_0082",
   "game_title": "Constant Guardian – Village Green Streak",
   "game_concept": "A quiz RPG set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Constant Guardian: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the throne.",
-  "genre": "quiz RPG",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Village Green: the green outside the walls",
-  "core_gameplay_loop": "In Village Green, repeat each round: Tell fixed CONSTANTS from changeable variables; only change variables to unlock the throne. Each round poses one decision; a wrong answer breaks the streak. Then check the energy value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Constant Guardian",
   "secondary_mechanics": [
     "Streak combo meter",
@@ -12,19 +12,19 @@
     "Combo multiplier"
   ],
   "player_objective": "Chain 10 consecutive correct decisions about energy to power up the squire and open the throne.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "streak counter reaches 10.",
   "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 3 (intro tier): Constant Guardian",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M07-X4-T08-90e9edb6",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Constant Guardian' (Week 1 slot 7), mission type 'Streak Challenge', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 3,
   "trial": 2,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how energy changes.",
     "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
     "Step 3: Win by meeting the goal: streak counter reaches 10."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level3/advanced/game_week1_level3_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_0082",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

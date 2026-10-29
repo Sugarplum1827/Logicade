@@ -1,0 +1,79 @@
+{
+  "concept_id": "44_wild_west_sheriff",
+  "slug": "wild_west_sheriff",
+  "learning_target": "decision blocks and conditions",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does a decision block do?",
+      "options": [
+        "Always shoots",
+        "Chooses an action based on a condition",
+        "Creates a town",
+        "Ends the story"
+      ],
+      "answer_index": 1,
+      "explanation": "A decision block evaluates a condition and selects a response."
+    },
+    {
+      "id": "q2",
+      "question": "Which condition means \"the outlaw is unarmed\"?",
+      "options": [
+        "not outlaw_armed",
+        "outlaw_armed",
+        "outlaw_armed == True",
+        "outlaw_armed or True"
+      ],
+      "answer_index": 0,
+      "explanation": "The not operator reverses the Boolean, so not outlaw_armed is true when unarmed."
+    },
+    {
+      "id": "q3",
+      "question": "Why avoid unnecessary force?",
+      "options": [
+        "To make more noise",
+        "To ignore the law",
+        "To end the game",
+        "To protect townsfolk"
+      ],
+      "answer_index": 3,
+      "explanation": "Choosing the least forceful safe response protects bystanders."
+    },
+    {
+      "id": "q4",
+      "question": "What is a safe response to a distraction?",
+      "options": [
+        "Run away always",
+        "Ignore all clues",
+        "Check the situation first",
+        "Fire blindly"
+      ],
+      "answer_index": 2,
+      "explanation": "Gathering information before acting prevents avoidable harm."
+    },
+    {
+      "id": "q5",
+      "question": "What does an `else` block handle?",
+      "options": [
+        "Only the first case",
+        "No cases",
+        "The remaining cases",
+        "The loop"
+      ],
+      "answer_index": 2,
+      "explanation": "else covers every case not matched by earlier conditions."
+    },
+    {
+      "id": "q6",
+      "question": "Why document decisions?",
+      "options": [
+        "To avoid logic",
+        "To hide them",
+        "To make them longer",
+        "To explain and review them"
+      ],
+      "answer_index": 3,
+      "explanation": "Documentation makes decisions understandable and reviewable later."
+    }
+  ]
+}

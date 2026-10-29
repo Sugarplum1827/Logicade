@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "08_underwater_submarine",
+  "slug": "underwater_submarine",
+  "display_name": "Underwater Submarine",
+  "module_family": "submarine_exploration",
+  "learning_target": "variables, comparison, and coordinate reasoning",
+  "core_brief": "Use depth variables and sonar readings to navigate safely to a treasure marker.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "submarine",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "mechanic": "Grid route",
+  "accent": "#ff9f43",
+  "tint": 15382481,
+  "variation_id": "08_underwater_submarine_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 3026485797,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 17,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_1",
+    "zones": [
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_pink",
+    "enemy": "themes.underwater.enemy_brown",
+    "coin": "themes.underwater.coin_bubble_a",
+    "goal": "themes.underwater.goal_chest_pearl",
+    "obstacles": {
+      "spike": "themes.underwater.seaweed_green",
+      "bush": "themes.underwater.rock_a",
+      "slime": "themes.underwater.seaweed_orange",
+      "bee": "themes.underwater.seaweed_orange"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/underwater_submarine.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

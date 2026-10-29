@@ -1,0 +1,589 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v01",
+    "index": 1,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each returning values term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "return"
+        },
+        {
+          "id": "l2",
+          "text": "Caller"
+        },
+        {
+          "id": "l3",
+          "text": "Return value"
+        },
+        {
+          "id": "l4",
+          "text": "Return type"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Ends the function and sends a value"
+        },
+        {
+          "id": "r2",
+          "text": "The code that invokes the function"
+        },
+        {
+          "id": "r3",
+          "text": "The result received by the caller"
+        },
+        {
+          "id": "r4",
+          "text": "The type the function promises to send"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v02",
+    "index": 2,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the max function.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int max(int a, int b) {",
+        "    if (a > b) {",
+        "        return {{b0}};",
+        "    }",
+        "    return {{b1}};",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "value to return when a is larger",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "value to return otherwise",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "a"
+        },
+        {
+          "id": "b2",
+          "text": "b"
+        },
+        {
+          "id": "b3",
+          "text": "b"
+        },
+        {
+          "id": "b4",
+          "text": "a"
+        },
+        {
+          "id": "b5",
+          "text": "0"
+        }
+      ]
+    },
+    "explanation": "When a is larger return a; otherwise return b.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v03",
+    "index": 3,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int max(int a, int b) {",
+        "    if (a > b) {",
+        "        return a;",
+        "    }",
+        "    return b;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", max(3, 7));",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "7",
+      "accept": [
+        "7"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "max receives 3 and 7; 3 is not greater than 7, so the second return sends 7."
+    },
+    "explanation": "The program produces 7.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v04",
+    "index": 4,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int max(int a, int b) {",
+        "    if (a > b) {",
+        "        return a;",
+        "    }",
+        "    return b;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", max(3, 7));",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 1,
+          "state": {
+            "a": "3",
+            "b": "7",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "a": "3",
+            "b": "7",
+            "result": ""
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "a": "3",
+            "b": "7",
+            "result": "7"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "result"
+      ],
+      "answer": {
+        "a": "3",
+        "b": "7",
+        "result": "7"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is a = 3, b = 7, result = 7.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v05",
+    "index": 5,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of returning values in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Call the function"
+        },
+        {
+          "id": "s2",
+          "text": "Run until a return statement"
+        },
+        {
+          "id": "s3",
+          "text": "Send the value back to the caller"
+        },
+        {
+          "id": "s4",
+          "text": "Continue after the call"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Call the function → Run until a return statement → Send the value back to the caller → Continue after the call",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v06",
+    "index": 6,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a return statement that sends back the larger value.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "return"
+        },
+        {
+          "id": "t2",
+          "text": "a"
+        },
+        {
+          "id": "t3",
+          "text": ">"
+        },
+        {
+          "id": "t4",
+          "text": "b"
+        },
+        {
+          "id": "t5",
+          "text": "?"
+        },
+        {
+          "id": "t6",
+          "text": "a"
+        },
+        {
+          "id": "t7",
+          "text": ":"
+        },
+        {
+          "id": "t8",
+          "text": "b"
+        },
+        {
+          "id": "t9",
+          "text": ";"
+        },
+        {
+          "id": "t10",
+          "text": "print"
+        },
+        {
+          "id": "t11",
+          "text": "break"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8",
+        "t9"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        },
+        {
+          "id": "slot8",
+          "label": "token 8"
+        },
+        {
+          "id": "slot9",
+          "label": "token 9"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The conditional expression chooses a when a > b, otherwise b.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v07",
+    "index": 7,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the arguments and the returned result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int max(int a, int b) {",
+        "    if (a > b) {",
+        "        return a;",
+        "    }",
+        "    return b;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", max(3, 7));",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "a",
+          "type": "final value"
+        },
+        {
+          "name": "b",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "3"
+        },
+        {
+          "id": "v2",
+          "text": "7"
+        },
+        {
+          "id": "v3",
+          "text": "7"
+        },
+        {
+          "id": "v4",
+          "text": "4"
+        },
+        {
+          "id": "v5",
+          "text": "2"
+        },
+        {
+          "id": "v6",
+          "text": "8"
+        }
+      ],
+      "answer": {
+        "a": "v1",
+        "b": "v2",
+        "result": "v3"
+      }
+    },
+    "explanation": "The first test fails, so return b sends 7 back to main.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v08",
+    "index": 8,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each item as inside the function or at the call site.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "inside",
+          "label": "Inside max",
+          "desc": "Function definition and returns"
+        },
+        {
+          "id": "caller",
+          "label": "Caller",
+          "desc": "main and the call"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int max(int a, int b)",
+          "bin": "inside"
+        },
+        {
+          "id": "i2",
+          "text": "return a;",
+          "bin": "inside"
+        },
+        {
+          "id": "i3",
+          "text": "return b;",
+          "bin": "inside"
+        },
+        {
+          "id": "i4",
+          "text": "max(3, 7)",
+          "bin": "caller"
+        },
+        {
+          "id": "i5",
+          "text": "printf(\"%d\\n\", ...);",
+          "bin": "caller"
+        },
+        {
+          "id": "i6",
+          "text": "int main(void)",
+          "bin": "caller"
+        }
+      ]
+    },
+    "explanation": "The definition and its returns live in max; the call and print live in main.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v09",
+    "index": 9,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int max(int a, int b) {",
+        "    if (a > b) {",
+        "        return b;",
+        "    }",
+        "    return b;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The true branch returns b, so the function can never return a.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "function_return_v10",
+    "index": 10,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in max or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int max(int a, int b) {",
+        "    if (a > b) return a;",
+        "    return b;",
+        "}",
+        "int main(void) {",
+        "    int result = max(3, 7);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "max",
+          "label": "max scope",
+          "desc": "Parameters and returns"
+        },
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Local result"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int a",
+          "scope": "max"
+        },
+        {
+          "id": "d2",
+          "text": "int b",
+          "scope": "max"
+        },
+        {
+          "id": "d3",
+          "text": "return a;",
+          "scope": "max"
+        },
+        {
+          "id": "d4",
+          "text": "int result",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "a, b, and the returns belong to max; result belongs to main.",
+    "concept_slug": "function_return",
+    "concept_name": "Returning Values"
+  }
+]

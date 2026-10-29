@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+html, body, #game-shell { width:100%; height:100%; margin:0; overflow:hidden; background:#07111d; }
+body { color:#f4f1de; font-family: system-ui, "Segoe UI", sans-serif; }
+#game { display:block; width:100%; height:100%; touch-action:manipulation; outline:none; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.first-visit-guide { position:fixed; inset:0; z-index:5000; isolation:isolate; touch-action:none; }
+.first-visit-highlight { position:fixed; pointer-events:none; border:3px dashed #ffe078; border-radius:8px; box-shadow:0 0 0 9999px #0005,0 0 18px #ffe07880; }
+.first-visit-arrow { position:fixed; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+.first-visit-arrow path { fill:none; stroke:#ffe078; stroke-width:3; }
+.first-visit-arrow path:first-child { stroke-dasharray:4 7; animation:guide-arrow-flow 1.5s linear infinite; }
+.first-visit-card { position:fixed; width:min(350px,calc(100vw - 24px)); max-height:calc(100dvh - 90px); overflow:auto; padding:18px; border:2px solid #ffe078; border-radius:12px; background:#112336; box-shadow:0 8px 32px #0009; color:#f5f8ff; font:15px/1.5 system-ui,sans-serif; }
+.first-visit-card small { color:#a2e9f3; font-size:11px; letter-spacing:.08em; }
+.first-visit-card h2 { font:700 20px/1.25 system-ui,sans-serif; color:#ffe078; margin:8px 0; }
+.first-visit-card p { margin:8px 0 16px; }
+.first-visit-card nav { display:flex; justify-content:space-between; gap:12px; }
+.first-visit-card button { min-height:42px; padding:8px 16px; border:1px solid #90bccb; border-radius:6px; background:#24405c; color:white; font:600 14px system-ui,sans-serif; cursor:pointer; }
+.first-visit-card button:last-child { background:#ffe078; color:#132132; border-color:#ffe078; }
+.first-visit-card button:disabled { opacity:.4; cursor:default; }
+.first-visit-card button:focus-visible { outline:3px solid #90eaff; outline-offset:3px; }
+@keyframes guide-arrow-flow { to { stroke-dashoffset:-22; } }
+@media (prefers-reduced-motion:reduce) { .first-visit-arrow path:first-child { animation:none; } }
+.lesson-guide{padding:10px;margin:10px 0;border:1px solid #78929e;border-radius:6px;background:#142731;color:#edf3ed;font:14px/1.5 system-ui}.lesson-guide summary{cursor:pointer;font-weight:700;color:#ffe397}.lesson-guide h2{font-size:17px}.lesson-guide pre{white-space:pre-wrap;background:#07151d;padding:10px;overflow-wrap:anywhere}.lesson-guide a{display:block;color:#8ce2ee;margin:5px 0}.lesson-guide-dock{position:fixed;top:6px;right:10px;z-index:20;max-width:min(420px,90vw);max-height:80vh;overflow:auto;box-shadow:0 5px 20px #0009}.lesson-guide-dock:not([open]){font-size:12px;max-width:280px}.c-source-builder{border:1px solid #798a87;padding:10px;margin:12px 0}.c-source-builder pre{white-space:pre-wrap;background:#07151d;color:#e6f4e6;padding:8px}.c-source-builder button{font-size:12px}.c-source-builder select{max-width:100%}

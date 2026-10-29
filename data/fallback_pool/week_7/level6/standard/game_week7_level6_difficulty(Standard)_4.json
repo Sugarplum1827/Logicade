@@ -1,30 +1,30 @@
 {
   "file_id": "game_1964",
-  "game_title": "Stat Market – Overgrown Archway Race",
+  "game_title": "Expression order · variation 4",
   "game_concept": "A adventure race set in Eldritch Ruins – Overgrown Archway, a vine-choked archway: the rune scholar must handle vine horrors while practicing lists. Core idea – Stat Market: Use min(), max(), and sum() over a price list to make profitable trades.",
-  "genre": "adventure race",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Overgrown Archway: a vine-choked archway",
-  "core_gameplay_loop": "In Overgrown Archway, repeat each round: Use min(), max(), and sum() over a price list to make profitable trades. Each round the rival advances, and solving the step moves the rune scholar ahead. Then check the profit value and advance.",
-  "primary_mechanic": "Stat Market",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the rune gate by solving code steps involving profit that move the rune scholar forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
-  "lose_condition": "The rival reaches the rune gate first, or lives reach 0.",
+  "player_objective": "Expression order: declare resource as int, apply (resource + 11) * 3, and print each result with %d. Dataset 4 starts with [-3, 0, 11, 14]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 6 (applied tier): Stat Market",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Expression order",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M14-X5-T02-b2207fc2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stat Market' (Week 7 slot 14), mission type 'Rival Race', and setting 'Overgrown Archway'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 6,
   "trial": 4,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 45,
+    "time_limit_seconds": 0,
     "target_score": 300,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how profit changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Overgrown Archway.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.9)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level6/standard/game_week7_level6_difficulty(Standard)_4.json",
+    "variation_id": "canvas_game_1964",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the rune gate by solving code steps involving profit that move the rune scholar forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.9).",
+  "source_lose_condition": "The rival reaches the rune gate first, or lives reach 0.",
+  "source_game_title": "Stat Market – Overgrown Archway Race",
+  "source_primary_mechanic": "Stat Market",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 45,
+  "learning_objective_id": "cp1_w7_l6",
+  "source_week": 7,
+  "source_level": 6
 }

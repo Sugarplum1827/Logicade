@@ -1,30 +1,30 @@
 {
   "file_id": "game_0559",
-  "game_title": "Divide Or Floor – Vent Garden Rush",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A arcade set in Mt. Pyre – Vent Garden, a garden growing near vents: the fire warden must handle smoke serpents while practicing data types & operators. Core idea – Divide Or Floor: Pick / or // to split fire gems evenly among allies without leaving fractions.",
-  "genre": "arcade",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Vent Garden: a garden growing near vents",
-  "core_gameplay_loop": "In Vent Garden, repeat each round: Pick / or // to split fire gems evenly among allies without leaving fractions. Each round, a new fire gems challenge appears; solve it to bank points before time drains. Then check the share value and advance.",
-  "primary_mechanic": "Divide Or Floor",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 420 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 420 within 54 seconds.",
-  "lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 9: {'a': 14, 'b': 9}; {'a': -9, 'b': -11}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Divide Or Floor",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M04-X2-T19-157714ef",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Divide Or Floor' (Week 2 slot 4), mission type 'Resource Rush', and setting 'Vent Garden'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 9,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how share changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Vent Garden.",
-    "Step 3: Win by meeting the goal: score >= 420 within 54 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/standard/game_week2_level9_difficulty(Standard)_9.json",
+    "variation_id": "canvas_game_0559",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 420 points of fire gems by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 420 within 54 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 420, or lives reach 0.",
+  "source_game_title": "Divide Or Floor – Vent Garden Rush",
+  "source_primary_mechanic": "Divide Or Floor",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

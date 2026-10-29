@@ -1,30 +1,30 @@
 {
   "file_id": "game_2509",
-  "game_title": "Print Tracer – Bazaar Tents Rush",
+  "game_title": "Examination practice · Branch Assembly 9 · Merge Endpoint",
   "game_concept": "A arcade set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what giant scorpions changed.",
-  "genre": "arcade",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
-  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Insert print statements at the right lines to reveal what giant scorpions changed. Each round, a new trade goods challenge appears; solve it to bank points before time drains. Then check the trace_clarity value and advance.",
-  "primary_mechanic": "Print Tracer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Limited undo button",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Collect 220 points of trade goods by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 220 within 39 seconds.",
-  "lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "player_objective": "Week 5 examination practice: Build and verify a source file: build a valid C source file that prints 2. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (3, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 13 components (7 upper, 6 lower). Set the gold-socket controller batch to 13.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Print Tracer",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M04-X2-T09-147acb96",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Print Tracer' (Week 9 slot 4), mission type 'Resource Rush', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 4,
   "trial": 9,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 39,
+    "time_limit_seconds": 0,
     "target_score": 220,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trace_clarity changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
-    "Step 3: Win by meeting the goal: score >= 220 within 39 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level4/standard/game_week9_level4_difficulty(Standard)_9.json",
+    "variation_id": "canvas_game_2509",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 220 points of trade goods by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 220 within 39 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 220, or lives reach 0.",
+  "source_game_title": "Print Tracer – Bazaar Tents Rush",
+  "source_primary_mechanic": "Print Tracer",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 7 components via upper_4, upper_6 to output_shared; B: 6 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 39,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

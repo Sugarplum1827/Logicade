@@ -1,30 +1,30 @@
 {
   "file_id": "game_2536",
-  "game_title": "Syntax Sweep – Dry Well Race",
+  "game_title": "Examination practice · Program synthesis · variation 6",
   "game_concept": "A racing platformer set in Sand Dunes – Dry Well, a nearly dry well: the sand ranger must handle sand wyrms while practicing debugging & combined skills. Core idea – Syntax Sweep: Spot and fix syntax errors such as missing colons or brackets before the program runs.",
-  "genre": "racing platformer",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Dry Well: a nearly dry well",
-  "core_gameplay_loop": "In Dry Well, repeat each round: Spot and fix syntax errors such as missing colons or brackets before the program runs. Each round the rival advances, and solving the step moves the sand ranger ahead. Then check the syntax_errors value and advance.",
-  "primary_mechanic": "Syntax Sweep",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Ghost replay of best run",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Beat a rival AI to the supply tent by solving code steps involving syntax_errors that move the sand ranger forward.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
-  "lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "player_objective": "Week 6 examination practice: Maze 6 (19×13, 56 junctions): collect 3 crystal(s) from the branches and reach beacon (17, 11). Use a C main program to Program synthesis. Print [16]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 5 (applied tier): Syntax Sweep",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M01-X5-T10-c4a86d7c",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Syntax Sweep' (Week 9 slot 1), mission type 'Rival Race', and setting 'Dry Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 5,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how syntax_errors changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dry Well.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.85)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level5/standard/game_week9_level5_difficulty(Standard)_6.json",
+    "variation_id": "canvas_game_2536",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the supply tent by solving code steps involving syntax_errors that move the sand ranger forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.85).",
+  "source_lose_condition": "The rival reaches the supply tent first, or lives reach 0.",
+  "source_game_title": "Syntax Sweep – Dry Well Race",
+  "source_primary_mechanic": "Syntax Sweep",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

@@ -1,41 +1,41 @@
 {
   "file_id": "game_2138",
-  "game_title": "Phone Book Rescue – Supply Cache Camp Streak",
+  "game_title": "C Scope Circuit · Main-local declarations · variation 8",
   "game_concept": "A rhythm puzzle set in Frost Peaks – Supply Cache Camp, a high supply cache: the summit pilot must handle ice hawks while practicing strings & dictionaries. Core idea – Phone Book Rescue: Add and update dictionary entries as contacts change.",
-  "genre": "rhythm puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Supply Cache Camp: a high supply cache",
-  "core_gameplay_loop": "In Supply Cache Camp, repeat each round: Add and update dictionary entries as contacts change. Each round poses one decision; a wrong answer breaks the streak. Then check the contacts value and advance.",
-  "primary_mechanic": "Phone Book Rescue",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Chain 6 consecutive correct decisions about contacts to power up the summit pilot and open the summit beacon.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 6.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, declare a main-local alongside a global. Print the scope trace [11, 9], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 9}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 2 (intro tier): Phone Book Rescue",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Main-local declarations",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M08-X4-T12-83d2809a",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Phone Book Rescue' (Week 8 slot 8), mission type 'Streak Challenge', and setting 'Supply Cache Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 2,
   "trial": 8,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "book['Ana'] = '0917'",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 9;\nint main(void)\n{\n  int signal = readInput();\nint local = 11;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how contacts changes.",
-    "Step 2: Use the controls to apply the code idea against ice hawks in Supply Cache Camp.",
-    "Step 3: Win by meeting the goal: streak counter reaches 6."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level2/needs_support/game_week8_level2_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_2138",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 6 consecutive correct decisions about contacts to power up the summit pilot and open the summit beacon.",
+  "source_win_condition": "streak counter reaches 6.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Phone Book Rescue – Supply Cache Camp Streak",
+  "source_primary_mechanic": "Phone Book Rescue",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w8_l2",
+  "source_week": 8,
+  "source_level": 2,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "d283fccf2280155fb6cb5abbb9bbbca2391ecc094e36727b77ac4e480c43c832",
+    "lesson_unchanged": true
+  }
 }

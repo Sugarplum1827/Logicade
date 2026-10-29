@@ -1,0 +1,186 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_2542",
+  "variation_id": "canvas_game_2542",
+  "week": 9,
+  "level": 5,
+  "trial": 2,
+  "difficulty": "Advance",
+  "mode": "dungeon",
+  "title": "Examination practice · Program synthesis · variation 2",
+  "display_name": "Programming Quest",
+  "theme": "Sand Dunes – Palm Grove: a palm grove",
+  "topic": "Examination Practice: Weeks 2–8",
+  "learning_objectives": [
+    "Program synthesis"
+  ],
+  "lesson": {
+    "summary": "Creating Simple C Programs and Program Structure",
+    "points": [
+      "Program synthesis",
+      "A hosted program begins at main. Braces form its body; statements execute in order.",
+      "Construct a short program using declarations, initialization, assignment and printf.",
+      "Adventure movement functions are LogiCade helpers declared in logicade.h, not standard C library functions."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int score = 2;\n score = score + 3;\n printf(\"%d\\n\", score);\n return 0;\n}",
+    "practice": "Program synthesis",
+    "week": 9,
+    "source_week": 6,
+    "source_level": 10,
+    "objective_id": "cp1_w6_l10",
+    "title": "Creating Simple C Programs and Program Structure",
+    "stage_title": "Program synthesis",
+    "objectives": [
+      "Program synthesis"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "examination_practice",
+    "coverage": [
+      6
+    ],
+    "exam_coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w6_l10",
+  "source_level": 10,
+  "source_week": 6,
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Week 6 examination practice: Maze 2 (21×15, 54 junctions): collect 3 crystal(s) from the branches and reach beacon (7, 9). Use a C main program to Program synthesis. Print [17]; final file-scope values must be {}.",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 3122198306,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "grid": [
+      "##############",
+      "#...#..#.....#",
+      "#..#...##....#",
+      "#...#.#......#",
+      "#S..!.......G#",
+      "#...#..#.#...#",
+      "#............#",
+      "#.#..#..#....#",
+      "##############"
+    ],
+    "seed": 3122198306
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w9_l5_v2_2",
+    "rules": {
+      "max_steps": 800,
+      "max_lines": 60,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 2,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w6_l10",
+    "source_level": 10,
+    "focus": "Program synthesis",
+    "family": "adventure",
+    "language": "c_subset",
+    "title": "Examination practice · Program synthesis · variation 2",
+    "objective": "Week 6 examination practice: Maze 2 (21×15, 54 junctions): collect 3 crystal(s) from the branches and reach beacon (7, 9). Use a C main program to Program synthesis. Print [17]; final file-scope values must be {}.",
+    "map": [
+      "#####################",
+      "#...................#",
+      "#.##...######.#.....#",
+      "#.....#...#...#.#...#",
+      "#..####.....###.#.###",
+      "#...#.........#...#.#",
+      "###.###.....#.#.###.#",
+      "#.#.....#.....#.#...#",
+      "#.#############.###.#",
+      "#.....#.#.....#.#...#",
+      "#.###.#.#.###...#.###",
+      "#...#...#.#...#.....#",
+      "#.#.#####.#.###.##..#",
+      "#.#.......#.........#",
+      "#####################"
+    ],
+    "map_features": {
+      "width": 21,
+      "height": 15,
+      "rooms": 4,
+      "junctions": 54,
+      "dead_ends": 6,
+      "cycles": 31
+    },
+    "start": [
+      1,
+      1
+    ],
+    "exit": [
+      7,
+      9
+    ],
+    "gems": [
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        17,
+        7
+      ]
+    ],
+    "expected_watch": [
+      17
+    ],
+    "expected_globals": {},
+    "command_budget": 189,
+    "program": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
+    "reference": {
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\n#define LIMIT 14\nint main(void)\n{\nint total = 14 + 3;\nprintf(\"%d\\n\", total);\nmoveRight(14);\nmoveDown(10);\nmoveRight(2);\nmoveUp(2);\nmoveRight(2);\nmoveUp(2);\nmoveLeft(2);\nmoveRight(2);\nmoveDown(2);\nmoveLeft(2);\nmoveDown(2);\nmoveLeft(2);\nmoveUp(1);\nmoveLeft(2);\nmoveUp(1);\nmoveLeft(4);\nmoveDown(4);\nmoveLeft(6);\nmoveUp(2);\nmoveLeft(2);\nmoveDown(2);\nmoveUp(6);\nmoveDown(2);\nmoveRight(4);\nmoveDown(2);\nmoveRight(2);\nmoveUp(2);\nreturn 0;\n}"
+    },
+    "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+    "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+    "source_week": 6
+  },
+  "assets": {
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w9_l5_v2_2",
+      "kind": "program_execution",
+      "prompt": "Week 6 examination practice: Maze 2 (21×15, 54 junctions): collect 3 crystal(s) from the branches and reach beacon (7, 9). Use a C main program to Program synthesis. Print [17]; final file-scope values must be {}."
+    }
+  ],
+  "source_path": "week_9/level5/advanced/game_week9_level5_difficulty(Advance)_2.json",
+  "source_topic": "Creating Simple C Programs and Program Structure",
+  "source_learning_alignment": "CP1 Week 6: Program synthesis",
+  "source_primary_mechanic": "Integration Heist",
+  "source_code_snippet": "for x in loot:\n    if x > 5:\n        bag.append(x)"
+}

@@ -2,9 +2,9 @@
   "file_id": "game_0094",
   "game_title": "Swap Switch – Village Green Defense",
   "game_concept": "A tower defense set in The Kingdom – Village Green, the green outside the walls: the squire must handle rogue knights while practicing variables & assignment. Core idea – Swap Switch: Swap two variables with a temporary slot to reroute torches without losing either value.",
-  "genre": "tower defense",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Village Green: the green outside the walls",
-  "core_gameplay_loop": "In Village Green, repeat each round: Swap two variables with a temporary slot to reroute torches without losing either value. Each round, rogue knights strike the throne, so respond before the next strike lands. Then check the a value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Swap Switch",
   "secondary_mechanics": [
     "Escalating enemy waves",
@@ -12,19 +12,19 @@
     "Reduced-motion and color-blind-safe UI"
   ],
   "player_objective": "Protect the throne from rogue knights in Village Green: keep the a meter above zero by applying the concept correctly until the 55-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "Timer reaches 55 seconds while a > 0.",
   "lose_condition": "a drops to 0, or lives reach 0, before the 55-second timer ends.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 4 (applied tier): Swap Switch",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M04-X1-T08-808cd8e3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Swap Switch' (Week 1 slot 4), mission type 'Survival Siege', and setting 'Village Green'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 4,
   "trial": 4,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how a changes.",
     "Step 2: Use the controls to apply the code idea against rogue knights in Village Green.",
     "Step 3: Win by meeting the goal: Timer reaches 55 seconds while a > 0."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level4/needs_support/game_week1_level4_difficulty(NeedAssistance)_4.json",
+    "variation_id": "canvas_game_0094",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

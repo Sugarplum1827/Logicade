@@ -1,30 +1,30 @@
 {
   "file_id": "game_2613",
-  "game_title": "Logic Detective – Bazaar Tents Defense",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A action defense set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Logic Detective: Trace code that runs but gives the wrong answer and fix the logic bug.",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
-  "core_gameplay_loop": "In Bazaar Tents, repeat each round: Trace code that runs but gives the wrong answer and fix the logic bug. Each round, giant scorpions strike the sandstone arch, so respond before the next strike lands. Then check the clues value and advance.",
-  "primary_mechanic": "Logic Detective",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Protect the sandstone arch from giant scorpions in Bazaar Tents: keep the clues meter above zero by applying the concept correctly until the 71-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 71 seconds while clues > 0.",
-  "lose_condition": "clues drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "player_objective": "Read n. Display Above when n > -2; otherwise display At or below. Test dataset 3: {'n': -4}; {'n': 1}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Logic Detective",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M03-X1-T09-ec1ebd5e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Logic Detective' (Week 9 slot 3), mission type 'Survival Siege', and setting 'Bazaar Tents'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 3,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how clues changes.",
-    "Step 2: Use the controls to apply the code idea against giant scorpions in Bazaar Tents.",
-    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while clues > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/needs_support/game_week9_level8_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_2613",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sandstone arch from giant scorpions in Bazaar Tents: keep the clues meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "source_win_condition": "Timer reaches 71 seconds while clues > 0.",
+  "source_lose_condition": "clues drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "source_game_title": "Logic Detective – Bazaar Tents Defense",
+  "source_primary_mechanic": "Logic Detective",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

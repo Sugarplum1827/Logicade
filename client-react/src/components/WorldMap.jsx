@@ -1,6 +1,10 @@
 ﻿import { useState, useEffect } from 'react';
 import RegionModal from './RegionModal';
 import LogoutModal from './LogoutModal';
+import { walletStatusText } from '../game/walletBalance';
+import course from '../../../data/curriculum.json';
+import { regionProgress, readCompletedStages, validCompletedStages } from '../game/regionProgress';
+import { stageCountForWeek } from '../game/stageCatalog';
 
 const DEFAULT_SUBJECTS = [
   { id: 'cp1', title: 'Computer Programming 1' },
@@ -8,7 +12,7 @@ const DEFAULT_SUBJECTS = [
   { id: 'intro', title: 'Intro to Computing' },
 ];
 
-const CP1_WEEKS = [
+const REGION_LAYOUTS = [
   { id: 'w1', week: 1, title: 'The Kingdom', subtitle: 'Orientation & VMGO',
     desc: 'Welcome to LogiCade! Learn the basics of the game, navigate the world, and understand your learning goals.',
     preview_image: '/assets/regions/kingdom.png', level_bg: '/assets/levels_bg/w1_kingdom.png',
@@ -25,23 +29,24 @@ const CP1_WEEKS = [
   { id: 'w5', week: 5, title: 'Mystic Forest', subtitle: 'Components of C',
     desc: 'Explore the fundamental components of C.', preview_image: '/assets/regions/forest.png',
     level_bg: '/assets/levels_bg/w5_forest.png', top: '28%', left: '82%' },
-  { id: 'w6', week: 6, title: 'Snowy Hold', subtitle: 'Basic Parts & Variables',
-    desc: 'Learn to store and hold data.', preview_image: '/assets/regions/snowy.png',
+  { id: 'w6', week: 6, title: 'Snowy Hold', subtitle: 'Simple Programs and C Structure',
+    desc: 'Create a simple C program and trace its execution.', preview_image: '/assets/regions/snowy.png',
     level_bg: '/assets/levels_bg/w6_snowy.png', top: '28%', left: '22%' },
-  { id: 'w7', week: 7, title: 'Eldritch Ruins', subtitle: 'Local & Global Variables',
-    desc: 'Understand scope and lifetime.', preview_image: '/assets/regions/ruins.png',
+  { id: 'w7', week: 7, title: 'Eldritch Ruins', subtitle: 'Basic Parts and Variable Declaration',
+    desc: 'Declare typed variables and inspect changing resources.', preview_image: '/assets/regions/ruins.png',
     level_bg: '/assets/levels_bg/w7_ruins.png', top: '36%', left: '72%' },
-  { id: 'w8', week: 8, title: 'Frost Peaks', subtitle: 'Control Flow',
-    desc: 'Master compound comparisons and conditions.', preview_image: '/assets/regions/peaks.png',
+  { id: 'w8', week: 8, title: 'Frost Peaks', subtitle: 'Local and Global Variables',
+    desc: 'Observe local variables, shared state and lexical scope.', preview_image: '/assets/regions/peaks.png',
     level_bg: '/assets/levels_bg/w8_peaks.png', top: '18%', left: '35%' },
-  { id: 'w9', week: 9, title: 'Sand Dunes', subtitle: 'Loops & Automation',
-    desc: 'Master iterations and loops.', preview_image: '/assets/regions/desert.png',
+  { id: 'w9', week: 9, title: 'Sand Dunes', subtitle: 'Midterm Review and Assessment',
+    desc: 'Review and demonstrate the preceding CP1 concepts.', preview_image: '/assets/regions/desert.png',
     level_bg: '/assets/levels_bg/w9_desert.png', top: '48%', left: '15%' },
 ];
+const CP1_WEEKS=REGION_LAYOUTS.map(region=>{const lesson=course.weeks.find(w=>w.week===region.week);return {...region,subtitle:lesson.title,desc:lesson.mechanic,learningObjectives:lesson.objectives};});
 
 export default function WorldMap({
-  studentId, coins, avatar, playerLevel, xp,
-  currentSubject, onSwitchSubject, onEnterRegion, onLogout,
+  studentId, coins, walletStatus = { status: 'unverified' }, avatar, playerLevel, xp,
+  currentSubject, onSwitchSubject, onEnterRegion, onBack, onLogout, tutorial,
 }) {
   const [selectedWeek, setSelectedWeek] = useState(null);
   const [showLogout, setShowLogout] = useState(false);
@@ -51,8 +56,42 @@ export default function WorldMap({
     DEFAULT_SUBJECTS.map((s, i) => ({ ...s, isUnlocked: i === 0 })),
   );
 
-  const playedKey = studentId ? `logicade_played_regions_${studentId}` : 'logicade_played_regions';
-  const playedRegions = JSON.parse(localStorage.getItem(playedKey) || '{}');
+  const [synchronized, setSynchronized] = useState({ studentId: null, weeks: {} });
+  const progress = regionProgress(localStorage, studentId, CP1_WEEKS,
+    synchronized.studentId === studentId ? synchronized.weeks : {});
+
+  useEffect(() => {
+    let active = true;
+    const token = localStorage.getItem('logicade_session_token');
+    if (!studentId || !token) return () => { active = false; };
+    // Each request is authenticated and bounded to a week. Limit concurrency
+    // so opening the map does not flood the database with progress lookups.
+    const weeks = CP1_WEEKS.slice();
+    async function load() {
+      while (weeks.length && active) {
+        const region = weeks.shift();
+        try {
+          const response = await fetch(`/api/progress/stages?week=${region.week}`, {
+            headers: { Authorization: `Bearer ${token}` }, cache: 'no-store',
+          });
+          if (!response.ok) continue;
+          const data = await response.json();
+          if (!active || localStorage.getItem('logicade_session_token') !== token) return;
+          if (data.week !== region.week || !Array.isArray(data.completed_stages)) continue;
+          const completed = validCompletedStages([
+            ...readCompletedStages(localStorage, studentId, region.id, region.week),
+            ...validCompletedStages(data.completed_stages, region.week),
+          ], region.week);
+          try { localStorage.setItem(`logicade_levels_${studentId}_${region.id}`, JSON.stringify(completed)); } catch { /* State still carries synchronized progress. */ }
+          setSynchronized(previous => ({ studentId,
+            weeks: { ...(previous.studentId === studentId ? previous.weeks : {}), [region.week]: completed },
+          }));
+        } catch { /* Existing local completions remain available offline. */ }
+      }
+    }
+    Promise.all([load(), load(), load()]);
+    return () => { active = false; };
+  }, [studentId]);
 
   useEffect(() => {
     const completedKey = studentId
@@ -82,6 +121,7 @@ export default function WorldMap({
 
   return (
     <div className="world-map-container">
+      {tutorial}
       <video
         className="world-map-video"
         src={`${import.meta.env.BASE_URL}assets/world_map.mp4`}
@@ -107,8 +147,8 @@ export default function WorldMap({
               style={{ cursor: 'pointer', border: '2px solid #3e2723', background: 'rgba(255, 248, 225, 0.96)' }}
               onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
             >
-              <span style={{ fontSize: '14px' }}>📖</span>
-              <span style={{ fontFamily: 'var(--font-pixel)', fontSize: '10px' }}>
+              <span style={{ fontSize: '18px' }}>📖</span>
+              <span style={{ fontFamily: 'var(--font-roboto)', fontSize: '10px' }}>
                 {currentSubjectName}
               </span>
               <span style={{ fontSize: '10px' }}>▼</span>
@@ -153,7 +193,7 @@ export default function WorldMap({
         </div>
 
         <div className="hud-group">
-          <div className="hud-pill" style={{ padding: '4px 10px' }}>
+          <div className="hud-pill" style={{ padding: '4px 10px' }} title={walletStatusText(walletStatus)} aria-label={`${coins} coins. ${walletStatusText(walletStatus)}`}>
             {avatar && !avatarError ? (
               <img
                 src={avatar}
@@ -177,19 +217,24 @@ export default function WorldMap({
             )}
             <img src="/assets/gold_coin.png" style={{ height: '20px' }} alt="Gold" />
             <span>{coins}</span>
+            {walletStatus.status !== 'verified' && <span aria-hidden="true" style={{ fontSize: '0.65em' }}>*</span>}
           </div>
+          <button className="btn-map-back" onClick={onBack} aria-label="Back to subject selection">
+            SUBJECTS
+          </button>
           <button className="btn-logout" onClick={() => setShowLogout(true)}>
             LOGOUT
           </button>
         </div>
       </div>
 
-      {CP1_WEEKS.map((w, index) => {
-        const isUnlocked = index === 0 || playedRegions[CP1_WEEKS[index - 1].id];
+      {CP1_WEEKS.map((w) => {
+        const isUnlocked = progress[w.week].unlocked;
         return (
           <button
             key={w.id}
             className={`region-node ${isUnlocked ? 'unlocked' : 'locked'}`}
+            aria-label={`${w.title}, Week ${w.week}, ${isUnlocked ? 'available' : 'locked'}`}
             style={{ top: w.top, left: w.left }}
             onClick={() => setSelectedWeek(w)}
           >
@@ -202,12 +247,10 @@ export default function WorldMap({
       {selectedWeek && (
         <RegionModal
           region={selectedWeek}
-          isUnlocked={
-            selectedWeek.week === 1 ||
-            playedRegions[CP1_WEEKS[selectedWeek.week - 2].id]
-          }
-          hasPlayed={!!playedRegions[selectedWeek.id]}
-          playCount={playedRegions[selectedWeek.id]}
+          isUnlocked={progress[selectedWeek.week].unlocked}
+          hasPlayed={progress[selectedWeek.week].complete}
+          completedStageCount={progress[selectedWeek.week].completed.length}
+          stageCount={stageCountForWeek(selectedWeek.week)}
           onClose={() => setSelectedWeek(null)}
           onEnter={(event) => {
             setSelectedWeek(null);

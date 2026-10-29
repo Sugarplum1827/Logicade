@@ -1,30 +1,30 @@
 {
   "file_id": "game_0465",
-  "game_title": "Mixed Type Oracle – Basalt Stair Trial",
+  "game_title": "Flowchart Lab · Count up to n",
   "game_concept": "A programming puzzle set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before magma slimes spring the trap.",
-  "genre": "programming puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
-  "core_gameplay_loop": "In Basalt Stair, repeat each round: Predict the result or error of mixed-type expressions before magma slimes spring the trap. Each round costs one action, so plan the step so none are wasted. Then check the predictions value and advance.",
-  "primary_mechanic": "Mixed Type Oracle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Reach the ash barrier using at most 17 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The ash barrier reached with actions_used <= 17.",
-  "lose_condition": "actions_used exceeds 17 before the ash barrier is reached, or lives reach 0.",
+  "player_objective": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Test dataset 5: {'n': 0}; {'n': 10}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 6 (applied tier): Mixed Type Oracle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Counting loops",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M15-X3-T09-3253f4ac",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Efficiency Trial', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 6,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 45,
+    "time_limit_seconds": 0,
     "target_score": 300,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predictions changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
-    "Step 3: Win by meeting the goal: The ash barrier reached with actions_used <= 17."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level6/standard/game_week2_level6_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_0465",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the ash barrier using at most 17 actions, so every code step counts.",
+  "source_win_condition": "The ash barrier reached with actions_used <= 17.",
+  "source_lose_condition": "actions_used exceeds 17 before the ash barrier is reached, or lives reach 0.",
+  "source_game_title": "Mixed Type Oracle – Basalt Stair Trial",
+  "source_primary_mechanic": "Mixed Type Oracle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 45,
+  "learning_objective_id": "cp1_w2_l6",
+  "source_week": 2,
+  "source_level": 6
 }

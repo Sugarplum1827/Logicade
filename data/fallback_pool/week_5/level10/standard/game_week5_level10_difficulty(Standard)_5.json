@@ -1,30 +1,30 @@
 {
   "file_id": "game_1485",
-  "game_title": "Loop Picker – Stump Court Defense",
+  "game_title": "Branch Assembly 5 · Merge Midpoint",
   "game_concept": "A action defense set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
-  "genre": "action defense",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Stump Court: a court around a giant stump",
-  "core_gameplay_loop": "In Stump Court, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round, shadow wolves strike the herb garden, so respond before the next strike lands. Then check the picks_right value and advance.",
-  "primary_mechanic": "Loop Picker",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Protect the herb garden from shadow wolves in Stump Court: keep the picks_right meter above zero by applying the concept correctly until the 57-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 57 seconds while picks_right > 0.",
-  "lose_condition": "picks_right drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "player_objective": "Build and verify a source file: build a valid C source file that prints 32. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (3, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 15 components (8 upper, 7 lower). Set the gold-socket controller batch to 15.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 10 (extended tier): Loop Picker",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M15-X1-T17-d945c2d1",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Survival Siege', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 10,
   "trial": 5,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 57,
+    "time_limit_seconds": 0,
     "target_score": 460,
     "action_budget": 19,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how picks_right changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
-    "Step 3: Win by meeting the goal: Timer reaches 57 seconds while picks_right > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level10/standard/game_week5_level10_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_1485",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the herb garden from shadow wolves in Stump Court: keep the picks_right meter above zero by applying the concept correctly until the 57-second timer ends.",
+  "source_win_condition": "Timer reaches 57 seconds while picks_right > 0.",
+  "source_lose_condition": "picks_right drops to 0, or lives reach 0, before the 57-second timer ends.",
+  "source_game_title": "Loop Picker – Stump Court Defense",
+  "source_primary_mechanic": "Loop Picker",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: A: 8 components via upper_4, shared_assembler to output_shared; B: 7 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 57,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

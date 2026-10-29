@@ -1,41 +1,41 @@
 {
   "file_id": "game_2378",
-  "game_title": "Phone Book Rescue – Cliffside Ledge Race",
+  "game_title": "C Scope Circuit · Scope trace synthesis · variation 8",
   "game_concept": "A adventure race set in Frost Peaks – Cliffside Ledge, a narrow cliff ledge: the sherpa guide must handle snow leopards while practicing strings & dictionaries. Core idea – Phone Book Rescue: Add and update dictionary entries as contacts change.",
-  "genre": "adventure race",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Cliffside Ledge: a narrow cliff ledge",
-  "core_gameplay_loop": "In Cliffside Ledge, repeat each round: Add and update dictionary entries as contacts change. Each round the rival advances, and solving the step moves the sherpa guide ahead. Then check the contacts value and advance.",
-  "primary_mechanic": "Phone Book Rescue",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the basecamp tent by solving code steps involving contacts that move the sherpa guide forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
-  "lose_condition": "The rival reaches the basecamp tent first, or lives reach 0.",
+  "player_objective": "Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [19, 10], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 10}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 10 (extended tier): Phone Book Rescue",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Scope trace synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M08-X5-T08-2edd2b0a",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Phone Book Rescue' (Week 8 slot 8), mission type 'Rival Race', and setting 'Cliffside Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 10,
   "trial": 8,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "book['Ana'] = '0917'",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 9;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 19; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 80,
+    "time_limit_seconds": 0,
     "target_score": 320,
     "action_budget": 23,
     "streak_target": 10,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how contacts changes.",
-    "Step 2: Use the controls to apply the code idea against snow leopards in Cliffside Ledge.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.95)."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level10/needs_support/game_week8_level10_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_2378",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the basecamp tent by solving code steps involving contacts that move the sherpa guide forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.95).",
+  "source_lose_condition": "The rival reaches the basecamp tent first, or lives reach 0.",
+  "source_game_title": "Phone Book Rescue – Cliffside Ledge Race",
+  "source_primary_mechanic": "Phone Book Rescue",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 80,
+  "learning_objective_id": "cp1_w8_l10",
+  "source_week": 8,
+  "source_level": 10,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "3160f53cbcee43726cea6948cbcae53ab405c3d1dca3cdac1f1f0b9b00d32861",
+    "lesson_unchanged": true
+  }
 }

@@ -1,41 +1,41 @@
 {
   "file_id": "game_2118",
-  "game_title": "Case Choir – Rockfall Chute Trial",
+  "game_title": "C Scope Circuit · File-scope declarations · variation 8",
   "game_concept": "A programming puzzle set in Frost Peaks – Rockfall Chute, a rockfall chute: the rescue climber must handle snow leopards while practicing strings & dictionaries. Core idea – Case Choir: Convert text with upper(), lower(), and title() to match the choir's tune.",
-  "genre": "programming puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Rockfall Chute: a rockfall chute",
-  "core_gameplay_loop": "In Rockfall Chute, repeat each round: Convert text with upper(), lower(), and title() to match the choir's tune. Each round costs one action, so plan the step so none are wasted. Then check the choir value and advance.",
-  "primary_mechanic": "Case Choir",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Ghost replay of best run",
     "Combo multiplier"
   ],
-  "player_objective": "Reach the cliff anchor using at most 14 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The cliff anchor reached with actions_used <= 14.",
-  "lose_condition": "actions_used exceeds 14 before the cliff anchor is reached, or lives reach 0.",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, declare steps at file scope and print its value. Print the scope trace [10], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 10}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 1 (intro tier): Case Choir",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: File-scope declarations",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M03-X3-T16-320f3229",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Case Choir' (Week 8 slot 3), mission type 'Efficiency Trial', and setting 'Rockfall Chute'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 1,
   "trial": 8,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "name.title()",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 10;\nint main(void)\n{\n  int signal = readInput();\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 30,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 14,
     "streak_target": 7,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how choir changes.",
-    "Step 2: Use the controls to apply the code idea against snow leopards in Rockfall Chute.",
-    "Step 3: Win by meeting the goal: The cliff anchor reached with actions_used <= 14."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level1/standard/game_week8_level1_difficulty(Standard)_8.json",
+    "variation_id": "canvas_game_2118",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the cliff anchor using at most 14 actions, so every code step counts.",
+  "source_win_condition": "The cliff anchor reached with actions_used <= 14.",
+  "source_lose_condition": "actions_used exceeds 14 before the cliff anchor is reached, or lives reach 0.",
+  "source_game_title": "Case Choir – Rockfall Chute Trial",
+  "source_primary_mechanic": "Case Choir",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 30,
+  "learning_objective_id": "cp1_w8_l1",
+  "source_week": 8,
+  "source_level": 1,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "d02d1f6d4b404148fea6ca60c5d10f490dab7de1f2b44ddc2c318e30962d0971",
+    "lesson_unchanged": true
+  }
 }

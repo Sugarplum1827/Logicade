@@ -29,6 +29,7 @@ export default function GameResultModal({
   onNext,
   onRepeat,
   onExit,
+  nextLabel = 'NEXT',
 }) {
   const {
     won,
@@ -55,7 +56,9 @@ export default function GameResultModal({
       ? spec.secondary_objectives
       : [];
 
-  const scoreDisplay = `${Math.round(score * 100)}%`;
+  const accuracy = Number.isFinite(result.accuracy) ? result.accuracy : (score > 1 ? score / 100 : score);
+  const scoreDisplay = result.accuracy_basis === 'orientation_completion'
+    ? 'WATCHED' : `${Math.round(Math.max(0, Math.min(1, accuracy || 0)) * 100)}%`;
 
   return (
     <div
@@ -143,7 +146,7 @@ export default function GameResultModal({
           </button>
           {won && (
             <button className="rok-btn-next" onClick={onNext}>
-              NEXT
+              {nextLabel}
             </button>
           )}
         </div>

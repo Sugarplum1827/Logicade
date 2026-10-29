@@ -1,30 +1,30 @@
 {
   "file_id": "game_1209",
-  "game_title": "Roll Call Enumerate – Stump Court Race",
+  "game_title": "Branch Assembly 9 · Merge Endpoint",
   "game_concept": "A strategy race set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Roll Call Enumerate: Use enumerate to call out each position and name in a roll call.",
-  "genre": "strategy race",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Stump Court: a court around a giant stump",
-  "core_gameplay_loop": "In Stump Court, repeat each round: Use enumerate to call out each position and name in a roll call. Each round the rival advances, and solving the step moves the wood elf archer ahead. Then check the roll_call value and advance.",
-  "primary_mechanic": "Roll Call Enumerate",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Bonus coins for fast correct moves",
     "Checkpoint flags"
   ],
-  "player_objective": "Beat a rival AI to the herb garden by solving code steps involving roll_call that move the wood elf archer forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
-  "lose_condition": "The rival reaches the herb garden first, or lives reach 0.",
+  "player_objective": "Tokens and components: build a valid C source file that prints 10. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 3 components (2 upper, 1 lower). Set the gold-socket controller batch to 3.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Roll Call Enumerate",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Tokens and components",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M09-X5-T17-44a667dc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Roll Call Enumerate' (Week 5 slot 9), mission type 'Rival Race', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 1,
   "trial": 9,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how roll_call changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.5)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level1/needs_support/game_week5_level1_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_1209",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the herb garden by solving code steps involving roll_call that move the wood elf archer forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.5).",
+  "source_lose_condition": "The rival reaches the herb garden first, or lives reach 0.",
+  "source_game_title": "Roll Call Enumerate – Stump Court Race",
+  "source_primary_mechanic": "Roll Call Enumerate",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 2 components via upper_4, upper_6 to output_shared; B: 1 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w5_l1",
+  "source_week": 5,
+  "source_level": 1
 }

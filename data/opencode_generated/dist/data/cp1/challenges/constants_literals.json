@@ -1,0 +1,516 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v01",
+    "index": 1,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each constants and literals term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Literal"
+        },
+        {
+          "id": "l2",
+          "text": "const"
+        },
+        {
+          "id": "l3",
+          "text": "#define"
+        },
+        {
+          "id": "l4",
+          "text": "0.2f"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A value written directly in the source"
+        },
+        {
+          "id": "r2",
+          "text": "Makes a variable read-only"
+        },
+        {
+          "id": "r3",
+          "text": "Preprocessor text replacement for a constant"
+        },
+        {
+          "id": "r4",
+          "text": "A float literal used for tax"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v02",
+    "index": 2,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the constant declaration.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "{{b0}} int LIMIT = 5;",
+        "printf(\"%d\\n\", LIMIT + {{b1}});",
+        "// LIMIT = 10; is not allowed"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "read-only keyword",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "literal added to LIMIT",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "const"
+        },
+        {
+          "id": "b2",
+          "text": "1"
+        },
+        {
+          "id": "b3",
+          "text": "static"
+        },
+        {
+          "id": "b4",
+          "text": "5"
+        },
+        {
+          "id": "b5",
+          "text": "var"
+        }
+      ]
+    },
+    "explanation": "const protects LIMIT; adding 1 gives 6.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v03",
+    "index": 3,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    const int LIMIT = 5;",
+        "    printf(\"%d\\n\", LIMIT + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "6",
+      "accept": [
+        "6"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "LIMIT is fixed at 5, so LIMIT + 1 is 6."
+    },
+    "explanation": "The program produces 6.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v04",
+    "index": 4,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    const int LIMIT = 5;",
+        "    printf(\"%d\\n\", LIMIT + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "limit",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "limit": "5",
+            "result": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "limit": "5",
+            "result": "6"
+          }
+        }
+      ],
+      "ask": [
+        "limit",
+        "result"
+      ],
+      "answer": {
+        "limit": "5",
+        "result": "6"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is limit = 5, result = 6.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v05",
+    "index": 5,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of constants and literals in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Write the value as a literal"
+        },
+        {
+          "id": "s2",
+          "text": "Name the value with const or #define"
+        },
+        {
+          "id": "s3",
+          "text": "Use the name in calculations"
+        },
+        {
+          "id": "s4",
+          "text": "Never reassign the constant"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Write the value as a literal → Name the value with const or #define → Use the name in calculations → Never reassign the constant",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v06",
+    "index": 6,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a named float constant for tax.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "const"
+        },
+        {
+          "id": "t2",
+          "text": "float"
+        },
+        {
+          "id": "t3",
+          "text": "TAX"
+        },
+        {
+          "id": "t4",
+          "text": "="
+        },
+        {
+          "id": "t5",
+          "text": "0.2f"
+        },
+        {
+          "id": "t6",
+          "text": ";"
+        },
+        {
+          "id": "t7",
+          "text": "var"
+        },
+        {
+          "id": "t8",
+          "text": "TAX++"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "const makes TAX read-only, and the f suffix marks a float literal.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v07",
+    "index": 7,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the constant and the computed result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    const int LIMIT = 5;",
+        "    printf(\"%d\\n\", LIMIT + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "limit",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "5"
+        },
+        {
+          "id": "v2",
+          "text": "6"
+        },
+        {
+          "id": "v3",
+          "text": "4"
+        },
+        {
+          "id": "v4",
+          "text": "7"
+        }
+      ],
+      "answer": {
+        "limit": "v1",
+        "result": "v2"
+      }
+    },
+    "explanation": "LIMIT stays 5; the printed expression evaluates to 6.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v08",
+    "index": 8,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each item as a literal or a named constant.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "literal",
+          "label": "Literal",
+          "desc": "A raw value in the code"
+        },
+        {
+          "id": "named",
+          "label": "Named constant",
+          "desc": "A readable name for a fixed value"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "5",
+          "bin": "literal"
+        },
+        {
+          "id": "i2",
+          "text": "0.2f",
+          "bin": "literal"
+        },
+        {
+          "id": "i3",
+          "text": "const int LIMIT = 5;",
+          "bin": "named"
+        },
+        {
+          "id": "i4",
+          "text": "#define TAX 0.2f",
+          "bin": "named"
+        },
+        {
+          "id": "i5",
+          "text": "'A'",
+          "bin": "literal"
+        },
+        {
+          "id": "i6",
+          "text": "const char GRADE = 'A';",
+          "bin": "named"
+        }
+      ]
+    },
+    "explanation": "Literals are raw values; const and #define give those values names.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v09",
+    "index": 9,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    const int LIMIT = 5;",
+        "    LIMIT = 10;",
+        "    printf(\"%d\\n\", LIMIT);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "A const name cannot be assigned after it is defined.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "constants_literals_v10",
+    "index": 10,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each constant in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "const int MAX = 100;",
+        "#define PASS 50",
+        "int main(void) {",
+        "    const int LIMIT = 5;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Available to the whole file"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Only inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "const int MAX = 100;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "#define PASS 50",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "const int LIMIT = 5;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "int main(void)",
+          "scope": "file"
+        }
+      ]
+    },
+    "explanation": "MAX and PASS are file-wide; LIMIT is local to main.",
+    "concept_slug": "constants_literals",
+    "concept_name": "Constants and Literals"
+  }
+]

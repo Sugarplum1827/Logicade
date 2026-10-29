@@ -1,0 +1,225 @@
+{
+  "pack_id": "logicade-starter-01",
+  "pack_version": "1.0.0",
+  "engine": "Phaser",
+  "license": "CC0-1.0",
+  "attribution": "Kenney New Platformer Pack 1.1 (attribution appreciated, not required)",
+  "source_license_file": "LICENSE-Kenney-New-Platformer-Pack.txt",
+  "asset_count": 31,
+  "assets": [
+    {
+      "id": "characters.green_idle",
+      "path": "assets/characters/green_idle.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_idle.png"
+    },
+    {
+      "id": "characters.green_walk_a",
+      "path": "assets/characters/green_walk_a.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_walk_a.png"
+    },
+    {
+      "id": "characters.green_walk_b",
+      "path": "assets/characters/green_walk_b.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_walk_b.png"
+    },
+    {
+      "id": "characters.green_jump",
+      "path": "assets/characters/green_jump.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_jump.png"
+    },
+    {
+      "id": "characters.green_hit",
+      "path": "assets/characters/green_hit.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_green_hit.png"
+    },
+    {
+      "id": "characters.beige_idle",
+      "path": "assets/characters/beige_idle.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_beige_idle.png"
+    },
+    {
+      "id": "characters.beige_walk_a",
+      "path": "assets/characters/beige_walk_a.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_beige_walk_a.png"
+    },
+    {
+      "id": "characters.beige_walk_b",
+      "path": "assets/characters/beige_walk_b.png",
+      "category": "characters",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/characters/2x/character_beige_walk_b.png"
+    },
+    {
+      "id": "enemies.slime_rest",
+      "path": "assets/enemies/slime_rest.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/slime_block_rest.png"
+    },
+    {
+      "id": "enemies.slime_walk_a",
+      "path": "assets/enemies/slime_walk_a.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/slime_normal_walk_a.png"
+    },
+    {
+      "id": "enemies.slime_walk_b",
+      "path": "assets/enemies/slime_walk_b.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/slime_normal_walk_b.png"
+    },
+    {
+      "id": "enemies.bee_rest",
+      "path": "assets/enemies/bee_rest.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/bee_rest.png"
+    },
+    {
+      "id": "enemies.bee_fly_a",
+      "path": "assets/enemies/bee_fly_a.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/bee_a.png"
+    },
+    {
+      "id": "enemies.bee_fly_b",
+      "path": "assets/enemies/bee_fly_b.png",
+      "category": "enemies",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/enemies/1x/bee_b.png"
+    },
+    {
+      "id": "backgrounds.forest",
+      "path": "assets/backgrounds/forest.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_trees.png"
+    },
+    {
+      "id": "backgrounds.hills",
+      "path": "assets/backgrounds/hills.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_hills.png"
+    },
+    {
+      "id": "backgrounds.cave",
+      "path": "assets/backgrounds/cave.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_mushrooms.png"
+    },
+    {
+      "id": "backgrounds.desert",
+      "path": "assets/backgrounds/desert.png",
+      "category": "backgrounds",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/backgrounds/1x/background_color_desert.png"
+    },
+    {
+      "id": "tiles.grass",
+      "path": "assets/tiles/grass.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/grass.png"
+    },
+    {
+      "id": "tiles.dirt",
+      "path": "assets/tiles/dirt.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/terrain_dirt_block.png"
+    },
+    {
+      "id": "tiles.stone",
+      "path": "assets/tiles/stone.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/brick_grey.png"
+    },
+    {
+      "id": "tiles.wood",
+      "path": "assets/tiles/wood.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/bridge_logs.png"
+    },
+    {
+      "id": "tiles.spikes",
+      "path": "assets/tiles/spikes.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/block_spikes.png"
+    },
+    {
+      "id": "tiles.coin",
+      "path": "assets/tiles/coin.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/coin_gold.png"
+    },
+    {
+      "id": "tiles.flag",
+      "path": "assets/tiles/flag.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/flag_green_a.png"
+    },
+    {
+      "id": "tiles.bush",
+      "path": "assets/tiles/bush.png",
+      "category": "tiles",
+      "source": "vendor/kenney/organized/sprites/new_platformer_pack_1_1/tiles/1x/bush.png"
+    },
+    {
+      "id": "audio.jump",
+      "path": "assets/audio/jump.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_jump.ogg"
+    },
+    {
+      "id": "audio.coin",
+      "path": "assets/audio/coin.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_coin.ogg"
+    },
+    {
+      "id": "audio.hurt",
+      "path": "assets/audio/hurt.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_hurt.ogg"
+    },
+    {
+      "id": "audio.goal",
+      "path": "assets/audio/goal.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_gem.ogg"
+    },
+    {
+      "id": "audio.impact",
+      "path": "assets/audio/impact.ogg",
+      "category": "audio",
+      "source": "vendor/kenney/organized/audio/sfx/new_platformer_pack_1_1/sfx_bump.ogg"
+    }
+  ],
+  "maps": [
+    {
+      "id": "forest_path_01",
+      "path": "maps/forest_path_01.json",
+      "width": 14,
+      "height": 9,
+      "biome": "forest"
+    },
+    {
+      "id": "cave_path_01",
+      "path": "maps/cave_path_01.json",
+      "width": 14,
+      "height": 9,
+      "biome": "cave"
+    }
+  ],
+  "audio_events": {
+    "jump": "assets/audio/jump.ogg",
+    "collect": "assets/audio/coin.ogg",
+    "hurt": "assets/audio/hurt.ogg",
+    "complete": "assets/audio/goal.ogg",
+    "obstacle": "assets/audio/impact.ogg"
+  },
+  "notes": [
+    "Animations use reusable sprite frames; no per-session media generation is required.",
+    "Map layouts and audio event mappings are fixed pack data.",
+    "Keep this asset pack independent from learner identity and assessment records."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_44_array_search",
+  "slug": "array_search",
+  "display_name": "Array Search",
+  "learning_target": "trace a linear search through an array",
+  "core_brief": "Linear search checks each element from index 0 until it finds the target or runs out of elements.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 12,
+  "unit": "Arrays",
+  "group": "code",
+  "skin": "food",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_3",
+    "zones": [
+      "themes.food.bg_kitchen_3",
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef",
+    "enemy": "themes.food.enemy_can",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.burger",
+      "bush": "themes.food.burger",
+      "slime": "themes.food.burger",
+      "bee": "themes.food.burger"
+    },
+    "follower": "themes.food.follower"
+  },
+  "mechanic": "match",
+  "mechanic_label": "Match",
+  "accent": "#c5a3ff",
+  "variation_id": "cp1_44_array_search_v04",
+  "index": 4,
+  "challenge_index": 4,
+  "challenge_id": "array_search_v04",
+  "title": "Match the pairs",
+  "label": "Lab 04: Match the pairs",
+  "seed": 2948459265,
+  "challenge_bank": "../../../data/cp1/challenges/array_search.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

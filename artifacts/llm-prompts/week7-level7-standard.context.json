@@ -1,0 +1,59 @@
+{
+  "binding": {
+    "week": 7,
+    "level": 7,
+    "source_week": 7,
+    "source_level": 7,
+    "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+    "learning_objective_id": "cp1_w7_l7",
+    "difficulty": "standard",
+    "mechanic_family": "terminal",
+    "required_c_type": "float"
+  },
+  "fixed_focus": "Declare float",
+  "lesson_points": [
+    "Declare float",
+    "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+    "Practice int, float, double and char, with suitable printf formats.",
+    "Names are case sensitive. Do not read an uninitialized automatic local."
+  ],
+  "current_objective": "Declare float: declare resource as float, apply resource + 1.5, and print each result with %.1f. Dataset 1 starts with [-3, 0, 9, 12]. Match every stream. Use a full main function and a return statement.",
+  "required_declaration": {
+    "name": "resource",
+    "type": "float"
+  },
+  "parameter_contract": {
+    "problem_variant": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "primary_value": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "secondary_value": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "input_values": {
+      "type": "array",
+      "min_length": 3,
+      "max_length": 6,
+      "items": {
+        "type": "integer",
+        "minimum": -20,
+        "maximum": 40
+      }
+    },
+    "layout_seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    }
+  },
+  "allowed_questions": [],
+  "validation_scope": "Parameter proposal only; runtime construction, output checks, solvability and publication are still required."
+}

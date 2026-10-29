@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0374",
+  "variation_id": "canvas_game_0374",
+  "week": 2,
+  "level": 3,
+  "trial": 4,
+  "difficulty": "Standard",
+  "mode": "circuit",
+  "title": "Flowchart Workshop – Rectangle area",
+  "display_name": "Logic Circuit Workshop",
+  "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
+  "topic": "Flowcharting",
+  "learning_objectives": [
+    "Process expressions"
+  ],
+  "lesson": {
+    "summary": "Flowcharting",
+    "points": [
+      "Process expressions",
+      "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+      "Test both branches and boundary inputs before accepting a chart."
+    ],
+    "example": "Start → Read n → n > 0? → Yes/No output → End",
+    "practice": "Flowchart synthesis",
+    "week": 2,
+    "source_week": 2,
+    "source_level": 3,
+    "objective_id": "cp1_w2_l3",
+    "title": "Flowcharting",
+    "stage_title": "Process expressions",
+    "objectives": [
+      "Process expressions"
+    ],
+    "sources": [
+      {
+        "title": "Victoria Department of Education: flowcharts",
+        "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+      },
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      2
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w2_l3",
+  "source_level": 3,
+  "source_week": 2,
+  "primary_mechanic": "circuit construction and execution",
+  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 4: {'width': 5, 'height': 6}; {'width': 7, 'height': 2}.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 902663627,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "gate_order": [
+      "INPUT",
+      "AND",
+      "NOT",
+      "OUTPUT"
+    ],
+    "switches": [
+      false,
+      true
+    ],
+    "wire_variant": 2
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_2",
+    "source_level": 3,
+    "title": "Rectangle area",
+    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 4: {'width': 5, 'height': 6}; {'width': 7, 'height': 2}.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.45,
+        "y": 0.08,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.45,
+        "y": 0.29,
+        "number": 2
+      },
+      {
+        "id": "calculate",
+        "x": 0.45,
+        "y": 0.5,
+        "number": 3
+      },
+      {
+        "id": "write",
+        "x": 0.45,
+        "y": 0.71,
+        "number": 4
+      },
+      {
+        "id": "end",
+        "x": 0.45,
+        "y": 0.9199999999999999,
+        "number": 5
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "calculate"
+      },
+      {
+        "from": "calculate",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "end"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "read",
+        "label": "Read width, height",
+        "kind": "input",
+        "action": {
+          "names": [
+            "width",
+            "height"
+          ]
+        }
+      },
+      {
+        "id": "calculate",
+        "label": "area = width × height",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "area",
+              "value": {
+                "op": "*",
+                "args": [
+                  {
+                    "var": "width"
+                  },
+                  {
+                    "var": "height"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "write",
+        "label": "Write area",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "area"
+          }
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "calculate": "calculate",
+      "write": "write",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "width": 5,
+          "height": 6
+        },
+        "expected": [
+          30
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "width": 0,
+          "height": 8
+        },
+        "expected": [
+          0
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "width": 7,
+          "height": 2
+        },
+        "expected": [
+          14
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0374",
+    "objective_id": "cp1_w2_l3"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "calculate",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5 in the requested chart."
+    }
+  ],
+  "source_path": "week_2/level3/standard/game_week2_level3_difficulty(Standard)_4.json",
+  "source_topic": "Flowcharting",
+  "source_learning_alignment": "CP1 Week 2: Process expressions",
+  "source_primary_mechanic": "Unit Trader",
+  "source_code_snippet": "cm = m * 100"
+}

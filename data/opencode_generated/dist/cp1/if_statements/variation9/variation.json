@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_36_if_statements",
+  "slug": "if_statements",
+  "display_name": "If Statements",
+  "learning_target": "control one block with an if test",
+  "core_brief": "An if statement runs its body only when the condition is true; braces group the body.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 10,
+  "unit": "Conditionals",
+  "group": "code",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_1",
+    "zones": [
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3"
+    ],
+    "tile": "themes.pirate.tile_plank",
+    "player": "themes.pirate.player_yellow",
+    "enemy": "themes.pirate.enemy_grey",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_ship",
+    "obstacles": {
+      "spike": "themes.pirate.cannon",
+      "bush": "themes.pirate.cannonball",
+      "slime": "themes.pirate.nest",
+      "bee": "themes.pirate.fire"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "mechanic": "sort",
+  "mechanic_label": "Sort",
+  "accent": "#ffcf5c",
+  "variation_id": "cp1_36_if_statements_v09",
+  "index": 9,
+  "challenge_index": 9,
+  "challenge_id": "if_statements_v09",
+  "title": "Sort into bins",
+  "label": "Lab 09: Sort into bins",
+  "seed": 2717903546,
+  "challenge_bank": "../../../data/cp1/challenges/if_statements.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

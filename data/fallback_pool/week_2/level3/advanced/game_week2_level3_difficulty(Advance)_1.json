@@ -1,30 +1,30 @@
 {
   "file_id": "game_0381",
-  "game_title": "Boolean Circuit – Ash Rim Trail Defense",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A action defense set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Boolean Circuit: Toggle True/False switches so a combined and/or/not expression powers the magma valve.",
-  "genre": "action defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
-  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Toggle True/False switches so a combined and/or/not expression powers the magma valve. Each round, magma slimes strike the magma valve, so respond before the next strike lands. Then check the power_on value and advance.",
-  "primary_mechanic": "Boolean Circuit",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Protect the magma valve from magma slimes in Ash Rim Trail: keep the power_on meter above zero by applying the concept correctly until the 29-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 29 seconds while power_on > 0.",
-  "lose_condition": "power_on drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 1: {'width': 2, 'height': 3}; {'width': 4, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Boolean Circuit",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M06-X1-T01-de12f314",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Circuit' (Week 2 slot 6), mission type 'Survival Siege', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 1,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 29,
+    "time_limit_seconds": 0,
     "target_score": 230,
     "action_budget": 11,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power_on changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
-    "Step 3: Win by meeting the goal: Timer reaches 29 seconds while power_on > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/advanced/game_week2_level3_difficulty(Advance)_1.json",
+    "variation_id": "canvas_game_0381",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the magma valve from magma slimes in Ash Rim Trail: keep the power_on meter above zero by applying the concept correctly until the 29-second timer ends.",
+  "source_win_condition": "Timer reaches 29 seconds while power_on > 0.",
+  "source_lose_condition": "power_on drops to 0, or lives reach 0, before the 29-second timer ends.",
+  "source_game_title": "Boolean Circuit – Ash Rim Trail Defense",
+  "source_primary_mechanic": "Boolean Circuit",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 29,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

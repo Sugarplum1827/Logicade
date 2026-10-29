@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_34_comparison_operators",
+  "slug": "comparison_operators",
+  "display_name": "Comparison Operators",
+  "learning_target": "evaluate relational and equality tests",
+  "core_brief": "Comparisons produce 1 for true and 0 for false in C.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 9,
+  "unit": "Operators",
+  "group": "code",
+  "skin": "space",
+  "theme": "space",
+  "theme_label": "Space",
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_purple",
+    "zones": [
+      "themes.space.bg_purple",
+      "themes.space.bg_black",
+      "themes.space.bg_blue",
+      "themes.space.bg_dark_purple"
+    ],
+    "tile": "themes.space.tile_blue",
+    "player": "themes.space.player_green",
+    "enemy": "themes.space.enemy_red",
+    "coin": "themes.space.coin_blue",
+    "goal": "themes.space.goal_green",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_big",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "mechanic": "assemble",
+  "mechanic_label": "Assemble",
+  "accent": "#7ee2b8",
+  "variation_id": "cp1_34_comparison_operators_v09",
+  "index": 9,
+  "challenge_index": 9,
+  "challenge_id": "comparison_operators_v09",
+  "title": "Assemble the line",
+  "label": "Lab 09: Assemble the line",
+  "seed": 2641158108,
+  "challenge_bank": "../../../data/cp1/challenges/comparison_operators.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

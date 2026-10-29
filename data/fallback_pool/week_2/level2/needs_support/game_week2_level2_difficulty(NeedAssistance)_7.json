@@ -1,30 +1,30 @@
 {
   "file_id": "game_0337",
-  "game_title": "String Glue – Ember Fields Defense",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A tower defense set in Mt. Pyre – Ember Fields, fields of drifting embers: the ember mage must handle molten golems while practicing data types & operators. Core idea – String Glue: Concatenate string pieces to forge passwords and spell names.",
-  "genre": "tower defense",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
-  "core_gameplay_loop": "In Ember Fields, repeat each round: Concatenate string pieces to forge passwords and spell names. Each round, molten golems strike the lava bridge, so respond before the next strike lands. Then check the spell_ok value and advance.",
-  "primary_mechanic": "String Glue",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Protect the lava bridge from molten golems in Ember Fields: keep the spell_ok meter above zero by applying the concept correctly until the 46-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 46 seconds while spell_ok > 0.",
-  "lose_condition": "spell_ok drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "player_objective": "Read value for station 7, then display the same value without changing it. Test dataset 7: {'value': -7}; {'value': 21}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): String Glue",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M07-X1-T05-a8836727",
   "duplicate_check_notes": "Unique combination of primary mechanic 'String Glue' (Week 2 slot 7), mission type 'Survival Siege', and setting 'Ember Fields'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how spell_ok changes.",
-    "Step 2: Use the controls to apply the code idea against molten golems in Ember Fields.",
-    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while spell_ok > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/needs_support/game_week2_level2_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_0337",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the lava bridge from molten golems in Ember Fields: keep the spell_ok meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "source_win_condition": "Timer reaches 46 seconds while spell_ok > 0.",
+  "source_lose_condition": "spell_ok drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "source_game_title": "String Glue – Ember Fields Defense",
+  "source_primary_mechanic": "String Glue",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

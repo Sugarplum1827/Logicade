@@ -26,7 +26,7 @@ export default function AvatarSelect({ onSelect }) {
           ))}
         </div>
 
-        <button className="btn-auth" style={{ marginTop: '30px' }} onClick={() => onSelect(selected)}>
+        <button className="btn-auth" onClick={() => onSelect(selected)}>
           CONFIRM AVATAR
         </button>
       </div>

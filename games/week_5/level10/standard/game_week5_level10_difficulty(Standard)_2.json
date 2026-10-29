@@ -1,0 +1,734 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1482",
+  "variation_id": "canvas_game_1482",
+  "week": 5,
+  "level": 10,
+  "trial": 2,
+  "difficulty": "Standard",
+  "mode": "factory",
+  "title": "Branch Assembly 2 · Merge Midpoint",
+  "display_name": "Code Assembly Factory",
+  "theme": "Mystic Forest – Root Tunnels: tunnels among huge roots",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
+  "learning_objectives": [
+    "Build and verify a source file"
+  ],
+  "lesson": {
+    "summary": "C Components, Keywords, Preprocessor and Organization",
+    "points": [
+      "Build and verify a source file",
+      "int and return are keywords; main and printf are identifiers, not keywords.",
+      "Preprocessing precedes compilation. #include supplies header content; #define specifies token replacement.",
+      "Organize directives, a main definition, declarations, statements and braces. Source construction is checked separately from the factory analogy."
+    ],
+    "example": "#include <stdio.h>\nint main(void) {\n int total = 3;\n printf(\"%d\\n\", total);\n return 0;\n}",
+    "practice": "Build and verify a source file",
+    "week": 5,
+    "source_week": 5,
+    "source_level": 10,
+    "objective_id": "cp1_w5_l10",
+    "title": "C Components, Keywords, Preprocessor and Organization",
+    "stage_title": "Build and verify a source file",
+    "objectives": [
+      "Build and verify a source file"
+    ],
+    "sources": [
+      {
+        "title": "GCC: header inclusion",
+        "url": "https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html"
+      },
+      {
+        "title": "GCC: object-like macros",
+        "url": "https://gcc.gnu.org/onlinedocs/cpp/Object-like-Macros.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      5
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w5_l10",
+  "source_level": 10,
+  "source_week": 5,
+  "primary_mechanic": "factory construction and execution",
+  "objective": "Build and verify a source file: build a valid C source file that prints 16. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 5. IF item value >= 14, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 15 components (8 upper, 7 lower). Set the gold-socket controller batch to 15.",
+  "hint": "IF item value >= 14, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 8 components via upper_4, shared_assembler to output_shared; ELSE: 7 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 3864531630,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "route_variant": 0,
+    "blocked_cells": [
+      [
+        3,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        9,
+        4
+      ]
+    ],
+    "stations": [
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        12,
+        4
+      ]
+    ]
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w5_l10_v2_1",
+    "rules": {
+      "max_steps": 1200,
+      "max_lines": 50,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 1,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w5_l10",
+    "source_level": 10,
+    "focus": "Build and verify a source file",
+    "family": "factory",
+    "title": "Branch Assembly 2 · Merge Midpoint",
+    "objective": "Build and verify a source file: build a valid C source file that prints 16. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 5. IF item value >= 14, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 15 components (8 upper, 7 lower). Set the gold-socket controller batch to 15.",
+    "width": 11,
+    "height": 7,
+    "machines": [
+      {
+        "id": "power",
+        "x": 0,
+        "y": 0,
+        "type": "generator",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "source",
+        "x": 1,
+        "y": 3,
+        "type": "source",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "upper_rise_2",
+        "x": 2,
+        "y": 2,
+        "type": "belt",
+        "dir": "N",
+        "fixed": false
+      },
+      {
+        "id": "upper_3",
+        "x": 3,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "upper_4",
+        "x": 4,
+        "y": 1,
+        "type": "smelter",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "upper_5",
+        "x": 5,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "upper_6",
+        "x": 6,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "upper_7",
+        "x": 7,
+        "y": 1,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "upper_join_2",
+        "x": 8,
+        "y": 2,
+        "type": "belt",
+        "dir": "S",
+        "fixed": false
+      },
+      {
+        "id": "lower_rise_4",
+        "x": 2,
+        "y": 4,
+        "type": "belt",
+        "dir": "S",
+        "fixed": false
+      },
+      {
+        "id": "lower_3",
+        "x": 3,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_4",
+        "x": 4,
+        "y": 5,
+        "type": "smelter",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "lower_5",
+        "x": 5,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_6",
+        "x": 6,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_7",
+        "x": 7,
+        "y": 5,
+        "type": "belt",
+        "dir": "E",
+        "fixed": false
+      },
+      {
+        "id": "lower_join_corner",
+        "x": 8,
+        "y": 5,
+        "type": "belt",
+        "dir": "N",
+        "fixed": false
+      },
+      {
+        "id": "lower_join_4",
+        "x": 8,
+        "y": 4,
+        "type": "belt",
+        "dir": "N",
+        "fixed": false
+      },
+      {
+        "id": "shared_assembler",
+        "x": 9,
+        "y": 3,
+        "type": "assembler",
+        "dir": "E",
+        "fixed": true
+      },
+      {
+        "id": "output_shared",
+        "x": 10,
+        "y": 3,
+        "type": "output",
+        "dir": "E",
+        "fixed": true
+      }
+    ],
+    "wires": [],
+    "target": 15,
+    "ore": 19,
+    "ore_values": [
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17,
+      13,
+      17
+    ],
+    "build_budget": 20,
+    "recipes": {
+      "smelter": {
+        "input": "ore",
+        "output": "plate",
+        "ticks": 3
+      },
+      "assembler": {
+        "input": "plate",
+        "output": "component",
+        "ticks": 5
+      }
+    },
+    "controller": {
+      "schema_version": 1,
+      "socket": [
+        0,
+        1
+      ],
+      "required_kind": "while"
+    },
+    "controller_lesson": "IF item value >= 14, send north to the upper branch; ELSE send south to the lower branch.",
+    "routing": {
+      "version": 1,
+      "topology": "merge_midpoint",
+      "fork": {
+        "id": "junction",
+        "type": "router",
+        "position": [
+          2,
+          3
+        ],
+        "branches": [
+          "IF",
+          "ELSE"
+        ],
+        "condition": {
+          "kind": "threshold",
+          "value": 14
+        }
+      },
+      "merge": {
+        "id": "merge",
+        "position": [
+          8,
+          3
+        ]
+      },
+      "targets": [
+        {
+          "id": "IF",
+          "label": "Upper branch",
+          "target": 8,
+          "via": [
+            "upper_4",
+            "shared_assembler"
+          ],
+          "output": "output_shared"
+        },
+        {
+          "id": "ELSE",
+          "label": "Lower branch",
+          "target": 7,
+          "via": [
+            "lower_4",
+            "shared_assembler"
+          ],
+          "output": "output_shared"
+        }
+      ]
+    },
+    "reference": {
+      "machines": [
+        {
+          "id": "power",
+          "x": 0,
+          "y": 0,
+          "type": "generator",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "source",
+          "x": 1,
+          "y": 3,
+          "type": "source",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "junction",
+          "x": 2,
+          "y": 3,
+          "type": "router",
+          "dir": "E",
+          "fixed": false,
+          "outputs": {
+            "IF": "N",
+            "ELSE": "S"
+          },
+          "condition": {
+            "kind": "threshold",
+            "value": 14
+          }
+        },
+        {
+          "id": "upper_rise_2",
+          "x": 2,
+          "y": 2,
+          "type": "belt",
+          "dir": "N",
+          "fixed": false
+        },
+        {
+          "id": "upper_corner",
+          "x": 2,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_3",
+          "x": 3,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_4",
+          "x": 4,
+          "y": 1,
+          "type": "smelter",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "upper_5",
+          "x": 5,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_6",
+          "x": 6,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_7",
+          "x": 7,
+          "y": 1,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "upper_join_corner",
+          "x": 8,
+          "y": 1,
+          "type": "belt",
+          "dir": "S",
+          "fixed": false
+        },
+        {
+          "id": "upper_join_2",
+          "x": 8,
+          "y": 2,
+          "type": "belt",
+          "dir": "S",
+          "fixed": false
+        },
+        {
+          "id": "lower_rise_4",
+          "x": 2,
+          "y": 4,
+          "type": "belt",
+          "dir": "S",
+          "fixed": false
+        },
+        {
+          "id": "lower_corner",
+          "x": 2,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_3",
+          "x": 3,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_4",
+          "x": 4,
+          "y": 5,
+          "type": "smelter",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "lower_5",
+          "x": 5,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_6",
+          "x": 6,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_7",
+          "x": 7,
+          "y": 5,
+          "type": "belt",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "lower_join_corner",
+          "x": 8,
+          "y": 5,
+          "type": "belt",
+          "dir": "N",
+          "fixed": false
+        },
+        {
+          "id": "lower_join_4",
+          "x": 8,
+          "y": 4,
+          "type": "belt",
+          "dir": "N",
+          "fixed": false
+        },
+        {
+          "id": "merge",
+          "x": 8,
+          "y": 3,
+          "type": "merger",
+          "dir": "E",
+          "fixed": false
+        },
+        {
+          "id": "shared_assembler",
+          "x": 9,
+          "y": 3,
+          "type": "assembler",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "output_shared",
+          "x": 10,
+          "y": 3,
+          "type": "output",
+          "dir": "E",
+          "fixed": true
+        },
+        {
+          "id": "controller",
+          "x": 0,
+          "y": 1,
+          "type": "while",
+          "quota": 15,
+          "dir": "E",
+          "fixed": false
+        }
+      ],
+      "wires": [
+        [
+          "power",
+          "source"
+        ],
+        [
+          "power",
+          "junction"
+        ],
+        [
+          "power",
+          "upper_4"
+        ],
+        [
+          "power",
+          "lower_4"
+        ],
+        [
+          "power",
+          "merge"
+        ],
+        [
+          "power",
+          "shared_assembler"
+        ],
+        [
+          "power",
+          "controller"
+        ]
+      ],
+      "source_order": [
+        "header",
+        "macro",
+        "main",
+        "body",
+        "output",
+        "return"
+      ],
+      "c_categories": {
+        "int": "keyword",
+        "return": "keyword",
+        "main": "identifier",
+        "printf": "identifier",
+        "#include": "directive",
+        "#define": "directive"
+      }
+    },
+    "hint": "IF item value >= 14, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 8 components via upper_4, shared_assembler to output_shared; ELSE: 7 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+    "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+    "source_exercise": {
+      "title": "Build and verify a source file",
+      "focus": "Build and verify a source file",
+      "objective_id": "cp1_w5_l10",
+      "prompt": "Build and verify a source file: build a valid C source file that prints 16. Put preprocessing before main; keep declarations and statements inside its body.",
+      "categories": {
+        "int": "keyword",
+        "return": "keyword",
+        "main": "identifier",
+        "printf": "identifier",
+        "#include": "directive",
+        "#define": "directive"
+      },
+      "program": "#include <stdio.h>\n#define LIMIT 13\nint main(void)\n{\nint total = 13 + 3;\nprintf(\"%d\\n\", total);\nreturn 0;\n}",
+      "expected": [
+        16
+      ],
+      "parts": [
+        {
+          "id": "header",
+          "label": "Preprocessor include",
+          "code": "#include <stdio.h>"
+        },
+        {
+          "id": "macro",
+          "label": "Object-like macro",
+          "code": "#define LIMIT 13"
+        },
+        {
+          "id": "main",
+          "label": "Main function and opening block",
+          "code": "int main(void)\n{"
+        },
+        {
+          "id": "body",
+          "label": "Declaration and statements",
+          "code": "int total = 13 + 3;"
+        },
+        {
+          "id": "output",
+          "label": "Library call and semicolon",
+          "code": "printf(\"%d\\n\", total);"
+        },
+        {
+          "id": "return",
+          "label": "Return statement and closing block",
+          "code": "return 0;\n}"
+        }
+      ],
+      "reference_order": [
+        "header",
+        "macro",
+        "main",
+        "body",
+        "output",
+        "return"
+      ]
+    }
+  },
+  "assets": {
+    "factory_tile": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0017.png",
+    "machine_source": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0100.png",
+    "machine_smelter": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0102.png",
+    "machine_assembler": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0112.png",
+    "machine_generator": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0120.png",
+    "machine_output": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0101.png",
+    "machine_if_else": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0102.png",
+    "machine_while": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0100.png",
+    "machine_for": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0112.png",
+    "machine_splitter": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0104.png",
+    "machine_router": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0105.png",
+    "machine_merger": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0106.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w5_l10_v2_1",
+      "kind": "program_execution",
+      "prompt": "Build and verify a source file: build a valid C source file that prints 16. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 1 and lower path on row 5. IF item value >= 14, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 15 components (8 upper, 7 lower). Set the gold-socket controller batch to 15."
+    }
+  ],
+  "source_path": "week_5/level10/standard/game_week5_level10_difficulty(Standard)_2.json",
+  "source_topic": "C Components, Keywords, Preprocessor and Organization",
+  "source_learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "source_primary_mechanic": "Iteration Tracer",
+  "source_code_snippet": "for i in range(2, 9, 3):"
+}

@@ -1,41 +1,41 @@
 {
   "file_id": "game_2165",
-  "game_title": "Palindrome Gate – Ice Cave Shelter Rush",
+  "game_title": "C Scope Circuit · Global initialization · variation 5",
   "game_concept": "A action puzzle set in Frost Peaks – Ice Cave Shelter, a shelter in an ice cave: the mountaineer must handle falling rocks while practicing strings & dictionaries. Core idea – Palindrome Gate: Check whether a word reads the same backward to open the gate.",
-  "genre": "action puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Ice Cave Shelter: a shelter in an ice cave",
-  "core_gameplay_loop": "In Ice Cave Shelter, repeat each round: Check whether a word reads the same backward to open the gate. Each round, a new crampons challenge appears; solve it to bank points before time drains. Then check the gate value and advance.",
-  "primary_mechanic": "Palindrome Gate",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Collect 130 points of crampons by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 130 within 50 seconds.",
-  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "player_objective": "Build 4 parallel branches, merge every branch by SUM, and feed the merged signal back for 2 passes before the output probe. In the scope controller, observe zero-initialized file-scope state. Print the scope trace [9, 0], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 0}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 3 (intro tier): Palindrome Gate",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Global initialization",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M05-X2-T13-132c7814",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Palindrome Gate' (Week 8 slot 5), mission type 'Resource Rush', and setting 'Ice Cave Shelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 3,
   "trial": 5,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "word == word[::-1]",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps;\nint main(void)\n{\n  int signal = readInput();\nint local = 9;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gate changes.",
-    "Step 2: Use the controls to apply the code idea against falling rocks in Ice Cave Shelter.",
-    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level3/needs_support/game_week8_level3_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_2165",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 130 points of crampons by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 130 within 50 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "source_game_title": "Palindrome Gate – Ice Cave Shelter Rush",
+  "source_primary_mechanic": "Palindrome Gate",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w8_l3",
+  "source_week": 8,
+  "source_level": 3,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "7630feb28b35aecf371546031cbe2ba41488f52033e63bd31a48b56fe8db9cc9",
+    "lesson_unchanged": true
+  }
 }

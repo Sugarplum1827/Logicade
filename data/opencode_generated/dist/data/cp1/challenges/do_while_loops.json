@@ -1,0 +1,549 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v01",
+    "index": 1,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of do-while loops in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Run the body once"
+        },
+        {
+          "id": "s2",
+          "text": "Evaluate the condition at the bottom"
+        },
+        {
+          "id": "s3",
+          "text": "Repeat while the condition is true"
+        },
+        {
+          "id": "s4",
+          "text": "Exit when it becomes false"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Run the body once → Evaluate the condition at the bottom → Repeat while the condition is true → Exit when it becomes false",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v02",
+    "index": 2,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the closing part of a do-while loop.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "while"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "n"
+        },
+        {
+          "id": "t4",
+          "text": "<"
+        },
+        {
+          "id": "t5",
+          "text": "3"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": ";"
+        },
+        {
+          "id": "t8",
+          "text": "do"
+        },
+        {
+          "id": "t9",
+          "text": "endwhile"
+        },
+        {
+          "id": "t10",
+          "text": "then"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The condition and semicolon close the do-while after its body.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v03",
+    "index": 3,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the final n and the number of passes.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int n = 0;",
+        "    do {",
+        "        n = n + 1;",
+        "    } while (n < 3);",
+        "    printf(\"%d\\n\", n);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "n",
+          "type": "final value"
+        },
+        {
+          "name": "passes",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "3"
+        },
+        {
+          "id": "v2",
+          "text": "3"
+        },
+        {
+          "id": "v3",
+          "text": "4"
+        },
+        {
+          "id": "v4",
+          "text": "2"
+        }
+      ],
+      "answer": {
+        "n": "v1",
+        "passes": "v2"
+      }
+    },
+    "explanation": "The body runs three times, bringing n from 0 to 3.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v04",
+    "index": 4,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each behavior as while or do-while.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "while",
+          "label": "while loop",
+          "desc": "Tests before the body"
+        },
+        {
+          "id": "dowhile",
+          "label": "do-while loop",
+          "desc": "Tests after the body"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "May run zero times",
+          "bin": "while"
+        },
+        {
+          "id": "i2",
+          "text": "Always runs at least once",
+          "bin": "dowhile"
+        },
+        {
+          "id": "i3",
+          "text": "Test appears before the braces",
+          "bin": "while"
+        },
+        {
+          "id": "i4",
+          "text": "Test appears after the closing brace",
+          "bin": "dowhile"
+        },
+        {
+          "id": "i5",
+          "text": "while (n > 0) { ... }",
+          "bin": "while"
+        },
+        {
+          "id": "i6",
+          "text": "do { ... } while (n > 0);",
+          "bin": "dowhile"
+        }
+      ]
+    },
+    "explanation": "The position of the test decides whether the body can be skipped.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v05",
+    "index": 5,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int n = 0;",
+        "do {",
+        "    n = n + 1;",
+        "} while (n < 3)",
+        "printf(\"%d\\n\", n);",
+        "return 0;"
+      ],
+      "answer": 3,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "A do-while condition must end with a semicolon after the closing parenthesis.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v06",
+    "index": 6,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in main or the loop body.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int n = 0;",
+        "    do {",
+        "        int step = 1;",
+        "        n = n + step;",
+        "    } while (n < 3);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "n persists"
+        },
+        {
+          "id": "loop",
+          "label": "Loop body",
+          "desc": "step is recreated each pass"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int n = 0;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "do {",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int step = 1;",
+          "scope": "loop"
+        },
+        {
+          "id": "d4",
+          "text": "n = n + step;",
+          "scope": "loop"
+        }
+      ]
+    },
+    "explanation": "step exists only inside the braces; n survives until main ends.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v07",
+    "index": 7,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each do-while loops term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "do"
+        },
+        {
+          "id": "l2",
+          "text": "while"
+        },
+        {
+          "id": "l3",
+          "text": "At least once"
+        },
+        {
+          "id": "l4",
+          "text": "Break"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Marks the start of a test-last loop"
+        },
+        {
+          "id": "r2",
+          "text": "Checks the condition after the body"
+        },
+        {
+          "id": "r3",
+          "text": "The body runs before the first test"
+        },
+        {
+          "id": "r4",
+          "text": "Leaves the loop immediately"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v08",
+    "index": 8,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the do-while loop.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int n = 0;",
+        "{{b0}} {",
+        "    n = n + 1;",
+        "} while (n < 3){{b1}}",
+        "printf(\"%d\\n\", n);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "start keyword",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "statement terminator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "do"
+        },
+        {
+          "id": "b2",
+          "text": ";"
+        },
+        {
+          "id": "b3",
+          "text": "while"
+        },
+        {
+          "id": "b4",
+          "text": "then"
+        },
+        {
+          "id": "b5",
+          "text": ":"
+        }
+      ]
+    },
+    "explanation": "do starts the body and the while condition needs a trailing semicolon.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v09",
+    "index": 9,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int n = 0;",
+        "    do {",
+        "        n = n + 1;",
+        "    } while (n < 3);",
+        "    printf(\"%d\\n\", n);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "3",
+      "accept": [
+        "3"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The body increments n before each test; the loop stops when n reaches 3."
+    },
+    "explanation": "The program produces 3.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "do_while_loops_v10",
+    "index": 10,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int n = 0;",
+        "    do {",
+        "        n = n + 1;",
+        "    } while (n < 3);",
+        "    printf(\"%d\\n\", n);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "n",
+        "passes"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "n": "0",
+            "passes": "0"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "n": "1",
+            "passes": "1"
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "n": "3",
+            "passes": "3"
+          }
+        }
+      ],
+      "ask": [
+        "n",
+        "passes"
+      ],
+      "answer": {
+        "n": "3",
+        "passes": "3"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is n = 3, passes = 3.",
+    "concept_slug": "do_while_loops",
+    "concept_name": "Do-While Loops"
+  }
+]

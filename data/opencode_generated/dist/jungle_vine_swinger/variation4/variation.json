@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "16_jungle_vine_swinger",
+  "slug": "jungle_vine_swinger",
+  "display_name": "Jungle Vine Swinger",
+  "module_family": "platformer_functions",
+  "learning_target": "functions and reusable actions",
+  "core_brief": "Use functions to trigger vine swings and carry the explorer across gaps.",
+  "mode": "runner",
+  "mode_label": "Route runner",
+  "skin": "jungle",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Route runner",
+  "accent": "#b69cff",
+  "tint": 15382468,
+  "variation_id": "16_jungle_vine_swinger_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 3758047300,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 20,
+    "obstacles": 7
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_1",
+    "zones": [
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2",
+      "themes.farm.bg_farm_3"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_jack",
+    "enemy": "themes.farm.enemy_sprout",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.fence",
+      "bush": "themes.farm.bush",
+      "slime": "themes.farm.rock",
+      "bee": "themes.farm.wheat"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/jungle_vine_swinger.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

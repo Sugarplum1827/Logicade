@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1910",
+  "variation_id": "canvas_game_1910",
+  "week": 7,
+  "level": 4,
+  "trial": 10,
+  "difficulty": "Standard",
+  "mode": "terminal",
+  "title": "Multiply state · variation 10",
+  "display_name": "Register Operations Console",
+  "theme": "Eldritch Ruins – Spirit Hall: a hall of wandering spirits",
+  "topic": "Basic Parts of C and Variable Declarations",
+  "learning_objectives": [
+    "Multiply state"
+  ],
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Multiply state",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 7,
+    "source_week": 7,
+    "source_level": 4,
+    "objective_id": "cp1_w7_l4",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Multiply state",
+    "objectives": [
+      "Multiply state"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w7_l4",
+  "source_level": 4,
+  "source_week": 7,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Multiply state: declare resource as int, apply resource * 3, and print each result with %d. Dataset 10 starts with [-3, 0, 15, 18]. Match every stream. Use a full main function and a return statement.",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 4037841259,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      2,
+      9,
+      5,
+      21
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 3
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w7_l4_v10_1",
+    "rules": {
+      "max_steps": 620,
+      "max_lines": 50,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 1,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w7_l4",
+    "source_level": 4,
+    "focus": "Multiply state",
+    "family": "terminal",
+    "language": "c_subset",
+    "title": "Multiply state · variation 10",
+    "objective": "Multiply state: declare resource as int, apply resource * 3, and print each result with %d. Dataset 10 starts with [-3, 0, 15, 18]. Match every stream. Use a full main function and a return statement.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -3,
+          0,
+          15,
+          18
+        ],
+        "expected": [
+          -9,
+          0,
+          45,
+          54
+        ],
+        "required_values": {
+          "resource": 54
+        }
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -2,
+          0,
+          16,
+          18
+        ],
+        "expected": [
+          -6,
+          0,
+          48,
+          54
+        ],
+        "required_values": {
+          "resource": 54
+        }
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -1,
+          0,
+          17,
+          18
+        ],
+        "expected": [
+          -3,
+          0,
+          51,
+          54
+        ],
+        "required_values": {
+          "resource": 54
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "C1",
+        "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+      }
+    ],
+    "required_declaration": {
+      "name": "resource",
+      "type": "int"
+    },
+    "reference": {
+      "programs": [
+        "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nint resource = readInput();\nresource = resource * 3;\nprintf(\"%d\\n\", resource);\nreturn 0;\n}"
+      ]
+    },
+    "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w7_l4_v10_1",
+      "kind": "program_execution",
+      "prompt": "Multiply state: declare resource as int, apply resource * 3, and print each result with %d. Dataset 10 starts with [-3, 0, 15, 18]. Match every stream. Use a full main function and a return statement."
+    }
+  ],
+  "source_path": "week_7/level4/standard/game_week7_level4_difficulty(Standard)_10.json",
+  "source_topic": "Basic Parts of C and Variable Declarations",
+  "source_learning_alignment": "CP1 Week 7: Multiply state",
+  "source_primary_mechanic": "Stack Of Plates",
+  "source_code_snippet": "stack.append(x)\nstack.pop()"
+}

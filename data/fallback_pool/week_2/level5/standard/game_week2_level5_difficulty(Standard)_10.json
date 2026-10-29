@@ -1,30 +1,30 @@
 {
   "file_id": "game_0440",
-  "game_title": "Comparison Duel – Ore Smelter Rush",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A action puzzle set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the lava scout's power beats the shield shown by cinder bats.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
-  "core_gameplay_loop": "In Ore Smelter, repeat each round: Choose ==, !=, < , > or >= so the lava scout's power beats the shield shown by cinder bats. Each round, a new heat shields challenge appears; solve it to bank points before time drains. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Limited undo button",
     "Combo multiplier"
   ],
-  "player_objective": "Collect 260 points of heat shields by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 260 within 42 seconds.",
-  "lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score ≥ 60; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 10: {'score': 59}; {'score': 61}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X2-T18-57806f45",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Resource Rush', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 10,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
-    "Step 3: Win by meeting the goal: score >= 260 within 42 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/standard/game_week2_level5_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_0440",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 260 points of heat shields by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 260 within 42 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 260, or lives reach 0.",
+  "source_game_title": "Comparison Duel – Ore Smelter Rush",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5
 }

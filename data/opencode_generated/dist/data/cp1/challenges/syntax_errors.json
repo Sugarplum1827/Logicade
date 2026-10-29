@@ -1,0 +1,531 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v01",
+    "index": 1,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the syntax errors.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int main(void) {{b0}}",
+        "    int total = 2 + 3{{b1}}",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "opening brace",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "statement terminator",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "{"
+        },
+        {
+          "id": "b2",
+          "text": ";"
+        },
+        {
+          "id": "b3",
+          "text": "("
+        },
+        {
+          "id": "b4",
+          "text": ":"
+        },
+        {
+          "id": "b5",
+          "text": ")"
+        }
+      ]
+    },
+    "explanation": "The function body opens with { and the declaration ends with ;.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v02",
+    "index": 2,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 2 + 3;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "5",
+      "accept": [
+        "5"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The fixed program compiles and prints 5."
+    },
+    "explanation": "The program produces 5.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v03",
+    "index": 3,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 2 + 3;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "total",
+        "compiled"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "total": "5",
+            "compiled": "no"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "total": "5",
+            "compiled": "yes"
+          }
+        }
+      ],
+      "ask": [
+        "total",
+        "compiled"
+      ],
+      "answer": {
+        "total": "5",
+        "compiled": "yes"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is total = 5, compiled = yes.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v04",
+    "index": 4,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of syntax errors in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Read the compiler error and line number"
+        },
+        {
+          "id": "s2",
+          "text": "Inspect that line and the line before it"
+        },
+        {
+          "id": "s3",
+          "text": "Fix the missing or misplaced token"
+        },
+        {
+          "id": "s4",
+          "text": "Recompile to confirm the fix"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Read the compiler error and line number → Inspect that line and the line before it → Fix the missing or misplaced token → Recompile to confirm the fix",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v05",
+    "index": 5,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a complete printf statement with its terminator.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "printf"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "\"%d\\n\""
+        },
+        {
+          "id": "t4",
+          "text": ","
+        },
+        {
+          "id": "t5",
+          "text": "total"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": ";"
+        },
+        {
+          "id": "t8",
+          "text": "print"
+        },
+        {
+          "id": "t9",
+          "text": ":"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Every C statement ends with a semicolon.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v06",
+    "index": 6,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the computed total and whether the program compiles.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 2 + 3;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "total",
+          "type": "final value"
+        },
+        {
+          "name": "compiled",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "5"
+        },
+        {
+          "id": "v2",
+          "text": "yes"
+        },
+        {
+          "id": "v3",
+          "text": "6"
+        },
+        {
+          "id": "v4",
+          "text": "4"
+        },
+        {
+          "id": "v5",
+          "text": "0"
+        }
+      ],
+      "answer": {
+        "total": "v1",
+        "compiled": "v2"
+      }
+    },
+    "explanation": "The semicolon completes the statement, so the program compiles and total is 5.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v07",
+    "index": 7,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line as syntactically valid or broken.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "valid",
+          "label": "Valid",
+          "desc": "The compiler accepts it"
+        },
+        {
+          "id": "broken",
+          "label": "Broken",
+          "desc": "Contains a syntax error"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int total = 2 + 3;",
+          "bin": "valid"
+        },
+        {
+          "id": "i2",
+          "text": "printf(\"%d\\n\", total);",
+          "bin": "valid"
+        },
+        {
+          "id": "i3",
+          "text": "return 0;",
+          "bin": "valid"
+        },
+        {
+          "id": "i4",
+          "text": "int total = 2 + 3",
+          "bin": "broken"
+        },
+        {
+          "id": "i5",
+          "text": "printf(\"%d\\n\", total)",
+          "bin": "broken"
+        },
+        {
+          "id": "i6",
+          "text": "int main(void) {",
+          "bin": "valid"
+        }
+      ]
+    },
+    "explanation": "Missing semicolons are the most common syntax error for beginners.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v08",
+    "index": 8,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 2 + 3",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The declaration is missing its semicolon, so the compiler cannot parse the next line.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v09",
+    "index": 9,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 2 + 3;",
+        "    printf(\"%d\\n\", total);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Header and function definition"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Statements inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "#include <stdio.h>",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "int total = 5;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "return 0;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "The header and definition are top-level; the working statements are inside main.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "syntax_errors_v10",
+    "index": 10,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each syntax errors term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Syntax error"
+        },
+        {
+          "id": "l2",
+          "text": "Compiler"
+        },
+        {
+          "id": "l3",
+          "text": "Semicolon"
+        },
+        {
+          "id": "l4",
+          "text": "Brace"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A violation of C grammar"
+        },
+        {
+          "id": "r2",
+          "text": "Reports syntax errors before running"
+        },
+        {
+          "id": "r3",
+          "text": "Terminates most C statements"
+        },
+        {
+          "id": "r4",
+          "text": "Opens or closes a block"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "syntax_errors",
+    "concept_name": "Syntax Errors"
+  }
+]

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2411",
-  "game_title": "Pseudocode Bridge – Salt Flat Crossing Defense",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A survival strategy set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Pseudocode Bridge: Convert plain-language pseudocode into working code steps to cross the gap.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
-  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Convert plain-language pseudocode into working code steps to cross the gap. Each round, vultures strike the temple door, so respond before the next strike lands. Then check the bridge value and advance.",
-  "primary_mechanic": "Pseudocode Bridge",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Protect the temple door from vultures in Salt Flat Crossing: keep the bridge meter above zero by applying the concept correctly until the 30-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 30 seconds while bridge > 0.",
-  "lose_condition": "bridge drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 1: {'a': 1, 'b': 3}; {'a': 0, 'b': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Pseudocode Bridge",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M11-X1-T11-9ed8ec14",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Pseudocode Bridge' (Week 9 slot 11), mission type 'Survival Siege', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 1,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 30,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 14,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how bridge changes.",
-    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
-    "Step 3: Win by meeting the goal: Timer reaches 30 seconds while bridge > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/standard/game_week9_level1_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_2411",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the temple door from vultures in Salt Flat Crossing: keep the bridge meter above zero by applying the concept correctly until the 30-second timer ends.",
+  "source_win_condition": "Timer reaches 30 seconds while bridge > 0.",
+  "source_lose_condition": "bridge drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "source_game_title": "Pseudocode Bridge – Salt Flat Crossing Defense",
+  "source_primary_mechanic": "Pseudocode Bridge",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 30,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

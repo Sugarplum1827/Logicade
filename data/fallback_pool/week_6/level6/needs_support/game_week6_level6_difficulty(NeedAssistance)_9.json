@@ -1,30 +1,30 @@
 {
   "file_id": "game_1659",
-  "game_title": "Docstring Detective – Frozen Well Race",
+  "game_title": "Formatted output · variation 9",
   "game_concept": "A strategy race set in Snowy Hold – Frozen Well, a frozen village well: the hold guard must handle yeti raiders while practicing functions. Core idea – Docstring Detective: Read docstrings to pick the right function for each case.",
-  "genre": "strategy race",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Frozen Well: a frozen village well",
-  "core_gameplay_loop": "In Frozen Well, repeat each round: Read docstrings to pick the right function for each case. Each round the rival advances, and solving the step moves the hold guard ahead. Then check the cases value and advance.",
-  "primary_mechanic": "Docstring Detective",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Power-up crates for perfect rounds",
     "Live variable watch panel"
   ],
-  "player_objective": "Beat a rival AI to the wall banner by solving code steps involving cases that move the hold guard forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
-  "lose_condition": "The rival reaches the wall banner first, or lives reach 0.",
+  "player_objective": "Maze 9 (15×11, 22 junctions): collect 1 crystal(s) from the branches and reach beacon (13, 3). Use a C main program to Formatted output. Print [25]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 6 – Functions | Level 6 (applied tier): Docstring Detective",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Formatted output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M09-X5-T07-1e6341d3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Docstring Detective' (Week 6 slot 9), mission type 'Rival Race', and setting 'Frozen Well'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 6,
   "trial": 9,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 63,
+    "time_limit_seconds": 0,
     "target_score": 210,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how cases changes.",
-    "Step 2: Use the controls to apply the code idea against yeti raiders in Frozen Well.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.75)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level6/needs_support/game_week6_level6_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_1659",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the wall banner by solving code steps involving cases that move the hold guard forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.75).",
+  "source_lose_condition": "The rival reaches the wall banner first, or lives reach 0.",
+  "source_game_title": "Docstring Detective – Frozen Well Race",
+  "source_primary_mechanic": "Docstring Detective",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 63,
+  "learning_objective_id": "cp1_w6_l6",
+  "source_week": 6,
+  "source_level": 6
 }

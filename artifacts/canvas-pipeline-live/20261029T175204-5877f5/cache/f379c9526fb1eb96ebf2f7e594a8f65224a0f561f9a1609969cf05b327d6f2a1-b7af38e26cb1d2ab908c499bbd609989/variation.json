@@ -1,0 +1,371 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0043",
+  "variation_id": "canvas_game_0043",
+  "week": 1,
+  "level": 2,
+  "trial": 3,
+  "difficulty": "Standard",
+  "mode": "tetris",
+  "title": "Flowchart Lab · Rectangle area",
+  "display_name": "Flowchart Block Puzzle",
+  "theme": "The Kingdom – Throne Hall: the throne hall of the kingdom",
+  "topic": "Flowchart Symbols and Control Flow",
+  "learning_objectives": [
+    "Identify common flowchart symbols.",
+    "Trace the direction of control flow.",
+    "Build a valid route from ordered nodes."
+  ],
+  "lesson": {
+    "summary": "Orientation",
+    "points": [
+      "Controls and mission practice",
+      "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+      "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once.",
+      "Stage 2 is guided interface practice; the main flowchart lesson is Week 2."
+    ],
+    "example": "",
+    "practice": "Controls and mission practice",
+    "week": 1,
+    "source_week": 1,
+    "source_level": 2,
+    "objective_id": "cp1_w1_l2",
+    "title": "Orientation",
+    "stage_title": "Controls and mission practice",
+    "objectives": [
+      "Controls and mission practice"
+    ],
+    "sources": [],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      1
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_level": 2,
+  "source_week": 1,
+  "primary_mechanic": "Drag-and-drop flowchart construction",
+  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 20, 5; test inputs [{'width': 10, 'height': 5}, {'width': 15, 'height': 6}, {'width': 20, 'height': 7}, {'width': 5, 'height': 8}, {'width': 5, 'height': 9}, {'width': 10, 'height': 10}, {'width': 20, 'height': 20}, {'width': 20, 'height': 5}].",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 12345,
+  "layout": {
+    "interaction": "flowchart_drag_drop",
+    "columns": 12,
+    "rows": 10,
+    "seed": 4255252321
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_2",
+    "source_level": null,
+    "title": "Rectangle area",
+    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 20, 5; test inputs [{'width': 10, 'height': 5}, {'width': 15, 'height': 6}, {'width': 20, 'height': 7}, {'width': 5, 'height': 8}, {'width': 5, 'height': 9}, {'width': 10, 'height': 10}, {'width': 20, 'height': 20}, {'width': 20, 'height': 5}].",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.08,
+        "number": 1
+      },
+      {
+        "id": "read",
+        "x": 0.5,
+        "y": 0.29,
+        "number": 2
+      },
+      {
+        "id": "calculate",
+        "x": 0.5,
+        "y": 0.5,
+        "number": 3
+      },
+      {
+        "id": "write",
+        "x": 0.5,
+        "y": 0.71,
+        "number": 4
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9199999999999999,
+        "number": 5
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "read"
+      },
+      {
+        "from": "read",
+        "to": "calculate"
+      },
+      {
+        "from": "calculate",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "end"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "read",
+        "label": "Read width, height",
+        "kind": "input",
+        "action": {
+          "names": [
+            "width",
+            "height"
+          ]
+        }
+      },
+      {
+        "id": "calculate",
+        "label": "area = width × height",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "area",
+              "value": {
+                "op": "*",
+                "args": [
+                  {
+                    "var": "width"
+                  },
+                  {
+                    "var": "height"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "write",
+        "label": "Write area",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "area"
+          }
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "read": "read",
+      "calculate": "calculate",
+      "write": "write",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {
+          "width": 10,
+          "height": 5
+        },
+        "expected": [
+          50
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "width": 15,
+          "height": 6
+        },
+        "expected": [
+          90
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "width": 20,
+          "height": 7
+        },
+        "expected": [
+          140
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "width": 5,
+          "height": 8
+        },
+        "expected": [
+          40
+        ]
+      },
+      {
+        "id": "case_5",
+        "inputs": {
+          "width": 5,
+          "height": 9
+        },
+        "expected": [
+          45
+        ]
+      },
+      {
+        "id": "case_6",
+        "inputs": {
+          "width": 10,
+          "height": 10
+        },
+        "expected": [
+          100
+        ]
+      },
+      {
+        "id": "case_7",
+        "inputs": {
+          "width": 20,
+          "height": 20
+        },
+        "expected": [
+          400
+        ]
+      },
+      {
+        "id": "case_8",
+        "inputs": {
+          "width": 20,
+          "height": 5
+        },
+        "expected": [
+          100
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0043",
+    "objective_id": "cp1_w1_l2"
+  },
+  "assets": {
+    "puzzle_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "block_drop_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/drop_001.ogg",
+    "line_clear_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_002.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1."
+    },
+    {
+      "id": "read",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2."
+    },
+    {
+      "id": "calculate",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5."
+    }
+  ],
+  "source_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_3.json",
+  "source_topic": "Orientation",
+  "source_learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "source_primary_mechanic": "Print Probe",
+  "source_code_snippet": "print(shield)",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 20,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          15,
+          20,
+          -5,
+          5,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "0129defb4e339fae395afe3bcc19d64fc94b6f211a93070d48137b628d475924",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "b79f369d7a51965d5bbebbcf443c5cc129dedf68a48e9ddd94b861de371a2b0b",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 8,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793296345.644071,
+    "origin": "ollama",
+    "job_id": "beb34fb48f10e4c8f76a29d7a31ea20fb2981d4b5b599a3d66515bda14e6a495",
+    "replaces_revision": "cdf18e13d5333911bca205aa9f868b3e8f3682a3e38b7acb46465377ebc1cb4e"
+  }
+}

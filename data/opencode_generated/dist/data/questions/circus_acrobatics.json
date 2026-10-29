@@ -1,0 +1,79 @@
+{
+  "concept_id": "28_circus_acrobatics",
+  "slug": "circus_acrobatics",
+  "learning_target": "loop bounds and iteration",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a loop bound?",
+      "options": [
+        "The first trick",
+        "The tent color",
+        "The audience size",
+        "The limit that stops a loop"
+      ],
+      "answer_index": 3,
+      "explanation": "The bound determines when the loop stops repeating."
+    },
+    {
+      "id": "q2",
+      "question": "How many flips does `for i in range(3):` perform?",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "answer_index": 0,
+      "explanation": "range(3) produces three iterations, so the loop performs three flips."
+    },
+    {
+      "id": "q3",
+      "question": "What happens if the bound is too high?",
+      "options": [
+        "The loop runs once",
+        "The performer may overshoot",
+        "Nothing happens",
+        "The code gets shorter"
+      ],
+      "answer_index": 1,
+      "explanation": "Too many iterations can carry the action past the intended landing point."
+    },
+    {
+      "id": "q4",
+      "question": "What is an iteration?",
+      "options": [
+        "One pass through a loop",
+        "The final landing",
+        "A type of rope",
+        "A costume"
+      ],
+      "answer_index": 0,
+      "explanation": "Each repetition of the loop body is one iteration."
+    },
+    {
+      "id": "q5",
+      "question": "Which loop is safest for a fixed number of flips?",
+      "options": [
+        "def",
+        "for",
+        "while True",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "A for loop with a known range guarantees a fixed number of repetitions."
+    },
+    {
+      "id": "q6",
+      "question": "Why check the landing after each iteration?",
+      "options": [
+        "To avoid counting",
+        "To make the loop longer",
+        "To stay safe",
+        "To change the music"
+      ],
+      "answer_index": 2,
+      "explanation": "Checking after each pass catches a bad landing before the next trick."
+    }
+  ]
+}

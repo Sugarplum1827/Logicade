@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_50_runtime_errors",
+  "slug": "runtime_errors",
+  "display_name": "Runtime Errors",
+  "learning_target": "guard against division by zero and invalid access",
+  "core_brief": "A runtime error happens while the program runs, often from invalid data or an unsafe operation.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 14,
+  "unit": "Debugging",
+  "group": "code",
+  "skin": "urban",
+  "theme": "urban",
+  "theme_label": "City",
+  "assets": {
+    "theme": "urban",
+    "theme_label": "City",
+    "bg": "themes.urban.bg_city_day",
+    "zones": [
+      "themes.urban.bg_city_day",
+      "themes.urban.bg_city_dusk",
+      "themes.urban.bg_city_night"
+    ],
+    "tile": "themes.urban.tile_sidewalk",
+    "player": "themes.urban.player_b",
+    "enemy": "themes.urban.enemy_c",
+    "coin": "themes.urban.coin_token",
+    "goal": "themes.urban.goal_door",
+    "obstacles": {
+      "spike": "themes.urban.barrier_b",
+      "bush": "themes.urban.tree",
+      "slime": "themes.urban.tree_b",
+      "bee": "themes.urban.tree"
+    },
+    "follower": "themes.urban.follower"
+  },
+  "mechanic": "sort",
+  "mechanic_label": "Sort",
+  "accent": "#ff8fa3",
+  "variation_id": "cp1_50_runtime_errors_v05",
+  "index": 5,
+  "challenge_index": 5,
+  "challenge_id": "runtime_errors_v05",
+  "title": "Sort into bins",
+  "label": "Lab 05: Sort into bins",
+  "seed": 2028055088,
+  "challenge_bank": "../../../data/cp1/challenges/runtime_errors.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation4/",
+    "next": "../variation6/"
+  }
+}

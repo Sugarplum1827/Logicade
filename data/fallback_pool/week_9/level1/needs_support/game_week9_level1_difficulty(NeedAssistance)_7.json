@@ -1,30 +1,30 @@
 {
   "file_id": "game_2407",
-  "game_title": "Integration Heist – Caravan Camp Streak",
+  "game_title": "Flowchart Lab · Count up to n",
   "game_concept": "A quiz RPG set in Sand Dunes – Caravan Camp, a caravan camp: the oasis keeper must handle vultures while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Caravan Camp.",
-  "genre": "quiz RPG",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Caravan Camp: a caravan camp",
-  "core_gameplay_loop": "In Caravan Camp, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Caravan Camp. Each round poses one decision; a wrong answer breaks the streak. Then check the heist value and advance.",
-  "primary_mechanic": "Integration Heist",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Checkpoint flags"
   ],
-  "player_objective": "Chain 5 consecutive correct decisions about heist to power up the oasis keeper and open the palm grove.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 5.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read n. Print the whole numbers from 1 through n. If n is zero, print nothing. Test dataset 7: {'n': 0}; {'n': 12}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 1 (intro tier): Integration Heist",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M07-X4-T03-6acdc805",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Streak Challenge', and setting 'Caravan Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 1,
   "trial": 7,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 70,
     "action_budget": 18,
     "streak_target": 5,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how heist changes.",
-    "Step 2: Use the controls to apply the code idea against vultures in Caravan Camp.",
-    "Step 3: Win by meeting the goal: streak counter reaches 5."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level1/needs_support/game_week9_level1_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_2407",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 5 consecutive correct decisions about heist to power up the oasis keeper and open the palm grove.",
+  "source_win_condition": "streak counter reaches 5.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Integration Heist – Caravan Camp Streak",
+  "source_primary_mechanic": "Integration Heist",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

@@ -1,0 +1,531 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v01",
+    "index": 1,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int value(void) {",
+        "    int local = 5;",
+        "    return local;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", value());",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "5",
+      "accept": [
+        "5"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "value creates local, returns it, and main prints the returned 5."
+    },
+    "explanation": "The program produces 5.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v02",
+    "index": 2,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int value(void) {",
+        "    int local = 5;",
+        "    return local;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", value());",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "local",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "local": "5",
+            "result": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "local": "5",
+            "result": "5"
+          }
+        },
+        {
+          "line": 6,
+          "state": {
+            "local": "5",
+            "result": "5"
+          }
+        }
+      ],
+      "ask": [
+        "local",
+        "result"
+      ],
+      "answer": {
+        "local": "5",
+        "result": "5"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is local = 5, result = 5.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v03",
+    "index": 3,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of local scope in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Enter the function"
+        },
+        {
+          "id": "s2",
+          "text": "Declare the local variable"
+        },
+        {
+          "id": "s3",
+          "text": "Use it inside the same function"
+        },
+        {
+          "id": "s4",
+          "text": "Leave the function and lose access"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Enter the function → Declare the local variable → Use it inside the same function → Leave the function and lose access",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v04",
+    "index": 4,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a local variable inside a function.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "local"
+        },
+        {
+          "id": "t3",
+          "text": "="
+        },
+        {
+          "id": "t4",
+          "text": "5"
+        },
+        {
+          "id": "t5",
+          "text": ";"
+        },
+        {
+          "id": "t6",
+          "text": "global"
+        },
+        {
+          "id": "t7",
+          "text": "extern"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Declaring local inside the function body gives it local scope.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v05",
+    "index": 5,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the local value and the returned result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int value(void) {",
+        "    int local = 5;",
+        "    return local;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", value());",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "local",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "5"
+        },
+        {
+          "id": "v2",
+          "text": "5"
+        },
+        {
+          "id": "v3",
+          "text": "6"
+        },
+        {
+          "id": "v4",
+          "text": "4"
+        }
+      ],
+      "answer": {
+        "local": "v1",
+        "result": "v2"
+      }
+    },
+    "explanation": "local exists inside value; the returned copy becomes result in main.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v06",
+    "index": 6,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each use as inside value or outside its scope.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "inside",
+          "label": "Inside value",
+          "desc": "Can access local"
+        },
+        {
+          "id": "outside",
+          "label": "Outside value",
+          "desc": "Cannot access local"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "return local;",
+          "bin": "inside"
+        },
+        {
+          "id": "i2",
+          "text": "int local = 5;",
+          "bin": "inside"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"%d\", local); in main",
+          "bin": "outside"
+        },
+        {
+          "id": "i4",
+          "text": "local = 6; in main",
+          "bin": "outside"
+        },
+        {
+          "id": "i5",
+          "text": "return local + 1;",
+          "bin": "inside"
+        },
+        {
+          "id": "i6",
+          "text": "int copy = local; in main",
+          "bin": "outside"
+        }
+      ]
+    },
+    "explanation": "Every use of local must be inside value, where it was declared.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v07",
+    "index": 7,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int value(void) {",
+        "    int local = 5;",
+        "    return local;",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", local);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 5,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "local belongs to value, so main cannot see it.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v08",
+    "index": 8,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in value or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int value(void) {",
+        "    int local = 5;",
+        "    return local;",
+        "}",
+        "int main(void) {",
+        "    int result = value();",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "value",
+          "label": "value function",
+          "desc": "Owns local"
+        },
+        {
+          "id": "main",
+          "label": "main function",
+          "desc": "Owns result"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int local = 5;",
+          "scope": "value"
+        },
+        {
+          "id": "d2",
+          "text": "return local;",
+          "scope": "value"
+        },
+        {
+          "id": "d3",
+          "text": "int result = value();",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "printf(\"%d\", result);",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "local is visible only in value; result is visible only in main.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v09",
+    "index": 9,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each local scope term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Local variable"
+        },
+        {
+          "id": "l2",
+          "text": "Lifetime"
+        },
+        {
+          "id": "l3",
+          "text": "Parameter"
+        },
+        {
+          "id": "l4",
+          "text": "Scope"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Exists only in its function or block"
+        },
+        {
+          "id": "r2",
+          "text": "The span during which storage exists"
+        },
+        {
+          "id": "r3",
+          "text": "A local name that receives an argument"
+        },
+        {
+          "id": "r4",
+          "text": "The region where a name is visible"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "local_scope_v10",
+    "index": 10,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the local-variable program.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int value(void) {",
+        "    {{b0}} local = 5;",
+        "    return {{b1}};",
+        "}",
+        "int main(void) {",
+        "    printf(\"%d\\n\", value());",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "integer type",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "local variable to return",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "int"
+        },
+        {
+          "id": "b2",
+          "text": "local"
+        },
+        {
+          "id": "b3",
+          "text": "float"
+        },
+        {
+          "id": "b4",
+          "text": "value"
+        },
+        {
+          "id": "b5",
+          "text": "main"
+        }
+      ]
+    },
+    "explanation": "value declares local and returns it; main calls value instead of using local directly.",
+    "concept_slug": "local_scope",
+    "concept_name": "Local Scope"
+  }
+]

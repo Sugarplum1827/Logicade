@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0802",
+  "variation_id": "canvas_game_0802",
+  "week": 3,
+  "level": 7,
+  "trial": 2,
+  "difficulty": "Advance",
+  "mode": "terminal",
+  "title": "Compare procedures · variation 2",
+  "display_name": "Register Operations Console",
+  "theme": "Coastal Port – Tavern Terrace: a seaside tavern terrace",
+  "topic": "Algorithms",
+  "learning_objectives": [
+    "Compare procedures"
+  ],
+  "lesson": {
+    "summary": "Algorithms",
+    "points": [
+      "Compare procedures",
+      "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+      "The register game is a small instruction language for algorithm practice, not C."
+    ],
+    "example": "READ x; ADD 3; OUTPUT result",
+    "practice": "Algorithm synthesis",
+    "week": 3,
+    "source_week": 3,
+    "source_level": 7,
+    "objective_id": "cp1_w3_l7",
+    "title": "Algorithms",
+    "stage_title": "Compare procedures",
+    "objectives": [
+      "Compare procedures"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      3
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w3_l7",
+  "source_level": 7,
+  "source_week": 3,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Compare procedures: Compare doubling before addition with addition before doubling. double, then add 12. Match all 3 streams; preserve their order. Dataset 2, operand 12.",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "time_limit_seconds": 0,
+  "starting_lives": 2,
+  "seed": 2686760818,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      15,
+      0,
+      6,
+      31
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 2
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w3_l7_v2_2",
+    "rules": {
+      "max_steps": 710,
+      "max_lines": 60,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 2,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w3_l7",
+    "source_level": 7,
+    "focus": "Compare procedures",
+    "family": "terminal",
+    "title": "Compare procedures · variation 2",
+    "objective": "Compare procedures: Compare doubling before addition with addition before doubling. double, then add 12. Match all 3 streams; preserve their order. Dataset 2, operand 12.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          2,
+          18,
+          11,
+          10,
+          -2,
+          5
+        ],
+        "expected": [
+          16,
+          48,
+          34,
+          32,
+          8,
+          22
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -13,
+          1,
+          18,
+          14,
+          10,
+          3
+        ],
+        "expected": [
+          -14,
+          14,
+          48,
+          40,
+          32,
+          18
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -5,
+          -3,
+          -11,
+          -10,
+          18,
+          15
+        ],
+        "expected": [
+          2,
+          6,
+          -10,
+          -8,
+          48,
+          42
+        ]
+      }
+    ],
+    "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+    "nodes": [
+      {
+        "id": "N1",
+        "program": "MOV IN ACC\n# Transform ACC here\nMOV ACC OUT"
+      },
+      {
+        "id": "N2",
+        "program": "MOV IN ACC\nMOV ACC OUT"
+      }
+    ],
+    "reference": {
+      "programs": [
+        "MOV IN ACC\nMUL 2\nADD 12\nMOV ACC OUT",
+        "MOV IN ACC\nMOV ACC OUT"
+      ]
+    },
+    "instruction_set": [
+      "MOV",
+      "ADD",
+      "SUB",
+      "MUL",
+      "NEG",
+      "SAV",
+      "SWP",
+      "JMP",
+      "JEZ",
+      "JGZ",
+      "JLZ",
+      "INT",
+      "SET",
+      "NOP"
+    ],
+    "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w3_l7_v2_2",
+      "kind": "program_execution",
+      "prompt": "Compare procedures: Compare doubling before addition with addition before doubling. double, then add 12. Match all 3 streams; preserve their order. Dataset 2, operand 12."
+    }
+  ],
+  "source_path": "week_3/level7/advanced/game_week3_level7_difficulty(Advance)_2.json",
+  "source_topic": "Algorithms",
+  "source_learning_alignment": "CP1 Week 3: Compare procedures",
+  "source_primary_mechanic": "Weather Switch",
+  "source_code_snippet": "if rain:\n    use_umbrella()"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_31_block_scope",
+  "slug": "block_scope",
+  "display_name": "Block Scope",
+  "learning_target": "trace names inside nested braces",
+  "core_brief": "Each pair of braces opens a block; a name declared inside is invisible after the block ends.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 8,
+  "unit": "Scope",
+  "group": "code",
+  "skin": "underwater",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_3",
+    "zones": [
+      "themes.underwater.bg_reef_3",
+      "themes.underwater.bg_reef_1",
+      "themes.underwater.bg_reef_2"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_orange",
+    "enemy": "themes.underwater.enemy_brown",
+    "coin": "themes.underwater.coin_bubble_a",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.rock_a",
+      "bush": "themes.underwater.seaweed_orange",
+      "slime": "themes.underwater.seaweed_green",
+      "bee": "themes.underwater.rock_a"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "mechanic": "vars",
+  "mechanic_label": "Vault",
+  "accent": "#a8e6cf",
+  "variation_id": "cp1_31_block_scope_v03",
+  "index": 3,
+  "challenge_index": 3,
+  "challenge_id": "block_scope_v03",
+  "title": "Fill the variable vault",
+  "label": "Lab 03: Fill the variable vault",
+  "seed": 3061915515,
+  "challenge_bank": "../../../data/cp1/challenges/block_scope.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

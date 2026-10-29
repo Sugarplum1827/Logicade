@@ -1,30 +1,30 @@
 {
   "file_id": "game_1780",
-  "game_title": "Boolean Guards – Ice Market Defense",
+  "game_title": "Program synthesis · variation 10",
   "game_concept": "A tower defense set in Snowy Hold – Ice Market, a market under icicles: the snow ranger must handle blizzard sprites while practicing functions. Core idea – Boolean Guards: Write functions returning True or False that guard checkpoints.",
-  "genre": "tower defense",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Ice Market: a market under icicles",
-  "core_gameplay_loop": "In Ice Market, repeat each round: Write functions returning True or False that guard checkpoints. Each round, blizzard sprites strike the hold gate, so respond before the next strike lands. Then check the guards value and advance.",
-  "primary_mechanic": "Boolean Guards",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Protect the hold gate from blizzard sprites in Ice Market: keep the guards meter above zero by applying the concept correctly until the 80-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 80 seconds while guards > 0.",
-  "lose_condition": "guards drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "player_objective": "Maze 10 (17×11, 30 junctions): collect 3 crystal(s) from the branches and reach beacon (15, 5). Use a C main program to Program synthesis. Print [21]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Boolean Guards",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M10-X1-T02-abf4aa1c",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Boolean Guards' (Week 6 slot 10), mission type 'Survival Siege', and setting 'Ice Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 10,
   "trial": 10,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 80,
+    "time_limit_seconds": 0,
     "target_score": 320,
     "action_budget": 23,
     "streak_target": 10,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how guards changes.",
-    "Step 2: Use the controls to apply the code idea against blizzard sprites in Ice Market.",
-    "Step 3: Win by meeting the goal: Timer reaches 80 seconds while guards > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level10/needs_support/game_week6_level10_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_1780",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the hold gate from blizzard sprites in Ice Market: keep the guards meter above zero by applying the concept correctly until the 80-second timer ends.",
+  "source_win_condition": "Timer reaches 80 seconds while guards > 0.",
+  "source_lose_condition": "guards drops to 0, or lives reach 0, before the 80-second timer ends.",
+  "source_game_title": "Boolean Guards – Ice Market Defense",
+  "source_primary_mechanic": "Boolean Guards",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 80,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

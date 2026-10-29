@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "11_cooking_kitchen_automation",
+  "slug": "cooking_kitchen_automation",
+  "display_name": "Cooking Kitchen Automation",
+  "module_family": "workflow_automation",
+  "learning_target": "loops and ordered steps",
+  "core_brief": "Build a recipe loop that prepares orders in the correct sequence before the timer runs out.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "kitchen",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#7ee2b8",
+  "tint": 12642999,
+  "variation_id": "11_cooking_kitchen_automation_v10",
+  "index": 10,
+  "title": "Rival Challenge",
+  "label": "Variation 10: Rival Challenge",
+  "seed": 353462519,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": true,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 18,
+    "obstacles": 8
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_1",
+    "zones": [
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3"
+    ],
+    "tile": "themes.food.tile_checker",
+    "player": "themes.food.player_chef_alt",
+    "enemy": "themes.food.enemy_fish",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.fish",
+      "bush": "themes.food.can",
+      "slime": "themes.food.ketchup",
+      "bee": "themes.food.fish"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build an asymmetrical encounter against a non-violent rival or environmental opponent. The opponent uses three clearly signaled phases, each testing a different application of the same learning target.",
+    "obstacles": "phase changes, readable telegraphs, and safe response windows; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brief tutorial phase, two faster phases, then a clear result."
+  },
+  "question_bank": "../../data/questions/cooking_kitchen_automation.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation9/",
+    "next": ""
+  }
+}

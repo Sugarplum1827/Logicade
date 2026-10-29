@@ -1,30 +1,30 @@
 {
   "file_id": "game_1380",
-  "game_title": "Loop Picker – Mushroom Market Streak",
+  "game_title": "Branch Assembly 10 · Separate Outputs",
   "game_concept": "A card battler set in Mystic Forest – Mushroom Market, a forest mushroom market: the fairy gardener must handle giant beetles while practicing control flow: for loops. Core idea – Loop Picker: Decide whether each puzzle needs a for loop or a while loop and place it.",
-  "genre": "card battler",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
-  "core_gameplay_loop": "In Mushroom Market, repeat each round: Decide whether each puzzle needs a for loop or a while loop and place it. Each round poses one decision; a wrong answer breaks the streak. Then check the picks_right value and advance.",
-  "primary_mechanic": "Loop Picker",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Chain 12 consecutive correct decisions about picks_right to power up the fairy gardener and open the waterfall gate.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "streak counter reaches 12.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "main and blocks: build a valid C source file that prints 17. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 0 and lower path on row 6. IF item value >= 19, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 11 components (6 upper, 5 lower). Set the gold-socket controller batch to 11.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 6 (applied tier): Loop Picker",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: main and blocks",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M15-X4-T10-7b6077d2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Loop Picker' (Week 5 slot 15), mission type 'Streak Challenge', and setting 'Mushroom Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 6,
   "trial": 10,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 390,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how picks_right changes.",
-    "Step 2: Use the controls to apply the code idea against giant beetles in Mushroom Market.",
-    "Step 3: Win by meeting the goal: streak counter reaches 12."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level6/advanced/game_week5_level6_difficulty(Advance)_10.json",
+    "variation_id": "canvas_game_1380",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 12 consecutive correct decisions about picks_right to power up the fairy gardener and open the waterfall gate.",
+  "source_win_condition": "streak counter reaches 12.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Loop Picker – Mushroom Market Streak",
+  "source_primary_mechanic": "Loop Picker",
+  "hint": "IF item value >= 19, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 6 components via upper_4, upper_6 to output_upper; ELSE: 5 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w5_l6",
+  "source_week": 5,
+  "source_level": 6
 }

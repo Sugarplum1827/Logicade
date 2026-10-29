@@ -1,0 +1,535 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v01",
+    "index": 1,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the values after each declaration and assignment.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int apples;",
+        "    apples = 4;",
+        "    int oranges = 3;",
+        "    printf(\"%d\\n\", apples + oranges);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "apples",
+          "type": "final value"
+        },
+        {
+          "name": "oranges",
+          "type": "final value"
+        },
+        {
+          "name": "total",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "4"
+        },
+        {
+          "id": "v2",
+          "text": "3"
+        },
+        {
+          "id": "v3",
+          "text": "7"
+        },
+        {
+          "id": "v4",
+          "text": "5"
+        },
+        {
+          "id": "v5",
+          "text": "2"
+        },
+        {
+          "id": "v6",
+          "text": "8"
+        }
+      ],
+      "answer": {
+        "apples": "v1",
+        "oranges": "v2",
+        "total": "v3"
+      }
+    },
+    "explanation": "apples becomes 4, oranges is initialized to 3, and total is 7.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v02",
+    "index": 2,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line as a declaration, an assignment, or output.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "declare",
+          "label": "Declaration",
+          "desc": "Introduces a variable"
+        },
+        {
+          "id": "assign",
+          "label": "Assignment",
+          "desc": "Stores a value"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Displays a value"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int apples;",
+          "bin": "declare"
+        },
+        {
+          "id": "i2",
+          "text": "int oranges = 3;",
+          "bin": "declare"
+        },
+        {
+          "id": "i3",
+          "text": "apples = 4;",
+          "bin": "assign"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"%d\\n\", apples);",
+          "bin": "output"
+        },
+        {
+          "id": "i5",
+          "text": "float price = 2.5f;",
+          "bin": "declare"
+        },
+        {
+          "id": "i6",
+          "text": "price = 3.0f;",
+          "bin": "assign"
+        }
+      ]
+    },
+    "explanation": "A declaration includes a type; an assignment changes the stored value.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v03",
+    "index": 3,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    int count",
+        "    count = 5;",
+        "    printf(\"%d\\n\", count);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "The declaration is missing its semicolon, so the next line is misinterpreted.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v04",
+    "index": 4,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each declaration in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int version = 1;",
+        "int main(void) {",
+        "    int apples;",
+        "    int oranges = 3;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Top-level declaration"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int version = 1;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "int apples;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "int oranges = 3;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "version is global; apples and oranges are local to main.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v05",
+    "index": 5,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each declaring variables term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Declaration"
+        },
+        {
+          "id": "l2",
+          "text": "Definition"
+        },
+        {
+          "id": "l3",
+          "text": "Type"
+        },
+        {
+          "id": "l4",
+          "text": "Identifier"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Introduces a type and a name"
+        },
+        {
+          "id": "r2",
+          "text": "Reserves storage for the variable"
+        },
+        {
+          "id": "r3",
+          "text": "Tells C what kind of value is stored"
+        },
+        {
+          "id": "r4",
+          "text": "The variable name chosen by the programmer"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v06",
+    "index": 6,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the declarations.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "{{b0}} apples;",
+        "apples = 4;",
+        "{{b1}} oranges = 3;",
+        "printf(\"%d\\n\", apples + oranges);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "integer type",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "integer type",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "int"
+        },
+        {
+          "id": "b2",
+          "text": "int"
+        },
+        {
+          "id": "b3",
+          "text": "float"
+        },
+        {
+          "id": "b4",
+          "text": "printf"
+        },
+        {
+          "id": "b5",
+          "text": "var"
+        }
+      ]
+    },
+    "explanation": "Both whole-number variables need the int type.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v07",
+    "index": 7,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int apples;",
+        "    apples = 4;",
+        "    int oranges = 3;",
+        "    printf(\"%d\\n\", apples + oranges);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "7",
+      "accept": [
+        "7"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "apples is assigned 4, oranges is declared with 3, and their sum is 7."
+    },
+    "explanation": "The program produces 7.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v08",
+    "index": 8,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int apples;",
+        "    apples = 4;",
+        "    int oranges = 3;",
+        "    printf(\"%d\\n\", apples + oranges);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "apples",
+        "oranges",
+        "total"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "apples": "",
+            "oranges": "",
+            "total": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "apples": "4",
+            "oranges": "",
+            "total": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "apples": "4",
+            "oranges": "3",
+            "total": ""
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "apples": "4",
+            "oranges": "3",
+            "total": "7"
+          }
+        }
+      ],
+      "ask": [
+        "apples",
+        "oranges",
+        "total"
+      ],
+      "answer": {
+        "apples": "4",
+        "oranges": "3",
+        "total": "7"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is apples = 4, oranges = 3, total = 7.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v09",
+    "index": 9,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of declaring variables in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Choose the data type"
+        },
+        {
+          "id": "s2",
+          "text": "Choose a valid name"
+        },
+        {
+          "id": "s3",
+          "text": "Write the declaration"
+        },
+        {
+          "id": "s4",
+          "text": "End it with a semicolon"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Choose the data type → Choose a valid name → Write the declaration → End it with a semicolon",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_declaration_v10",
+    "index": 10,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a declaration for an integer named count.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "count"
+        },
+        {
+          "id": "t3",
+          "text": ";"
+        },
+        {
+          "id": "t4",
+          "text": "="
+        },
+        {
+          "id": "t5",
+          "text": "float"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "A basic declaration is type, name, and a semicolon.",
+    "concept_slug": "variable_declaration",
+    "concept_name": "Declaring Variables"
+  }
+]

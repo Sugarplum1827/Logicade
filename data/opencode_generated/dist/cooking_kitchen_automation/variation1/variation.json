@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "11_cooking_kitchen_automation",
+  "slug": "cooking_kitchen_automation",
+  "display_name": "Cooking Kitchen Automation",
+  "module_family": "workflow_automation",
+  "learning_target": "loops and ordered steps",
+  "core_brief": "Build a recipe loop that prepares orders in the correct sequence before the timer runs out.",
+  "mode": "meter_sim",
+  "mode_label": "System builder",
+  "skin": "kitchen",
+  "theme": "food",
+  "theme_label": "Kitchen",
+  "mechanic": "System builder",
+  "accent": "#7ee2b8",
+  "tint": 12642999,
+  "variation_id": "11_cooking_kitchen_automation_v01",
+  "index": 1,
+  "title": "Forked Routes",
+  "label": "Variation 01: Forked Routes",
+  "seed": 269427329,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "fork"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 16,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "food",
+    "theme_label": "Kitchen",
+    "bg": "themes.food.bg_kitchen_1",
+    "zones": [
+      "themes.food.bg_kitchen_1",
+      "themes.food.bg_kitchen_2",
+      "themes.food.bg_kitchen_3"
+    ],
+    "tile": "themes.food.tile_floor",
+    "player": "themes.food.player_chef",
+    "enemy": "themes.food.enemy_fish",
+    "coin": "themes.food.coin_donut",
+    "goal": "themes.food.goal_cake",
+    "obstacles": {
+      "spike": "themes.food.ketchup",
+      "bush": "themes.food.ketchup",
+      "slime": "themes.food.can",
+      "bee": "themes.food.ketchup"
+    },
+    "follower": "themes.food.follower"
+  },
+  "brief": {
+    "map": "Build a two-branch map that rejoins at the goal. Each branch tests the same learning target through a different decision; include a safe optional detour with a bonus clue.",
+    "obstacles": "choice gates and a clearly marked fork; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "brisk choice-and-feedback rhythm."
+  },
+  "question_bank": "../../data/questions/cooking_kitchen_automation.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "",
+    "next": "../variation2/"
+  }
+}

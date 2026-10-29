@@ -1,0 +1,79 @@
+{
+  "concept_id": "43_pixel_art_restorer",
+  "slug": "pixel_art_restorer",
+  "learning_target": "matrix coordinates and nested loops",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a matrix?",
+      "options": [
+        "A grid of values",
+        "A color",
+        "A single pixel",
+        "A type of brush"
+      ],
+      "answer_index": 0,
+      "explanation": "A matrix stores values arranged in rows and columns."
+    },
+    {
+      "id": "q2",
+      "question": "In a matrix, what does `grid[row][col]` access?",
+      "options": [
+        "A whole row",
+        "A color",
+        "One cell",
+        "The entire grid"
+      ],
+      "answer_index": 2,
+      "explanation": "The row and column indexes identify a single cell."
+    },
+    {
+      "id": "q3",
+      "question": "What does a nested loop do?",
+      "options": [
+        "Runs once",
+        "Loops over rows and columns",
+        "Deletes the grid",
+        "Creates a color"
+      ],
+      "answer_index": 1,
+      "explanation": "An outer loop handles rows and an inner loop handles columns."
+    },
+    {
+      "id": "q4",
+      "question": "If a grid is 3 by 4, how many cells does it have?",
+      "options": [
+        "4",
+        "12",
+        "7",
+        "3"
+      ],
+      "answer_index": 1,
+      "explanation": "Multiply rows by columns: 3 * 4 = 12 cells."
+    },
+    {
+      "id": "q5",
+      "question": "Why use nested loops for images?",
+      "options": [
+        "To avoid coordinates",
+        "To make the image smaller",
+        "To change the language",
+        "To visit every pixel"
+      ],
+      "answer_index": 3,
+      "explanation": "Nested loops visit each row and column, covering every pixel."
+    },
+    {
+      "id": "q6",
+      "question": "What is an index out of range?",
+      "options": [
+        "Accessing a cell that does not exist",
+        "A type of color",
+        "A correct pixel",
+        "A loop bound"
+      ],
+      "answer_index": 0,
+      "explanation": "An index out of range points outside the matrix's valid rows or columns."
+    }
+  ]
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_2503",
-  "game_title": "Program Assembler – Salt Flat Crossing Trial",
+  "game_title": "Examination practice · Branch Assembly 3 · Merge Endpoint",
   "game_concept": "A puzzle set in Sand Dunes – Salt Flat Crossing, a blinding salt flat: the scarab scholar must handle vultures while practicing debugging & combined skills. Core idea – Program Assembler: Assemble a working program from shuffled code blocks in the right order.",
-  "genre": "puzzle",
+  "genre": "factory programming workbench",
   "theme": "Sand Dunes – Salt Flat Crossing: a blinding salt flat",
-  "core_gameplay_loop": "In Salt Flat Crossing, repeat each round: Assemble a working program from shuffled code blocks in the right order. Each round costs one action, so plan the step so none are wasted. Then check the program_ok value and advance.",
-  "primary_mechanic": "Program Assembler",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Combo multiplier",
     "Live variable watch panel"
   ],
-  "player_objective": "Reach the temple door using at most 16 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The temple door reached with actions_used <= 16.",
-  "lose_condition": "actions_used exceeds 16 before the temple door is reached, or lives reach 0.",
+  "player_objective": "Week 5 examination practice: Build and verify a source file: build a valid C source file that prints 16. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (3, 3), with the upper processing path on row 1 and lower path on row 6. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Deliver exactly 13 components (7 upper, 6 lower). Set the gold-socket controller batch to 13.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 4 (applied tier): Program Assembler",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 5: Build and verify a source file",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M13-X3-T11-20498a90",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Program Assembler' (Week 9 slot 13), mission type 'Efficiency Trial', and setting 'Salt Flat Crossing'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 4,
   "trial": 3,
-  "topic": "Debugging & Combined Skills",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 39,
+    "time_limit_seconds": 0,
     "target_score": 220,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how program_ok changes.",
-    "Step 2: Use the controls to apply the code idea against vultures in Salt Flat Crossing.",
-    "Step 3: Win by meeting the goal: The temple door reached with actions_used <= 16."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level4/standard/game_week9_level4_difficulty(Standard)_3.json",
+    "variation_id": "canvas_game_2503",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the temple door using at most 16 actions, so every code step counts.",
+  "source_win_condition": "The temple door reached with actions_used <= 16.",
+  "source_lose_condition": "actions_used exceeds 16 before the temple door is reached, or lives reach 0.",
+  "source_game_title": "Program Assembler – Salt Flat Crossing Trial",
+  "source_primary_mechanic": "Program Assembler",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Assemble components on both paths, then merge them at (8, 3) before the shared output. Branch contracts: A: 7 components via upper_4, upper_6 to output_shared; B: 6 components via lower_4, lower_6 to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 39,
+  "learning_objective_id": "cp1_w5_l10",
+  "source_week": 5,
+  "source_level": 10
 }

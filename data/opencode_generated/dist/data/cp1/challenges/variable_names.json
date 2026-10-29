@@ -1,0 +1,534 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v01",
+    "index": 1,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build a valid declaration for a player score.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "int"
+        },
+        {
+          "id": "t2",
+          "text": "player_score"
+        },
+        {
+          "id": "t3",
+          "text": "="
+        },
+        {
+          "id": "t4",
+          "text": "10"
+        },
+        {
+          "id": "t5",
+          "text": ";"
+        },
+        {
+          "id": "t6",
+          "text": "2fast"
+        },
+        {
+          "id": "t7",
+          "text": "class"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "player_score starts with a letter and uses only letters and an underscore.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v02",
+    "index": 2,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign both names and the computed total.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int player_score = 10;",
+        "    int _lives = 3;",
+        "    printf(\"%d\\n\", player_score + _lives);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "player_score",
+          "type": "final value"
+        },
+        {
+          "name": "_lives",
+          "type": "final value"
+        },
+        {
+          "name": "total",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "10"
+        },
+        {
+          "id": "v2",
+          "text": "3"
+        },
+        {
+          "id": "v3",
+          "text": "13"
+        },
+        {
+          "id": "v4",
+          "text": "11"
+        },
+        {
+          "id": "v5",
+          "text": "9"
+        },
+        {
+          "id": "v6",
+          "text": "4"
+        }
+      ],
+      "answer": {
+        "player_score": "v1",
+        "_lives": "v2",
+        "total": "v3"
+      }
+    },
+    "explanation": "Both names are valid identifiers; the values add to 13.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v03",
+    "index": 3,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each name as valid or invalid in C.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "valid",
+          "label": "Valid identifier",
+          "desc": "Can name a variable"
+        },
+        {
+          "id": "invalid",
+          "label": "Invalid identifier",
+          "desc": "Rejected by the compiler"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "player_score",
+          "bin": "valid"
+        },
+        {
+          "id": "i2",
+          "text": "_lives",
+          "bin": "valid"
+        },
+        {
+          "id": "i3",
+          "text": "score2",
+          "bin": "valid"
+        },
+        {
+          "id": "i4",
+          "text": "2fast",
+          "bin": "invalid"
+        },
+        {
+          "id": "i5",
+          "text": "my score",
+          "bin": "invalid"
+        },
+        {
+          "id": "i6",
+          "text": "class",
+          "bin": "invalid"
+        }
+      ]
+    },
+    "explanation": "Digits may follow the first character, but spaces and keywords are never allowed.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v04",
+    "index": 4,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    int 2fast = 1;",
+        "    printf(\"%d\\n\", 2fast);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "An identifier cannot begin with a digit, so 2fast is invalid.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v05",
+    "index": 5,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int high_score = 0;",
+        "int main(void) {",
+        "    int player_score = 10;",
+        "    int _lives = 3;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Declared outside main"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Declared inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int high_score = 0;",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "int player_score = 10;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "int _lives = 3;",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "high_score is global; player_score and _lives are local to main.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v06",
+    "index": 6,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each variable names term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "player_score"
+        },
+        {
+          "id": "l2",
+          "text": "2fast"
+        },
+        {
+          "id": "l3",
+          "text": "my score"
+        },
+        {
+          "id": "l4",
+          "text": "int"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Valid variable name"
+        },
+        {
+          "id": "r2",
+          "text": "Invalid: starts with a digit"
+        },
+        {
+          "id": "r3",
+          "text": "Invalid: contains a space"
+        },
+        {
+          "id": "r4",
+          "text": "Reserved keyword, not a variable name"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v07",
+    "index": 7,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the invalid variable name.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int {{b0}} = 1;",
+        "printf(\"%d\\n\", {{b1}});"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "valid replacement for 2fast",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "the same name",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "fast2"
+        },
+        {
+          "id": "b2",
+          "text": "fast2"
+        },
+        {
+          "id": "b3",
+          "text": "2fast"
+        },
+        {
+          "id": "b4",
+          "text": "int"
+        },
+        {
+          "id": "b5",
+          "text": "fast-2"
+        }
+      ]
+    },
+    "explanation": "Moving the digit after a letter makes the name legal.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v08",
+    "index": 8,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int player_score = 10;",
+        "    int _lives = 3;",
+        "    printf(\"%d\\n\", player_score + _lives);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "13",
+      "accept": [
+        "13"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "player_score is 10 and _lives is 3, so the sum is 13."
+    },
+    "explanation": "The program produces 13.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v09",
+    "index": 9,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int player_score = 10;",
+        "    int _lives = 3;",
+        "    printf(\"%d\\n\", player_score + _lives);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "player_score",
+        "_lives",
+        "total"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "player_score": "10",
+            "_lives": "",
+            "total": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "player_score": "10",
+            "_lives": "3",
+            "total": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "player_score": "10",
+            "_lives": "3",
+            "total": "13"
+          }
+        }
+      ],
+      "ask": [
+        "player_score",
+        "_lives",
+        "total"
+      ],
+      "answer": {
+        "player_score": "10",
+        "_lives": "3",
+        "total": "13"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is player_score = 10, _lives = 3, total = 13.",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "variable_names_v10",
+    "index": 10,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of variable names in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the name with a letter or underscore"
+        },
+        {
+          "id": "s2",
+          "text": "Use only letters, digits, and underscores"
+        },
+        {
+          "id": "s3",
+          "text": "Avoid spaces, hyphens, and keywords"
+        },
+        {
+          "id": "s4",
+          "text": "Choose a name that describes the value"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Start the name with a letter or underscore → Use only letters, digits, and underscores → Avoid spaces, hyphens, and keywords → Choose a name that describes the value",
+    "concept_slug": "variable_names",
+    "concept_name": "Variable Names"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_47_function_return",
+  "slug": "function_return",
+  "display_name": "Returning Values",
+  "learning_target": "trace which value a function returns",
+  "core_brief": "return immediately ends the function and sends a value back to the caller.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 13,
+  "unit": "Functions",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_3",
+    "zones": [
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2"
+    ],
+    "tile": "themes.tower_defense.tile_grid",
+    "player": "themes.tower_defense.player_rocket",
+    "enemy": "themes.tower_defense.enemy_tank",
+    "coin": "themes.tower_defense.coin_gem",
+    "goal": "themes.tower_defense.goal_tower_green",
+    "obstacles": {
+      "spike": "themes.tower_defense.mine",
+      "bush": "themes.tower_defense.crate",
+      "slime": "themes.tower_defense.crate",
+      "bee": "themes.tower_defense.rock"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "vars",
+  "mechanic_label": "Vault",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_47_function_return_v07",
+  "index": 7,
+  "challenge_index": 7,
+  "challenge_id": "function_return_v07",
+  "title": "Fill the variable vault",
+  "label": "Lab 07: Fill the variable vault",
+  "seed": 2451340623,
+  "challenge_bank": "../../../data/cp1/challenges/function_return.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

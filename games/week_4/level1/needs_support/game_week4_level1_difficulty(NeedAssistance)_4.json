@@ -1,0 +1,122 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0904",
+  "variation_id": "canvas_game_0904",
+  "week": 4,
+  "level": 1,
+  "trial": 4,
+  "difficulty": "Need Assistance",
+  "mode": "pending",
+  "title": "C Archive · C origins",
+  "display_name": "Week 4 Challenge · Theme Pending",
+  "theme": "Shadow Cave – Crystal Grotto: a grotto of glowing crystals",
+  "topic": "Introduction to C: History, Characteristics and Classification",
+  "learning_objectives": [
+    "C origins"
+  ],
+  "lesson": {
+    "summary": "Introduction to C: History, Characteristics and Classification",
+    "points": [
+      "C origins",
+      "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+      "C is general purpose, procedural and imperative; it is normally compiled.",
+      "Portability needs care with implementation-dependent behavior. Middle-level is an informal classroom label, not an ISO language category."
+    ],
+    "example": "C: Ritchie; Bell Labs; early 1970s; general purpose; procedural.",
+    "practice": "History/classification review",
+    "week": 4,
+    "source_week": 4,
+    "source_level": 1,
+    "objective_id": "cp1_w4_l1",
+    "title": "Introduction to C: History, Characteristics and Classification",
+    "stage_title": "C origins",
+    "objectives": [
+      "C origins"
+    ],
+    "sources": [
+      {
+        "title": "Dennis Ritchie: The Development of the C Language",
+        "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      4
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w4_l1",
+  "source_level": 1,
+  "source_week": 4,
+  "primary_mechanic": "Infinite Loop Trap",
+  "objective": "Archive variation 4: classify and verify C history, characteristics and language categories for C origins.",
+  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
+  "controls": "Click or press 1–4 to answer; Escape pauses.",
+  "time_limit_seconds": 42,
+  "starting_lives": 5,
+  "seed": 193927776,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "seed": 193927776,
+    "theme_status": "awaiting_course_decision"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "game_0904_station_1",
+      "prompt": "Archive case 4: When did C develop?",
+      "choices": [
+        "The 1990s",
+        "Before electronic computers",
+        "The early 1970s"
+      ],
+      "answer_index": 2,
+      "explanation": "The early 1970s.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l1"
+    },
+    {
+      "id": "game_0904_station_2",
+      "prompt": "Archive case 4: Which environment shaped C development?",
+      "choices": [
+        "Only web browsers",
+        "Only phone applications",
+        "Unix systems work"
+      ],
+      "answer_index": 2,
+      "explanation": "Unix systems work.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l1"
+    },
+    {
+      "id": "game_0904_station_3",
+      "prompt": "Archive case 4: Which description fits C origins?",
+      "choices": [
+        "An evolution from earlier systems languages",
+        "A browser markup format",
+        "A dialect of Python"
+      ],
+      "answer_index": 0,
+      "explanation": "An evolution from earlier systems languages.",
+      "node_type": null,
+      "objective_id": "cp1_w4_l1"
+    }
+  ],
+  "source_path": "week_4/level1/needs_support/game_week4_level1_difficulty(NeedAssistance)_4.json",
+  "source_topic": "Introduction to C: History, Characteristics and Classification",
+  "source_learning_alignment": "CP1 Week 4: C origins",
+  "source_primary_mechanic": "Infinite Loop Trap",
+  "source_code_snippet": "while n < 5:\n    print(n)  # n never changes"
+}

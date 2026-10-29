@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_10_algorithm_search_sort",
+  "slug": "algorithm_search_sort",
+  "display_name": "Search and Sort Steps",
+  "learning_target": "trace linear search and bubble sort",
+  "core_brief": "Search looks for one value; sort rearranges all values into order.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 3,
+  "unit": "Algorithms",
+  "group": "flow",
+  "skin": "underwater",
+  "theme": "underwater",
+  "theme_label": "Underwater",
+  "assets": {
+    "theme": "underwater",
+    "theme_label": "Underwater",
+    "bg": "themes.underwater.bg_reef_2",
+    "zones": [
+      "themes.underwater.bg_reef_2",
+      "themes.underwater.bg_reef_3",
+      "themes.underwater.bg_reef_1"
+    ],
+    "tile": "themes.underwater.tile_dirt",
+    "player": "themes.underwater.player_blue",
+    "enemy": "themes.underwater.enemy_grey_long",
+    "coin": "themes.underwater.coin_bubble_c",
+    "goal": "themes.underwater.goal_chest_gold",
+    "obstacles": {
+      "spike": "themes.underwater.seaweed_orange",
+      "bush": "themes.underwater.rock_b",
+      "slime": "themes.underwater.rock_b",
+      "bee": "themes.underwater.seaweed_green"
+    },
+    "follower": "themes.underwater.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_10_algorithm_search_sort_v08",
+  "index": 8,
+  "challenge_index": 8,
+  "challenge_id": "algorithm_search_sort_v08",
+  "title": "Find the bug",
+  "label": "Lab 08: Find the bug",
+  "seed": 2954447075,
+  "challenge_bank": "../../../data/cp1/challenges/algorithm_search_sort.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

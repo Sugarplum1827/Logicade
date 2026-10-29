@@ -1,0 +1,604 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v01",
+    "index": 1,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step the summation algorithm and commit the final total.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "READ n",
+        "total = 0",
+        "FOR i = 1 TO n DO",
+        "  total = total + i",
+        "ENDFOR"
+      ],
+      "variables": [
+        "n",
+        "total",
+        "i"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "n": "3",
+            "total": "0",
+            "i": "1"
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "n": "3",
+            "total": "0",
+            "i": "1"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "n": "3",
+            "total": "1",
+            "i": "1"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "n": "3",
+            "total": "3",
+            "i": "2"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "n": "3",
+            "total": "6",
+            "i": "3"
+          }
+        }
+      ],
+      "ask": [
+        "n",
+        "total",
+        "i"
+      ],
+      "answer": {
+        "n": "3",
+        "total": "6",
+        "i": "3"
+      },
+      "hint": ""
+    },
+    "explanation": "The loop adds 1, 2, and 3, leaving total at 6.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v02",
+    "index": 2,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the algorithm definition. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "An algorithm is a finite sequence of steps.",
+        "Each step must be unambiguous.",
+        "It must eventually stop.",
+        "It may loop forever with no exit condition."
+      ],
+      "answer": 3,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "An algorithm must terminate. A loop with no exit condition violates finiteness.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v03",
+    "index": 3,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each algorithm property to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Finite"
+        },
+        {
+          "id": "l2",
+          "text": "Unambiguous"
+        },
+        {
+          "id": "l3",
+          "text": "Input"
+        },
+        {
+          "id": "l4",
+          "text": "Output"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "It eventually stops"
+        },
+        {
+          "id": "r2",
+          "text": "Each step has one clear meaning"
+        },
+        {
+          "id": "r3",
+          "text": "Data the algorithm starts with"
+        },
+        {
+          "id": "r4",
+          "text": "The result the algorithm produces"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "These four properties describe a usable algorithm.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v04",
+    "index": 4,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each property as a real algorithm property or a non-property.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "yes",
+          "label": "Algorithm property",
+          "desc": "Belongs to a correct algorithm"
+        },
+        {
+          "id": "no",
+          "label": "Not a property",
+          "desc": "Contradicts the definition"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Finite: it eventually stops",
+          "bin": "yes"
+        },
+        {
+          "id": "i2",
+          "text": "Unambiguous: each step has one meaning",
+          "bin": "yes"
+        },
+        {
+          "id": "i3",
+          "text": "Has clear input and output",
+          "bin": "yes"
+        },
+        {
+          "id": "i4",
+          "text": "Runs forever with no exit",
+          "bin": "no"
+        },
+        {
+          "id": "i5",
+          "text": "Can change rules halfway through",
+          "bin": "no"
+        },
+        {
+          "id": "i6",
+          "text": "Every step is optional",
+          "bin": "no"
+        }
+      ]
+    },
+    "explanation": "An algorithm must be finite, unambiguous, and produce a result from its input.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v05",
+    "index": 5,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the algorithm definition.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "An algorithm is a {{b0}} sequence of {{b1}}.",
+        "Each step must be {{b2}}.",
+        "It must eventually {{b3}}."
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "length property",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "items in the sequence",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "one clear meaning",
+          "answer": "b3"
+        },
+        {
+          "id": "b3",
+          "label": "finish",
+          "answer": "b4"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "finite"
+        },
+        {
+          "id": "b2",
+          "text": "steps"
+        },
+        {
+          "id": "b3",
+          "text": "unambiguous"
+        },
+        {
+          "id": "b4",
+          "text": "stop"
+        },
+        {
+          "id": "b5",
+          "text": "finite"
+        },
+        {
+          "id": "b6",
+          "text": "steps"
+        },
+        {
+          "id": "b7",
+          "text": "unambiguous"
+        }
+      ]
+    },
+    "explanation": "The definition needs finite, steps, unambiguous, and stop.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v06",
+    "index": 6,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of algorithm definition in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "State the problem clearly"
+        },
+        {
+          "id": "s2",
+          "text": "Identify the input and the expected output"
+        },
+        {
+          "id": "s3",
+          "text": "Write a finite sequence of steps"
+        },
+        {
+          "id": "s4",
+          "text": "Test the steps with sample data"
+        },
+        {
+          "id": "s5",
+          "text": "Refine any step that is ambiguous"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: State the problem clearly → Identify the input and the expected output → Write a finite sequence of steps → Test the steps with sample data → Refine any step that is ambiguous",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v07",
+    "index": 7,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the key definition of an algorithm.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "An"
+        },
+        {
+          "id": "t2",
+          "text": "algorithm"
+        },
+        {
+          "id": "t3",
+          "text": "is"
+        },
+        {
+          "id": "t4",
+          "text": "a"
+        },
+        {
+          "id": "t5",
+          "text": "finite"
+        },
+        {
+          "id": "t6",
+          "text": "sequence"
+        },
+        {
+          "id": "t7",
+          "text": "of"
+        },
+        {
+          "id": "t8",
+          "text": "steps"
+        },
+        {
+          "id": "t9",
+          "text": "infinite"
+        },
+        {
+          "id": "t10",
+          "text": "random"
+        },
+        {
+          "id": "t11",
+          "text": "guess"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        },
+        {
+          "id": "slot8",
+          "label": "token 8"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Finite and ordered are essential: an algorithm must stop and must be unambiguous.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v08",
+    "index": 8,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the algorithm for adding the numbers from 1 to n.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 7
+        },
+        {
+          "id": "read",
+          "label": "Read n",
+          "kind": "io",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "id": "zero",
+          "label": "total = 0",
+          "kind": "process",
+          "x": 50,
+          "y": 33
+        },
+        {
+          "id": "test",
+          "label": "i <= n?",
+          "kind": "decision",
+          "x": 50,
+          "y": 48
+        },
+        {
+          "id": "add",
+          "label": "total = total + i",
+          "kind": "process",
+          "x": 50,
+          "y": 64
+        },
+        {
+          "id": "print",
+          "label": "Print total",
+          "kind": "io",
+          "x": 50,
+          "y": 79
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 92
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "read"
+        ],
+        [
+          "read",
+          "zero"
+        ],
+        [
+          "zero",
+          "test"
+        ],
+        [
+          "test",
+          "add"
+        ],
+        [
+          "add",
+          "test"
+        ],
+        [
+          "test",
+          "print"
+        ],
+        [
+          "print",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The loop keeps adding until i exceeds n, then prints the total and ends.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v09",
+    "index": 9,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to follow a finite sequence to the goal.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 5,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 0,
+        "dir": 1
+      },
+      "goal": {
+        "x": 4,
+        "y": 3
+      },
+      "walls": [],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 12
+    },
+    "explanation": "Finite means the command tape ends; the robot stops when it reaches the goal.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_definition_v10",
+    "index": 10,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What is the output of this algorithm for n = 3?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "READ n",
+        "total = 0",
+        "FOR i = 1 TO n DO",
+        "  total = total + i",
+        "ENDFOR",
+        "PRINT total"
+      ],
+      "answer": "6",
+      "accept": [
+        "6"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The algorithm adds 1 + 2 + 3 = 6 and then stops."
+    },
+    "explanation": "The algorithm adds 1 + 2 + 3 = 6 and then stops.",
+    "concept_slug": "algorithm_definition",
+    "concept_name": "Algorithm Definition"
+  }
+]

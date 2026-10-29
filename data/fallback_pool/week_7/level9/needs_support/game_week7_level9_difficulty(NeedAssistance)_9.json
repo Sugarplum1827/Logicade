@@ -1,30 +1,30 @@
 {
   "file_id": "game_2049",
-  "game_title": "Length Limit – Glyph Corridor Defense",
+  "game_title": "Declare char · variation 9",
   "game_concept": "A action defense set in Eldritch Ruins – Glyph Corridor, a corridor of glyphs: the relic hunter must handle cursed statues while practicing lists. Core idea – Length Limit: Use len() to stop the list from growing past the limit of Glyph Corridor.",
-  "genre": "action defense",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Glyph Corridor: a corridor of glyphs",
-  "core_gameplay_loop": "In Glyph Corridor, repeat each round: Use len() to stop the list from growing past the limit of Glyph Corridor. Each round, cursed statues strike the spirit lantern, so respond before the next strike lands. Then check the capacity value and advance.",
-  "primary_mechanic": "Length Limit",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Hint tokens that reveal one line of code",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Protect the spirit lantern from cursed statues in Glyph Corridor: keep the capacity meter above zero by applying the concept correctly until the 76-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 76 seconds while capacity > 0.",
-  "lose_condition": "capacity drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "player_objective": "Declare char: declare resource as char, apply resource + 74, and print each result with %c. Dataset 9 starts with [0, 1, 2, 3]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 9 (extended tier): Length Limit",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare char",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M09-X1-T13-c2f535e7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Length Limit' (Week 7 slot 9), mission type 'Survival Siege', and setting 'Glyph Corridor'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 9,
   "trial": 9,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 76,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how capacity changes.",
-    "Step 2: Use the controls to apply the code idea against cursed statues in Glyph Corridor.",
-    "Step 3: Win by meeting the goal: Timer reaches 76 seconds while capacity > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level9/needs_support/game_week7_level9_difficulty(NeedAssistance)_9.json",
+    "variation_id": "canvas_game_2049",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the spirit lantern from cursed statues in Glyph Corridor: keep the capacity meter above zero by applying the concept correctly until the 76-second timer ends.",
+  "source_win_condition": "Timer reaches 76 seconds while capacity > 0.",
+  "source_lose_condition": "capacity drops to 0, or lives reach 0, before the 76-second timer ends.",
+  "source_game_title": "Length Limit – Glyph Corridor Defense",
+  "source_primary_mechanic": "Length Limit",
+  "hint": "Declare before use. char resource = readInput(); creates the named game-port value; printf uses %c.",
+  "source_time_limit_seconds": 76,
+  "learning_objective_id": "cp1_w7_l9",
+  "source_week": 7,
+  "source_level": 9
 }

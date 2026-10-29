@@ -1,30 +1,30 @@
 {
   "file_id": "game_2576",
-  "game_title": "Pseudocode Bridge – Dune Crest Rush",
+  "game_title": "Examination practice · Integer division · variation 6",
   "game_concept": "A action puzzle set in Sand Dunes – Dune Crest, a high dune crest: the desert nomad must handle sand wyrms while practicing debugging & combined skills. Core idea – Pseudocode Bridge: Convert plain-language pseudocode into working code steps to cross the gap.",
-  "genre": "action puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Dune Crest: a high dune crest",
-  "core_gameplay_loop": "In Dune Crest, repeat each round: Convert plain-language pseudocode into working code steps to cross the gap. Each round, a new sand maps challenge appears; solve it to bank points before time drains. Then check the bridge value and advance.",
-  "primary_mechanic": "Pseudocode Bridge",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Collect 390 points of sand maps by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 390 within 36 seconds.",
-  "lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "player_objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 4, and print each result with %d. Dataset 6 starts with [-3, 0, 18, 21]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Pseudocode Bridge",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 7: Integer division",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M11-X2-T02-caaa5e8e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Pseudocode Bridge' (Week 9 slot 11), mission type 'Resource Rush', and setting 'Dune Crest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 6,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 390,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how bridge changes.",
-    "Step 2: Use the controls to apply the code idea against sand wyrms in Dune Crest.",
-    "Step 3: Win by meeting the goal: score >= 390 within 36 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level6/advanced/game_week9_level6_difficulty(Advance)_6.json",
+    "variation_id": "canvas_game_2576",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 390 points of sand maps by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 390 within 36 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 390, or lives reach 0.",
+  "source_game_title": "Pseudocode Bridge – Dune Crest Rush",
+  "source_primary_mechanic": "Pseudocode Bridge",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w7_l10",
+  "source_week": 7,
+  "source_level": 10
 }

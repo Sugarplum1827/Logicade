@@ -1,0 +1,540 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v01",
+    "index": 1,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c input and output term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "scanf"
+        },
+        {
+          "id": "l2",
+          "text": "printf"
+        },
+        {
+          "id": "l3",
+          "text": "%d"
+        },
+        {
+          "id": "l4",
+          "text": "&age"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Reads formatted input"
+        },
+        {
+          "id": "r2",
+          "text": "Writes formatted output"
+        },
+        {
+          "id": "r3",
+          "text": "Reads or prints an int"
+        },
+        {
+          "id": "r4",
+          "text": "The address of variable age"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v02",
+    "index": 2,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the input and output program.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int age;",
+        "{{b0}}(\"%d\", {{b1}});",
+        "printf(\"%d\\n\", age + 1);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "input function",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "address of age",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "scanf"
+        },
+        {
+          "id": "b2",
+          "text": "&age"
+        },
+        {
+          "id": "b3",
+          "text": "printf"
+        },
+        {
+          "id": "b4",
+          "text": "age"
+        },
+        {
+          "id": "b5",
+          "text": "&printf"
+        }
+      ]
+    },
+    "explanation": "scanf reads into &age, and printf prints the result.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v03",
+    "index": 3,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age;",
+        "    scanf(\"%d\", &age);",
+        "    printf(\"%d\\n\", age + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "21",
+      "accept": [
+        "21"
+      ],
+      "input": "20",
+      "numeric": true,
+      "hint": "The input 20 is stored in age, then age + 1 is printed."
+    },
+    "explanation": "The program produces 21.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v04",
+    "index": 4,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age;",
+        "    scanf(\"%d\", &age);",
+        "    printf(\"%d\\n\", age + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "age",
+        "next"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "age": "",
+            "next": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "age": "20",
+            "next": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "age": "20",
+            "next": "21"
+          }
+        }
+      ],
+      "ask": [
+        "age",
+        "next"
+      ],
+      "answer": {
+        "age": "20",
+        "next": "21"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is age = 20, next = 21.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v05",
+    "index": 5,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c input and output in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Print a prompt"
+        },
+        {
+          "id": "s2",
+          "text": "Read a value with scanf"
+        },
+        {
+          "id": "s3",
+          "text": "Process the value"
+        },
+        {
+          "id": "s4",
+          "text": "Print the result with printf"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Print a prompt → Read a value with scanf → Process the value → Print the result with printf",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v06",
+    "index": 6,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the scanf call that reads an integer into age.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "scanf"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "\"%d\""
+        },
+        {
+          "id": "t4",
+          "text": ","
+        },
+        {
+          "id": "t5",
+          "text": "&age"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": ";"
+        },
+        {
+          "id": "t8",
+          "text": "printf"
+        },
+        {
+          "id": "t9",
+          "text": "age"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "scanf needs the format string and the address of the variable, written &age.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v07",
+    "index": 7,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the value read and the value printed.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age;",
+        "    scanf(\"%d\", &age);",
+        "    printf(\"%d\\n\", age + 1);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "age",
+          "type": "final value"
+        },
+        {
+          "name": "next",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "20"
+        },
+        {
+          "id": "v2",
+          "text": "21"
+        },
+        {
+          "id": "v3",
+          "text": "19"
+        },
+        {
+          "id": "v4",
+          "text": "22"
+        }
+      ],
+      "answer": {
+        "age": "v1",
+        "next": "v2"
+      }
+    },
+    "explanation": "scanf stores 20 in age, and printf prints 21.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v08",
+    "index": 8,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each step as input, processing, or output.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "input",
+          "label": "Input",
+          "desc": "Brings data into the program"
+        },
+        {
+          "id": "process",
+          "label": "Process",
+          "desc": "Changes the data"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Displays a result"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "scanf(\"%d\", &age);",
+          "bin": "input"
+        },
+        {
+          "id": "i2",
+          "text": "age + 1",
+          "bin": "process"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"Age: \");",
+          "bin": "output"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"%d\", age);",
+          "bin": "output"
+        },
+        {
+          "id": "i5",
+          "text": "scanf(\"%f\", &price);",
+          "bin": "input"
+        },
+        {
+          "id": "i6",
+          "text": "total = age * 2;",
+          "bin": "process"
+        }
+      ]
+    },
+    "explanation": "scanf reads, arithmetic processes, and printf writes.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v09",
+    "index": 9,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    int age;",
+        "    scanf(\"%d\", age);",
+        "    printf(\"%d\\n\", age);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 2,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "scanf needs the address of age, so it must be &age.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_input_output_v10",
+    "index": 10,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in file scope or main.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int age;",
+        "    scanf(\"%d\", &age);",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "file",
+          "label": "File scope",
+          "desc": "Header and function definition"
+        },
+        {
+          "id": "main",
+          "label": "main local",
+          "desc": "Variables and calls inside main"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "#include <stdio.h>",
+          "scope": "file"
+        },
+        {
+          "id": "d2",
+          "text": "int main(void)",
+          "scope": "file"
+        },
+        {
+          "id": "d3",
+          "text": "int age;",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "scanf(\"%d\", &age);",
+          "scope": "main"
+        }
+      ]
+    },
+    "explanation": "The include and main definition are top-level; age and the scanf call are inside main.",
+    "concept_slug": "c_input_output",
+    "concept_name": "C Input and Output"
+  }
+]

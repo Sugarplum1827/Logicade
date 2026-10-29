@@ -1,41 +1,41 @@
 {
   "file_id": "game_2586",
-  "game_title": "Off By One Autopsy – Scorpion Canyon Trial",
+  "game_title": "Examination practice · C Scope Circuit · Compare local and global · variation 6",
   "game_concept": "A programming puzzle set in Sand Dunes – Scorpion Canyon, a canyon of scorpions: the desert nomad must handle mirage spirits while practicing debugging & combined skills. Core idea – Off By One Autopsy: Diagnose off-by-one failures in loops and indexes in a broken script.",
-  "genre": "programming puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Sand Dunes – Scorpion Canyon: a canyon of scorpions",
-  "core_gameplay_loop": "In Scorpion Canyon, repeat each round: Diagnose off-by-one failures in loops and indexes in a broken script. Each round costs one action, so plan the step so none are wasted. Then check the autopsy value and advance.",
-  "primary_mechanic": "Off By One Autopsy",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Combo multiplier",
     "Limited undo button"
   ],
-  "player_objective": "Reach the water well using at most 21 actions, so every code step counts.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "The water well reached with actions_used <= 21.",
-  "lose_condition": "actions_used exceeds 21 before the water well is reached, or lives reach 0.",
+  "player_objective": "Week 8 examination practice: Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, initialize a local from visible global state. Print the scope trace [8, 7], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 7}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 7 (applied tier): Off By One Autopsy",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 8: Compare local and global",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M06-X3-T08-a1517acc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Off By One Autopsy' (Week 9 slot 6), mission type 'Efficiency Trial', and setting 'Scorpion Canyon'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 7,
   "trial": 6,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "for i in range(len(a) + 1):",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 7;\nint main(void)\n{\n  int signal = readInput();\nint local = steps + 1;\nprintf(\"%d\\n\", local);\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 67,
+    "time_limit_seconds": 0,
     "target_score": 240,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how autopsy changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Scorpion Canyon.",
-    "Step 3: Win by meeting the goal: The water well reached with actions_used <= 21."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level7/needs_support/game_week9_level7_difficulty(NeedAssistance)_6.json",
+    "variation_id": "canvas_game_2586",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the water well using at most 21 actions, so every code step counts.",
+  "source_win_condition": "The water well reached with actions_used <= 21.",
+  "source_lose_condition": "actions_used exceeds 21 before the water well is reached, or lives reach 0.",
+  "source_game_title": "Off By One Autopsy – Scorpion Canyon Trial",
+  "source_primary_mechanic": "Off By One Autopsy",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 67,
+  "learning_objective_id": "cp1_w8_l9",
+  "source_week": 8,
+  "source_level": 9,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "08700f36aa4dca8ebf74c8b1879a26ca5eb8b8af3cea29d6574ecbe44b29ad38",
+    "lesson_unchanged": true
+  }
 }

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_12_c_compilation",
+  "slug": "c_compilation",
+  "display_name": "Compiling C",
+  "learning_target": "follow source code through compilation to an executable",
+  "core_brief": "The compiler translates source into an executable and reports syntax errors before the program runs.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 4,
+  "unit": "C Introduction",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_2",
+    "zones": [
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3",
+      "themes.tower_defense.bg_td_1"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_grey",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.crate",
+      "bush": "themes.tower_defense.bush",
+      "slime": "themes.tower_defense.mine",
+      "bee": "themes.tower_defense.mine"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "repair",
+  "mechanic_label": "Repair",
+  "accent": "#7ec8ff",
+  "variation_id": "cp1_12_c_compilation_v07",
+  "index": 7,
+  "challenge_index": 7,
+  "challenge_id": "c_compilation_v07",
+  "title": "Repair the program",
+  "label": "Lab 07: Repair the program",
+  "seed": 4104822396,
+  "challenge_bank": "../../../data/cp1/challenges/c_compilation.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation6/",
+    "next": "../variation8/"
+  }
+}

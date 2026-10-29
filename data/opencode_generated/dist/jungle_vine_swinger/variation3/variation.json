@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "16_jungle_vine_swinger",
+  "slug": "jungle_vine_swinger",
+  "display_name": "Jungle Vine Swinger",
+  "module_family": "platformer_functions",
+  "learning_target": "functions and reusable actions",
+  "core_brief": "Use functions to trigger vine swings and carry the explorer across gaps.",
+  "mode": "runner",
+  "mode_label": "Route runner",
+  "skin": "jungle",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "mechanic": "Route runner",
+  "accent": "#b69cff",
+  "tint": 15382468,
+  "variation_id": "16_jungle_vine_swinger_v03",
+  "index": 3,
+  "title": "Vertical Ascent",
+  "label": "Variation 03: Vertical Ascent",
+  "seed": 3741269681,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "vertical"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 6
+  },
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_3",
+    "zones": [
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2"
+    ],
+    "tile": "themes.farm.tile_soil",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_bucket",
+    "coin": "themes.farm.coin_tomato",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.bush",
+      "bush": "themes.farm.wheat",
+      "slime": "themes.farm.fence",
+      "bee": "themes.farm.sunflower"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "brief": {
+    "map": "Build a vertically layered level with at least three distinct heights or floors. A correct response opens the next climb segment; provide safe recovery platforms.",
+    "obstacles": "gaps, lifts or ladders, and one moving vertical hazard; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short climb bursts separated by brief planning pauses."
+  },
+  "question_bank": "../../data/questions/jungle_vine_swinger.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

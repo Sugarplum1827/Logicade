@@ -1,30 +1,30 @@
 {
   "file_id": "game_2474",
-  "game_title": "Validation Fortress – Bone Valley Streak",
+  "game_title": "C Archive · History/classification review",
   "game_concept": "A rhythm puzzle set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so mirage spirits can't sneak through.",
-  "genre": "rhythm puzzle",
+  "genre": "CP1 challenge; Week 4 theme pending",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
-  "core_gameplay_loop": "In Bone Valley, repeat each round: Write input checks that reject bad data so mirage spirits can't sneak through. Each round poses one decision; a wrong answer breaks the streak. Then check the fortress value and advance.",
-  "primary_mechanic": "Validation Fortress",
+  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Chain 8 consecutive correct decisions about fortress to power up the sand ranger and open the camel pen.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 8.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Archive variation 4: classify and verify C history, characteristics and language categories for History/classification review.",
+  "controls": "Read each archive record and choose the supported C fact.",
+  "win_condition": "All researched archive facts are correctly identified.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 3 (intro tier): Validation Fortress",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 4: History/classification review",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M14-X4-T16-3280968d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Validation Fortress' (Week 9 slot 14), mission type 'Streak Challenge', and setting 'Bone Valley'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 3,
   "trial": 4,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Introduction to C: History, Characteristics and Classification",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fortress changes.",
-    "Step 2: Use the controls to apply the code idea against mirage spirits in Bone Valley.",
-    "Step 3: Win by meeting the goal: streak counter reaches 8."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level3/standard/game_week9_level3_difficulty(Standard)_4.json",
+    "variation_id": "canvas_game_2474",
+    "mode": "pending",
+    "asset_set": "pending",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 8 consecutive correct decisions about fortress to power up the sand ranger and open the camel pen.",
+  "source_win_condition": "streak counter reaches 8.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Validation Fortress – Bone Valley Streak",
+  "source_primary_mechanic": "Validation Fortress",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w4_l10",
+  "source_week": 4,
+  "source_level": 10
 }

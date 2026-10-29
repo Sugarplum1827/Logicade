@@ -1,0 +1,79 @@
+{
+  "concept_id": "24_volcano_evacuation",
+  "slug": "volcano_evacuation",
+  "learning_target": "loops and repeated movement",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does a loop help do during an evacuation?",
+      "options": [
+        "Stop the evacuation",
+        "Repeat safe movement for each group",
+        "Change the map",
+        "Move only one person"
+      ],
+      "answer_index": 1,
+      "explanation": "A loop applies the same safe steps to every person or group."
+    },
+    {
+      "id": "q2",
+      "question": "How many times does `for person in group:` run?",
+      "options": [
+        "Once total",
+        "Never",
+        "Twice total",
+        "Once per person"
+      ],
+      "answer_index": 3,
+      "explanation": "A for loop over a group runs once for each member of the group."
+    },
+    {
+      "id": "q3",
+      "question": "What should a loop check each iteration?",
+      "options": [
+        "The file name",
+        "The font size",
+        "Whether the person is safe",
+        "The color of the lava"
+      ],
+      "answer_index": 2,
+      "explanation": "Checking safety each time ensures no one is left behind."
+    },
+    {
+      "id": "q4",
+      "question": "What is an infinite loop?",
+      "options": [
+        "A variable",
+        "A loop that runs once",
+        "A loop with no body",
+        "A loop that never ends"
+      ],
+      "answer_index": 3,
+      "explanation": "An infinite loop never reaches a stopping condition."
+    },
+    {
+      "id": "q5",
+      "question": "Why use a loop for groups?",
+      "options": [
+        "To increase the lava",
+        "To make the code longer",
+        "To avoid writing the same step repeatedly",
+        "To skip safety"
+      ],
+      "answer_index": 2,
+      "explanation": "A loop removes duplication and applies the same steps consistently."
+    },
+    {
+      "id": "q6",
+      "question": "What is the safest order?",
+      "options": [
+        "Alert, move, check",
+        "Check, stop, move",
+        "Move, alert, ignore",
+        "Ignore, move, alert"
+      ],
+      "answer_index": 0,
+      "explanation": "Alerting first, then moving, then checking keeps the group informed and safe."
+    }
+  ]
+}

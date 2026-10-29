@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_38_switch_case",
+  "slug": "switch_case",
+  "display_name": "Switch Statements",
+  "learning_target": "trace switch cases and break statements",
+  "core_brief": "A switch selects one case label; break stops execution from falling into the next case.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 10,
+  "unit": "Conditionals",
+  "group": "code",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_1",
+    "zones": [
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_green",
+    "enemy": "themes.pirate.enemy_shark",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_flag",
+    "obstacles": {
+      "spike": "themes.pirate.nest",
+      "bush": "themes.pirate.cannon",
+      "slime": "themes.pirate.cannon",
+      "bee": "themes.pirate.nest"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "mechanic": "bug",
+  "mechanic_label": "Bug hunt",
+  "accent": "#ffcf5c",
+  "variation_id": "cp1_38_switch_case_v08",
+  "index": 8,
+  "challenge_index": 8,
+  "challenge_id": "switch_case_v08",
+  "title": "Find the bug",
+  "label": "Lab 08: Find the bug",
+  "seed": 3792672847,
+  "challenge_bank": "../../../data/cp1/challenges/switch_case.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

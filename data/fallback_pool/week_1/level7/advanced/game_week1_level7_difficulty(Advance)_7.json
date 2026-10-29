@@ -2,9 +2,9 @@
   "file_id": "game_0207",
   "game_title": "Formula Fuel – Mill Stream Rush",
   "game_concept": "A speed quiz set in The Kingdom – Mill Stream, a stream-side windmill: the baker's apprentice must handle thieves while practicing variables & assignment. Core idea – Formula Fuel: Compute values like total = price * qty to fuel the baker's apprentice's trip to the royal vault.",
-  "genre": "speed quiz",
+  "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Mill Stream: a stream-side windmill",
-  "core_gameplay_loop": "In Mill Stream, repeat each round: Compute values like total = price * qty to fuel the baker's apprentice's trip to the royal vault. Each round, a new scrolls challenge appears; solve it to bank points before time drains. Then check the total value and advance.",
+  "core_gameplay_loop": "Read the requested procedure, drag flowchart shapes into the chart, then run checks against example inputs and expected outputs.",
   "primary_mechanic": "Formula Fuel",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
@@ -12,19 +12,19 @@
     "Mini-tutorial pop-ups"
   ],
   "player_objective": "Collect 440 points of scrolls by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
+  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
   "win_condition": "score >= 440 within 38 seconds.",
   "lose_condition": "Timer hits 0 with score < 440, or lives reach 0.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 1 – Variables & Assignment | Level 7 (applied tier): Formula Fuel",
-  "assets_style": "storybook pixel-art kingdom: green meadows, red-roofed towers, royal blue and gold trim; flat Kenney-style sprites; bright medieval lute and fanfare with market chatter",
+  "learning_alignment": "CP1 Week 1: Controls and mission practice",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W1-M12-X2-T11-dd03990e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Formula Fuel' (Week 1 slot 12), mission type 'Resource Rush', and setting 'Mill Stream'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 1,
   "level": 7,
   "trial": 7,
-  "topic": "Variables & Assignment",
+  "topic": "Orientation",
   "region": {
     "id": "w1_kingdom",
     "name": "The Kingdom",
@@ -48,5 +48,17 @@
     "Step 1: Look at the code panel. It shows how total changes.",
     "Step 2: Use the controls to apply the code idea against thieves in Mill Stream.",
     "Step 3: Win by meeting the goal: score >= 440 within 38 seconds."
-  ]
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_1/level7/advanced/game_week1_level7_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_0207",
+    "mode": "tetris",
+    "asset_set": "tetris",
+    "playable": false,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "learning_objective_id": "cp1_w1_l2",
+  "source_week": 1,
+  "source_level": 2
 }

@@ -1,0 +1,549 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v01",
+    "index": 1,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 60;",
+        "    if (score >= 50) {",
+        "        printf(\"Pass\\n\");",
+        "    } else {",
+        "        printf(\"Fail\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "Pass",
+      "accept": [
+        "Pass"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "60 is at least 50, so only the true branch runs."
+    },
+    "explanation": "The program produces Pass.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v02",
+    "index": 2,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 60;",
+        "    if (score >= 50) {",
+        "        printf(\"Pass\\n\");",
+        "    } else {",
+        "        printf(\"Fail\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "score",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "score": "60",
+            "result": ""
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "score": "60",
+            "result": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "score": "60",
+            "result": "Pass"
+          }
+        }
+      ],
+      "ask": [
+        "score",
+        "result"
+      ],
+      "answer": {
+        "score": "60",
+        "result": "Pass"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is score = 60, result = Pass.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v03",
+    "index": 3,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of c selection in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Evaluate the condition"
+        },
+        {
+          "id": "s2",
+          "text": "Run the true branch when it passes"
+        },
+        {
+          "id": "s3",
+          "text": "Run the else branch when it fails"
+        },
+        {
+          "id": "s4",
+          "text": "Continue after the selection"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Evaluate the condition → Run the true branch when it passes → Run the else branch when it fails → Continue after the selection",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v04",
+    "index": 4,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the condition that checks for a passing score of at least 50.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "if"
+        },
+        {
+          "id": "t2",
+          "text": "("
+        },
+        {
+          "id": "t3",
+          "text": "score"
+        },
+        {
+          "id": "t4",
+          "text": ">="
+        },
+        {
+          "id": "t5",
+          "text": "50"
+        },
+        {
+          "id": "t6",
+          "text": ")"
+        },
+        {
+          "id": "t7",
+          "text": "else"
+        },
+        {
+          "id": "t8",
+          "text": "="
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The condition belongs in parentheses, and >= includes exactly 50.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v05",
+    "index": 5,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the score and the branch result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int score = 60;",
+        "    if (score >= 50) {",
+        "        printf(\"Pass\\n\");",
+        "    } else {",
+        "        printf(\"Fail\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "score",
+          "type": "final value"
+        },
+        {
+          "name": "result",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "60"
+        },
+        {
+          "id": "v2",
+          "text": "Pass"
+        },
+        {
+          "id": "v3",
+          "text": "61"
+        },
+        {
+          "id": "v4",
+          "text": "59"
+        },
+        {
+          "id": "v5",
+          "text": "0"
+        }
+      ],
+      "answer": {
+        "score": "v1",
+        "result": "v2"
+      }
+    },
+    "explanation": "score is 60, the condition is true, and result becomes Pass.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v06",
+    "index": 6,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each line into condition, true branch, or false branch.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "condition",
+          "label": "Condition",
+          "desc": "The test"
+        },
+        {
+          "id": "true",
+          "label": "True branch",
+          "desc": "Runs when the test passes"
+        },
+        {
+          "id": "false",
+          "label": "False branch",
+          "desc": "Runs when the test fails"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "score >= 50",
+          "bin": "condition"
+        },
+        {
+          "id": "i2",
+          "text": "printf(\"Pass\\n\");",
+          "bin": "true"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"Fail\\n\");",
+          "bin": "false"
+        },
+        {
+          "id": "i4",
+          "text": "score < 50",
+          "bin": "condition"
+        },
+        {
+          "id": "i5",
+          "text": "printf(\"Retry\\n\");",
+          "bin": "false"
+        },
+        {
+          "id": "i6",
+          "text": "printf(\"Great!\\n\");",
+          "bin": "true"
+        }
+      ]
+    },
+    "explanation": "The condition chooses between the true and false blocks.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v07",
+    "index": 7,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int score = 60;",
+        "if (score = 50) {",
+        "    printf(\"Pass\\n\");",
+        "} else {",
+        "    printf(\"Fail\\n\");",
+        "}"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "A single = assigns 50 to score; a comparison needs == or >=.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v08",
+    "index": 8,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each declaration in main or inside the if block.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int score = 60;",
+        "    if (score >= 50) {",
+        "        int bonus = 5;",
+        "        printf(\"%d\\n\", bonus);",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Visible throughout main"
+        },
+        {
+          "id": "if",
+          "label": "if block",
+          "desc": "Visible only inside the braces"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int score = 60;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "if (score >= 50)",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int bonus = 5;",
+          "scope": "if"
+        },
+        {
+          "id": "d4",
+          "text": "printf(\"%d\\n\", bonus);",
+          "scope": "if"
+        }
+      ]
+    },
+    "explanation": "score is local to main; bonus exists only inside the if block.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v09",
+    "index": 9,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each c selection term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "if"
+        },
+        {
+          "id": "l2",
+          "text": "else"
+        },
+        {
+          "id": "l3",
+          "text": "Condition"
+        },
+        {
+          "id": "l4",
+          "text": "Braces"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Starts a conditional test"
+        },
+        {
+          "id": "r2",
+          "text": "Runs when the if test is false"
+        },
+        {
+          "id": "r3",
+          "text": "An expression that is true or false"
+        },
+        {
+          "id": "r4",
+          "text": "Group the statements of a branch"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "c_selection_v10",
+    "index": 10,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the pass/fail selection.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int score = 60;",
+        "{{b0}} (score >= 50) {",
+        "    printf(\"Pass\\n\");",
+        "} {{b1}} {",
+        "    printf(\"Fail\\n\");",
+        "}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "selection keyword",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "alternative keyword",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "if"
+        },
+        {
+          "id": "b2",
+          "text": "else"
+        },
+        {
+          "id": "b3",
+          "text": "while"
+        },
+        {
+          "id": "b4",
+          "text": "elif"
+        },
+        {
+          "id": "b5",
+          "text": "then"
+        }
+      ]
+    },
+    "explanation": "if starts the test and else introduces the false branch.",
+    "concept_slug": "c_selection",
+    "concept_name": "C Selection"
+  }
+]

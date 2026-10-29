@@ -1,0 +1,79 @@
+{
+  "concept_id": "08_underwater_submarine",
+  "slug": "underwater_submarine",
+  "learning_target": "variables, comparison, and coordinate reasoning",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does `depth = depth + 10` do?",
+      "options": [
+        "Increases depth by 10",
+        "Decreases depth by 10",
+        "Sets depth to 10",
+        "Deletes depth"
+      ],
+      "answer_index": 0,
+      "explanation": "The right side reads the old depth, adds 10, and stores the result back."
+    },
+    {
+      "id": "q2",
+      "question": "Which comparison checks whether depth is below 50?",
+      "options": [
+        "depth != 50",
+        "depth > 50",
+        "depth = 50",
+        "depth < 50"
+      ],
+      "answer_index": 3,
+      "explanation": "The < operator is true when the left value is less than the right value."
+    },
+    {
+      "id": "q3",
+      "question": "If `x = 4` and `y = 7`, which point is `(x, y)`?",
+      "options": [
+        "(7, 7)",
+        "(7, 4)",
+        "(4, 7)",
+        "(4, 4)"
+      ],
+      "answer_index": 2,
+      "explanation": "Coordinates are written in x, y order, so the point is (4, 7)."
+    },
+    {
+      "id": "q4",
+      "question": "What does a sonar reading of 0 usually mean?",
+      "options": [
+        "Surface reached",
+        "No obstacle detected",
+        "Maximum depth",
+        "Low battery"
+      ],
+      "answer_index": 1,
+      "explanation": "A zero distance reading usually means nothing is within range."
+    },
+    {
+      "id": "q5",
+      "question": "What is the result of `12 >= 12`?",
+      "options": [
+        "0",
+        "False",
+        "12",
+        "True"
+      ],
+      "answer_index": 3,
+      "explanation": "The >= operator is true when the values are equal or the left is greater."
+    },
+    {
+      "id": "q6",
+      "question": "Which variable name is clearest for a depth in metres?",
+      "options": [
+        "d",
+        "value",
+        "depth_m",
+        "x1"
+      ],
+      "answer_index": 2,
+      "explanation": "A descriptive name such as depth_m makes the unit and meaning clear."
+    }
+  ]
+}

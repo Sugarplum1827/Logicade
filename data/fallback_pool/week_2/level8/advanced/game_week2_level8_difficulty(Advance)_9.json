@@ -1,30 +1,30 @@
 {
   "file_id": "game_0539",
-  "game_title": "Unit Trader – Cinder Cone Camp Race",
+  "game_title": "Flowchart Lab · Trace a loop",
   "game_concept": "A adventure race set in Mt. Pyre – Cinder Cone Camp, a camp on a cinder slope: the fire warden must handle ash wraiths while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of ore chunks is fair.",
-  "genre": "adventure race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Cinder Cone Camp: a camp on a cinder slope",
-  "core_gameplay_loop": "In Cinder Cone Camp, repeat each round: Convert units using expressions so each trade of ore chunks is fair. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the fair_trades value and advance.",
-  "primary_mechanic": "Unit Trader",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Ghost replay of best run",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Beat a rival AI to the cooling vent by solving code steps involving fair_trades that move the fire warden forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
-  "lose_condition": "The rival reaches the cooling vent first, or lives reach 0.",
+  "player_objective": "Print every even number from 28 through 54. Trace the update by 2 and the final failed condition. Test dataset 9: {}; {}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 8 (extended tier): Unit Trader",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Trace a loop",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M14-X5-T07-1295035e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Rival Race', and setting 'Cinder Cone Camp'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 8,
   "trial": 9,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fair_trades changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Cinder Cone Camp.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.15)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level8/advanced/game_week2_level8_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_0539",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the cooling vent by solving code steps involving fair_trades that move the fire warden forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.15).",
+  "source_lose_condition": "The rival reaches the cooling vent first, or lives reach 0.",
+  "source_game_title": "Unit Trader – Cinder Cone Camp Race",
+  "source_primary_mechanic": "Unit Trader",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w2_l8",
+  "source_week": 2,
+  "source_level": 8
 }

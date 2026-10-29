@@ -1,30 +1,30 @@
 {
   "file_id": "game_2618",
-  "game_title": "Refactor Rescue – Cactus Flats Defense",
+  "game_title": "Flowchart Lab · Sum from 1 to n",
   "game_concept": "A survival strategy set in Sand Dunes – Cactus Flats, flats of tall cacti: the sand ranger must handle dust devils while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Cactus Flats: flats of tall cacti",
-  "core_gameplay_loop": "In Cactus Flats, repeat each round: Clean up messy duplicated code into tidy functions without changing its behavior. Each round, dust devils strike the bazaar gate, so respond before the next strike lands. Then check the clean_score value and advance.",
-  "primary_mechanic": "Refactor Rescue",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Protect the bazaar gate from dust devils in Cactus Flats: keep the clean_score meter above zero by applying the concept correctly until the 71-second timer ends.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Timer reaches 71 seconds while clean_score > 0.",
-  "lose_condition": "clean_score drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 8: {'n': 0}; {'n': 13}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 8 (extended tier): Refactor Rescue",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 2: Flowchart synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M08-X1-T04-809d9de4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Refactor Rescue' (Week 9 slot 8), mission type 'Survival Siege', and setting 'Cactus Flats'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 8,
   "trial": 8,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Flowcharting",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 71,
+    "time_limit_seconds": 0,
     "target_score": 270,
     "action_budget": 22,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how clean_score changes.",
-    "Step 2: Use the controls to apply the code idea against dust devils in Cactus Flats.",
-    "Step 3: Win by meeting the goal: Timer reaches 71 seconds while clean_score > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level8/needs_support/game_week9_level8_difficulty(NeedAssistance)_8.json",
+    "variation_id": "canvas_game_2618",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the bazaar gate from dust devils in Cactus Flats: keep the clean_score meter above zero by applying the concept correctly until the 71-second timer ends.",
+  "source_win_condition": "Timer reaches 71 seconds while clean_score > 0.",
+  "source_lose_condition": "clean_score drops to 0, or lives reach 0, before the 71-second timer ends.",
+  "source_game_title": "Refactor Rescue – Cactus Flats Defense",
+  "source_primary_mechanic": "Refactor Rescue",
+  "hint": "Coordinates begin at the top left. Walls block movement. Use int declarations, observe(value), movement calls, and { } for local scope.",
+  "source_time_limit_seconds": 71,
+  "learning_objective_id": "cp1_w2_l10",
+  "source_week": 2,
+  "source_level": 10
 }

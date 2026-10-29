@@ -1,30 +1,30 @@
 {
   "file_id": "game_0395",
-  "game_title": "Comparison Duel – Eruption Watch Streak",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A rhythm puzzle set in Mt. Pyre – Eruption Watch, the volcano watchtower: the forge smith must handle ash wraiths while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the forge smith's power beats the shield shown by ash wraiths.",
-  "genre": "rhythm puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Eruption Watch: the volcano watchtower",
-  "core_gameplay_loop": "In Eruption Watch, repeat each round: Choose ==, !=, < , > or >= so the forge smith's power beats the shield shown by ash wraiths. Each round poses one decision; a wrong answer breaks the streak. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Step-by-step code highlighting",
     "Live variable watch panel"
   ],
-  "player_objective": "Chain 7 consecutive correct decisions about power to power up the forge smith and open the lava bridge.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 7.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Read n. Display Above when n > 0; otherwise display At or below. Test dataset 5: {'n': -2}; {'n': 3}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X4-T15-ac3d135e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Streak Challenge', and setting 'Eruption Watch'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against ash wraiths in Eruption Watch.",
-    "Step 3: Win by meeting the goal: streak counter reaches 7."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/needs_support/game_week2_level4_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_0395",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 7 consecutive correct decisions about power to power up the forge smith and open the lava bridge.",
+  "source_win_condition": "streak counter reaches 7.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Comparison Duel – Eruption Watch Streak",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

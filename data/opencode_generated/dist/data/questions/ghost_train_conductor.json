@@ -1,0 +1,79 @@
+{
+  "concept_id": "40_ghost_train_conductor",
+  "slug": "ghost_train_conductor",
+  "learning_target": "flowchart paths and branching",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does a branch do in a train flowchart?",
+      "options": [
+        "Stops all trains",
+        "Chooses a track based on a condition",
+        "Paints the train",
+        "Creates a station"
+      ],
+      "answer_index": 1,
+      "explanation": "A branch selects one track when its condition is met."
+    },
+    {
+      "id": "q2",
+      "question": "What should a conductor check before switching tracks?",
+      "options": [
+        "The color of the train",
+        "The number of passengers",
+        "Whether the track is clear",
+        "The station name only"
+      ],
+      "answer_index": 2,
+      "explanation": "Checking that the track is clear prevents collisions."
+    },
+    {
+      "id": "q3",
+      "question": "What is a loop in a rail plan?",
+      "options": [
+        "A route that returns to a previous point",
+        "A one-way trip",
+        "A station",
+        "A broken switch"
+      ],
+      "answer_index": 0,
+      "explanation": "A loop brings the route back to a point it already visited."
+    },
+    {
+      "id": "q4",
+      "question": "Why label each branch?",
+      "options": [
+        "To slow the train",
+        "To avoid decisions",
+        "To hide the path",
+        "To make the route easy to follow"
+      ],
+      "answer_index": 3,
+      "explanation": "Labels make it clear which condition leads to which track."
+    },
+    {
+      "id": "q5",
+      "question": "What is a safe default if no branch matches?",
+      "options": [
+        "Speed up",
+        "Take a random track",
+        "Ignore the signal",
+        "Stop at a safe siding"
+      ],
+      "answer_index": 3,
+      "explanation": "Stopping at a siding avoids an uncontrolled or unsafe route."
+    },
+    {
+      "id": "q6",
+      "question": "What does a junction represent?",
+      "options": [
+        "A passenger",
+        "The end of the line",
+        "A point where paths split",
+        "A type of engine"
+      ],
+      "answer_index": 2,
+      "explanation": "A junction is where one route can continue along different tracks."
+    }
+  ]
+}

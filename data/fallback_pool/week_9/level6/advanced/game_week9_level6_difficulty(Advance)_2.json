@@ -1,30 +1,30 @@
 {
   "file_id": "game_2572",
-  "game_title": "Integration Heist – Sundial Plaza Race",
+  "game_title": "Examination practice · Integer division · variation 2",
   "game_concept": "A racing platformer set in Sand Dunes – Sundial Plaza, a giant sundial plaza: the desert nomad must handle sandstorms while practicing debugging & combined skills. Core idea – Integration Heist: Combine loops, conditionals, and lists to complete a multi-step script that raids Sundial Plaza.",
-  "genre": "racing platformer",
+  "genre": "terminal programming workbench",
   "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
-  "core_gameplay_loop": "In Sundial Plaza, repeat each round: Combine loops, conditionals, and lists to complete a multi-step script that raids Sundial Plaza. Each round the rival advances, and solving the step moves the desert nomad ahead. Then check the heist value and advance.",
-  "primary_mechanic": "Integration Heist",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Reduced-motion and color-blind-safe UI",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Beat a rival AI to the bazaar gate by solving code steps involving heist that move the desert nomad forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
-  "lose_condition": "The rival reaches the bazaar gate first, or lives reach 0.",
+  "player_objective": "Week 7 examination practice: Integer division: declare resource as int, apply resource / 4, and print each result with %d. Dataset 2 starts with [-3, 0, 14, 17]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 9 – Debugging & Combined Skills | Level 6 (applied tier): Integration Heist",
-  "assets_style": "sun-baked pixel-art desert: golden dunes, tall cacti, a bright blue oasis, warm orange shadows; flat Kenney-style sprites; desert oud, hand drums and sandy wind",
+  "learning_alignment": "CP1 Week 7: Integer division",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M07-X5-T14-c7bfe9d3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Integration Heist' (Week 9 slot 7), mission type 'Rival Race', and setting 'Sundial Plaza'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 6,
   "trial": 2,
-  "topic": "Debugging & Combined Skills",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 36,
+    "time_limit_seconds": 0,
     "target_score": 390,
     "action_budget": 13,
     "streak_target": 12,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how heist changes.",
-    "Step 2: Use the controls to apply the code idea against sandstorms in Sundial Plaza.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 1.05)."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_9/level6/advanced/game_week9_level6_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_2572",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the bazaar gate by solving code steps involving heist that move the desert nomad forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 1.05).",
+  "source_lose_condition": "The rival reaches the bazaar gate first, or lives reach 0.",
+  "source_game_title": "Integration Heist – Sundial Plaza Race",
+  "source_primary_mechanic": "Integration Heist",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 36,
+  "learning_objective_id": "cp1_w7_l10",
+  "source_week": 7,
+  "source_level": 10
 }

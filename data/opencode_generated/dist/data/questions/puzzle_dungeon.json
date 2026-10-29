@@ -1,0 +1,79 @@
+{
+  "concept_id": "06_puzzle_dungeon",
+  "slug": "puzzle_dungeon",
+  "learning_target": "code tracing and basic syntax",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the value of x after `x = 3` then `x = x + 2`?",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "6"
+      ],
+      "answer_index": 2,
+      "explanation": "The second line reads the old value 3, adds 2, and stores 5 back into x."
+    },
+    {
+      "id": "q2",
+      "question": "What does `print(\"a\" + \"b\")` output?",
+      "options": [
+        "ab",
+        "a+b",
+        "a b",
+        "ba"
+      ],
+      "answer_index": 0,
+      "explanation": "Adding two strings joins them end to end, producing ab."
+    },
+    {
+      "id": "q3",
+      "question": "What is the result of `10 // 3`?",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "3.33"
+      ],
+      "answer_index": 1,
+      "explanation": "The // operator performs floor division, so 10 // 3 is 3."
+    },
+    {
+      "id": "q4",
+      "question": "What does `len([1, 2, 3])` return?",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "1"
+      ],
+      "answer_index": 0,
+      "explanation": "len returns the number of items in the list, which is three."
+    },
+    {
+      "id": "q5",
+      "question": "What is the last value printed by `for i in range(2): print(i)`?",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer_index": 1,
+      "explanation": "range(2) yields 0 then 1, so the last printed value is 1."
+    },
+    {
+      "id": "q6",
+      "question": "Which line has a syntax error?",
+      "options": [
+        "x = 1",
+        "print('open')",
+        "if x == 1:",
+        "print('open'"
+      ],
+      "answer_index": 3,
+      "explanation": "The first line is missing the closing parenthesis."
+    }
+  ]
+}

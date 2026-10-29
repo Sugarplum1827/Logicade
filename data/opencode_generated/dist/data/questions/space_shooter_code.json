@@ -1,0 +1,79 @@
+{
+  "concept_id": "02_space_shooter_code",
+  "slug": "space_shooter_code",
+  "learning_target": "syntax recognition",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which line is valid Python 3?",
+      "options": [
+        "print 'ready'",
+        "print('ready')",
+        "Print('ready')",
+        "print('ready'"
+      ],
+      "answer_index": 1,
+      "explanation": "Python 3 function calls use parentheses, matching quotes, and lowercase function names."
+    },
+    {
+      "id": "q2",
+      "question": "Which if statement is written correctly?",
+      "options": [
+        "if score > 10:",
+        "if score > 10",
+        "if (score > 10)",
+        "if score > 10 then"
+      ],
+      "answer_index": 0,
+      "explanation": "An if statement needs a condition followed by a colon before the indented block."
+    },
+    {
+      "id": "q3",
+      "question": "Which list is written correctly?",
+      "options": [
+        "{1, 2, 3)",
+        "[1 2 3]",
+        "[1, 2, 3]",
+        "(1, 2, 3]"
+      ],
+      "answer_index": 2,
+      "explanation": "A Python list uses square brackets with commas between values."
+    },
+    {
+      "id": "q4",
+      "question": "Which string uses matching quotes?",
+      "options": [
+        "\"laser'",
+        "'laser\"",
+        "laser",
+        "\"laser\""
+      ],
+      "answer_index": 3,
+      "explanation": "A string must start and end with the same quote character."
+    },
+    {
+      "id": "q5",
+      "question": "Which function call is valid?",
+      "options": [
+        "fire(3)",
+        "fire{3}",
+        "fire[3]",
+        "fire 3"
+      ],
+      "answer_index": 0,
+      "explanation": "Function calls use parentheses around their arguments."
+    },
+    {
+      "id": "q6",
+      "question": "Which comment is valid Python?",
+      "options": [
+        "<!-- charge blaster -->",
+        "# charge blaster",
+        "/* charge blaster */",
+        "// charge blaster"
+      ],
+      "answer_index": 1,
+      "explanation": "Python comments begin with a hash symbol."
+    }
+  ]
+}

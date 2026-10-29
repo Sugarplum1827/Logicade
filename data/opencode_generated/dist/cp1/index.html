@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070d17" />
+    <meta
+      name="description"
+      content="Computer Programming 1: 50 concepts and 500 interactive labs covering flowcharts, algorithms, C fundamentals, variables, scope, operators, conditionals, loops, arrays, functions, and debugging."
+    />
+    <title>Computer Programming 1 · 50 concepts, 500 labs · LogiCade</title>
+    <link rel="icon" href="../public/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../catalog.css" />
+  </head>
+  <body class="cp1-hub">
+    <a class="skip" href="#cp1-catalog">Skip to CP1 catalog</a>
+    <div class="shell">
+      <header class="site-head cp1-site-head">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" role="presentation">
+              <path d="M8 7h24v26H8z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+              <path d="M12 13h10M12 19h16M12 25h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+              <path d="M27 24l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">LogiCade · Computer Programming 1</p>
+            <h1>50 concepts. <span>500 interactive labs.</span></h1>
+            <p class="site-sub">A local, data-driven CP1 wing for weeks 2–8 of the syllabus, plus a finals extension for operators, conditionals, loops, arrays, functions, and debugging. Every lab uses one of twelve hands-on mechanics: no four-button multiple choice.</p>
+          </div>
+        </div>
+        <dl class="stats">
+          <div><dt>Concepts</dt><dd>50</dd></div>
+          <div><dt>Labs</dt><dd>500</dd></div>
+          <div><dt>Mechanics</dt><dd>12</dd></div>
+          <div><dt>Units</dt><dd>13</dd></div>
+          <div><dt>Weeks</dt><dd>2–14</dd></div>
+        </dl>
+      </header>
+
+      <section class="cp1-art-rail" aria-label="Seven local art themes">
+        <div class="cp1-art-rail-copy">
+          <p class="eyebrow">Seven local art packs</p>
+          <h2>Every lab gets a world</h2>
+          <p>Each unit maps to one of seven CC0 Kenney art packs. Backgrounds, heroes, enemies, and collectibles rotate by concept and lab, so neighbouring activities look different without any remote downloads.</p>
+        </div>
+        <div class="cp1-art-grid">
+          <a class="cp1-art-tile" href="flowchart_symbols/index.html" data-theme="space">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">Space<small>9 concepts · 90 labs</small></span>
+          </a>
+          <a class="cp1-art-tile" href="algorithm_definition/index.html" data-theme="underwater">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">Underwater<small>8 concepts · 80 labs</small></span>
+          </a>
+          <a class="cp1-art-tile" href="c_data_types/index.html" data-theme="pirate">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">Pirate<small>6 concepts · 60 labs</small></span>
+          </a>
+          <a class="cp1-art-tile" href="c_sequence/index.html" data-theme="farm">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">Farm<small>7 concepts · 70 labs</small></span>
+          </a>
+          <a class="cp1-art-tile" href="variable_names/index.html" data-theme="food">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">Kitchen<small>10 concepts · 100 labs</small></span>
+          </a>
+          <a class="cp1-art-tile" href="syntax_errors/index.html" data-theme="urban">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/urban/bg_city_dusk.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">City<small>3 concepts · 30 labs</small></span>
+          </a>
+          <a class="cp1-art-tile" href="c_program_structure/index.html" data-theme="tower_defense">
+            <img class="cp1-art-tile-img" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-art-tile-label">Defense<small>7 concepts · 70 labs</small></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="cp1-callout">
+        <div>
+          <p class="eyebrow">How the wing is organised</p>
+          <p>Each concept has ten labs, and each lab uses a different mechanic. Open a concept to see its full set, or jump straight to a lab from the main catalog. The attached syllabus stops at the week-8 midterm, so weeks 9–14 are labelled as a finals extension.</p>
+        </div>
+        <div class="cp1-callout-actions">
+          <a class="cp1-button" href="../index.html">Full 1,000-variation catalog</a>
+          <a class="cp1-button ghost" href="../index.html#classic-track">Classic 500</a>
+        </div>
+      </section>
+
+      <main id="cp1-catalog" class="cp1-units">
+        <section class="cp1-unit" aria-labelledby="unit-2-flowcharting">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 02</p>
+            <h2 id="unit-2-flowcharting">Flowcharting</h2>
+            <span>5 concepts · 50 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="flowchart_symbols/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">01</span>
+            <span class="cp1-concept-body">
+              <strong>Flowchart Symbols</strong>
+              <span>match flowchart symbols to their roles</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="flowchart_sequence/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">02</span>
+            <span class="cp1-concept-body">
+              <strong>Flowchart Sequence</strong>
+              <span>order a straight-line flowchart</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="flowchart_decision/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">03</span>
+            <span class="cp1-concept-body">
+              <strong>Flowchart Decisions</strong>
+              <span>trace and wire a two-way decision</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="flowchart_loops/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">04</span>
+            <span class="cp1-concept-body">
+              <strong>Flowchart Loops</strong>
+              <span>read a loop condition and its back edge</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="flowchart_reading/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">05</span>
+            <span class="cp1-concept-body">
+              <strong>Reading Flowcharts</strong>
+              <span>follow a multi-branch flowchart</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-3-algorithms">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 03</p>
+            <h2 id="unit-3-algorithms">Algorithms</h2>
+            <span>5 concepts · 50 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="algorithm_definition/index.html" data-theme="underwater" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">06</span>
+            <span class="cp1-concept-body">
+              <strong>Algorithm Definition</strong>
+              <span>identify the properties of an algorithm</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="algorithm_pseudocode/index.html" data-theme="underwater" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">07</span>
+            <span class="cp1-concept-body">
+              <strong>Pseudocode</strong>
+              <span>read and repair pseudocode</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="algorithm_io/index.html" data-theme="underwater" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">08</span>
+            <span class="cp1-concept-body">
+              <strong>Input, Process, Output</strong>
+              <span>separate input, processing, and output</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="algorithm_trace/index.html" data-theme="underwater" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">09</span>
+            <span class="cp1-concept-body">
+              <strong>Desk Checking</strong>
+              <span>trace an algorithm with a table of values</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="algorithm_search_sort/index.html" data-theme="underwater" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">10</span>
+            <span class="cp1-concept-body">
+              <strong>Search and Sort Steps</strong>
+              <span>trace linear search and bubble sort</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Wire">-&gt;</span><span class="mechanic-glyph" title="Robot">^&gt;</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Sort">AZ</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-4-c-introduction">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 04</p>
+            <h2 id="unit-4-c-introduction">C Introduction</h2>
+            <span>4 concepts · 40 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="c_program_structure/index.html" data-theme="tower_defense" style="--accent: #7ec8ff; --accent-soft: #7ec8ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">11</span>
+            <span class="cp1-concept-body">
+              <strong>C Program Structure</strong>
+              <span>identify the parts of a C program</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_compilation/index.html" data-theme="tower_defense" style="--accent: #7ec8ff; --accent-soft: #7ec8ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">12</span>
+            <span class="cp1-concept-body">
+              <strong>Compiling C</strong>
+              <span>follow source code through compilation to an executable</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_comments/index.html" data-theme="tower_defense" style="--accent: #7ec8ff; --accent-soft: #7ec8ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">13</span>
+            <span class="cp1-concept-body">
+              <strong>C Comments</strong>
+              <span>write and recognize C comments</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_first_program/index.html" data-theme="tower_defense" style="--accent: #7ec8ff; --accent-soft: #7ec8ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">14</span>
+            <span class="cp1-concept-body">
+              <strong>First C Program</strong>
+              <span>write and trace a first printf program</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-5-c-components">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 05</p>
+            <h2 id="unit-5-c-components">C Components</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="c_data_types/index.html" data-theme="pirate" style="--accent: #ffcf5c; --accent-soft: #ffcf5c22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">15</span>
+            <span class="cp1-concept-body">
+              <strong>C Data Types</strong>
+              <span>choose int, float, or char for a value</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_variables_constants/index.html" data-theme="pirate" style="--accent: #ffcf5c; --accent-soft: #ffcf5c22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">16</span>
+            <span class="cp1-concept-body">
+              <strong>Variables and Constants</strong>
+              <span>distinguish variables from constants</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_input_output/index.html" data-theme="pirate" style="--accent: #ffcf5c; --accent-soft: #ffcf5c22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">17</span>
+            <span class="cp1-concept-body">
+              <strong>C Input and Output</strong>
+              <span>read input with scanf and print with printf</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-6-c-structure">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 06</p>
+            <h2 id="unit-6-c-structure">C Structure</h2>
+            <span>4 concepts · 40 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="c_sequence/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">18</span>
+            <span class="cp1-concept-body">
+              <strong>C Sequence</strong>
+              <span>predict the result of sequential statements</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_selection/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">19</span>
+            <span class="cp1-concept-body">
+              <strong>C Selection</strong>
+              <span>trace an if/else selection</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_iteration/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">20</span>
+            <span class="cp1-concept-body">
+              <strong>C Iteration</strong>
+              <span>trace a for loop</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="c_functions_intro/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">21</span>
+            <span class="cp1-concept-body">
+              <strong>C Functions</strong>
+              <span>read a function definition and call</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-7-variables">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 07</p>
+            <h2 id="unit-7-variables">Variables</h2>
+            <span>7 concepts · 70 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="variable_names/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">22</span>
+            <span class="cp1-concept-body">
+              <strong>Variable Names</strong>
+              <span>choose valid and meaningful variable names</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="variable_declaration/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">23</span>
+            <span class="cp1-concept-body">
+              <strong>Declaring Variables</strong>
+              <span>declare a variable with a type and name</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="variable_assignment/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">24</span>
+            <span class="cp1-concept-body">
+              <strong>Assignment</strong>
+              <span>use = to store a value and == to compare</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="variable_initialization/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">25</span>
+            <span class="cp1-concept-body">
+              <strong>Initialization</strong>
+              <span>initialize variables before using them</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="variable_swap/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">26</span>
+            <span class="cp1-concept-body">
+              <strong>Swapping Values</strong>
+              <span>swap two variables with a temporary</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="constants_literals/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">27</span>
+            <span class="cp1-concept-body">
+              <strong>Constants and Literals</strong>
+              <span>use literals and named constants safely</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="type_conversion/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">28</span>
+            <span class="cp1-concept-body">
+              <strong>Type Conversion</strong>
+              <span>predict integer division and use an explicit cast</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-8-scope">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 08</p>
+            <h2 id="unit-8-scope">Scope</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="local_scope/index.html" data-theme="underwater" style="--accent: #a8e6cf; --accent-soft: #a8e6cf22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">29</span>
+            <span class="cp1-concept-body">
+              <strong>Local Scope</strong>
+              <span>identify where a local variable can be used</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="global_scope/index.html" data-theme="underwater" style="--accent: #a8e6cf; --accent-soft: #a8e6cf22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">30</span>
+            <span class="cp1-concept-body">
+              <strong>Global Scope</strong>
+              <span>read and reason about global variables</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="block_scope/index.html" data-theme="underwater" style="--accent: #a8e6cf; --accent-soft: #a8e6cf22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/underwater/bg_reef_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">31</span>
+            <span class="cp1-concept-body">
+              <strong>Block Scope</strong>
+              <span>trace names inside nested braces</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-9-operators">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 09</p>
+            <h2 id="unit-9-operators">Operators</h2>
+            <span>4 concepts · 40 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="arithmetic_operators/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">32</span>
+            <span class="cp1-concept-body">
+              <strong>Arithmetic Operators</strong>
+              <span>apply precedence and the modulus operator</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="assignment_operators/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">33</span>
+            <span class="cp1-concept-body">
+              <strong>Assignment Operators</strong>
+              <span>read compound assignment operators</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="comparison_operators/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">34</span>
+            <span class="cp1-concept-body">
+              <strong>Comparison Operators</strong>
+              <span>evaluate relational and equality tests</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="logical_operators/index.html" data-theme="space" style="--accent: #7ee2b8; --accent-soft: #7ee2b822">
+            <img class="cp1-card-thumb" src="../public/assets/themes/space/bg_blue.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">35</span>
+            <span class="cp1-concept-body">
+              <strong>Logical Operators</strong>
+              <span>combine conditions with and, or, and not</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-10-conditionals">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 10</p>
+            <h2 id="unit-10-conditionals">Conditionals</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="if_statements/index.html" data-theme="pirate" style="--accent: #ffcf5c; --accent-soft: #ffcf5c22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">36</span>
+            <span class="cp1-concept-body">
+              <strong>If Statements</strong>
+              <span>control one block with an if test</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="if_else_chains/index.html" data-theme="pirate" style="--accent: #ffcf5c; --accent-soft: #ffcf5c22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">37</span>
+            <span class="cp1-concept-body">
+              <strong>If/Else Chains</strong>
+              <span>order ranges in an else-if chain</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="switch_case/index.html" data-theme="pirate" style="--accent: #ffcf5c; --accent-soft: #ffcf5c22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/pirate/bg_sea_2.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">38</span>
+            <span class="cp1-concept-body">
+              <strong>Switch Statements</strong>
+              <span>trace switch cases and break statements</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-11-loops">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 11</p>
+            <h2 id="unit-11-loops">Loops</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="while_loops/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">39</span>
+            <span class="cp1-concept-body">
+              <strong>While Loops</strong>
+              <span>trace a while loop and its update</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="for_loops/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">40</span>
+            <span class="cp1-concept-body">
+              <strong>For Loops</strong>
+              <span>read all three parts of a for header</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="do_while_loops/index.html" data-theme="farm" style="--accent: #ffb27a; --accent-soft: #ffb27a22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/farm/bg_farm_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">41</span>
+            <span class="cp1-concept-body">
+              <strong>Do-While Loops</strong>
+              <span>distinguish test-first and test-last loops</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-12-arrays">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 12</p>
+            <h2 id="unit-12-arrays">Arrays</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="array_basics/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">42</span>
+            <span class="cp1-concept-body">
+              <strong>Array Basics</strong>
+              <span>declare, initialize, and index an array</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="array_traversal/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">43</span>
+            <span class="cp1-concept-body">
+              <strong>Array Traversal</strong>
+              <span>visit every array element with a loop</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="array_search/index.html" data-theme="food" style="--accent: #c5a3ff; --accent-soft: #c5a3ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/food/bg_kitchen_1.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">44</span>
+            <span class="cp1-concept-body">
+              <strong>Array Search</strong>
+              <span>trace a linear search through an array</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-13-functions">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 13</p>
+            <h2 id="unit-13-functions">Functions</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="function_definition/index.html" data-theme="tower_defense" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">45</span>
+            <span class="cp1-concept-body">
+              <strong>Function Definitions</strong>
+              <span>read a function return type, name, and body</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="function_parameters/index.html" data-theme="tower_defense" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">46</span>
+            <span class="cp1-concept-body">
+              <strong>Function Parameters</strong>
+              <span>distinguish parameters from arguments</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="function_return/index.html" data-theme="tower_defense" style="--accent: #9ad9ff; --accent-soft: #9ad9ff22">
+            <img class="cp1-card-thumb" src="../public/assets/themes/tower_defense/bg_td_3.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">47</span>
+            <span class="cp1-concept-body">
+              <strong>Returning Values</strong>
+              <span>trace which value a function returns</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+        <section class="cp1-unit" aria-labelledby="unit-14-debugging">
+          <div class="cp1-unit-head">
+            <p class="eyebrow">Week 14</p>
+            <h2 id="unit-14-debugging">Debugging</h2>
+            <span>3 concepts · 30 labs</span>
+          </div>
+          <div class="cp1-concept-grid">
+          <a class="cp1-concept-card" href="syntax_errors/index.html" data-theme="urban" style="--accent: #ff8fa3; --accent-soft: #ff8fa322">
+            <img class="cp1-card-thumb" src="../public/assets/themes/urban/bg_city_dusk.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">48</span>
+            <span class="cp1-concept-body">
+              <strong>Syntax Errors</strong>
+              <span>recognize errors the compiler reports</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="logic_errors/index.html" data-theme="urban" style="--accent: #ff8fa3; --accent-soft: #ff8fa322">
+            <img class="cp1-card-thumb" src="../public/assets/themes/urban/bg_city_dusk.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">49</span>
+            <span class="cp1-concept-body">
+              <strong>Logic Errors</strong>
+              <span>find code that compiles but computes the wrong result</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Trace">&gt;</span><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          <a class="cp1-concept-card" href="runtime_errors/index.html" data-theme="urban" style="--accent: #ff8fa3; --accent-soft: #ff8fa322">
+            <img class="cp1-card-thumb" src="../public/assets/themes/urban/bg_city_dusk.png" alt="" loading="lazy" decoding="async" />
+            <span class="cp1-concept-number">50</span>
+            <span class="cp1-concept-body">
+              <strong>Runtime Errors</strong>
+              <span>guard against division by zero and invalid access</span>
+              <span class="cp1-glyph-row" aria-label="Ten mechanics"><span class="mechanic-glyph" title="Simulate">||</span><span class="mechanic-glyph" title="Order">123</span><span class="mechanic-glyph" title="Assemble">{}</span><span class="mechanic-glyph" title="Vault">[]</span><span class="mechanic-glyph" title="Sort">AZ</span><span class="mechanic-glyph" title="Bug hunt">!</span><span class="mechanic-glyph" title="Scope">()</span><span class="mechanic-glyph" title="Match">=</span><span class="mechanic-glyph" title="Repair">__</span><span class="mechanic-glyph" title="Trace">&gt;</span></span>
+            </span>
+            <span class="cp1-concept-open" aria-hidden="true">→</span>
+          </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-foot">
+        <p>Computer Programming 1: 50 concepts, 500 authored labs, 12 mechanics. All content is local; no remote scripts, fonts, or services.</p>
+        <p><a href="../index.html">← Full catalog</a> · <a href="README.md">Build notes</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

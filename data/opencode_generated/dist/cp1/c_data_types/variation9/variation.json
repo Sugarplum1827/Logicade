@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_15_c_data_types",
+  "slug": "c_data_types",
+  "display_name": "C Data Types",
+  "learning_target": "choose int, float, or char for a value",
+  "core_brief": "A data type tells C how much space a value needs and which operations make sense.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 5,
+  "unit": "C Components",
+  "group": "code",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_1",
+    "zones": [
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_green",
+    "enemy": "themes.pirate.enemy_shark",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_flag",
+    "obstacles": {
+      "spike": "themes.pirate.nest",
+      "bush": "themes.pirate.cannon",
+      "slime": "themes.pirate.cannon",
+      "bee": "themes.pirate.nest"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "mechanic": "vars",
+  "mechanic_label": "Vault",
+  "accent": "#ffcf5c",
+  "variation_id": "cp1_15_c_data_types_v09",
+  "index": 9,
+  "challenge_index": 9,
+  "challenge_id": "c_data_types_v09",
+  "title": "Fill the variable vault",
+  "label": "Lab 09: Fill the variable vault",
+  "seed": 3681736449,
+  "challenge_bank": "../../../data/cp1/challenges/c_data_types.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation8/",
+    "next": "../variation10/"
+  }
+}

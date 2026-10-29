@@ -1,30 +1,30 @@
 {
   "file_id": "game_1300",
-  "game_title": "Filter Harvest – Mushroom Market Streak",
+  "game_title": "Branch Assembly 10 · Separate Outputs",
   "game_concept": "A quiz RPG set in Mystic Forest – Mushroom Market, a forest mushroom market: the fairy gardener must handle giant beetles while practicing control flow: for loops. Core idea – Filter Harvest: Combine for and if to harvest only vine ropes that meet a rule.",
-  "genre": "quiz RPG",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Mushroom Market: a forest mushroom market",
-  "core_gameplay_loop": "In Mushroom Market, repeat each round: Combine for and if to harvest only vine ropes that meet a rule. Each round poses one decision; a wrong answer breaks the streak. Then check the harvest value and advance.",
-  "primary_mechanic": "Filter Harvest",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Chain 7 consecutive correct decisions about harvest to power up the fairy gardener and open the waterfall gate.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "streak counter reaches 7.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Header inclusion: build a valid C source file that prints 14. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (2, 3), with the upper processing path on row 0 and lower path on row 6. IF item value >= 15, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Deliver exactly 7 components (4 upper, 3 lower). Set the gold-socket controller batch to 7.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 4 (applied tier): Filter Harvest",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Header inclusion",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M10-X4-T10-47aa55d1",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Filter Harvest' (Week 5 slot 10), mission type 'Streak Challenge', and setting 'Mushroom Market'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 4,
   "trial": 10,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how harvest changes.",
-    "Step 2: Use the controls to apply the code idea against giant beetles in Mushroom Market.",
-    "Step 3: Win by meeting the goal: streak counter reaches 7."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level4/needs_support/game_week5_level4_difficulty(NeedAssistance)_10.json",
+    "variation_id": "canvas_game_1300",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 7 consecutive correct decisions about harvest to power up the fairy gardener and open the waterfall gate.",
+  "source_win_condition": "streak counter reaches 7.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Filter Harvest – Mushroom Market Streak",
+  "source_primary_mechanic": "Filter Harvest",
+  "hint": "IF item value >= 15, send north to the upper branch; ELSE send south to the lower branch. Finish both paths at their separate output depots. Branch contracts: IF: 4 components via upper_4, upper_6 to output_upper; ELSE: 3 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w5_l4",
+  "source_week": 5,
+  "source_level": 4
 }

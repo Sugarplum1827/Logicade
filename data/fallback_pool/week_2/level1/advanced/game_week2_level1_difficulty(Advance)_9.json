@@ -1,30 +1,30 @@
 {
   "file_id": "game_0329",
-  "game_title": "Unit Trader – Pumice Pass Defense",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A survival strategy set in Mt. Pyre – Pumice Pass, a narrow pumice pass: the fire warden must handle molten golems while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of sulfur crystals is fair.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Pumice Pass: a narrow pumice pass",
-  "core_gameplay_loop": "In Pumice Pass, repeat each round: Convert units using expressions so each trade of sulfur crystals is fair. Each round, molten golems strike the ember furnace, so respond before the next strike lands. Then check the fair_trades value and advance.",
-  "primary_mechanic": "Unit Trader",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Protect the ember furnace from molten golems in Pumice Pass: keep the fair_trades meter above zero by applying the concept correctly until the 24-second timer ends.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Timer reaches 24 seconds while fair_trades > 0.",
-  "lose_condition": "fair_trades drops to 0, or lives reach 0, before the 24-second timer ends.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 9: {'a': 9, 'b': 11}; {'a': 0, 'b': 18}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Unit Trader",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Symbols and sequence",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M14-X1-T13-775195bc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Survival Siege', and setting 'Pumice Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 1,
   "trial": 9,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fair_trades changes.",
-    "Step 2: Use the controls to apply the code idea against molten golems in Pumice Pass.",
-    "Step 3: Win by meeting the goal: Timer reaches 24 seconds while fair_trades > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level1/advanced/game_week2_level1_difficulty(Advance)_9.json",
+    "variation_id": "canvas_game_0329",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the ember furnace from molten golems in Pumice Pass: keep the fair_trades meter above zero by applying the concept correctly until the 24-second timer ends.",
+  "source_win_condition": "Timer reaches 24 seconds while fair_trades > 0.",
+  "source_lose_condition": "fair_trades drops to 0, or lives reach 0, before the 24-second timer ends.",
+  "source_game_title": "Unit Trader – Pumice Pass Defense",
+  "source_primary_mechanic": "Unit Trader",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w2_l1",
+  "source_week": 2,
+  "source_level": 1
 }

@@ -1,0 +1,2402 @@
+{
+  "platformer_quest": {
+    "concept_id": "01_platformer_quest",
+    "learning_target": "valid variable names",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which is a valid Python variable name?",
+        "options": ["fast_car", "2fast", "fast-car", "class"],
+        "answer_index": 0,
+        "explanation": "Names can use letters, digits and underscores, but cannot start with a digit or contain a hyphen."
+      },
+      {
+        "id": "q2",
+        "question": "Why is 'my score' invalid as a variable name?",
+        "options": ["It contains a space", "It is too long", "It uses lowercase letters", "It contains a vowel"],
+        "answer_index": 0,
+        "explanation": "Spaces are not allowed in variable names. Use an underscore instead, such as my_score."
+      },
+      {
+        "id": "q3",
+        "question": "Which name is invalid?",
+        "options": ["1st_place", "total", "_count", "player2"],
+        "answer_index": 0,
+        "explanation": "A variable name cannot begin with a digit, so 1st_place is invalid."
+      },
+      {
+        "id": "q4",
+        "question": "Are 'Score' and 'score' the same variable in Python?",
+        "options": ["No, Python is case-sensitive", "Yes, case is ignored", "Only inside functions", "Only inside loops"],
+        "answer_index": 0,
+        "explanation": "Python treats uppercase and lowercase letters as different, so Score and score are separate names."
+      },
+      {
+        "id": "q5",
+        "question": "Which is a reserved keyword you cannot use as a variable name?",
+        "options": ["for", "name", "value", "data"],
+        "answer_index": 0,
+        "explanation": "Keywords such as for, if and while are reserved by the language and cannot be used as names."
+      },
+      {
+        "id": "q6",
+        "question": "Which name is valid?",
+        "options": ["my_var", "my-var", "my.var", "my var"],
+        "answer_index": 0,
+        "explanation": "Underscores are allowed in names; hyphens, dots and spaces are not."
+      }
+    ]
+  },
+  "space_shooter_code": {
+    "concept_id": "02_space_shooter_code",
+    "learning_target": "syntax recognition",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which line is valid Python 3?",
+        "options": ["print('ready')", "print 'ready'", "Print('ready')", "print('ready'"],
+        "answer_index": 0,
+        "explanation": "Python 3 function calls use parentheses, matching quotes, and lowercase function names."
+      },
+      {
+        "id": "q2",
+        "question": "Which if statement is written correctly?",
+        "options": ["if score > 10:", "if (score > 10)", "if score > 10 then", "if score > 10"],
+        "answer_index": 0,
+        "explanation": "An if statement needs a condition followed by a colon before the indented block."
+      },
+      {
+        "id": "q3",
+        "question": "Which list is written correctly?",
+        "options": ["[1, 2, 3]", "[1 2 3]", "(1, 2, 3]", "{1, 2, 3)"],
+        "answer_index": 0,
+        "explanation": "A Python list uses square brackets with commas between values."
+      },
+      {
+        "id": "q4",
+        "question": "Which string uses matching quotes?",
+        "options": ["\"laser\"", "'laser\"", "\"laser'", "laser"],
+        "answer_index": 0,
+        "explanation": "A string must start and end with the same quote character."
+      },
+      {
+        "id": "q5",
+        "question": "Which function call is valid?",
+        "options": ["fire(3)", "fire 3", "fire[3]", "fire{3}"],
+        "answer_index": 0,
+        "explanation": "Function calls use parentheses around their arguments."
+      },
+      {
+        "id": "q6",
+        "question": "Which comment is valid Python?",
+        "options": ["# charge blaster", "// charge blaster", "<!-- charge blaster -->", "/* charge blaster */"],
+        "answer_index": 0,
+        "explanation": "Python comments begin with a hash symbol."
+      }
+    ]
+  },
+  "maze_runner_flowchart": {
+    "concept_id": "03_maze_runner_flowchart",
+    "learning_target": "sequence and flowchart logic",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does an arrow in a flowchart show?",
+        "options": ["The order of steps", "The color of a block", "The number of variables", "The file name"],
+        "answer_index": 0,
+        "explanation": "Arrows connect blocks and show which step comes next."
+      },
+      {
+        "id": "q2",
+        "question": "In a sequence, which step happens first?",
+        "options": ["The step at the start arrow", "The step with the longest text", "The last step", "A random step"],
+        "answer_index": 0,
+        "explanation": "Execution begins at the start symbol and follows the arrows in order."
+      },
+      {
+        "id": "q3",
+        "question": "What is a decision block used for?",
+        "options": ["Choosing between paths", "Storing a list", "Printing a number", "Ending the program"],
+        "answer_index": 0,
+        "explanation": "A decision block checks a condition and sends the flow down one of two paths."
+      },
+      {
+        "id": "q4",
+        "question": "Which shape usually represents a decision in a flowchart?",
+        "options": ["Diamond", "Circle", "Rectangle", "Triangle"],
+        "answer_index": 0,
+        "explanation": "A diamond is the standard flowchart symbol for a yes-or-no decision."
+      },
+      {
+        "id": "q5",
+        "question": "What happens when a flowchart path loops back?",
+        "options": ["Earlier steps repeat", "The program deletes data", "The flowchart ends", "The arrows change color"],
+        "answer_index": 0,
+        "explanation": "A loop sends execution back to an earlier block so those steps run again."
+      },
+      {
+        "id": "q6",
+        "question": "What should every flowchart have?",
+        "options": ["A clear start and end", "Only decisions", "No arrows", "At least ten loops"],
+        "answer_index": 0,
+        "explanation": "A readable flowchart has one clear start point and at least one end point."
+      }
+    ]
+  },
+  "tower_defense_logic": {
+    "concept_id": "04_tower_defense_logic",
+    "learning_target": "conditionals",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does `if enemies > 3:` mean?",
+        "options": ["Run the block only when the condition is true", "Always run the block", "Repeat the block forever", "Stop the program"],
+        "answer_index": 0,
+        "explanation": "The indented block runs only when the comparison enemies > 3 evaluates to true."
+      },
+      {
+        "id": "q2",
+        "question": "Which operator means \"not equal\"?",
+        "options": ["!=", "==", ">=", "="],
+        "answer_index": 0,
+        "explanation": "The != operator is true when the two values are different."
+      },
+      {
+        "id": "q3",
+        "question": "What is the result of `5 > 2`?",
+        "options": ["True", "False", "5", "2"],
+        "answer_index": 0,
+        "explanation": "Five is greater than two, so the comparison evaluates to True."
+      },
+      {
+        "id": "q4",
+        "question": "What does an `else` block do?",
+        "options": ["Runs when the if condition is false", "Runs before the if", "Creates a loop", "Deletes a variable"],
+        "answer_index": 0,
+        "explanation": "The else block is the fallback that runs when the if condition is not true."
+      },
+      {
+        "id": "q5",
+        "question": "Which condition checks for exactly two enemies?",
+        "options": ["enemies == 2", "enemies = 2", "enemies > 2", "enemies != 2"],
+        "answer_index": 0,
+        "explanation": "The equality operator == checks whether enemies is exactly 2."
+      },
+      {
+        "id": "q6",
+        "question": "What does the `and` operator require?",
+        "options": ["Both conditions are true", "Either condition is true", "Neither condition is true", "Only the first condition"],
+        "answer_index": 0,
+        "explanation": "A and B is true only when both A and B are true."
+      }
+    ]
+  },
+  "farm_management_script": {
+    "concept_id": "05_farm_management_script",
+    "learning_target": "loops and repeated instructions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a loop do?",
+        "options": ["Repeats instructions", "Runs once", "Deletes crops", "Changes the language"],
+        "answer_index": 0,
+        "explanation": "A loop repeats a block of instructions until its stopping condition is met."
+      },
+      {
+        "id": "q2",
+        "question": "How many times does `for i in range(3):` run?",
+        "options": ["3", "1", "2", "4"],
+        "answer_index": 0,
+        "explanation": "range(3) produces 0, 1 and 2, so the loop body runs three times."
+      },
+      {
+        "id": "q3",
+        "question": "What is a loop body?",
+        "options": ["The indented steps inside the loop", "The loop keyword", "The final print", "The variable name"],
+        "answer_index": 0,
+        "explanation": "The body is the indented block that repeats on each iteration."
+      },
+      {
+        "id": "q4",
+        "question": "Which loop is best when you know the number of crops?",
+        "options": ["for", "while True", "if", "def"],
+        "answer_index": 0,
+        "explanation": "A for loop is ideal when the number of repetitions is known in advance."
+      },
+      {
+        "id": "q5",
+        "question": "What happens if a loop never changes its condition?",
+        "options": ["It may run forever", "It runs once", "It skips the body", "It prints nothing"],
+        "answer_index": 0,
+        "explanation": "If the condition stays true, a while loop can continue indefinitely."
+      },
+      {
+        "id": "q6",
+        "question": "What does `range(1, 4)` produce?",
+        "options": ["1, 2, 3", "1, 2, 3, 4", "0, 1, 2, 3", "4, 3, 2, 1"],
+        "answer_index": 0,
+        "explanation": "range(1, 4) starts at 1 and stops before 4, producing 1, 2 and 3."
+      }
+    ]
+  },
+  "puzzle_dungeon": {
+    "concept_id": "06_puzzle_dungeon",
+    "learning_target": "code tracing and basic syntax",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the value of x after `x = 3` then `x = x + 2`?",
+        "options": ["5", "3", "2", "6"],
+        "answer_index": 0,
+        "explanation": "The second line reads the old value 3, adds 2, and stores 5 back into x."
+      },
+      {
+        "id": "q2",
+        "question": "What does `print(\"a\" + \"b\")` output?",
+        "options": ["ab", "a b", "a+b", "ba"],
+        "answer_index": 0,
+        "explanation": "Adding two strings joins them end to end, producing ab."
+      },
+      {
+        "id": "q3",
+        "question": "What is the result of `10 // 3`?",
+        "options": ["3", "3.33", "1", "4"],
+        "answer_index": 0,
+        "explanation": "The // operator performs floor division, so 10 // 3 is 3."
+      },
+      {
+        "id": "q4",
+        "question": "What does `len([1, 2, 3])` return?",
+        "options": ["3", "2", "1", "6"],
+        "answer_index": 0,
+        "explanation": "len returns the number of items in the list, which is three."
+      },
+      {
+        "id": "q5",
+        "question": "What is the last value printed by `for i in range(2): print(i)`?",
+        "options": ["1", "0", "2", "3"],
+        "answer_index": 0,
+        "explanation": "range(2) yields 0 then 1, so the last printed value is 1."
+      },
+      {
+        "id": "q6",
+        "question": "Which line has a syntax error?",
+        "options": ["print('open'", "print('open')", "x = 1", "if x == 1:"],
+        "answer_index": 0,
+        "explanation": "The first line is missing the closing parenthesis."
+      }
+    ]
+  },
+  "cyber_hacker_grid": {
+    "concept_id": "07_cyber_hacker_grid",
+    "learning_target": "sequencing and algorithmic flow",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is an algorithm?",
+        "options": ["A finite sequence of steps", "A random guess", "A type of cable", "A color scheme"],
+        "answer_index": 0,
+        "explanation": "An algorithm is a clear, finite sequence of steps that solves a problem."
+      },
+      {
+        "id": "q2",
+        "question": "What does a loop help you avoid?",
+        "options": ["Repeating the same code by hand", "Using variables", "Making decisions", "Writing comments"],
+        "answer_index": 0,
+        "explanation": "A loop repeats work automatically instead of duplicating the same lines."
+      },
+      {
+        "id": "q3",
+        "question": "What is the first step in debugging a sequence?",
+        "options": ["Find where the result first goes wrong", "Delete all code", "Add more loops", "Rename every variable"],
+        "answer_index": 0,
+        "explanation": "Trace the sequence until the first incorrect state, then fix that step."
+      },
+      {
+        "id": "q4",
+        "question": "What does a conditional branch do?",
+        "options": ["Chooses a path based on a condition", "Repeats forever", "Stores a list", "Ends the program"],
+        "answer_index": 0,
+        "explanation": "A conditional checks a condition and chooses which block to run next."
+      },
+      {
+        "id": "q5",
+        "question": "Which command order moves right and then up?",
+        "options": ["right(); up()", "up(); right()", "right(); right()", "up(); up()"],
+        "answer_index": 0,
+        "explanation": "Commands run in order, so right() must come before up()."
+      },
+      {
+        "id": "q6",
+        "question": "Why trace a program by hand?",
+        "options": ["To check each step's state", "To make it run faster", "To change its color", "To avoid using a computer"],
+        "answer_index": 0,
+        "explanation": "Hand tracing reveals the value of each variable at every step."
+      }
+    ]
+  },
+  "underwater_submarine": {
+    "concept_id": "08_underwater_submarine",
+    "learning_target": "variables, comparison, and coordinate reasoning",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does `depth = depth + 10` do?",
+        "options": ["Increases depth by 10", "Sets depth to 10", "Decreases depth by 10", "Deletes depth"],
+        "answer_index": 0,
+        "explanation": "The right side reads the old depth, adds 10, and stores the result back."
+      },
+      {
+        "id": "q2",
+        "question": "Which comparison checks whether depth is below 50?",
+        "options": ["depth < 50", "depth = 50", "depth > 50", "depth != 50"],
+        "answer_index": 0,
+        "explanation": "The < operator is true when the left value is less than the right value."
+      },
+      {
+        "id": "q3",
+        "question": "If `x = 4` and `y = 7`, which point is `(x, y)`?",
+        "options": ["(4, 7)", "(7, 4)", "(4, 4)", "(7, 7)"],
+        "answer_index": 0,
+        "explanation": "Coordinates are written in x, y order, so the point is (4, 7)."
+      },
+      {
+        "id": "q4",
+        "question": "What does a sonar reading of 0 usually mean?",
+        "options": ["No obstacle detected", "Maximum depth", "Low battery", "Surface reached"],
+        "answer_index": 0,
+        "explanation": "A zero distance reading usually means nothing is within range."
+      },
+      {
+        "id": "q5",
+        "question": "What is the result of `12 >= 12`?",
+        "options": ["True", "False", "12", "0"],
+        "answer_index": 0,
+        "explanation": "The >= operator is true when the values are equal or the left is greater."
+      },
+      {
+        "id": "q6",
+        "question": "Which variable name is clearest for a depth in metres?",
+        "options": ["depth_m", "d", "x1", "value"],
+        "answer_index": 0,
+        "explanation": "A descriptive name such as depth_m makes the unit and meaning clear."
+      }
+    ]
+  },
+  "rhythm_code_beats": {
+    "concept_id": "09_rhythm_code_beats",
+    "learning_target": "command order and pattern recognition",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does command order control?",
+        "options": ["The sequence of actions", "The color of the screen", "The file size", "The volume only"],
+        "answer_index": 0,
+        "explanation": "Commands execute in the order they are written, so order changes the result."
+      },
+      {
+        "id": "q2",
+        "question": "The pattern is A, B, A, B. What comes next?",
+        "options": ["A", "B", "C", "D"],
+        "answer_index": 0,
+        "explanation": "The pattern alternates A and B, so after B comes A."
+      },
+      {
+        "id": "q3",
+        "question": "What is a loop in music code?",
+        "options": ["A repeated section", "A single note", "A random sound", "A broken speaker"],
+        "answer_index": 0,
+        "explanation": "A loop repeats a section of music or commands."
+      },
+      {
+        "id": "q4",
+        "question": "What does a rest command do?",
+        "options": ["Adds silence", "Doubles the tempo", "Changes the instrument", "Stops the program"],
+        "answer_index": 0,
+        "explanation": "A rest is a pause or silence in the rhythm."
+      },
+      {
+        "id": "q5",
+        "question": "Why align commands to beats?",
+        "options": ["To keep timing consistent", "To make code longer", "To avoid variables", "To change the language"],
+        "answer_index": 0,
+        "explanation": "Aligning commands to beats keeps the music synchronized."
+      },
+      {
+        "id": "q6",
+        "question": "Which sequence plays two beats and then a rest?",
+        "options": ["beat(); beat(); rest()", "rest(); beat()", "beat(); rest(); rest()", "rest(); rest(); beat()"],
+        "answer_index": 0,
+        "explanation": "Two beat calls followed by one rest call match the requested pattern."
+      }
+    ]
+  },
+  "detective_crime_lab": {
+    "concept_id": "10_detective_crime_lab",
+    "learning_target": "branching logic and evidence-based decisions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is evidence?",
+        "options": ["Information that supports a conclusion", "A random guess", "A type of variable", "A loop"],
+        "answer_index": 0,
+        "explanation": "Evidence is information that helps support or reject a conclusion."
+      },
+      {
+        "id": "q2",
+        "question": "What does a decision tree do?",
+        "options": ["Branches based on answers", "Repeats forever", "Stores images", "Prints a receipt"],
+        "answer_index": 0,
+        "explanation": "Each answer in a decision tree leads to a different branch."
+      },
+      {
+        "id": "q3",
+        "question": "If clue A is false, what should you do?",
+        "options": ["Follow the no branch", "Ignore all clues", "Choose a suspect at random", "Stop the investigation"],
+        "answer_index": 0,
+        "explanation": "A decision tree follows the branch that matches the answer."
+      },
+      {
+        "id": "q4",
+        "question": "What makes a conclusion strong?",
+        "options": ["Multiple consistent clues", "One loud opinion", "A short name", "A lucky guess"],
+        "answer_index": 0,
+        "explanation": "Several clues that agree give a conclusion more support."
+      },
+      {
+        "id": "q5",
+        "question": "What is a false positive?",
+        "options": ["A wrong match flagged as correct", "A missing clue", "A correct conclusion", "A type of fingerprint"],
+        "answer_index": 0,
+        "explanation": "A false positive incorrectly reports a match or success."
+      },
+      {
+        "id": "q6",
+        "question": "Why rule out suspects?",
+        "options": ["To narrow the possibilities", "To increase the suspect list", "To avoid evidence", "To change the question"],
+        "answer_index": 0,
+        "explanation": "Eliminating suspects who do not fit the evidence narrows the search."
+      }
+    ]
+  },
+  "cooking_kitchen_automation": {
+    "concept_id": "11_cooking_kitchen_automation",
+    "learning_target": "loops and ordered steps",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Why does recipe order matter?",
+        "options": ["Later steps depend on earlier ones", "It changes the plate color", "It makes the code shorter", "It removes the timer"],
+        "answer_index": 0,
+        "explanation": "Many recipe steps rely on earlier preparation, so the order changes the result."
+      },
+      {
+        "id": "q2",
+        "question": "Which loop repeats a step four times?",
+        "options": ["for i in range(4):", "if i == 4:", "def i():", "print(4)"],
+        "answer_index": 0,
+        "explanation": "range(4) produces four iterations, so the loop body runs four times."
+      },
+      {
+        "id": "q3",
+        "question": "What is a nested loop?",
+        "options": ["A loop inside another loop", "A loop with no body", "A variable", "A comment"],
+        "answer_index": 0,
+        "explanation": "A nested loop is placed inside the body of another loop."
+      },
+      {
+        "id": "q4",
+        "question": "What should you check before repeating a recipe step?",
+        "options": ["The stopping condition", "The plate color", "The timer brand", "The first step only"],
+        "answer_index": 0,
+        "explanation": "A loop needs a clear stopping condition so it does not repeat forever."
+      },
+      {
+        "id": "q5",
+        "question": "What does `while timer > 0:` do?",
+        "options": ["Repeats while the condition is true", "Runs once", "Stops immediately", "Creates a list"],
+        "answer_index": 0,
+        "explanation": "The body repeats as long as timer is greater than zero."
+      },
+      {
+        "id": "q6",
+        "question": "Which step should come first?",
+        "options": ["Preheat the oven", "Serve the cake", "Frost the cake", "Clean the plate"],
+        "answer_index": 0,
+        "explanation": "The oven must be preheated before baking begins."
+      }
+    ]
+  },
+  "zombie_survival_barricade": {
+    "concept_id": "12_zombie_survival_barricade",
+    "learning_target": "Boolean logic and conditions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a Boolean value?",
+        "options": ["True or False", "A whole number", "A word", "A list"],
+        "answer_index": 0,
+        "explanation": "Boolean values have exactly two states: True and False."
+      },
+      {
+        "id": "q2",
+        "question": "What does `not True` evaluate to?",
+        "options": ["False", "True", "0", "1"],
+        "answer_index": 0,
+        "explanation": "The not operator reverses a Boolean value, so not True is False."
+      },
+      {
+        "id": "q3",
+        "question": "What does `A or B` require?",
+        "options": ["At least one is true", "Both are true", "Both are false", "Only A is true"],
+        "answer_index": 0,
+        "explanation": "A or B is true when either A or B is true."
+      },
+      {
+        "id": "q4",
+        "question": "Which condition means \"the door is closed and no zombies are present\"?",
+        "options": ["door_closed and not zombies", "door_closed or zombies", "not door_closed and zombies", "door_closed == zombies"],
+        "answer_index": 0,
+        "explanation": "The and operator requires both parts to be true, including not zombies."
+      },
+      {
+        "id": "q5",
+        "question": "What is the result of `True and False`?",
+        "options": ["False", "True", "1", "0"],
+        "answer_index": 0,
+        "explanation": "The and operator is true only when both values are true."
+      },
+      {
+        "id": "q6",
+        "question": "Why use Boolean rules for barricades?",
+        "options": ["To decide which defenses activate", "To make the screen darker", "To increase the font size", "To avoid all decisions"],
+        "answer_index": 0,
+        "explanation": "Boolean conditions let the game activate the right defense for each threat."
+      }
+    ]
+  },
+  "medieval_castle_siege": {
+    "concept_id": "13_medieval_castle_siege",
+    "learning_target": "flowchart commands and sequence",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a flowchart command block represent?",
+        "options": ["One action", "A whole program", "A variable", "A color"],
+        "answer_index": 0,
+        "explanation": "Each command block stands for a single action in the plan."
+      },
+      {
+        "id": "q2",
+        "question": "What should happen immediately after \"draw bow\"?",
+        "options": ["Loose arrow", "Open gate", "End battle", "Light torch"],
+        "answer_index": 0,
+        "explanation": "Drawing the bow is followed by loosing the arrow."
+      },
+      {
+        "id": "q3",
+        "question": "What is a loop in a battle plan?",
+        "options": ["Repeating a volley", "A single arrow", "A retreat", "A wall"],
+        "answer_index": 0,
+        "explanation": "A loop repeats the same action, such as a volley of arrows."
+      },
+      {
+        "id": "q4",
+        "question": "Which block chooses between two defenses?",
+        "options": ["Decision", "Process", "Start", "End"],
+        "answer_index": 0,
+        "explanation": "A decision block checks a condition and selects a branch."
+      },
+      {
+        "id": "q5",
+        "question": "Why label flowchart arrows?",
+        "options": ["To show the order of actions", "To make them pretty", "To hide the path", "To count variables"],
+        "answer_index": 0,
+        "explanation": "Labels make the flow of actions easy to follow and review."
+      },
+      {
+        "id": "q6",
+        "question": "What is a safe first step in a battle plan?",
+        "options": ["Scout the enemy", "Charge alone", "Open the gate", "Drop all weapons"],
+        "answer_index": 0,
+        "explanation": "Scouting first gives information before committing to a plan."
+      }
+    ]
+  },
+  "pirate_island_voyage": {
+    "concept_id": "14_pirate_island_voyage",
+    "learning_target": "coordinates and ordered movement",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which coordinate pair is the origin?",
+        "options": ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"],
+        "answer_index": 0,
+        "explanation": "The origin is the point where both coordinates are zero."
+      },
+      {
+        "id": "q2",
+        "question": "If you move from (2, 3) one step east, where are you?",
+        "options": ["(3, 3)", "(2, 4)", "(1, 3)", "(2, 2)"],
+        "answer_index": 0,
+        "explanation": "Moving east increases the x coordinate by one."
+      },
+      {
+        "id": "q3",
+        "question": "What does a negative x direction usually mean?",
+        "options": ["West", "East", "North", "Up"],
+        "answer_index": 0,
+        "explanation": "On a standard map, negative x points left or west."
+      },
+      {
+        "id": "q4",
+        "question": "A reef is at (5, 5). Which waypoint is exactly the reef?",
+        "options": ["(5, 5)", "(4, 5)", "(5, 6)", "(6, 5)"],
+        "answer_index": 0,
+        "explanation": "The coordinates (5, 5) identify the reef's exact position."
+      },
+      {
+        "id": "q5",
+        "question": "What is the result of moving north from (3, 2)?",
+        "options": ["(3, 3)", "(4, 2)", "(2, 2)", "(3, 1)"],
+        "answer_index": 0,
+        "explanation": "Moving north increases the y coordinate by one."
+      },
+      {
+        "id": "q6",
+        "question": "Why use coordinates?",
+        "options": ["To describe positions precisely", "To make the map colorful", "To avoid movement", "To count islands"],
+        "answer_index": 0,
+        "explanation": "Coordinates give an exact position instead of a vague direction."
+      }
+    ]
+  },
+  "train_track_builder": {
+    "concept_id": "15_train_track_builder",
+    "learning_target": "flowcharts and sequencing",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a track switch do?",
+        "options": ["Chooses between tracks", "Stops the train forever", "Changes the cargo", "Paints the train"],
+        "answer_index": 0,
+        "explanation": "A switch directs a train from one track to another."
+      },
+      {
+        "id": "q2",
+        "question": "What is a sequence?",
+        "options": ["Steps in order", "A random set", "A single step", "A type of station"],
+        "answer_index": 0,
+        "explanation": "A sequence is an ordered list of steps or events."
+      },
+      {
+        "id": "q3",
+        "question": "What should a track plan include?",
+        "options": ["A start, route, and destination", "Only curves", "No switches", "Ten engines"],
+        "answer_index": 0,
+        "explanation": "A complete plan shows where the train starts, how it travels, and where it ends."
+      },
+      {
+        "id": "q4",
+        "question": "What happens if two trains share a track without planning?",
+        "options": ["A collision", "Faster travel", "More stations", "Free cargo"],
+        "answer_index": 0,
+        "explanation": "Without sequencing, two trains can occupy the same track and collide."
+      },
+      {
+        "id": "q5",
+        "question": "Which block checks whether a track is clear?",
+        "options": ["Decision", "Start", "End", "Process"],
+        "answer_index": 0,
+        "explanation": "A decision block checks the condition and chooses a safe branch."
+      },
+      {
+        "id": "q6",
+        "question": "Why test a route before running it?",
+        "options": ["To catch conflicts early", "To make it longer", "To change the station", "To avoid switches"],
+        "answer_index": 0,
+        "explanation": "Testing reveals conflicts before real trains are affected."
+      }
+    ]
+  },
+  "jungle_vine_swinger": {
+    "concept_id": "16_jungle_vine_swinger",
+    "learning_target": "functions and reusable actions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a function?",
+        "options": ["A reusable named block of code", "A one-time command", "A type of vine", "A variable"],
+        "answer_index": 0,
+        "explanation": "A function groups code under a name so it can be called repeatedly."
+      },
+      {
+        "id": "q2",
+        "question": "What does calling a function do?",
+        "options": ["Runs its code", "Deletes it", "Renames it", "Prints its name only"],
+        "answer_index": 0,
+        "explanation": "Calling a function executes the code inside its body."
+      },
+      {
+        "id": "q3",
+        "question": "Why use functions?",
+        "options": ["To avoid repeating code", "To make code longer", "To remove parameters", "To hide errors"],
+        "answer_index": 0,
+        "explanation": "Functions let you write a reusable action once and call it many times."
+      },
+      {
+        "id": "q4",
+        "question": "What is a parameter?",
+        "options": ["A value passed into a function", "A loop counter", "A comment", "A return type only"],
+        "answer_index": 0,
+        "explanation": "A parameter is a named input that receives a value when the function is called."
+      },
+      {
+        "id": "q5",
+        "question": "Which line defines a function in Python?",
+        "options": ["def swing():", "function swing()", "swing() = def", "def swing[]"],
+        "answer_index": 0,
+        "explanation": "Python function definitions begin with def, a name, parentheses and a colon."
+      },
+      {
+        "id": "q6",
+        "question": "What does `return` do?",
+        "options": ["Sends a value back", "Stops the file", "Creates a loop", "Prints always"],
+        "answer_index": 0,
+        "explanation": "A return statement ends the function and sends a value back to the caller."
+      }
+    ]
+  },
+  "factory_assembly_line": {
+    "concept_id": "17_factory_assembly_line",
+    "learning_target": "sorting rules and conditionals",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a sorting rule?",
+        "options": ["A condition that chooses a destination", "A random bin", "A type of conveyor", "A color"],
+        "answer_index": 0,
+        "explanation": "A sorting rule checks a property and sends the item to a matching destination."
+      },
+      {
+        "id": "q2",
+        "question": "Which condition sends red widgets to bin A?",
+        "options": ["if color == 'red': bin = 'A'", "if color = 'red': bin = 'A'", "if bin == 'A': color = 'red'", "red = bin"],
+        "answer_index": 0,
+        "explanation": "The equality operator == compares the color, and the assignment stores the bin."
+      },
+      {
+        "id": "q3",
+        "question": "What does an `else` block cover?",
+        "options": ["All cases not matched by the if", "Only red widgets", "The first widget", "No cases"],
+        "answer_index": 0,
+        "explanation": "else is the fallback for every case that did not match an earlier condition."
+      },
+      {
+        "id": "q4",
+        "question": "Why test edge cases?",
+        "options": ["To catch unusual inputs", "To slow the line", "To remove bins", "To avoid sorting"],
+        "answer_index": 0,
+        "explanation": "Edge cases reveal rules that fail for unusual or unexpected items."
+      },
+      {
+        "id": "q5",
+        "question": "What is a default rule for?",
+        "options": ["Handling unmatched items", "Stopping the line", "Painting widgets", "Counting workers"],
+        "answer_index": 0,
+        "explanation": "A default rule catches items that no specific rule matched."
+      },
+      {
+        "id": "q6",
+        "question": "What does `elif` allow?",
+        "options": ["Another condition to check", "A loop", "A function", "A comment"],
+        "answer_index": 0,
+        "explanation": "elif lets you test another condition when the previous one was false."
+      }
+    ]
+  },
+  "time_travel_paradox": {
+    "concept_id": "18_time_travel_paradox",
+    "learning_target": "sequence, conditions, and cause/effect",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is cause and effect?",
+        "options": ["One event leads to another", "Two unrelated events", "A random result", "A type of loop"],
+        "answer_index": 0,
+        "explanation": "A cause produces an effect, linking events in a chain."
+      },
+      {
+        "id": "q2",
+        "question": "If event B depends on event A, which comes first?",
+        "options": ["A", "B", "Either", "Neither"],
+        "answer_index": 0,
+        "explanation": "A dependency means the prerequisite event must happen first."
+      },
+      {
+        "id": "q3",
+        "question": "What is a paradox?",
+        "options": ["A contradiction in the timeline", "A correct sequence", "A variable", "A loop"],
+        "answer_index": 0,
+        "explanation": "A paradox is a self-contradictory situation that cannot be resolved normally."
+      },
+      {
+        "id": "q4",
+        "question": "Which condition helps prevent a paradox?",
+        "options": ["Checking that the past is unchanged", "Ignoring all events", "Repeating the same event", "Deleting the timeline"],
+        "answer_index": 0,
+        "explanation": "Verifying that earlier events remain consistent protects the timeline."
+      },
+      {
+        "id": "q5",
+        "question": "What does a timeline sequence show?",
+        "options": ["The order of events", "The color of time", "The number of characters", "The file size"],
+        "answer_index": 0,
+        "explanation": "A timeline orders events from earliest to latest."
+      },
+      {
+        "id": "q6",
+        "question": "Why trace dependencies?",
+        "options": ["To find the correct order", "To make time travel faster", "To avoid all conditions", "To change history"],
+        "answer_index": 0,
+        "explanation": "Tracing dependencies reveals which events must happen before others."
+      }
+    ]
+  },
+  "vampire_castle_escape": {
+    "concept_id": "19_vampire_castle_escape",
+    "learning_target": "variable declaration and assignment",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a variable?",
+        "options": ["A named storage location", "A fixed number", "A type of door", "A comment"],
+        "answer_index": 0,
+        "explanation": "A variable stores a value under a name so it can be used later."
+      },
+      {
+        "id": "q2",
+        "question": "Which line declares a variable?",
+        "options": ["keys = 0", "keys == 0", "0 = keys", "keys(0)"],
+        "answer_index": 0,
+        "explanation": "A single equals sign assigns the value 0 to the variable keys."
+      },
+      {
+        "id": "q3",
+        "question": "What does `keys = keys + 1` do?",
+        "options": ["Increases keys by 1", "Sets keys to 1 always", "Decreases keys", "Deletes keys"],
+        "answer_index": 0,
+        "explanation": "The old value is read, incremented by one, and stored back."
+      },
+      {
+        "id": "q4",
+        "question": "Which is a good variable name?",
+        "options": ["gate_open", "g", "123", "open gate"],
+        "answer_index": 0,
+        "explanation": "A descriptive name with an underscore is readable and valid."
+      },
+      {
+        "id": "q5",
+        "question": "What happens if you use a variable before assigning it?",
+        "options": ["An error may occur", "It becomes zero", "It becomes true", "Nothing happens"],
+        "answer_index": 0,
+        "explanation": "Python raises an error when a name has no assigned value yet."
+      },
+      {
+        "id": "q6",
+        "question": "Why assign a value?",
+        "options": ["To store data for later use", "To decorate the castle", "To open every door", "To avoid logic"],
+        "answer_index": 0,
+        "explanation": "Assignment gives a variable the data it will hold during the program."
+      }
+    ]
+  },
+  "alien_laboratory": {
+    "concept_id": "20_alien_laboratory",
+    "learning_target": "function definitions and parameters",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a function definition?",
+        "options": ["A reusable block with a name", "A one-time value", "A type of alien", "A loop"],
+        "answer_index": 0,
+        "explanation": "A definition names a reusable block of code and lists its parameters."
+      },
+      {
+        "id": "q2",
+        "question": "What does a parameter do?",
+        "options": ["Passes data into a function", "Names the file", "Stops the function", "Prints the result"],
+        "answer_index": 0,
+        "explanation": "Parameters receive the arguments supplied when the function is called."
+      },
+      {
+        "id": "q3",
+        "question": "Which is a valid function call with an argument?",
+        "options": ["classify('safe')", "classify['safe']", "classify = 'safe'", "def classify('safe')"],
+        "answer_index": 0,
+        "explanation": "A call uses the function name followed by parentheses containing the argument."
+      },
+      {
+        "id": "q4",
+        "question": "What does `return` provide?",
+        "options": ["The function's output", "A new loop", "A comment", "A global variable only"],
+        "answer_index": 0,
+        "explanation": "return sends a value back to the code that called the function."
+      },
+      {
+        "id": "q5",
+        "question": "Why use parameters instead of hard-coding values?",
+        "options": ["To reuse the function with different values", "To make the code longer", "To avoid all results", "To hide the function"],
+        "answer_index": 0,
+        "explanation": "Parameters make one function flexible enough to handle many inputs."
+      },
+      {
+        "id": "q6",
+        "question": "What is a function's body?",
+        "options": ["The indented code it runs", "Its name", "Its parameters", "Its return type only"],
+        "answer_index": 0,
+        "explanation": "The body is the indented block executed when the function is called."
+      }
+    ]
+  },
+  "supermarket_cashier_rush": {
+    "concept_id": "21_supermarket_cashier_rush",
+    "learning_target": "arithmetic and order of operations",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is `2 + 3 * 4`?",
+        "options": ["14", "20", "24", "10"],
+        "answer_index": 0,
+        "explanation": "Multiplication happens before addition, so 3 * 4 is 12 and 2 + 12 is 14."
+      },
+      {
+        "id": "q2",
+        "question": "What is `(2 + 3) * 4`?",
+        "options": ["20", "14", "24", "10"],
+        "answer_index": 0,
+        "explanation": "Parentheses are evaluated first, giving 5 * 4 = 20."
+      },
+      {
+        "id": "q3",
+        "question": "If one item costs 3 and you buy 4, what is the total?",
+        "options": ["12", "7", "34", "1"],
+        "answer_index": 0,
+        "explanation": "Four items at 3 each cost 4 * 3 = 12."
+      },
+      {
+        "id": "q4",
+        "question": "You pay 20 for a 14 total. What is the change?",
+        "options": ["6", "4", "34", "16"],
+        "answer_index": 0,
+        "explanation": "Change is the amount paid minus the total: 20 - 14 = 6."
+      },
+      {
+        "id": "q5",
+        "question": "What does `//` do in Python?",
+        "options": ["Floor division", "Addition", "Multiplication", "Remainder"],
+        "answer_index": 0,
+        "explanation": "The // operator divides and rounds down to a whole number."
+      },
+      {
+        "id": "q6",
+        "question": "What is `10 % 3`?",
+        "options": ["1", "3", "0", "10"],
+        "answer_index": 0,
+        "explanation": "The % operator returns the remainder after division, which is 1."
+      }
+    ]
+  },
+  "ninja_shadow_stealth": {
+    "concept_id": "22_ninja_shadow_stealth",
+    "learning_target": "decision trees and branching choices",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a decision tree?",
+        "options": ["A map of choices and outcomes", "A list of numbers", "A type of sword", "A loop"],
+        "answer_index": 0,
+        "explanation": "A decision tree branches from each choice toward its possible outcome."
+      },
+      {
+        "id": "q2",
+        "question": "What should a stealth choice consider?",
+        "options": ["Guard position and safe paths", "The color of the roof", "The number of stars", "The font size"],
+        "answer_index": 0,
+        "explanation": "Guard positions and safe routes determine whether a move avoids detection."
+      },
+      {
+        "id": "q3",
+        "question": "What does a branch represent?",
+        "options": ["A possible choice", "A fixed result", "A variable", "A comment"],
+        "answer_index": 0,
+        "explanation": "Each branch is one possible choice and the path that follows it."
+      },
+      {
+        "id": "q4",
+        "question": "If a guard is looking left, which side is safer?",
+        "options": ["Behind the guard", "In front of the guard", "Directly under the guard", "In the guard's line of sight"],
+        "answer_index": 0,
+        "explanation": "Staying behind the guard keeps you outside their line of sight."
+      },
+      {
+        "id": "q5",
+        "question": "Why plan before moving?",
+        "options": ["To avoid detection", "To make noise", "To drop items", "To change the question"],
+        "answer_index": 0,
+        "explanation": "Planning the route reduces the chance of walking into a guard's view."
+      },
+      {
+        "id": "q6",
+        "question": "What is a safe fallback?",
+        "options": ["A hidden exit", "A loud alarm", "A dead end", "A guard post"],
+        "answer_index": 0,
+        "explanation": "A hidden exit gives a safe route if the main plan fails."
+      }
+    ]
+  },
+  "magic_spell_caster": {
+    "concept_id": "23_magic_spell_caster",
+    "learning_target": "syntax structure and command matching",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which spell call is valid?",
+        "options": ["cast('fire')", "cast['fire']", "cast = 'fire'", "cast 'fire'"],
+        "answer_index": 0,
+        "explanation": "A function call uses parentheses around its string argument."
+      },
+      {
+        "id": "q2",
+        "question": "What does a syntax error mean?",
+        "options": ["The code breaks the language rules", "The spell is too strong", "The screen is dark", "The answer is correct"],
+        "answer_index": 0,
+        "explanation": "A syntax error means the code is not written in a form the language accepts."
+      },
+      {
+        "id": "q3",
+        "question": "Which line has matching brackets?",
+        "options": ["spell(3)", "spell[3)", "spell(3]", "spell{3)"],
+        "answer_index": 0,
+        "explanation": "The opening parenthesis must be closed by a matching closing parenthesis."
+      },
+      {
+        "id": "q4",
+        "question": "What does a function argument do?",
+        "options": ["Provides input to the spell", "Names the wizard", "Ends the game", "Changes the language"],
+        "answer_index": 0,
+        "explanation": "An argument supplies a value that the function uses when it runs."
+      },
+      {
+        "id": "q5",
+        "question": "Why match command names exactly?",
+        "options": ["The computer looks for the exact name", "It makes the spell prettier", "It increases mana", "It avoids all errors"],
+        "answer_index": 0,
+        "explanation": "Names are case-sensitive and must match the defined function exactly."
+      },
+      {
+        "id": "q6",
+        "question": "What should you check first in a broken spell?",
+        "options": ["Brackets and quotes", "The background color", "The music volume", "The player's name"],
+        "answer_index": 0,
+        "explanation": "Unmatched brackets or quotes are common causes of syntax errors."
+      }
+    ]
+  },
+  "volcano_evacuation": {
+    "concept_id": "24_volcano_evacuation",
+    "learning_target": "loops and repeated movement",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a loop help do during an evacuation?",
+        "options": ["Repeat safe movement for each group", "Move only one person", "Stop the evacuation", "Change the map"],
+        "answer_index": 0,
+        "explanation": "A loop applies the same safe steps to every person or group."
+      },
+      {
+        "id": "q2",
+        "question": "How many times does `for person in group:` run?",
+        "options": ["Once per person", "Once total", "Twice total", "Never"],
+        "answer_index": 0,
+        "explanation": "A for loop over a group runs once for each member of the group."
+      },
+      {
+        "id": "q3",
+        "question": "What should a loop check each iteration?",
+        "options": ["Whether the person is safe", "The color of the lava", "The file name", "The font size"],
+        "answer_index": 0,
+        "explanation": "Checking safety each time ensures no one is left behind."
+      },
+      {
+        "id": "q4",
+        "question": "What is an infinite loop?",
+        "options": ["A loop that never ends", "A loop that runs once", "A loop with no body", "A variable"],
+        "answer_index": 0,
+        "explanation": "An infinite loop never reaches a stopping condition."
+      },
+      {
+        "id": "q5",
+        "question": "Why use a loop for groups?",
+        "options": ["To avoid writing the same step repeatedly", "To make the code longer", "To increase the lava", "To skip safety"],
+        "answer_index": 0,
+        "explanation": "A loop removes duplication and applies the same steps consistently."
+      },
+      {
+        "id": "q6",
+        "question": "What is the safest order?",
+        "options": ["Alert, move, check", "Move, alert, ignore", "Check, stop, move", "Ignore, move, alert"],
+        "answer_index": 0,
+        "explanation": "Alerting first, then moving, then checking keeps the group informed and safe."
+      }
+    ]
+  },
+  "cyberpunk_courier": {
+    "concept_id": "25_cyberpunk_courier",
+    "learning_target": "API endpoint concepts and data routing",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is an API endpoint?",
+        "options": ["A URL where a service receives requests", "A type of package", "A delivery truck", "A password"],
+        "answer_index": 0,
+        "explanation": "An endpoint is a specific address where an API accepts requests."
+      },
+      {
+        "id": "q2",
+        "question": "What does a GET request usually do?",
+        "options": ["Retrieves data", "Deletes data", "Creates a user", "Encrypts a file"],
+        "answer_index": 0,
+        "explanation": "GET is used to read or retrieve data from a server."
+      },
+      {
+        "id": "q3",
+        "question": "What does a POST request usually do?",
+        "options": ["Sends data to create or update", "Reads only", "Deletes everything", "Changes the URL"],
+        "answer_index": 0,
+        "explanation": "POST sends data to the server, often to create or update a resource."
+      },
+      {
+        "id": "q4",
+        "question": "What does status code 404 mean?",
+        "options": ["Not found", "Success", "Server error", "Unauthorized"],
+        "answer_index": 0,
+        "explanation": "404 means the requested resource could not be found."
+      },
+      {
+        "id": "q5",
+        "question": "Why validate a route before sending?",
+        "options": ["To avoid delivering to the wrong endpoint", "To make the package heavier", "To slow the network", "To change the city"],
+        "answer_index": 0,
+        "explanation": "Validating the endpoint prevents misdelivered or rejected requests."
+      },
+      {
+        "id": "q6",
+        "question": "What is a payload?",
+        "options": ["The data sent in a request", "The delivery address", "The courier's name", "The response time"],
+        "answer_index": 0,
+        "explanation": "The payload is the body of data carried by a request."
+      }
+    ]
+  },
+  "haunted_mansion_explorer": {
+    "concept_id": "26_haunted_mansion_explorer",
+    "learning_target": "flowcharts and branching logic",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a branch in a flowchart do?",
+        "options": ["Chooses a path based on a condition", "Repeats forever", "Ends the chart", "Stores a ghost"],
+        "answer_index": 0,
+        "explanation": "A branch checks a condition and follows the matching path."
+      },
+      {
+        "id": "q2",
+        "question": "What should you do before opening a door?",
+        "options": ["Check the clue or condition", "Run through it", "Turn off the lights", "Ignore the flowchart"],
+        "answer_index": 0,
+        "explanation": "Checking the clue first avoids a wrong or unsafe choice."
+      },
+      {
+        "id": "q3",
+        "question": "What is a loop in a mansion map?",
+        "options": ["A path that returns to a previous room", "A one-way exit", "A locked door", "A ghost"],
+        "answer_index": 0,
+        "explanation": "A loop leads back to a room already visited."
+      },
+      {
+        "id": "q4",
+        "question": "Why track visited rooms?",
+        "options": ["To avoid getting lost", "To make the map darker", "To scare the ghosts", "To skip clues"],
+        "answer_index": 0,
+        "explanation": "Tracking rooms prevents repeating the same path and reveals dead ends."
+      },
+      {
+        "id": "q5",
+        "question": "What does a decision diamond represent?",
+        "options": ["A choice with different outcomes", "A fixed action", "A start point", "An end point"],
+        "answer_index": 0,
+        "explanation": "A diamond marks a decision with multiple possible outcomes."
+      },
+      {
+        "id": "q6",
+        "question": "What is a safe exorcism step?",
+        "options": ["Follow the approved sequence", "Guess randomly", "Skip all clues", "Break the flowchart"],
+        "answer_index": 0,
+        "explanation": "Following the approved sequence keeps the process controlled and safe."
+      }
+    ]
+  },
+  "desert_oasis_survival": {
+    "concept_id": "27_desert_oasis_survival",
+    "learning_target": "resource allocation and algorithmic choices",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is resource allocation?",
+        "options": ["Deciding how to distribute limited supplies", "Using all water at once", "Ignoring the map", "Changing the weather"],
+        "answer_index": 0,
+        "explanation": "Allocation is the plan for sharing limited resources among competing needs."
+      },
+      {
+        "id": "q2",
+        "question": "If you have 10 water and 5 days, how much per day if split evenly?",
+        "options": ["2", "5", "10", "1"],
+        "answer_index": 0,
+        "explanation": "Ten units divided across five days gives two per day."
+      },
+      {
+        "id": "q3",
+        "question": "What should a route plan prioritize?",
+        "options": ["Water and safe stops", "The shortest name", "The brightest color", "The most turns"],
+        "answer_index": 0,
+        "explanation": "Water and safe stopping points are essential for survival."
+      },
+      {
+        "id": "q4",
+        "question": "What is a trade-off?",
+        "options": ["Giving up one benefit for another", "Getting everything for free", "A type of oasis", "A weather event"],
+        "answer_index": 0,
+        "explanation": "A trade-off means accepting a disadvantage to gain a different benefit."
+      },
+      {
+        "id": "q5",
+        "question": "Why track supplies?",
+        "options": ["To avoid running out", "To make the desert colder", "To increase the sun", "To skip the oasis"],
+        "answer_index": 0,
+        "explanation": "Tracking supplies shows when to ration or resupply before they run out."
+      },
+      {
+        "id": "q6",
+        "question": "What is a safe reserve?",
+        "options": ["Extra supplies for emergencies", "Water used first", "An empty pack", "A random guess"],
+        "answer_index": 0,
+        "explanation": "A reserve is kept aside for unexpected delays or emergencies."
+      }
+    ]
+  },
+  "circus_acrobatics": {
+    "concept_id": "28_circus_acrobatics",
+    "learning_target": "loop bounds and iteration",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a loop bound?",
+        "options": ["The limit that stops a loop", "The first trick", "The audience size", "The tent color"],
+        "answer_index": 0,
+        "explanation": "The bound determines when the loop stops repeating."
+      },
+      {
+        "id": "q2",
+        "question": "How many flips does `for i in range(3):` perform?",
+        "options": ["3", "1", "2", "4"],
+        "answer_index": 0,
+        "explanation": "range(3) produces three iterations, so the loop performs three flips."
+      },
+      {
+        "id": "q3",
+        "question": "What happens if the bound is too high?",
+        "options": ["The performer may overshoot", "The loop runs once", "Nothing happens", "The code gets shorter"],
+        "answer_index": 0,
+        "explanation": "Too many iterations can carry the action past the intended landing point."
+      },
+      {
+        "id": "q4",
+        "question": "What is an iteration?",
+        "options": ["One pass through a loop", "The final landing", "A type of rope", "A costume"],
+        "answer_index": 0,
+        "explanation": "Each repetition of the loop body is one iteration."
+      },
+      {
+        "id": "q5",
+        "question": "Which loop is safest for a fixed number of flips?",
+        "options": ["for", "while True", "if", "def"],
+        "answer_index": 0,
+        "explanation": "A for loop with a known range guarantees a fixed number of repetitions."
+      },
+      {
+        "id": "q6",
+        "question": "Why check the landing after each iteration?",
+        "options": ["To stay safe", "To make the loop longer", "To change the music", "To avoid counting"],
+        "answer_index": 0,
+        "explanation": "Checking after each pass catches a bad landing before the next trick."
+      }
+    ]
+  },
+  "royal_court_advisor": {
+    "concept_id": "29_royal_court_advisor",
+    "learning_target": "flowcharts and conditional reasoning",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a policy decision?",
+        "options": ["A choice with consequences", "A fixed rule", "A type of castle", "A variable"],
+        "answer_index": 0,
+        "explanation": "A policy decision chooses an action that affects people and future outcomes."
+      },
+      {
+        "id": "q2",
+        "question": "What does a condition check?",
+        "options": ["Whether something is true", "The color of the throne", "The number of guards", "The king's name"],
+        "answer_index": 0,
+        "explanation": "A condition evaluates to true or false and controls which branch runs."
+      },
+      {
+        "id": "q3",
+        "question": "Why consider consequences?",
+        "options": ["To choose a better policy", "To make the flowchart longer", "To avoid all decisions", "To change the weather"],
+        "answer_index": 0,
+        "explanation": "Thinking through consequences leads to more informed decisions."
+      },
+      {
+        "id": "q4",
+        "question": "What is a trade-off in policy?",
+        "options": ["Balancing competing needs", "Getting everything at once", "Ignoring the people", "A type of crown"],
+        "answer_index": 0,
+        "explanation": "Policy often requires balancing benefits for one group against costs to another."
+      },
+      {
+        "id": "q5",
+        "question": "Which branch handles an unmet condition?",
+        "options": ["else", "if", "start", "end"],
+        "answer_index": 0,
+        "explanation": "The else branch runs when the if condition is false."
+      },
+      {
+        "id": "q6",
+        "question": "What makes advice reliable?",
+        "options": ["Evidence and clear reasoning", "A loud voice", "A lucky guess", "A long speech"],
+        "answer_index": 0,
+        "explanation": "Reliable advice is supported by evidence and a clear chain of reasoning."
+      }
+    ]
+  },
+  "gladiator_arena_builder": {
+    "concept_id": "30_gladiator_arena_builder",
+    "learning_target": "arrays and indexes",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is an array?",
+        "options": ["An ordered list of values", "A single number", "A type of arena", "A loop"],
+        "answer_index": 0,
+        "explanation": "An array stores multiple values in a defined order."
+      },
+      {
+        "id": "q2",
+        "question": "What is the index of the first item in most programming languages?",
+        "options": ["0", "1", "-1", "10"],
+        "answer_index": 0,
+        "explanation": "Most languages, including Python, start array indexes at zero."
+      },
+      {
+        "id": "q3",
+        "question": "In `units = ['archer', 'guard', 'healer']`, what is `units[1]`?",
+        "options": ["guard", "archer", "healer", "1"],
+        "answer_index": 0,
+        "explanation": "Index 0 is archer, so index 1 is guard."
+      },
+      {
+        "id": "q4",
+        "question": "What does `units[0] = 'mage'` do?",
+        "options": ["Replaces the first item", "Adds a new item", "Deletes the list", "Sorts the list"],
+        "answer_index": 0,
+        "explanation": "Assigning to index 0 replaces the value stored at the first position."
+      },
+      {
+        "id": "q5",
+        "question": "How many items are in a four-element array?",
+        "options": ["4", "3", "5", "0"],
+        "answer_index": 0,
+        "explanation": "A four-element array contains exactly four values."
+      },
+      {
+        "id": "q6",
+        "question": "Why use indexes?",
+        "options": ["To access a specific position", "To make the arena larger", "To avoid lists", "To change the language"],
+        "answer_index": 0,
+        "explanation": "Indexes let you read or change one specific item in an array."
+      }
+    ]
+  },
+  "deep_sea_abyssal_dive": {
+    "concept_id": "31_deep_sea_abyssal_dive",
+    "learning_target": "error handling and recovery",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is error handling?",
+        "options": ["Planning for and recovering from failures", "Ignoring all errors", "Making errors faster", "Deleting the code"],
+        "answer_index": 0,
+        "explanation": "Error handling detects failures and defines a safe response."
+      },
+      {
+        "id": "q2",
+        "question": "What does a `try` block do?",
+        "options": ["Runs code that might fail", "Always fails", "Stops the program", "Creates a loop"],
+        "answer_index": 0,
+        "explanation": "A try block contains code that may raise an exception."
+      },
+      {
+        "id": "q3",
+        "question": "What does an `except` block handle?",
+        "options": ["An error raised in the try block", "A normal result", "A comment", "A variable"],
+        "answer_index": 0,
+        "explanation": "The except block runs when the matching exception occurs."
+      },
+      {
+        "id": "q4",
+        "question": "What should you do first when a leak is detected?",
+        "options": ["Locate and isolate it", "Ignore it", "Surface immediately", "Increase speed"],
+        "answer_index": 0,
+        "explanation": "Finding and isolating the leak prevents further damage."
+      },
+      {
+        "id": "q5",
+        "question": "Why log errors?",
+        "options": ["To diagnose and prevent repeats", "To make the log longer", "To hide the problem", "To change the pressure"],
+        "answer_index": 0,
+        "explanation": "Error logs preserve details that help diagnose and prevent future failures."
+      },
+      {
+        "id": "q6",
+        "question": "What is a safe fallback?",
+        "options": ["Return to a stable depth", "Keep diving deeper", "Disable alarms", "Open all valves"],
+        "answer_index": 0,
+        "explanation": "Returning to a stable depth reduces pressure and gives time to repair."
+      }
+    ]
+  },
+  "candy_factory_conveyor": {
+    "concept_id": "32_candy_factory_conveyor",
+    "learning_target": "conditionals and comparisons",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does `if shape == 'star':` do?",
+        "options": ["Runs the block for star-shaped sweets", "Runs for all shapes", "Creates a star", "Stops the conveyor"],
+        "answer_index": 0,
+        "explanation": "The block runs only when the shape equals star."
+      },
+      {
+        "id": "q2",
+        "question": "Which comparison checks whether size is greater than 5?",
+        "options": ["size > 5", "size = 5", "size < 5", "size != 5"],
+        "answer_index": 0,
+        "explanation": "The > operator is true when size is greater than 5."
+      },
+      {
+        "id": "q3",
+        "question": "What does an `else` block do?",
+        "options": ["Handles all other shapes", "Handles only stars", "Stops the line", "Creates a new shape"],
+        "answer_index": 0,
+        "explanation": "else catches every case not matched by earlier conditions."
+      },
+      {
+        "id": "q4",
+        "question": "Why sort by shape and size?",
+        "options": ["To send each sweet to the right bin", "To make the candy sweeter", "To slow the conveyor", "To change the colors"],
+        "answer_index": 0,
+        "explanation": "Multiple properties make the sorting rule more precise."
+      },
+      {
+        "id": "q5",
+        "question": "What is a comparison operator?",
+        "options": ["A symbol that compares values", "A type of candy", "A conveyor belt", "A bin"],
+        "answer_index": 0,
+        "explanation": "Operators such as >, < and == compare two values."
+      },
+      {
+        "id": "q6",
+        "question": "What should happen to an unrecognized shape?",
+        "options": ["Send it to a review bin", "Crush it immediately", "Ignore it", "Paint it red"],
+        "answer_index": 0,
+        "explanation": "A review bin keeps unmatched items from being lost or mishandled."
+      }
+    ]
+  },
+  "eco_park_conservation": {
+    "concept_id": "33_eco_park_conservation",
+    "learning_target": "flowcharts and systems reasoning",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a system?",
+        "options": ["Parts that interact as a whole", "A single animal", "A type of tree", "A random event"],
+        "answer_index": 0,
+        "explanation": "A system is a set of connected parts whose interactions shape the whole."
+      },
+      {
+        "id": "q2",
+        "question": "What does a flowchart help show?",
+        "options": ["How choices affect the system", "The color of the park", "The number of visitors", "The ticket price"],
+        "answer_index": 0,
+        "explanation": "A flowchart traces how a choice leads to later effects."
+      },
+      {
+        "id": "q3",
+        "question": "What is a feedback loop?",
+        "options": ["An effect that influences the next cycle", "A one-time event", "A type of habitat", "A map"],
+        "answer_index": 0,
+        "explanation": "In a feedback loop, the result of one cycle changes the next cycle."
+      },
+      {
+        "id": "q4",
+        "question": "Why monitor wildlife numbers?",
+        "options": ["To keep the ecosystem balanced", "To make the park louder", "To reduce all plants", "To avoid decisions"],
+        "answer_index": 0,
+        "explanation": "Monitoring reveals whether populations stay within a healthy range."
+      },
+      {
+        "id": "q5",
+        "question": "What is a safe intervention?",
+        "options": ["A small change with monitoring", "A massive untested change", "No monitoring", "Removing all species"],
+        "answer_index": 0,
+        "explanation": "Small, monitored changes are easier to reverse if something goes wrong."
+      },
+      {
+        "id": "q6",
+        "question": "What does a condition check in a conservation plan?",
+        "options": ["Whether a population is in range", "The color of the grass", "The number of signs", "The weather forecast only"],
+        "answer_index": 0,
+        "explanation": "The condition compares a measurement with a healthy target range."
+      }
+    ]
+  },
+  "retro_arcade_ponger": {
+    "concept_id": "34_retro_arcade_ponger",
+    "learning_target": "velocity variables and simple physics",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is velocity?",
+        "options": ["Speed in a direction", "A fixed position", "A type of paddle", "A score"],
+        "answer_index": 0,
+        "explanation": "Velocity describes how fast and in which direction an object moves."
+      },
+      {
+        "id": "q2",
+        "question": "If velocity is negative, which way does the ball move?",
+        "options": ["Left or down, depending on the axis", "Always right", "Always up", "Nowhere"],
+        "answer_index": 0,
+        "explanation": "A negative value moves opposite the positive direction of that axis."
+      },
+      {
+        "id": "q3",
+        "question": "What happens when the ball hits a wall?",
+        "options": ["Its direction reverses", "It speeds up forever", "It disappears", "It stops"],
+        "answer_index": 0,
+        "explanation": "A bounce reverses the velocity component perpendicular to the wall."
+      },
+      {
+        "id": "q4",
+        "question": "What does `x = x + vx` do?",
+        "options": ["Moves the ball by its velocity", "Sets x to zero", "Deletes vx", "Changes the score"],
+        "answer_index": 0,
+        "explanation": "Adding the velocity to the position updates where the ball is next."
+      },
+      {
+        "id": "q5",
+        "question": "Why cap the speed?",
+        "options": ["To keep the game playable", "To make the ball invisible", "To remove the paddle", "To end the game"],
+        "answer_index": 0,
+        "explanation": "A speed cap prevents the ball from becoming too fast to react to."
+      },
+      {
+        "id": "q6",
+        "question": "What is a collision?",
+        "options": ["When two objects touch", "A type of score", "A velocity value", "A wall color"],
+        "answer_index": 0,
+        "explanation": "A collision occurs when two objects overlap or touch."
+      }
+    ]
+  },
+  "weather_station_forecaster": {
+    "concept_id": "35_weather_station_forecaster",
+    "learning_target": "numeric thresholds and comparisons",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a threshold?",
+        "options": ["A boundary value that triggers a decision", "A type of cloud", "A thermometer", "A forecast"],
+        "answer_index": 0,
+        "explanation": "A threshold is the boundary where a condition changes from false to true."
+      },
+      {
+        "id": "q2",
+        "question": "If the threshold is 30 and the reading is 32, which branch runs?",
+        "options": ["The above-threshold branch", "The below-threshold branch", "Neither", "Both"],
+        "answer_index": 0,
+        "explanation": "32 is above 30, so the above-threshold branch is selected."
+      },
+      {
+        "id": "q3",
+        "question": "Which comparison means \"at least 30\"?",
+        "options": [">= 30", "> 30", "< 30", "== 30"],
+        "answer_index": 0,
+        "explanation": "The >= operator includes values equal to 30 as well as larger ones."
+      },
+      {
+        "id": "q4",
+        "question": "Why use thresholds?",
+        "options": ["To make consistent decisions", "To change the weather", "To avoid all data", "To make the station louder"],
+        "answer_index": 0,
+        "explanation": "Thresholds turn raw readings into consistent, repeatable decisions."
+      },
+      {
+        "id": "q5",
+        "question": "What should you do with a reading exactly at the threshold?",
+        "options": ["Use the inclusive rule you defined", "Ignore it", "Always forecast rain", "Delete it"],
+        "answer_index": 0,
+        "explanation": "The comparison operator decides whether the boundary value is included."
+      },
+      {
+        "id": "q6",
+        "question": "What is a false alarm?",
+        "options": ["A warning when no danger exists", "A correct forecast", "A missing sensor", "A calm day"],
+        "answer_index": 0,
+        "explanation": "A false alarm warns about a condition that is not actually present."
+      }
+    ]
+  },
+  "museum_heist_puzzle": {
+    "concept_id": "36_museum_heist_puzzle",
+    "learning_target": "flowcharts and path planning",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is path planning?",
+        "options": ["Choosing a route to a goal", "A random walk", "A type of alarm", "A display case"],
+        "answer_index": 0,
+        "explanation": "Path planning selects a sequence of moves that reaches the goal."
+      },
+      {
+        "id": "q2",
+        "question": "What should a safe path avoid?",
+        "options": ["Laser sensors and guards", "The exit", "The display", "The floor"],
+        "answer_index": 0,
+        "explanation": "Avoiding sensors and guards keeps the path undetected."
+      },
+      {
+        "id": "q3",
+        "question": "What does a decision point do?",
+        "options": ["Offers alternative routes", "Stops the plan", "Ends the heist", "Creates a laser"],
+        "answer_index": 0,
+        "explanation": "A decision point is where the path can branch to another route."
+      },
+      {
+        "id": "q4",
+        "question": "Why scout before moving?",
+        "options": ["To learn the sensor pattern", "To trigger alarms", "To make noise", "To skip the goal"],
+        "answer_index": 0,
+        "explanation": "Scouting reveals timing and safe gaps in the security pattern."
+      },
+      {
+        "id": "q5",
+        "question": "What is a fallback route?",
+        "options": ["A backup path if the first fails", "The main path", "A dead end", "A type of camera"],
+        "answer_index": 0,
+        "explanation": "A fallback route provides an alternative if the primary path is blocked."
+      },
+      {
+        "id": "q6",
+        "question": "What makes a plan reliable?",
+        "options": ["Clear steps and contingencies", "A lucky guess", "Ignoring the map", "Running straight ahead"],
+        "answer_index": 0,
+        "explanation": "Clear steps plus backup plans make the outcome more predictable."
+      }
+    ]
+  },
+  "airport_flight_control": {
+    "concept_id": "37_airport_flight_control",
+    "learning_target": "queues and sequencing",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a queue?",
+        "options": ["A first-in, first-out line", "A random pile", "A type of plane", "A runway"],
+        "answer_index": 0,
+        "explanation": "A queue removes items in the same order they were added."
+      },
+      {
+        "id": "q2",
+        "question": "Which plane should land first in a FIFO queue?",
+        "options": ["The one that arrived first", "The one with the most fuel", "The largest plane", "A random plane"],
+        "answer_index": 0,
+        "explanation": "FIFO means first in, first out, so the earliest arrival goes first."
+      },
+      {
+        "id": "q3",
+        "question": "What does sequencing ensure?",
+        "options": ["The correct order of operations", "More planes", "Faster fuel burn", "Random arrivals"],
+        "answer_index": 0,
+        "explanation": "Sequencing puts operations in a safe, intentional order."
+      },
+      {
+        "id": "q4",
+        "question": "Why separate arrivals and departures?",
+        "options": ["To avoid runway conflicts", "To make the airport louder", "To reduce the queue", "To change the weather"],
+        "answer_index": 0,
+        "explanation": "Separating flows prevents two aircraft from needing the same runway at once."
+      },
+      {
+        "id": "q5",
+        "question": "What is a priority queue?",
+        "options": ["A queue ordered by importance", "A queue with no order", "A type of runway", "A flight plan"],
+        "answer_index": 0,
+        "explanation": "A priority queue serves higher-priority items before lower-priority ones."
+      },
+      {
+        "id": "q6",
+        "question": "What should happen when a runway is busy?",
+        "options": ["Hold the next plane", "Land immediately", "Ignore the tower", "Double the speed"],
+        "answer_index": 0,
+        "explanation": "Holding the next plane prevents a collision on the runway."
+      }
+    ]
+  },
+  "baking_bakery_rush": {
+    "concept_id": "38_baking_bakery_rush",
+    "learning_target": "conditionals and thresholds",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does `if temperature > 200:` check?",
+        "options": ["Whether the oven is above 200", "Whether the oven is off", "Whether the cake is ready", "Whether the timer is set"],
+        "answer_index": 0,
+        "explanation": "The condition is true when the temperature is greater than 200."
+      },
+      {
+        "id": "q2",
+        "question": "What is a threshold in baking?",
+        "options": ["A target temperature or time", "A type of flour", "A mixing bowl", "A recipe name"],
+        "answer_index": 0,
+        "explanation": "A threshold is a boundary such as a minimum safe temperature or time."
+      },
+      {
+        "id": "q3",
+        "question": "What should happen if the timer reaches zero?",
+        "options": ["Remove the item", "Increase the heat", "Add more batter", "Ignore it"],
+        "answer_index": 0,
+        "explanation": "Removing the item at zero prevents over-baking."
+      },
+      {
+        "id": "q4",
+        "question": "Why use `elif`?",
+        "options": ["To check another condition", "To repeat the recipe", "To stop the oven", "To change the language"],
+        "answer_index": 0,
+        "explanation": "elif tests a second condition when the first one is false."
+      },
+      {
+        "id": "q5",
+        "question": "What is a safe range?",
+        "options": ["A minimum and maximum that avoid burning", "Any temperature", "Only the maximum", "Only the minimum"],
+        "answer_index": 0,
+        "explanation": "A safe range keeps the food between under- and over-baking limits."
+      },
+      {
+        "id": "q6",
+        "question": "What should you do before changing oven settings?",
+        "options": ["Check the recipe and current state", "Guess randomly", "Open all doors", "Turn everything off"],
+        "answer_index": 0,
+        "explanation": "Checking the recipe and current state prevents a harmful adjustment."
+      }
+    ]
+  },
+  "superhero_city_patrol": {
+    "concept_id": "39_superhero_city_patrol",
+    "learning_target": "vectors and directional movement",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a vector?",
+        "options": ["A quantity with direction and magnitude", "A fixed point", "A type of hero", "A city map"],
+        "answer_index": 0,
+        "explanation": "A vector combines a size with a direction."
+      },
+      {
+        "id": "q2",
+        "question": "If a distress call is north-east, which direction should you move?",
+        "options": ["North-east", "South-west", "North-west", "South-east"],
+        "answer_index": 0,
+        "explanation": "The response vector should point toward the call's location."
+      },
+      {
+        "id": "q3",
+        "question": "What does a negative y component usually mean?",
+        "options": ["South or down", "North or up", "East", "West"],
+        "answer_index": 0,
+        "explanation": "On a standard screen, negative y points downward or south."
+      },
+      {
+        "id": "q4",
+        "question": "Why choose the fastest safe route?",
+        "options": ["To reach the emergency sooner", "To take longer", "To avoid all roads", "To change the vector"],
+        "answer_index": 0,
+        "explanation": "A faster safe route reduces the time someone waits for help."
+      },
+      {
+        "id": "q5",
+        "question": "What is magnitude?",
+        "options": ["The length or strength of a vector", "The direction only", "A type of map", "A hero name"],
+        "answer_index": 0,
+        "explanation": "Magnitude measures how large the vector is, independent of direction."
+      },
+      {
+        "id": "q6",
+        "question": "What should you do if a route is blocked?",
+        "options": ["Choose an alternate vector", "Keep going straight", "Stop patrolling", "Ignore the call"],
+        "answer_index": 0,
+        "explanation": "An alternate vector lets you route around the obstruction."
+      }
+    ]
+  },
+  "ghost_train_conductor": {
+    "concept_id": "40_ghost_train_conductor",
+    "learning_target": "flowchart paths and branching",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a branch do in a train flowchart?",
+        "options": ["Chooses a track based on a condition", "Stops all trains", "Creates a station", "Paints the train"],
+        "answer_index": 0,
+        "explanation": "A branch selects one track when its condition is met."
+      },
+      {
+        "id": "q2",
+        "question": "What should a conductor check before switching tracks?",
+        "options": ["Whether the track is clear", "The color of the train", "The number of passengers", "The station name only"],
+        "answer_index": 0,
+        "explanation": "Checking that the track is clear prevents collisions."
+      },
+      {
+        "id": "q3",
+        "question": "What is a loop in a rail plan?",
+        "options": ["A route that returns to a previous point", "A one-way trip", "A broken switch", "A station"],
+        "answer_index": 0,
+        "explanation": "A loop brings the route back to a point it already visited."
+      },
+      {
+        "id": "q4",
+        "question": "Why label each branch?",
+        "options": ["To make the route easy to follow", "To hide the path", "To slow the train", "To avoid decisions"],
+        "answer_index": 0,
+        "explanation": "Labels make it clear which condition leads to which track."
+      },
+      {
+        "id": "q5",
+        "question": "What is a safe default if no branch matches?",
+        "options": ["Stop at a safe siding", "Speed up", "Take a random track", "Ignore the signal"],
+        "answer_index": 0,
+        "explanation": "Stopping at a siding avoids an uncontrolled or unsafe route."
+      },
+      {
+        "id": "q6",
+        "question": "What does a junction represent?",
+        "options": ["A point where paths split", "The end of the line", "A type of engine", "A passenger"],
+        "answer_index": 0,
+        "explanation": "A junction is where one route can continue along different tracks."
+      }
+    ]
+  },
+  "botanic_garden_growth": {
+    "concept_id": "41_botanic_garden_growth",
+    "learning_target": "syntax rules and ordered actions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which line is valid Python?",
+        "options": ["water(plant)", "water[plant]", "water = plant", "water plant"],
+        "answer_index": 0,
+        "explanation": "A function call uses parentheses around its argument."
+      },
+      {
+        "id": "q2",
+        "question": "Why does order matter in gardening code?",
+        "options": ["Later steps depend on earlier ones", "It changes the plant color", "It makes code shorter", "It removes the need for water"],
+        "answer_index": 0,
+        "explanation": "Pollination and growth steps depend on earlier preparation."
+      },
+      {
+        "id": "q3",
+        "question": "What does a syntax rule define?",
+        "options": ["How code must be written", "How plants grow", "The garden layout", "The weather"],
+        "answer_index": 0,
+        "explanation": "Syntax rules define the valid structure of a program."
+      },
+      {
+        "id": "q4",
+        "question": "What should you do before pollinating?",
+        "options": ["Check that the plant is ready", "Cut all flowers", "Remove the soil", "Ignore the schedule"],
+        "answer_index": 0,
+        "explanation": "Pollinating too early can fail, so check the plant's state first."
+      },
+      {
+        "id": "q5",
+        "question": "What is a function call?",
+        "options": ["Using a named action", "Declaring a variable", "Writing a comment", "Ending the program"],
+        "answer_index": 0,
+        "explanation": "A function call invokes a named block of code."
+      },
+      {
+        "id": "q6",
+        "question": "Why test one change at a time?",
+        "options": ["To see which change had an effect", "To make the garden larger", "To avoid all results", "To change the language"],
+        "answer_index": 0,
+        "explanation": "Changing one thing at a time makes the effect easy to identify."
+      }
+    ]
+  },
+  "mountain_peak_climber": {
+    "concept_id": "42_mountain_peak_climber",
+    "learning_target": "loop iterations and bounds",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a loop iteration?",
+        "options": ["One pass through the loop", "The final peak", "A type of rope", "A checkpoint"],
+        "answer_index": 0,
+        "explanation": "Each execution of the loop body is one iteration."
+      },
+      {
+        "id": "q2",
+        "question": "How many steps does `for i in range(4):` take?",
+        "options": ["4", "3", "5", "1"],
+        "answer_index": 0,
+        "explanation": "range(4) produces four iterations."
+      },
+      {
+        "id": "q3",
+        "question": "What happens if the loop bound is too low?",
+        "options": ["You stop before the goal", "You climb forever", "You fall", "Nothing happens"],
+        "answer_index": 0,
+        "explanation": "Too few iterations leave the climb short of the target."
+      },
+      {
+        "id": "q4",
+        "question": "What is a safe stopping point?",
+        "options": ["A checkpoint", "A random ledge", "The steepest slope", "The edge of a cliff"],
+        "answer_index": 0,
+        "explanation": "A checkpoint is a designed, safe place to pause."
+      },
+      {
+        "id": "q5",
+        "question": "Why check the bound before climbing?",
+        "options": ["To ensure enough steps", "To make the mountain taller", "To change the weather", "To avoid checkpoints"],
+        "answer_index": 0,
+        "explanation": "Checking the bound confirms the plan has enough iterations to reach the goal."
+      },
+      {
+        "id": "q6",
+        "question": "What is an off-by-one error?",
+        "options": ["A loop that runs one too many or too few times", "A missing mountain", "A type of rope", "A weather change"],
+        "answer_index": 0,
+        "explanation": "An off-by-one error is a boundary mistake of exactly one step."
+      }
+    ]
+  },
+  "pixel_art_restorer": {
+    "concept_id": "43_pixel_art_restorer",
+    "learning_target": "matrix coordinates and nested loops",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a matrix?",
+        "options": ["A grid of values", "A single pixel", "A type of brush", "A color"],
+        "answer_index": 0,
+        "explanation": "A matrix stores values arranged in rows and columns."
+      },
+      {
+        "id": "q2",
+        "question": "In a matrix, what does `grid[row][col]` access?",
+        "options": ["One cell", "A whole row", "The entire grid", "A color"],
+        "answer_index": 0,
+        "explanation": "The row and column indexes identify a single cell."
+      },
+      {
+        "id": "q3",
+        "question": "What does a nested loop do?",
+        "options": ["Loops over rows and columns", "Runs once", "Deletes the grid", "Creates a color"],
+        "answer_index": 0,
+        "explanation": "An outer loop handles rows and an inner loop handles columns."
+      },
+      {
+        "id": "q4",
+        "question": "If a grid is 3 by 4, how many cells does it have?",
+        "options": ["12", "7", "3", "4"],
+        "answer_index": 0,
+        "explanation": "Multiply rows by columns: 3 * 4 = 12 cells."
+      },
+      {
+        "id": "q5",
+        "question": "Why use nested loops for images?",
+        "options": ["To visit every pixel", "To make the image smaller", "To avoid coordinates", "To change the language"],
+        "answer_index": 0,
+        "explanation": "Nested loops visit each row and column, covering every pixel."
+      },
+      {
+        "id": "q6",
+        "question": "What is an index out of range?",
+        "options": ["Accessing a cell that does not exist", "A correct pixel", "A type of color", "A loop bound"],
+        "answer_index": 0,
+        "explanation": "An index out of range points outside the matrix's valid rows or columns."
+      }
+    ]
+  },
+  "wild_west_sheriff": {
+    "concept_id": "44_wild_west_sheriff",
+    "learning_target": "decision blocks and conditions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a decision block do?",
+        "options": ["Chooses an action based on a condition", "Always shoots", "Ends the story", "Creates a town"],
+        "answer_index": 0,
+        "explanation": "A decision block evaluates a condition and selects a response."
+      },
+      {
+        "id": "q2",
+        "question": "Which condition means \"the outlaw is unarmed\"?",
+        "options": ["not outlaw_armed", "outlaw_armed", "outlaw_armed == True", "outlaw_armed or True"],
+        "answer_index": 0,
+        "explanation": "The not operator reverses the Boolean, so not outlaw_armed is true when unarmed."
+      },
+      {
+        "id": "q3",
+        "question": "Why avoid unnecessary force?",
+        "options": ["To protect townsfolk", "To make more noise", "To end the game", "To ignore the law"],
+        "answer_index": 0,
+        "explanation": "Choosing the least forceful safe response protects bystanders."
+      },
+      {
+        "id": "q4",
+        "question": "What is a safe response to a distraction?",
+        "options": ["Check the situation first", "Fire blindly", "Run away always", "Ignore all clues"],
+        "answer_index": 0,
+        "explanation": "Gathering information before acting prevents avoidable harm."
+      },
+      {
+        "id": "q5",
+        "question": "What does an `else` block handle?",
+        "options": ["The remaining cases", "Only the first case", "No cases", "The loop"],
+        "answer_index": 0,
+        "explanation": "else covers every case not matched by earlier conditions."
+      },
+      {
+        "id": "q6",
+        "question": "Why document decisions?",
+        "options": ["To explain and review them", "To make them longer", "To hide them", "To avoid logic"],
+        "answer_index": 0,
+        "explanation": "Documentation makes decisions understandable and reviewable later."
+      }
+    ]
+  },
+  "stellar_observatory": {
+    "concept_id": "45_stellar_observatory",
+    "learning_target": "coordinates and pattern matching",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a coordinate pair describe?",
+        "options": ["A position", "A color", "A telescope", "A star type"],
+        "answer_index": 0,
+        "explanation": "Coordinates give an exact position on a map or sky chart."
+      },
+      {
+        "id": "q2",
+        "question": "If a star is at (4, 9), what is the x value?",
+        "options": ["4", "9", "13", "0"],
+        "answer_index": 0,
+        "explanation": "Coordinates are written as x, y, so the x value is 4."
+      },
+      {
+        "id": "q3",
+        "question": "What is pattern matching?",
+        "options": ["Finding a repeated or expected shape", "Random guessing", "Changing the sky", "A type of lens"],
+        "answer_index": 0,
+        "explanation": "Pattern matching compares an observation with a known target shape."
+      },
+      {
+        "id": "q4",
+        "question": "Why compare coordinates?",
+        "options": ["To locate the same object", "To make the sky darker", "To avoid telescopes", "To change the weather"],
+        "answer_index": 0,
+        "explanation": "Matching coordinates confirms that two observations refer to the same object."
+      },
+      {
+        "id": "q5",
+        "question": "What should you do if the pattern is unclear?",
+        "options": ["Collect more observations", "Guess once", "Stop observing", "Change the coordinates"],
+        "answer_index": 0,
+        "explanation": "More observations reduce uncertainty and make the pattern clearer."
+      },
+      {
+        "id": "q6",
+        "question": "What is a false match?",
+        "options": ["A pattern that looks similar but is not the target", "A correct star", "A telescope error only", "A coordinate"],
+        "answer_index": 0,
+        "explanation": "A false match has similarities but does not satisfy the full target pattern."
+      }
+    ]
+  },
+  "candy_kingdom_defender": {
+    "concept_id": "46_candy_kingdom_defender",
+    "learning_target": "Boolean logic and conditions",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does `and` require?",
+        "options": ["Both conditions true", "One condition true", "Neither condition true", "Only the first"],
+        "answer_index": 0,
+        "explanation": "A and B is true only when both A and B are true."
+      },
+      {
+        "id": "q2",
+        "question": "What does `or` require?",
+        "options": ["At least one condition true", "Both conditions true", "Neither condition true", "Only the second"],
+        "answer_index": 0,
+        "explanation": "A or B is true when at least one of the conditions is true."
+      },
+      {
+        "id": "q3",
+        "question": "What does `not` do?",
+        "options": ["Reverses a Boolean value", "Doubles a number", "Creates a loop", "Deletes a variable"],
+        "answer_index": 0,
+        "explanation": "The not operator turns True into False and False into True."
+      },
+      {
+        "id": "q4",
+        "question": "Which condition activates a shield when the gate is low and enemies are near?",
+        "options": ["gate_low and enemies_near", "gate_low or enemies_near", "not gate_low", "enemies_near == False"],
+        "answer_index": 0,
+        "explanation": "Both conditions must be true, so the and operator is correct."
+      },
+      {
+        "id": "q5",
+        "question": "What is `True and False`?",
+        "options": ["False", "True", "1", "0"],
+        "answer_index": 0,
+        "explanation": "The and operator is false when either value is false."
+      },
+      {
+        "id": "q6",
+        "question": "Why use Boolean rules for defenses?",
+        "options": ["To activate the right defense automatically", "To make the castle prettier", "To avoid all decisions", "To change the language"],
+        "answer_index": 0,
+        "explanation": "Boolean rules turn threat conditions into clear defensive actions."
+      }
+    ]
+  },
+  "sewer_pipe_plumber": {
+    "concept_id": "47_sewer_pipe_plumber",
+    "learning_target": "flowchart connectors and sequence",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does a connector do in a flowchart?",
+        "options": ["Links parts of the flow", "Blocks the water", "Changes the pipe color", "Ends the program"],
+        "answer_index": 0,
+        "explanation": "A connector joins one part of a flowchart to another, often across a page."
+      },
+      {
+        "id": "q2",
+        "question": "What should a pipe route avoid?",
+        "options": ["Leaks and dead ends", "The water source", "The outlet", "The neighborhood"],
+        "answer_index": 0,
+        "explanation": "A good route carries water to the outlet without leaks or dead ends."
+      },
+      {
+        "id": "q3",
+        "question": "Why follow a sequence?",
+        "options": ["To route water in the right order", "To make the pipes longer", "To avoid all valves", "To change the pressure"],
+        "answer_index": 0,
+        "explanation": "Valves and junctions must be opened in the correct order for water to flow."
+      },
+      {
+        "id": "q4",
+        "question": "What is a junction?",
+        "options": ["A point where pipes meet", "A type of leak", "A valve only", "The end of the line"],
+        "answer_index": 0,
+        "explanation": "A junction is a point where multiple pipe paths connect."
+      },
+      {
+        "id": "q5",
+        "question": "What should you do if a connector is missing?",
+        "options": ["Trace the flow and repair it", "Ignore it", "Open all valves", "Flood the street"],
+        "answer_index": 0,
+        "explanation": "Tracing the flow shows where the connection should be restored."
+      },
+      {
+        "id": "q6",
+        "question": "What is a safe test?",
+        "options": ["Run a small flow and check for leaks", "Open everything at once", "Block the outlet", "Remove the pipes"],
+        "answer_index": 0,
+        "explanation": "A small controlled test reveals leaks without causing a flood."
+      }
+    ]
+  },
+  "retro_rpg_tavern": {
+    "concept_id": "48_retro_rpg_tavern",
+    "learning_target": "dialogue trees and branching logic",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a dialogue tree?",
+        "options": ["A set of choices leading to outcomes", "A list of items", "A type of tavern", "A loop"],
+        "answer_index": 0,
+        "explanation": "A dialogue tree branches from each choice toward different responses and outcomes."
+      },
+      {
+        "id": "q2",
+        "question": "What does a branch represent?",
+        "options": ["A choice and its result", "A fixed ending", "A variable", "A comment"],
+        "answer_index": 0,
+        "explanation": "Each branch is one choice and the path it opens."
+      },
+      {
+        "id": "q3",
+        "question": "Why ask follow-up questions?",
+        "options": ["To learn more clues", "To end the quest", "To avoid dialogue", "To change the language"],
+        "answer_index": 0,
+        "explanation": "Follow-up questions reveal information needed to complete the quest."
+      },
+      {
+        "id": "q4",
+        "question": "What should you do if a choice leads to a dead end?",
+        "options": ["Backtrack and try another branch", "Restart the whole game", "Ignore the quest", "Repeat the same choice"],
+        "answer_index": 0,
+        "explanation": "Backtracking lets you explore another branch without losing progress."
+      },
+      {
+        "id": "q5",
+        "question": "What is a quest flag?",
+        "options": ["A variable that records progress", "A type of drink", "A tavern table", "A dialogue color"],
+        "answer_index": 0,
+        "explanation": "A quest flag stores whether an event has happened or a clue was found."
+      },
+      {
+        "id": "q6",
+        "question": "Why keep track of clues?",
+        "options": ["To unlock the correct ending", "To make the tavern louder", "To avoid all choices", "To change the music"],
+        "answer_index": 0,
+        "explanation": "Clues determine which dialogue branches and endings become available."
+      }
+    ]
+  },
+  "music_synthesizer_studio": {
+    "concept_id": "49_music_synthesizer_studio",
+    "learning_target": "frequency, wave forms, and pattern matching",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does frequency control?",
+        "options": ["Pitch", "Volume", "Duration", "Color"],
+        "answer_index": 0,
+        "explanation": "Higher frequency produces a higher pitch."
+      },
+      {
+        "id": "q2",
+        "question": "Which wave is typically smooth and rounded?",
+        "options": ["Sine", "Square", "Sawtooth", "Noise"],
+        "answer_index": 0,
+        "explanation": "A sine wave has a smooth, rounded shape with no sharp corners."
+      },
+      {
+        "id": "q3",
+        "question": "What does a higher frequency sound like?",
+        "options": ["A higher pitch", "A lower pitch", "A quieter sound", "A longer note"],
+        "answer_index": 0,
+        "explanation": "Frequency determines pitch, so a higher frequency sounds higher."
+      },
+      {
+        "id": "q4",
+        "question": "What is a waveform?",
+        "options": ["The shape of a sound wave", "A type of speaker", "A note name", "A volume level"],
+        "answer_index": 0,
+        "explanation": "A waveform shows how a sound's amplitude changes over time."
+      },
+      {
+        "id": "q5",
+        "question": "Why match a target pattern?",
+        "options": ["To reproduce the intended sound", "To make it louder", "To change the tempo", "To avoid all notes"],
+        "answer_index": 0,
+        "explanation": "Matching the pattern reproduces the target melody or timbre."
+      },
+      {
+        "id": "q6",
+        "question": "What does a rest represent?",
+        "options": ["Silence", "A high note", "A wave shape", "A volume boost"],
+        "answer_index": 0,
+        "explanation": "A rest is a pause with no note played."
+      }
+    ]
+  },
+  "quantum_computing_lab": {
+    "concept_id": "50_quantum_computing_lab",
+    "learning_target": "quantum-gate sequencing and computational puzzles",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a quantum gate?",
+        "options": ["An operation on a qubit", "A physical door", "A type of computer case", "A power switch"],
+        "answer_index": 0,
+        "explanation": "A quantum gate transforms the state of one or more qubits."
+      },
+      {
+        "id": "q2",
+        "question": "What is a qubit?",
+        "options": ["A quantum bit", "A classical byte", "A gate", "A circuit board"],
+        "answer_index": 0,
+        "explanation": "A qubit is the basic unit of quantum information."
+      },
+      {
+        "id": "q3",
+        "question": "Why does gate order matter?",
+        "options": ["Different orders produce different results", "It changes the color", "It makes the lab larger", "It avoids all math"],
+        "answer_index": 0,
+        "explanation": "Quantum gates do not always commute, so their order changes the final state."
+      },
+      {
+        "id": "q4",
+        "question": "What is superposition?",
+        "options": ["A qubit in a combination of states", "A qubit with no state", "A classical bit", "A gate error"],
+        "answer_index": 0,
+        "explanation": "Superposition allows a qubit to hold a combination of basis states."
+      },
+      {
+        "id": "q5",
+        "question": "What should you do before running a circuit?",
+        "options": ["Check the gate sequence", "Delete all gates", "Ignore the input", "Change the target"],
+        "answer_index": 0,
+        "explanation": "Reviewing the sequence catches ordering mistakes before execution."
+      },
+      {
+        "id": "q6",
+        "question": "What is a target output?",
+        "options": ["The state the circuit should produce", "A random result", "A type of gate", "The lab address"],
+        "answer_index": 0,
+        "explanation": "The target output is the desired final state used to judge the circuit."
+      }
+    ]
+  }
+}

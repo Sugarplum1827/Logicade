@@ -1,30 +1,30 @@
 {
   "file_id": "game_0348",
-  "game_title": "Modulo Gate – Ore Smelter Race",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A strategy race set in Mt. Pyre – Ore Smelter, a smelter processing glowing ore: the lava scout must handle cinder bats while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Ore Smelter open (even, odd, divisible by 3).",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ore Smelter: a smelter processing glowing ore",
-  "core_gameplay_loop": "In Ore Smelter, repeat each round: Use % to decide which gates in Ore Smelter open (even, odd, divisible by 3). Each round the rival advances, and solving the step moves the lava scout ahead. Then check the gates_open value and advance.",
-  "primary_mechanic": "Modulo Gate",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Checkpoint flags",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Beat a rival AI to the fire shrine by solving code steps involving gates_open that move the lava scout forward.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
-  "lose_condition": "The rival reaches the fire shrine first, or lives reach 0.",
+  "player_objective": "Read value for station 8, then display the same value without changing it. Test dataset 8: {'value': -8}; {'value': 24}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Modulo Gate",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M03-X5-T18-1bf3b1b4",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Rival Race', and setting 'Ore Smelter'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 8,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gates_open changes.",
-    "Step 2: Use the controls to apply the code idea against cinder bats in Ore Smelter.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/standard/game_week2_level2_difficulty(Standard)_8.json",
+    "variation_id": "canvas_game_0348",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the fire shrine by solving code steps involving gates_open that move the lava scout forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "source_lose_condition": "The rival reaches the fire shrine first, or lives reach 0.",
+  "source_game_title": "Modulo Gate – Ore Smelter Race",
+  "source_primary_mechanic": "Modulo Gate",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

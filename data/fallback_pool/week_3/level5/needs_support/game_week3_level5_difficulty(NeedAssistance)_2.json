@@ -1,30 +1,30 @@
 {
   "file_id": "game_0722",
-  "game_title": "Else Escape – Tavern Terrace Rush",
+  "game_title": "Negative values · variation 2",
   "game_concept": "A action puzzle set in Coastal Port – Tavern Terrace, a seaside tavern terrace: the fisher must handle smugglers while practicing conditionals (if / elif / else). Core idea – Else Escape: Handle both branches of if/else: attack one kind of smugglers, dodge the other.",
-  "genre": "action puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Coastal Port – Tavern Terrace: a seaside tavern terrace",
-  "core_gameplay_loop": "In Tavern Terrace, repeat each round: Handle both branches of if/else: attack one kind of smugglers, dodge the other. Each round, a new sea charts challenge appears; solve it to bank points before time drains. Then check the hero_hp value and advance.",
-  "primary_mechanic": "Else Escape",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Collect 180 points of sea charts by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 180 within 59 seconds.",
-  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "player_objective": "Negative values: negate every value. Match all 3 streams; preserve their order. Dataset 2, operand 8.",
+  "controls": "Edit both node programs. IN reads the upstream queue; OUT sends to the next node. Step advances one cycle; Run checks every stream.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 3 – Conditionals (if / elif / else) | Level 5 (applied tier): Else Escape",
-  "assets_style": "pixel-art harbor town: deep blue sea, wooden docks, orange-roofed buildings, sailing ships; flat Kenney-style sprites; sea-shanty accordion with wave and gull ambience",
+  "learning_alignment": "CP1 Week 3: Negative values",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W3-M02-X2-T16-1ac92c08",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Else Escape' (Week 3 slot 2), mission type 'Resource Rush', and setting 'Tavern Terrace'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 3,
   "level": 5,
   "trial": 2,
-  "topic": "Conditionals (if / elif / else)",
+  "topic": "Algorithms",
   "region": {
     "id": "w3_coast",
     "name": "Coastal Port",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how hero_hp changes.",
-    "Step 2: Use the controls to apply the code idea against smugglers in Tavern Terrace.",
-    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_3/level5/needs_support/game_week3_level5_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_0722",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 180 points of sea charts by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 180 within 59 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "source_game_title": "Else Escape – Tavern Terrace Rush",
+  "source_primary_mechanic": "Else Escape",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w3_l5",
+  "source_week": 3,
+  "source_level": 5
 }

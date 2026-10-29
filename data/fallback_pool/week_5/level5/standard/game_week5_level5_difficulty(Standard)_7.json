@@ -1,30 +1,30 @@
 {
   "file_id": "game_1337",
-  "game_title": "Volley Counter – Stump Court Trial",
+  "game_title": "Branch Assembly 7 · Separate Outputs",
   "game_concept": "A logic puzzle set in Mystic Forest – Stump Court, a court around a giant stump: the wood elf archer must handle shadow wolves while practicing control flow: for loops. Core idea – Volley Counter: Fire a volley of shots with for shot in range(volley) at oncoming shadow wolves.",
-  "genre": "logic puzzle",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Stump Court: a court around a giant stump",
-  "core_gameplay_loop": "In Stump Court, repeat each round: Fire a volley of shots with for shot in range(volley) at oncoming shadow wolves. Each round costs one action, so plan the step so none are wasted. Then check the ammo value and advance.",
-  "primary_mechanic": "Volley Counter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Reduced-motion and color-blind-safe UI",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Reach the herb garden using at most 16 actions, so every code step counts.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "The herb garden reached with actions_used <= 16.",
-  "lose_condition": "actions_used exceeds 16 before the herb garden is reached, or lives reach 0.",
+  "player_objective": "Object-like macros: build a valid C source file that prints 13. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the splitter at (2, 3), with the upper processing path on row 0 and lower path on row 5. Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Deliver exactly 9 components (5 upper, 4 lower). Set the gold-socket controller batch to 9.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 5 (applied tier): Volley Counter",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Object-like macros",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M02-X3-T17-93e199bc",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Volley Counter' (Week 5 slot 2), mission type 'Efficiency Trial', and setting 'Stump Court'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 5,
   "trial": 7,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 42,
+    "time_limit_seconds": 0,
     "target_score": 260,
     "action_budget": 16,
     "streak_target": 9,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how ammo changes.",
-    "Step 2: Use the controls to apply the code idea against shadow wolves in Stump Court.",
-    "Step 3: Win by meeting the goal: The herb garden reached with actions_used <= 16."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level5/standard/game_week5_level5_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_1337",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the herb garden using at most 16 actions, so every code step counts.",
+  "source_win_condition": "The herb garden reached with actions_used <= 16.",
+  "source_lose_condition": "actions_used exceeds 16 before the herb garden is reached, or lives reach 0.",
+  "source_game_title": "Volley Counter – Stump Court Trial",
+  "source_primary_mechanic": "Volley Counter",
+  "hint": "Alternate items between A (upper) and B (lower); wait if the scheduled branch is blocked. Finish both paths at their separate output depots. Branch contracts: A: 5 components via upper_4, upper_6 to output_upper; B: 4 components via lower_4, lower_6 to output_lower. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 42,
+  "learning_objective_id": "cp1_w5_l5",
+  "source_week": 5,
+  "source_level": 5
 }

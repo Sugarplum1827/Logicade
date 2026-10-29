@@ -1,0 +1,79 @@
+{
+  "concept_id": "36_museum_heist_puzzle",
+  "slug": "museum_heist_puzzle",
+  "learning_target": "flowcharts and path planning",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is path planning?",
+      "options": [
+        "Choosing a route to a goal",
+        "A random walk",
+        "A display case",
+        "A type of alarm"
+      ],
+      "answer_index": 0,
+      "explanation": "Path planning selects a sequence of moves that reaches the goal."
+    },
+    {
+      "id": "q2",
+      "question": "What should a safe path avoid?",
+      "options": [
+        "The exit",
+        "Laser sensors and guards",
+        "The floor",
+        "The display"
+      ],
+      "answer_index": 1,
+      "explanation": "Avoiding sensors and guards keeps the path undetected."
+    },
+    {
+      "id": "q3",
+      "question": "What does a decision point do?",
+      "options": [
+        "Creates a laser",
+        "Stops the plan",
+        "Offers alternative routes",
+        "Ends the heist"
+      ],
+      "answer_index": 2,
+      "explanation": "A decision point is where the path can branch to another route."
+    },
+    {
+      "id": "q4",
+      "question": "Why scout before moving?",
+      "options": [
+        "To learn the sensor pattern",
+        "To trigger alarms",
+        "To skip the goal",
+        "To make noise"
+      ],
+      "answer_index": 0,
+      "explanation": "Scouting reveals timing and safe gaps in the security pattern."
+    },
+    {
+      "id": "q5",
+      "question": "What is a fallback route?",
+      "options": [
+        "A type of camera",
+        "A backup path if the first fails",
+        "A dead end",
+        "The main path"
+      ],
+      "answer_index": 1,
+      "explanation": "A fallback route provides an alternative if the primary path is blocked."
+    },
+    {
+      "id": "q6",
+      "question": "What makes a plan reliable?",
+      "options": [
+        "Ignoring the map",
+        "A lucky guess",
+        "Running straight ahead",
+        "Clear steps and contingencies"
+      ],
+      "answer_index": 3,
+      "explanation": "Clear steps plus backup plans make the outcome more predictable."
+    }
+  ]
+}

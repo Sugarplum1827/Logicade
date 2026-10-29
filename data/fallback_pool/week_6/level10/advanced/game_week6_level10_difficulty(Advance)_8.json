@@ -1,30 +1,30 @@
 {
   "file_id": "game_1798",
-  "game_title": "Function Test Arena – Frosted Chapel Defense",
+  "game_title": "Program synthesis · variation 8",
   "game_concept": "A tower defense set in Snowy Hold – Frosted Chapel, a frosted chapel: the sled courier must handle snow wraiths while practicing functions. Core idea – Function Test Arena: Write quick assert tests to confirm functions behave before facing snow wraiths.",
-  "genre": "tower defense",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Frosted Chapel: a frosted chapel",
-  "core_gameplay_loop": "In Frosted Chapel, repeat each round: Write quick assert tests to confirm functions behave before facing snow wraiths. Each round, snow wraiths strike the sleigh, so respond before the next strike lands. Then check the tests_passed value and advance.",
-  "primary_mechanic": "Function Test Arena",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Protect the sleigh from snow wraiths in Frosted Chapel: keep the tests_passed meter above zero by applying the concept correctly until the 46-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 46 seconds while tests_passed > 0.",
-  "lose_condition": "tests_passed drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "player_objective": "Maze 8 (21×15, 59 junctions): collect 3 crystal(s) from the branches and reach beacon (19, 1). Use a C main program to Program synthesis. Print [10]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 9,
-  "learning_alignment": "Week 6 – Functions | Level 10 (extended tier): Function Test Arena",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Program synthesis",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M13-X1-T04-a8220860",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Function Test Arena' (Week 6 slot 13), mission type 'Survival Siege', and setting 'Frosted Chapel'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 10,
   "trial": 8,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 600,
     "action_budget": 15,
     "streak_target": 14,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how tests_passed changes.",
-    "Step 2: Use the controls to apply the code idea against snow wraiths in Frosted Chapel.",
-    "Step 3: Win by meeting the goal: Timer reaches 46 seconds while tests_passed > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level10/advanced/game_week6_level10_difficulty(Advance)_8.json",
+    "variation_id": "canvas_game_1798",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the sleigh from snow wraiths in Frosted Chapel: keep the tests_passed meter above zero by applying the concept correctly until the 46-second timer ends.",
+  "source_win_condition": "Timer reaches 46 seconds while tests_passed > 0.",
+  "source_lose_condition": "tests_passed drops to 0, or lives reach 0, before the 46-second timer ends.",
+  "source_game_title": "Function Test Arena – Frosted Chapel Defense",
+  "source_primary_mechanic": "Function Test Arena",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w6_l10",
+  "source_week": 6,
+  "source_level": 10
 }

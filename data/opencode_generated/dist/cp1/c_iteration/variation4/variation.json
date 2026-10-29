@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_20_c_iteration",
+  "slug": "c_iteration",
+  "display_name": "C Iteration",
+  "learning_target": "trace a for loop",
+  "core_brief": "A for loop initializes a counter, tests it, runs the body, and updates the counter.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 6,
+  "unit": "C Structure",
+  "group": "code",
+  "skin": "farm",
+  "theme": "farm",
+  "theme_label": "Farm",
+  "assets": {
+    "theme": "farm",
+    "theme_label": "Farm",
+    "bg": "themes.farm.bg_farm_3",
+    "zones": [
+      "themes.farm.bg_farm_3",
+      "themes.farm.bg_farm_1",
+      "themes.farm.bg_farm_2"
+    ],
+    "tile": "themes.farm.tile_grass",
+    "player": "themes.farm.player_pumpkin",
+    "enemy": "themes.farm.enemy_sprout",
+    "coin": "themes.farm.coin_pumpkin",
+    "goal": "themes.farm.goal_tree",
+    "obstacles": {
+      "spike": "themes.farm.wheat",
+      "bush": "themes.farm.bush",
+      "slime": "themes.farm.rock",
+      "bee": "themes.farm.fence"
+    },
+    "follower": "themes.farm.follower"
+  },
+  "mechanic": "vars",
+  "mechanic_label": "Vault",
+  "accent": "#ffb27a",
+  "variation_id": "cp1_20_c_iteration_v04",
+  "index": 4,
+  "challenge_index": 4,
+  "challenge_id": "c_iteration_v04",
+  "title": "Fill the variable vault",
+  "label": "Lab 04: Fill the variable vault",
+  "seed": 3261104313,
+  "challenge_bank": "../../../data/cp1/challenges/c_iteration.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "cp1",
+  "generated_by": "scripts/cp1/generate-pages.mjs",
+  "concept_id": "cp1_47_function_return",
+  "slug": "function_return",
+  "display_name": "Returning Values",
+  "learning_target": "trace which value a function returns",
+  "core_brief": "return immediately ends the function and sends a value back to the caller.",
+  "mode": "cp1_lab",
+  "mode_label": "CP1 interactive lab",
+  "week": 13,
+  "unit": "Functions",
+  "group": "code",
+  "skin": "tower_defense",
+  "theme": "tower_defense",
+  "theme_label": "Defense",
+  "assets": {
+    "theme": "tower_defense",
+    "theme_label": "Defense",
+    "bg": "themes.tower_defense.bg_td_1",
+    "zones": [
+      "themes.tower_defense.bg_td_1",
+      "themes.tower_defense.bg_td_2",
+      "themes.tower_defense.bg_td_3"
+    ],
+    "tile": "themes.tower_defense.tile_grass",
+    "player": "themes.tower_defense.player_rocket_alt",
+    "enemy": "themes.tower_defense.enemy_turret_red",
+    "coin": "themes.tower_defense.coin_gold",
+    "goal": "themes.tower_defense.goal_tower_blue",
+    "obstacles": {
+      "spike": "themes.tower_defense.rock",
+      "bush": "themes.tower_defense.rock",
+      "slime": "themes.tower_defense.bush",
+      "bee": "themes.tower_defense.crate"
+    },
+    "follower": "themes.tower_defense.follower"
+  },
+  "mechanic": "sort",
+  "mechanic_label": "Sort",
+  "accent": "#9ad9ff",
+  "variation_id": "cp1_47_function_return_v08",
+  "index": 8,
+  "challenge_index": 8,
+  "challenge_id": "function_return_v08",
+  "title": "Sort into bins",
+  "label": "Lab 08: Sort into bins",
+  "seed": 2451365750,
+  "challenge_bank": "../../../data/cp1/challenges/function_return.json",
+  "urls": {
+    "catalog": "../../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation7/",
+    "next": "../variation9/"
+  }
+}

@@ -1,30 +1,30 @@
 {
   "file_id": "game_0422",
-  "game_title": "Arithmetic Cannon – Charred Forest Rush",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A action puzzle set in Mt. Pyre – Charred Forest, a burnt forest at the foot of the mountain: the ash ranger must handle ember hounds while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on ember hounds.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Charred Forest: a burnt forest at the foot of the mountain",
-  "core_gameplay_loop": "In Charred Forest, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on ember hounds. Each round, a new ash bricks challenge appears; solve it to bank points before time drains. Then check the damage value and advance.",
-  "primary_mechanic": "Arithmetic Cannon",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Collect 180 points of ash bricks by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 180 within 59 seconds.",
-  "lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score ≥ 44; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 2: {'score': 43}; {'score': 45}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Arithmetic Cannon",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M02-X2-T16-9ac1279d",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Resource Rush', and setting 'Charred Forest'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 2,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how damage changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Charred Forest.",
-    "Step 3: Win by meeting the goal: score >= 180 within 59 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/needs_support/game_week2_level5_difficulty(NeedAssistance)_2.json",
+    "variation_id": "canvas_game_0422",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 180 points of ash bricks by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 180 within 59 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 180, or lives reach 0.",
+  "source_game_title": "Arithmetic Cannon – Charred Forest Rush",
+  "source_primary_mechanic": "Arithmetic Cannon",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5
 }

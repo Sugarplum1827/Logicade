@@ -1,0 +1,320 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0521",
+  "variation_id": "canvas_game_0521",
+  "week": 2,
+  "level": 8,
+  "trial": 1,
+  "difficulty": "Standard",
+  "mode": "circuit",
+  "title": "Flowchart Workshop – Trace a loop",
+  "display_name": "Logic Circuit Workshop",
+  "theme": "Mt. Pyre – Ember Fields: fields of drifting embers",
+  "topic": "Flowcharting",
+  "learning_objectives": [
+    "Trace a loop"
+  ],
+  "lesson": {
+    "summary": "Flowcharting",
+    "points": [
+      "Trace a loop",
+      "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+      "Test both branches and boundary inputs before accepting a chart."
+    ],
+    "example": "Start → Read n → n > 0? → Yes/No output → End",
+    "practice": "Flowchart synthesis",
+    "week": 2,
+    "source_week": 2,
+    "source_level": 8,
+    "objective_id": "cp1_w2_l8",
+    "title": "Flowcharting",
+    "stage_title": "Trace a loop",
+    "objectives": [
+      "Trace a loop"
+    ],
+    "sources": [
+      {
+        "title": "Victoria Department of Education: flowcharts",
+        "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+      },
+      {
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      2
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w2_l8",
+  "source_level": 8,
+  "source_week": 2,
+  "primary_mechanic": "circuit construction and execution",
+  "objective": "Print every even number from 12 through 22. Trace the update by 2 and the final failed condition. Test dataset 1: {}; {}.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "time_limit_seconds": 0,
+  "starting_lives": 3,
+  "seed": 159442719,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "gate_order": [
+      "INPUT",
+      "AND",
+      "NOT",
+      "OUTPUT"
+    ],
+    "switches": [
+      true,
+      true
+    ],
+    "wire_variant": 4
+  },
+  "flowchart": {
+    "schema_version": 1,
+    "scenario_id": "flowchart_5",
+    "source_level": 8,
+    "title": "Trace a loop",
+    "prompt": "Print every even number from 12 through 22. Trace the update by 2 and the final failed condition. Test dataset 1: {}; {}.",
+    "entry": "start",
+    "slots": [
+      {
+        "id": "start",
+        "x": 0.5,
+        "y": 0.06,
+        "number": 1
+      },
+      {
+        "id": "initial",
+        "x": 0.5,
+        "y": 0.236,
+        "number": 2
+      },
+      {
+        "id": "write",
+        "x": 0.5,
+        "y": 0.412,
+        "number": 3
+      },
+      {
+        "id": "increase",
+        "x": 0.5,
+        "y": 0.5880000000000001,
+        "number": 4
+      },
+      {
+        "id": "decide",
+        "x": 0.5,
+        "y": 0.764,
+        "number": 5
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9400000000000002,
+        "number": 6
+      }
+    ],
+    "edges": [
+      {
+        "from": "start",
+        "to": "initial"
+      },
+      {
+        "from": "initial",
+        "to": "write"
+      },
+      {
+        "from": "write",
+        "to": "increase"
+      },
+      {
+        "from": "increase",
+        "to": "decide"
+      },
+      {
+        "from": "decide",
+        "to": "write",
+        "label": "Yes",
+        "via": [
+          [
+            0.86,
+            0.77
+          ],
+          [
+            0.86,
+            0.412
+          ]
+        ]
+      },
+      {
+        "from": "decide",
+        "to": "end",
+        "label": "No"
+      }
+    ],
+    "pieces": [
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "increase",
+        "label": "i = i + 2",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "i",
+              "value": {
+                "op": "+",
+                "args": [
+                  {
+                    "var": "i"
+                  },
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "initial",
+        "label": "i = 12",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "i",
+              "value": 12
+            }
+          ]
+        }
+      },
+      {
+        "id": "write",
+        "label": "Write i",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "i"
+          }
+        }
+      },
+      {
+        "id": "decide",
+        "label": "i ≤ 22?",
+        "kind": "decision",
+        "action": {
+          "test": {
+            "op": "<=",
+            "args": [
+              {
+                "var": "i"
+              },
+              22
+            ]
+          }
+        }
+      }
+    ],
+    "solution": {
+      "start": "start",
+      "initial": "initial",
+      "write": "write",
+      "increase": "increase",
+      "decide": "decide",
+      "end": "end"
+    },
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": {},
+        "expected": [
+          12,
+          14,
+          16,
+          18,
+          20,
+          22
+        ]
+      }
+    ],
+    "max_steps": 1000,
+    "scaffold": false,
+    "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+    "source_file_id": "game_0521",
+    "objective_id": "cp1_w2_l8"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "start",
+      "kind": "flowchart_node",
+      "prompt": "Build position 1 in the requested chart."
+    },
+    {
+      "id": "initial",
+      "kind": "flowchart_node",
+      "prompt": "Build position 2 in the requested chart."
+    },
+    {
+      "id": "write",
+      "kind": "flowchart_node",
+      "prompt": "Build position 3 in the requested chart."
+    },
+    {
+      "id": "increase",
+      "kind": "flowchart_node",
+      "prompt": "Build position 4 in the requested chart."
+    },
+    {
+      "id": "decide",
+      "kind": "flowchart_node",
+      "prompt": "Build position 5 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 6 in the requested chart."
+    }
+  ],
+  "source_path": "week_2/level8/standard/game_week2_level8_difficulty(Standard)_1.json",
+  "source_topic": "Flowcharting",
+  "source_learning_alignment": "CP1 Week 2: Trace a loop",
+  "source_primary_mechanic": "Exponent Engine",
+  "source_code_snippet": "power = 2 ** level"
+}

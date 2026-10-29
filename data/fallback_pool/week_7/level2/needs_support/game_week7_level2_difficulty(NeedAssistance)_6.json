@@ -1,30 +1,30 @@
 {
   "file_id": "game_1836",
-  "game_title": "Shelf Sorter – Ivy Tower Trial",
+  "game_title": "Initialize and add · variation 6",
   "game_concept": "A programming puzzle set in Eldritch Ruins – Ivy Tower, an ivy-covered tower: the spirit seeker must handle vine horrors while practicing lists. Core idea – Shelf Sorter: Use sort() to rearrange shelves of carved tiles from smallest to largest.",
-  "genre": "programming puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Ivy Tower: an ivy-covered tower",
-  "core_gameplay_loop": "In Ivy Tower, repeat each round: Use sort() to rearrange shelves of carved tiles from smallest to largest. Each round costs one action, so plan the step so none are wasted. Then check the order_score value and advance.",
-  "primary_mechanic": "Shelf Sorter",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Mini-tutorial pop-ups",
     "Event log of every action"
   ],
-  "player_objective": "Reach the sealed archway using at most 19 actions, so every code step counts.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "The sealed archway reached with actions_used <= 19.",
-  "lose_condition": "actions_used exceeds 19 before the sealed archway is reached, or lives reach 0.",
+  "player_objective": "Initialize and add: declare resource as int, apply resource + 8, and print each result with %d. Dataset 6 starts with [-3, 0, 8, 11]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 4,
-  "learning_alignment": "Week 7 – Lists | Level 2 (intro tier): Shelf Sorter",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Initialize and add",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M06-X3-T18-e96cb97f",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Shelf Sorter' (Week 7 slot 6), mission type 'Efficiency Trial', and setting 'Ivy Tower'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 2,
   "trial": 6,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 46,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how order_score changes.",
-    "Step 2: Use the controls to apply the code idea against vine horrors in Ivy Tower.",
-    "Step 3: Win by meeting the goal: The sealed archway reached with actions_used <= 19."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level2/needs_support/game_week7_level2_difficulty(NeedAssistance)_6.json",
+    "variation_id": "canvas_game_1836",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the sealed archway using at most 19 actions, so every code step counts.",
+  "source_win_condition": "The sealed archway reached with actions_used <= 19.",
+  "source_lose_condition": "actions_used exceeds 19 before the sealed archway is reached, or lives reach 0.",
+  "source_game_title": "Shelf Sorter – Ivy Tower Trial",
+  "source_primary_mechanic": "Shelf Sorter",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 46,
+  "learning_objective_id": "cp1_w7_l2",
+  "source_week": 7,
+  "source_level": 2
 }

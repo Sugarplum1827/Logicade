@@ -1,30 +1,30 @@
 {
   "file_id": "game_0497",
-  "game_title": "Arithmetic Cannon – Ash Rim Trail Rush",
+  "game_title": "Flowchart Lab · Sum from 1 to n",
   "game_concept": "A action puzzle set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Arithmetic Cannon: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on magma slimes.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
-  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Choose +, -, *, / or // to build a damage formula that exactly matches a shield number on magma slimes. Each round, a new obsidian shards challenge appears; solve it to bank points before time drains. Then check the damage value and advance.",
-  "primary_mechanic": "Arithmetic Cannon",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Collect 340 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "score >= 340 within 48 seconds.",
-  "lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 7: {'n': 0}; {'n': 12}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 7 (applied tier): Arithmetic Cannon",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Accumulators",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M02-X2-T01-a1f81bce",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Arithmetic Cannon' (Week 2 slot 2), mission type 'Resource Rush', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 7,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 48,
+    "time_limit_seconds": 0,
     "target_score": 340,
     "action_budget": 17,
     "streak_target": 10,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how damage changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
-    "Step 3: Win by meeting the goal: score >= 340 within 48 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level7/standard/game_week2_level7_difficulty(Standard)_7.json",
+    "variation_id": "canvas_game_0497",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 340 points of obsidian shards by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 340 within 48 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 340, or lives reach 0.",
+  "source_game_title": "Arithmetic Cannon – Ash Rim Trail Rush",
+  "source_primary_mechanic": "Arithmetic Cannon",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 48,
+  "learning_objective_id": "cp1_w2_l7",
+  "source_week": 2,
+  "source_level": 7
 }

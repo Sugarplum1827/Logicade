@@ -1,30 +1,30 @@
 {
   "file_id": "game_0397",
-  "game_title": "String Glue – Basalt Stair Race",
+  "game_title": "Flowchart Lab · Decision branches",
   "game_concept": "A racing platformer set in Mt. Pyre – Basalt Stair, a basalt column stairway: the forge smith must handle magma slimes while practicing data types & operators. Core idea – String Glue: Concatenate string pieces to forge passwords and spell names.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Basalt Stair: a basalt column stairway",
-  "core_gameplay_loop": "In Basalt Stair, repeat each round: Concatenate string pieces to forge passwords and spell names. Each round the rival advances, and solving the step moves the forge smith ahead. Then check the spell_ok value and advance.",
-  "primary_mechanic": "String Glue",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Step-by-step code highlighting",
     "Limited undo button"
   ],
-  "player_objective": "Beat a rival AI to the ash barrier by solving code steps involving spell_ok that move the forge smith forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
-  "lose_condition": "The rival reaches the ash barrier first, or lives reach 0.",
+  "player_objective": "Read n. Display Above when n > 2; otherwise display At or below. Test dataset 7: {'n': 0}; {'n': 5}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 4 (applied tier): String Glue",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Decision branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M07-X5-T09-393b8ae2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'String Glue' (Week 2 slot 7), mission type 'Rival Race', and setting 'Basalt Stair'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 4,
   "trial": 7,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 55,
+    "time_limit_seconds": 0,
     "target_score": 150,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how spell_ok changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Basalt Stair.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.65)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level4/needs_support/game_week2_level4_difficulty(NeedAssistance)_7.json",
+    "variation_id": "canvas_game_0397",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the ash barrier by solving code steps involving spell_ok that move the forge smith forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.65).",
+  "source_lose_condition": "The rival reaches the ash barrier first, or lives reach 0.",
+  "source_game_title": "String Glue – Basalt Stair Race",
+  "source_primary_mechanic": "String Glue",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 55,
+  "learning_objective_id": "cp1_w2_l4",
+  "source_week": 2,
+  "source_level": 4
 }

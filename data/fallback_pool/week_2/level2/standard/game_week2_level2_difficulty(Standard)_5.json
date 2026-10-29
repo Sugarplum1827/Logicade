@@ -1,30 +1,30 @@
 {
   "file_id": "game_0345",
-  "game_title": "Mixed Type Oracle – Ash Rim Trail Race",
+  "game_title": "Flowchart Lab · Input and output",
   "game_concept": "A strategy race set in Mt. Pyre – Ash Rim Trail, the crumbling rim of Mt. Pyre: the fire warden must handle magma slimes while practicing data types & operators. Core idea – Mixed Type Oracle: Predict the result or error of mixed-type expressions before magma slimes spring the trap.",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Ash Rim Trail: the crumbling rim of Mt. Pyre",
-  "core_gameplay_loop": "In Ash Rim Trail, repeat each round: Predict the result or error of mixed-type expressions before magma slimes spring the trap. Each round the rival advances, and solving the step moves the fire warden ahead. Then check the predictions value and advance.",
-  "primary_mechanic": "Mixed Type Oracle",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Power-up crates for perfect rounds",
     "Live variable watch panel"
   ],
-  "player_objective": "Beat a rival AI to the magma valve by solving code steps involving predictions that move the fire warden forward.",
-  "controls": "Code-editor: type or edit short lines in the code panel and press Run; click to select targets.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
-  "lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "player_objective": "Read value for station 5, then display the same value without changing it. Test dataset 5: {'value': -5}; {'value': 15}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 2 (intro tier): Mixed Type Oracle",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Input/output",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M15-X5-T01-1f447b1a",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Mixed Type Oracle' (Week 2 slot 15), mission type 'Rival Race', and setting 'Ash Rim Trail'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 2,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 33,
+    "time_limit_seconds": 0,
     "target_score": 140,
     "action_budget": 15,
     "streak_target": 8,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how predictions changes.",
-    "Step 2: Use the controls to apply the code idea against magma slimes in Ash Rim Trail.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level2/standard/game_week2_level2_difficulty(Standard)_5.json",
+    "variation_id": "canvas_game_0345",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the magma valve by solving code steps involving predictions that move the fire warden forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "source_lose_condition": "The rival reaches the magma valve first, or lives reach 0.",
+  "source_game_title": "Mixed Type Oracle – Ash Rim Trail Race",
+  "source_primary_mechanic": "Mixed Type Oracle",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 33,
+  "learning_objective_id": "cp1_w2_l2",
+  "source_week": 2,
+  "source_level": 2
 }

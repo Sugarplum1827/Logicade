@@ -1,30 +1,30 @@
 {
   "file_id": "game_1212",
-  "game_title": "Iteration Tracer – Herbalist Hut Streak",
+  "game_title": "Branch Assembly 2 · Merge Midpoint",
   "game_concept": "A card battler set in Mystic Forest – Herbalist Hut, a herbalist's hut: the beast tamer must handle giant beetles while practicing control flow: for loops. Core idea – Iteration Tracer: Predict how many times a loop body runs before the clock stops.",
-  "genre": "card battler",
+  "genre": "factory programming workbench",
   "theme": "Mystic Forest – Herbalist Hut: a herbalist's hut",
-  "core_gameplay_loop": "In Herbalist Hut, repeat each round: Predict how many times a loop body runs before the clock stops. Each round poses one decision; a wrong answer breaks the streak. Then check the trace_score value and advance.",
-  "primary_mechanic": "Iteration Tracer",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "factory construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Chain 7 consecutive correct decisions about trace_score to power up the beast tamer and open the root gate.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 7.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Tokens and components: build a valid C source file that prints 4. Put preprocessing before main; keep declarations and statements inside its body. Then test its compiler-factory route: Build the router at (3, 3), with the upper processing path on row 1 and lower path on row 5. IF item value >= 5, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Deliver exactly 6 components (3 upper, 3 lower). Set the gold-socket controller batch to 6.",
+  "controls": "Drag sprites onto the grid. R rotates new pieces. Set fork output directions and router conditions in the inspector. Splitters alternate; routers evaluate each item; mergers accept one waiting item at a time fairly. Set batch size, connect power, repair rounded conveyors, then Run or Step. Grid controls are the keyboard alternative.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 5 – Control Flow: For Loops | Level 1 (intro tier): Iteration Tracer",
-  "assets_style": "lush pixel-art forest: dense green canopy, a glowing blue ancient tree, winding streams and dirt paths; flat Kenney-style sprites; airy flutes, birdsong and soft magical chimes",
+  "learning_alignment": "CP1 Week 5: Tokens and components",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W5-M12-X4-T18-15a7bc0a",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Iteration Tracer' (Week 5 slot 12), mission type 'Streak Challenge', and setting 'Herbalist Hut'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 5,
   "level": 1,
   "trial": 2,
-  "topic": "Control Flow: For Loops",
+  "topic": "C Components, Keywords, Preprocessor and Organization",
   "region": {
     "id": "w5_forest",
     "name": "Mystic Forest",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 30,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 14,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how trace_score changes.",
-    "Step 2: Use the controls to apply the code idea against giant beetles in Herbalist Hut.",
-    "Step 3: Win by meeting the goal: streak counter reaches 7."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_5/level1/standard/game_week5_level1_difficulty(Standard)_2.json",
+    "variation_id": "canvas_game_1212",
+    "mode": "factory",
+    "asset_set": "factory",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 7 consecutive correct decisions about trace_score to power up the beast tamer and open the root gate.",
+  "source_win_condition": "streak counter reaches 7.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Iteration Tracer – Herbalist Hut Streak",
+  "source_primary_mechanic": "Iteration Tracer",
+  "hint": "IF item value >= 5, send north to the upper branch; ELSE send south to the lower branch. Merge the two plate streams at (8, 3), then use the shared assembler and output. Branch contracts: IF: 3 components via upper_4, shared_assembler to output_shared; ELSE: 3 components via lower_4, shared_assembler to output_shared. Power the junctions and production machines. A blocked branch waits without losing items.",
+  "source_time_limit_seconds": 30,
+  "learning_objective_id": "cp1_w5_l1",
+  "source_week": 5,
+  "source_level": 1
 }

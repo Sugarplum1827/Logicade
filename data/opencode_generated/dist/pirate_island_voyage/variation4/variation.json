@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "14_pirate_island_voyage",
+  "slug": "pirate_island_voyage",
+  "display_name": "Pirate Island Voyage",
+  "module_family": "navigation_adventure",
+  "learning_target": "coordinates and ordered movement",
+  "core_brief": "Use coordinates to steer a ship around reefs and reach marked island destinations.",
+  "mode": "grid_route",
+  "mode_label": "Grid route",
+  "skin": "pirate",
+  "theme": "pirate",
+  "theme_label": "Pirate",
+  "mechanic": "Grid route",
+  "accent": "#ff6b81",
+  "tint": 12695530,
+  "variation_id": "14_pirate_island_voyage_v04",
+  "index": 4,
+  "title": "Escort Route",
+  "label": "Variation 04: Escort Route",
+  "seed": 4062474793,
+  "map_id": "cave_path_01",
+  "layout": {
+    "kind": "linear"
+  },
+  "features": {
+    "follower": true,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 4,
+    "timer_s": 0,
+    "approach_s": 14,
+    "obstacles": 5
+  },
+  "assets": {
+    "theme": "pirate",
+    "theme_label": "Pirate",
+    "bg": "themes.pirate.bg_sea_1",
+    "zones": [
+      "themes.pirate.bg_sea_1",
+      "themes.pirate.bg_sea_2",
+      "themes.pirate.bg_sea_3"
+    ],
+    "tile": "themes.pirate.tile_sand",
+    "player": "themes.pirate.player_yellow",
+    "enemy": "themes.pirate.enemy_x",
+    "coin": "themes.pirate.coin_doubloon",
+    "goal": "themes.pirate.goal_ship",
+    "obstacles": {
+      "spike": "themes.pirate.fire",
+      "bush": "themes.pirate.cannonball",
+      "slime": "themes.pirate.nest",
+      "bee": "themes.pirate.fire"
+    },
+    "follower": "themes.pirate.follower"
+  },
+  "brief": {
+    "map": "Build a winding route where the player guides a moving non-player target to safety. The target pauses at decision points and never takes unavoidable damage.",
+    "obstacles": "route blockers, detours, and a visible safe destination; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "moderate pacing with timed pressure at marked checkpoints."
+  },
+  "question_bank": "../../data/questions/pirate_island_voyage.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation3/",
+    "next": "../variation5/"
+  }
+}

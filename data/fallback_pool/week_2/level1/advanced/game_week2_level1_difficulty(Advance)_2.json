@@ -1,30 +1,30 @@
 {
   "file_id": "game_0322",
-  "game_title": "String Glue – Magma Forge Race",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A racing platformer set in Mt. Pyre – Magma Forge, a forge fed by magma: the ash ranger must handle fire sprites while practicing data types & operators. Core idea – String Glue: Concatenate string pieces to forge passwords and spell names.",
-  "genre": "racing platformer",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Magma Forge: a forge fed by magma",
-  "core_gameplay_loop": "In Magma Forge, repeat each round: Concatenate string pieces to forge passwords and spell names. Each round the rival advances, and solving the step moves the ash ranger ahead. Then check the spell_ok value and advance.",
-  "primary_mechanic": "String Glue",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Ghost replay of best run",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Beat a rival AI to the summit beacon by solving code steps involving spell_ok that move the ash ranger forward.",
-  "controls": "Keyboard: arrow keys move the hero, SPACE performs the main action, ENTER runs the code.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
-  "lose_condition": "The rival reaches the summit beacon first, or lives reach 0.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 2: {'a': 2, 'b': 4}; {'a': 0, 'b': 4}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 6,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): String Glue",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Symbols and sequence",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M07-X5-T04-161d7d43",
   "duplicate_check_notes": "Unique combination of primary mechanic 'String Glue' (Week 2 slot 7), mission type 'Rival Race', and setting 'Magma Forge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 1,
   "trial": 2,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 24,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 10,
     "streak_target": 9,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how spell_ok changes.",
-    "Step 2: Use the controls to apply the code idea against fire sprites in Magma Forge.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.8)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level1/advanced/game_week2_level1_difficulty(Advance)_2.json",
+    "variation_id": "canvas_game_0322",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the summit beacon by solving code steps involving spell_ok that move the ash ranger forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.8).",
+  "source_lose_condition": "The rival reaches the summit beacon first, or lives reach 0.",
+  "source_game_title": "String Glue – Magma Forge Race",
+  "source_primary_mechanic": "String Glue",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 24,
+  "learning_objective_id": "cp1_w2_l1",
+  "source_week": 2,
+  "source_level": 1
 }

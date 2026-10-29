@@ -106,6 +106,10 @@ def _index_pool_files(repo_root: Path) -> tuple[dict[str, Path], set[str]]:
     if not pool_root.is_dir():
         return by_id, duplicates
     for path in pool_root.glob("week_*/level*/*/*.json"):
+        # OpenCode build metadata sits beside the canonical fallback JSON but
+        # must never be indexed as a second game with the same file_id.
+        if path.name.endswith((".description.json", ".manifest.json")):
+            continue
         try:
             spec = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):

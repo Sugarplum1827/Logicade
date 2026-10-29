@@ -1,30 +1,30 @@
 {
   "file_id": "game_0423",
-  "game_title": "Modulo Gate – Obsidian Quarry Race",
+  "game_title": "Flowchart Lab · Boundary inputs",
   "game_concept": "A strategy race set in Mt. Pyre – Obsidian Quarry, a glassy black quarry: the forge smith must handle smoke serpents while practicing data types & operators. Core idea – Modulo Gate: Use % to decide which gates in Obsidian Quarry open (even, odd, divisible by 3).",
-  "genre": "strategy race",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Obsidian Quarry: a glassy black quarry",
-  "core_gameplay_loop": "In Obsidian Quarry, repeat each round: Use % to decide which gates in Obsidian Quarry open (even, odd, divisible by 3). Each round the rival advances, and solving the step moves the forge smith ahead. Then check the gates_open value and advance.",
-  "primary_mechanic": "Modulo Gate",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Rival AI with rubber-band speed",
     "Mini-tutorial pop-ups",
     "Event log of every action"
   ],
-  "player_objective": "Beat a rival AI to the ember furnace by solving code steps involving gates_open that move the forge smith forward.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
-  "lose_condition": "The rival reaches the ember furnace first, or lives reach 0.",
+  "player_objective": "Read score. Display Pass when score ≥ 46; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 3: {'score': 45}; {'score': 47}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 5 (applied tier): Modulo Gate",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Boundary inputs",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M03-X5-T03-2a620de1",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Modulo Gate' (Week 2 slot 3), mission type 'Rival Race', and setting 'Obsidian Quarry'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 5,
   "trial": 3,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how gates_open changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Obsidian Quarry.",
-    "Step 3: Win by meeting the goal: Player progress reaches 100% before the rival does (rival speed 0.7)."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level5/needs_support/game_week2_level5_difficulty(NeedAssistance)_3.json",
+    "variation_id": "canvas_game_0423",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Beat a rival AI to the ember furnace by solving code steps involving gates_open that move the forge smith forward.",
+  "source_win_condition": "Player progress reaches 100% before the rival does (rival speed 0.7).",
+  "source_lose_condition": "The rival reaches the ember furnace first, or lives reach 0.",
+  "source_game_title": "Modulo Gate – Obsidian Quarry Race",
+  "source_primary_mechanic": "Modulo Gate",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w2_l5",
+  "source_week": 2,
+  "source_level": 5
 }

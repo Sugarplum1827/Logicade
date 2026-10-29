@@ -1,30 +1,30 @@
 {
   "file_id": "game_1621",
-  "game_title": "Spell Forge – Skating Pond Streak",
+  "game_title": "Integer expressions · variation 1",
   "game_concept": "A quiz RPG set in Snowy Hold – Skating Pond, a frozen skating pond: the firewood keeper must handle frost imps while practicing functions. Core idea – Spell Forge: Define a function once, then call it to cast the same spell repeatedly against frost imps.",
-  "genre": "quiz RPG",
+  "genre": "adventure programming workbench",
   "theme": "Snowy Hold – Skating Pond: a frozen skating pond",
-  "core_gameplay_loop": "In Skating Pond, repeat each round: Define a function once, then call it to cast the same spell repeatedly against frost imps. Each round poses one decision; a wrong answer breaks the streak. Then check the spells value and advance.",
-  "primary_mechanic": "Spell Forge",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Streak combo meter",
     "Mini-tutorial pop-ups",
     "Checkpoint flags"
   ],
-  "player_objective": "Chain 7 consecutive correct decisions about spells to power up the firewood keeper and open the chapel bell.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "streak counter reaches 7.",
-  "lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "player_objective": "Maze 1 (15×9, 19 junctions): collect 1 crystal(s) from the branches and reach beacon (13, 5). Use a C main program to Integer expressions. Print [16]; final file-scope values must be {}.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 6 – Functions | Level 5 (applied tier): Spell Forge",
-  "assets_style": "cozy pixel-art snow town: icy blue rooftops, frosted pines, warm lantern glow; flat Kenney-style sprites; soft bells, wind howls and cozy hearth crackle",
+  "learning_alignment": "CP1 Week 6: Integer expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W6-M01-X4-T09-bead7249",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Spell Forge' (Week 6 slot 1), mission type 'Streak Challenge', and setting 'Skating Pond'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 6,
   "level": 5,
   "trial": 1,
-  "topic": "Functions",
+  "topic": "Creating Simple C Programs and Program Structure",
   "region": {
     "id": "w6_snowy",
     "name": "Snowy Hold",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 59,
+    "time_limit_seconds": 0,
     "target_score": 180,
     "action_budget": 20,
     "streak_target": 7,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how spells changes.",
-    "Step 2: Use the controls to apply the code idea against frost imps in Skating Pond.",
-    "Step 3: Win by meeting the goal: streak counter reaches 7."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_6/level5/needs_support/game_week6_level5_difficulty(NeedAssistance)_1.json",
+    "variation_id": "canvas_game_1621",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Chain 7 consecutive correct decisions about spells to power up the firewood keeper and open the chapel bell.",
+  "source_win_condition": "streak counter reaches 7.",
+  "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
+  "source_game_title": "Spell Forge – Skating Pond Streak",
+  "source_primary_mechanic": "Spell Forge",
+  "hint": "Use printf with stdio.h. File-scope declarations belong before main; block locals hide names only within that block. Coordinates start at the top left.",
+  "source_time_limit_seconds": 59,
+  "learning_objective_id": "cp1_w6_l5",
+  "source_week": 6,
+  "source_level": 5
 }

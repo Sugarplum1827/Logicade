@@ -1,0 +1,79 @@
+{
+  "concept_id": "05_farm_management_script",
+  "slug": "farm_management_script",
+  "learning_target": "loops and repeated instructions",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does a loop do?",
+      "options": [
+        "Changes the language",
+        "Deletes crops",
+        "Runs once",
+        "Repeats instructions"
+      ],
+      "answer_index": 3,
+      "explanation": "A loop repeats a block of instructions until its stopping condition is met."
+    },
+    {
+      "id": "q2",
+      "question": "How many times does `for i in range(3):` run?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer_index": 0,
+      "explanation": "range(3) produces 0, 1 and 2, so the loop body runs three times."
+    },
+    {
+      "id": "q3",
+      "question": "What is a loop body?",
+      "options": [
+        "The loop keyword",
+        "The final print",
+        "The indented steps inside the loop",
+        "The variable name"
+      ],
+      "answer_index": 2,
+      "explanation": "The body is the indented block that repeats on each iteration."
+    },
+    {
+      "id": "q4",
+      "question": "Which loop is best when you know the number of crops?",
+      "options": [
+        "while True",
+        "for",
+        "if",
+        "def"
+      ],
+      "answer_index": 1,
+      "explanation": "A for loop is ideal when the number of repetitions is known in advance."
+    },
+    {
+      "id": "q5",
+      "question": "What happens if a loop never changes its condition?",
+      "options": [
+        "It skips the body",
+        "It runs once",
+        "It prints nothing",
+        "It may run forever"
+      ],
+      "answer_index": 3,
+      "explanation": "If the condition stays true, a while loop can continue indefinitely."
+    },
+    {
+      "id": "q6",
+      "question": "What does `range(1, 4)` produce?",
+      "options": [
+        "0, 1, 2, 3",
+        "1, 2, 3, 4",
+        "1, 2, 3",
+        "4, 3, 2, 1"
+      ],
+      "answer_index": 2,
+      "explanation": "range(1, 4) starts at 1 and stops before 4, producing 1, 2 and 3."
+    }
+  ]
+}

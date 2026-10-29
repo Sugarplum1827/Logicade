@@ -1,0 +1,562 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v01",
+    "index": 1,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of block scope in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Enter the outer block"
+        },
+        {
+          "id": "s2",
+          "text": "Declare an outer variable"
+        },
+        {
+          "id": "s3",
+          "text": "Enter an inner block and declare another"
+        },
+        {
+          "id": "s4",
+          "text": "Use the inner name only inside that block"
+        },
+        {
+          "id": "s5",
+          "text": "Leave the inner block and keep the outer name"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Enter the outer block → Declare an outer variable → Enter an inner block and declare another → Use the inner name only inside that block → Leave the inner block and keep the outer name",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v02",
+    "index": 2,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build an inner block that declares temp.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "{"
+        },
+        {
+          "id": "t2",
+          "text": "int"
+        },
+        {
+          "id": "t3",
+          "text": "temp"
+        },
+        {
+          "id": "t4",
+          "text": "="
+        },
+        {
+          "id": "t5",
+          "text": "1"
+        },
+        {
+          "id": "t6",
+          "text": ";"
+        },
+        {
+          "id": "t7",
+          "text": "}"
+        },
+        {
+          "id": "t8",
+          "text": "("
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Braces create a block; temp exists only between them.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v03",
+    "index": 3,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the surviving outer value and the inner name after its block ends.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int outer = 10;",
+        "    {",
+        "        int inner = 1;",
+        "        outer = outer + inner;",
+        "    }",
+        "    printf(\"%d\\n\", outer);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "outer",
+          "type": "final value"
+        },
+        {
+          "name": "inner",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "11"
+        },
+        {
+          "id": "v2",
+          "text": "gone"
+        },
+        {
+          "id": "v3",
+          "text": "12"
+        },
+        {
+          "id": "v4",
+          "text": "10"
+        },
+        {
+          "id": "v5",
+          "text": "0"
+        }
+      ],
+      "answer": {
+        "outer": "v1",
+        "inner": "v2"
+      }
+    },
+    "explanation": "outer becomes 11; inner no longer exists after the closing brace.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v04",
+    "index": 4,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each use as inside the inner block or after it.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "inside",
+          "label": "Inside the inner block",
+          "desc": "inner is visible"
+        },
+        {
+          "id": "after",
+          "label": "After the block",
+          "desc": "inner is gone"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "int inner = 1;",
+          "bin": "inside"
+        },
+        {
+          "id": "i2",
+          "text": "outer = outer + inner;",
+          "bin": "inside"
+        },
+        {
+          "id": "i3",
+          "text": "printf(\"%d\", inner); inside the braces",
+          "bin": "inside"
+        },
+        {
+          "id": "i4",
+          "text": "printf(\"%d\", inner); after the braces",
+          "bin": "after"
+        },
+        {
+          "id": "i5",
+          "text": "inner = 2; after the braces",
+          "bin": "after"
+        },
+        {
+          "id": "i6",
+          "text": "return inner; after the braces",
+          "bin": "after"
+        }
+      ]
+    },
+    "explanation": "inner is usable only until the closing brace of its block.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v05",
+    "index": 5,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int main(void) {",
+        "    {",
+        "        int temp = 1;",
+        "    }",
+        "    printf(\"%d\\n\", temp);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": 4,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "temp is block-scoped, so it is not visible after the closing brace.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v06",
+    "index": 6,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each item in the outer block or the inner block.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int outer = 10;",
+        "    {",
+        "        int inner = 1;",
+        "        outer = outer + inner;",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "outer",
+          "label": "Outer block",
+          "desc": "main body"
+        },
+        {
+          "id": "inner",
+          "label": "Inner block",
+          "desc": "Between the extra braces"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int outer = 10;",
+          "scope": "outer"
+        },
+        {
+          "id": "d2",
+          "text": "int inner = 1;",
+          "scope": "inner"
+        },
+        {
+          "id": "d3",
+          "text": "outer = outer + inner;",
+          "scope": "inner"
+        },
+        {
+          "id": "d4",
+          "text": "printf(\"%d\", outer);",
+          "scope": "outer"
+        }
+      ]
+    },
+    "explanation": "outer belongs to main; inner belongs only to the nested block.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v07",
+    "index": 7,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each block scope term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Block"
+        },
+        {
+          "id": "l2",
+          "text": "Block scope"
+        },
+        {
+          "id": "l3",
+          "text": "Nested block"
+        },
+        {
+          "id": "l4",
+          "text": "Shadowing"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Code between a pair of braces"
+        },
+        {
+          "id": "r2",
+          "text": "Names declared inside those braces"
+        },
+        {
+          "id": "r3",
+          "text": "A block inside another block"
+        },
+        {
+          "id": "r4",
+          "text": "An inner name hides an outer name"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v08",
+    "index": 8,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the nested block.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int outer = 10;",
+        "{{b0}}",
+        "    int inner = 1;",
+        "    outer = outer + inner;",
+        "{{b1}}",
+        "printf(\"%d\\n\", outer);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "opening brace",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "closing brace",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "{"
+        },
+        {
+          "id": "b2",
+          "text": "}"
+        },
+        {
+          "id": "b3",
+          "text": "("
+        },
+        {
+          "id": "b4",
+          "text": ")"
+        },
+        {
+          "id": "b5",
+          "text": ";"
+        }
+      ]
+    },
+    "explanation": "The braces define the inner block, so inner is visible only inside it.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v09",
+    "index": 9,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int outer = 10;",
+        "    {",
+        "        int inner = 1;",
+        "        outer = outer + inner;",
+        "    }",
+        "    printf(\"%d\\n\", outer);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "11",
+      "accept": [
+        "11"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "The inner block adds 1 to outer; inner disappears but outer remains 11."
+    },
+    "explanation": "The program produces 11.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "block_scope_v10",
+    "index": 10,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int outer = 10;",
+        "    {",
+        "        int inner = 1;",
+        "        outer = outer + inner;",
+        "    }",
+        "    printf(\"%d\\n\", outer);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "outer",
+        "inner"
+      ],
+      "steps": [
+        {
+          "line": 2,
+          "state": {
+            "outer": "10",
+            "inner": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "outer": "10",
+            "inner": "1"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "outer": "11",
+            "inner": "1"
+          }
+        },
+        {
+          "line": 7,
+          "state": {
+            "outer": "11",
+            "inner": "gone"
+          }
+        }
+      ],
+      "ask": [
+        "outer",
+        "inner"
+      ],
+      "answer": {
+        "outer": "11",
+        "inner": "gone"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is outer = 11, inner = gone.",
+    "concept_slug": "block_scope",
+    "concept_name": "Block Scope"
+  }
+]

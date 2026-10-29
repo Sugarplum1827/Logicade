@@ -1,30 +1,30 @@
 {
   "file_id": "game_0554",
-  "game_title": "Unit Trader – Sulfur Springs Defense",
+  "game_title": "Flowchart Lab · Find the larger number",
   "game_concept": "A survival strategy set in Mt. Pyre – Sulfur Springs, steaming sulfur springs: the volcanologist must handle ember hounds while practicing data types & operators. Core idea – Unit Trader: Convert units using expressions so each trade of ash bricks is fair.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Sulfur Springs: steaming sulfur springs",
-  "core_gameplay_loop": "In Sulfur Springs, repeat each round: Convert units using expressions so each trade of ash bricks is fair. Each round, ember hounds strike the fire shrine, so respond before the next strike lands. Then check the fair_trades value and advance.",
-  "primary_mechanic": "Unit Trader",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Protect the fire shrine from ember hounds in Sulfur Springs: keep the fair_trades meter above zero by applying the concept correctly until the 54-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 54 seconds while fair_trades > 0.",
-  "lose_condition": "fair_trades drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "player_objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 4: {'a': 9, 'b': 4}; {'a': -4, 'b': -6}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 9 (extended tier): Unit Trader",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Compare branches",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M14-X1-T08-da857be3",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Unit Trader' (Week 2 slot 14), mission type 'Survival Siege', and setting 'Sulfur Springs'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 9,
   "trial": 4,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 54,
+    "time_limit_seconds": 0,
     "target_score": 420,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how fair_trades changes.",
-    "Step 2: Use the controls to apply the code idea against ember hounds in Sulfur Springs.",
-    "Step 3: Win by meeting the goal: Timer reaches 54 seconds while fair_trades > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level9/standard/game_week2_level9_difficulty(Standard)_4.json",
+    "variation_id": "canvas_game_0554",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the fire shrine from ember hounds in Sulfur Springs: keep the fair_trades meter above zero by applying the concept correctly until the 54-second timer ends.",
+  "source_win_condition": "Timer reaches 54 seconds while fair_trades > 0.",
+  "source_lose_condition": "fair_trades drops to 0, or lives reach 0, before the 54-second timer ends.",
+  "source_game_title": "Unit Trader – Sulfur Springs Defense",
+  "source_primary_mechanic": "Unit Trader",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 54,
+  "learning_objective_id": "cp1_w2_l9",
+  "source_week": 2,
+  "source_level": 9
 }

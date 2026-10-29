@@ -1,41 +1,41 @@
 {
   "file_id": "game_2333",
-  "game_title": "Phone Book Rescue – Crevasse Bridge Rush",
+  "game_title": "C Scope Circuit · Restore visibility · variation 3",
   "game_concept": "A action puzzle set in Frost Peaks – Crevasse Bridge, a rope bridge over a crevasse: the ice axe ranger must handle falling rocks while practicing strings & dictionaries. Core idea – Phone Book Rescue: Add and update dictionary entries as contacts change.",
-  "genre": "action puzzle",
+  "genre": "circuit programming workbench",
   "theme": "Frost Peaks – Crevasse Bridge: a rope bridge over a crevasse",
-  "core_gameplay_loop": "In Crevasse Bridge, repeat each round: Add and update dictionary entries as contacts change. Each round, a new crampons challenge appears; solve it to bank points before time drains. Then check the contacts value and advance.",
-  "primary_mechanic": "Phone Book Rescue",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Live variable watch panel",
     "Power-up crates for perfect rounds"
   ],
-  "player_objective": "Collect 490 points of crampons by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "score >= 490 within 41 seconds.",
-  "lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "player_objective": "Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, separate sibling local lifetimes. Print the scope trace [14, 17, 6], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 6}. Pass all 3 signal tests.",
+  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "Week 8 – Strings & Dictionaries | Level 8 (extended tier): Phone Book Rescue",
-  "assets_style": "towering pixel-art mountains: glaciers, jagged ice ridges, crisp white and cyan with deep blue shadows; flat Kenney-style sprites; thin howling wind, high strings and ice-crack stings",
+  "learning_alignment": "CP1 Week 8: Restore visibility",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W8-M08-X2-T05-de7c8bb1",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Phone Book Rescue' (Week 8 slot 8), mission type 'Resource Rush', and setting 'Crevasse Bridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 8,
   "level": 8,
   "trial": 3,
-  "topic": "Strings & Dictionaries",
+  "topic": "Local and Global Variables",
   "region": {
     "id": "w8_peaks",
     "name": "Frost Peaks",
     "banner": "data/fallback_pool/week_8/w8_peaks.png",
     "mood": "thin howling wind, high strings and ice-crack stings"
   },
-  "code_snippet": "book['Ana'] = '0917'",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 6;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 14; printf(\"%d\\n\", steps); }\n{ int steps = 17; printf(\"%d\\n\", steps); }\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 41,
+    "time_limit_seconds": 0,
     "target_score": 490,
     "action_budget": 14,
     "streak_target": 13,
@@ -45,8 +45,38 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how contacts changes.",
-    "Step 2: Use the controls to apply the code idea against falling rocks in Crevasse Bridge.",
-    "Step 3: Win by meeting the goal: score >= 490 within 41 seconds."
-  ]
+    "Read the C scope mission and expected signal traces.",
+    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
+    "Write file-scope declarations before main and local declarations inside their blocks.",
+    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
+    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_8/level8/advanced/game_week8_level8_difficulty(Advance)_3.json",
+    "variation_id": "canvas_game_2333",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 490 points of crampons by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 490 within 41 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 490, or lives reach 0.",
+  "source_game_title": "Phone Book Rescue – Crevasse Bridge Rush",
+  "source_primary_mechanic": "Phone Book Rescue",
+  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "source_time_limit_seconds": 41,
+  "learning_objective_id": "cp1_w8_l8",
+  "source_week": 8,
+  "source_level": 8,
+  "mechanic_migration": {
+    "version": 2,
+    "from_family": "circuit",
+    "to_family": "circuit",
+    "requested_at": "2026-10-29T21:07:47.134759+00:00",
+    "topology": "parallel_branches_sum_merge_bounded_feedback",
+    "previous_revision": "fcfbc081162592e5ffd302adb12849f8cc6baa37fecefde25091c6a5994be224",
+    "lesson_unchanged": true
+  }
 }

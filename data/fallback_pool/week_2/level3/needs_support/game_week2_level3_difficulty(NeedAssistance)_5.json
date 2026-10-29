@@ -1,30 +1,30 @@
 {
   "file_id": "game_0365",
-  "game_title": "Comparison Duel – Pumice Pass Rush",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A action puzzle set in Mt. Pyre – Pumice Pass, a narrow pumice pass: the fire warden must handle molten golems while practicing data types & operators. Core idea – Comparison Duel: Choose ==, !=, < , > or >= so the fire warden's power beats the shield shown by molten golems.",
-  "genre": "action puzzle",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Pumice Pass: a narrow pumice pass",
-  "core_gameplay_loop": "In Pumice Pass, repeat each round: Choose ==, !=, < , > or >= so the fire warden's power beats the shield shown by molten golems. Each round, a new sulfur crystals challenge appears; solve it to bank points before time drains. Then check the power value and advance.",
-  "primary_mechanic": "Comparison Duel",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Collect 130 points of sulfur crystals by answering each challenge with the right code concept before the clock runs out.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "score >= 130 within 50 seconds.",
-  "lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 5: {'width': 6, 'height': 7}; {'width': 8, 'height': 2}.",
+  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 3 (intro tier): Comparison Duel",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Process expressions",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M05-X2-T13-b7b479f2",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Comparison Duel' (Week 2 slot 5), mission type 'Resource Rush', and setting 'Pumice Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 3,
   "trial": 5,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 50,
+    "time_limit_seconds": 0,
     "target_score": 130,
     "action_budget": 19,
     "streak_target": 6,
@@ -45,8 +45,27 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how power changes.",
-    "Step 2: Use the controls to apply the code idea against molten golems in Pumice Pass.",
-    "Step 3: Win by meeting the goal: score >= 130 within 50 seconds."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level3/needs_support/game_week2_level3_difficulty(NeedAssistance)_5.json",
+    "variation_id": "canvas_game_0365",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Collect 130 points of sulfur crystals by answering each challenge with the right code concept before the clock runs out.",
+  "source_win_condition": "score >= 130 within 50 seconds.",
+  "source_lose_condition": "Timer hits 0 with score < 130, or lives reach 0.",
+  "source_game_title": "Comparison Duel – Pumice Pass Rush",
+  "source_primary_mechanic": "Comparison Duel",
+  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "source_time_limit_seconds": 50,
+  "learning_objective_id": "cp1_w2_l3",
+  "source_week": 2,
+  "source_level": 3
 }

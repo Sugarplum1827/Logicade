@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "template_version": "2.0.0",
+  "runtime": "dom",
+  "track": "classic",
+  "generated_by": "scripts/generate.mjs",
+  "concept_id": "09_rhythm_code_beats",
+  "slug": "rhythm_code_beats",
+  "display_name": "Rhythm Code Beats",
+  "module_family": "rhythm_action",
+  "learning_target": "command order and pattern recognition",
+  "core_brief": "Match code commands to the beat to clear bugs and keep the music loop intact.",
+  "mode": "rhythm",
+  "mode_label": "Beat matcher",
+  "skin": "rhythm",
+  "theme": "space",
+  "theme_label": "Space",
+  "mechanic": "Beat matcher",
+  "accent": "#ff8fd8",
+  "tint": 15386039,
+  "variation_id": "09_rhythm_code_beats_v03",
+  "index": 3,
+  "title": "Vertical Ascent",
+  "label": "Variation 03: Vertical Ascent",
+  "seed": 4141091471,
+  "map_id": "forest_path_01",
+  "layout": {
+    "kind": "vertical"
+  },
+  "features": {
+    "follower": false,
+    "zones": false,
+    "phases": false,
+    "checkpoint_every": 0,
+    "switches": false,
+    "lanes": 1
+  },
+  "pacing": {
+    "lives": 3,
+    "timer_s": 0,
+    "approach_s": 19,
+    "obstacles": 4
+  },
+  "assets": {
+    "theme": "space",
+    "theme_label": "Space",
+    "bg": "themes.space.bg_dark_purple",
+    "zones": [
+      "themes.space.bg_dark_purple",
+      "themes.space.bg_purple",
+      "themes.space.bg_black"
+    ],
+    "tile": "themes.space.tile_steel",
+    "player": "themes.space.player_orange",
+    "enemy": "themes.space.enemy_red",
+    "coin": "themes.space.coin_red",
+    "goal": "themes.space.goal_red",
+    "obstacles": {
+      "spike": "themes.space.meteor_brown_small",
+      "bush": "themes.space.meteor_brown_big",
+      "slime": "themes.space.meteor_brown_small",
+      "bee": "themes.space.meteor_grey_big"
+    },
+    "follower": "themes.space.follower"
+  },
+  "brief": {
+    "map": "Build a vertically layered level with at least three distinct heights or floors. A correct response opens the next climb segment; provide safe recovery platforms.",
+    "obstacles": "gaps, lifts or ladders, and one moving vertical hazard; adapt these to the stated game concept and avoid unavoidable damage or failure.",
+    "pacing": "short climb bursts separated by brief planning pauses."
+  },
+  "question_bank": "../../data/questions/rhythm_code_beats.json",
+  "activity_count": 6,
+  "bespoke": false,
+  "urls": {
+    "catalog": "../../index.html",
+    "track": "../../index.html",
+    "concept": "../index.html",
+    "previous": "../variation2/",
+    "next": "../variation4/"
+  }
+}

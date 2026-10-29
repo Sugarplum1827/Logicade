@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_1868",
+  "variation_id": "canvas_game_1868",
+  "week": 7,
+  "level": 3,
+  "trial": 8,
+  "difficulty": "Need Assistance",
+  "mode": "terminal",
+  "title": "Assignment versus equality · variation 8",
+  "display_name": "Register Operations Console",
+  "theme": "Eldritch Ruins – Relic Vault: a hidden relic vault",
+  "topic": "Basic Parts of C and Variable Declarations",
+  "learning_objectives": [
+    "Assignment versus equality"
+  ],
+  "lesson": {
+    "summary": "Basic Parts of C and Variable Declarations",
+    "points": [
+      "Assignment versus equality",
+      "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "Practice int, float, double and char, with suitable printf formats.",
+      "Names are case sensitive. Do not read an uninitialized automatic local."
+    ],
+    "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+    "practice": "Integer division",
+    "week": 7,
+    "source_week": 7,
+    "source_level": 3,
+    "objective_id": "cp1_w7_l3",
+    "title": "Basic Parts of C and Variable Declarations",
+    "stage_title": "Assignment versus equality",
+    "objectives": [
+      "Assignment versus equality"
+    ],
+    "sources": [
+      {
+        "title": "Harvard CS50: C basics",
+        "url": "https://cs50.harvard.edu/x/notes/1/"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      7
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w7_l3",
+  "source_level": 3,
+  "source_week": 7,
+  "primary_mechanic": "terminal construction and execution",
+  "objective": "Assignment versus equality: declare resource as int, apply resource == 11, and print each result with %d. Dataset 8 starts with [-3, 0, 11, 14]. Match every stream. Use a full main function and a return statement.",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "time_limit_seconds": 0,
+  "starting_lives": 5,
+  "seed": 3343878029,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "registers": [
+      1,
+      0,
+      4,
+      10
+    ],
+    "node_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_node": 1
+  },
+  "programming": {
+    "version": 1,
+    "mission_id": "cp1_w7_l3_v8_0",
+    "rules": {
+      "max_steps": 590,
+      "max_lines": 40,
+      "max_nodes": 7
+    },
+    "construction_timer": false,
+    "difficulty_profile": 0,
+    "reference_is_practice_only": true,
+    "objective_id": "cp1_w7_l3",
+    "source_level": 3,
+    "focus": "Assignment versus equality",
+    "family": "terminal",
+    "language": "c_subset",
+    "title": "Assignment versus equality · variation 8",
+    "objective": "Assignment versus equality: declare resource as int, apply resource == 11, and print each result with %d. Dataset 8 starts with [-3, 0, 11, 14]. Match every stream. Use a full main function and a return statement.",
+    "cases": [
+      {
+        "id": "case_1",
+        "inputs": [
+          -3,
+          0,
+          11,
+          14
+        ],
+        "expected": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "required_values": {
+          "resource": 0
+        }
+      },
+      {
+        "id": "case_2",
+        "inputs": [
+          -2,
+          0,
+          12,
+          14
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "required_values": {
+          "resource": 0
+        }
+      },
+      {
+        "id": "case_3",
+        "inputs": [
+          -1,
+          0,
+          13,
+          14
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "required_values": {
+          "resource": 0
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "C1",
+        "program": "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\n// Declare, compute and print here.\nreturn 0;\n}"
+      }
+    ],
+    "required_declaration": {
+      "name": "resource",
+      "type": "int"
+    },
+    "reference": {
+      "programs": [
+        "#include <stdio.h>\n#include \"logicade.h\"\nint main(void)\n{\nint resource = readInput();\nresource = resource == 11;\nprintf(\"%d\\n\", resource);\nreturn 0;\n}"
+      ]
+    },
+    "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+    "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset."
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "cp1_w7_l3_v8_0",
+      "kind": "program_execution",
+      "prompt": "Assignment versus equality: declare resource as int, apply resource == 11, and print each result with %d. Dataset 8 starts with [-3, 0, 11, 14]. Match every stream. Use a full main function and a return statement."
+    }
+  ],
+  "source_path": "week_7/level3/needs_support/game_week7_level3_difficulty(NeedAssistance)_8.json",
+  "source_topic": "Basic Parts of C and Variable Declarations",
+  "source_learning_alignment": "CP1 Week 7: Assignment versus equality",
+  "source_primary_mechanic": "Matrix Map",
+  "source_code_snippet": "grid[1][2]"
+}

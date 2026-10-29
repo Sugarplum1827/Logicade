@@ -1,0 +1,421 @@
+{
+  "version": "cp1-stage-objectives-v1-2026-10-29",
+  "source": "User weekly syllabus; primary educational and language documentation",
+  "weeks": [
+    {
+      "week": 1,
+      "concept": "course_orientation",
+      "title": "Orientation",
+      "mission": "Orientation",
+      "objectives": [
+        "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+        "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once."
+      ],
+      "mechanic": "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+      "genres": [
+        "welcome_video",
+        "tetris"
+      ],
+      "stages": [
+        "Welcome video",
+        "Controls and mission practice"
+      ],
+      "source_ids": [],
+      "lesson": {
+        "summary": "Orientation",
+        "points": [
+          "Read the mission before starting. Learn the controls, Run, Step and Oracle hints.",
+          "A new wallet starts with 20 coins. Each hint costs 6 coins; first clears award the configured rewards once.",
+          "Stage 2 is guided interface practice; the main flowchart lesson is Week 2."
+        ],
+        "example": "",
+        "practice": "Controls and mission practice"
+      }
+    },
+    {
+      "week": 2,
+      "concept": "flowcharting",
+      "title": "Flowcharting",
+      "mission": "Flowcharting",
+      "objectives": [
+        "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+        "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths."
+      ],
+      "mechanic": "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+      "genres": [
+        "circuit"
+      ],
+      "stages": [
+        "Symbols and sequence",
+        "Input/output",
+        "Process expressions",
+        "Decision branches",
+        "Boundary inputs",
+        "Counting loops",
+        "Accumulators",
+        "Trace a loop",
+        "Compare branches",
+        "Flowchart synthesis"
+      ],
+      "source_ids": [
+        "flowcharts",
+        "algorithms"
+      ],
+      "lesson": {
+        "summary": "Flowcharting",
+        "points": [
+          "Terminators mark start/end; rectangles perform processes; parallelograms represent input/output.",
+          "Decision diamonds choose labeled alternatives. Arrows specify order and loop-back paths.",
+          "Test both branches and boundary inputs before accepting a chart."
+        ],
+        "example": "Start → Read n → n > 0? → Yes/No output → End",
+        "practice": "Flowchart synthesis"
+      }
+    },
+    {
+      "week": 3,
+      "concept": "algorithms",
+      "title": "Algorithms",
+      "mission": "Algorithms",
+      "objectives": [
+        "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+        "Identify inputs, processing and outputs. Trace intermediate state and check termination."
+      ],
+      "mechanic": "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+      "genres": [
+        "terminal"
+      ],
+      "stages": [
+        "Inputs and outputs",
+        "Ordered operations",
+        "State tracing",
+        "Arithmetic procedures",
+        "Negative values",
+        "Multi-step plans",
+        "Compare procedures",
+        "Debug ordering",
+        "Termination",
+        "Algorithm synthesis"
+      ],
+      "source_ids": [
+        "algorithms"
+      ],
+      "lesson": {
+        "summary": "Algorithms",
+        "points": [
+          "An algorithm specifies precise steps; a program expresses a procedure in a programming language.",
+          "Identify inputs, processing and outputs. Trace intermediate state and check termination.",
+          "The register game is a small instruction language for algorithm practice, not C."
+        ],
+        "example": "READ x; ADD 3; OUTPUT result",
+        "practice": "Algorithm synthesis"
+      }
+    },
+    {
+      "week": 4,
+      "concept": "introduction_to_c",
+      "title": "Introduction to C: History, Characteristics and Classification",
+      "mission": "Introduction to C: History, Characteristics and Classification",
+      "objectives": [
+        "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+        "C is general purpose, procedural and imperative; it is normally compiled."
+      ],
+      "mechanic": "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+      "genres": [
+        "pending"
+      ],
+      "stages": [
+        "C origins",
+        "Ritchie and Bell Labs",
+        "B and Unix",
+        "General-purpose languages",
+        "Procedural classification",
+        "Imperative operations",
+        "Compilation",
+        "Portability",
+        "Characteristics and limits",
+        "History/classification review"
+      ],
+      "source_ids": [
+        "history",
+        "c"
+      ],
+      "lesson": {
+        "summary": "Introduction to C: History, Characteristics and Classification",
+        "points": [
+          "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+          "C is general purpose, procedural and imperative; it is normally compiled.",
+          "Portability needs care with implementation-dependent behavior. Middle-level is an informal classroom label, not an ISO language category."
+        ],
+        "example": "C: Ritchie; Bell Labs; early 1970s; general purpose; procedural.",
+        "practice": "History/classification review"
+      }
+    },
+    {
+      "week": 5,
+      "concept": "components_of_c",
+      "title": "C Components, Keywords, Preprocessor and Organization",
+      "mission": "C Components, Keywords, Preprocessor and Organization",
+      "objectives": [
+        "int and return are keywords; main and printf are identifiers, not keywords.",
+        "Preprocessing precedes compilation. #include supplies header content; #define specifies token replacement."
+      ],
+      "mechanic": "int and return are keywords; main and printf are identifiers, not keywords.",
+      "genres": [
+        "factory"
+      ],
+      "stages": [
+        "Tokens and components",
+        "Keywords and identifiers",
+        "Preprocessor directives",
+        "Header inclusion",
+        "Object-like macros",
+        "main and blocks",
+        "Declarations and statements",
+        "Expression statements",
+        "Source organization",
+        "Build and verify a source file"
+      ],
+      "source_ids": [
+        "cpp",
+        "macros",
+        "c"
+      ],
+      "lesson": {
+        "summary": "C Components, Keywords, Preprocessor and Organization",
+        "points": [
+          "int and return are keywords; main and printf are identifiers, not keywords.",
+          "Preprocessing precedes compilation. #include supplies header content; #define specifies token replacement.",
+          "Organize directives, a main definition, declarations, statements and braces. Source construction is checked separately from the factory analogy."
+        ],
+        "example": "#include <stdio.h>\nint main(void) {\n int total = 3;\n printf(\"%d\\n\", total);\n return 0;\n}",
+        "practice": "Build and verify a source file"
+      }
+    },
+    {
+      "week": 6,
+      "concept": "simple_programs_and_c_structure",
+      "title": "Creating Simple C Programs and Program Structure",
+      "mission": "Creating Simple C Programs and Program Structure",
+      "objectives": [
+        "A hosted program begins at main. Braces form its body; statements execute in order.",
+        "Construct a short program using declarations, initialization, assignment and printf."
+      ],
+      "mechanic": "A hosted program begins at main. Braces form its body; statements execute in order.",
+      "genres": [
+        "dungeon"
+      ],
+      "stages": [
+        "The main function",
+        "Blocks and semicolons",
+        "Initialization",
+        "Ordered assignment",
+        "Integer expressions",
+        "Formatted output",
+        "Read and trace",
+        "Repair a short program",
+        "Output verification",
+        "Program synthesis"
+      ],
+      "source_ids": [
+        "basics",
+        "c"
+      ],
+      "lesson": {
+        "summary": "Creating Simple C Programs and Program Structure",
+        "points": [
+          "A hosted program begins at main. Braces form its body; statements execute in order.",
+          "Construct a short program using declarations, initialization, assignment and printf.",
+          "Adventure movement functions are LogiCade helpers declared in logicade.h, not standard C library functions."
+        ],
+        "example": "#include <stdio.h>\nint main(void) {\n int score = 2;\n score = score + 3;\n printf(\"%d\\n\", score);\n return 0;\n}",
+        "practice": "Program synthesis"
+      }
+    },
+    {
+      "week": 7,
+      "concept": "variable_declaration",
+      "title": "Basic Parts of C and Variable Declarations",
+      "mission": "Basic Parts of C and Variable Declarations",
+      "objectives": [
+        "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+        "Practice int, float, double and char, with suitable printf formats."
+      ],
+      "mechanic": "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+      "genres": [
+        "terminal"
+      ],
+      "stages": [
+        "Declare int",
+        "Initialize and add",
+        "Assignment versus equality",
+        "Multiply state",
+        "Signed values",
+        "Expression order",
+        "Declare float",
+        "Declare double",
+        "Declare char",
+        "Integer division"
+      ],
+      "source_ids": [
+        "basics",
+        "variables"
+      ],
+      "lesson": {
+        "summary": "Basic Parts of C and Variable Declarations",
+        "points": [
+          "A declaration pairs a type and name; initialization supplies a first value, and assignment changes it.",
+          "Practice int, float, double and char, with suitable printf formats.",
+          "Names are case sensitive. Do not read an uninitialized automatic local."
+        ],
+        "example": "int count = 3;\nfloat rate = 1.5f;\ndouble distance = 2.5;\nchar grade = 'A';",
+        "practice": "Integer division"
+      }
+    },
+    {
+      "week": 8,
+      "concept": "scope",
+      "title": "Local and Global Variables",
+      "mission": "Local and Global Variables",
+      "objectives": [
+        "File-scope variables are declared outside functions; block-scope locals are visible in their block.",
+        "An inner declaration can hide an outer name. Leaving its scope restores the outer declaration."
+      ],
+      "mechanic": "File-scope variables are declared outside functions; block-scope locals are visible in their block.",
+      "genres": [
+        "dungeon"
+      ],
+      "stages": [
+        "File-scope declarations",
+        "Main-local declarations",
+        "Global initialization",
+        "Read global state",
+        "Shadow a global",
+        "Nested local blocks",
+        "Update visible state",
+        "Restore visibility",
+        "Compare local and global",
+        "Scope trace synthesis"
+      ],
+      "source_ids": [
+        "variables",
+        "c"
+      ],
+      "lesson": {
+        "summary": "Local and Global Variables",
+        "points": [
+          "File-scope variables are declared outside functions; block-scope locals are visible in their block.",
+          "An inner declaration can hide an outer name. Leaving its scope restores the outer declaration.",
+          "Scope differs from lifetime: ordinary automatic locals belong to a block execution; file-scope objects have static storage duration."
+        ],
+        "example": "#include <stdio.h>\nint score = 2;\nint main(void) {\n { int score = 7; printf(\"%d\\n\", score); }\n printf(\"%d\\n\", score);\n return 0;\n}",
+        "practice": "Scope trace synthesis"
+      }
+    },
+    {
+      "week": 9,
+      "concept": "midterm_review",
+      "title": "Examination Practice: Weeks 2–8",
+      "mission": "Examination Practice: Weeks 2–8",
+      "objectives": [
+        "Stages cover every topic from Weeks 2–8 using its corresponding activity.",
+        "Apply flowcharts, algorithms, C history, source organization, declarations and scope."
+      ],
+      "mechanic": "Stages cover every topic from Weeks 2–8 using its corresponding activity.",
+      "genres": [
+        "circuit",
+        "terminal",
+        "pending",
+        "factory",
+        "dungeon"
+      ],
+      "stages": [
+        "Flowchart examination",
+        "Algorithm examination",
+        "C history/classification examination",
+        "C component examination",
+        "Simple program examination",
+        "Declaration examination",
+        "Scope examination",
+        "Flowchart application",
+        "Source organization application",
+        "Local/global synthesis"
+      ],
+      "source_ids": [
+        "algorithms",
+        "history",
+        "cpp",
+        "variables"
+      ],
+      "lesson": {
+        "summary": "Examination Practice: Weeks 2–8",
+        "points": [
+          "Stages cover every topic from Weeks 2–8 using its corresponding activity.",
+          "Apply flowcharts, algorithms, C history, source organization, declarations and scope.",
+          "These gamified examination exercises remain separate from formal pretest/posttest scores and approved assessment scoring."
+        ],
+        "example": "Apply the earlier lessons; read the source-week label on each stage.",
+        "practice": "Local/global synthesis"
+      }
+    }
+  ],
+  "sources": {
+    "algorithms": {
+      "title": "OpenStax: algorithms and programs",
+      "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
+    },
+    "flowcharts": {
+      "title": "Victoria Department of Education: flowcharts",
+      "url": "https://www.education.vic.gov.au/school/teachers/teachingresources/discipline/english/literacy/Pages/using-flow-charts-to-design-algorithms.aspx"
+    },
+    "history": {
+      "title": "Dennis Ritchie: The Development of the C Language",
+      "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+    },
+    "c": {
+      "title": "GNU C Language Manual",
+      "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+    },
+    "variables": {
+      "title": "GNU C: variables and scope",
+      "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+    },
+    "cpp": {
+      "title": "GCC: header inclusion",
+      "url": "https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html"
+    },
+    "macros": {
+      "title": "GCC: object-like macros",
+      "url": "https://gcc.gnu.org/onlinedocs/cpp/Object-like-Macros.html"
+    },
+    "basics": {
+      "title": "Harvard CS50: C basics",
+      "url": "https://cs50.harvard.edu/x/notes/1/"
+    }
+  },
+  "exam_blueprint": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 8,
+    "8": 2,
+    "9": 5,
+    "10": 8
+  },
+  "stage_objective_policy": "Level fixes the learning focus; variations change problems, fixtures and layouts within that focus.",
+  "exam_level_blueprint": {
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10,
+    "6": 10,
+    "7": 9,
+    "8": 10,
+    "9": 9,
+    "10": 10
+  }
+}

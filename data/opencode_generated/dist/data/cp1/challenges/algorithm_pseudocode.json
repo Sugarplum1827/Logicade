@@ -1,0 +1,564 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v01",
+    "index": 1,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the running-total pseudocode. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "total = 0",
+        "FOR each number DO",
+        "  total = number",
+        "ENDFOR",
+        "PRINT total"
+      ],
+      "answer": 2,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "total = number overwrites the running total. It should be total = total + number.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v02",
+    "index": 2,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each pseudocode keyword to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "SET / ="
+        },
+        {
+          "id": "l2",
+          "text": "READ"
+        },
+        {
+          "id": "l3",
+          "text": "FOR / WHILE"
+        },
+        {
+          "id": "l4",
+          "text": "PRINT"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Store a value in a variable"
+        },
+        {
+          "id": "r2",
+          "text": "Get input from the user"
+        },
+        {
+          "id": "r3",
+          "text": "Repeat a block"
+        },
+        {
+          "id": "r4",
+          "text": "Display output"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Pseudocode keywords map directly to common programming actions.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v03",
+    "index": 3,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each pseudocode line by its role.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "assignment",
+          "label": "Assignment",
+          "desc": "Stores a value"
+        },
+        {
+          "id": "loop",
+          "label": "Loop control",
+          "desc": "Repeats or ends repetition"
+        },
+        {
+          "id": "output",
+          "label": "Output",
+          "desc": "Displays a result"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "total = 0",
+          "bin": "assignment"
+        },
+        {
+          "id": "i2",
+          "text": "FOR each number",
+          "bin": "loop"
+        },
+        {
+          "id": "i3",
+          "text": "total = total + number",
+          "bin": "assignment"
+        },
+        {
+          "id": "i4",
+          "text": "ENDFOR",
+          "bin": "loop"
+        },
+        {
+          "id": "i5",
+          "text": "PRINT total",
+          "bin": "output"
+        },
+        {
+          "id": "i6",
+          "text": "READ number",
+          "bin": "assignment"
+        }
+      ]
+    },
+    "explanation": "Assignments change variables; FOR/ENDFOR control repetition; PRINT displays.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v04",
+    "index": 4,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the running-total pseudocode.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "total = {{b0}}",
+        "FOR each number DO",
+        "  total = total {{b1}} number",
+        "{{b2}}",
+        "PRINT total"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "starting total",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "operation that accumulates",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "loop closing keyword",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "0"
+        },
+        {
+          "id": "b2",
+          "text": "+"
+        },
+        {
+          "id": "b3",
+          "text": "ENDFOR"
+        },
+        {
+          "id": "b4",
+          "text": "0"
+        },
+        {
+          "id": "b5",
+          "text": "+"
+        },
+        {
+          "id": "b6",
+          "text": "ENDFOR"
+        }
+      ]
+    },
+    "explanation": "Start at 0, add each number, and close the loop with ENDFOR.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v05",
+    "index": 5,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of pseudocode in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the algorithm"
+        },
+        {
+          "id": "s2",
+          "text": "Set total to zero"
+        },
+        {
+          "id": "s3",
+          "text": "For each number in the list"
+        },
+        {
+          "id": "s4",
+          "text": "Add the number to total"
+        },
+        {
+          "id": "s5",
+          "text": "End the loop and print total"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Start the algorithm → Set total to zero → For each number in the list → Add the number to total → End the loop and print total",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v06",
+    "index": 6,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the pseudocode assignment that adds a number to a running total.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "total"
+        },
+        {
+          "id": "t2",
+          "text": "="
+        },
+        {
+          "id": "t3",
+          "text": "total"
+        },
+        {
+          "id": "t4",
+          "text": "+"
+        },
+        {
+          "id": "t5",
+          "text": "number"
+        },
+        {
+          "id": "t6",
+          "text": "-"
+        },
+        {
+          "id": "t7",
+          "text": "PRINT"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The assignment reads the old total, adds number, and stores the result back in total.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v07",
+    "index": 7,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the pseudocode loop that sums a list.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 7
+        },
+        {
+          "id": "total",
+          "label": "total = 0",
+          "kind": "process",
+          "x": 50,
+          "y": 21
+        },
+        {
+          "id": "read",
+          "label": "Read number",
+          "kind": "io",
+          "x": 50,
+          "y": 35
+        },
+        {
+          "id": "add",
+          "label": "total = total + number",
+          "kind": "process",
+          "x": 50,
+          "y": 51
+        },
+        {
+          "id": "more",
+          "label": "More numbers?",
+          "kind": "decision",
+          "x": 50,
+          "y": 67
+        },
+        {
+          "id": "print",
+          "label": "Print total",
+          "kind": "io",
+          "x": 50,
+          "y": 83
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 94
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "total"
+        ],
+        [
+          "total",
+          "read"
+        ],
+        [
+          "read",
+          "add"
+        ],
+        [
+          "add",
+          "more"
+        ],
+        [
+          "more",
+          "read"
+        ],
+        [
+          "more",
+          "print"
+        ],
+        [
+          "print",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The back edge repeats the read-and-add body until no numbers remain.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v08",
+    "index": 8,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to follow a repeated forward-and-turn algorithm.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 6,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 0,
+        "dir": 1
+      },
+      "goal": {
+        "x": 5,
+        "y": 3
+      },
+      "walls": [
+        {
+          "x": 1,
+          "y": 1
+        },
+        {
+          "x": 4,
+          "y": 2
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 14
+    },
+    "explanation": "The command tape is pseudocode made concrete: each command runs in order.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v09",
+    "index": 9,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What is printed for the numbers 2, 3, and 4?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "total = 0",
+        "FOR each number DO",
+        "  total = total + number",
+        "ENDFOR",
+        "PRINT total"
+      ],
+      "answer": "9",
+      "accept": [
+        "9"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "2 + 3 + 4 = 9."
+    },
+    "explanation": "2 + 3 + 4 = 9.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_pseudocode_v10",
+    "index": 10,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step the running total and commit the final values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "total = 0",
+        "FOR each number DO",
+        "  total = total + number",
+        "ENDFOR"
+      ],
+      "variables": [
+        "total",
+        "number"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "total": "0",
+            "number": "2"
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "total": "2",
+            "number": "2"
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "total": "5",
+            "number": "3"
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "total": "9",
+            "number": "4"
+          }
+        }
+      ],
+      "ask": [
+        "total",
+        "number"
+      ],
+      "answer": {
+        "total": "9",
+        "number": "4"
+      },
+      "hint": ""
+    },
+    "explanation": "The loop accumulates 2, then 5, then 9 as it reads each number.",
+    "concept_slug": "algorithm_pseudocode",
+    "concept_name": "Pseudocode"
+  }
+]

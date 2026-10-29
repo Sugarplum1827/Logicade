@@ -1,0 +1,560 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v01",
+    "index": 1,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot to reach the goal with a repeated forward-and-turn pattern.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 6,
+      "rows": 4,
+      "start": {
+        "x": 0,
+        "y": 3,
+        "dir": 1
+      },
+      "goal": {
+        "x": 5,
+        "y": 0
+      },
+      "walls": [
+        {
+          "x": 2,
+          "y": 2
+        },
+        {
+          "x": 3,
+          "y": 1
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 14
+    },
+    "explanation": "Repeated commands are a loop in action: forward, turn, forward, turn.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v02",
+    "index": 2,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What is printed by this loop?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "count = 1",
+        "WHILE count <= 3 DO",
+        "  PRINT count",
+        "  count = count + 1",
+        "ENDWHILE"
+      ],
+      "answer": "1 2 3",
+      "accept": [
+        "123",
+        "1,2,3",
+        "1 2 3"
+      ],
+      "input": "",
+      "numeric": false,
+      "hint": "The loop prints 1, 2, and 3, then count becomes 4 and the condition fails."
+    },
+    "explanation": "The loop prints 1, 2, and 3, then count becomes 4 and the condition fails.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v03",
+    "index": 3,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the loop and commit the final count.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "count = 1",
+        "WHILE count <= 3 DO",
+        "  PRINT count",
+        "  count = count + 1",
+        "ENDWHILE"
+      ],
+      "variables": [
+        "count"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "count": "1"
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "count": "1"
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "count": "1"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "count": "2"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "count": "3"
+          }
+        },
+        {
+          "line": 3,
+          "state": {
+            "count": "4"
+          }
+        }
+      ],
+      "ask": [
+        "count"
+      ],
+      "answer": {
+        "count": "4"
+      },
+      "hint": ""
+    },
+    "explanation": "After printing 3, count becomes 4 and the loop condition is false.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v04",
+    "index": 4,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line makes this loop run forever. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "count = 1",
+        "WHILE count <= 3 DO",
+        "  PRINT count",
+        "ENDWHILE",
+        "PRINT \"Done\""
+      ],
+      "answer": 2,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "The body never changes count, so the condition stays true forever. Add count = count + 1.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v05",
+    "index": 5,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each loop term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Loop condition"
+        },
+        {
+          "id": "l2",
+          "text": "Loop body"
+        },
+        {
+          "id": "l3",
+          "text": "Back edge"
+        },
+        {
+          "id": "l4",
+          "text": "Update"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Decides whether another pass runs"
+        },
+        {
+          "id": "r2",
+          "text": "Steps repeated on each pass"
+        },
+        {
+          "id": "r3",
+          "text": "Returns flow to the condition"
+        },
+        {
+          "id": "r4",
+          "text": "Changes the value that ends the loop"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "A loop needs a condition, a body, and a way to make the condition eventually false.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v06",
+    "index": 6,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each part into loop control, loop body, or after the loop.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "control",
+          "label": "Loop control",
+          "desc": "Tests or updates the loop"
+        },
+        {
+          "id": "body",
+          "label": "Loop body",
+          "desc": "Runs on every repetition"
+        },
+        {
+          "id": "after",
+          "label": "After the loop",
+          "desc": "Runs once when the loop exits"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "count <= 3?",
+          "bin": "control"
+        },
+        {
+          "id": "i2",
+          "text": "PRINT count",
+          "bin": "body"
+        },
+        {
+          "id": "i3",
+          "text": "count = count + 1",
+          "bin": "control"
+        },
+        {
+          "id": "i4",
+          "text": "PRINT \"Done\"",
+          "bin": "after"
+        },
+        {
+          "id": "i5",
+          "text": "back edge to the condition",
+          "bin": "control"
+        },
+        {
+          "id": "i6",
+          "text": "total = total + count",
+          "bin": "body"
+        }
+      ]
+    },
+    "explanation": "The condition and update control the loop; the body repeats; the final print runs once.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v07",
+    "index": 7,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the counting loop.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "count = 1",
+        "WHILE count {{b0}} 3 DO",
+        "  PRINT count",
+        "  count = count {{b1}} 1",
+        "{{b2}}",
+        "PRINT \"Done\""
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "comparison operator",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "increment operator",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "loop closing keyword",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "<="
+        },
+        {
+          "id": "b2",
+          "text": "+"
+        },
+        {
+          "id": "b3",
+          "text": "ENDWHILE"
+        },
+        {
+          "id": "b4",
+          "text": "<="
+        },
+        {
+          "id": "b5",
+          "text": "+"
+        },
+        {
+          "id": "b6",
+          "text": "ENDWHILE"
+        }
+      ]
+    },
+    "explanation": "The loop repeats while count <= 3; incrementing count guarantees it ends.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v08",
+    "index": 8,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of flowchart loops in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Start the flowchart"
+        },
+        {
+          "id": "s2",
+          "text": "Set count to 1"
+        },
+        {
+          "id": "s3",
+          "text": "Test whether count is at most 3"
+        },
+        {
+          "id": "s4",
+          "text": "Print count and add 1"
+        },
+        {
+          "id": "s5",
+          "text": "Follow the back edge to test again"
+        },
+        {
+          "id": "s6",
+          "text": "End when the condition is false"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "explanation": "Correct order: Start the flowchart → Set count to 1 → Test whether count is at most 3 → Print count and add 1 → Follow the back edge to test again → End when the condition is false",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v09",
+    "index": 9,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the loop condition for counting from 1 through 3.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "WHILE"
+        },
+        {
+          "id": "t2",
+          "text": "count"
+        },
+        {
+          "id": "t3",
+          "text": "<="
+        },
+        {
+          "id": "t4",
+          "text": "3"
+        },
+        {
+          "id": "t5",
+          "text": "DO"
+        },
+        {
+          "id": "t6",
+          "text": "IF"
+        },
+        {
+          "id": "t7",
+          "text": ">="
+        },
+        {
+          "id": "t8",
+          "text": "ENDWHILE"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "WHILE repeats the body as long as count <= 3.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "flowchart_loops_v10",
+    "index": 10,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the counting loop, including its back edge.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 7
+        },
+        {
+          "id": "init",
+          "label": "count = 1",
+          "kind": "process",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "id": "test",
+          "label": "count <= 3?",
+          "kind": "decision",
+          "x": 50,
+          "y": 38
+        },
+        {
+          "id": "body",
+          "label": "Print count; count++",
+          "kind": "process",
+          "x": 50,
+          "y": 57
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 82
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "init"
+        ],
+        [
+          "init",
+          "test"
+        ],
+        [
+          "test",
+          "body"
+        ],
+        [
+          "body",
+          "test"
+        ],
+        [
+          "test",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "The body points back to the condition. The loop exits when the condition is false.",
+    "concept_slug": "flowchart_loops",
+    "concept_name": "Flowchart Loops"
+  }
+]

@@ -1,0 +1,534 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v01",
+    "index": 1,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the average calculation.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "int total = 7, count = 2;",
+        "float average = {{b0}} total / count;",
+        "printf(\"{{b1}}\\n\", average);"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "cast to keep decimals",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "float format specifier",
+          "answer": "b2"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "(float)"
+        },
+        {
+          "id": "b2",
+          "text": "%.2f"
+        },
+        {
+          "id": "b3",
+          "text": "(int)"
+        },
+        {
+          "id": "b4",
+          "text": "%d"
+        },
+        {
+          "id": "b5",
+          "text": "int"
+        }
+      ]
+    },
+    "explanation": "Cast total to float and print with %.2f to show 3.50.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v02",
+    "index": 2,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "Read the program and type the value it produces.",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int quotient = total / count;",
+        "    float real = (float) total / count;",
+        "    printf(\"%d\\n\", quotient);",
+        "    printf(\"%.2f\\n\", real);",
+        "    return 0;",
+        "}"
+      ],
+      "answer": "3",
+      "accept": [
+        "3"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "Integer division 7 / 2 truncates to 3; the float version would be 3.50."
+    },
+    "explanation": "The program produces 3.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v03",
+    "index": 3,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the program and commit the final variable values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int quotient = total / count;",
+        "    float real = (float) total / count;",
+        "    printf(\"%d\\n\", quotient);",
+        "    printf(\"%.2f\\n\", real);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        "quotient",
+        "real"
+      ],
+      "steps": [
+        {
+          "line": 3,
+          "state": {
+            "quotient": "3",
+            "real": ""
+          }
+        },
+        {
+          "line": 4,
+          "state": {
+            "quotient": "3",
+            "real": "3.5"
+          }
+        },
+        {
+          "line": 5,
+          "state": {
+            "quotient": "3",
+            "real": "3.5"
+          }
+        }
+      ],
+      "ask": [
+        "quotient",
+        "real"
+      ],
+      "answer": {
+        "quotient": "3",
+        "real": "3.5"
+      },
+      "hint": ""
+    },
+    "explanation": "The final state is quotient = 3, real = 3.5.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v04",
+    "index": 4,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of type conversion in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Identify the types of both operands"
+        },
+        {
+          "id": "s2",
+          "text": "Apply the usual conversions"
+        },
+        {
+          "id": "s3",
+          "text": "Use a cast when a specific type is needed"
+        },
+        {
+          "id": "s4",
+          "text": "Check whether integer division truncates"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "explanation": "Correct order: Identify the types of both operands → Apply the usual conversions → Use a cast when a specific type is needed → Check whether integer division truncates",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v05",
+    "index": 5,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the expression that casts total to float before dividing.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "("
+        },
+        {
+          "id": "t2",
+          "text": "float"
+        },
+        {
+          "id": "t3",
+          "text": ")"
+        },
+        {
+          "id": "t4",
+          "text": "total"
+        },
+        {
+          "id": "t5",
+          "text": "/"
+        },
+        {
+          "id": "t6",
+          "text": "count"
+        },
+        {
+          "id": "t7",
+          "text": "int"
+        },
+        {
+          "id": "t8",
+          "text": "%"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "The cast changes total to float, so the division keeps the decimal part.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v06",
+    "index": 6,
+    "mechanic": "vars",
+    "mechanic_label": "Vault",
+    "title": "Fill the variable vault",
+    "prompt": "Assign the truncated quotient and the decimal result.",
+    "instruction": "Tap a value, then a variable. Use the program to work out each final value.",
+    "payload": {
+      "code": [
+        "#include <stdio.h>",
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int quotient = total / count;",
+        "    float real = (float) total / count;",
+        "    printf(\"%d\\n\", quotient);",
+        "    printf(\"%.2f\\n\", real);",
+        "    return 0;",
+        "}"
+      ],
+      "variables": [
+        {
+          "name": "quotient",
+          "type": "final value"
+        },
+        {
+          "name": "real",
+          "type": "final value"
+        }
+      ],
+      "bank": [
+        {
+          "id": "v1",
+          "text": "3"
+        },
+        {
+          "id": "v2",
+          "text": "3.5"
+        },
+        {
+          "id": "v3",
+          "text": "4"
+        },
+        {
+          "id": "v4",
+          "text": "2"
+        },
+        {
+          "id": "v5",
+          "text": "0"
+        }
+      ],
+      "answer": {
+        "quotient": "v1",
+        "real": "v2"
+      }
+    },
+    "explanation": "int division gives 3; casting total to float gives 3.5.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v07",
+    "index": 7,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each expression by the type of result it produces.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "int",
+          "label": "int result",
+          "desc": "No fractional part"
+        },
+        {
+          "id": "float",
+          "label": "float result",
+          "desc": "Keeps the fraction"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "7 / 2",
+          "bin": "int"
+        },
+        {
+          "id": "i2",
+          "text": "(float) 7 / 2",
+          "bin": "float"
+        },
+        {
+          "id": "i3",
+          "text": "5 / 2",
+          "bin": "int"
+        },
+        {
+          "id": "i4",
+          "text": "5.0 / 2",
+          "bin": "float"
+        },
+        {
+          "id": "i5",
+          "text": "(float) total / count",
+          "bin": "float"
+        },
+        {
+          "id": "i6",
+          "text": "total / count with two ints",
+          "bin": "int"
+        }
+      ]
+    },
+    "explanation": "Integer operands use integer division; a float operand or cast keeps the fraction.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v08",
+    "index": 8,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line breaks the program or the procedure. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "int total = 7, count = 2;",
+        "float average = total / count;",
+        "printf(\"%.2f\\n\", average);",
+        "return 0;"
+      ],
+      "answer": 1,
+      "language": "c",
+      "eliminated": []
+    },
+    "explanation": "Both operands are int, so the division happens before the result is stored in a float.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v09",
+    "index": 9,
+    "mechanic": "scope",
+    "mechanic_label": "Scope",
+    "title": "Split the scopes",
+    "prompt": "Place each variable in main or the conversion expression.",
+    "instruction": "Tap a declaration or line, then the frame that contains it.",
+    "payload": {
+      "code": [
+        "int main(void) {",
+        "    int total = 7, count = 2;",
+        "    int quotient = total / count;",
+        "    float real = (float) total / count;",
+        "    return 0;",
+        "}"
+      ],
+      "scopes": [
+        {
+          "id": "main",
+          "label": "main scope",
+          "desc": "Declared in main"
+        },
+        {
+          "id": "expression",
+          "label": "Expression scope",
+          "desc": "Temporary converted value"
+        }
+      ],
+      "items": [
+        {
+          "id": "d1",
+          "text": "int total = 7;",
+          "scope": "main"
+        },
+        {
+          "id": "d2",
+          "text": "int count = 2;",
+          "scope": "main"
+        },
+        {
+          "id": "d3",
+          "text": "int quotient",
+          "scope": "main"
+        },
+        {
+          "id": "d4",
+          "text": "(float) total",
+          "scope": "expression"
+        }
+      ]
+    },
+    "explanation": "The cast creates a temporary float value for the division; the variables remain in main.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "type_conversion_v10",
+    "index": 10,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each type conversion term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Implicit conversion"
+        },
+        {
+          "id": "l2",
+          "text": "Explicit cast"
+        },
+        {
+          "id": "l3",
+          "text": "Integer division"
+        },
+        {
+          "id": "l4",
+          "text": "Truncation"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "C changes a type automatically"
+        },
+        {
+          "id": "r2",
+          "text": "The programmer requests a conversion"
+        },
+        {
+          "id": "r3",
+          "text": "Discards the fractional part"
+        },
+        {
+          "id": "r4",
+          "text": "Cutting off digits after the decimal point"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "Each term is paired with the statement that explains it.",
+    "concept_slug": "type_conversion",
+    "concept_name": "Type Conversion"
+  }
+]

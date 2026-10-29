@@ -1,0 +1,79 @@
+{
+  "concept_id": "30_gladiator_arena_builder",
+  "slug": "gladiator_arena_builder",
+  "learning_target": "arrays and indexes",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is an array?",
+      "options": [
+        "A type of arena",
+        "An ordered list of values",
+        "A loop",
+        "A single number"
+      ],
+      "answer_index": 1,
+      "explanation": "An array stores multiple values in a defined order."
+    },
+    {
+      "id": "q2",
+      "question": "What is the index of the first item in most programming languages?",
+      "options": [
+        "10",
+        "0",
+        "1",
+        "-1"
+      ],
+      "answer_index": 1,
+      "explanation": "Most languages, including Python, start array indexes at zero."
+    },
+    {
+      "id": "q3",
+      "question": "In `units = ['archer', 'guard', 'healer']`, what is `units[1]`?",
+      "options": [
+        "archer",
+        "healer",
+        "1",
+        "guard"
+      ],
+      "answer_index": 3,
+      "explanation": "Index 0 is archer, so index 1 is guard."
+    },
+    {
+      "id": "q4",
+      "question": "What does `units[0] = 'mage'` do?",
+      "options": [
+        "Replaces the first item",
+        "Adds a new item",
+        "Sorts the list",
+        "Deletes the list"
+      ],
+      "answer_index": 0,
+      "explanation": "Assigning to index 0 replaces the value stored at the first position."
+    },
+    {
+      "id": "q5",
+      "question": "How many items are in a four-element array?",
+      "options": [
+        "5",
+        "0",
+        "4",
+        "3"
+      ],
+      "answer_index": 2,
+      "explanation": "A four-element array contains exactly four values."
+    },
+    {
+      "id": "q6",
+      "question": "Why use indexes?",
+      "options": [
+        "To access a specific position",
+        "To avoid lists",
+        "To change the language",
+        "To make the arena larger"
+      ],
+      "answer_index": 0,
+      "explanation": "Indexes let you read or change one specific item in an array."
+    }
+  ]
+}

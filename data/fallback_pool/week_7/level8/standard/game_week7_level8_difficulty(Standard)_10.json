@@ -1,30 +1,30 @@
 {
   "file_id": "game_2030",
-  "game_title": "Stack Of Plates – Sunken Altar Trial",
+  "game_title": "Declare double · variation 10",
   "game_concept": "A logic puzzle set in Eldritch Ruins – Sunken Altar, an altar half-sunk in earth: the scholar mage must handle rune wisps while practicing lists. Core idea – Stack Of Plates: Push and pop from the end of a list to handle last-in, first-out stacks.",
-  "genre": "logic puzzle",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Sunken Altar: an altar half-sunk in earth",
-  "core_gameplay_loop": "In Sunken Altar, repeat each round: Push and pop from the end of a list to handle last-in, first-out stacks. Each round costs one action, so plan the step so none are wasted. Then check the stack_balance value and advance.",
-  "primary_mechanic": "Stack Of Plates",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Event log of every action",
     "Mini-tutorial pop-ups"
   ],
-  "player_objective": "Reach the moon altar using at most 18 actions, so every code step counts.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "The moon altar reached with actions_used <= 18.",
-  "lose_condition": "actions_used exceeds 18 before the moon altar is reached, or lives reach 0.",
+  "player_objective": "Declare double: declare resource as double, apply resource * 3.5, and print each result with %.1f. Dataset 10 starts with [-3, 0, 19, 22]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 8 (extended tier): Stack Of Plates",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Declare double",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M05-X3-T04-37ab0e9e",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stack Of Plates' (Week 7 slot 5), mission type 'Efficiency Trial', and setting 'Sunken Altar'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 8,
   "trial": 10,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stack_balance changes.",
-    "Step 2: Use the controls to apply the code idea against rune wisps in Sunken Altar.",
-    "Step 3: Win by meeting the goal: The moon altar reached with actions_used <= 18."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level8/standard/game_week7_level8_difficulty(Standard)_10.json",
+    "variation_id": "canvas_game_2030",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Reach the moon altar using at most 18 actions, so every code step counts.",
+  "source_win_condition": "The moon altar reached with actions_used <= 18.",
+  "source_lose_condition": "actions_used exceeds 18 before the moon altar is reached, or lives reach 0.",
+  "source_game_title": "Stack Of Plates – Sunken Altar Trial",
+  "source_primary_mechanic": "Stack Of Plates",
+  "hint": "Declare before use. double resource = readInput(); creates the named game-port value; printf uses %.1f.",
+  "source_time_limit_seconds": 51,
+  "learning_objective_id": "cp1_w7_l8",
+  "source_week": 7,
+  "source_level": 8
 }

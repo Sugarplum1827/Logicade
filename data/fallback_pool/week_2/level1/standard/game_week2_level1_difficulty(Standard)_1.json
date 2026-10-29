@@ -1,30 +1,30 @@
 {
   "file_id": "game_0311",
-  "game_title": "Exponent Engine – Smoke Ridge Defense",
+  "game_title": "Flowchart Lab · Add two numbers",
   "game_concept": "A survival strategy set in Mt. Pyre – Smoke Ridge, a ridge shrouded in ash: the ember mage must handle smoke serpents while practicing data types & operators. Core idea – Exponent Engine: Use ** to power up engines: level 3 should deliver 2**3 energy.",
-  "genre": "survival strategy",
+  "genre": "Logic circuit and register puzzle",
   "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
-  "core_gameplay_loop": "In Smoke Ridge, repeat each round: Use ** to power up engines: level 3 should deliver 2**3 energy. Each round, smoke serpents strike the magma valve, so respond before the next strike lands. Then check the engine_power value and advance.",
-  "primary_mechanic": "Exponent Engine",
+  "core_gameplay_loop": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
+  "primary_mechanic": "circuit construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Protect the magma valve from smoke serpents in Smoke Ridge: keep the engine_power meter above zero by applying the concept correctly until the 30-second timer ends.",
-  "controls": "Mouse/touch: drag code blocks into the editor panel; SPACE runs the code; keys 1-4 pick answers.",
-  "win_condition": "Timer reaches 30 seconds while engine_power > 0.",
-  "lose_condition": "engine_power drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Problem values 15, 5; test inputs [{'a': -10, 'b': 5}, {'a': 0, 'b': 6}, {'a': 15, 'b': 7}, {'a': 15, 'b': 15}, {'a': -15, 'b': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
+  "win_condition": "Construct a complete chart that passes every executable input/output case.",
+  "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 5,
-  "learning_alignment": "Week 2 – Data Types & Operators | Level 1 (intro tier): Exponent Engine",
-  "assets_style": "pixel-art volcano: purple-black rock, glowing lava rivers, orange ember light, drifting ash; flat Kenney-style sprites; low war drums, rumbling bass and crackling fire effects",
+  "learning_alignment": "CP1 Week 2: Symbols and sequence",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W2-M11-X1-T11-8204c1d5",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exponent Engine' (Week 2 slot 11), mission type 'Survival Siege', and setting 'Smoke Ridge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 2,
   "level": 1,
   "trial": 1,
-  "topic": "Data Types & Operators",
+  "topic": "Flowcharting",
   "region": {
     "id": "w2_volcano",
     "name": "Mt. Pyre",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 30,
+    "time_limit_seconds": 0,
     "target_score": 100,
     "action_budget": 14,
     "streak_target": 7,
@@ -45,8 +45,71 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how engine_power changes.",
-    "Step 2: Use the controls to apply the code idea against smoke serpents in Smoke Ridge.",
-    "Step 3: Win by meeting the goal: Timer reaches 30 seconds while engine_power > 0."
-  ]
+    "Read the algorithm.",
+    "Use terminator, input/output, process and decision symbols.",
+    "Test the chart with every example input."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_2/level1/standard/game_week2_level1_difficulty(Standard)_1.json",
+    "variation_id": "canvas_game_0311",
+    "mode": "circuit",
+    "asset_set": "circuit",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the magma valve from smoke serpents in Smoke Ridge: keep the engine_power meter above zero by applying the concept correctly until the 30-second timer ends.",
+  "source_win_condition": "Timer reaches 30 seconds while engine_power > 0.",
+  "source_lose_condition": "engine_power drops to 0, or lives reach 0, before the 30-second timer ends.",
+  "source_game_title": "Exponent Engine – Smoke Ridge Defense",
+  "source_primary_mechanic": "Exponent Engine",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "source_time_limit_seconds": 30,
+  "learning_objective_id": "cp1_w2_l1",
+  "source_week": 2,
+  "source_level": 1,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 1,
+        "source_week": 2,
+        "source_level": 1,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l1",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          0,
+          15
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "35c505c26acc28eaced34b13534794110730652cd98b709873da74eab3232add",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "37cc522e9b078658a79d18cc7db5b43a1e94854c366992cae712d04b20156af4",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793296217.456876,
+    "origin": "ollama",
+    "job_id": "bfd01928412b85c56eef10f50d959cc6c6f91624def0950e17a7ec3aa0978437",
+    "replaces_revision": "fe98250e25d757dc7c8adce80e6af36511fd8b8a0b64d4a0123662be0941a996"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-10-29T17:50:17.456876+00:00"
 }

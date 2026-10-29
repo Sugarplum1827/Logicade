@@ -1,0 +1,79 @@
+{
+  "concept_id": "17_factory_assembly_line",
+  "slug": "factory_assembly_line",
+  "learning_target": "sorting rules and conditionals",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is a sorting rule?",
+      "options": [
+        "A random bin",
+        "A condition that chooses a destination",
+        "A color",
+        "A type of conveyor"
+      ],
+      "answer_index": 1,
+      "explanation": "A sorting rule checks a property and sends the item to a matching destination."
+    },
+    {
+      "id": "q2",
+      "question": "Which condition sends red widgets to bin A?",
+      "options": [
+        "if color == 'red': bin = 'A'",
+        "if bin == 'A': color = 'red'",
+        "if color = 'red': bin = 'A'",
+        "red = bin"
+      ],
+      "answer_index": 0,
+      "explanation": "The equality operator == compares the color, and the assignment stores the bin."
+    },
+    {
+      "id": "q3",
+      "question": "What does an `else` block cover?",
+      "options": [
+        "No cases",
+        "The first widget",
+        "All cases not matched by the if",
+        "Only red widgets"
+      ],
+      "answer_index": 2,
+      "explanation": "else is the fallback for every case that did not match an earlier condition."
+    },
+    {
+      "id": "q4",
+      "question": "Why test edge cases?",
+      "options": [
+        "To slow the line",
+        "To remove bins",
+        "To catch unusual inputs",
+        "To avoid sorting"
+      ],
+      "answer_index": 2,
+      "explanation": "Edge cases reveal rules that fail for unusual or unexpected items."
+    },
+    {
+      "id": "q5",
+      "question": "What is a default rule for?",
+      "options": [
+        "Counting workers",
+        "Painting widgets",
+        "Stopping the line",
+        "Handling unmatched items"
+      ],
+      "answer_index": 3,
+      "explanation": "A default rule catches items that no specific rule matched."
+    },
+    {
+      "id": "q6",
+      "question": "What does `elif` allow?",
+      "options": [
+        "A function",
+        "A comment",
+        "A loop",
+        "Another condition to check"
+      ],
+      "answer_index": 3,
+      "explanation": "elif lets you test another condition when the previous one was false."
+    }
+  ]
+}

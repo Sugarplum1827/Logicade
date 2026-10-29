@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "engine": "logicade_canvas_v2",
+  "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+  "file_id": "game_0911",
+  "variation_id": "canvas_game_0911",
+  "week": 4,
+  "level": 1,
+  "trial": 1,
+  "difficulty": "Standard",
+  "mode": "pending",
+  "title": "C Archive · C origins",
+  "display_name": "Week 4 Challenge · Theme Pending",
+  "theme": "Shadow Cave – Collapsed Passage: a half-collapsed passage",
+  "topic": "Introduction to C: History, Characteristics and Classification",
+  "learning_objectives": [
+    "C origins"
+  ],
+  "lesson": {
+    "summary": "Introduction to C: History, Characteristics and Classification",
+    "points": [
+      "C origins",
+      "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
+      "C is general purpose, procedural and imperative; it is normally compiled.",
+      "Portability needs care with implementation-dependent behavior. Middle-level is an informal classroom label, not an ISO language category."
+    ],
+    "example": "C: Ritchie; Bell Labs; early 1970s; general purpose; procedural.",
+    "practice": "History/classification review",
+    "week": 4,
+    "source_week": 4,
+    "source_level": 1,
+    "objective_id": "cp1_w4_l1",
+    "title": "Introduction to C: History, Characteristics and Classification",
+    "stage_title": "C origins",
+    "objectives": [
+      "C origins"
+    ],
+    "sources": [
+      {
+        "title": "Dennis Ritchie: The Development of the C Language",
+        "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+      },
+      {
+        "title": "GNU C Language Manual",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+      }
+    ],
+    "assessment_kind": "lesson_practice",
+    "coverage": [
+      4
+    ],
+    "exam_coverage": [],
+    "formal_assessment": false
+  },
+  "learning_objective_id": "cp1_w4_l1",
+  "source_level": 1,
+  "source_week": 4,
+  "primary_mechanic": "Continue Gate",
+  "objective": "C origins: verify archive records c4_l1_q1, c4_l1_q3, c4_l1_q6.",
+  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
+  "controls": "Click or press 1–4 to answer; Escape pauses.",
+  "time_limit_seconds": 30,
+  "starting_lives": 3,
+  "seed": 12345,
+  "layout": {
+    "width": 14,
+    "height": 9,
+    "seed": 4050862019,
+    "theme_status": "awaiting_course_decision"
+  },
+  "assets": {
+    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+  },
+  "tasks": [
+    {
+      "id": "c4_l1_q1",
+      "prompt": "When did C develop?",
+      "choices": [
+        "The 1990s",
+        "The early 1970s",
+        "Before electronic computers",
+        "The 2010s"
+      ],
+      "answer_index": 1,
+      "explanation": "The early 1970s.",
+      "objective_id": "cp1_w4_l1"
+    },
+    {
+      "id": "c4_l1_q3",
+      "prompt": "Which environment shaped C development?",
+      "choices": [
+        "Only spreadsheets",
+        "Unix systems work",
+        "Only web browsers",
+        "Only phone applications"
+      ],
+      "answer_index": 1,
+      "explanation": "Unix systems work.",
+      "objective_id": "cp1_w4_l1"
+    },
+    {
+      "id": "c4_l1_q6",
+      "prompt": "Which origin record is consistent with the early-1970s timeline?",
+      "choices": [
+        "C followed B in the Unix development context",
+        "C was derived from JavaScript",
+        "C was invented for smartphones",
+        "C began as Python markup"
+      ],
+      "answer_index": 0,
+      "explanation": "C followed B in the Unix development context.",
+      "objective_id": "cp1_w4_l1"
+    }
+  ],
+  "source_path": "week_4/level1/standard/game_week4_level1_difficulty(Standard)_1.json",
+  "source_topic": "Introduction to C: History, Characteristics and Classification",
+  "source_learning_alignment": "CP1 Week 4: C origins",
+  "source_primary_mechanic": "Continue Gate",
+  "source_code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 4,
+        "level": 1,
+        "source_week": 4,
+        "source_level": 1,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w4_l1",
+        "difficulty": "standard",
+        "mechanic_family": "archive",
+        "required_c_type": null
+      },
+      "parameters": {
+        "question_ids": [
+          "c4_l1_q1",
+          "c4_l1_q3",
+          "c4_l1_q6"
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "985b2cbcc630a138c532eadb2418c33a877062cdf1cb532d389016d75cf7c647",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "630bd9eebc418687c0a300e64a3afdacd10ecde491b602d378cc0b1126590660",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 3,
+      "verifier": "authored_archive_bank",
+      "answer_keys_checked": true
+    },
+    "generated_at": 1793296717.6088746,
+    "origin": "ollama",
+    "job_id": "0474f9ec908370ec0afe934a3c7d4c0c50620b8fa8eaf70c11ffdd307e9e27d3",
+    "replaces_revision": "9f4244b8c4dd88c163424b0fb52787129a62427873885809918f58d6c57e882c"
+  }
+}

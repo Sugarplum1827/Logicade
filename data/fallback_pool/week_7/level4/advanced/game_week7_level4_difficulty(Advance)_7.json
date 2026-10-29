@@ -1,30 +1,30 @@
 {
   "file_id": "game_1917",
-  "game_title": "Duplicate Sweep – Moss Library Defense",
+  "game_title": "Multiply state · variation 7",
   "game_concept": "A action defense set in Eldritch Ruins – Moss Library, a ruined library: the tomb cartographer must handle cursed statues while practicing lists. Core idea – Duplicate Sweep: Remove repeated items from a list of chalk marks while keeping the order.",
-  "genre": "action defense",
+  "genre": "terminal programming workbench",
   "theme": "Eldritch Ruins – Moss Library: a ruined library",
-  "core_gameplay_loop": "In Moss Library, repeat each round: Remove repeated items from a list of chalk marks while keeping the order. Each round, cursed statues strike the relic vault, so respond before the next strike lands. Then check the clean_list value and advance.",
-  "primary_mechanic": "Duplicate Sweep",
+  "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
+  "primary_mechanic": "terminal construction and execution",
   "secondary_mechanics": [
     "Escalating enemy waves",
     "Live variable watch panel",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Protect the relic vault from cursed statues in Moss Library: keep the clean_list meter above zero by applying the concept correctly until the 31-second timer ends.",
-  "controls": "Touch: tap tiles or buttons to choose values, swipe to move, long-press for a hint.",
-  "win_condition": "Timer reaches 31 seconds while clean_list > 0.",
-  "lose_condition": "clean_list drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "player_objective": "Multiply state: declare resource as int, apply resource * 3, and print each result with %d. Dataset 7 starts with [-3, 0, 13, 16]. Match every stream. Use a full main function and a return statement.",
+  "controls": "Edit the C program. Run tests all streams; Step shows declarations, assignments and output. readInput() is a LogiCade game-port helper declared in logicade.h. This safe practice runtime supports a documented C subset.",
+  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Advance",
   "estimated_play_time_minutes": 7,
-  "learning_alignment": "Week 7 – Lists | Level 4 (applied tier): Duplicate Sweep",
-  "assets_style": "mysterious pixel-art ruins: mossy stone pillars, overgrown arches, faint eldritch glow; flat Kenney-style sprites; eerie choir pads and stone-scrape stings",
+  "learning_alignment": "CP1 Week 7: Multiply state",
+  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W7-M12-X1-T05-c6b99436",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Duplicate Sweep' (Week 7 slot 12), mission type 'Survival Siege', and setting 'Moss Library'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 7,
   "level": 4,
   "trial": 7,
-  "topic": "Lists",
+  "topic": "Basic Parts of C and Variable Declarations",
   "region": {
     "id": "w7_ruins",
     "name": "Eldritch Ruins",
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 2,
     "hint_count": 0,
-    "time_limit_seconds": 31,
+    "time_limit_seconds": 0,
     "target_score": 290,
     "action_budget": 12,
     "streak_target": 11,
@@ -45,8 +45,28 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how clean_list changes.",
-    "Step 2: Use the controls to apply the code idea against cursed statues in Moss Library.",
-    "Step 3: Win by meeting the goal: Timer reaches 31 seconds while clean_list > 0."
-  ]
+    "Read the objective, fixtures and command reference.",
+    "Build the circuit or route, or edit the node/adventure program.",
+    "Use Step to inspect state; Run checks the real outputs and goals.",
+    "Revise errors before using the remaining execution checks."
+  ],
+  "canvas_runtime": {
+    "engine": "logicade_canvas_v2",
+    "game_path": "week_7/level4/advanced/game_week7_level4_difficulty(Advance)_7.json",
+    "variation_id": "canvas_game_1917",
+    "mode": "terminal",
+    "asset_set": "terminal",
+    "playable": true,
+    "asset_manifest": "games/assets/manifest.json"
+  },
+  "source_player_objective": "Protect the relic vault from cursed statues in Moss Library: keep the clean_list meter above zero by applying the concept correctly until the 31-second timer ends.",
+  "source_win_condition": "Timer reaches 31 seconds while clean_list > 0.",
+  "source_lose_condition": "clean_list drops to 0, or lives reach 0, before the 31-second timer ends.",
+  "source_game_title": "Duplicate Sweep – Moss Library Defense",
+  "source_primary_mechanic": "Duplicate Sweep",
+  "hint": "Declare before use. int resource = readInput(); creates the named game-port value; printf uses %d.",
+  "source_time_limit_seconds": 31,
+  "learning_objective_id": "cp1_w7_l4",
+  "source_week": 7,
+  "source_level": 4
 }

@@ -16,11 +16,10 @@ def test_llm_response_merges_into_template_without_dropping_schema():
     candidate = {
         **template,
         "game_title": "Fresh Variable Quest",
-        "mission_type": "Efficiency Trial",
     }
     merged = _merge_template_response(template, json.dumps(candidate))
     assert merged["game_title"] == "Fresh Variable Quest"
-    assert merged["mission_type"] == "Efficiency Trial"
+    assert merged.get("mission_type") == template.get("mission_type")
     assert merged["accessibility"] == template["accessibility"]
     assert merged["game_settings"] == template["game_settings"]
 

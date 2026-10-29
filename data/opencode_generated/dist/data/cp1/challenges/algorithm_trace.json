@@ -1,0 +1,567 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v01",
+    "index": 1,
+    "mechanic": "sort",
+    "mechanic_label": "Sort",
+    "title": "Sort into bins",
+    "prompt": "Sort each item into before the trace, during the trace, or after the trace.",
+    "instruction": "Tap an item, then the bin where it belongs.",
+    "payload": {
+      "bins": [
+        {
+          "id": "before",
+          "label": "Before tracing",
+          "desc": "Prepare the desk check"
+        },
+        {
+          "id": "during",
+          "label": "During tracing",
+          "desc": "Record values step by step"
+        },
+        {
+          "id": "after",
+          "label": "After tracing",
+          "desc": "Compare and conclude"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "text": "Choose sample input",
+          "bin": "before"
+        },
+        {
+          "id": "i2",
+          "text": "Draw the variable table",
+          "bin": "before"
+        },
+        {
+          "id": "i3",
+          "text": "Write the new value of x",
+          "bin": "during"
+        },
+        {
+          "id": "i4",
+          "text": "Apply one line of code",
+          "bin": "during"
+        },
+        {
+          "id": "i5",
+          "text": "Compare the final row to the expected output",
+          "bin": "after"
+        },
+        {
+          "id": "i6",
+          "text": "Fix the algorithm if the trace disagrees",
+          "bin": "after"
+        }
+      ]
+    },
+    "explanation": "Desk checking has preparation, step-by-step recording, and a final comparison.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v02",
+    "index": 2,
+    "mechanic": "repair",
+    "mechanic_label": "Repair",
+    "title": "Repair the program",
+    "prompt": "Repair the desk-check trace.",
+    "instruction": "Tap a token, then a blank. Decoy tokens are mixed into the bank.",
+    "payload": {
+      "lines": [
+        "a = 3",
+        "b = 4",
+        "result = a + b * {{b0}}",
+        "trace row: result = {{b1}}",
+        "expected output = {{b2}}"
+      ],
+      "blanks": [
+        {
+          "id": "b0",
+          "label": "multiplier",
+          "answer": "b1"
+        },
+        {
+          "id": "b1",
+          "label": "computed result",
+          "answer": "b2"
+        },
+        {
+          "id": "b2",
+          "label": "expected result",
+          "answer": "b3"
+        }
+      ],
+      "bank": [
+        {
+          "id": "b1",
+          "text": "2"
+        },
+        {
+          "id": "b2",
+          "text": "11"
+        },
+        {
+          "id": "b3",
+          "text": "11"
+        },
+        {
+          "id": "b4",
+          "text": "2"
+        },
+        {
+          "id": "b5",
+          "text": "11"
+        },
+        {
+          "id": "b6",
+          "text": "3"
+        }
+      ]
+    },
+    "explanation": "4 × 2 = 8; 3 + 8 = 11, so both the trace row and expected output are 11.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v03",
+    "index": 3,
+    "mechanic": "order",
+    "mechanic_label": "Order",
+    "title": "Order the procedure",
+    "prompt": "Put the steps of desk checking in the order they happen.",
+    "instruction": "Tap the pieces in the right order. Tap a placed piece to send it back.",
+    "payload": {
+      "items": [
+        {
+          "id": "s1",
+          "text": "Write the algorithm steps"
+        },
+        {
+          "id": "s2",
+          "text": "Create a table for each variable"
+        },
+        {
+          "id": "s3",
+          "text": "Run the steps with sample input"
+        },
+        {
+          "id": "s4",
+          "text": "Record every value after it changes"
+        },
+        {
+          "id": "s5",
+          "text": "Compare the final row with the expected output"
+        }
+      ],
+      "answer": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    "explanation": "Correct order: Write the algorithm steps → Create a table for each variable → Run the steps with sample input → Record every value after it changes → Compare the final row with the expected output",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v04",
+    "index": 4,
+    "mechanic": "assemble",
+    "mechanic_label": "Assemble",
+    "title": "Assemble the line",
+    "prompt": "Build the arithmetic expression that computes a + b × 2.",
+    "instruction": "Choose tokens from the bank. Every token is used once; some are decoys.",
+    "payload": {
+      "bank": [
+        {
+          "id": "t1",
+          "text": "result"
+        },
+        {
+          "id": "t2",
+          "text": "="
+        },
+        {
+          "id": "t3",
+          "text": "a"
+        },
+        {
+          "id": "t4",
+          "text": "+"
+        },
+        {
+          "id": "t5",
+          "text": "b"
+        },
+        {
+          "id": "t6",
+          "text": "*"
+        },
+        {
+          "id": "t7",
+          "text": "2"
+        },
+        {
+          "id": "t8",
+          "text": "("
+        },
+        {
+          "id": "t9",
+          "text": ")"
+        },
+        {
+          "id": "t10",
+          "text": "-"
+        }
+      ],
+      "answer": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "slots": [
+        {
+          "id": "slot1",
+          "label": "token 1"
+        },
+        {
+          "id": "slot2",
+          "label": "token 2"
+        },
+        {
+          "id": "slot3",
+          "label": "token 3"
+        },
+        {
+          "id": "slot4",
+          "label": "token 4"
+        },
+        {
+          "id": "slot5",
+          "label": "token 5"
+        },
+        {
+          "id": "slot6",
+          "label": "token 6"
+        },
+        {
+          "id": "slot7",
+          "label": "token 7"
+        }
+      ],
+      "prefix": "",
+      "suffix": ""
+    },
+    "explanation": "Multiplication happens before addition, so b × 2 is computed first.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v05",
+    "index": 5,
+    "mechanic": "flow",
+    "mechanic_label": "Wire",
+    "title": "Wire the flowchart",
+    "prompt": "Wire the desk-check algorithm.",
+    "instruction": "Tap a source node, then a destination. Click a connection to remove it.",
+    "payload": {
+      "nodes": [
+        {
+          "id": "start",
+          "label": "Start",
+          "kind": "terminal",
+          "x": 50,
+          "y": 8
+        },
+        {
+          "id": "a",
+          "label": "a = 3",
+          "kind": "process",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "id": "b",
+          "label": "b = 4",
+          "kind": "process",
+          "x": 50,
+          "y": 36
+        },
+        {
+          "id": "calc",
+          "label": "result = a + b × 2",
+          "kind": "process",
+          "x": 50,
+          "y": 52
+        },
+        {
+          "id": "print",
+          "label": "Print result",
+          "kind": "io",
+          "x": 50,
+          "y": 70
+        },
+        {
+          "id": "end",
+          "label": "End",
+          "kind": "terminal",
+          "x": 50,
+          "y": 86
+        }
+      ],
+      "edges": [
+        [
+          "start",
+          "a"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "calc"
+        ],
+        [
+          "calc",
+          "print"
+        ],
+        [
+          "print",
+          "end"
+        ]
+      ]
+    },
+    "explanation": "Each assignment updates one variable before the next step uses it.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v06",
+    "index": 6,
+    "mechanic": "robot",
+    "mechanic_label": "Robot",
+    "title": "Program the robot",
+    "prompt": "Program the robot and trace each move before running it.",
+    "instruction": "Append commands to the tape. The robot runs the commands in order.",
+    "payload": {
+      "cols": 6,
+      "rows": 5,
+      "start": {
+        "x": 0,
+        "y": 4,
+        "dir": 0
+      },
+      "goal": {
+        "x": 5,
+        "y": 0
+      },
+      "walls": [
+        {
+          "x": 2,
+          "y": 2
+        },
+        {
+          "x": 3,
+          "y": 2
+        }
+      ],
+      "commands": [
+        "forward",
+        "left",
+        "right"
+      ],
+      "max": 14
+    },
+    "explanation": "Tracing the moves in order is the same skill as desk checking an algorithm.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v07",
+    "index": 7,
+    "mechanic": "trace",
+    "mechanic_label": "Trace",
+    "title": "Trace the output",
+    "prompt": "What is the final value of result when a = 3 and b = 4?",
+    "instruction": "Type the exact output or final value. Spaces and letter case are ignored.",
+    "payload": {
+      "code": [
+        "a = 3",
+        "b = 4",
+        "result = a + b * 2",
+        "PRINT result"
+      ],
+      "answer": "11",
+      "accept": [
+        "11"
+      ],
+      "input": "",
+      "numeric": true,
+      "hint": "Multiplication first: 4 × 2 = 8; then 3 + 8 = 11."
+    },
+    "explanation": "Multiplication first: 4 × 2 = 8; then 3 + 8 = 11.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v08",
+    "index": 8,
+    "mechanic": "simulate",
+    "mechanic_label": "Simulate",
+    "title": "Step the machine",
+    "prompt": "Step through the expression and commit the final values.",
+    "instruction": "Use Step to advance the machine. Type the final values, then commit.",
+    "payload": {
+      "code": [
+        "a = 3",
+        "b = 4",
+        "result = a + b * 2"
+      ],
+      "variables": [
+        "a",
+        "b",
+        "result"
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "state": {
+            "a": "3",
+            "b": "4",
+            "result": ""
+          }
+        },
+        {
+          "line": 1,
+          "state": {
+            "a": "3",
+            "b": "4",
+            "result": ""
+          }
+        },
+        {
+          "line": 2,
+          "state": {
+            "a": "3",
+            "b": "4",
+            "result": "11"
+          }
+        }
+      ],
+      "ask": [
+        "a",
+        "b",
+        "result"
+      ],
+      "answer": {
+        "a": "3",
+        "b": "4",
+        "result": "11"
+      },
+      "hint": ""
+    },
+    "explanation": "b * 2 is evaluated before the addition, giving 11.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v09",
+    "index": 9,
+    "mechanic": "bug",
+    "mechanic_label": "Bug hunt",
+    "title": "Find the bug",
+    "prompt": "One line in the trace table is wrong. Tap it.",
+    "instruction": "Read every line. A bug prevents the program from compiling or from doing what is intended.",
+    "payload": {
+      "lines": [
+        "a = 3",
+        "b = 4",
+        "result = a + b * 2",
+        "trace row: result = 14"
+      ],
+      "answer": 3,
+      "language": "flow",
+      "eliminated": []
+    },
+    "explanation": "b * 2 = 8, then a + 8 = 11. The trace row should record 11, not 14.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "algorithm_trace_v10",
+    "index": 10,
+    "mechanic": "match",
+    "mechanic_label": "Match",
+    "title": "Match the pairs",
+    "prompt": "Match each tracing term to its meaning.",
+    "instruction": "Tap a card on the left, then its partner on the right. Correct pairs lock.",
+    "payload": {
+      "left": [
+        {
+          "id": "l1",
+          "text": "Variable"
+        },
+        {
+          "id": "l2",
+          "text": "Trace table"
+        },
+        {
+          "id": "l3",
+          "text": "Step"
+        },
+        {
+          "id": "l4",
+          "text": "Desk check"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "A named storage location"
+        },
+        {
+          "id": "r2",
+          "text": "A row-by-row record of values"
+        },
+        {
+          "id": "r3",
+          "text": "One line or action in the algorithm"
+        },
+        {
+          "id": "r4",
+          "text": "Running the algorithm by hand"
+        }
+      ],
+      "answer": {
+        "l1": "r1",
+        "l2": "r2",
+        "l3": "r3",
+        "l4": "r4"
+      }
+    },
+    "explanation": "A trace table records how each variable changes at each step.",
+    "concept_slug": "algorithm_trace",
+    "concept_name": "Desk Checking"
+  }
+]
