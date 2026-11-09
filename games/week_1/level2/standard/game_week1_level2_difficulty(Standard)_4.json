@@ -49,12 +49,12 @@
   "source_level": 2,
   "source_week": 1,
   "primary_mechanic": "Drag-and-drop flowchart construction",
-  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 10, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
+  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 20, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 15, 'height': 7}, {'width': 5, 'height': 8}, {'width': 5, 'height': 9}, {'width': 15, 'height': 10}, {'width': 20, 'height': 20}, {'width': 20, 'height': 5}].",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 3,
-  "seed": 12345,
+  "seed": 0,
   "layout": {
     "interaction": "flowchart_drag_drop",
     "columns": 12,
@@ -66,7 +66,7 @@
     "scenario_id": "flowchart_2",
     "source_level": null,
     "title": "Rectangle area",
-    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 10, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
+    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 20, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 15, 'height': 7}, {'width': 5, 'height': 8}, {'width': 5, 'height': 9}, {'width': 15, 'height': 10}, {'width': 20, 'height': 20}, {'width': 20, 'height': 5}].",
     "entry": "start",
     "slots": [
       {
@@ -120,34 +120,10 @@
     ],
     "pieces": [
       {
-        "id": "decoy_reset",
-        "label": "Reset result to 0",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "result",
-              "value": 0
-            }
-          ]
-        }
-      },
-      {
         "id": "end",
         "label": "End",
         "kind": "end",
         "action": {}
-      },
-      {
-        "id": "read",
-        "label": "Read width, height",
-        "kind": "input",
-        "action": {
-          "names": [
-            "width",
-            "height"
-          ]
-        }
       },
       {
         "id": "calculate",
@@ -173,10 +149,34 @@
         }
       },
       {
+        "id": "read",
+        "label": "Read width, height",
+        "kind": "input",
+        "action": {
+          "names": [
+            "width",
+            "height"
+          ]
+        }
+      },
+      {
         "id": "start",
         "label": "Start",
         "kind": "start",
         "action": {}
+      },
+      {
+        "id": "decoy_reset",
+        "label": "Reset result to 0",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "result",
+              "value": 0
+            }
+          ]
+        }
       },
       {
         "id": "write",
@@ -220,31 +220,61 @@
       {
         "id": "case_3",
         "inputs": {
-          "width": 10,
+          "width": 15,
           "height": 7
         },
         "expected": [
-          70
+          105
         ]
       },
       {
         "id": "case_4",
         "inputs": {
-          "width": 15,
-          "height": 15
+          "width": 5,
+          "height": 8
         },
         "expected": [
-          225
+          40
         ]
       },
       {
         "id": "case_5",
         "inputs": {
+          "width": 5,
+          "height": 9
+        },
+        "expected": [
+          45
+        ]
+      },
+      {
+        "id": "case_6",
+        "inputs": {
           "width": 15,
+          "height": 10
+        },
+        "expected": [
+          150
+        ]
+      },
+      {
+        "id": "case_7",
+        "inputs": {
+          "width": 20,
+          "height": 20
+        },
+        "expected": [
+          400
+        ]
+      },
+      {
+        "id": "case_8",
+        "inputs": {
+          "width": 20,
           "height": 5
         },
         "expected": [
-          75
+          100
         ]
       }
     ],
@@ -310,29 +340,32 @@
       },
       "parameters": {
         "problem_variant": 2,
-        "primary_value": 15,
+        "primary_value": 20,
         "secondary_value": 5,
         "input_values": [
           -15,
+          -5,
+          15,
           5,
-          10
+          -5,
+          15
         ],
-        "layout_seed": 12345
+        "layout_seed": 0
       }
     },
-    "parameter_fingerprint": "77df5b033753455a94a8d45169a59be3b4a619cc18dd1e050f679f87830db0d5",
+    "parameter_fingerprint": "ba5d219c376e014edb02de5c88f8b009681c6f8a17255234d135d99971cd1261",
     "model_tag": "qwen2.5:3b",
     "model_digest": "357c53fb659c",
-    "problem_fingerprint": "16870833cec402baabf8d22285f3e5d0a21d971325c6626d765faa660ac6b72e",
+    "problem_fingerprint": "89415ef590a9a526bc5c5382771ba96f5b3a73931bc0890dd08f6abc7ef85a07",
     "runtime_verification": {
       "passed": true,
-      "cases": 5,
+      "cases": 8,
       "negative_control": true,
       "verifier": "shipped_canvas_models_v1"
     },
-    "generated_at": 1793314549.8636067,
+    "generated_at": 1794197748.5344114,
     "origin": "ollama",
-    "job_id": "28be710f218f6a4c1bbd54b5f916f7c026f36a3c456c7dec6ecd81f8a11d3f79",
-    "replaces_revision": "d5a30805edcf9b2a88b3bce171cb06a6ece8629822c5323cc3f8f4fdded23fb6"
+    "job_id": "05acf4db71764a93b12ae31aa68389bd26ac500c6987965745c392be739dfbc6",
+    "replaces_revision": "9fec34ad9e7a5ef38d6c0cad9ac8fc07e1b2b6c4087242b5550ddcf91dff0e8b"
   }
 }

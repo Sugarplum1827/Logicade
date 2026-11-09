@@ -26,6 +26,10 @@ def problem_fingerprint(game: dict) -> str:
             # A different maze/seed alone cannot claim fresh C learning content.
             source=re.sub(r'move(?:Right|Left|Up|Down)\(\d+\);','',m['reference']['program'])
             data={'source':source,'outputs':m['expected_watch'],'globals':m['expected_globals']}
+            if m.get('capstone'):
+                cap=m['capstone']
+                data.update(chart_cases=cap['flowchart']['cases'], trace=cap['trace_case'],
+                            history_prompt=cap['history']['prompt'], source_exercise=m['source_exercise']['program'])
     else:
         data=sorted([(re.sub(r'^Archive case \d+: ','',t['prompt']),t['choices'][t['answer_index']]) for t in game['tasks']])
     return hashlib.sha256(json.dumps({'lesson':game['learning_objective_id'],'data':data},sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -36,6 +40,7 @@ def apply_parameters(spec: dict, base: dict) -> dict:
     from scripts.programming_missions import programming_mission
     from scripts.flowchart_scenarios import make_flowchart
     from scripts.archive_lessons import authoring_questions
+    from scripts.archive_evidence import case_evidence
     generation=spec['canvas_generation'];proposal=generation['proposal']
     context=canvas_context(spec)
     validate_canvas_proposal(json.dumps(proposal),context)
@@ -43,7 +48,8 @@ def apply_parameters(spec: dict, base: dict) -> dict:
     variant=p.get('problem_variant',game['trial']);seed=p['layout_seed']
     if game.get('flowchart'):
         puzzle=make_flowchart(game['file_id'],variant,game['difficulty'],seed,
-                              level=game['source_level'] if game['source_week']==2 else None,parameters=p)
+                              level=game['source_level'] if game['source_week']==2 else None,parameters=p,
+                              application=(game['week'],game['level'])==(9,8))
         puzzle['objective_id']=game['learning_objective_id']
         game.update(flowchart=puzzle,objective=puzzle['prompt'],title='Flowchart Lab · '+puzzle['title'],hint=puzzle['feedback'],
                     controls='Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.')
@@ -66,7 +72,10 @@ def apply_parameters(spec: dict, base: dict) -> dict:
             tasks.append({'id':identity,'prompt':row['prompt'],'choices':choices,'answer_index':choices.index(row['answer']),
                           'explanation':row['answer']+'.','objective_id':game['learning_objective_id']})
         game['tasks']=tasks
-        game['objective']=game['lesson']['stage_title']+': verify archive records '+', '.join(p['question_ids'])+'.'
+        if game['mode'] == 'hidden_archive':
+            game['archive_evidence'] = case_evidence(game['source_level'], game['trial'], tasks)
+        else:
+            game['objective']=game['lesson']['stage_title']+': verify archive records '+', '.join(p['question_ids'])+'.'
     game['seed']=seed
     m=game.get('programming',{})
     if m.get('source_exercise'):game['source_code_snippet']=m['source_exercise']['program']

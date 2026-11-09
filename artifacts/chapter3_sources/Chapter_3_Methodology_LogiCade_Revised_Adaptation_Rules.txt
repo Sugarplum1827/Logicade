@@ -1,0 +1,299 @@
+Chapter 3METHODOLOGY
+This chapter presents the research methods, design, locale, respondents, instruments, system architecture, machine learning component, data gathering and preprocessing procedures, data analysis tools, statistical treatment, software development model, and ethical considerations used in the development and evaluation of LogiCade, an LLM-generated adaptive gamified learning system for Computer Programming 1 (CP1).
+
+3.1 Methods of Research Used
+This study employs four complementary research methods:
+• Developmental Research. Used for the design, implementation, testing, and refinement of LogiCade. Covers the bounded rule grammar, sprite/map registry, LLM generator, verifier, Phaser 2D runtime, pre-generation pool, difficulty adaptation, and logging pipeline.
+• Descriptive-Evaluative Research. Used to summarize respondents' post-use perceptions and to evaluate the implemented system against six ISO/IEC 25010 software quality characteristics: functional suitability, usability, reliability, performance efficiency, security, and maintainability. Student, faculty, and IT expert evaluators perform the rating tasks appropriate to their role.
+• Stratified Single-Group Pretest–Posttest. Used to examine changes in the programming performance of the same participating students before and after the LogiCade implementation. No control group is formed; observed differences are interpreted as changes during the implementation period and not as proof that LogiCade alone caused them.
+• Learning Analytics-Based Evaluation. Used to record and summarize learner-generated data during gameplay: challenge completion, attempts, errors, completion time, hint and retry usage, code execution results, difficulty targets, difficulty served, fingerprints, and verification outcomes.
+3.2 Research Design
+The study uses a stratified single-group pretest–posttest design. All first-year students enrolled in the participating CP1 class take a pretest. Based on pretest scores, students are categorized into three strata — Knowledgeable, Moderate, and Minimal — and sixty (60) students are selected with equal allocation (20 per stratum). The same sixty students complete 90 generated activities across CP1 Weeks 1–9 and take a posttest after the final required challenge.
+Research assessment scores are distinguished from in-game performance. Pretest and posttest scores represent the study's assessment of programming performance. Gameplay Concept Performance represents performance in LogiCade activities and is reported separately. Learning Gain is calculated as Posttest Score minus Pretest Score for respondents with matched pretest and posttest records, and is reported both overall and per stratum.
+The stratum is used only as an analysis variable. It is not passed to the adaptive gameplay mechanism. All students begin at the Standard difficulty state; subsequent difficulty is determined solely by in-game performance.
+3.3 Locale of the Study
+The study is conducted at the College of Computing Studies (CCS), Eulogio "Amang" Rodriguez Institute of Science and Technology (EARIST), Nagtahan, Sampaloc, Manila. The locale is appropriate because the college offers the Computer Science and Information Technology programs containing the CP1 course addressed by the system.
+3.4 Respondents of the Study
+3.4.1 Inclusion Criteria
+Participants must:
+Be currently enrolled as a first-year CCS student in the selected participating class.
+Be enrolled in the Computer Science or Information Technology program.
+Be taking Computer Programming 1.
+Be willing to participate and able to provide informed consent.
+Be able to access and use the implemented LogiCade build during the study period.
+3.4.2 Stratified Sampling Procedure
+Step 1 — Pretest administration. All first-year students in the participating CP1 class take the pretest before any exposure to LogiCade.
+Step 2 — Stratification. Based on pretest scores, students are categorized into three strata:
+Stratum
+Pretest Score Range
+Description
+Knowledgeable
+[to be finalized]
+High baseline programming performance
+Moderate
+[to be finalized]
+Mid-range baseline performance
+Minimal
+[to be finalized]
+Low baseline performance
+
+Cutoff scores are determined from the pretest's scoring distribution and validated by the subject instructor. Final cutoffs are documented before participant selection.
+Step 3 — Selection. Sixty (60) students are selected with equal allocation:
+Stratum
+Target N
+Knowledgeable
+20
+Moderate
+20
+Minimal
+20
+Total
+60
+
+Within each stratum, selection is random among consenting students. Equal allocation, rather than proportional allocation, ensures each stratum has sufficient sample size for subgroup statistical analysis.
+Step 4 — Participation. The same sixty students complete the LogiCade implementation and take the posttest.
+Replacement rule. If a selected student withdraws, a replacement is drawn randomly from the same stratum.
+Reporting. The researchers report: number who took the pretest; number per stratum; number invited, consented, and selected; number who completed both tests; and any exclusions with reasons.
+Faculty members and IT experts may also participate as ISO/IEC 25010 evaluators. Their ratings are part of the software evaluation and are not combined with the student pretest–posttest analysis.
+3.4.3 Design Justification: Stratum-Agnostic Adaptation
+Although students are stratified for sampling, the adaptive gameplay mechanism does not use stratum as an input. Every student begins at Standard, and subsequent difficulty is determined solely by in-game performance (score, attempts, errors, time, hints, retries). This design choice serves three purposes:
+Fairness of gameplay: students are not locked into a difficulty trajectory based on a single pretest measurement.
+Independent adaptation signal: the mechanism responds to demonstrated performance rather than assumed ability.
+Research separation: stratum functions as an analysis variable, not a gameplay input, keeping the adaptation logic separate from the sampling design.
+3.5 Research Instruments
+3.5.1 Pretest and Posttest
+A pretest and an equivalent posttest measure programming performance against the selected CP1 Intended Learning Outcomes. The two assessments cover comparable competencies and use the same scoring basis, while avoiding identical items to prevent recall effects. The posttest is administered after the final required game challenge. Assessment scores are not merged with gameplay challenge scores.
+3.5.2 Baseline and Post-Use Questionnaire
+A researcher-made questionnaire gathers programming background and baseline learning difficulties before system use. Post-use items measure engagement, learning motivation, and overall learning satisfaction. A five-point Likert response format is used:
+Scale
+Interpretation
+5
+Strongly Agree
+4
+Agree
+3
+Neutral
+2
+Disagree
+1
+Strongly Disagree
+
+3.5.3 System-Generated Gameplay Logs
+LogiCade records pseudonymous event data. Depending on the implemented activity, records include:
+Respondent/session identifier and timestamp
+Week, activity index, day, day slot
+Challenge score and completion status
+First attempt and total attempts
+Error or incorrect-output events
+Completion time or duration
+Hint and retry usage
+Code execution result
+Difficulty target assigned
+Difficulty served
+Fingerprint
+Verification result (pass / repaired / fallback)
+Pool status (served / exhausted)
+3.5.4 Evaluation Survey
+After the final report, participating students complete a final evaluation survey concerning their experience with the implemented system. Survey items are based on features the respondents actually used: gameplay and interaction, programming challenges, feedback and guidance, usability and navigation, engagement, and learning experience.
+3.5.5 ISO/IEC 25010 Software Quality Evaluation Instrument
+An adapted software-quality evaluation instrument assesses the six characteristics specified in the study:
+Functional Suitability
+Usability
+Reliability
+Performance Efficiency
+Security
+Maintainability
+Evaluators rate characteristics appropriate to their role using defined tasks or evidence from the implemented build.
+3.6 System Architecture
+3.6.1 Overview
+LogiCade is a generative adaptive gamified learning system. Each gameplay activity is generated by a locally hosted Large Language Model, verified for correctness and pedagogical alignment, rendered in Phaser 2D, and logged for analytics. The difficulty of each generated game is conditioned on the learner's prior performance.
+CP1 Syllabus (ILOs, Weeks 1–9)        ↓Bounded Rule Grammar (per week)        ↓Sprite + Map Registry        ↓┌─────────────────────────────────────────┐│  OLLAMA LOCAL SERVER                    ││  Model: DeepSeek (pinned tag)           ││  Endpoint: localhost                    ││  Output: JSON schema-enforced DSL spec  │└─────────────────────────────────────────┘        ↓┌─────────────────────────────────────────┐│  VERIFIER                               ││  schema · solvability · termination ·   ││  difficulty · concept · leakage ·       ││  fingerprint novelty                    │└─────────────────────────────────────────┘        ↓ pass                  ↓ fail   Phaser 2D game           LLM repair loop        ↓                   (max 2 retries,   Student plays             then fallback        ↓                    template)   Gameplay logs        ↓   Difficulty target for next game        ↓   (feeds back into LLM)
+
+3.6.2 Bounded Rule Grammar
+The grammar defines a closed vocabulary per CP1 week:
+Category
+Elements
+Triggers
+collision, timer, score threshold, key press, proximity, count reached
+Conditions
+always, if score </>/=, if timer </>, if count </>, if carrying(X)
+Effects
+score±n, destroy, spawn, teleport, freeze, swap, invert_controls, slow, speed_up, reset
+Targets
+any entity in the sprite/map registry
+
+Grammar is scoped by week. Week 1 grammar differs from Week 5 grammar, ensuring concept-appropriate generation and preventing concept leakage.
+3.6.3 Sprite and Map Registry
+A fixed library of sprites and tilemaps. Each sprite is tagged with role, size, animation frames, collision box, and allowed contexts. The LLM may reference only registered assets.
+3.6.4 DSL Spec Format
+Every generated game is a JSON specification conforming to the grammar and registry. Example:
+{  "week": 3,  "concept": "conditionals",  "ilo": "CP1-W3-ILO2",  "difficulty": "standard",  "fingerprint": "c3a9f1",  "entities": [    { "id": "player", "sprite": "knight", "role": "player" },    { "id": "coin",   "sprite": "coin",   "role": "collectible" }  ],  "map": "grid_12x9_forest",  "rules": [    { "on": "collision(player,coin)", "if": "score < 5",      "then": ["score += 1", "destroy(coin)"] }  ],  "win": "score == 5",  "hint": "...",  "tutor_note": "..."}
+
+3.6.5 LLM Generator (Ollama + DeepSeek)
+Runtime. Ollama, running entirely on local infrastructure.
+Model. DeepSeek (e.g., deepseek-coder-v2:16b or the largest variant supported by available hardware). The exact model tag and digest hash are recorded for reproducibility.
+Inputs to the model:
+The CP1 week's rule grammar
+The sprite/map registry
+The target difficulty (Needs Support / Standard / Advanced)
+The learner's prior game performance
+Recent fingerprints to avoid
+Output. A DSL spec conforming to the grammar and registry, with JSON schema enforcement applied via Ollama's structured output.
+Constraint. The LLM writes JSON only. It never writes Phaser code or arbitrary program code.
+Deployment rationale. All generation occurs on-premises. No student data, gameplay logs, or identifiers are transmitted to external services, aligning with the Data Privacy Act of 2012 and eliminating per-token costs.
+3.6.6 Verifier
+Every generated spec is checked before serving:
+Check
+Method
+Schema
+All fields, verbs, and entities are in the allowed lists
+Reachability
+The win condition is satisfiable by at least one rule
+Termination
+No infinite loops or uncapped spawns
+Difficulty
+Computed score falls in the target band
+Concept alignment
+Rules match the CP1 week's grammar
+No leakage
+No rules requiring later-week concepts
+Novelty
+Fingerprint not in the student's recent history
+
+Failing specs are returned to the LLM with error details. The LLM retries up to two times. After two failures, a hand-written fallback template for the same week and difficulty is served. Fallback usage is logged and reported.
+3.6.7 Difficulty Adaptation
+Difficulty is selected at the transition between levels. All students begin Level 1 at Standard difficulty. After a level is completed, the system uses the student's first-attempt assessment accuracy and full-level replay count to select the difficulty for the next level. The first-attempt score is retained as the initial performance signal; scores from later replays do not overwrite it.
+if score < 0.50 OR attempts ≥ 3 OR errors ≥ 2:    target = needs_supportelif score ≥ 0.85 AND attempts == 1 AND errors == 0:    target = advancedelse:    target = standard
+A full-level replay is counted when a student restarts or replays the entire level after the initial attempt. Repeated answers, retries of individual questions, and retries of individual activities do not count as full-level replays. The rules below are predefined operational thresholds for the system and are not claimed to be empirically established cutoffs.
+The rules are applied in the order shown, making the conditions mutually exclusive and exhaustive. The selected difficulty remains fixed for the entire next level; activity-level performance during that level does not change its assigned difficulty. The process repeats at each level transition—for example, Level 9 results determine the difficulty assigned to Level 10.
+First-attempt accuracy
+Full-level replays
+Difficulty for next level
+Below 60%
+Any number
+Needs Support
+60% to below 80%
+2 or more
+Needs Support
+60% to below 80%
+0–1
+Standard
+80% or higher
+2 or more
+Standard
+80% or higher
+0–1
+Advanced
+3.6.8 Phaser 2D Runtime
+A single Phaser scene reads a DSL spec and renders a playable game. Features include sprite loading from registry, tilemap rendering, rule execution, collision detection, input handling, win/lose logic, restart, and hint display.
+3.6.9 Fingerprints and Novelty
+Each game's rule-shape is hashed: hash(triggers + effects + win_condition). The hash is stored per student. New games with matching fingerprints are rejected and regenerated, preventing structural repetition. Coverage of rule-shapes is tracked to reduce experiential repetition.
+3.6.10 Pre-Generation Pool
+Because local model latency (5–60 seconds) is unsuitable between games, a background worker maintains a pre-generated pool per student, per week, per difficulty state:
+student_id + week + difficulty → queue of 3 verified specs
+
+• Week start: build all three pools (3 games each = 9 generations per student per week).
+• After each activity: pop from the matching difficulty pool; refill asynchronously.
+• Week end: discard pool; move to next week's grammar.
+If the pool empties (student plays faster than generation), a fallback template is served and the event is logged as pool_exhausted. Students are never blocked by a loading spinner.
+3.7 Machine Learning Component
+3.7.1 Local LLM for Activity Generation
+The locally hosted Large Language Model is used to generate activity specifications from the approved topic, activity grammar, and selected difficulty. Generated specifications are checked by the deterministic verifier; invalid outputs may be repaired up to the configured limit, after which a predefined fallback activity is used.
+Difficulty adaptation is not delegated to the LLM. A deterministic rule engine selects the next level's difficulty from the student's first-attempt accuracy and full-level replay count using the predefined thresholds in Section 3.6.7. Separating selection from generation makes adaptation traceable, reproducible, and testable.
+Accordingly, the LLM's primary role in this architecture is activity generation. The rule-based adaptation mechanism is evaluated separately through its decision consistency and correct handling of threshold boundary cases.
+Both are ML tasks; Large Language Models are machine learning models. This replaces the original Decision Tree and Random Forest components for adaptive difficulty.
+3.7.2 K-Means Clustering for Learner Profiling
+K-Means is used as the unsupervised-learning algorithm for exploratory learner profiling.
+Features (student-level). Mean challenge performance; mean attempts per completed activity; mean error frequency; mean completion time; hint usage rate; retry frequency; code execution success rate.
+Evaluation. Silhouette Score. The number and meaning of clusters are determined from the collected data rather than forced to match predetermined game-themed labels.
+Labels. Descriptive profile labels are assigned only after examining the characteristics of the clusters. If meaningful and sufficiently stable clusters are produced, candidate labels may be assigned. Cluster results may also be cross-checked against pretest strata as an exploratory validation.
+3.7.3 Optional Validation Study
+As an optional extension, Decision Tree and Random Forest may be trained on the LLM's difficulty decisions to test whether a simpler classifier could replicate them. This is reported as an exploratory validation, not a primary component.
+3.7.4 Training and Evaluation
+• Preprocessing transformations are fitted using training data only.
+• No leakage: predictors use only information available before the adaptive decision.
+• K-Means is evaluated by Silhouette Score and interpretability.
+• The LLM is evaluated by verifier pass rate, fallback rate, pool exhaustion rate, and difficulty match rate.
+3.8 Data Gathering Procedure
+1. Secure institutional permissions and research approvals.
+2. Coordinate with CCS and participating faculty; obtain the official CP1 syllabus; extract the selected Intended Learning Outcomes.
+3. Map implemented learning outcomes to LogiCade weeks and activities.
+4. Orient all first-year CP1 students; obtain informed consent for the pretest.
+5. Administer the pretest.
+6. Stratify students; select 60 with equal allocation (20/20/20).
+7. Confirm consent for participation; draw replacements from the same stratum if needed.
+8. Students use LogiCade for 9 weeks (10 activities per week = 90 activities).
+9. System logs all gameplay events, difficulty targets, served difficulty, fingerprints, and verification results.
+10. After Week 9, the Final Core Challenge is completed.
+11. Administer the posttest.
+12. Administer the post-use evaluation survey.
+13. Conduct the ISO/IEC 25010 evaluation with students, faculty, and IT experts.
+14. Export, validate, pseudonymize, and preprocess all records.
+3.9 Data Preprocessing
+Pipeline:
+Raw Data → Validation → Cleaning → Matching    → Missing/Invalid Handling → Feature Construction    → Dataset Separation         ↓                    ↓  Statistical Dataset   ML-Ready Dataset
+
+Logged events per activity: respondent code; timestamp; week; activity index; day; day slot; score; attempts; errors; time; hint usage; retries; code execution result; difficulty target assigned; difficulty served; fingerprint; verification result (pass / repaired / fallback); pool status (served / exhausted).
+Respondents without both a valid pretest and posttest are excluded from the paired analysis, though their other valid data may still be summarized. The number and reason for missing paired records are reported.
+No leakage rule. When analyzing adaptation or training any classifier, predictors use only information available before the adaptive decision. Performance from the succeeding activity is never used as a predictor.
+3.10 Data Analysis Tools
+Descriptive and inferential statistical analyses may be performed using appropriate statistical software or Python-based tools. Frequency, percentage, mean, standard deviation, median, and interquartile range are used where appropriate. The paired pretest–posttest analysis uses a paired-samples t-test when its assumptions are reasonable; otherwise, the Wilcoxon signed-rank test is used as the non-parametric alternative.
+For machine learning development, Python and established libraries such as Scikit-learn are used for preprocessing, K-Means clustering, and, if performed, Decision Tree and Random Forest training and evaluation.
+The game implementation, database, survey platform, LLM runtime, and development environment are reported in the final manuscript according to the technologies actually used by the development team.
+3.11 Statistical Treatment of the Data
+3.11.1 Frequency and Percentage
+P = (f / N) × 100
+Used to summarize categorical data and describe the distribution of respondents, responses, completion counts, and other categorical information.
+3.11.2 Weighted Mean
+X̄w = Σfx / N
+Used to summarize Likert-scale responses from the post-use questionnaire and the ISO/IEC 25010 evaluation.
+3.11.3 Standard Deviation
+S = √[Σ(xi − x̄)² / (n − 1)]
+Used to determine variability around the mean.
+3.11.4 Learning Gain
+LG_i = Post_i − Pre_i
+A positive Learning Gain indicates a higher posttest score, zero indicates no change, and a negative value indicates a lower posttest score. Learning Gain is reported overall and per stratum, separately from Gameplay Concept Performance.
+3.11.5 Paired-Samples t-test
+t = d̄ / (s_d / √n), where d_i = Post_i − Pre_i
+Used to test whether the pretest and posttest difference is statistically significant. α = 0.05. If assumptions are not reasonably satisfied, the Wilcoxon signed-rank test is used.
+3.11.6 Per-Stratum Paired Tests
+A paired-samples t-test is performed within each stratum (Knowledgeable, Moderate, Minimal). Because three subgroup tests are conducted, Bonferroni correction is applied: the adjusted significance threshold is α = 0.05 / 3 = 0.0167. Both raw and adjusted significance are reported.
+3.11.7 Optional Interaction Analysis
+A mixed ANOVA (Time × Stratum) may be used to test whether the intervention affected the strata differently. A significant interaction indicates differential improvement across strata.
+3.11.8 Effect Size — Cohen's dz
+dz = d̄ / s_d
+Reported alongside the significance test to describe the magnitude of the observed change. Values of approximately 0.20, 0.50, and 0.80 are general reference points for small, medium, and large effects, treated as guidelines rather than absolute thresholds.
+3.11.9 Verbal Interpretation of Mean Scores
+Point Range
+Verbal Interpretation
+4.20 – 5.00
+Strongly Agree
+3.40 – 4.19
+Agree
+2.60 – 3.39
+Neutral
+1.80 – 2.59
+Disagree
+1.00 – 1.79
+Strongly Disagree
+
+3.11.10 Regression to the Mean
+Regression to the mean is acknowledged as a known limitation of the stratified single-group pretest–posttest design. Because participants were selected on the basis of extreme pretest scores, some movement toward the mean on the posttest is expected regardless of the intervention. Per-stratum analysis is used to describe this pattern rather than to attribute it to LogiCade.
+3.12 Software Development Model
+The development of LogiCade follows an Agile iterative approach. Agile is appropriate because the system combines grammar design, registry curation, LLM prompt engineering, verifier implementation, Phaser runtime development, and research requirements that may require repeated refinement as prototypes are tested and adviser feedback is incorporated.
+Agile phases applied to LogiCade:
+1. Planning — identify and organize functional and non-functional requirements; define system scope; establish development priorities; reference the CP1 syllabus, ILOs, and storyboard.
+2. Design — develop architecture, user interface, database structure, gameplay flow, and data-processing framework; map CP1 topics and ILOs to weekly grammar and activity templates; design the adaptive mechanism, verifier, and pre-generation pool.
+3. Development — implement grammar, registry, DSL, LLM generator, verifier, Phaser runtime, fingerprinting, pre-generation pool, logging, and the initial adaptive mechanism.
+4. Testing — iterative unit, integration, verifier accuracy, and ISO 25010 testing; validate LLM outputs against the grammar and verifier.
+5. Deployment — release the build to respondents; collect assessment, gameplay, and interaction data.
+6. Review and Improvement — review feedback, testing findings, verifier pass rates, fallback rates, and gameplay records; refine as necessary; undergo another Agile iteration.
+3.13 Ethical Considerations
+Participants are informed of the study's purpose, procedures, expected activities, collected data, voluntary nature, and right to withdraw, subject to the approved research protocol.
+Informed consent is obtained before data collection.
+Research records use pseudonymous identifiers for analysis. Access to identifiable information is restricted and separated from the analytical dataset.
+Data handling follows applicable institutional requirements and the Data Privacy Act of 2012.
+All LLM generation occurs on local infrastructure. No student data, gameplay logs, or identifiers are transmitted to external services.
+Machine-learning outputs are not used to stigmatize or permanently label participants. Adaptive states (Needs Support, Standard, Advanced) describe the learner's current performance for a particular stage of the journey and may change as later evidence is collected.
+The game's narrative endings and progression tiers use documented, transparent requirements rather than an opaque prediction.
+Stratum labels are used only for analysis; they are not shown to students and do not affect gameplay.

@@ -157,6 +157,13 @@ export default function App() {
   const backgroundMusicRef = useRef(null);
   const oracleVoiceRef = useRef(null);
   const [musicNeedsGesture, setMusicNeedsGesture] = useState(false);
+  const [musicEnabled, setMusicEnabled] = useState(() => localStorage.getItem('logicade_music') !== 'off');
+
+  const toggleMusic = () => {
+    const enabled = !musicEnabled;
+    localStorage.setItem('logicade_music', enabled ? 'on' : 'off');
+    setMusicEnabled(enabled);
+  };
 
   useEffect(() => {
     gameOpenedAtRef.current = view === 'game' ? Date.now() : 0;
@@ -165,12 +172,12 @@ export default function App() {
 
   const startBackgroundMusic = useCallback(() => {
     const music = backgroundMusicRef.current;
-    if (!music) return;
+    if (!music || !musicEnabled) return;
     music.muted = false;
     music.play()
       .then(() => setMusicNeedsGesture(false))
       .catch(() => setMusicNeedsGesture(true));
-  }, []);
+  }, [musicEnabled]);
 
   const playOracleVoice = useCallback(() => {
     const voice = oracleVoiceRef.current;
@@ -198,7 +205,7 @@ export default function App() {
   useEffect(() => {
     const music = backgroundMusicRef.current;
     if (!music) return;
-    if (view === 'game' || view === 'prologue' || showLandingSplash) {
+    if (!musicEnabled || view === 'game' || view === 'prologue' || showLandingSplash) {
       music.pause();
     } else {
       // Keep an explicit gesture fallback visible until audible playback is
@@ -220,7 +227,7 @@ export default function App() {
         document.removeEventListener('keydown', startBackgroundMusic);
       };
     }
-  }, [view, showLandingSplash, startBackgroundMusic]);
+  }, [view, showLandingSplash, startBackgroundMusic, musicEnabled]);
 
   useEffect(() => {
     const handleButtonClick = (event) => {
@@ -1099,17 +1106,26 @@ export default function App() {
     );
   };
 
+  const archivePackage = Boolean(currentPackageUrl && currentMeta?.generated_game?.mode === 'hidden_archive');
+  const canRequestHint = Boolean(currentSpec && !gameGuidanceActive && !gameResult && !showPauseExit
+    && !showHintModal && !showHintTutorial && !oracleHint);
+  const openHint = () => {
+    if (!canRequestHint) return;
+    if (showPlayerOnboarding && tutorialStep === 5) setShowHintTutorial(true);
+    else setShowHintModal(true);
+  };
+
   return (
     <div className="app-wrapper">
-      <audio ref={backgroundMusicRef} src={`${import.meta.env.BASE_URL}assets/bg_song.mp3`} loop preload="auto" autoPlay playsInline />
+      <audio ref={backgroundMusicRef} src={`${import.meta.env.BASE_URL}assets/bg_song.mp3`} loop preload="auto" playsInline />
       <audio ref={oracleVoiceRef} src={`${import.meta.env.BASE_URL}assets/oracles_voice.mp3`} preload="auto" />
       {view === 'landing' && showLandingSplash && <LandingSplash onComplete={finishLandingSplash} />}
-      {view === 'landing' && !showLandingSplash && <LandingPage onStart={() => {
+      {view === 'landing' && !showLandingSplash && <LandingPage musicEnabled={musicEnabled} onToggleMusic={toggleMusic} onStart={() => {
         localStorage.setItem('logicade_auth_mode', 'login');
         startBackgroundMusic();
         transitionTo('auth');
       }} />}
-      {view !== 'game' && !showLandingSplash && musicNeedsGesture && (
+      {view !== 'game' && view !== 'prologue' && !showLandingSplash && musicEnabled && musicNeedsGesture && (
         <button
           className="music-start-prompt"
           onClick={startBackgroundMusic}
@@ -1155,6 +1171,8 @@ export default function App() {
           onEnterRegion={handleSelectRegion}
           onBack={() => transitionTo('subject')}
           onLogout={handleLogout}
+          musicEnabled={musicEnabled}
+          onToggleMusic={toggleMusic}
           tutorial={showPlayerOnboarding && tutorialStep === 2 ? (
             <OracleDialogue step={2} title="Keeper of the surviving records" text="This is your world map. Each region holds a lesson topic. Begin with The Kingdom, then return here as new regions unlock." onNext={() => advanceTutorial(3)} />
           ) : null}
@@ -1177,17 +1195,17 @@ export default function App() {
       )}
 
       {view === 'level' && showPlayerOnboarding && tutorialStep === 3 && (
-        <OracleDialogue step={3} title="Keeper of the surviving records" text="These are the level nodes. Choose an unlocked level to load its mission, read the objective and rewards, then select View Mission and Start when ready." onNext={() => advanceTutorial(4)} />
+        <OracleDialogue step={3} title="Keeper of the surviving records" text="Choose an unlocked stage to load its challenge. Select Challenge to review the mission, then Start when you are ready." onNext={() => advanceTutorial(4)} />
       )}
 
       {view === 'game' && selectedRegion && (
-        <div style={{ position: 'relative', width: '100vw', height: '100dvh', minHeight: '100svh' }}>
-          <button
+        <div className={archivePackage ? 'archive-game-host' : undefined} style={{ position: 'relative', width: '100vw', height: '100dvh', minHeight: '100svh' }}>
+          {!archivePackage && <button
             onClick={() => window.dispatchEvent(new Event('logicade:pause_game'))}
             className="in-game-back-btn"
           >
             ← Back
-          </button>
+          </button>}
 
           <div className="game-hud-right">
             <div className="coin-display" title={walletStatusText(walletStatus)} aria-label={`${coins} coins. ${walletStatusText(walletStatus)}`}>
@@ -1197,12 +1215,9 @@ export default function App() {
             </div>
           </div>
 
-          {!gameGuidanceActive && !gameResult && !showPauseExit && !showHintModal && !showHintTutorial && !oracleHint && (
+          {!archivePackage && !gameGuidanceActive && !gameResult && !showPauseExit && !showHintModal && !showHintTutorial && !oracleHint && (
             <OracleCompanion
-              onClick={() => {
-                if (showPlayerOnboarding && tutorialStep === 5) setShowHintTutorial(true);
-                else setShowHintModal(true);
-              }}
+              onClick={openHint}
               disabled={!currentSpec}
             />
           )}
@@ -1223,6 +1238,7 @@ export default function App() {
               spec={currentSpec}
               meta={currentMeta}
               onPause={handlePackagePause}
+              onHintRequest={archivePackage ? openHint : undefined}
               onGuidanceChange={setGameGuidanceActive}
               onGameOver={handlePackageGameOver}
             />

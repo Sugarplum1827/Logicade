@@ -1,0 +1,16 @@
+# LogiCade study telemetry
+
+Apply migration `017_study_telemetry.sql` before serving the updated client. In Admin, open **Reports and Exports**. These datasets use synchronized records and the same pseudonymous participant IDs.
+
+| Dataset | Measurements |
+| --- | --- |
+| Research signals by attempt | One mistake per incorrect scored submission. A fresh Run, Step, Fast, or completed chart Check that evaluates a solution is one submission regardless of the number of test cases. Advancing the same trace does not submit again. Hint count comes from gameplay. Question and activity retries count subsequent submissions to the same target within a stage attempt. |
+| Research signals by attempt | Submission accuracy is correct submissions divided by scored submissions. Gameplay accuracy and its original basis are exported separately. Completion time is foreground game time from game start until success, excluding host pause and the first-visit guide. Failed runs can have active play time. |
+| Research signals by attempt | Mean response time uses measured time from prompt presentation or editor availability to a scored submission. A question hidden while reviewing archive evidence stops its response timer. Simulation playback before the learner gets the next prompt is excluded from the next response interval. Session time and inactivity are snapshots taken when the attempt is saved. |
+| Stage outcomes | Counts synchronized attempts by learner and stage. Failure rate divides failures by evaluated attempts (failed or completed). First-try success uses the first evaluated attempt, with the welcome video excluded. Exits and restarts before evaluation still count in total attempts. Older level records without a stage number remain visible in the attempt export. |
+| Topic mastery evidence | Proportion of correct scored submissions on the first evaluated attempt for the assigned learning objective. Orientation is excluded. The report includes the evidence counts. This is a gameplay proxy and should be evaluated against independent assessments before use as a mastery label. |
+| Learner sessions | Each authenticated browser tab has its own session. Duration is time since that tab began the session. Visible time more than 60 seconds after the last observed keyboard, pointer, scroll, or input action counts as inactivity. Hidden time remains part of session duration and is outside the foreground active and inactive measures. The learner can be reading without input, so treat inactivity as an interaction measure. |
+
+Session snapshots go to the offline outbox every 30 seconds and when the page hides or the account changes. They update one server record per tab session. An abrupt close can lose time since the last saved snapshot, and unsent checkpoints after logout can sync on the next login. Only interaction timing is recorded by the session tracker. It does not save keystrokes or input contents.
+
+Leave missing data blank. Earlier attempts do not gain reconstructed response times, retries, or mastery scores. Per-attempt research scores require instrumented submissions. The app keeps its existing difficulty picker. If building a training dataset, use only observations available before each decision and separate participants across training and evaluation sets.

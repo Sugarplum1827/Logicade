@@ -8,9 +8,9 @@
   "level": 6,
   "trial": 4,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · Imperative operations",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Imperative operations",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Echo Chamber: a booming echo chamber",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l6",
   "source_level": 6,
   "source_week": 4,
-  "primary_mechanic": "Loop Counter Conveyor",
-  "objective": "Archive variation 4: classify and verify C history, characteristics and language categories for Imperative operations.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 36,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 4: Find 5 artifacts, read the evidence, and verify three findings about Imperative operations.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 3583646986,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 3583646986,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Imperative operations",
   "source_primary_mechanic": "Loop Counter Conveyor",
-  "source_code_snippet": "while i < 5:\n    i += 1"
+  "source_code_snippet": "while i < 5:\n    i += 1",
+  "archive_evidence": [
+    {
+      "id": "history_6_4",
+      "era": "Instructions close to the machine",
+      "history": "Ritchie suggests that special memory cells on the PDP-7 may have inspired the increment operator. B already had that operator before the PDP-11 arrived.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "history_5_7",
+      "era": "Headers as shared references",
+      "history": "C's include mechanism made it possible to reuse declarations across source files. Functions in a library can be declared in one shared header.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "compiler"
+    },
+    {
+      "id": "lesson_6_1",
+      "era": "Instructions and state",
+      "history": "Imperative code gives instructions that can change program state. An assignment stores a new value. Later instructions read the state left by the earlier ones.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_6_3",
+      "era": "Order changes results",
+      "history": "Printing a value before incrementing it can show a different number from printing after the increment. Trace the steps in their execution order.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_6_4",
+      "era": "Two kinds of expression",
+      "history": "An assignment changes the value stored in a variable. An equality test compares two values and can guide what instruction happens next.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
   "trial": 9,
   "difficulty": "Standard",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Find the larger number",
+  "title": "Flowchart Workshop – Ship surplus stock",
   "display_name": "Logic Circuit Workshop",
   "theme": "Sand Dunes – Merchant Waystation: a waystation for merchants",
   "topic": "Examination Practice: Weeks 2–8",
@@ -64,7 +64,7 @@
   "source_level": 10,
   "source_week": 2,
   "primary_mechanic": "adventure construction and execution",
-  "objective": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 9: {'a': 14, 'b': 9}; {'a': -9, 'b': -11}.",
+  "objective": "Read stock and capacity. If stock exceeds capacity, send 11 units per surplus crate. Otherwise send 0. Shipment plan 9 uses capacity 19.",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
   "time_limit_seconds": 0,
@@ -87,10 +87,10 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_9",
+    "scenario_id": "surplus_shipment",
     "source_level": 10,
-    "title": "Find the larger number",
-    "prompt": "Read a and b. Display a when a is greater than b; otherwise display b. Test dataset 9: {'a': 14, 'b': 9}; {'a': -9, 'b': -11}.",
+    "title": "Ship surplus stock",
+    "prompt": "Read stock and capacity. If stock exceeds capacity, send 11 units per surplus crate. Otherwise send 0. Shipment plan 9 uses capacity 19.",
     "entry": "start",
     "slots": [
       {
@@ -161,12 +161,10 @@
     "pieces": [
       {
         "id": "no",
-        "label": "Write b",
+        "label": "Send 0",
         "kind": "output",
         "action": {
-          "value": {
-            "var": "b"
-          }
+          "value": 0
         }
       },
       {
@@ -190,17 +188,17 @@
       },
       {
         "id": "decide",
-        "label": "a > b?",
+        "label": "stock > capacity?",
         "kind": "decision",
         "action": {
           "test": {
             "op": ">",
             "args": [
               {
-                "var": "a"
+                "var": "stock"
               },
               {
-                "var": "b"
+                "var": "capacity"
               }
             ]
           }
@@ -214,22 +212,36 @@
       },
       {
         "id": "read",
-        "label": "Read a, b",
+        "label": "Read stock, capacity",
         "kind": "input",
         "action": {
           "names": [
-            "a",
-            "b"
+            "stock",
+            "capacity"
           ]
         }
       },
       {
         "id": "yes",
-        "label": "Write a",
+        "label": "Send (stock − capacity) × 11",
         "kind": "output",
         "action": {
           "value": {
-            "var": "a"
+            "op": "*",
+            "args": [
+              {
+                "op": "-",
+                "args": [
+                  {
+                    "var": "stock"
+                  },
+                  {
+                    "var": "capacity"
+                  }
+                ]
+              },
+              11
+            ]
           }
         }
       }
@@ -246,41 +258,31 @@
       {
         "id": "case_1",
         "inputs": {
-          "a": 14,
-          "b": 9
+          "stock": 18,
+          "capacity": 19
         },
         "expected": [
-          14
+          0
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "a": 9,
-          "b": 15
+          "stock": 19,
+          "capacity": 19
         },
         "expected": [
-          15
+          0
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "a": 9,
-          "b": 9
+          "stock": 28,
+          "capacity": 19
         },
         "expected": [
-          9
-        ]
-      },
-      {
-        "id": "case_4",
-        "inputs": {
-          "a": -9,
-          "b": -11
-        },
-        "expected": [
-          -9
+          99
         ]
       }
     ],

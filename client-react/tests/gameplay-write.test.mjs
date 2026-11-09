@@ -106,6 +106,32 @@ test('a repeated completion callback for the same run cannot create a second att
   assert.equal(db.rows('sync_queue').filter((job) => job.table === 'level_attempts').length, 1);
 });
 
+test('failed test cases do not multiply mistakes or retries for one scored run', async () => {
+  const { write, db, setEvents } = setup();
+  const scored = (kind, target, correct, response_ms) => ({
+    event_type: 'scored_submission', payload: { kind, target, correct, response_ms },
+  });
+  setEvents([
+    scored('activity', 'mission', false, 900),
+    ...['case-a', 'case-b', 'case-c'].map(id => ({ event_type: 'question_answered', entity_id: id, payload: { correct: false } })),
+    scored('activity', 'mission', true, 300),
+    scored('question', 'q1', false, null),
+    scored('question', 'q1', true, 0),
+    { event_type: 'level_win', payload: { accuracy_basis: 'program_execution_goals', active_play_ms: 1800 } },
+  ]);
+  const row = await write.persistAttempt({ ...scope, accuracy: 0.75, score: 1, errorCount: 4, won: true });
+  assert.equal(row.error_count, 2);
+  assert.equal(row.accuracy, 0.75);
+  assert.equal(row.activity_retries, 1);
+  assert.equal(row.question_retry_count, 1);
+  const research = db.rows('sync_queue').find(job => job.table === 'level_attempts').payload.research_metrics;
+  assert.equal(research.scored_submissions, 4);
+  assert.equal(research.correct_submissions, 2);
+  assert.equal(research.response_sample_count, 3);
+  assert.equal(research.response_total_ms, 1200);
+  assert.equal(research.active_play_ms, 1800);
+});
+
 test('native attempts retain authoritative revisions without adding unsupported sync columns or tickets', async () => {
   const { write, db, setEvents } = setup();
   setEvents([{ event_type: 'code_run', payload: { success: true } }]);

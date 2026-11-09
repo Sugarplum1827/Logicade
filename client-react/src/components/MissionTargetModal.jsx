@@ -28,7 +28,7 @@ function formatGameLabel(value) {
     .trim();
 }
 
-export default function MissionTargetModal({ spec, onStart, onCancel, starting = false, error = '' }) {
+export default function MissionTargetModal({ spec, rewardClaimed = false, onStart, onCancel, starting = false, error = '' }) {
   let objectives;
   if (
     Array.isArray(spec?.secondary_objectives) &&
@@ -58,7 +58,9 @@ export default function MissionTargetModal({ spec, onStart, onCancel, starting =
         if (event.target === event.currentTarget && !starting) onCancel?.();
       }}
     >
-      <div className="rok-modal mission-target-modal" role="dialog" aria-modal="true" aria-label="Mission Target">
+      <div className="rok-modal mission-target-modal realm-paper" role="dialog" aria-modal="true" aria-labelledby="mission-target-title">
+        <h2 id="mission-target-title" className="realm-heading">Mission Target</h2>
+        <div className="realm-divider" aria-hidden="true" />
 
         <div className="rok-content">
           {spec?.phaser_template?.display_name && (
@@ -80,39 +82,26 @@ export default function MissionTargetModal({ spec, onStart, onCancel, starting =
 
           {/* Win / lose conditions — only when the JSON provides them */}
           {(spec?.win_condition || spec?.lose_condition) && (
-            <div
-              style={{
-                width: '100%',
-                maxWidth: '100%',
-                boxSizing: 'border-box',
-                overflowWrap: 'anywhere',
-                padding: '12px 18px',
-                borderRadius: '8px',
-                marginBottom: '5px',
-                fontSize: '14px',
-                lineHeight: 1.3,
-              }}
-            >
+            <div className="realm-mission-conditions">
               {spec.win_condition && (
-                <div style={{ margin: spec.lose_condition ? 6 : 0 }}>
-                  <strong style={{ color: '#2e7d32' }}>✔ Win:</strong>{' '}
+                <p>
+                  <strong>✔ Win</strong>{' '}
                   {toDisplayText(spec.win_condition)}
-                </div>
+                </p>
               )}
               {spec.lose_condition && (
-                <div>
-                  <strong style={{ color: '#c62828' }}>✘ Lose:</strong>{' '}
+                <p>
+                  <strong className="is-lose">✘ Lose</strong>{' '}
                     {toDisplayText(spec.lose_condition)}
-                </div>
+                </p>
               )}
             </div>
           )}
 
           <div className="rok-rewards">
-            <strong>Rewards</strong>
+            <strong>First Completion Rewards</strong>
             <div className="rok-reward-row">
-              <span>🪙 10 Coins</span>
-              <span>✨ 50 EXP</span>
+              {rewardClaimed ? <span>Already claimed</span> : <><span>🪙 10 Coins</span><span>✦ 50 XP</span></>}
             </div>
           </div>
         </div>

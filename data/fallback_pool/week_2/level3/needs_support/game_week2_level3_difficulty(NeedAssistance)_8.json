@@ -11,8 +11,8 @@
     "Combo multiplier",
     "Ghost replay of best run"
   ],
-  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 8: {'width': 9, 'height': 10}; {'width': 11, 'height': 2}.",
-  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 5, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
@@ -63,9 +63,53 @@
   "source_lose_condition": "forge_heat drops to 0, or lives reach 0, before the 50-second timer ends.",
   "source_game_title": "Type Cast Forge – Lava Tube Tunnel Defense",
   "source_primary_mechanic": "Type Cast Forge",
-  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "source_time_limit_seconds": 50,
   "learning_objective_id": "cp1_w2_l3",
   "source_week": 2,
-  "source_level": 3
+  "source_level": 3,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 3,
+        "source_week": 2,
+        "source_level": 3,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l3",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -5,
+          5
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "ac03d12af8f4f37d5a0780d6ac1256109a447dc2e77ee03d9a746de67cb6edf5",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "54b45734e9d802e44e7e3882d41262b6938533feed6544c422bced7abe51c067",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794199498.876777,
+    "origin": "ollama",
+    "job_id": "c68d50f878476eb4d0e4385a011f1b557ce5cbeb69b9e251d6a852090a9e9e12",
+    "replaces_revision": "66070135945c43f74ece39ba9dd4dd5c46b77cc167a569db00a80fd168a478c6"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-11-09T04:44:58.876776+00:00"
 }

@@ -8,9 +8,9 @@
   "level": 8,
   "trial": 6,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · Portability",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Portability",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l8",
   "source_level": 8,
   "source_week": 4,
-  "primary_mechanic": "Door Defense",
-  "objective": "Archive variation 6: classify and verify C history, characteristics and language categories for Portability.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 51,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 6: Find 5 artifacts, read the evidence, and verify three findings about Portability.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 2154766406,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 2154766406,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Portability",
   "source_primary_mechanic": "Door Defense",
-  "source_code_snippet": "while door_health > 0 and timer < 51:\n    player.push()"
+  "source_code_snippet": "while door_health > 0 and timer < 51:\n    player.push()",
+  "archive_evidence": [
+    {
+      "id": "history_8_6",
+      "era": "Explicit casts",
+      "history": "Conversions became more explicit as C programmers encountered problems in code that freely mixed pointers with integers.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "book"
+    },
+    {
+      "id": "history_4_9",
+      "era": "Storage in a C program",
+      "history": "Automatic and static storage gave C code different lifetimes for its data. Library allocation offered another option when a program needed more control.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "book"
+    },
+    {
+      "id": "lesson_8_1",
+      "era": "What moves between systems",
+      "history": "Portability concerns moving source between environments. Different type limits or implementation choices can affect behavior. Check documented limits and avoid undocumented assumptions.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_8_2",
+      "era": "Test on the intended target",
+      "history": "A program can compile on two implementations and still behave differently. Tests on both targets can expose a difference that the compiler alone cannot detect.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_8_3",
+      "era": "A standard and an extension",
+      "history": "Use documented standard facilities when the same code must work in several environments. Isolate platform-specific features so they can be reviewed and adapted.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

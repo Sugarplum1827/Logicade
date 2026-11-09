@@ -9,7 +9,7 @@
   "trial": 6,
   "difficulty": "Standard",
   "mode": "tetris",
-  "title": "Flowchart Workshop – Odd numbers, sum, and count",
+  "title": "Flowchart Lab · Rectangle area",
   "display_name": "Flowchart Block Puzzle",
   "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
   "topic": "Flowchart Symbols and Control Flow",
@@ -49,12 +49,12 @@
   "source_level": 2,
   "source_week": 1,
   "primary_mechanic": "Drag-and-drop flowchart construction",
-  "objective": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1.",
+  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 10, 5; test inputs [{'width': 15, 'height': 5}, {'width': 3, 'height': 6}, {'width': 15, 'height': 7}, {'width': 3, 'height': 8}, {'width': 10, 'height': 10}, {'width': 10, 'height': 5}].",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
-  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 3,
-  "seed": 1082492734,
+  "seed": 12345,
   "layout": {
     "interaction": "flowchart_drag_drop",
     "columns": 12,
@@ -63,77 +63,41 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_6",
+    "scenario_id": "flowchart_2",
     "source_level": null,
-    "title": "Odd numbers, sum, and count",
-    "prompt": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1.",
+    "title": "Rectangle area",
+    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 10, 5; test inputs [{'width': 15, 'height': 5}, {'width': 3, 'height': 6}, {'width': 15, 'height': 7}, {'width': 3, 'height': 8}, {'width': 10, 'height': 10}, {'width': 10, 'height': 5}].",
     "entry": "start",
     "slots": [
       {
         "id": "start",
         "x": 0.5,
-        "y": 0.06,
+        "y": 0.08,
         "number": 1
       },
       {
         "id": "read",
         "x": 0.5,
-        "y": 0.19,
+        "y": 0.29,
         "number": 2
       },
       {
-        "id": "initial",
+        "id": "calculate",
         "x": 0.5,
-        "y": 0.32,
+        "y": 0.5,
         "number": 3
       },
       {
-        "id": "decide",
+        "id": "write",
         "x": 0.5,
-        "y": 0.46,
+        "y": 0.71,
         "number": 4
       },
       {
-        "id": "write",
-        "x": 0.23,
-        "y": 0.6,
-        "number": 5
-      },
-      {
-        "id": "sum",
-        "x": 0.23,
-        "y": 0.72,
-        "number": 6
-      },
-      {
-        "id": "count",
-        "x": 0.23,
-        "y": 0.84,
-        "number": 7
-      },
-      {
-        "id": "increase",
-        "x": 0.23,
-        "y": 0.96,
-        "number": 8
-      },
-      {
-        "id": "total",
-        "x": 0.78,
-        "y": 0.6,
-        "number": 9
-      },
-      {
-        "id": "amount",
-        "x": 0.78,
-        "y": 0.77,
-        "number": 10
-      },
-      {
         "id": "end",
-        "x": 0.78,
-        "y": 0.94,
-        "number": 11
+        "x": 0.5,
+        "y": 0.9199999999999999,
+        "number": 5
       }
     ],
     "edges": [
@@ -143,177 +107,18 @@
       },
       {
         "from": "read",
-        "to": "initial"
+        "to": "calculate"
       },
       {
-        "from": "initial",
-        "to": "decide"
+        "from": "calculate",
+        "to": "write"
       },
       {
         "from": "write",
-        "to": "sum"
-      },
-      {
-        "from": "sum",
-        "to": "count"
-      },
-      {
-        "from": "count",
-        "to": "increase"
-      },
-      {
-        "from": "total",
-        "to": "amount"
-      },
-      {
-        "from": "amount",
         "to": "end"
-      },
-      {
-        "from": "decide",
-        "to": "write",
-        "label": "Yes"
-      },
-      {
-        "from": "decide",
-        "to": "total",
-        "label": "No"
-      },
-      {
-        "from": "increase",
-        "to": "decide",
-        "label": "Loop",
-        "via": [
-          [
-            0.06,
-            0.96
-          ],
-          [
-            0.06,
-            0.46
-          ]
-        ]
       }
     ],
     "pieces": [
-      {
-        "id": "sum",
-        "label": "sum = sum + i",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "sum",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "sum"
-                  },
-                  {
-                    "var": "i"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "initial",
-        "label": "sum = 0; count = 0; i = 1",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "sum",
-              "value": 0
-            },
-            {
-              "name": "count",
-              "value": 0
-            },
-            {
-              "name": "i",
-              "value": 1
-            }
-          ]
-        }
-      },
-      {
-        "id": "write",
-        "label": "Write i",
-        "kind": "output",
-        "action": {
-          "value": {
-            "var": "i"
-          }
-        }
-      },
-      {
-        "id": "end",
-        "label": "End",
-        "kind": "end",
-        "action": {}
-      },
-      {
-        "id": "increase",
-        "label": "i = i + 2",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "i",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "i"
-                  },
-                  2
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "count",
-        "label": "count = count + 1",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "count",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "count"
-                  },
-                  1
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "start",
-        "label": "Start",
-        "kind": "start",
-        "action": {}
-      },
-      {
-        "id": "read",
-        "label": "Read n",
-        "kind": "input",
-        "action": {
-          "names": [
-            "n"
-          ]
-        }
-      },
       {
         "id": "decoy_reset",
         "label": "Reset result to 0",
@@ -328,40 +133,58 @@
         }
       },
       {
-        "id": "total",
-        "label": "Write sum",
-        "kind": "output",
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "read",
+        "label": "Read width, height",
+        "kind": "input",
         "action": {
-          "value": {
-            "var": "sum"
-          }
+          "names": [
+            "width",
+            "height"
+          ]
         }
       },
       {
-        "id": "decide",
-        "label": "i < n?",
-        "kind": "decision",
+        "id": "calculate",
+        "label": "area = width × height",
+        "kind": "process",
         "action": {
-          "test": {
-            "op": "<",
-            "args": [
-              {
-                "var": "i"
-              },
-              {
-                "var": "n"
+          "values": [
+            {
+              "name": "area",
+              "value": {
+                "op": "*",
+                "args": [
+                  {
+                    "var": "width"
+                  },
+                  {
+                    "var": "height"
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       },
       {
-        "id": "amount",
-        "label": "Write count",
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "write",
+        "label": "Write area",
         "kind": "output",
         "action": {
           "value": {
-            "var": "count"
+            "var": "area"
           }
         }
       }
@@ -369,78 +192,69 @@
     "solution": {
       "start": "start",
       "read": "read",
-      "initial": "initial",
-      "decide": "decide",
+      "calculate": "calculate",
       "write": "write",
-      "sum": "sum",
-      "count": "count",
-      "increase": "increase",
-      "total": "total",
-      "amount": "amount",
       "end": "end"
     },
     "cases": [
       {
         "id": "case_1",
         "inputs": {
-          "n": 0
+          "width": 15,
+          "height": 5
         },
         "expected": [
-          0,
-          0
+          75
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "n": 1
+          "width": 3,
+          "height": 6
         },
         "expected": [
-          0,
-          0
+          18
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "n": 2
+          "width": 15,
+          "height": 7
         },
         "expected": [
-          1,
-          1,
-          1
+          105
         ]
       },
       {
         "id": "case_4",
         "inputs": {
-          "n": 9
+          "width": 3,
+          "height": 8
         },
         "expected": [
-          1,
-          3,
-          5,
-          7,
-          16,
-          4
+          24
         ]
       },
       {
         "id": "case_5",
         "inputs": {
-          "n": 16
+          "width": 10,
+          "height": 10
         },
         "expected": [
-          1,
-          3,
-          5,
-          7,
-          9,
-          11,
-          13,
-          15,
-          64,
-          8
+          100
+        ]
+      },
+      {
+        "id": "case_6",
+        "inputs": {
+          "width": 10,
+          "height": 5
+        },
+        "expected": [
+          50
         ]
       }
     ],
@@ -461,62 +275,75 @@
     {
       "id": "start",
       "kind": "flowchart_node",
-      "prompt": "Build position 1 in the requested chart."
+      "prompt": "Build position 1."
     },
     {
       "id": "read",
       "kind": "flowchart_node",
-      "prompt": "Build position 2 in the requested chart."
+      "prompt": "Build position 2."
     },
     {
-      "id": "initial",
+      "id": "calculate",
       "kind": "flowchart_node",
-      "prompt": "Build position 3 in the requested chart."
-    },
-    {
-      "id": "decide",
-      "kind": "flowchart_node",
-      "prompt": "Build position 4 in the requested chart."
+      "prompt": "Build position 3."
     },
     {
       "id": "write",
       "kind": "flowchart_node",
-      "prompt": "Build position 5 in the requested chart."
-    },
-    {
-      "id": "sum",
-      "kind": "flowchart_node",
-      "prompt": "Build position 6 in the requested chart."
-    },
-    {
-      "id": "count",
-      "kind": "flowchart_node",
-      "prompt": "Build position 7 in the requested chart."
-    },
-    {
-      "id": "increase",
-      "kind": "flowchart_node",
-      "prompt": "Build position 8 in the requested chart."
-    },
-    {
-      "id": "total",
-      "kind": "flowchart_node",
-      "prompt": "Build position 9 in the requested chart."
-    },
-    {
-      "id": "amount",
-      "kind": "flowchart_node",
-      "prompt": "Build position 10 in the requested chart."
+      "prompt": "Build position 4."
     },
     {
       "id": "end",
       "kind": "flowchart_node",
-      "prompt": "Build position 11 in the requested chart."
+      "prompt": "Build position 5."
     }
   ],
   "source_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_6.json",
   "source_topic": "Orientation",
   "source_learning_alignment": "CP1 Week 1: Controls and mission practice",
   "source_primary_mechanic": "Variable Crates",
-  "source_code_snippet": "crate_a = 5\ncrate_b = crate_a + 2"
+  "source_code_snippet": "crate_a = 5\ncrate_b = crate_a + 2",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 10,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -3,
+          15,
+          3
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "78cc179fb682945a420b018d1710c2d9d66b4b83219f4e8d0b9c4435a179ee41",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "91f20f08feb1b702fc94ba4527f0a093d13c6096dce82908fbcac088bb04be99",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 6,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793872073.5838094,
+    "origin": "ollama",
+    "job_id": "87a6597e212845467b9716cba734733fb8b4e710e804164c55d68805b4831721",
+    "replaces_revision": "56b4a559598bfd1615ea3d315806ced13370fc896c5caf9dd85dd8d0847cc2d7"
+  }
 }

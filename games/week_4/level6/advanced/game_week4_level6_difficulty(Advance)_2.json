@@ -8,9 +8,9 @@
   "level": 6,
   "trial": 2,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · Imperative operations",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Imperative operations",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Lantern Crossing: a rope bridge over a pit",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l6",
   "source_level": 6,
   "source_week": 4,
-  "primary_mechanic": "Guess Until Right",
-  "objective": "Archive variation 2: classify and verify C history, characteristics and language categories for Imperative operations.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 36,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 2: Find 5 artifacts, read the evidence, and verify three findings about Imperative operations.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 3543890367,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 3543890367,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Imperative operations",
   "source_primary_mechanic": "Guess Until Right",
-  "source_code_snippet": "while guess != secret:\n    guess = next_guess()"
+  "source_code_snippet": "while guess != secret:\n    guess = next_guess()",
+  "archive_evidence": [
+    {
+      "id": "history_6_2",
+      "era": "Compound assignment changes",
+      "history": "Early C wrote the add-and-assign operator as =+. The spelling was later changed to +=.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "compiler"
+    },
+    {
+      "id": "history_5_5",
+      "era": "Breaking up a larger program",
+      "history": "C developed separate compilation, so parts of a program could be translated in separate files and linked for use together.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "compiler"
+    },
+    {
+      "id": "lesson_6_1",
+      "era": "Instructions and state",
+      "history": "Imperative code gives instructions that can change program state. An assignment stores a new value. Later instructions read the state left by the earlier ones.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_6_4",
+      "era": "Two kinds of expression",
+      "history": "An assignment changes the value stored in a variable. An equality test compares two values and can guide what instruction happens next.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_6_2",
+      "era": "Trace a changing count",
+      "history": "If count starts at 2, count = count + 1 stores 3. A print after that assignment reads 3.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

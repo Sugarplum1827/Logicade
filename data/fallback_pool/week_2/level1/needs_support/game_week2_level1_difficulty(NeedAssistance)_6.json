@@ -11,8 +11,8 @@
     "Power-up crates for perfect rounds",
     "Live variable watch panel"
   ],
-  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 6: {'a': 6, 'b': 8}; {'a': 0, 'b': 12}.",
-  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Problem values 15, 5; test inputs [{'a': -15, 'b': 5}, {'a': -5, 'b': 6}, {'a': 0, 'b': 7}, {'a': 15, 'b': 15}, {'a': -15, 'b': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
@@ -63,9 +63,53 @@
   "source_lose_condition": "power_on drops to 0, or lives reach 0, before the 42-second timer ends.",
   "source_game_title": "Boolean Circuit – Charred Forest Defense",
   "source_primary_mechanic": "Boolean Circuit",
-  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "source_time_limit_seconds": 42,
   "learning_objective_id": "cp1_w2_l1",
   "source_week": 2,
-  "source_level": 1
+  "source_level": 1,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 1,
+        "source_week": 2,
+        "source_level": 1,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l1",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -5,
+          0
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "8b9c3c0241282205e846a22eff4d9751fc2dab4e780d30ab5e087c23228b4ced",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "969801b5880c9afa70b83c2ba631a9d000fb0f8ad0d80911d61e3cdd6ceaa994",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794198040.8266683,
+    "origin": "ollama",
+    "job_id": "586a083a6a25dcb6257e65e1d2b4005cdd676b02f06b230a6fb541a0ed2a146d",
+    "replaces_revision": "2ea72becb5e58de340953fbe8ff533d087e89e23e6897840d78a5b8cc4d8b548"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-11-09T04:20:40.826668+00:00"
 }

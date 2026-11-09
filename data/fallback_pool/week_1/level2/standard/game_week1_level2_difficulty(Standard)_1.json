@@ -1,6 +1,6 @@
 {
   "file_id": "game_0041",
-  "game_title": "Flowchart Workshop – Add two numbers",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
   "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Archery Yard: the garrison archery yard",
@@ -11,8 +11,8 @@
     "Power-up crates for perfect rounds",
     "Limited undo button"
   ],
-  "player_objective": "Build a flowchart that reads a and b, adds them, and displays their sum.",
-  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 10, 'height': 5}, {'width': 0, 'height': 6}, {'width': 10, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
   "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Standard",
@@ -63,5 +63,50 @@
   "source_game_title": "Rename Rush – Archery Yard Trial",
   "learning_objective_id": "cp1_w1_l2",
   "source_week": 1,
-  "source_level": 2
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          0,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "42c61bf1b25c98fa798eb1c312c9223ca8152eb3c44861e787c0cb12f868ba21",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "3a7fe089a67ad8d0739246d084b878a362c92fb1329c880a49b603faa9f1a075",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793352741.001805,
+    "origin": "ollama",
+    "job_id": "ec24066cde76046cd14a938af1a091a389f79b61dc015e52687dd7c0281844bf",
+    "replaces_revision": "cf45658a32f52bdf1ed6ff62604efb0a9f05bab942081f317b603acd0e5a716f"
+  },
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "is_fallback": false,
+  "generated_at": "2026-10-30T09:32:21.001805+00:00"
 }

@@ -1,6 +1,6 @@
 {
   "file_id": "game_2618",
-  "game_title": "Flowchart Lab · Sum from 1 to n",
+  "game_title": "Flowchart Lab · Ship surplus stock",
   "game_concept": "A survival strategy set in Sand Dunes – Cactus Flats, flats of tall cacti: the sand ranger must handle dust devils while practicing debugging & combined skills. Core idea – Refactor Rescue: Clean up messy duplicated code into tidy functions without changing its behavior.",
   "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Cactus Flats: flats of tall cacti",
@@ -11,7 +11,7 @@
     "Hint tokens that reveal one line of code",
     "Checkpoint flags"
   ],
-  "player_objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 8: {'n': 0}; {'n': 13}.",
+  "player_objective": "Read stock and capacity. If stock exceeds capacity, send 10 units per surplus crate. Otherwise send 0. Shipment plan 8 uses capacity 18.",
   "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",

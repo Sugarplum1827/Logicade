@@ -9,7 +9,7 @@
   "trial": 8,
   "difficulty": "Standard",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Sum from 1 to n",
+  "title": "Flowchart Workshop – Ship surplus stock",
   "display_name": "Logic Circuit Workshop",
   "theme": "Sand Dunes – Dry Well: a nearly dry well",
   "topic": "Examination Practice: Weeks 2–8",
@@ -64,7 +64,7 @@
   "source_level": 10,
   "source_week": 2,
   "primary_mechanic": "adventure construction and execution",
-  "objective": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 8: {'n': 0}; {'n': 13}.",
+  "objective": "Read stock and capacity. If stock exceeds capacity, send 10 units per surplus crate. Otherwise send 0. Shipment plan 8 uses capacity 18.",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
   "time_limit_seconds": 0,
@@ -87,59 +87,47 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_8",
+    "scenario_id": "surplus_shipment",
     "source_level": 10,
-    "title": "Sum from 1 to n",
-    "prompt": "Read n. Add all whole numbers from 1 through n, then display the total. For n = 0, display 0. Test dataset 8: {'n': 0}; {'n': 13}.",
+    "title": "Ship surplus stock",
+    "prompt": "Read stock and capacity. If stock exceeds capacity, send 10 units per surplus crate. Otherwise send 0. Shipment plan 8 uses capacity 18.",
     "entry": "start",
     "slots": [
       {
         "id": "start",
         "x": 0.5,
-        "y": 0.06,
+        "y": 0.08,
         "number": 1
       },
       {
         "id": "read",
         "x": 0.5,
-        "y": 0.23,
+        "y": 0.27,
         "number": 2
-      },
-      {
-        "id": "initial",
-        "x": 0.5,
-        "y": 0.4,
-        "number": 3
       },
       {
         "id": "decide",
         "x": 0.5,
-        "y": 0.57,
+        "y": 0.47,
+        "number": 3
+      },
+      {
+        "id": "yes",
+        "x": 0.76,
+        "y": 0.68,
         "number": 4
       },
       {
-        "id": "work",
-        "x": 0.76,
-        "y": 0.76,
+        "id": "no",
+        "x": 0.24,
+        "y": 0.68,
         "number": 5
       },
       {
-        "id": "increase",
-        "x": 0.76,
-        "y": 0.94,
-        "number": 6
-      },
-      {
-        "id": "total",
-        "x": 0.21999999999999997,
-        "y": 0.76,
-        "number": 7
-      },
-      {
         "id": "end",
-        "x": 0.21999999999999997,
-        "y": 0.94,
-        "number": 8
+        "x": 0.5,
+        "y": 0.9,
+        "number": 6
       }
     ],
     "edges": [
@@ -149,99 +137,35 @@
       },
       {
         "from": "read",
-        "to": "initial"
-      },
-      {
-        "from": "initial",
         "to": "decide"
       },
       {
-        "from": "work",
-        "to": "increase"
-      },
-      {
         "from": "decide",
-        "to": "work",
+        "to": "yes",
         "label": "Yes"
       },
       {
-        "from": "increase",
-        "to": "decide",
-        "label": "Loop",
-        "via": [
-          [
-            0.94,
-            0.94
-          ],
-          [
-            0.94,
-            0.57
-          ]
-        ]
-      },
-      {
         "from": "decide",
-        "to": "total",
+        "to": "no",
         "label": "No"
       },
       {
-        "from": "total",
+        "from": "yes",
+        "to": "end"
+      },
+      {
+        "from": "no",
         "to": "end"
       }
     ],
     "pieces": [
       {
-        "id": "work",
-        "label": "total = total + i",
-        "kind": "process",
+        "id": "no",
+        "label": "Send 0",
+        "kind": "output",
         "action": {
-          "values": [
-            {
-              "name": "total",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "total"
-                  },
-                  {
-                    "var": "i"
-                  }
-                ]
-              }
-            }
-          ]
+          "value": 0
         }
-      },
-      {
-        "id": "decide",
-        "label": "i ≤ n?",
-        "kind": "decision",
-        "action": {
-          "test": {
-            "op": "<=",
-            "args": [
-              {
-                "var": "i"
-              },
-              {
-                "var": "n"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "id": "end",
-        "label": "End",
-        "kind": "end",
-        "action": {}
-      },
-      {
-        "id": "start",
-        "label": "Start",
-        "kind": "start",
-        "action": {}
       },
       {
         "id": "decoy_reset",
@@ -257,60 +181,67 @@
         }
       },
       {
-        "id": "initial",
-        "label": "i = 1; total = 0",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "i",
-              "value": 1
-            },
-            {
-              "name": "total",
-              "value": 0
-            }
-          ]
-        }
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
       },
       {
         "id": "read",
-        "label": "Read n",
+        "label": "Read stock, capacity",
         "kind": "input",
         "action": {
           "names": [
-            "n"
+            "stock",
+            "capacity"
           ]
         }
       },
       {
-        "id": "increase",
-        "label": "i = i + 1",
-        "kind": "process",
+        "id": "decide",
+        "label": "stock > capacity?",
+        "kind": "decision",
         "action": {
-          "values": [
-            {
-              "name": "i",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "i"
-                  },
-                  1
-                ]
+          "test": {
+            "op": ">",
+            "args": [
+              {
+                "var": "stock"
+              },
+              {
+                "var": "capacity"
               }
-            }
-          ]
+            ]
+          }
         }
       },
       {
-        "id": "total",
-        "label": "Write total",
+        "id": "yes",
+        "label": "Send (stock − capacity) × 10",
         "kind": "output",
         "action": {
           "value": {
-            "var": "total"
+            "op": "*",
+            "args": [
+              {
+                "op": "-",
+                "args": [
+                  {
+                    "var": "stock"
+                  },
+                  {
+                    "var": "capacity"
+                  }
+                ]
+              },
+              10
+            ]
           }
         }
       }
@@ -318,18 +249,17 @@
     "solution": {
       "start": "start",
       "read": "read",
-      "initial": "initial",
       "decide": "decide",
-      "work": "work",
-      "increase": "increase",
-      "total": "total",
+      "yes": "yes",
+      "no": "no",
       "end": "end"
     },
     "cases": [
       {
         "id": "case_1",
         "inputs": {
-          "n": 0
+          "stock": 17,
+          "capacity": 18
         },
         "expected": [
           0
@@ -338,28 +268,21 @@
       {
         "id": "case_2",
         "inputs": {
-          "n": 1
+          "stock": 18,
+          "capacity": 18
         },
         "expected": [
-          1
+          0
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "n": 10
+          "stock": 26,
+          "capacity": 18
         },
         "expected": [
-          55
-        ]
-      },
-      {
-        "id": "case_4",
-        "inputs": {
-          "n": 13
-        },
-        "expected": [
-          91
+          80
         ]
       }
     ],
@@ -386,34 +309,24 @@
       "prompt": "Build position 2 in the requested chart."
     },
     {
-      "id": "initial",
+      "id": "decide",
       "kind": "flowchart_node",
       "prompt": "Build position 3 in the requested chart."
     },
     {
-      "id": "decide",
+      "id": "yes",
       "kind": "flowchart_node",
       "prompt": "Build position 4 in the requested chart."
     },
     {
-      "id": "work",
+      "id": "no",
       "kind": "flowchart_node",
       "prompt": "Build position 5 in the requested chart."
     },
     {
-      "id": "increase",
-      "kind": "flowchart_node",
-      "prompt": "Build position 6 in the requested chart."
-    },
-    {
-      "id": "total",
-      "kind": "flowchart_node",
-      "prompt": "Build position 7 in the requested chart."
-    },
-    {
       "id": "end",
       "kind": "flowchart_node",
-      "prompt": "Build position 8 in the requested chart."
+      "prompt": "Build position 6 in the requested chart."
     }
   ],
   "source_path": "week_9/level8/standard/game_week9_level8_difficulty(Standard)_8.json",

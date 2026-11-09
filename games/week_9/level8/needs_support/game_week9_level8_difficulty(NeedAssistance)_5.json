@@ -9,7 +9,7 @@
   "trial": 5,
   "difficulty": "Need Assistance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Trace a loop",
+  "title": "Flowchart Workshop – Ship surplus stock",
   "display_name": "Logic Circuit Workshop",
   "theme": "Sand Dunes – Caravan Camp: a caravan camp",
   "topic": "Examination Practice: Weeks 2–8",
@@ -64,7 +64,7 @@
   "source_level": 10,
   "source_week": 2,
   "primary_mechanic": "adventure construction and execution",
-  "objective": "Print every even number from 20 through 38. Trace the update by 2 and the final failed condition. Test dataset 5: {}; {}.",
+  "objective": "Read stock and capacity. If stock exceeds capacity, send 7 units per surplus crate. Otherwise send 0. Shipment plan 5 uses capacity 15.",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
   "time_limit_seconds": 0,
@@ -87,107 +87,100 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_5",
+    "scenario_id": "surplus_shipment",
     "source_level": 10,
-    "title": "Trace a loop",
-    "prompt": "Print every even number from 20 through 38. Trace the update by 2 and the final failed condition. Test dataset 5: {}; {}.",
+    "title": "Ship surplus stock",
+    "prompt": "Read stock and capacity. If stock exceeds capacity, send 7 units per surplus crate. Otherwise send 0. Shipment plan 5 uses capacity 15.",
     "entry": "start",
     "slots": [
       {
         "id": "start",
         "x": 0.5,
-        "y": 0.06,
+        "y": 0.08,
         "number": 1
       },
       {
-        "id": "initial",
+        "id": "read",
         "x": 0.5,
-        "y": 0.236,
+        "y": 0.27,
         "number": 2
-      },
-      {
-        "id": "write",
-        "x": 0.5,
-        "y": 0.412,
-        "number": 3
-      },
-      {
-        "id": "increase",
-        "x": 0.5,
-        "y": 0.5880000000000001,
-        "number": 4
       },
       {
         "id": "decide",
         "x": 0.5,
-        "y": 0.764,
+        "y": 0.47,
+        "number": 3
+      },
+      {
+        "id": "yes",
+        "x": 0.24,
+        "y": 0.68,
+        "number": 4
+      },
+      {
+        "id": "no",
+        "x": 0.76,
+        "y": 0.68,
         "number": 5
       },
       {
         "id": "end",
         "x": 0.5,
-        "y": 0.9400000000000002,
+        "y": 0.9,
         "number": 6
       }
     ],
     "edges": [
       {
         "from": "start",
-        "to": "initial"
+        "to": "read"
       },
       {
-        "from": "initial",
-        "to": "write"
-      },
-      {
-        "from": "write",
-        "to": "increase"
-      },
-      {
-        "from": "increase",
+        "from": "read",
         "to": "decide"
       },
       {
         "from": "decide",
-        "to": "write",
-        "label": "Yes",
-        "via": [
-          [
-            0.86,
-            0.77
-          ],
-          [
-            0.86,
-            0.412
-          ]
-        ]
+        "to": "yes",
+        "label": "Yes"
       },
       {
         "from": "decide",
-        "to": "end",
+        "to": "no",
         "label": "No"
+      },
+      {
+        "from": "yes",
+        "to": "end"
+      },
+      {
+        "from": "no",
+        "to": "end"
       }
     ],
     "pieces": [
       {
-        "id": "increase",
-        "label": "i = i + 2",
-        "kind": "process",
+        "id": "yes",
+        "label": "Send (stock − capacity) × 7",
+        "kind": "output",
         "action": {
-          "values": [
-            {
-              "name": "i",
-              "value": {
-                "op": "+",
+          "value": {
+            "op": "*",
+            "args": [
+              {
+                "op": "-",
                 "args": [
                   {
-                    "var": "i"
+                    "var": "stock"
                   },
-                  2
+                  {
+                    "var": "capacity"
+                  }
                 ]
-              }
-            }
-          ]
+              },
+              7
+            ]
+          }
         }
       },
       {
@@ -197,32 +190,22 @@
         "action": {}
       },
       {
-        "id": "initial",
-        "label": "i = 20",
-        "kind": "process",
+        "id": "read",
+        "label": "Read stock, capacity",
+        "kind": "input",
         "action": {
-          "values": [
-            {
-              "name": "i",
-              "value": 20
-            }
+          "names": [
+            "stock",
+            "capacity"
           ]
         }
       },
       {
-        "id": "decide",
-        "label": "i ≤ 38?",
-        "kind": "decision",
+        "id": "no",
+        "label": "Send 0",
+        "kind": "output",
         "action": {
-          "test": {
-            "op": "<=",
-            "args": [
-              {
-                "var": "i"
-              },
-              38
-            ]
-          }
+          "value": 0
         }
       },
       {
@@ -232,39 +215,61 @@
         "action": {}
       },
       {
-        "id": "write",
-        "label": "Write i",
-        "kind": "output",
+        "id": "decide",
+        "label": "stock > capacity?",
+        "kind": "decision",
         "action": {
-          "value": {
-            "var": "i"
+          "test": {
+            "op": ">",
+            "args": [
+              {
+                "var": "stock"
+              },
+              {
+                "var": "capacity"
+              }
+            ]
           }
         }
       }
     ],
     "solution": {
       "start": "start",
-      "initial": "initial",
-      "write": "write",
-      "increase": "increase",
+      "read": "read",
       "decide": "decide",
+      "yes": "yes",
+      "no": "no",
       "end": "end"
     },
     "cases": [
       {
         "id": "case_1",
-        "inputs": {},
+        "inputs": {
+          "stock": 14,
+          "capacity": 15
+        },
         "expected": [
-          20,
-          22,
-          24,
-          26,
-          28,
-          30,
-          32,
-          34,
-          36,
-          38
+          0
+        ]
+      },
+      {
+        "id": "case_2",
+        "inputs": {
+          "stock": 15,
+          "capacity": 15
+        },
+        "expected": [
+          0
+        ]
+      },
+      {
+        "id": "case_3",
+        "inputs": {
+          "stock": 20,
+          "capacity": 15
+        },
+        "expected": [
+          35
         ]
       }
     ],
@@ -286,22 +291,22 @@
       "prompt": "Build position 1 in the requested chart."
     },
     {
-      "id": "initial",
+      "id": "read",
       "kind": "flowchart_node",
       "prompt": "Build position 2 in the requested chart."
     },
     {
-      "id": "write",
+      "id": "decide",
       "kind": "flowchart_node",
       "prompt": "Build position 3 in the requested chart."
     },
     {
-      "id": "increase",
+      "id": "yes",
       "kind": "flowchart_node",
       "prompt": "Build position 4 in the requested chart."
     },
     {
-      "id": "decide",
+      "id": "no",
       "kind": "flowchart_node",
       "prompt": "Build position 5 in the requested chart."
     },

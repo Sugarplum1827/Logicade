@@ -45,15 +45,17 @@
         pre.scrollTop=area.scrollTop;pre.scrollLeft=area.scrollLeft;
       }
       area.addEventListener('scroll',()=>{pre.scrollTop=area.scrollTop;pre.scrollLeft=area.scrollLeft;});
-      area.oninput=()=>{if(state.done)return;state.programs[i]=area.value;state.playing=false;state.result=null;state.frames=[];state.at=-1;state.recorded=false;
+      area.oninput=()=>{if(state.done)return;study?.present();state.programs[i]=area.value;state.playing=false;state.result=null;state.frames=[];state.at=-1;state.recorded=false;
         post('checkpoint_saved',{payload:{mission_id:m.mission_id,terminal_network_version:2,language:'c',solution:{programs:state.programs.slice()}}});say('C program changed. Run or Step to test the connected network.');render();};
       highlight();return {card,pre,area,fields,highlight,portLabel,variables};
     });
     const footer=make('footer',null,shell,'network-footer'),controls=make('nav',null,footer);controls.setAttribute('aria-label','Network execution controls');
     const feedback=make('p','Program all nodes, then Run. Step follows one cycle through the connected network.',footer,'network-feedback');feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
     function say(text){feedback.textContent=text;}
-    function begin(){if(!state.started){state.started=performance.now();state.last=state.started;post('game_started',{game_id:game.file_id,variation_id:game.variation_id,terminal_network_version:2,language:'c'});}}
-    function prepare(){begin();state.result=model.check(m,{programs:state.programs});state.frames=state.result.frames;state.at=-1;state.recorded=false;state.carry=0;results.replaceChildren();
+    const study = globalThis.LogiCadeStudyTelemetry;
+    function begin(){if(!state.started){state.started=performance.now();state.last=state.started;study?.start();study?.present();post('game_started',{game_id:game.file_id,variation_id:game.variation_id,terminal_network_version:2,language:'c'});}}
+    function prepare(){begin();const responseMs=study?.takeResponseTime();state.result=model.check(m,{programs:state.programs});state.frames=state.result.frames;state.at=-1;state.recorded=false;state.carry=0;results.replaceChildren();
+      study?.submit(post, 'activity', m.mission_id, state.result.passed === true, responseMs);
       post('custom',{event_type:'program_execution_started',payload:{family:'terminal',mission_id:m.mission_id,terminal_network_version:2,language:'c',node_count:m.nodes.length}});
       say('Executing connected nodes. White = executed; gray READ/WRITE = waiting.');
     }
@@ -63,13 +65,13 @@
       for(const test of r.checks){make('p',`${test.passed?'PASS':'FAIL'} ${test.id}${test.error?' · '+test.error:''}`,results);
         post('question_answered',{entity_id:test.id,payload:{question_id:test.id,correct:test.passed,attempt_number:state.checks,answer_type:'connected_node_execution'}});}
       post('custom',{event_type:'program_execution_checked',payload:{mission_id:m.mission_id,family:'terminal',correct:r.correct,total:r.total,terminal_network_version:2,language:'c',node_count:m.nodes.length}});
-      if(r.passed)finish(true,'program_goals_verified');else{state.lives--;say('Check failed. '+(r.error||'Output differs from the target. Revise the highlighted nodes and try again.'));if(!state.lives)finish(false,'program_checks_exhausted');}render();
+      if(r.passed)finish(true,'program_goals_verified');else{study?.present();state.lives--;say('Check failed. '+(r.error||'Output differs from the target. Revise the highlighted nodes and try again.'));if(!state.lives)finish(false,'program_checks_exhausted');}render();
     }
     function finish(won,reason){state.done=true;state.playing=false;cards.forEach(c=>c.area.disabled=true);if(won){say('All streams verified. Every C node forwarded data. Mission complete.');post('activity_completed',{entity_id:m.mission_id,payload:{won,family:'terminal',terminal_network_version:2,language:'c'}});}
-      post('game_over',{won,reason,score:won?100:Math.round(state.correct/Math.max(1,state.tested)*100),accuracy:state.correct/Math.max(1,state.tested),answered:state.tested,correct:state.correct,error_count:state.tested-state.correct,hint_count:state.hints,duration_sec:state.elapsed,formal_assessment:false,accuracy_basis:'program_execution_goals'});
+      post('game_over',{won,reason,score:won?100:Math.round(state.correct/Math.max(1,state.tested)*100),accuracy:state.correct/Math.max(1,state.tested),answered:state.tested,correct:state.correct,error_count:state.tested-state.correct,hint_count:state.hints,duration_sec:state.elapsed,active_play_ms:study?.activePlayMs(),formal_assessment:false,accuracy_basis:'program_execution_goals'});
     }
     function play(speed){if(state.hostPaused||state.done)return;state.speed=speed;if(!state.result||state.recorded)prepare();state.playing=true;if(!state.frames.length)complete();}
-    button('Stop',controls,()=>{if(state.done)return;state.playing=false;state.frames=[];state.at=-1;state.result=null;state.recorded=false;state.carry=0;results.replaceChildren();say('Simulation reset. Node programs and previous checks are retained.');render();});
+    button('Stop',controls,()=>{if(state.done)return;study?.present();state.playing=false;state.frames=[];state.at=-1;state.result=null;state.recorded=false;state.carry=0;results.replaceChildren();say('Simulation reset. Node programs and previous checks are retained.');render();});
     button('Pause',controls,()=>{if(state.done)return;state.playing=false;say('Execution paused. Run or Step to continue from this cycle.');});
     button('Run',controls,()=>play(20));button('Fast',controls,()=>play(200));
     button('Step',controls,()=>{if(state.done||state.hostPaused)return;state.playing=false;if(!state.result||state.recorded)prepare();advance();});

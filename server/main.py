@@ -46,6 +46,7 @@ from .generated_games import discover_games, description_for_level, get_game as 
 from .game_packages import PackageError, cleanup_expired_packages, prepare_package, release_package
 from .opencode_packages import PACKAGE_RUNTIME as OPENCODE_PACKAGE_RUNTIME, compile_generated_package
 from .canvas_games import PACKAGE_RUNTIME as CANVAS_PACKAGE_RUNTIME, compile_canvas_package, describe_canvas_game, discover_canvas_games, find_canvas_game, course_lesson
+from .study_telemetry import validate_research_metrics, validate_session_checkpoint, validate_submission
 from .difficulty_engine import DIFFICULTIES, next_difficulty
 from .stage_difficulty import StageDifficulty, RULE_VERSION as STAGE_RULE_VERSION
 from .sync_validation import PRIMARY_KEYS, validate_sync_ownership
@@ -192,7 +193,7 @@ class ResetPoolsRequest(BaseModel):
 
 
 class SyncBatchRequest(BaseModel):
-    table: Literal["students", "levels", "level_attempts", "events", "coin_transactions", "difficulty_decisions"]
+    table: Literal["students", "levels", "level_attempts", "events", "coin_transactions", "difficulty_decisions", "learner_sessions"]
     rows: list[dict] = Field(min_length=1, max_length=50)
 
 
@@ -1132,6 +1133,7 @@ async def sync_batch(req: SyncBatchRequest, authorization: str | None = Header(d
             "started_at", "ended_at", "status", "restart_count",
             "question_retry_count", "origin", "template_id", "template_version",
             "variation_id", "variation_seed",
+            "research_metrics",
         },
         "events": {
             "event_id", "level_id", "attempt_id", "student_id", "event_type",
@@ -1146,6 +1148,7 @@ async def sync_batch(req: SyncBatchRequest, authorization: str | None = Header(d
             "difficulty_before", "difficulty_selected", "difficulty_served",
             "inputs", "rule_version", "reason", "decided_at", "created_at",
         },
+        "learner_sessions": {"session_id", "student_id", "started_at", "duration_ms", "active_ms", "inactive_ms"},
     }
     for row in req.rows:
         if not isinstance(row, dict) or set(row) - allowed[req.table]:
@@ -1160,6 +1163,7 @@ async def sync_batch(req: SyncBatchRequest, authorization: str | None = Header(d
             ):
                 raise HTTPException(status_code=422, detail="Level stage number must be an integer from 1 to 10")
         elif req.table == "level_attempts":
+            validate_research_metrics(row.get('research_metrics'))
             if row.get("status") is None:
                 row["status"] = "completed" if row.get("completed") is True else "failed"
             for field in ("score", "accuracy"):
@@ -1190,26 +1194,29 @@ async def sync_batch(req: SyncBatchRequest, authorization: str | None = Header(d
             if not isinstance(row.get("event_type"), str) or not 1 <= len(row["event_type"]) <= 100 \
                     or not isinstance(row.get("payload", {}), dict):
                 raise HTTPException(status_code=422, detail="Gameplay event type or payload is invalid")
+            if row['event_type'] == 'scored_submission':
+                validate_submission(row.get('payload', {}))
             elapsed = row.get("t_ms_since_start")
             if isinstance(elapsed, bool) or not isinstance(elapsed, int) or not 0 <= elapsed <= 2_147_483_647:
                 raise HTTPException(status_code=422, detail="Gameplay event elapsed time is invalid")
+        elif req.table == "learner_sessions":
+            validate_session_checkpoint(row)
     if req.table == "coin_transactions":
         await _apply_coin_rows(base_url, service_key, req.rows)
         return {"ok": True, "table": req.table, "stored": len(req.rows)}
 
-    conflict = {"students": "student_id", "levels": "level_id", "level_attempts": "attempt_id",
-                "events": "event_id", "coin_transactions": "transaction_id",
-                "difficulty_decisions": "decision_id"}[req.table]
+    conflict = PRIMARY_KEYS.get(req.table, "student_id")
     url = f"{base_url}/rest/v1/{req.table}?on_conflict={conflict}"
     # Retried outbox jobs can carry the same primary ID more than once. Send
     # one row per ID so PostgreSQL never updates one conflict twice in a batch.
     primary = PRIMARY_KEYS.get(req.table, "student_id")
-    rows_to_store = list({str(row.get(primary)): dict(row) for row in req.rows}.values())
+    candidates = sorted(req.rows, key=lambda row: row['duration_ms']) if req.table == 'learner_sessions' else req.rows
+    rows_to_store = list({str(row.get(primary)): dict(row) for row in candidates}.values())
     headers = {
         "apikey": service_key,
         "Authorization": f"Bearer {service_key}",
         "Content-Type": "application/json",
-        "Prefer": "resolution=" + ("merge-duplicates" if req.table == "difficulty_decisions" else "ignore-duplicates") + ",return=minimal",
+        "Prefer": "resolution=" + ("merge-duplicates" if req.table in {"difficulty_decisions", "learner_sessions"} else "ignore-duplicates") + ",return=minimal",
     }
     import httpx
     try:
@@ -1290,7 +1297,7 @@ async def sync_batch(req: SyncBatchRequest, authorization: str | None = Header(d
                     parent_rows = [{"student_id": student_id} for student_id in student_ids]
                     parent_response = await client.post(
                         f"{base_url}/rest/v1/students?on_conflict=student_id",
-                        headers=headers,
+                        headers={**headers, "Prefer": "resolution=ignore-duplicates,return=minimal"},
                         json=parent_rows,
                     )
                     if not parent_response.is_success:
@@ -1954,9 +1961,11 @@ def _export_filters(dataset: str, date_from: str | None, date_to: str | None,
                     include_incomplete: bool) -> tuple[dict, dict]:
     from datetime import date, timedelta
     date_fields = {"participants": "created_at", "levels": "generated_at", "attempts": "started_at",
-                   "events": "created_at", "coins": "created_at", "difficulty": "decided_at", "audit": "created_at"}
+                   "events": "created_at", "coins": "created_at", "difficulty": "decided_at", "audit": "created_at",
+                   "research_attempts": "started_at", "learner_sessions": "started_at"}
+    attempt_export = dataset in {"attempts", "research_attempts"}
     filters: dict[str, str] = {}
-    applied: dict = {"include_incomplete": include_incomplete} if dataset == "attempts" else {}
+    applied: dict = {"include_incomplete": include_incomplete} if attempt_export else {}
     try:
         start = date.fromisoformat(date_from) if date_from else None
         end = date.fromisoformat(date_to) if date_to else None
@@ -1984,7 +1993,7 @@ def _export_filters(dataset: str, date_from: str | None, date_to: str | None,
     if week is not None:
         if isinstance(week, bool) or not isinstance(week, int) or not 1 <= week <= 9:
             raise HTTPException(status_code=422, detail="Study week must be between 1 and 9")
-        field = "current_week" if dataset == "participants" else "week" if dataset in {"levels", "weekly", "mechanics"} else None
+        field = "current_week" if dataset == "participants" else "week" if dataset in {"levels", "weekly", "mechanics", "research_attempts", "research_stages"} else None
         if field is None:
             raise HTTPException(status_code=422, detail=f"Week filtering is unavailable for the {dataset} dataset; clear that filter")
         filters[field] = f"eq.{week}"
@@ -1992,7 +2001,7 @@ def _export_filters(dataset: str, date_from: str | None, date_to: str | None,
     if difficulty:
         if difficulty not in DIFFICULTIES:
             raise HTTPException(status_code=422, detail="Unsupported export difficulty")
-        field = {"levels": "difficulty_served", "difficulty": "difficulty_selected"}.get(dataset)
+        field = {"levels": "difficulty_served", "research_attempts": "difficulty_served", "difficulty": "difficulty_selected"}.get(dataset)
         if field is None:
             raise HTTPException(status_code=422, detail=f"Difficulty filtering is unavailable for the {dataset} dataset; clear that filter")
         filters[field] = f"eq.{difficulty}"
@@ -2004,7 +2013,7 @@ def _export_filters(dataset: str, date_from: str | None, date_to: str | None,
             raise HTTPException(status_code=422, detail=f"Stratum filtering is unavailable for the {dataset} dataset; clear that filter")
         filters["stratum"] = f"eq.{stratum}"
         applied["stratum"] = stratum
-    if not include_incomplete and dataset == "attempts":
+    if not include_incomplete and attempt_export:
         filters["status"] = "not.in.(incomplete,abandoned,restarted)"
     return filters, applied
 
@@ -2120,6 +2129,10 @@ async def admin_export_document(
         "participants": ("v_admin_participants", "created_at.desc,student_id.asc"),
         "levels": ("levels", "generated_at.desc,level_id.asc"),
         "attempts": ("level_attempts", "started_at.desc,attempt_id.asc"),
+        "research_attempts": ("v_admin_research_attempts", "started_at.desc,attempt_id.asc"),
+        "research_stages": ("v_admin_research_stages", "week.asc,stage_number.asc,student_id.asc"),
+        "topic_mastery": ("v_admin_topic_mastery", "objective_id.asc,student_id.asc"),
+        "learner_sessions": ("learner_sessions", "started_at.desc,session_id.asc"),
         "events": ("events", "created_at.desc,event_id.asc"),
         "coins": ("coin_transactions", "created_at.desc,transaction_id.asc"),
         "difficulty": ("difficulty_decisions", "decided_at.desc,decision_id.asc"),

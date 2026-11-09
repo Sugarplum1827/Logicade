@@ -8,9 +8,9 @@
   "level": 7,
   "trial": 10,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · Compilation",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Compilation",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Crystal Grotto: a grotto of glowing crystals",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l7",
   "source_level": 7,
   "source_week": 4,
-  "primary_mechanic": "Sentinel Loop",
-  "objective": "Archive variation 10: classify and verify C history, characteristics and language categories for Compilation.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 48,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 10: Find 5 artifacts, read the evidence, and verify three findings about Compilation.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 3660828116,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 3660828116,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Compilation",
   "source_primary_mechanic": "Sentinel Loop",
-  "source_code_snippet": "while answer != 'quit':\n    answer = input()"
+  "source_code_snippet": "while answer != 'quit':\n    answer = input()",
+  "archive_evidence": [
+    {
+      "id": "history_7_10",
+      "era": "Warnings about suspicious code",
+      "history": "Johnson's lint reused compiler analysis to flag suspicious constructs across files. Code can compile and still need testing against its requirements.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "compiler"
+    },
+    {
+      "id": "history_6_3",
+      "era": "Prefix and postfix",
+      "history": "Thompson added increment and decrement operators in B. Prefix and postfix distinguish which value an expression uses when it updates its operand.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "b-notes"
+    },
+    {
+      "id": "lesson_7_1",
+      "era": "Source, translation and tests",
+      "history": "C is normally compiled. Write the source, translate it and link it as needed, then run the resulting program. Tests check whether its behavior matches the goal after compilation succeeds.",
+      "source": "GNU Compiler Collection Manual, Overall Options"
+    },
+    {
+      "id": "lesson_7_3",
+      "era": "When the output is wrong",
+      "history": "If a compiled program prints the wrong total, check its operations and test values. Accepting the source does not check that total for you.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_7_4",
+      "era": "A clean build and a test run",
+      "history": "Treat build diagnostics and program output as different clues. A successful build and a correct result are separate milestones.",
+      "source": "GNU Compiler Collection Manual, Overall Options"
+    }
+  ]
 }

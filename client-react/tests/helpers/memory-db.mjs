@@ -46,6 +46,10 @@ export function memoryDatabase(initial = {}) {
           return {
             get: (key) => request(() => structuredClone(data[name].get(key))),
             getAll: () => request(() => db.rows(name)),
+            delete: (key) => request(() => {
+              if (mode !== 'readwrite') throw new Error('Read-only transaction');
+              data[name].delete(key);
+            }),
             put: (row) => request(() => {
               if (mode !== 'readwrite') throw new Error('Read-only transaction');
               const key = row[keyPaths[name]];

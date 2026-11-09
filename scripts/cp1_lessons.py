@@ -21,13 +21,18 @@ def lesson_for(week, level):
     row = next(w for w in course['weeks'] if w['week'] == origin)
     target = source_level(week, level)
     stage = row['stages'][target - 1]
+    capstone = course.get('exam_capstone', {})
+    cumulative = week == 9 and level == capstone.get('stage')
+    if cumulative:
+        row = next(w for w in course['weeks'] if w['week'] == week)
+        stage = row['stages'][level - 1]
     return {**row['lesson'], 'week': week, 'source_week': origin, 'source_level': target,
-            'objective_id': f'cp1_w{origin}_l{target}',
+            'objective_id': capstone['objective_id'] if cumulative else f'cp1_w{origin}_l{target}',
             'title': row['title'], 'stage_title': stage,
             'objectives': [stage], 'points': [stage, *row['lesson']['points']],
             'sources': [course['sources'][key] for key in row['source_ids']],
             'assessment_kind': 'examination_practice' if week == 9 else 'lesson_practice',
-            'coverage': [origin], 'exam_coverage': list(range(2,9)) if week==9 else [],
+            'coverage': capstone['coverage'] if cumulative else [origin], 'exam_coverage': list(range(2,9)) if week==9 else [],
             'formal_assessment': False}
 
 

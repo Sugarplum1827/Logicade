@@ -8,9 +8,9 @@
   "level": 10,
   "trial": 7,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · History/classification review",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · History/classification review",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Whispering Corridor: a whispering corridor",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l10",
   "source_level": 10,
   "source_week": 4,
-  "primary_mechanic": "Doubling Growth",
-  "objective": "Archive variation 7: classify and verify C history, characteristics and language categories for History/classification review.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 46,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 7: Find 5 artifacts, read the evidence, and verify three findings about History/classification review.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 228693290,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 228693290,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: History/classification review",
   "source_primary_mechanic": "Doubling Growth",
-  "source_code_snippet": "while size < goal:\n    size *= 2"
+  "source_code_snippet": "while size < goal:\n    size *= 2",
+  "archive_evidence": [
+    {
+      "id": "history_10_7",
+      "era": "A lesson from changing machines",
+      "history": "The effort to move Unix and its programs to the Interdata machine highlighted assumptions about integers, pointers and the surrounding system.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "history_9_10",
+      "era": "Different meanings of correct",
+      "history": "A compiler can accept an instruction that computes the wrong value. A developer still has to verify the program's behavior with tests.",
+      "source": "GNU Compiler Collection Manual, Overall Options",
+      "art": "compiler"
+    },
+    {
+      "id": "lesson_5_1",
+      "era": "Procedural organization",
+      "history": "C supports procedural programming. Functions organize ordered steps that can be called and reused. Procedural and object-oriented describe distinct ways of organizing a program.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_5_3",
+      "era": "Follow the call",
+      "history": "A call runs a function's instructions. A function with a return value can pass a result back so the caller can use it.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_5_4",
+      "era": "A small function",
+      "history": "A function that computes a subtotal can be called from several places. Changing the calculation in that function updates every use of it.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

@@ -13,7 +13,7 @@ from pathlib import Path
 
 PACKAGE_RUNTIME = "logicade_canvas_game_v2"
 COURSE_PATH = Path(__file__).resolve().parent.parent / "data" / "curriculum.json"
-GAME_MODES = {"welcome_video", "tetris", "circuit", "terminal", "pending", "factory", "dungeon"}
+GAME_MODES = {"welcome_video", "tetris", "circuit", "terminal", "pending", "hidden_archive", "factory", "dungeon"}
 C_NETWORK_CONTROLS = "Write a C main function in every connected node. Use readPort(direction) and writePort(direction, value) from logicade.h. Run or Step highlights C statements and transferred values. Compare the final output with every target stream."
 
 
@@ -73,7 +73,7 @@ class CanvasGame:
             "level": self.level,
             "difficulty": self.difficulty,
             "mode": self.slug,
-            "mechanic_family": self.config.get('programming', {}).get('family', self.slug),
+            "mechanic_family": self.config.get('programming', {}).get('family', 'archive' if self.slug == 'hidden_archive' else self.slug),
             "mission_schema_version": self.config.get('programming', {}).get('version'),
             "control_flow_type": self.config.get('programming', {}).get('controller', {}).get('required_kind'),
             "map_features": self.config.get('programming', {}).get('map_features'),
@@ -97,12 +97,25 @@ def valid_objective_binding(config: dict, course: dict) -> bool:
         target = int(course['exam_level_blueprint'][str(level)]) if week == 9 else min(level,2) if week == 1 else level
         row = next(row for row in course['weeks'] if row['week'] == origin)
         identity = f'cp1_w{origin}_l{target}'
+        stage_title = row['stages'][target-1]
+        capstone = course.get('exam_capstone', {})
+        if week == 9 and level == capstone.get('stage'):
+            identity = capstone['objective_id']
+            stage_title = next(row for row in course['weeks'] if row['week'] == 9)['stages'][level-1]
+            if (config['mode'] != 'dungeon'
+                    or config['programming']['capstone']['coverage'] != capstone['coverage']
+                    or config['lesson']['coverage'] != capstone['coverage']):
+                return False
+        if (week, level) == (9, 3) and config['mode'] != 'hidden_archive':
+            return False
+        if (week, level) == (9, 8) and config['flowchart']['scenario_id'] != 'surplus_shipment':
+            return False
         lesson = config['lesson']
         if not (config['curriculum_version'] == course['version']
                 and config['source_week'] == origin and config['source_level'] == target
                 and config['learning_objective_id'] == identity
                 and lesson['objective_id'] == identity and lesson['source_level'] == target
-                and lesson['source_week'] == origin and lesson['stage_title'] == row['stages'][target-1]):
+                and lesson['source_week'] == origin and lesson['stage_title'] == stage_title):
             return False
         if config.get('programming'):
             return config['programming']['objective_id'] == identity and config['programming']['source_level'] == target
@@ -130,6 +143,8 @@ def discover_canvas_games(root: Path) -> dict[str, list[CanvasGame]]:
                 continue
             if (config.get("schema_version") != 2 or mode not in GAME_MODES or not file_id
                     or not isinstance(config.get("tasks"), list) or not config["tasks"]
+                    or (mode == 'hidden_archive' and (config.get('source_week') != 4 or len(config['tasks']) != 3
+                        or config.get('layout', {}).get('clues') != 5 or len(config.get('archive_evidence', [])) != 5))
                     or (mode == "tetris" and (not isinstance(config.get("flowchart"), dict)
                         or not config["flowchart"].get("pieces") or not config["flowchart"].get("cases")))
                     or (mode=='circuit' and not (
@@ -167,6 +182,7 @@ def describe_canvas_game(game: CanvasGame, spec: dict) -> dict:
     lesson = course_lesson(game.week)
     settings = spec.get("game_settings") if isinstance(spec.get("game_settings"), dict) else {}
     task_count = len(game.config.get("tasks", []))
+    hidden_archive = game.slug == 'hidden_archive'
     return {
         **game.public_info(),
         "title": str(spec.get("game_title") or game.display_name),
@@ -178,17 +194,20 @@ def describe_canvas_game(game: CanvasGame, spec: dict) -> dict:
         "curriculum_version": game.config.get('curriculum_version') or lesson.get("curriculum_version"),
         "learning_objectives": game.config.get("learning_objectives", lesson.get("objectives", [])),
         "objective": str(game.config.get("objective") or lesson.get("mechanic") or "Complete the CP1 stations."),
-        "win_condition": ("The executed design satisfies every input/output and world-state goal." if game.config.get('programming') else "Watch the LogiCade prologue to completion." if game.slug == "welcome_video"
+        "win_condition": ("Pass the flowchart, trace, history and source checks, then verify the C program and reach the beacon." if game.config.get('programming', {}).get('capstone') else
+                          "The executed design satisfies every input/output and world-state goal." if game.config.get('programming') else "Watch the LogiCade prologue to completion." if game.slug == "welcome_video"
                           else "Build and check a chart that produces the required outputs for every example input." if game.config.get('flowchart')
+                          else f"Recover all {game.config['layout']['clues']} artifacts and correctly answer all {task_count} evidence checks." if hidden_archive
                           else f"Answer all {task_count} CP1 programming stations correctly."),
         "lose_condition": ("The available unsuccessful execution checks are exhausted; programs are bounded by the mission's execution limits." if game.config.get('programming') else "The prologue can be resumed by selecting Stage 1 again." if game.slug == "welcome_video"
                            else "The run ends after the available unsuccessful chart checks are used." if game.config.get('flowchart')
+                           else "The case ends when the available incorrect evidence checks are exhausted." if hidden_archive
                            else "The run ends when its configured timer expires or no lives remain."),
         "hint": str(game.config.get("hint") or "Trace the programming rule and compare each choice with the station goal."),
         "controls": {"summary": (C_NETWORK_CONTROLS
                                   if game.config.get('programming',{}).get('family')=='terminal' else game.config.get("controls")),
                      "pause": None if game.slug == "welcome_video" else "Escape",
-                     "answers": None if game.config.get('programming') or game.slug in {"welcome_video", "tetris"} else "1–4 or click"},
+                     "answers": None if game.config.get('programming') or game.slug in {"welcome_video", "tetris", "hidden_archive"} else "1–4 or click"},
         "time_limit_seconds": int(settings.get("time_limit_seconds") or 0),
         "formal_assessment": False,
         "accuracy_basis": "program_execution_goals" if game.config.get('programming') else "orientation_completion" if game.slug=='welcome_video' else "flowchart_execution_cases" if game.config.get('flowchart') else "question_answers",
@@ -247,7 +266,7 @@ def compile_canvas_package(*, source_json: Path, pool_root: Path, runtime_root: 
         "week": game.week,
         "level": game.level,
         "difficulty": game.difficulty,
-        "asset_source": "/vendor/kenney/",
+        "asset_source": "/canvas-runtime/assets/archive/" if game.slug == "hidden_archive" else "/vendor/kenney/",
     }
     json_bytes = lambda value: (json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     output = io.BytesIO()

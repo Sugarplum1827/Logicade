@@ -6,6 +6,29 @@
 // the spec came from the LLM pool, the manifest, or a fallback template.
 
 window.LogiCadeWrite = (function () {
+  function summarizeSubmissions(events) {
+    const targets = { question: new Set(), activity: new Set() };
+    const retries = { question: 0, activity: 0 };
+    let scored = 0;
+    let correct = 0;
+    let timed = 0;
+    let responseMs = 0;
+    for (const { event_type: type, payload } of events) {
+      if (type !== 'scored_submission' || !payload) continue;
+      const { kind, target, correct: passed, response_ms: elapsed } = payload;
+      if (!['question', 'activity'].includes(kind) || typeof target !== 'string' || !target || typeof passed !== 'boolean') continue;
+      if (targets[kind].has(target)) retries[kind]++;
+      targets[kind].add(target);
+      scored++;
+      if (passed) correct++;
+      if (Number.isInteger(elapsed) && elapsed >= 0 && elapsed <= 86400000) {
+        timed++;
+        responseMs += elapsed;
+      }
+    }
+    return { scored, correct, timed, responseMs, questionRetries: retries.question, activityRetries: retries.activity };
+  }
+
   async function ensureStudent(studentId) {
     const db = await LogiCadeDB.openDB();
     const existing = await new Promise((resolve, reject) => {
@@ -349,6 +372,8 @@ window.LogiCadeWrite = (function () {
   }) {
     const eventSnapshot = window.Telemetry?.snapshot?.() || [];
     const session = window.Telemetry?.session?.() || {};
+    const learnerSession = window.LogiCadeStudySession?.snapshotFor(studentId);
+    if (learnerSession) window.LogiCadeStudySession.checkpoint();
     const runAttemptId = attemptId || (session.studentId === studentId && session.levelId === levelId ? session.attemptId : null) || crypto.randomUUID();
     const levelRow = await ensureLevel({ studentId, levelId, week, difficulty, stageNumber, spec, meta });
     const db = await LogiCadeDB.openDB();
@@ -385,6 +410,20 @@ window.LogiCadeWrite = (function () {
     const attemptStatus = ['completed', 'failed', 'incomplete', 'abandoned', 'restarted'].includes(status)
       ? status
       : (won ? 'completed' : 'failed');
+    const submissions = summarizeSubmissions(eventSnapshot);
+    const outcome = eventSnapshot.findLast((event) => ['level_win', 'level_lose'].includes(event.event_type))?.payload;
+    const researchMetrics = {
+      session_id: learnerSession?.session_id ?? null,
+      session_duration_ms: learnerSession?.duration_ms ?? null,
+      session_inactive_ms: learnerSession?.inactive_ms ?? null,
+      objective_id: template.learning_objective_id || null,
+      scored_submissions: submissions.scored || null,
+      correct_submissions: submissions.scored ? submissions.correct : null,
+      response_sample_count: submissions.timed || null,
+      response_total_ms: submissions.timed ? submissions.responseMs : null,
+      active_play_ms: outcome?.active_play_ms ?? null,
+      accuracy_basis: outcome?.accuracy_basis ?? null,
+    };
 
     const attempt = {
       attempt_id: runAttemptId,
@@ -395,14 +434,15 @@ window.LogiCadeWrite = (function () {
       score: normalizedScore,
       accuracy: normalizedAccuracy,
       in_activity_attempts: 1,
-      error_count: errorCount ?? 0,
+      error_count: submissions.scored ? submissions.scored - submissions.correct : (errorCount ?? 0),
       completion_time_sec: completionTimeSec ?? 0,
       hint_count: hintCount ?? 0,
-      activity_retries: 0,
+      activity_retries: submissions.activityRetries,
       completed: attemptStatus === 'completed' && !!won,
       status: attemptStatus,
       restart_count: attemptStatus === 'restarted' ? 1 : 0,
-      question_retry_count: 0,
+      question_retry_count: submissions.questionRetries,
+      research_metrics: researchMetrics,
       origin: navigator.onLine ? 'online' : 'offline',
       template_id: template.template_id || null,
       template_version: template.template_version || null,

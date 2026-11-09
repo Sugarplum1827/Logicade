@@ -20,7 +20,7 @@ window.LogiCadeSync = (function () {
     const DEAD_RECOVERY_REVISION = 'logicade_sync_dead_recovery_v3';
 
     // Tables in dependency order — parents must sync before children
-    const TABLE_ORDER = ['students', 'levels', 'level_attempts', 'events', 'coin_transactions', 'difficulty_decisions'];
+    const TABLE_ORDER = ['students', 'levels', 'level_attempts', 'events', 'coin_transactions', 'difficulty_decisions', 'learner_sessions'];
 
     let draining = false;
     let activeDrain = null;
@@ -374,7 +374,9 @@ window.LogiCadeSync = (function () {
     async function _updateJob(db, job) {
         return new Promise((resolve, reject) => {
             const tx = db.transaction('sync_queue', 'readwrite');
-            tx.objectStore('sync_queue').put(job);
+            const store = tx.objectStore('sync_queue');
+            if (job.table === 'learner_sessions' && job.status === 'done') store.delete(job.job_id);
+            else store.put(job);
             tx.oncomplete = resolve;
             tx.onerror = () => reject(tx.error);
         });

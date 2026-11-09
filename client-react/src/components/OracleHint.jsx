@@ -2,10 +2,10 @@ export default function OracleHint({ hint, voiceBlocked, onPlayVoice, onClose })
 
   return (
     <div className="oracle-hint-overlay" role="dialog" aria-modal="true" aria-labelledby="oracle-hint-title">
-      <section className="oracle-hint-card">
+      <section className="oracle-hint-card realm-paper">
         <img src="/assets/oracle/oracle_frame_01.png" alt="Oracle" className="oracle-hint-portrait" />
         <div className="oracle-hint-message">
-          <p className="oracle-hint-label">ORACLE / GUIDANCE</p>
+          <p className="oracle-hint-label realm-plaque">Oracle · Guidance</p>
           <h2 id="oracle-hint-title">A hint for this challenge</h2>
           <p className="oracle-hint-text">{hint}</p>
           {voiceBlocked && <p className="oracle-hint-audio-note" role="status">Voice playback was blocked. Use Play Oracle Voice to hear it.</p>}

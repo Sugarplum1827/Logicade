@@ -364,7 +364,36 @@
     const checks=[{id:'collectibles',passed:gems.size===m.gems.length},{id:'exit',passed:x===m.exit[0]&&y===m.exit[1]},
       {id:'variable_trace',passed:equal(result.outputs,m.expected_watch)},
       {id:'file_scope_state',passed:equal(result.globals,m.expected_globals||{})}];
+    if (m.capstone) {
+      const {name, local_type: localType} = m.capstone.scope;
+      const localReport = result.trace.find(frame => frame.outputs.length === 1);
+      const globalReport = result.trace.find(frame => frame.outputs.length === 2);
+      checks.push({id:'typed_shadow_and_restoration', passed:Boolean(
+        localReport?.types[name] === localType && localReport.locals[name] === m.expected_watch[0]
+        && globalReport?.types[name] === 'int' && !Object.hasOwn(globalReport.locals, name)
+        && globalReport.globals[name] === m.expected_globals[name] && result.types[name] === 'int'
+      )});
+    }
     return {outputs:result.outputs,frames,checks,passed:checks.every(c=>c.passed),error:checks.filter(c=>!c.passed).map(c=>c.id).join(', ')};
+  }
+  function expeditionChecks(m, solution) {
+    const expedition = m.capstone;
+    const chart = solution.chart || {};
+    const model = globalThis.LogiCadeFlowchartModel;
+    const flow = model.check(expedition.flowchart, chart);
+    const trace = model.runCase(expedition.flowchart, chart, expedition.trace_case);
+    const checks = [
+      {id:'shipment_flowchart',passed:flow.passed,error:flow.passed?null:'Build a chart that passes the surplus, boundary and below-capacity cases.'},
+      {id:'algorithm_trace',passed:trace.passed && solution.trace_value === trace.outputs[0],error:'Predict the shipment for the additional input.'},
+      {id:'c_history',passed:solution.history_choice === expedition.history.answer_index,error:'Read the archive record and select the finding it supports.'},
+    ];
+    try {
+      globalThis.LogiCadeC.sourceCheck(m.source_exercise,solution.source_order,solution.c_categories);
+      checks.push({id:'c_source_components',passed:true});
+    } catch (error) {
+      checks.push({id:'c_source_components',passed:false,error:error.message});
+    }
+    return checks.map(check => check.passed ? {...check, error:null} : check);
   }
   function check(m,solution){
     try{
@@ -385,8 +414,12 @@
       }
       if(m.family==='adventure')assert(Array.isArray(m.map)&&m.map.length>0&&m.map.length<=50&&m.map.every(row=>typeof row==='string'&&row.length>0&&row.length<=50)&&Array.isArray(m.gems)&&m.gems.length<=20,'Invalid adventure map.');
       if(m.family==='factory'||m.family==='adventure'){
+        const preparation = m.capstone ? expeditionChecks(m, solution) : [];
+        const failed = preparation.find(check => !check.passed);
+        if (failed) return {passed:false,checks:preparation,total:preparation.length,correct:preparation.filter(c=>c.passed).length,frames:[],error:failed.error};
+        if (m.capstone) assert(typeof solution.program === 'string' && solution.program.split('\n').length <= m.rules.max_lines, 'Expedition program exceeds its line limit.');
         const r=m.family==='factory'?factory(m,solution):adventure(m,solution.program);
-        const checks=r.checks||[{id:'production_contract',passed:r.passed}];
+        const checks=[...preparation,...(r.checks||[{id:'production_contract',passed:r.passed}])];
         return {...r,checks,total:checks.length,correct:checks.filter(x=>x.passed).length};
       }
       const checks=[],frames=[];

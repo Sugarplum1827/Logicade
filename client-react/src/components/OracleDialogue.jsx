@@ -5,6 +5,7 @@ export default function OracleDialogue({ step, title, text, onNext }) {
   const shown = typing.text === text ? typing.shown : 0;
   const [voiceBlocked, setVoiceBlocked] = useState(false);
   const audioRef = useRef(null);
+  const dialogueRef = useRef(null);
 
   const playVoice = () => {
     const audio = audioRef.current;
@@ -13,7 +14,10 @@ export default function OracleDialogue({ step, title, text, onNext }) {
     audio.play().then(() => setVoiceBlocked(false)).catch(() => setVoiceBlocked(true));
   };
 
-  useEffect(() => { playVoice(); }, [step]);
+  useEffect(() => {
+    playVoice();
+    dialogueRef.current.focus();
+  }, [step]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -37,14 +41,17 @@ export default function OracleDialogue({ step, title, text, onNext }) {
   };
 
   return (
-    <div className="oracle-dialogue-shade">
+    <div className="oracle-dialogue-shade" onClick={(event) => {
+      if (event.target === event.currentTarget) clickToContinue();
+    }}>
       <audio ref={audioRef} src="/assets/oracles_voice.mp3" preload="auto" />
       <section
-        className="oracle-dialogue"
+        className="oracle-dialogue realm-paper"
+        ref={dialogueRef}
         role="dialog"
         aria-modal="true"
-        aria-labelledby="oracle-dialogue-title"
-        aria-label="Oracle dialogue. Click to continue."
+        aria-labelledby="oracle-dialogue-speaker"
+        aria-describedby="oracle-dialogue-title"
         tabIndex={0}
         onClick={clickToContinue}
         onKeyDown={(event) => {
@@ -56,12 +63,12 @@ export default function OracleDialogue({ step, title, text, onNext }) {
       >
         <img className="oracle-dialogue-character" src="/assets/oracle/oracle_frame_01.png" alt="Oracle" />
         <div className="oracle-dialogue-copy">
-          <p className="oracle-dialogue-speaker">ORACLE / {title}</p>
+          <p id="oracle-dialogue-speaker" className="oracle-dialogue-speaker realm-plaque"><strong>Oracle</strong><span>{title}</span></p>
           <h2 id="oracle-dialogue-title" className="oracle-dialogue-text">
             {text.slice(0, shown)}{shown < text.length && <span className="oracle-dialogue-caret" aria-hidden="true">▌</span>}
           </h2>
           <div className="oracle-dialogue-footer">
-            <small className="oracle-dialogue-caption">Click anywhere to continue</small>
+            <small className="oracle-dialogue-caption">Click anywhere to {shown < text.length ? 'skip' : step === 5 ? 'close' : 'continue'} <span aria-hidden="true">▸</span></small>
           </div>
         </div>
       </section>

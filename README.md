@@ -22,6 +22,10 @@ LogiCade is a data-driven programming-learning game. React manages the player jo
 
 ## Local development
 
+For a clean Windows school PC, use **dist/LogiCade School Server Setup.exe** and the [school-server guide](deployment/school-server/SCHOOL_SERVER_GUIDE.md). It includes the production web app, game definitions and assets, installs its Python/Node runtime in Docker, creates a fresh private study database, and provides a temporary Cloudflare demo link. It excludes this laptop's credentials, participant records and trained/synthetic ML data. The school host needs internet, administrator authorization, WSL virtualization and possibly a reboot. This deployment uses a separate container project and loopback port 18000; it does not replace the development Supabase stack. Rebuild the transferable installer with `python scripts/build_school_server_installer.py`.
+
+On Windows, double-click **Start LogiCade.exe** in the project root. It starts Docker Desktop if needed, waits for the Docker engine, starts local Supabase, checks local Ollama, and opens the React app after Vite and FastAPI are ready. Keep the launcher window open while using its development servers. Closing it stops only the development processes it started. Use **Open logs** for startup diagnostics.
+
 1. Install the Python dependencies from `requirements.txt` and the frontend dependencies in `client-react/`.
 2. Start the local Supabase stack with `supabase start` and copy its local API URL, anon key, and service-role key into `.env`. The service-role key stays on the server; browser writes go through FastAPI.
 3. Apply pending migrations to the existing local database with `supabase migration up --local`. This applies migrations without resetting local data.

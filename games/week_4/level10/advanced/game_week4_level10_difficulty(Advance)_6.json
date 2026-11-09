@@ -8,9 +8,9 @@
   "level": 10,
   "trial": 6,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · History/classification review",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · History/classification review",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Spider Den: a webbed spider den",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l10",
   "source_level": 10,
   "source_week": 4,
-  "primary_mechanic": "Continue Gate",
-  "objective": "Archive variation 6: classify and verify C history, characteristics and language categories for History/classification review.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 46,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 6: Find 5 artifacts, read the evidence, and verify three findings about History/classification review.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 2146848227,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 2146848227,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: History/classification review",
   "source_primary_mechanic": "Continue Gate",
-  "source_code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue"
+  "source_code_snippet": "while i < 10:\n    i += 1\n    if bad(i):\n        continue",
+  "archive_evidence": [
+    {
+      "id": "history_10_6",
+      "era": "A check beyond the compiler",
+      "history": "The lint tool used knowledge of C to flag legal but suspicious code, particularly when programs were divided among files.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "compiler"
+    },
+    {
+      "id": "history_9_9",
+      "era": "Classification and capability",
+      "history": "General-purpose describes the variety of tasks C can express. Procedural and imperative describe ways its programs organize and perform work.",
+      "source": "GNU C Language Introduction and Reference Manual",
+      "art": "book"
+    },
+    {
+      "id": "lesson_4_1",
+      "era": "A language for many tasks",
+      "history": "General-purpose means a language can express work across different domains. C can handle a calculation or a systems procedure. Running the same program on a new system still takes care.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_5_1",
+      "era": "Procedural organization",
+      "history": "C supports procedural programming. Functions organize ordered steps that can be called and reused. Procedural and object-oriented describe distinct ways of organizing a program.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_4_2",
+      "era": "From totals to files",
+      "history": "A program can calculate a total and another program can process a file. Both can use the same C statements, functions and data types.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

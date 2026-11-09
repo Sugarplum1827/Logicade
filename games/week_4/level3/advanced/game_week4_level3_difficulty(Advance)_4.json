@@ -8,9 +8,9 @@
   "level": 3,
   "trial": 4,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · B and Unix",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · B and Unix",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Crystal Grotto: a grotto of glowing crystals",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l3",
   "source_level": 3,
   "source_week": 4,
-  "primary_mechanic": "Loop Counter Conveyor",
-  "objective": "Archive variation 4: classify and verify C history, characteristics and language categories for B and Unix.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 29,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 4: Find 5 artifacts, read the evidence, and verify three findings about B and Unix.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 225425054,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 225425054,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: B and Unix",
   "source_primary_mechanic": "Loop Counter Conveyor",
-  "source_code_snippet": "while i < 5:\n    i += 1"
+  "source_code_snippet": "while i < 5:\n    i += 1",
+  "archive_evidence": [
+    {
+      "id": "history_3_4",
+      "era": "The original Unix assembler",
+      "history": "The earliest Unix implementation was written in PDP-7 assembly. A higher-level implementation became practical as C developed.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "unix"
+    },
+    {
+      "id": "history_2_7",
+      "era": "Patent documents as a practical test",
+      "history": "Bell Labs' patent department tried early Unix for document preparation. The work helped the team demonstrate the system's value.",
+      "source": "Dennis Ritchie, The Evolution of the Unix Time-sharing System",
+      "art": "unix"
+    },
+    {
+      "id": "lesson_3_1",
+      "era": "Predecessor and operating system",
+      "history": "B was the immediate language predecessor of C. Unix was the operating system whose development helped shape C.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_3_3",
+      "era": "Why Unix used C",
+      "history": "Using a higher-level language helped the team express systems logic. Later ports exposed the assumptions that had to change for new machines.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_3_4",
+      "era": "Tools in context",
+      "history": "On Unix, an editor, a compiler and a shell can each do different work. C can be used to implement those tools or the system on which they run.",
+      "source": "Dennis Ritchie, The Evolution of the Unix Time-sharing System"
+    }
+  ]
 }

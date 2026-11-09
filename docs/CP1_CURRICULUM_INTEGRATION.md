@@ -26,14 +26,14 @@ Each game includes an expandable lesson with key points, a source example and pr
 | --- | --- | --- |
 | 1 | Week 2 | Flowchart construction and execution |
 | 2 | Week 3 | Algorithm instruction sequence |
-| 3 | Week 4 | C history, characteristics and classification |
+| 3 | Week 4 | Five hidden artifacts and evidence checks on C history and classification |
 | 4 | Week 5 | C source components and factory contracts |
 | 5 | Week 6 | Simple C program and navigation |
 | 6 | Week 7 | Typed declarations and output |
 | 7 | Week 8 | File/global and local scope |
-| 8 | Week 2 | Further flowchart application |
+| 8 | Week 2 | Executable surplus-shipment flowchart with boundary and branch tests |
 | 9 | Week 5 | Further source-organization application |
-| 10 | Week 8 | Local/global program synthesis |
+| 10 | Weeks 2–8 | The Final Expedition, with verified preparation tasks and a code-controlled maze |
 
 This is topic coverage, not a claim that every individual stage assesses every earlier concept. Formal examination validity, item selection and score policy remain controlled through the existing published assessment instrument.
 

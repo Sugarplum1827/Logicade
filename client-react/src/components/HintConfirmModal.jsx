@@ -1,54 +1,22 @@
-import { LEFT } from "phaser";
+import RealmModal from './RealmModal';
 
 export default function HintConfirmModal({ cost, coins, error = '', busy = false, onConfirm, onCancel }) {
   const canAfford = coins >= cost;
 
   return (
-    <div className="modal-overlay" style={{ zIndex: 2000 }}>
-      <div className="rok-modal" style={{ width: '480px' }}>        
-        <div className="rok-content" style={{ padding: '60px 40px 30px 40px' }}>
-          <p style={{ textAlign: 'center', fontSize: '22px', color: '#3e2723', marginBottom: '20px' }}>
-            The Oracle will reveal guidance for this challenge.
-          </p>
-          
-          <div style={{ 
-            display: 'flex', justifyContent: 'space-around', 
-            padding: '15px', borderRadius: '8px',
-          }}>
-            <div style={{ textAlign: 'center' }}>
-              <small style={{ fontFamily: 'var(--font-roboto)',fontWeight: 'bold', fontSize: '10px', color: '#8d6e63' }}>COST</small>
-              <div style={{ fontSize: '30px', fontWeight: 'bold',margin:'0 20px', color: '#c62828' }}>🪙{cost}</div>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <small style={{ fontFamily: 'var(--font-roboto)',fontWeight: 'bold', fontSize: '10px', color: '#8d6e63' }}>YOUR COINS</small>
-              <div style={{ fontSize: '30px',margin:'0 20px', color: canAfford ? '#2e7d32' : '#c62828' }}>🪙{coins}</div>
-            </div>
-          </div>
-
-          {!canAfford && (
-            <p style={{ textAlign: 'center', color: '#c62828', marginTop: '20px', fontSize: '18px', fontWeight: 'bold' }}>
-              Not enough coins!
-            </p>
-          )}
-          {error && (
-            <p role="alert" style={{ textAlign: 'center', color: '#c62828', marginTop: '16px', fontSize: '15px', fontWeight: 'bold' }}>
-              {error}
-            </p>
-          )}
-        </div>
-
-        <div className="rok-footer">
-          <button className="rok-btn-cancel" onClick={onCancel} disabled={busy}>CANCEL</button>
-          <button 
-            className="rok-btn-start" 
-            onClick={onConfirm}
-            disabled={!canAfford || busy}
-            style={{ opacity: canAfford && !busy ? 1 : 0.5, cursor: canAfford && !busy ? 'pointer' : 'not-allowed' }}
-          >
-            {busy ? 'VERIFYING…' : 'USE HINT'}
-          </button>
-        </div>
+    <RealmModal title="The Oracle will reveal guidance for this challenge." onDismiss={busy ? undefined : onCancel} className="realm-hint-purchase">
+      <dl className="realm-coin-totals">
+        <div><dt>Cost</dt><dd><img src="/assets/gold_coin.png" alt="" />{cost}</dd></div>
+        <div><dt>Your coins</dt><dd className={canAfford ? 'can-afford' : ''}><img src="/assets/gold_coin.png" alt="" />{coins}</dd></div>
+      </dl>
+      {!canAfford && <p className="realm-form-error">Not enough coins.</p>}
+      {error && <p role="alert" className="realm-form-error">{error}</p>}
+      <div className="realm-actions">
+        <button type="button" className="realm-button realm-button-red" onClick={onCancel} disabled={busy}>Cancel</button>
+        <button type="button" className="realm-button" onClick={onConfirm} disabled={!canAfford || busy}>
+          {busy ? 'Verifying…' : 'Use Hint'}
+        </button>
       </div>
-    </div>
+    </RealmModal>
   );
 }

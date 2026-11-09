@@ -9,7 +9,7 @@
   "trial": 2,
   "difficulty": "Advance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Rectangle area",
+  "title": "Flowchart Workshop – Ship surplus stock",
   "display_name": "Logic Circuit Workshop",
   "theme": "Sand Dunes – Dust Devil Plain: a plain of dust devils",
   "topic": "Examination Practice: Weeks 2–8",
@@ -64,7 +64,7 @@
   "source_level": 10,
   "source_week": 2,
   "primary_mechanic": "adventure construction and execution",
-  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 2: {'width': 3, 'height': 4}; {'width': 5, 'height': 2}.",
+  "objective": "Read stock and capacity. If stock exceeds capacity, send 4 units per surplus crate. Otherwise send 0. Shipment plan 2 uses capacity 12.",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
   "time_limit_seconds": 0,
@@ -87,10 +87,10 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_2",
+    "scenario_id": "surplus_shipment",
     "source_level": 10,
-    "title": "Rectangle area",
-    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 2: {'width': 3, 'height': 4}; {'width': 5, 'height': 2}.",
+    "title": "Ship surplus stock",
+    "prompt": "Read stock and capacity. If stock exceeds capacity, send 4 units per surplus crate. Otherwise send 0. Shipment plan 2 uses capacity 12.",
     "entry": "start",
     "slots": [
       {
@@ -102,26 +102,32 @@
       {
         "id": "read",
         "x": 0.5,
-        "y": 0.29,
+        "y": 0.27,
         "number": 2
       },
       {
-        "id": "calculate",
+        "id": "decide",
         "x": 0.5,
-        "y": 0.5,
+        "y": 0.47,
         "number": 3
       },
       {
-        "id": "write",
-        "x": 0.5,
-        "y": 0.71,
+        "id": "yes",
+        "x": 0.76,
+        "y": 0.68,
         "number": 4
+      },
+      {
+        "id": "no",
+        "x": 0.24,
+        "y": 0.68,
+        "number": 5
       },
       {
         "id": "end",
         "x": 0.5,
-        "y": 0.9199999999999999,
-        "number": 5
+        "y": 0.9,
+        "number": 6
       }
     ],
     "edges": [
@@ -131,47 +137,80 @@
       },
       {
         "from": "read",
-        "to": "calculate"
+        "to": "decide"
       },
       {
-        "from": "calculate",
-        "to": "write"
+        "from": "decide",
+        "to": "yes",
+        "label": "Yes"
       },
       {
-        "from": "write",
+        "from": "decide",
+        "to": "no",
+        "label": "No"
+      },
+      {
+        "from": "yes",
+        "to": "end"
+      },
+      {
+        "from": "no",
         "to": "end"
       }
     ],
     "pieces": [
       {
-        "id": "decoy_symbol",
-        "label": "Display area = width × height",
-        "kind": "output",
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
+        "id": "decide",
+        "label": "stock > capacity?",
+        "kind": "decision",
         "action": {
-          "value": "Not a calculation"
+          "test": {
+            "op": ">",
+            "args": [
+              {
+                "var": "stock"
+              },
+              {
+                "var": "capacity"
+              }
+            ]
+          }
         }
       },
       {
-        "id": "calculate",
-        "label": "area = width × height",
-        "kind": "process",
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
+        "id": "yes",
+        "label": "Send (stock − capacity) × 4",
+        "kind": "output",
         "action": {
-          "values": [
-            {
-              "name": "area",
-              "value": {
-                "op": "*",
+          "value": {
+            "op": "*",
+            "args": [
+              {
+                "op": "-",
                 "args": [
                   {
-                    "var": "width"
+                    "var": "stock"
                   },
                   {
-                    "var": "height"
+                    "var": "capacity"
                   }
                 ]
-              }
-            }
-          ]
+              },
+              4
+            ]
+          }
         }
       },
       {
@@ -188,62 +227,57 @@
         }
       },
       {
-        "id": "write",
-        "label": "Write area",
+        "id": "decoy_symbol",
+        "label": "Display stock > capacity?",
         "kind": "output",
         "action": {
-          "value": {
-            "var": "area"
-          }
+          "value": "Not a calculation"
+        }
+      },
+      {
+        "id": "no",
+        "label": "Send 0",
+        "kind": "output",
+        "action": {
+          "value": 0
         }
       },
       {
         "id": "read",
-        "label": "Read width, height",
+        "label": "Read stock, capacity",
         "kind": "input",
         "action": {
           "names": [
-            "width",
-            "height"
+            "stock",
+            "capacity"
           ]
         }
-      },
-      {
-        "id": "end",
-        "label": "End",
-        "kind": "end",
-        "action": {}
-      },
-      {
-        "id": "start",
-        "label": "Start",
-        "kind": "start",
-        "action": {}
       }
     ],
     "solution": {
       "start": "start",
       "read": "read",
-      "calculate": "calculate",
-      "write": "write",
+      "decide": "decide",
+      "yes": "yes",
+      "no": "no",
       "end": "end"
     },
     "cases": [
       {
         "id": "case_1",
         "inputs": {
-          "width": 3,
-          "height": 4
+          "stock": 11,
+          "capacity": 12
         },
         "expected": [
-          12
+          0
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "width": 0,
-          "height": 6
+          "stock": 12,
+          "capacity": 12
         },
         "expected": [
           0
@@ -252,11 +286,11 @@
       {
         "id": "case_3",
         "inputs": {
-          "width": 5,
-          "height": 2
+          "stock": 14,
+          "capacity": 12
         },
         "expected": [
-          10
+          8
         ]
       }
     ],
@@ -283,19 +317,24 @@
       "prompt": "Build position 2 in the requested chart."
     },
     {
-      "id": "calculate",
+      "id": "decide",
       "kind": "flowchart_node",
       "prompt": "Build position 3 in the requested chart."
     },
     {
-      "id": "write",
+      "id": "yes",
       "kind": "flowchart_node",
       "prompt": "Build position 4 in the requested chart."
     },
     {
-      "id": "end",
+      "id": "no",
       "kind": "flowchart_node",
       "prompt": "Build position 5 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 6 in the requested chart."
     }
   ],
   "source_path": "week_9/level8/advanced/game_week9_level8_difficulty(Advance)_2.json",

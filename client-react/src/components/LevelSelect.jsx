@@ -200,7 +200,7 @@ export default function LevelSelect({ studentId, region, difficultyAssignments =
         <OracleDialogue
           step={4}
           title="Keeper of the surviving records"
-          text="You opened the first Kingdom level. Read its objective and reward details here. Select View Mission to inspect the challenge, then Start to play. Completing it for the first time earns 10 coins and 50 XP."
+          text="You opened the first Kingdom level. Choose Challenge to review its mission, then Start to play. Your first clear earns 10 coins and 50 XP."
           onNext={() => {
             setShowKingdomTutorial(false);
             onAdvanceTutorial?.(5);
@@ -210,6 +210,7 @@ export default function LevelSelect({ studentId, region, difficultyAssignments =
       {showMissionModal && selectedLevel && selectedSpec && (
         <MissionTargetModal
           spec={missionSpec}
+          rewardClaimed={completedLevels.includes(selectedLevel.level)}
           starting={starting}
           error={startError}
           onStart={async () => {
@@ -237,7 +238,6 @@ export default function LevelSelect({ studentId, region, difficultyAssignments =
           <h1>{region.title}</h1>
           <p>{region.subtitle}</p>
         </div>
-        <div style={{ width: '150px' }} />
       </div>
 
       <div className="level-layout">
@@ -254,10 +254,12 @@ export default function LevelSelect({ studentId, region, difficultyAssignments =
                   } ${selectedLevel?.level === num ? 'selected' : ''}`}
                   onClick={() => unlocked && handleSelectLevel(num)}
                   disabled={!unlocked}
+                  aria-pressed={selectedLevel?.level === num}
+                  aria-label={`Stage ${num}, ${completed ? 'cleared' : unlocked ? 'available' : 'locked'}`}
                 >
                   <div className="level-badge">LVL {num}</div>
                   <div className="level-icon">
-                    {completed ? '⭐' : unlocked ? '▶' : '🔒'}
+                    {completed ? '★' : unlocked ? '▶' : <img src="/assets/lock_icon.png" alt="" />}
                   </div>
                 </button>
               );
@@ -290,8 +292,8 @@ export default function LevelSelect({ studentId, region, difficultyAssignments =
                     <span className="level-detail-claimed">★ CLAIMED</span>
                   ) : (
                     <>
-                      <span className="level-detail-reward"><span aria-hidden="true">🪙</span><b>10</b></span>
-                      <span className="level-detail-reward"><span aria-hidden="true">✨</span><b>50 XP</b></span>
+                      <span className="level-detail-reward"><img src="/assets/gold_coin.png" alt="Coins" /><b>10</b></span>
+                      <span className="level-detail-reward"><span aria-hidden="true">✦</span><b>50 XP</b></span>
                     </>
                   )}
                 </div>
@@ -315,8 +317,8 @@ export default function LevelSelect({ studentId, region, difficultyAssignments =
               <div className="level-detail-rewards" aria-label="First completion rewards">
                 <span className="level-detail-rewards-title">FIRST COMPLETION REWARDS</span>
                 <div className="level-detail-reward-items">
-                  <span className="level-detail-reward"><span aria-hidden="true">🪙</span><b>10</b></span>
-                  <span className="level-detail-reward"><span aria-hidden="true">✨</span><b>50 XP</b></span>
+                  <span className="level-detail-reward"><img src="/assets/gold_coin.png" alt="Coins" /><b>10</b></span>
+                  <span className="level-detail-reward"><span aria-hidden="true">✦</span><b>50 XP</b></span>
                 </div>
               </div>
               <button className="btn-start-stage" type="button" disabled>CHALLENGE</button>

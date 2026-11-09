@@ -8,9 +8,9 @@
   "level": 1,
   "trial": 3,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · C origins",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · C origins",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Collapsed Passage: a half-collapsed passage",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l1",
   "source_level": 1,
   "source_week": 4,
-  "primary_mechanic": "Dam Filler",
-  "objective": "Archive variation 3: classify and verify C history, characteristics and language categories for C origins.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 24,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 3: Find 5 artifacts, read the evidence, and verify three findings about C origins.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 1123840890,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 1123840890,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: C origins",
   "source_primary_mechanic": "Dam Filler",
-  "source_code_snippet": "while level < max_level:\n    level += 2"
+  "source_code_snippet": "while level < max_level:\n    level += 2",
+  "archive_evidence": [
+    {
+      "id": "history_1_3",
+      "era": "The 80-column card",
+      "history": "IBM introduced an 80-column card in 1928. Rectangular holes let designers fit more columns into the existing form.",
+      "source": "IBM, The IBM Punched Card",
+      "art": "punch"
+    },
+    {
+      "id": "history_3_6",
+      "era": "A library for B",
+      "history": "Researchers wrote small routines for B so other programs could reuse common services. This helped make B practical despite its performance limits.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "b-notes"
+    },
+    {
+      "id": "lesson_1_1",
+      "era": "The C timeline",
+      "history": "C developed in the early 1970s. At Bell Labs, Ritchie built on B to create a systems language suited to the work on Unix.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_2",
+      "era": "A family of languages",
+      "history": "BCPL influenced B. B in turn influenced C. Early C carried over much of B's notation while adding a richer type system.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_3",
+      "era": "Why the context matters",
+      "history": "The team needed a way to express systems software at a higher level than assembly. Work on a real operating system shaped the language as it evolved.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

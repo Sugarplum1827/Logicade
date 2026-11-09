@@ -1,6 +1,6 @@
 {
   "file_id": "game_2614",
-  "game_title": "Flowchart Lab · Boundary inputs",
+  "game_title": "Flowchart Lab · Ship surplus stock",
   "game_concept": "A quiz RPG set in Sand Dunes – Bone Valley, a valley of bleached bones: the sand ranger must handle mirage spirits while practicing debugging & combined skills. Core idea – Print Tracer: Insert print statements at the right lines to reveal what mirage spirits changed.",
   "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
@@ -11,7 +11,7 @@
     "Hint tokens that reveal one line of code",
     "Event log of every action"
   ],
-  "player_objective": "Read score. Display Pass when score ≥ 48; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 4: {'score': 47}; {'score': 49}.",
+  "player_objective": "Read stock and capacity. If stock exceeds capacity, send 6 units per surplus crate. Otherwise send 0. Shipment plan 4 uses capacity 14.",
   "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",

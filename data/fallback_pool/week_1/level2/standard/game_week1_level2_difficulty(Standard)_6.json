@@ -1,6 +1,6 @@
 {
   "file_id": "game_0046",
-  "game_title": "Flowchart Workshop – Odd numbers, sum, and count",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
   "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Moat Bridge: the drawbridge over the moat",
@@ -11,8 +11,8 @@
     "Event log of every action",
     "Hint tokens that reveal one line of code"
   ],
-  "player_objective": "Read n. Print every positive odd number strictly less than n, then print their sum and count. Start with i = 1.",
-  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 10, 5; test inputs [{'width': 15, 'height': 5}, {'width': 3, 'height': 6}, {'width': 15, 'height': 7}, {'width': 3, 'height': 8}, {'width': 10, 'height': 10}, {'width': 10, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
   "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Standard",
@@ -63,5 +63,51 @@
   "source_game_title": "Variable Crates – Moat Bridge Streak",
   "learning_objective_id": "cp1_w1_l2",
   "source_week": 1,
-  "source_level": 2
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 10,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -3,
+          15,
+          3
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "78cc179fb682945a420b018d1710c2d9d66b4b83219f4e8d0b9c4435a179ee41",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "91f20f08feb1b702fc94ba4527f0a093d13c6096dce82908fbcac088bb04be99",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 6,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793872073.5838094,
+    "origin": "ollama",
+    "job_id": "87a6597e212845467b9716cba734733fb8b4e710e804164c55d68805b4831721",
+    "replaces_revision": "56b4a559598bfd1615ea3d315806ced13370fc896c5caf9dd85dd8d0847cc2d7"
+  },
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "is_fallback": false,
+  "generated_at": "2026-11-05T09:47:53.583809+00:00"
 }

@@ -9,7 +9,7 @@
   "trial": 8,
   "difficulty": "Need Assistance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Input and output",
+  "title": "Flowchart Lab · Input and output",
   "display_name": "Logic Circuit Workshop",
   "theme": "Mt. Pyre – Geyser Flats: erupting geyser flats",
   "topic": "Flowcharting",
@@ -56,12 +56,12 @@
   "source_level": 2,
   "source_week": 2,
   "primary_mechanic": "circuit construction and execution",
-  "objective": "Read value for station 8, then display the same value without changing it. Test dataset 8: {'value': -8}; {'value': 24}.",
+  "objective": "Read value for station 2, then display the same value without changing it. Problem values 15, 5; test inputs [{'value': -15}, {'value': -10}, {'value': 10}].",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
-  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 5,
-  "seed": 1153019483,
+  "seed": 12345,
   "layout": {
     "width": 14,
     "height": 9,
@@ -82,7 +82,7 @@
     "scenario_id": "flowchart_1",
     "source_level": 2,
     "title": "Input and output",
-    "prompt": "Read value for station 8, then display the same value without changing it. Test dataset 8: {'value': -8}; {'value': 24}.",
+    "prompt": "Read value for station 2, then display the same value without changing it. Problem values 15, 5; test inputs [{'value': -15}, {'value': -10}, {'value': 10}].",
     "entry": "start",
     "slots": [
       {
@@ -126,18 +126,6 @@
     ],
     "pieces": [
       {
-        "id": "start",
-        "label": "Start",
-        "kind": "start",
-        "action": {}
-      },
-      {
-        "id": "end",
-        "label": "End",
-        "kind": "end",
-        "action": {}
-      },
-      {
         "id": "read",
         "label": "Read value",
         "kind": "input",
@@ -148,6 +136,12 @@
         }
       },
       {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
         "id": "write",
         "label": "Write value",
         "kind": "output",
@@ -156,6 +150,12 @@
             "var": "value"
           }
         }
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
       }
     ],
     "solution": {
@@ -168,37 +168,28 @@
       {
         "id": "case_1",
         "inputs": {
-          "value": -8
+          "value": -15
         },
         "expected": [
-          -8
+          -15
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "value": 0
+          "value": -10
         },
         "expected": [
-          0
+          -10
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "value": 15
+          "value": 10
         },
         "expected": [
-          15
-        ]
-      },
-      {
-        "id": "case_4",
-        "inputs": {
-          "value": 24
-        },
-        "expected": [
-          24
+          10
         ]
       }
     ],
@@ -217,27 +208,69 @@
     {
       "id": "start",
       "kind": "flowchart_node",
-      "prompt": "Build position 1 in the requested chart."
+      "prompt": "Build position 1."
     },
     {
       "id": "read",
       "kind": "flowchart_node",
-      "prompt": "Build position 2 in the requested chart."
+      "prompt": "Build position 2."
     },
     {
       "id": "write",
       "kind": "flowchart_node",
-      "prompt": "Build position 3 in the requested chart."
+      "prompt": "Build position 3."
     },
     {
       "id": "end",
       "kind": "flowchart_node",
-      "prompt": "Build position 4 in the requested chart."
+      "prompt": "Build position 4."
     }
   ],
   "source_path": "week_2/level2/needs_support/game_week2_level2_difficulty(NeedAssistance)_8.json",
   "source_topic": "Flowcharting",
   "source_learning_alignment": "CP1 Week 2: Input/output",
   "source_primary_mechanic": "Type Cast Forge",
-  "source_code_snippet": "total = int('5') + 3"
+  "source_code_snippet": "total = int('5') + 3",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 2,
+        "source_week": 2,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l2",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -10,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "0c8924d1408af166fcd26c292ede94552c6c7482e8c01e4efb85cbfbf3f43775",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "5e71260c4471624fa6edf923fb5e6334b1e35268253b3a486e7ea01c28c5320d",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 3,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794198175.4503224,
+    "origin": "ollama",
+    "job_id": "d92d5869d62bf416ce281cadf3233a2a06b8309127b79334f63791118b834ffc",
+    "replaces_revision": "f207d25cdb433093631cbc92071a9fd6354e87dbc14c5d042d814619fbbbd415"
+  }
 }

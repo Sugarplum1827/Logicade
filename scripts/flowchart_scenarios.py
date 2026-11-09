@@ -12,7 +12,7 @@ def assign(identity, label, **values):
 def output(identity, label, value): return step(identity, label, "output", value=value)
 
 
-def make_flowchart(file_id, trial, difficulty, seed, level=None, parameters=None):
+def make_flowchart(file_id, trial, difficulty, seed, level=None, parameters=None, application=False):
     v, op = variable, operation
     start, end = step("start", "Start", "start"), step("end", "End", "end")
     # Without a level this remains the orientation's guided mixed practice.
@@ -20,7 +20,21 @@ def make_flowchart(file_id, trial, difficulty, seed, level=None, parameters=None
     index = ({1:0, 2:0, 3:1, 4:2, 5:3, 6:6, 7:7, 8:4, 9:8}.get(level, (int(trial)-1)%10)
              if level is not None else (int(trial)-1)%10)
     shape = "sequence"
-    if index == 0:
+    if application:
+        shape = "branch"
+        units = parameters["secondary_value"] if parameters else 2 + trial
+        limit = parameters["primary_value"] if parameters else 10 + trial
+        title = "Ship surplus stock"
+        prompt = f"Read stock and capacity. If stock exceeds capacity, send {units} units per surplus crate. Otherwise send 0. Shipment plan {trial} uses capacity {limit}."
+        pieces = [
+            start, step("read", "Read stock, capacity", "input", names=["stock", "capacity"]),
+            step("decide", "stock > capacity?", "decision", test=op(">", v("stock"), v("capacity"))),
+            output("yes", f"Send (stock − capacity) × {units}", op("*", op("-", v("stock"), v("capacity")), units)),
+            output("no", "Send 0", 0), end,
+        ]
+        inputs = [limit - 1, limit, limit + trial, *(parameters["input_values"] if parameters else [])]
+        cases = [({"stock": max(0, x), "capacity": limit}, [max(0, x - limit) * units]) for x in dict.fromkeys(inputs)]
+    elif index == 0:
         title, prompt = "Add two numbers", "Build a flowchart that reads a and b, adds them, and displays their sum."
         pieces = [start, step("read", "Read a, b", "input", names=["a", "b"]), assign("calculate", "sum = a + b", sum=op("+", v("a"), v("b"))), output("write", "Write sum", v("sum")), end]
         cases = [({"a": a, "b": b}, [a+b]) for a,b in [(2,3),(-4,7),(0,0)]]
@@ -81,7 +95,7 @@ def make_flowchart(file_id, trial, difficulty, seed, level=None, parameters=None
         pieces=[start,step("read","Read C","input",names=["C"]),assign("calculate","F = C × 9 / 5 + 32",F=op("+",op("/",op("*",v("C"),9),5),32)),output("write","Write F",v("F")),end]
         cases=[({"C":c},[c*9/5+32]) for c in [0,10,20,100]]
 
-    if level is not None:
+    if level is not None and not application:
         if level == 2:
             title,prompt='Input and output',f'Read value for station {trial}, then display the same value without changing it.'
             pieces=[start,step('read','Read value','input',names=['value']),output('write','Write value',v('value')),end]
@@ -125,7 +139,7 @@ def make_flowchart(file_id, trial, difficulty, seed, level=None, parameters=None
         # Distinct, inspectable fixtures are part of the problem, not a cosmetic seed.
         prompt += f' Test dataset {trial}: '+str(cases[0][0])+'; '+str(cases[-1][0])+'.'
 
-    if parameters:
+    if parameters and not application:
         a,b=parameters['primary_value'],parameters['secondary_value']
         xs=parameters['input_values']
         if level==2:
@@ -200,7 +214,7 @@ def make_flowchart(file_id, trial, difficulty, seed, level=None, parameters=None
             decoy['action']={'value':'Not a calculation'};decoys.append(decoy)
     inventory=copy.deepcopy(pieces+decoys)
     random.Random(seed).shuffle(inventory)
-    return {"schema_version":1,"scenario_id":f"flowchart_{index+1}","source_level":level,"title":title,"prompt":prompt,
+    return {"schema_version":1,"scenario_id":"surplus_shipment" if application else f"flowchart_{index+1}","source_level":level,"title":title,"prompt":prompt,
             "entry":"start","slots":slots,"edges":edges,"pieces":inventory,"solution":solution,
             "cases":[{"id":f"case_{i+1}","inputs":inputs,"expected":expected} for i,(inputs,expected) in enumerate(cases)],
             "max_steps":1000,"scaffold":support,"feedback":"Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",

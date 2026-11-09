@@ -9,7 +9,7 @@
   "trial": 8,
   "difficulty": "Need Assistance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Rectangle area",
+  "title": "Flowchart Lab · Rectangle area",
   "display_name": "Logic Circuit Workshop",
   "theme": "Mt. Pyre – Lava Tube Tunnel: a glowing lava tube",
   "topic": "Flowcharting",
@@ -56,12 +56,12 @@
   "source_level": 3,
   "source_week": 2,
   "primary_mechanic": "circuit construction and execution",
-  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 8: {'width': 9, 'height': 10}; {'width': 11, 'height': 2}.",
+  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 5, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
-  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 5,
-  "seed": 3497757386,
+  "seed": 12345,
   "layout": {
     "width": 14,
     "height": 9,
@@ -82,7 +82,7 @@
     "scenario_id": "flowchart_2",
     "source_level": 3,
     "title": "Rectangle area",
-    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Test dataset 8: {'width': 9, 'height': 10}; {'width': 11, 'height': 2}.",
+    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 15, 'height': 5}, {'width': 5, 'height': 6}, {'width': 5, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
     "entry": "start",
     "slots": [
       {
@@ -136,6 +136,12 @@
     ],
     "pieces": [
       {
+        "id": "end",
+        "label": "End",
+        "kind": "end",
+        "action": {}
+      },
+      {
         "id": "calculate",
         "label": "area = width × height",
         "kind": "process",
@@ -159,13 +165,14 @@
         }
       },
       {
-        "id": "write",
-        "label": "Write area",
-        "kind": "output",
+        "id": "read",
+        "label": "Read width, height",
+        "kind": "input",
         "action": {
-          "value": {
-            "var": "area"
-          }
+          "names": [
+            "width",
+            "height"
+          ]
         }
       },
       {
@@ -175,20 +182,13 @@
         "action": {}
       },
       {
-        "id": "end",
-        "label": "End",
-        "kind": "end",
-        "action": {}
-      },
-      {
-        "id": "read",
-        "label": "Read width, height",
-        "kind": "input",
+        "id": "write",
+        "label": "Write area",
+        "kind": "output",
         "action": {
-          "names": [
-            "width",
-            "height"
-          ]
+          "value": {
+            "var": "area"
+          }
         }
       }
     ],
@@ -203,31 +203,51 @@
       {
         "id": "case_1",
         "inputs": {
-          "width": 9,
-          "height": 10
+          "width": 15,
+          "height": 5
         },
         "expected": [
-          90
+          75
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "width": 0,
-          "height": 12
+          "width": 5,
+          "height": 6
         },
         "expected": [
-          0
+          30
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "width": 11,
-          "height": 2
+          "width": 5,
+          "height": 7
         },
         "expected": [
-          22
+          35
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "width": 15,
+          "height": 15
+        },
+        "expected": [
+          225
+        ]
+      },
+      {
+        "id": "case_5",
+        "inputs": {
+          "width": 15,
+          "height": 5
+        },
+        "expected": [
+          75
         ]
       }
     ],
@@ -246,32 +266,74 @@
     {
       "id": "start",
       "kind": "flowchart_node",
-      "prompt": "Build position 1 in the requested chart."
+      "prompt": "Build position 1."
     },
     {
       "id": "read",
       "kind": "flowchart_node",
-      "prompt": "Build position 2 in the requested chart."
+      "prompt": "Build position 2."
     },
     {
       "id": "calculate",
       "kind": "flowchart_node",
-      "prompt": "Build position 3 in the requested chart."
+      "prompt": "Build position 3."
     },
     {
       "id": "write",
       "kind": "flowchart_node",
-      "prompt": "Build position 4 in the requested chart."
+      "prompt": "Build position 4."
     },
     {
       "id": "end",
       "kind": "flowchart_node",
-      "prompt": "Build position 5 in the requested chart."
+      "prompt": "Build position 5."
     }
   ],
   "source_path": "week_2/level3/needs_support/game_week2_level3_difficulty(NeedAssistance)_8.json",
   "source_topic": "Flowcharting",
   "source_learning_alignment": "CP1 Week 2: Process expressions",
   "source_primary_mechanic": "Type Cast Forge",
-  "source_code_snippet": "total = int('5') + 3"
+  "source_code_snippet": "total = int('5') + 3",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 3,
+        "source_week": 2,
+        "source_level": 3,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l3",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -5,
+          5
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "ac03d12af8f4f37d5a0780d6ac1256109a447dc2e77ee03d9a746de67cb6edf5",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "54b45734e9d802e44e7e3882d41262b6938533feed6544c422bced7abe51c067",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794199498.876777,
+    "origin": "ollama",
+    "job_id": "c68d50f878476eb4d0e4385a011f1b557ce5cbeb69b9e251d6a852090a9e9e12",
+    "replaces_revision": "66070135945c43f74ece39ba9dd4dd5c46b77cc167a569db00a80fd168a478c6"
+  }
 }

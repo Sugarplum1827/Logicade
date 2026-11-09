@@ -8,9 +8,9 @@
   "level": 1,
   "trial": 7,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · C origins",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · C origins",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Hidden Spring: a hidden spring",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l1",
   "source_level": 1,
   "source_week": 4,
-  "primary_mechanic": "Countdown Launch",
-  "objective": "Archive variation 7: classify and verify C history, characteristics and language categories for C origins.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 30,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 7: Find 5 artifacts, read the evidence, and verify three findings about C origins.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 1664512129,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 1664512129,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: C origins",
   "source_primary_mechanic": "Countdown Launch",
-  "source_code_snippet": "while count > 0:\n    count -= 1"
+  "source_code_snippet": "while count > 0:\n    count -= 1",
+  "archive_evidence": [
+    {
+      "id": "history_1_7",
+      "era": "The arrival of B",
+      "history": "Ken Thompson developed B around 1969–1970 using BCPL as his starting point. B became the direct predecessor of C.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "b-notes"
+    },
+    {
+      "id": "history_3_10",
+      "era": "B's comment notation",
+      "history": "B used slash-and-asterisk comments, a notation that C kept. The BCPL version that influenced B used a different form.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "b-notes"
+    },
+    {
+      "id": "lesson_1_1",
+      "era": "The C timeline",
+      "history": "C developed in the early 1970s. At Bell Labs, Ritchie built on B to create a systems language suited to the work on Unix.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_3",
+      "era": "Why the context matters",
+      "history": "The team needed a way to express systems software at a higher level than assembly. Work on a real operating system shaped the language as it evolved.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_4",
+      "era": "Reading the timeline",
+      "history": "Distinguish a language's development from the publication of its manual or its first standard. These events happened years apart for C.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

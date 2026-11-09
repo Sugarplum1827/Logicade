@@ -11,8 +11,8 @@
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Read value for station 8, then display the same value without changing it. Test dataset 8: {'value': -8}; {'value': 24}.",
-  "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
+  "player_objective": "Read value for station 2, then display the same value without changing it. Problem values 15, 5; test inputs [{'value': -15}, {'value': -10}, {'value': 10}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",
   "difficulty": "Need Assistance",
@@ -63,9 +63,53 @@
   "source_lose_condition": "lives reach 0 (each wrong decision costs a life and resets the streak).",
   "source_game_title": "Type Cast Forge – Geyser Flats Streak",
   "source_primary_mechanic": "Type Cast Forge",
-  "hint": "Follow the input through each operation. Compare every output, including negative inputs.",
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "source_time_limit_seconds": 46,
   "learning_objective_id": "cp1_w2_l2",
   "source_week": 2,
-  "source_level": 2
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 2,
+        "source_week": 2,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l2",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -15,
+          -10,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "0c8924d1408af166fcd26c292ede94552c6c7482e8c01e4efb85cbfbf3f43775",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "5e71260c4471624fa6edf923fb5e6334b1e35268253b3a486e7ea01c28c5320d",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 3,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794198175.4503224,
+    "origin": "ollama",
+    "job_id": "d92d5869d62bf416ce281cadf3233a2a06b8309127b79334f63791118b834ffc",
+    "replaces_revision": "f207d25cdb433093631cbc92071a9fd6354e87dbc14c5d042d814619fbbbd415"
+  },
+  "is_fallback": false,
+  "generated_at": "2026-11-09T04:22:55.450322+00:00"
 }

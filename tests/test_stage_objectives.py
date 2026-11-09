@@ -124,4 +124,25 @@ def test_exam_references_the_intended_review_level():
         lesson=lesson_for(9,stage)
         assert lesson['source_week']==source_week(9,stage)
         assert lesson['source_level']==int(COURSE['exam_level_blueprint'][str(stage)])
-        assert lesson['objective_id']==f'cp1_w{lesson["source_week"]}_l{lesson["source_level"]}'
+        assert lesson['objective_id']==('cp1_w9_capstone' if stage==10 else f'cp1_w{lesson["source_week"]}_l{lesson["source_level"]}')
+
+
+def test_week_nine_archive_application_and_capstone(definitions):
+    from server.canvas_builder import problem_fingerprint
+
+    def stage(week, level):
+        return [game for game in definitions if (game['week'], game['level']) == (week, level)]
+
+    archive = stage(9, 3)
+    assert len(archive) == 30
+    assert all(game['mode'] == 'hidden_archive' and len(game['archive_evidence']) == 5 for game in archive)
+    assert len({game['archive_evidence'][0]['id'] for game in archive}) == 10
+    application = stage(9, 8)
+    old_problems = {problem_fingerprint(game) for game in stage(9, 1) + stage(2, 10)}
+    assert len(application) == 30
+    assert all(problem_fingerprint(game) not in old_problems and game['flowchart']['scenario_id'] == 'surplus_shipment'
+               for game in application)
+    final = stage(9, 10)
+    assert len(final) == 30
+    assert all(game['mode'] == 'dungeon' and game['programming']['capstone']['coverage'] == list(range(2,9))
+               for game in final)

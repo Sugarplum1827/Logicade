@@ -65,10 +65,11 @@ export default function GameResultModal({
       className="modal-overlay"
       style={{ zIndex: 2000, background: 'rgba(0,0,0,0.7)' }}
     >
-      <div className="rok-modal">
-        <div className={`rok-ribbon ${won ? 'gold' : 'gray'}`}>
+      <div className="rok-modal realm-paper realm-result" role="dialog" aria-modal="true" aria-labelledby="result-title">
+        <h2 className="realm-heading" id="result-title">
           {won ? 'VICTORY' : 'DEFEAT'}
-        </div>
+        </h2>
+        <div className="realm-divider" aria-hidden="true" />
 
         <div className="rok-content">
           <div className="rok-objectives">

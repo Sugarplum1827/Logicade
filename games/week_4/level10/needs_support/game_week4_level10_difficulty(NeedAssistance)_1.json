@@ -8,9 +8,9 @@
   "level": 10,
   "trial": 1,
   "difficulty": "Need Assistance",
-  "mode": "pending",
-  "title": "C Archive · History/classification review",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · History/classification review",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Shadow Pit: a pit of deep shadow",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l10",
   "source_level": 10,
   "source_week": 4,
-  "primary_mechanic": "Door Defense",
-  "objective": "Archive variation 1: classify and verify C history, characteristics and language categories for History/classification review.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 80,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 1: Find 5 artifacts, read the evidence, and verify three findings about History/classification review.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 5,
   "seed": 2512259714,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 2512259714,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -118,5 +116,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: History/classification review",
   "source_primary_mechanic": "Door Defense",
-  "source_code_snippet": "while door_health > 0 and timer < 80:\n    player.push()"
+  "source_code_snippet": "while door_health > 0 and timer < 80:\n    player.push()",
+  "archive_evidence": [
+    {
+      "id": "history_10_1",
+      "era": "BCPL to B to C",
+      "history": "Martin Richards designed BCPL. Thompson drew on it for B, and Ritchie developed C from B while working on Unix.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "bcpl"
+    },
+    {
+      "id": "history_9_4",
+      "era": "An abstract type structure",
+      "history": "Ritchie drew on Algol 68 when designing ways to combine basic types into arrays, pointers and functions.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "bcpl"
+    },
+    {
+      "id": "lesson_1_1",
+      "era": "The C timeline",
+      "history": "C developed in the early 1970s. At Bell Labs, Ritchie built on B to create a systems language suited to the work on Unix.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_2_1",
+      "era": "The developer and laboratory",
+      "history": "Dennis Ritchie developed C at Bell Laboratories. He wrote its first compiler and refined the language alongside the Unix project.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_3",
+      "era": "Why the context matters",
+      "history": "The team needed a way to express systems software at a higher level than assembly. Work on a real operating system shaped the language as it evolved.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

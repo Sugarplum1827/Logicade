@@ -8,9 +8,9 @@
   "level": 1,
   "trial": 5,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · C origins",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · C origins",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Shadow Pit: a pit of deep shadow",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l1",
   "source_level": 1,
   "source_week": 4,
-  "primary_mechanic": "Nested While Dungeon",
-  "objective": "Archive variation 5: classify and verify C history, characteristics and language categories for C origins.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 30,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 5: Find 5 artifacts, read the evidence, and verify three findings about C origins.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 3131127216,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 3131127216,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: C origins",
   "source_primary_mechanic": "Nested While Dungeon",
-  "source_code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1"
+  "source_code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "archive_evidence": [
+    {
+      "id": "history_1_5",
+      "era": "A machine with little memory",
+      "history": "The PDP-7 used for early Unix had 8K words of memory. The team chose small tools that could fit and run on it.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "history_3_8",
+      "era": "Small commands, bigger jobs",
+      "history": "Unix pipes appeared in 1972 and let separate commands hand data from one operation to the next.",
+      "source": "Dennis Ritchie, The Evolution of the Unix Time-sharing System",
+      "art": "unix"
+    },
+    {
+      "id": "lesson_1_1",
+      "era": "The C timeline",
+      "history": "C developed in the early 1970s. At Bell Labs, Ritchie built on B to create a systems language suited to the work on Unix.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_4",
+      "era": "Reading the timeline",
+      "history": "Distinguish a language's development from the publication of its manual or its first standard. These events happened years apart for C.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_1_2",
+      "era": "A family of languages",
+      "history": "BCPL influenced B. B in turn influenced C. Early C carried over much of B's notation while adding a richer type system.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

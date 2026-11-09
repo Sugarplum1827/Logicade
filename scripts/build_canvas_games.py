@@ -22,25 +22,28 @@ try:
     from .programming_missions import programming_mission
     from .cp1_lessons import source_week, source_level, lesson_for
     from .archive_lessons import archive_questions
+    from .archive_evidence import CLUE_COUNT, case_evidence
 except ImportError:
     from flowchart_scenarios import make_flowchart
     from programming_missions import programming_mission
     from cp1_lessons import source_week, source_level, lesson_for
     from archive_lessons import archive_questions
+    from archive_evidence import CLUE_COUNT, case_evidence
 
 ROOT = Path(__file__).resolve().parents[1]
 POOL = ROOT / "data" / "fallback_pool"
 GAMES = ROOT / "games"
 MANIFEST_PATH = ROOT / "data" / "manifest.json"
-MODES = ("welcome_video", "tetris", "circuit", "terminal", "pending", "factory", "dungeon")
+MODES = ("welcome_video", "tetris", "circuit", "terminal", "pending", "hidden_archive", "factory", "dungeon")
+ARCHIVE_OBJECTIVE = "Case {case}: Find " + str(CLUE_COUNT) + " artifacts, read the evidence, and verify three findings about {topic}."
+ARCHIVE_HINT = "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover."
 CURRICULUM = json.loads((ROOT / "data" / "curriculum.json").read_text(encoding="utf-8"))
 
-# Week 4 remains deliberately unthemed until its course design is approved.
 WEEK_MODES = {
     1: "tetris",
     2: "circuit",
     3: "terminal",
-    4: "pending",
+    4: "hidden_archive",
     5: "factory",
     6: "dungeon",
     7: "terminal",
@@ -53,6 +56,7 @@ MODE_NAMES = {
     "circuit": "Logic Circuit Workshop",
     "terminal": "Register Operations Console",
     "pending": "Week 4 Challenge · Theme Pending",
+    "hidden_archive": "The Lost Legacy of C",
     "factory": "Code Assembly Factory",
     "dungeon": "Programming Quest",
 }
@@ -62,6 +66,7 @@ GENRE_BY_MODE = {
     "circuit": "Logic circuit and register puzzle",
     "terminal": "Assembly and register tracing puzzle",
     "pending": "CP1 challenge; Week 4 theme pending",
+    "hidden_archive": "Historical hidden-object investigation",
     "factory": "Resource-routing factory puzzle",
     "dungeon": "Code-guided adventure puzzle",
 }
@@ -71,6 +76,7 @@ LOOP_BY_MODE = {
     "circuit": "Inspect the circuit board, solve the CP1 station, and advance the signal through its gates.",
     "terminal": "Inspect the register trace, select the correct instruction or result, and advance the program counter.",
     "pending": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
+    "hidden_archive": "Search the archive, examine recovered computing artifacts, and use their evidence to verify the assigned C lesson.",
     "factory": "Solve each CP1 station to route the moving resource through the assembly line.",
     "dungeon": "Solve each CP1 station to open the next route through the code labyrinth.",
 }
@@ -80,6 +86,7 @@ CONTROLS_BY_MODE = {
     "circuit": "Click or press 1–4 to solve a gate; Escape pauses.",
     "terminal": "Click or press 1–4 to choose an instruction; Escape pauses.",
     "pending": "Click or press 1–4 to answer; Escape pauses.",
+    "hidden_archive": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
     "factory": "Click or press 1–4 to route a resource; Escape pauses.",
     "dungeon": "Click or press 1–4 to choose a code action; Escape pauses.",
 }
@@ -204,6 +211,8 @@ def make_layout(mode: str, seed: int) -> dict:
         return {"interaction": "flowchart_drag_drop", "columns": 12, "rows": 10, "seed": seed}
     if mode == "pending":
         return {"width": 14, "height": 9, "seed": seed, "theme_status": "awaiting_course_decision"}
+    if mode == "hidden_archive":
+        return {"interaction": "hidden_object_search", "clues": CLUE_COUNT}
     if mode == "factory":
         return {"width": 14, "height": 9, "route_variant": seed % 6,
                 "blocked_cells": [[rng.randrange(3, 12), rng.randrange(1, 8)] for _ in range(5)],
@@ -235,7 +244,9 @@ def make_layout(mode: str, seed: int) -> dict:
 def mode_for(week: int, level: int, trial: int, seed: int) -> str:
     if week == 1 and level == 1:
         return "welcome_video"
-    return WEEK_MODES.get(source_week(week,level), "pending")
+    if week == 9 and level == 10:
+        return "dungeon"
+    return WEEK_MODES.get(source_week(week, level), "pending")
 
 
 def adapt_fallback_spec(spec: dict, relative: Path) -> None:
@@ -261,6 +272,12 @@ def adapt_fallback_spec(spec: dict, relative: Path) -> None:
                           'Build the circuit or route, or edit the node/adventure program.',
                           'Use Step to inspect state; Run checks the real outputs and goals.',
                           'Revise errors before using the remaining execution checks.']
+        if mission.get('capstone'):
+            spec['win_condition']='Verify the preparation checks and complete the coded expedition.'
+            spec['code_snippet']=mission['program']
+            spec['tutorial']=['Place the shipment flowchart blocks and predict the extra input.',
+                              'Read the historical record and assemble the C source file.',
+                              'Write the scoped C program, collect the crystals, and reach the beacon.']
         if mission.get('circuit_kind')=='scope_controller':
             spec['tutorial']=['Read the C scope mission and expected signal traces.',
                               'Connect sensor → scope controller → splitter; wire each branch into the SUM merger.',
@@ -309,20 +326,29 @@ def adapt_fallback_spec(spec: dict, relative: Path) -> None:
         settings["time_limit_seconds"] = 0
         spec["game_settings"] = settings
     elif origin==2:
-        puzzle=make_flowchart(str(spec['file_id']),int(spec.get('trial') or 1),str(spec.get('difficulty')),stable_seed(str(spec['file_id'])),level=source_level(week,level))
+        puzzle=make_flowchart(str(spec['file_id']),int(spec.get('trial') or 1),str(spec.get('difficulty')),stable_seed(str(spec['file_id'])),level=source_level(week,level),application=(week,level)==(9,8))
         spec.update(game_title='Flowchart Lab · '+puzzle['title'],player_objective=puzzle['prompt'],
                     win_condition='Construct a complete chart that passes every executable input/output case.',
                     lose_condition='The available unsuccessful chart checks are exhausted.',
                     controls='Drag the flowchart symbols into connected positions, then Check chart.',
                     tutorial=['Read the algorithm.','Use terminator, input/output, process and decision symbols.','Test the chart with every example input.'])
         spec.setdefault('game_settings',{})['time_limit_seconds']=0
-    elif origin==4:
+    elif mode=="hidden_archive":
         stage=lesson_for(week,level)['stage_title']
-        spec.update(game_title='C Archive · '+stage,player_objective=f'Archive variation {int(spec.get("trial") or 1)}: classify and verify C history, characteristics and language categories for {stage}.',
-                    win_condition='All researched archive facts are correctly identified.',
-                    controls='Read each archive record and choose the supported C fact.')
+        spec.update(game_title='The Lost Legacy of C · '+stage,
+                    player_objective=ARCHIVE_OBJECTIVE.format(case=int(spec.get('trial') or 1), topic=stage),
+                    win_condition=f'Recover all {CLUE_COUNT} artifacts and answer all three evidence checks correctly.',
+                    lose_condition='The case ends when the available incorrect evidence checks are exhausted.',
+                    primary_mechanic='Hidden-object investigation and evidence verification',
+                    assets_style='Shared archive artwork, illustrated artifacts, and Kenney interface audio.',
+                    controls=CONTROLS_BY_MODE['hidden_archive'],hint=ARCHIVE_HINT,
+                    tutorial=['Match the silhouettes in the tray to the objects in the room.',
+                              'Inspect each artifact to read its history.',
+                              'Open Evidence to review the records and verify your findings.'])
+        spec.setdefault('game_settings',{})['time_limit_seconds']=0
     spec['topic']=lesson_for(week,level)['title']
-    spec['learning_alignment']=f'CP1 Week {origin}: '+lesson_for(week,level)['stage_title']
+    spec['learning_alignment']=('CP1 Weeks 2–8: The Final Expedition' if (week,level)==(9,10) else
+                                f'CP1 Week {origin}: '+lesson_for(week,level)['stage_title'])
     spec['learning_objective_id']=lesson_for(week,level)['objective_id']
     spec['source_week']=origin
     spec['source_level']=source_level(week,level)
@@ -359,7 +385,8 @@ def build_definition(spec: dict, relative: Path) -> dict:
     difficulty = str(spec.get("difficulty") or "Standard")
     mode = mode_for(week, level, trial, stable_seed(file_id))
     origin=source_week(week,level)
-    flowchart = make_flowchart(file_id, trial, difficulty, stable_seed(file_id),level=source_level(week,level) if origin==2 else None) if mode == "tetris" or origin==2 else None
+    flowchart = make_flowchart(file_id, trial, difficulty, stable_seed(file_id),level=source_level(week,level) if origin==2 else None,
+                               application=(week,level)==(9,8)) if mode == "tetris" or origin==2 else None
     mission = programming_mission(week, level, trial, difficulty, stable_seed(file_id))
     settings = spec.get("game_settings") if isinstance(spec.get("game_settings"), dict) else {}
     lesson = next((item for item in CURRICULUM.get("weeks", []) if item.get("week") == week), {})
@@ -394,7 +421,7 @@ def build_definition(spec: dict, relative: Path) -> dict:
         "difficulty": difficulty,
         "mode": mode,
         "title": mission['title'] if mission else f"Flowchart Workshop – {flowchart['title']}" if flowchart else str(spec.get("game_title") or file_id),
-        "display_name": "C Scope Circuit Workshop" if origin==8 else MODE_NAMES[mode],
+        "display_name": "The Final Expedition" if (week,level)==(9,10) else "C Scope Circuit Workshop" if origin==8 else MODE_NAMES[mode],
         "theme": str(spec.get("theme") or spec.get("region", {}).get("name") or "CP1 GameVerse"),
         "topic": course_title,
         "learning_objectives": learning_objectives,
@@ -404,9 +431,9 @@ def build_definition(spec: dict, relative: Path) -> dict:
         "source_week": origin,
         "primary_mechanic": MODE_NAMES[mode] if week == 1 and level == 1 else str(spec.get("primary_mechanic") or MODE_NAMES[mode]),
         "objective": objective,
-        "hint": mission['hint'] if mission else flowchart["feedback"] if flowchart else f"Use the {course_title} idea and test one choice against the station goal.",
+        "hint": ARCHIVE_HINT if mode == "hidden_archive" else mission['hint'] if mission else flowchart["feedback"] if flowchart else f"Use the {course_title} idea and test one choice against the station goal.",
         "controls": mission['controls'] if mission else CONTROLS_BY_MODE[mode],
-        "time_limit_seconds": 0 if mission or flowchart or mode == "welcome_video" else max(0, int(settings.get("time_limit_seconds") or 0)),
+        "time_limit_seconds": 0 if mission or flowchart or mode in {"welcome_video", "hidden_archive"} else max(0, int(settings.get("time_limit_seconds") or 0)),
         "starting_lives": lives,
         "seed": stable_seed(file_id),
         "layout": make_layout(mode, stable_seed(file_id)),
@@ -423,6 +450,7 @@ def build_definition(spec: dict, relative: Path) -> dict:
                             "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png"},
                 "tetris": {"puzzle_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png"},
                 "pending": {"terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png"},
+                "hidden_archive": {"archive_room": "/canvas-runtime/assets/archive/room.webp"},
                 "welcome_video": {"welcome_video": "/canvas-runtime/assets/logicade_prologue.mp4"},
             }[mode],
             **({} if mode == "welcome_video" else {
@@ -447,6 +475,8 @@ def build_definition(spec: dict, relative: Path) -> dict:
     if spec.get('canvas_generation'):
         from server.canvas_builder import apply_parameters
         definition=apply_parameters(spec,definition)
+    elif mode == "hidden_archive":
+        definition["archive_evidence"] = case_evidence(definition["source_level"], trial, definition["tasks"])
     if spec.get('mechanic_migration'):
         definition['mechanic_migration']=copy.deepcopy(spec['mechanic_migration'])
     return definition
@@ -457,9 +487,12 @@ def main() -> int:
     parser.add_argument("--write", action="store_true", help="write mirrored game configs and fallback links")
     parser.add_argument("--check", action="store_true", help="report missing or stale mirrored configs")
     parser.add_argument("--prune-stale", action="store_true", help="remove generated Canvas definitions absent from the canonical manifest")
+    parser.add_argument("--week", type=int, choices=range(1, 10), help="limit game and fallback writes or checks to one week")
     args = parser.parse_args()
     if not args.write and not args.check:
         parser.error("choose --write or --check")
+    if args.week and args.prune_stale:
+        parser.error("--prune-stale requires the complete catalog")
 
     manifest_rows = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     if not isinstance(manifest_rows, list):
@@ -517,6 +550,9 @@ def main() -> int:
     for path, spec in sources:
         relative = path.relative_to(POOL)
         destination = GAMES / relative
+        if args.week and int(spec["week"]) != args.week:
+            mode_counts[mode_for(int(spec["week"]), int(spec["level"]), int(spec.get("trial") or 1), stable_seed(str(spec["file_id"])))] += 1
+            continue
         adapt_fallback_spec(spec, relative)
         fresh = build_definition(spec, relative)
         if spec.get('canvas_generation'):
@@ -573,13 +609,14 @@ def main() -> int:
             "modes": mode_counts,
             "week_modes": {str(week): ("welcome_video (stage 1), tetris (stage 2)" if week == 1 else "topic-based examination practice" if week==9 else WEEK_MODES[week]) for week in range(1, 10)},
             "week_9_source_weeks": {str(level):source_week(9,level) for level in range(1,11)},
-            "week_4_status": "researched C history and classification archive",
+            "week_4_status": "playable historical hidden-object archive",
             "week_1_visible_stages": 2,
             "asset_source": "vendor/kenney (shared; not copied into each game)",
         }
         GAMES.mkdir(parents=True, exist_ok=True)
         write_json(GAMES / "registry.json", registry)
-        print(f"Wrote {len(sources)} mirrored Canvas game definitions; mode distribution: {mode_counts}")
+        count = sum(1 for _, spec in sources if not args.week or int(spec["week"]) == args.week)
+        print(f"Wrote {count} mirrored Canvas game definitions; catalog mode distribution: {mode_counts}")
     else:
         print(f"Found {len(sources)} fallback definitions; {missing} mirrored Canvas definitions are missing or stale.")
     return 1 if args.check and missing else 0

@@ -116,7 +116,8 @@
     }
     function inside(box,x,y,center=false){const left=center?box.x-box.w/2:box.x,top=center?box.y-box.h/2:box.y;return x>=left&&x<=left+box.w&&y>=top&&y<=top+box.h;}
     function point(event){const r=canvas.getBoundingClientRect();return {x:(event.clientX-r.left)*W/r.width,y:(event.clientY-r.top)*H/r.height};}
-    function begin(){if(state.started)return;state.started=true;state.startTime=performance.now();state.last=state.startTime;post('game_started',{game_id:game.file_id,variation_id:game.variation_id});announce(puzzle.prompt);requestAnimationFrame(tick);}
+    const study = globalThis.LogiCadeStudyTelemetry;
+    function begin(){if(state.started)return;state.started=true;state.startTime=performance.now();state.last=state.startTime;study?.start();study?.present();post('game_started',{game_id:game.file_id,variation_id:game.variation_id});announce(puzzle.prompt);requestAnimationFrame(tick);}
     function place(pieceId,target){
       if(state.finished||state.paused||state.pending)return;
       begin();
@@ -134,6 +135,7 @@
       begin();
       const result=globalThis.LogiCadeFlowchartModel.check(puzzle,state.placements);
       if(!result.complete){announce(`Place ${result.missing.length} more block${result.missing.length===1?'':'s'} before checking.`);draw();return;}
+      study?.submit(post, 'activity', puzzle.scenario_id, result.passed === true, study.takeResponseTime());
       state.checks++;state.tested+=result.totalCases;state.passed+=result.passedCases;state.errors+=result.totalCases-result.passedCases;
       for(const item of result.results)post('question_answered',{entity_id:`${puzzle.scenario_id}_${item.id}`,payload:{question_id:item.id,correct:item.passed,attempt_number:state.checks,answer_type:'flowchart_execution'}});
       post('custom',{event_type:'flowchart_checked',payload:{scenario_id:puzzle.scenario_id,passed_cases:result.passedCases,total_cases:result.totalCases,
@@ -143,6 +145,7 @@
         sound('success_sound');for(const slot of puzzle.slots)post('activity_completed',{entity_id:slot.id,payload:{kind:'flowchart_node',scenario_id:puzzle.scenario_id}});
         announce('All example inputs produce the required output. Your chart works!');state.pending=performance.now()+850;
       }else{
+        study?.present();
         state.lives--;sound('error_sound');
         if(!state.bad.size)for(const slot of puzzle.slots)if(state.placements[slot.id]!==puzzle.solution[slot.id])state.bad.add(slot.id);
         const detail=result.errors[0]?.message||result.results.find(item=>!item.passed)?.error||puzzle.feedback;
@@ -153,9 +156,9 @@
     }
     function finish(won,reason){if(state.finished)return;state.finished=true;state.paused=false;
       post('game_over',{won,score:won?100:Math.round(state.passed/Math.max(1,state.tested)*100),accuracy:state.passed/Math.max(1,state.tested),answered:state.tested,correct:state.passed,
-        error_count:state.errors,hint_count:state.hints,duration_sec:state.elapsed,wall_duration_sec:(performance.now()-state.startTime)/1000,
+        error_count:state.errors,hint_count:state.hints,duration_sec:state.elapsed,active_play_ms:study?.activePlayMs(),wall_duration_sec:(performance.now()-state.startTime)/1000,
         reason,formal_assessment:false,accuracy_basis:'flowchart_execution_cases'});announce(won?'Flowchart complete.':'The chart needs another attempt.');draw();}
-    function pause(paused,request=false){if(state.finished)return;state.paused=paused;state.drag=null;state.last=performance.now();post(paused?'game_paused':'game_resumed');if(request&&paused)post('pause_request');draw();}
+    function pause(paused,request=false){if(state.finished)return;state.paused=paused;study?.setPaused(paused);state.drag=null;state.last=performance.now();post(paused?'game_paused':'game_resumed');if(request&&paused)post('pause_request');draw();}
     canvas.addEventListener('pointerdown',event=>{
       begin();const p=point(event);const hit=[...buttons].reverse().find(box=>inside(box,p.x,p.y));
       if(hit){hit.action();event.preventDefault();return;}if(state.paused||state.finished||state.pending)return;

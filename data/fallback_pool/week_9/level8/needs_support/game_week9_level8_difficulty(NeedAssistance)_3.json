@@ -1,6 +1,6 @@
 {
   "file_id": "game_2613",
-  "game_title": "Flowchart Lab · Decision branches",
+  "game_title": "Flowchart Lab · Ship surplus stock",
   "game_concept": "A action defense set in Sand Dunes – Bazaar Tents, a tented desert bazaar: the oasis keeper must handle giant scorpions while practicing debugging & combined skills. Core idea – Logic Detective: Trace code that runs but gives the wrong answer and fix the logic bug.",
   "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Bazaar Tents: a tented desert bazaar",
@@ -11,7 +11,7 @@
     "Step-by-step code highlighting",
     "Ghost replay of best run"
   ],
-  "player_objective": "Read n. Display Above when n > -2; otherwise display At or below. Test dataset 3: {'n': -4}; {'n': 1}.",
+  "player_objective": "Read stock and capacity. If stock exceeds capacity, send 5 units per surplus crate. Otherwise send 0. Shipment plan 3 uses capacity 13.",
   "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",

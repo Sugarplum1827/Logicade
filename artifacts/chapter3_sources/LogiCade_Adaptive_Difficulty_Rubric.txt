@@ -1,0 +1,173 @@
+Adaptive Difficulty Classification Rubric
+Computer Programming 1  |  Week 1 pilot scope  |  FOR INSTRUCTOR VALIDATION
+1  Purpose and model boundary
+Revised from the supplied “LogiCade Difficulty Rubrics” (three-page proposal). This rubric specifies interpretable gameplay measurements and expert-labeled targets for an L2-regularized multinomial logistic regression (MLR) difficulty classifier. The MLR recommends the NEXT difficulty: need_help, standard, or advance. It does NOT generate challenges or calculate numerical student grades. The local LLM generates candidate challenges subject to separate content validation.
+Unit of analysis: one learner × next-stage decision; use ONLY performance evidence observed prior to that decision. Save the exact decision timestamp, prior served difficulty, target objective/prerequisite, model version, and candidate-eligibility rules.
+2  Gameplay features and provisional interpretation bands
+Bands are descriptive cues for review—not automatic student labels. Keep raw numeric values, exposure denominators, and missingness. Thresholds below are inherited from the supplied draft and require instructor confirmation/pilot validation.
+Signal
+Measurement / safeguards
+Needs Support
+Standard
+Advance
+Mistakes
+Incorrect scored submissions in prior stage; one failed run counts once. Compare similar submission opportunities.
+≥3
+1–2
+0
+Hints
+Hints actually revealed; record number available/affordable; missing if none accessible.
+≥3
+1–2
+0
+Completion time
+Active time for completed run / pilot median for comparable task and difficulty; missing if no completion.
+>125%
+75–125%
+<75%
+Level-run attempts
+Distinct level runs until first clear or decision; include exited/incomplete status.
+≥3
+2
+1
+Accuracy
+Correct scored checks / all checks on first evaluated run; store denominator.
+<60%
+60–<80%
+80–100%
+First-try success
+Binary: 1 first run cleared; 0 first run not cleared; missing when not evaluated.
+0
+—
+1
+
+Signal
+Measurement / safeguards
+Needs Support
+Standard
+Advance
+Failure rate
+Failed / evaluated runs in last five comparable runs; require ≥3 evaluated runs.
+>50%
+>0–50%
+0%
+Retries
+Additional submissions for same activity after initial scored submission.
+≥3
+1–2
+0
+Topic mastery
+First-try successes / distinct relevant prerequisite tasks; require ≥3 tasks.
+<50%
+50–<80%
+80–100%
+Response time
+Median active time to first submission / pilot median for matched task type and difficulty.
+>125%
+75–125%
+<75%
+
+
+Session duration
+Elapsed session time through decision; context / quality check only.
+Context
+Context
+Context
+Inactivity time
+Pause/hidden seconds, overlap counted once; context / quality check only.
+Context
+Context
+Context
+
+3  Safeguards for interpreting features
+Speed is supporting evidence only and must not be treated as automatic proof of competence. Mistakes, retries, failure rate, attempts, and first-try success overlap; check redundancy, collinearity, and whether each adds information. Compare like-for-like opportunities, task type and difficulty; missing is distinct from zero. Establish matched-time pilot medians using a training/calibration sample only, not held-out learners.
+Use raw features as the preferred baseline and compare performance against the proposed banded/one-hot features. If bands are encoded, include an explicit missing indicator and avoid redundant dummy columns for regression identifiability. Fit any imputation, scaling, or feature encoding using training data only.
+4  Expert-defined next-stage labels (training target)
+Expert label
+Observable evidence
+Next stage treatment
+need_help
+Across ≥2 comparable tasks, repeated prerequisite misconception or need for stepwise guidance; one failure or slow response alone is insufficient.
+Same objective with scaffolds / guided checks.
+standard
+Across ≥2 comparable tasks, independently demonstrates prerequisite on familiar tasks or fixes errors with brief prompt.
+Regular variant and optional hints.
+advance
+Across ≥3 distinct tasks, independent prerequisite application including ≥1 transfer example in new context.
+More complex application of same objective; reduced scaffolds.
+insufficient evidence
+Relevant history too sparse, only exits, or unclear evidence. Do not train a fourth class unless specifically designed.
+Leave expert training label missing; apply approved live fallback.
+
+The four-level evidence table above is a reviewer decision instrument; the trained MLR target has only THREE classes. “Insufficient evidence” is a workflow state, not the fourth prediction class. The difficulty labels are ordered educationally; compare multinomial MLR to an ordinal model if appropriate.
+5  Reviewer workflow and data protection
+Two instructors who teach programming fundamentals/Computer Programming 1 should independently label the same pseudonymous pre-decision histories. Supply the upcoming objective, prerequisite, prior answers/error traces and available assistance. Conceal any existing automated picker recommendation and future outcomes. Have reviewers note concrete evidence for each label. Report initial inter-rater agreement (e.g., weighted kappa, alongside confusion table), then adjudicate disagreements.
+Preserve reviewer IDs, label versions, disagreement resolution, timestamp, and evidence notes. Avoid using post-decision performance to assign labels. Participant data should be pseudonymous with access limited to the authorized research team.
+6  Prediction, selection and validation
+Train a three-class L2-regularized MLR using expert-labeled pre-decision rows. Split by learner, not randomly by row. Choose hyperparameters and preprocessing on training/validation learners, then report held-out macro F1, confusion matrix, per-class recall, and probability calibration. Compare against a simple preapproved rule-based selector. With ~100 students, report uncertainty and avoid claims of broad generalization.
+For new players or unclear evidence, start at instructor-approved standard/diagnostic difficulty. The adaptive engine—not MLR—enforces prerequisites, availability, non-repetition, model-failure fallback, and no skipping of mandatory Week 1 outcomes. The LLM then creates a challenge within approved specifications; generated tasks must be verified before serving.
+7  Illustrative instructor labeling example
+A learner who repeatedly predicts that a local variable changes a global variable, despite guided examples, may merit need_help. A learner who traces values correctly after a short prompt may merit standard. A learner who independently handles a new shadowing example may merit advance. This example is retained from the original draft; the instructor must confirm whether variable scope belongs to the actual evaluated Week 1 syllabus before using it in the pilot.
+
+Instructor validation form
+Document: Adaptive Difficulty Classification Rubric
+Reviewer information
+Fill in
+Instructor / designation
+________________________________________
+Courses taught / years of experience
+________________________________________
+Date / institution
+________________________________________
+
+Rating scale: 1 = Not acceptable; 2 = Major revision needed; 3 = Acceptable with minor revision; 4 = Clear and appropriate. Mark one rating for each criterion.
+Validation criterion
+1
+2
+3
+4
+All gameplay signals are measurable and obtainable in Godot
+☐
+☐
+☐
+☐
+Provisional thresholds are appropriate for comparable activities
+☐
+☐
+☐
+☐
+Time, hints, missingness and repeated-attempt rules are fair
+☐
+☐
+☐
+☐
+Needs Support / Standard / Advance evidence descriptors are clear
+☐
+☐
+☐
+☐
+Minimum task evidence for each label is sufficient
+☐
+☐
+☐
+☐
+Selected challenge objective and prerequisite mapping is appropriate
+☐
+☐
+☐
+☐
+Reviewer workflow and live fallback are educationally appropriate
+☐
+☐
+☐
+☐
+
+Instructor comments / recommended modifications
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+Overall disposition
+☐ Approved   ☐ Approved with revisions   ☐ Revise and resubmit   ☐ Not approved
+Signature: ____________________________________________     Date: ____________________
+Validation note: The instructor reviews educational suitability and scoring/labeling rules. Predictive performance of the MLR must still be checked with held-out student data.

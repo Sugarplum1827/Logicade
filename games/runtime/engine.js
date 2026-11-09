@@ -3,6 +3,10 @@
 
   const setup = window.LOGICADE_CANVAS_GAME;
   const game = setup?.game;
+  if (game?.mode === 'hidden_archive') {
+    globalThis.LogiCadeArchive.start(setup);
+    return;
+  }
   if(game?.programming?.family==='terminal'){
     globalThis.LogiCadeTerminalNetwork.start(setup);
     return;
@@ -288,10 +292,12 @@
     }
   }
 
+  const study = globalThis.LogiCadeStudyTelemetry;
   function answerQuestion(index) {
     if(state.paused||state.finished)return;
     const task=game.tasks[state.index];if(!task||index<0||index>=task.choices.length)return;
     const correct=index===Number(task.answer_index);
+    study?.submit(post, 'question', task.id || `station-${state.index+1}`, correct, study.takeResponseTime());
     state.answered++;if(!correct){state.errors++;state.lives--;}
     else state.correct++;
     post('question_answered',{entity_id:String(task.id||`station-${state.index+1}`),payload:{
@@ -311,6 +317,7 @@
       announce(state.feedback);
       if(state.lives<=0){finish(false,'lives_exhausted');return;}
     }
+    study?.present();
     draw(performance.now());
   }
   function finish(won,reason) {
@@ -320,11 +327,11 @@
     const videoComplete=MODE==='welcome_video'&&won;
     post('game_over',{won,score:videoComplete?0:Math.round((state.correct/game.tasks.length)*100),accuracy:videoComplete?0:(state.answered?state.correct/state.answered:0),
       answered:videoComplete?0:state.answered,correct:videoComplete?0:state.correct,error_count:state.errors,hint_count:state.hints,
-      duration_sec:duration,reason,formal_assessment:false,accuracy_basis:videoComplete?'orientation_completion':'in_game_questions'});
+      duration_sec:duration,active_play_ms:study?.activePlayMs(),reason,formal_assessment:false,accuracy_basis:videoComplete?'orientation_completion':'in_game_questions'});
     announce(won?'Challenge complete.':'The run ended.');draw(performance.now());
   }
-  function resume(){if(state.finished)return;state.paused=false;state.lastFrame=performance.now();post('game_resumed');draw(state.lastFrame);}
-  function pause(){if(state.finished||state.paused)return;state.paused=true;post('game_paused');draw(performance.now());}
+  function resume(){if(state.finished)return;state.paused=false;study?.setPaused(false);state.lastFrame=performance.now();post('game_resumed');draw(state.lastFrame);}
+  function pause(){if(state.finished||state.paused)return;state.paused=true;study?.setPaused(true);post('game_paused');draw(performance.now());}
   function useHint(hint) {
     if(state.finished||MODE==='welcome_video')return;
     state.hints++;post('hint_used',{entity_id:String(game.tasks[state.index]?.id||''),payload:{station:state.index+1,source:'host_oracle'}});
@@ -335,6 +342,8 @@
   function beginSession() {
     if(state.started)return;
     state.started=true;state.startedAt=performance.now();state.lastFrame=state.startedAt;
+    study?.start();
+    if (MODE !== 'welcome_video') study?.present();
     post('game_started',{game_id:game.file_id,variation_id:game.variation_id,seed:game.seed});
     announce(MODE==='welcome_video'?'Welcome video. Click the screen to enable sound if needed.':`Game started. ${game.tasks[0].prompt}`);
     if(MODE==='welcome_video')startWelcomePlayback();

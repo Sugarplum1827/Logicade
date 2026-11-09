@@ -1,6 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import RegionModal from './RegionModal';
 import LogoutModal from './LogoutModal';
+import SettingsModal from './SettingsModal';
 import { walletStatusText } from '../game/walletBalance';
 import course from '../../../data/curriculum.json';
 import { regionProgress, readCompletedStages, validCompletedStages } from '../game/regionProgress';
@@ -46,10 +47,11 @@ const CP1_WEEKS=REGION_LAYOUTS.map(region=>{const lesson=course.weeks.find(w=>w.
 
 export default function WorldMap({
   studentId, coins, walletStatus = { status: 'unverified' }, avatar, playerLevel, xp,
-  currentSubject, onSwitchSubject, onEnterRegion, onBack, onLogout, tutorial,
+  currentSubject, onSwitchSubject, onEnterRegion, onBack, onLogout, musicEnabled, onToggleMusic, tutorial,
 }) {
   const [selectedWeek, setSelectedWeek] = useState(null);
   const [showLogout, setShowLogout] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const [avatarError, setAvatarError] = useState(false);
   const [showSubjectDropdown, setShowSubjectDropdown] = useState(false);
   const [subjects, setSubjects] = useState(
@@ -118,12 +120,14 @@ export default function WorldMap({
   const currentSubjectName =
     subjects.find((s) => s.id === currentSubject)?.title ||
     'Computer Programming 1';
+  const recommendedWeek = CP1_WEEKS.find(({ week }) => progress[week].unlocked && !progress[week].complete)?.week;
 
   return (
     <div className="world-map-container">
       {tutorial}
       <video
         className="world-map-video"
+        poster="/assets/world_map_bg.png"
         src={`${import.meta.env.BASE_URL}assets/world_map.mp4`}
         autoPlay
         muted
@@ -138,20 +142,21 @@ export default function WorldMap({
           onCancel={() => setShowLogout(false)}
         />
       )}
+      {showSettings && (
+        <SettingsModal musicEnabled={musicEnabled} onToggleMusic={onToggleMusic} onDismiss={() => setShowSettings(false)} />
+      )}
 
       <div className="hud-bar">
         <div className="hud-group">
           <div style={{ position: 'relative' }}>
             <button
-              className="hud-pill"
-              style={{ cursor: 'pointer', border: '2px solid #3e2723', background: 'rgba(255, 248, 225, 0.96)' }}
+              className="hud-pill realm-map-subject"
+              aria-expanded={showSubjectDropdown}
               onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
             >
-              <span style={{ fontSize: '18px' }}>📖</span>
-              <span style={{ fontFamily: 'var(--font-roboto)', fontSize: '10px' }}>
-                {currentSubjectName}
-              </span>
-              <span style={{ fontSize: '10px' }}>▼</span>
+              <span aria-hidden="true">📖</span>
+              <span>{currentSubjectName}</span>
+              <span aria-hidden="true">▾</span>
             </button>
 
             {showSubjectDropdown && (
@@ -188,7 +193,7 @@ export default function WorldMap({
                 style={{ width: `${Math.min(100, (xp / (playerLevel * 100)) * 100)}%` }}
               />
             </div>
-            <span>{xp}/{playerLevel * 100}</span>
+            <span>{xp} / {playerLevel * 100} XP</span>
           </div>
         </div>
 
@@ -222,6 +227,10 @@ export default function WorldMap({
           <button className="btn-map-back" onClick={onBack} aria-label="Back to subject selection">
             SUBJECTS
           </button>
+          <button type="button" className="realm-button realm-map-settings" aria-label="Settings"
+            title="Settings" aria-haspopup="dialog" onClick={() => setShowSettings(true)}>
+            <span aria-hidden="true">⚙</span>
+          </button>
           <button className="btn-logout" onClick={() => setShowLogout(true)}>
             LOGOUT
           </button>
@@ -229,17 +238,21 @@ export default function WorldMap({
       </div>
 
       {CP1_WEEKS.map((w) => {
-        const isUnlocked = progress[w.week].unlocked;
+        const { unlocked: isUnlocked, complete } = progress[w.week];
+        const highlighted = selectedWeek ? selectedWeek.id === w.id : recommendedWeek === w.week;
         return (
           <button
             key={w.id}
-            className={`region-node ${isUnlocked ? 'unlocked' : 'locked'}`}
-            aria-label={`${w.title}, Week ${w.week}, ${isUnlocked ? 'available' : 'locked'}`}
+            className={`region-node ${isUnlocked ? 'unlocked' : 'locked'} ${complete ? 'complete' : ''} ${highlighted ? 'selected' : ''}`}
+            aria-label={`${w.title}, Week ${w.week}, ${complete ? 'completed' : isUnlocked ? 'available' : 'locked'}`}
             style={{ top: w.top, left: w.left }}
             onClick={() => setSelectedWeek(w)}
           >
             <div className="node-title">{w.title}</div>
-            <div className="node-week">Week {w.week}</div>
+            <div className="node-week">
+              {!isUnlocked && <img src="/assets/lock_icon.png" alt="" />}
+              {complete && <span aria-hidden="true">✓ </span>}Week {w.week}
+            </div>
           </button>
         );
       })}

@@ -1,24 +1,24 @@
 {
   "file_id": "game_1128",
-  "game_title": "C Archive · Portability",
+  "game_title": "The Lost Legacy of C · Portability",
   "game_concept": "A speed quiz set in Shadow Cave – Spider Den, a webbed spider den: the shadow ranger must handle rock golems while practicing control flow: while loops. Core idea – Stamina Climb: Keep climbing while stamina > 0, deciding when to rest inside the loop.",
-  "genre": "CP1 challenge; Week 4 theme pending",
+  "genre": "Historical hidden-object investigation",
   "theme": "Shadow Cave – Spider Den: a webbed spider den",
-  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
-  "primary_mechanic": "Stamina Climb",
+  "core_gameplay_loop": "Search the archive, examine recovered computing artifacts, and use their evidence to verify the assigned C lesson.",
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Event log of every action",
     "Bonus coins for fast correct moves"
   ],
-  "player_objective": "Archive variation 8: classify and verify C history, characteristics and language categories for Portability.",
-  "controls": "Read each archive record and choose the supported C fact.",
-  "win_condition": "All researched archive facts are correctly identified.",
-  "lose_condition": "Timer hits 0 with score < 380, or lives reach 0.",
+  "player_objective": "Case 8: Find 5 artifacts, read the evidence, and verify three findings about Portability.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "win_condition": "Recover all 5 artifacts and answer all three evidence checks correctly.",
+  "lose_condition": "The case ends when the available incorrect evidence checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 7,
   "learning_alignment": "CP1 Week 4: Portability",
-  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
+  "assets_style": "Shared archive artwork, illustrated artifacts, and Kenney interface audio.",
   "unique_identity_key": "W4-M03-X2-T10-c4688a70",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Stamina Climb' (Week 4 slot 3), mission type 'Resource Rush', and setting 'Spider Den'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 4,
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
-    "time_limit_seconds": 51,
+    "time_limit_seconds": 0,
     "target_score": 380,
     "action_budget": 18,
     "streak_target": 11,
@@ -45,16 +45,16 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how stamina changes.",
-    "Step 2: Use the controls to apply the code idea against rock golems in Spider Den.",
-    "Step 3: Win by meeting the goal: score >= 380 within 51 seconds."
+    "Match the silhouettes in the tray to the objects in the room.",
+    "Inspect each artifact to read its history.",
+    "Open Evidence to review the records and verify your findings."
   ],
   "canvas_runtime": {
     "engine": "logicade_canvas_v2",
     "game_path": "week_4/level8/standard/game_week4_level8_difficulty(Standard)_8.json",
     "variation_id": "canvas_game_1128",
-    "mode": "pending",
-    "asset_set": "pending",
+    "mode": "hidden_archive",
+    "asset_set": "hidden_archive",
     "playable": true,
     "asset_manifest": "games/assets/manifest.json"
   },
@@ -66,5 +66,6 @@
   "source_time_limit_seconds": 51,
   "learning_objective_id": "cp1_w4_l8",
   "source_week": 4,
-  "source_level": 8
+  "source_level": 8,
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover."
 }

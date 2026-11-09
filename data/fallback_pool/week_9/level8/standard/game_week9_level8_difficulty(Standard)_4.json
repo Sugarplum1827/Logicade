@@ -1,6 +1,6 @@
 {
   "file_id": "game_2624",
-  "game_title": "Flowchart Lab · Boundary inputs",
+  "game_title": "Flowchart Lab · Ship surplus stock",
   "game_concept": "A rhythm puzzle set in Sand Dunes – Buried Temple Steps, steps of a half-buried temple: the camel trader must handle sandstorms while practicing debugging & combined skills. Core idea – Validation Fortress: Write input checks that reject bad data so sandstorms can't sneak through.",
   "genre": "Logic circuit and register puzzle",
   "theme": "Sand Dunes – Buried Temple Steps: steps of a half-buried temple",
@@ -11,7 +11,7 @@
     "Mini-tutorial pop-ups",
     "Reduced-motion and color-blind-safe UI"
   ],
-  "player_objective": "Read score. Display Pass when score ≥ 48; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 4: {'score': 47}; {'score': 49}.",
+  "player_objective": "Read stock and capacity. If stock exceeds capacity, send 6 units per surplus crate. Otherwise send 0. Shipment plan 4 uses capacity 14.",
   "controls": "Drag the flowchart symbols into connected positions, then Check chart.",
   "win_condition": "Construct a complete chart that passes every executable input/output case.",
   "lose_condition": "The available unsuccessful chart checks are exhausted.",

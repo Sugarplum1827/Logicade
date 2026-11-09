@@ -9,6 +9,7 @@ from fastapi import HTTPException
 PRIMARY_KEYS = {
     "levels": "level_id", "level_attempts": "attempt_id", "events": "event_id",
     "coin_transactions": "transaction_id", "difficulty_decisions": "decision_id",
+    "learner_sessions": "session_id",
 }
 
 

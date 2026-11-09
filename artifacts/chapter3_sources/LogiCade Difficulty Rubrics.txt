@@ -1,0 +1,103 @@
+LogiCade Difficulty Rubrics
+Computer Programming 1  |  Proposal for adviser review
+Use this rubric to convert gameplay measurements into per-signal bands for L2-regularized multinomial logistic regression. Use one row per learner per next-stage decision and use only evidence collected before that decision.
+The thresholds are proposed for adviser review and pilot testing. Each band describes one signal. Reviewers assign the overall difficulty label separately using the evidence rubric on the final page.
+Scored Gameplay Signals
+Signal
+How to measure it
+Needs Support
+Standard
+Advanced
+Mistake count
+Count incorrect scored submissions in the preceding stage. One failed program run counts once, even if several test cases fail.
+3 or more
+1–2
+0
+Hint usage
+Count hints actually revealed during the preceding stage. Evaluate zero only when hints were available and affordable.
+3 or more
+1–2
+0
+Completion time
+Compare active seconds on the successful run with the pilot median for comparable stages at the same served difficulty.
+>125% of median
+75–125% of median
+<75% of median
+Attempt count
+Count distinct level runs through the first clear or up to the decision if there is no clear. Preserve each run’s status.
+3 or more
+2
+1
+Accuracy rate
+Divide correct scored checks by all scored checks on the first evaluated run. Record the scoring basis and denominator.
+<60%
+60% to <80%
+80–100%
+First try success
+Use 0 for a failed first evaluated run and 1 for a first-run clear. This feature has two possible values.
+0 · Failed
+No middle band
+1 · Cleared
+
+Scored Gameplay Signals Continued
+Signal
+How to measure it
+Needs Support
+Standard
+Advanced
+Failure rate
+Divide failed runs by all evaluated runs among the last five comparable runs. Require at least three evaluated runs.
+>50%
+Over 0% through 50%
+0%
+Retry count
+Count additional scored submissions for the same question or activity after its first submission in the preceding stage.
+3 or more
+1–2
+0
+Topic mastery
+Measure first-try success across distinct prior tasks tagged with a prerequisite for the next stage. Require at least three relevant tasks.
+<50%
+50% to <80%
+80–100%
+Response time
+Compare median active time to first submission, Run, or Check with the pilot median for the same task type and difficulty.
+>125% of median
+75–125% of median
+<75% of median
+Session duration
+Measure seconds from session start through the decision or earlier session end. Keep for context and timing checks.
+Context only
+Context only
+Context only
+Inactivity time
+Measure paused or hidden seconds in the same session window. Count overlapping intervals once.
+Context only
+Context only
+Context only
+Encoding the Rubric for the Model
+Use comparable evidence. Apply count bands across stages with similar opportunities. If opportunities are unknown, keep the count and leave the band missing. Keep the raw measurements for audit. Treat the two speed bands as supporting evidence. Keep session duration and inactivity as context.
+Encode each band separately. Use a binary indicator for each possible band, including a missing category. For example, three mistakes set mistake_count_needs_support to 1 and the other mistake count indicators to 0. First-try success can enter as 0 or 1 with a separate missing flag.
+Keep the target separate. Store the reviewer’s overall decision in difficulty_label for training. During prediction, send the encoded features and let the model estimate the difficulty. Avoid summing the bands or deriving the reviewer label from them.
+
+Next Stage Difficulty Labels
+Give reviewers the next stage’s objective and prerequisite, along with the learner’s prior work on that prerequisite. Use needs_support, standard, or advanced in the difficulty_label column. Leave it blank for insufficient evidence.
+Label
+Evidence required
+Next stage treatment
+Needs Support
+Across at least two comparable tasks, the learner repeats the same prerequisite misconception or needs step-by-step guidance to complete the core task. A single failure or slow response provides insufficient evidence on its own.
+Use the same objective with more scaffolding, such as starter blocks, a worked example, or intermediate checks.
+Standard
+Across at least two comparable tasks, the learner demonstrates the prerequisite on familiar problems. They can correct errors independently or with a brief prompt and complete the core task.
+Use the regular version with the usual instructions and optional hints.
+Advanced
+Across at least three distinct tasks, the learner applies the prerequisite independently. At least one task demonstrates transfer to a new layout, input pattern, or problem context.
+Use the same objective with more demanding cases, fewer scaffolds, or more interacting steps.
+Insufficient evidence
+Relevant work is too sparse, consists only of exits or unfinished work, or does not support a clear judgment.
+Leave the training label blank and record the reason. Use the approved fallback for live selection.
+Example for C Variable Scope
+A learner who repeatedly expects a local variable to overwrite a global one would receive Needs Support. A learner who correctly traces both values after a brief prompt could receive Standard if the rest of their work supports it. A learner who independently explains the difference and handles a new shadowing case could receive Advanced.
+Reviewer and Model Workflow
+Have two CP1 reviewers label the same pseudonymous histories independently and cite the evidence they used. Hide the current picker’s assignment and later stage outcomes. Resolve disagreements before training. Validate on held-out learners and compare with the existing rule before using the model for live decisions.

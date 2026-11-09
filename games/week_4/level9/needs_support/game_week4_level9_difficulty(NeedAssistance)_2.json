@@ -8,9 +8,9 @@
   "level": 9,
   "trial": 2,
   "difficulty": "Need Assistance",
-  "mode": "pending",
-  "title": "C Archive · Characteristics and limits",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Characteristics and limits",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Underground River: a black underground river",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l9",
   "source_level": 9,
   "source_week": 4,
-  "primary_mechanic": "Countdown Launch",
-  "objective": "Archive variation 2: classify and verify C history, characteristics and language categories for Characteristics and limits.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 76,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 2: Find 5 artifacts, read the evidence, and verify three findings about Characteristics and limits.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 5,
   "seed": 1308052888,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 1308052888,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -118,5 +116,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Characteristics and limits",
   "source_primary_mechanic": "Countdown Launch",
-  "source_code_snippet": "while count > 0:\n    count -= 1"
+  "source_code_snippet": "while count > 0:\n    count -= 1",
+  "archive_evidence": [
+    {
+      "id": "history_9_2",
+      "era": "An imperative program",
+      "history": "C can express a sequence of instructions that updates stored data. An assignment and its effect on later code illustrate that style.",
+      "source": "GNU C Language Introduction and Reference Manual",
+      "art": "book"
+    },
+    {
+      "id": "history_10_5",
+      "era": "When a language gets a book",
+      "history": "The 1978 C book served as a reference for programmers for years before the first C standard was adopted.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "book"
+    },
+    {
+      "id": "lesson_9_1",
+      "era": "Classifying C precisely",
+      "history": "C is general-purpose, procedural and imperative. Middle-level is an informal teaching label. A compiler accepting a program does not prove that it works or runs unchanged everywhere.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_9_4",
+      "era": "Read claims with care",
+      "history": "Compare claims about a language's facilities with claims about a particular program. Testing the program and reviewing portability are still part of the work.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_9_2",
+      "era": "Three different labels",
+      "history": "General-purpose is about the kinds of tasks a language can express. Procedural is about organizing work into functions. Imperative is about executing instructions that can change state.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

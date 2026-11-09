@@ -8,45 +8,59 @@
   "level": 10,
   "trial": 4,
   "difficulty": "Advance",
-  "mode": "circuit",
-  "title": "Examination practice · C Scope Circuit · Scope trace synthesis · variation 4",
-  "display_name": "C Scope Circuit Workshop",
+  "mode": "dungeon",
+  "title": "The Final Expedition · Route 4",
+  "display_name": "The Final Expedition",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
   "topic": "Examination Practice: Weeks 2–8",
   "learning_objectives": [
-    "Scope trace synthesis"
+    "The Final Expedition"
   ],
   "lesson": {
-    "summary": "Local and Global Variables",
+    "summary": "Examination Practice: Weeks 2–8",
     "points": [
-      "Scope trace synthesis",
-      "File-scope variables are declared outside functions; block-scope locals are visible in their block.",
-      "An inner declaration can hide an outer name. Leaving its scope restores the outer declaration.",
-      "Scope differs from lifetime: ordinary automatic locals belong to a block execution; file-scope objects have static storage duration."
+      "The Final Expedition",
+      "Stages cover every topic from Weeks 2–8 using its corresponding activity.",
+      "Apply flowcharts, algorithms, C history, source organization, declarations and scope.",
+      "These gamified examination exercises remain separate from formal pretest/posttest scores and approved assessment scoring."
     ],
-    "example": "#include <stdio.h>\nint score = 2;\nint main(void) {\n { int score = 7; printf(\"%d\\n\", score); }\n printf(\"%d\\n\", score);\n return 0;\n}",
-    "practice": "Scope trace synthesis",
+    "example": "Apply the earlier lessons; read the source-week label on each stage.",
+    "practice": "The Final Expedition",
     "week": 9,
     "source_week": 8,
     "source_level": 10,
-    "objective_id": "cp1_w8_l10",
-    "title": "Local and Global Variables",
-    "stage_title": "Scope trace synthesis",
+    "objective_id": "cp1_w9_capstone",
+    "title": "Examination Practice: Weeks 2–8",
+    "stage_title": "The Final Expedition",
     "objectives": [
-      "Scope trace synthesis"
+      "The Final Expedition"
     ],
     "sources": [
       {
-        "title": "GNU C: variables and scope",
-        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
+        "title": "OpenStax: algorithms and programs",
+        "url": "https://openstax.org/books/introduction-computer-science/pages/3-1-introduction-to-data-structures-and-algorithms"
       },
       {
-        "title": "GNU C Language Manual",
-        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html"
+        "title": "Dennis Ritchie: The Development of the C Language",
+        "url": "https://cm-bell-labs.github.io/who/dmr/chist.html"
+      },
+      {
+        "title": "GCC: header inclusion",
+        "url": "https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html"
+      },
+      {
+        "title": "GNU C: variables and scope",
+        "url": "https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Variables.html"
       }
     ],
     "assessment_kind": "examination_practice",
     "coverage": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
       8
     ],
     "exam_coverage": [
@@ -60,30 +74,31 @@
     ],
     "formal_assessment": false
   },
-  "learning_objective_id": "cp1_w8_l10",
+  "learning_objective_id": "cp1_w9_capstone",
   "source_level": 10,
   "source_week": 8,
-  "primary_mechanic": "circuit construction and execution",
-  "objective": "Week 8 examination practice: Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [17, 8], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 8}. Pass all 3 signal tests.",
-  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
-  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
+  "primary_mechanic": "adventure construction and execution",
+  "objective": "Route 4: verify the shipment flowchart, trace an extra input, identify the C history record, and assemble the source file. Then collect 2 crystal(s) and reach the beacon. In C, initialize file-scope int cargo to 19. Inside a nested block declare a double cargo set to half your shipment trace and print it to one decimal place. After that block, print the restored file-scope cargo as an integer.",
+  "hint": "Work through the expedition checks in the sidebar. When writing C, declare the outer cargo before main and put the decimal cargo inside its own braces.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset. Use the expedition panel to place flowchart symbols, enter the trace, read the archive record, and assemble the source blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 2056850427,
   "layout": {
     "width": 14,
     "height": 9,
-    "gate_order": [
-      "INPUT",
-      "AND",
-      "NOT",
-      "OUTPUT"
+    "grid": [
+      "##############",
+      "#............#",
+      "#.........#..#",
+      "#..##...#..#.#",
+      "#S..........G#",
+      "#.......#!...#",
+      "#..#....##...#",
+      "#..#.........#",
+      "##############"
     ],
-    "switches": [
-      false,
-      true
-    ],
-    "wire_variant": 2
+    "seed": 2056850427
   },
   "programming": {
     "version": 1,
@@ -91,366 +106,441 @@
     "rules": {
       "max_steps": 800,
       "max_lines": 60,
-      "max_nodes": 12
+      "max_nodes": 7
     },
     "construction_timer": false,
     "difficulty_profile": 2,
     "reference_is_practice_only": true,
-    "objective_id": "cp1_w8_l10",
+    "objective_id": "cp1_w9_capstone",
     "source_level": 10,
-    "focus": "Scope trace synthesis",
-    "family": "circuit",
+    "focus": "The Final Expedition",
+    "family": "adventure",
     "language": "c_subset",
-    "circuit_kind": "scope_controller",
-    "title": "Examination practice · C Scope Circuit · Scope trace synthesis · variation 4",
-    "objective": "Week 8 examination practice: Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [17, 8], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 8}. Pass all 3 signal tests.",
-    "nodes": [
-      {
-        "id": "input",
-        "type": "INPUT",
-        "label": "Sensor",
-        "x": 0.02,
-        "y": 0.34,
-        "fixed": true
-      },
-      {
-        "id": "controller",
-        "type": "MCU",
-        "label": "Scope C",
-        "x": 0.19,
-        "y": 0.34
-      },
-      {
-        "id": "split",
-        "type": "SPLITTER",
-        "label": "Broadcast",
-        "x": 0.36,
-        "y": 0.34
-      },
-      {
-        "id": "branch_1",
-        "type": "MCU",
-        "label": "Branch 1",
-        "x": 0.5361776868409414,
-        "y": 0.08
-      },
-      {
-        "id": "branch_2",
-        "type": "MCU",
-        "label": "Branch 2",
-        "x": 0.5306385524045968,
-        "y": 0.39
-      },
-      {
-        "id": "branch_3",
-        "type": "MCU",
-        "label": "Branch 3",
-        "x": 0.5249196076665019,
-        "y": 0.7
-      },
-      {
-        "id": "merge",
-        "type": "MERGER",
-        "label": "Sum all",
-        "x": 0.7,
-        "y": 0.34
-      },
-      {
-        "id": "loop",
-        "type": "LOOP",
-        "label": "Feedback",
-        "passes": 3,
-        "x": 0.85,
-        "y": 0.34
-      },
-      {
-        "id": "output",
-        "type": "OUTPUT",
-        "label": "Probe",
-        "x": 0.96,
-        "y": 0.68,
-        "fixed": true
-      }
+    "title": "The Final Expedition · Route 4",
+    "objective": "Route 4: verify the shipment flowchart, trace an extra input, identify the C history record, and assemble the source file. Then collect 2 crystal(s) and reach the beacon. In C, initialize file-scope int cargo to 19. Inside a nested block declare a double cargo set to half your shipment trace and print it to one decimal place. After that block, print the restored file-scope cargo as an integer.",
+    "map": [
+      "#####################",
+      "#.................#.#",
+      "#...#########...#.#.#",
+      "#...#.#.......#.#.#.#",
+      "##....#.#######.#.#.#",
+      "#.....#.#.......#...#",
+      "#....##.#.###########",
+      "#...#...#...........#",
+      "###.#.###.#######.#.#",
+      "#...#.......#...#.#.#",
+      "#.#########.#....##.#",
+      "#.........#.......#.#",
+      "#...##.##.####....#.#",
+      "#.......#...........#",
+      "#####################"
     ],
-    "wires": [],
-    "palette": [
-      "MCU",
-      "SPLITTER",
-      "MERGER",
-      "LOOP"
-    ],
-    "cases": [
-      {
-        "id": "case_1",
-        "inputs": [
-          17
-        ],
-        "expected": [
-          17,
-          8,
-          2218
-        ]
-      },
-      {
-        "id": "case_2",
-        "inputs": [
-          -17
-        ],
-        "expected": [
-          17,
-          8,
-          -2032
-        ]
-      },
-      {
-        "id": "case_3",
-        "inputs": [
-          24
-        ],
-        "expected": [
-          17,
-          8,
-          3093
-        ]
-      }
-    ],
-    "programs": {
-      "controller": "#include <stdio.h>\n#include \"logicade.h\"\n// Add the required file-scope declaration here.\nint main(void)\n{\n  int signal = readInput();\n  // Complete the scope task and print its trace.\n  writeOutput(signal);\n  return 0;\n}",
-      "branch_1": "#include \"logicade.h\"\nint main(void)\n{\n  int signal = readInput();\n  // Read one signal; add 1; write one result. Each invocation starts fresh C scopes.\n  writeOutput(signal);\n  return 0;\n}",
-      "branch_2": "#include \"logicade.h\"\nint main(void)\n{\n  int signal = readInput();\n  // Read one signal; add 2; write one result. Each invocation starts fresh C scopes.\n  writeOutput(signal);\n  return 0;\n}",
-      "branch_3": "#include \"logicade.h\"\nint main(void)\n{\n  int signal = readInput();\n  // Read one signal; multiply 3; write one result. Each invocation starts fresh C scopes.\n  writeOutput(signal);\n  return 0;\n}"
+    "map_features": {
+      "width": 21,
+      "height": 15,
+      "rooms": 4,
+      "junctions": 54,
+      "dead_ends": 4,
+      "cycles": 34
     },
+    "start": [
+      1,
+      1
+    ],
+    "exit": [
+      19,
+      9
+    ],
+    "gems": [
+      [
+        17,
+        9
+      ],
+      [
+        19,
+        1
+      ]
+    ],
+    "expected_watch": [
+      9.0,
+      19
+    ],
     "expected_globals": {
-      "steps": 8
+      "cargo": 19
     },
-    "scope_trace_length": 2,
-    "signal_network": {
-      "version": 2,
-      "branch_ids": [
-        "branch_1",
-        "branch_2",
-        "branch_3"
-      ],
-      "branch_tasks": {
-        "branch_1": {
-          "operation": "add",
-          "operand": 1,
-          "description": "Read one signal; add 1; write one result. Each invocation starts fresh C scopes."
-        },
-        "branch_2": {
-          "operation": "add",
-          "operand": 2,
-          "description": "Read one signal; add 2; write one result. Each invocation starts fresh C scopes."
-        },
-        "branch_3": {
-          "operation": "multiply",
-          "operand": 3,
-          "description": "Read one signal; multiply 3; write one result. Each invocation starts fresh C scopes."
-        }
-      },
-      "merge_mode": "sum",
-      "passes": 3,
-      "required_wires": [
-        [
-          "input",
-          "controller"
-        ],
-        [
-          "controller",
-          "split"
-        ],
-        [
-          "split",
-          "branch_1"
-        ],
-        [
-          "split",
-          "branch_2"
-        ],
-        [
-          "split",
-          "branch_3"
-        ],
-        [
-          "branch_1",
-          "merge"
-        ],
-        [
-          "branch_2",
-          "merge"
-        ],
-        [
-          "branch_3",
-          "merge"
-        ],
-        [
-          "merge",
-          "loop"
-        ],
-        [
-          "loop",
-          "split"
-        ],
-        [
-          "loop",
-          "output"
-        ]
-      ],
-      "max_queue": 32
-    },
-    "scope_contract": {
-      "global_names": [
-        "steps"
-      ],
-      "local_name": "steps",
-      "minimum_depth": 2,
-      "sibling_blocks": false,
-      "zero_initialized_global": false
-    },
+    "command_budget": 147,
+    "program": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
     "reference": {
-      "nodes": [
-        {
-          "id": "input",
-          "type": "INPUT",
-          "label": "Sensor",
-          "x": 0.02,
-          "y": 0.34,
-          "fixed": true
+      "program": "#include <stdio.h>\n#include \"logicade.h\"\nint cargo = 19;\nint main(void)\n{\n{ double cargo = 18 / 2.0; printf(\"%.1f\\n\", cargo); }\nprintf(\"%d\\n\", cargo);\nmoveRight(16);\nmoveDown(4);\nmoveRight(2);\nmoveUp(4);\nmoveDown(4);\nmoveLeft(2);\nmoveUp(4);\nmoveLeft(2);\nmoveDown(4);\nmoveLeft(6);\nmoveDown(2);\nmoveRight(8);\nmoveDown(2);\nmoveUp(2);\nmoveRight(2);\nmoveDown(2);\nreturn 0;\n}",
+      "chart": {
+        "start": "start",
+        "read": "read",
+        "decide": "decide",
+        "yes": "yes",
+        "no": "no",
+        "end": "end"
+      },
+      "trace_value": 18,
+      "history_choice": 3,
+      "source_order": [
+        "header",
+        "macro",
+        "main",
+        "body",
+        "output",
+        "return"
+      ],
+      "c_categories": {
+        "int": "keyword",
+        "return": "keyword",
+        "main": "identifier",
+        "printf": "identifier",
+        "#include": "directive",
+        "#define": "directive"
+      }
+    },
+    "hint": "Work through the expedition checks in the sidebar. When writing C, declare the outer cargo before main and put the decimal cargo inside its own braces.",
+    "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset. Use the expedition panel to place flowchart symbols, enter the trace, read the archive record, and assemble the source blocks.",
+    "source_week": 8,
+    "capstone": {
+      "coverage": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "flowchart": {
+        "schema_version": 1,
+        "scenario_id": "surplus_shipment",
+        "source_level": 10,
+        "title": "Ship surplus stock",
+        "prompt": "Read stock and capacity. If stock exceeds capacity, send 3 units per surplus crate. Otherwise send 0. Shipment plan 4 uses capacity 19.",
+        "entry": "start",
+        "slots": [
+          {
+            "id": "start",
+            "x": 0.5,
+            "y": 0.08,
+            "number": 1
+          },
+          {
+            "id": "read",
+            "x": 0.5,
+            "y": 0.27,
+            "number": 2
+          },
+          {
+            "id": "decide",
+            "x": 0.5,
+            "y": 0.47,
+            "number": 3
+          },
+          {
+            "id": "yes",
+            "x": 0.76,
+            "y": 0.68,
+            "number": 4
+          },
+          {
+            "id": "no",
+            "x": 0.24,
+            "y": 0.68,
+            "number": 5
+          },
+          {
+            "id": "end",
+            "x": 0.5,
+            "y": 0.9,
+            "number": 6
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "read"
+          },
+          {
+            "from": "read",
+            "to": "decide"
+          },
+          {
+            "from": "decide",
+            "to": "yes",
+            "label": "Yes"
+          },
+          {
+            "from": "decide",
+            "to": "no",
+            "label": "No"
+          },
+          {
+            "from": "yes",
+            "to": "end"
+          },
+          {
+            "from": "no",
+            "to": "end"
+          }
+        ],
+        "pieces": [
+          {
+            "id": "yes",
+            "label": "Send (stock − capacity) × 3",
+            "kind": "output",
+            "action": {
+              "value": {
+                "op": "*",
+                "args": [
+                  {
+                    "op": "-",
+                    "args": [
+                      {
+                        "var": "stock"
+                      },
+                      {
+                        "var": "capacity"
+                      }
+                    ]
+                  },
+                  3
+                ]
+              }
+            }
+          },
+          {
+            "id": "decide",
+            "label": "stock > capacity?",
+            "kind": "decision",
+            "action": {
+              "test": {
+                "op": ">",
+                "args": [
+                  {
+                    "var": "stock"
+                  },
+                  {
+                    "var": "capacity"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "read",
+            "label": "Read stock, capacity",
+            "kind": "input",
+            "action": {
+              "names": [
+                "stock",
+                "capacity"
+              ]
+            }
+          },
+          {
+            "id": "no",
+            "label": "Send 0",
+            "kind": "output",
+            "action": {
+              "value": 0
+            }
+          },
+          {
+            "id": "decoy_reset",
+            "label": "Reset result to 0",
+            "kind": "process",
+            "action": {
+              "values": [
+                {
+                  "name": "result",
+                  "value": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "decoy_symbol",
+            "label": "Display stock > capacity?",
+            "kind": "output",
+            "action": {
+              "value": "Not a calculation"
+            }
+          },
+          {
+            "id": "end",
+            "label": "End",
+            "kind": "end",
+            "action": {}
+          },
+          {
+            "id": "start",
+            "label": "Start",
+            "kind": "start",
+            "action": {}
+          }
+        ],
+        "solution": {
+          "start": "start",
+          "read": "read",
+          "decide": "decide",
+          "yes": "yes",
+          "no": "no",
+          "end": "end"
         },
-        {
-          "id": "controller",
-          "type": "MCU",
-          "label": "Scope C",
-          "x": 0.19,
-          "y": 0.34
+        "cases": [
+          {
+            "id": "case_1",
+            "inputs": {
+              "stock": 18,
+              "capacity": 19
+            },
+            "expected": [
+              0
+            ]
+          },
+          {
+            "id": "case_2",
+            "inputs": {
+              "stock": 19,
+              "capacity": 19
+            },
+            "expected": [
+              0
+            ]
+          },
+          {
+            "id": "case_3",
+            "inputs": {
+              "stock": 23,
+              "capacity": 19
+            },
+            "expected": [
+              12
+            ]
+          },
+          {
+            "id": "case_4",
+            "inputs": {
+              "stock": 4,
+              "capacity": 19
+            },
+            "expected": [
+              0
+            ]
+          }
+        ],
+        "max_steps": 1000,
+        "scaffold": false,
+        "feedback": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+        "source_file_id": "capstone"
+      },
+      "trace_case": {
+        "id": "expedition_trace",
+        "inputs": {
+          "stock": 25,
+          "capacity": 19
         },
-        {
-          "id": "split",
-          "type": "SPLITTER",
-          "label": "Broadcast",
-          "x": 0.36,
-          "y": 0.34
-        },
-        {
-          "id": "branch_1",
-          "type": "MCU",
-          "label": "Branch 1",
-          "x": 0.5361776868409414,
-          "y": 0.08
-        },
-        {
-          "id": "branch_2",
-          "type": "MCU",
-          "label": "Branch 2",
-          "x": 0.5306385524045968,
-          "y": 0.39
-        },
-        {
-          "id": "branch_3",
-          "type": "MCU",
-          "label": "Branch 3",
-          "x": 0.5249196076665019,
-          "y": 0.7
-        },
-        {
-          "id": "merge",
-          "type": "MERGER",
-          "label": "Sum all",
-          "x": 0.7,
-          "y": 0.34
-        },
-        {
-          "id": "loop",
-          "type": "LOOP",
-          "label": "Feedback",
-          "passes": 3,
-          "x": 0.85,
-          "y": 0.34
-        },
+        "expected": [
+          18
+        ]
+      },
+      "history": {
+        "prompt": "Which language preceded C directly?",
+        "record": "C developed in the early 1970s. At Bell Labs, Ritchie built on B to create a systems language suited to the work on Unix.",
+        "source": "Dennis Ritchie, The Development of the C Language",
+        "choices": [
+          "Java",
+          "C#",
+          "Python",
+          "B"
+        ],
+        "answer_index": 3
+      },
+      "scope": {
+        "name": "cargo",
+        "local_type": "double"
+      }
+    },
+    "source_exercise": {
+      "title": "Build and verify a source file",
+      "focus": "Build and verify a source file",
+      "objective_id": "cp1_w5_l10",
+      "prompt": "Build and verify a source file: build a valid C source file that prints 17. Put preprocessing before main; keep declarations and statements inside its body.",
+      "categories": {
+        "int": "keyword",
+        "return": "keyword",
+        "main": "identifier",
+        "printf": "identifier",
+        "#include": "directive",
+        "#define": "directive"
+      },
+      "program": "#include <stdio.h>\n#define LIMIT 16\nint main(void)\n{\nint total = LIMIT + 1;\nprintf(\"%d\\n\", total);\nreturn 0;\n}",
+      "expected": [
+        17
+      ],
+      "parts": [
         {
           "id": "output",
-          "type": "OUTPUT",
-          "label": "Probe",
-          "x": 0.96,
-          "y": 0.68,
-          "fixed": true
+          "label": "Library call and semicolon",
+          "code": "printf(\"%d\\n\", total);"
+        },
+        {
+          "id": "main",
+          "label": "Main function and opening block",
+          "code": "int main(void)\n{"
+        },
+        {
+          "id": "macro",
+          "label": "Object-like macro",
+          "code": "#define LIMIT 16"
+        },
+        {
+          "id": "body",
+          "label": "Declaration and statements",
+          "code": "int total = LIMIT + 1;"
+        },
+        {
+          "id": "return",
+          "label": "Return statement and closing block",
+          "code": "return 0;\n}"
+        },
+        {
+          "id": "header",
+          "label": "Preprocessor include",
+          "code": "#include <stdio.h>"
         }
       ],
-      "wires": [
-        [
-          "input",
-          "controller"
-        ],
-        [
-          "controller",
-          "split"
-        ],
-        [
-          "split",
-          "branch_1"
-        ],
-        [
-          "split",
-          "branch_2"
-        ],
-        [
-          "split",
-          "branch_3"
-        ],
-        [
-          "branch_1",
-          "merge"
-        ],
-        [
-          "branch_2",
-          "merge"
-        ],
-        [
-          "branch_3",
-          "merge"
-        ],
-        [
-          "merge",
-          "loop"
-        ],
-        [
-          "loop",
-          "split"
-        ],
-        [
-          "loop",
-          "output"
-        ]
-      ],
-      "programs": {
-        "controller": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 7;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 17; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
-        "branch_1": "#include \"logicade.h\"\nint adjustment = 1;\nint main(void)\n{\n  int signal = readInput();\n  { int local = adjustment; signal = signal + local; }\n  writeOutput(signal);\n  return 0;\n}",
-        "branch_2": "#include \"logicade.h\"\nint adjustment = 2;\nint main(void)\n{\n  int signal = readInput();\n  { int local = adjustment; signal = signal + local; }\n  writeOutput(signal);\n  return 0;\n}",
-        "branch_3": "#include \"logicade.h\"\nint adjustment = 3;\nint main(void)\n{\n  int signal = readInput();\n  { int local = adjustment; signal = signal * local; }\n  writeOutput(signal);\n  return 0;\n}"
-      },
-      "program": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 7;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 17; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}"
-    },
-    "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
-    "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
-    "source_week": 8
+      "reference_order": [
+        "header",
+        "macro",
+        "main",
+        "body",
+        "output",
+        "return"
+      ]
+    }
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
+    "wall_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r13_c24.png",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
-    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
+    "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg",
+    "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png"
   },
   "tasks": [
     {
       "id": "cp1_w9_l10_v4_2",
       "kind": "program_execution",
-      "prompt": "Week 8 examination practice: Build 3 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [17, 8], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 8}. Pass all 3 signal tests."
+      "prompt": "Route 4: verify the shipment flowchart, trace an extra input, identify the C history record, and assemble the source file. Then collect 2 crystal(s) and reach the beacon. In C, initialize file-scope int cargo to 19. Inside a nested block declare a double cargo set to half your shipment trace and print it to one decimal place. After that block, print the restored file-scope cargo as an integer."
     }
   ],
   "source_path": "week_9/level10/advanced/game_week9_level10_difficulty(Advance)_4.json",
-  "source_topic": "Local and Global Variables",
-  "source_learning_alignment": "CP1 Week 8: Scope trace synthesis",
+  "source_topic": "Examination Practice: Weeks 2–8",
+  "source_learning_alignment": "CP1 Weeks 2–8: The Final Expedition",
   "source_primary_mechanic": "Edge Case Hunter",
-  "source_code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 7;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 17; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
+  "source_code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
   "mechanic_migration": {
     "version": 2,
     "from_family": "circuit",

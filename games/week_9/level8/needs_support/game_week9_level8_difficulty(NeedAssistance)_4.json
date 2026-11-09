@@ -9,7 +9,7 @@
   "trial": 4,
   "difficulty": "Need Assistance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Boundary inputs",
+  "title": "Flowchart Workshop – Ship surplus stock",
   "display_name": "Logic Circuit Workshop",
   "theme": "Sand Dunes – Bone Valley: a valley of bleached bones",
   "topic": "Examination Practice: Weeks 2–8",
@@ -64,7 +64,7 @@
   "source_level": 10,
   "source_week": 2,
   "primary_mechanic": "adventure construction and execution",
-  "objective": "Read score. Display Pass when score ≥ 48; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 4: {'score': 47}; {'score': 49}.",
+  "objective": "Read stock and capacity. If stock exceeds capacity, send 6 units per surplus crate. Otherwise send 0. Shipment plan 4 uses capacity 14.",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
   "time_limit_seconds": 0,
@@ -87,10 +87,10 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_4",
+    "scenario_id": "surplus_shipment",
     "source_level": 10,
-    "title": "Boundary inputs",
-    "prompt": "Read score. Display Pass when score ≥ 48; otherwise display Retry. Check below, equal to and above the boundary. This is an exercise cutoff, not the adaptation rule. Test dataset 4: {'score': 47}; {'score': 49}.",
+    "title": "Ship surplus stock",
+    "prompt": "Read stock and capacity. If stock exceeds capacity, send 6 units per surplus crate. Otherwise send 0. Shipment plan 4 uses capacity 14.",
     "entry": "start",
     "slots": [
       {
@@ -161,16 +161,18 @@
     "pieces": [
       {
         "id": "decide",
-        "label": "score ≥ 48?",
+        "label": "stock > capacity?",
         "kind": "decision",
         "action": {
           "test": {
-            "op": ">=",
+            "op": ">",
             "args": [
               {
-                "var": "score"
+                "var": "stock"
               },
-              48
+              {
+                "var": "capacity"
+              }
             ]
           }
         }
@@ -189,28 +191,45 @@
       },
       {
         "id": "yes",
-        "label": "Write Pass",
+        "label": "Send (stock − capacity) × 6",
         "kind": "output",
         "action": {
-          "value": "Pass"
+          "value": {
+            "op": "*",
+            "args": [
+              {
+                "op": "-",
+                "args": [
+                  {
+                    "var": "stock"
+                  },
+                  {
+                    "var": "capacity"
+                  }
+                ]
+              },
+              6
+            ]
+          }
         }
       },
       {
         "id": "read",
-        "label": "Read score",
+        "label": "Read stock, capacity",
         "kind": "input",
         "action": {
           "names": [
-            "score"
+            "stock",
+            "capacity"
           ]
         }
       },
       {
         "id": "no",
-        "label": "Write Retry",
+        "label": "Send 0",
         "kind": "output",
         "action": {
-          "value": "Retry"
+          "value": 0
         }
       }
     ],
@@ -226,28 +245,31 @@
       {
         "id": "case_1",
         "inputs": {
-          "score": 47
+          "stock": 13,
+          "capacity": 14
         },
         "expected": [
-          "Retry"
+          0
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "score": 48
+          "stock": 14,
+          "capacity": 14
         },
         "expected": [
-          "Pass"
+          0
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "score": 49
+          "stock": 18,
+          "capacity": 14
         },
         "expected": [
-          "Pass"
+          24
         ]
       }
     ],

@@ -35,7 +35,7 @@ STAGES = [
  ['The main function','Blocks and semicolons','Initialization','Ordered assignment','Integer expressions','Formatted output','Read and trace','Repair a short program','Output verification','Program synthesis'],
  ['Declare int','Initialize and add','Assignment versus equality','Multiply state','Signed values','Expression order','Declare float','Declare double','Declare char','Integer division'],
  ['File-scope declarations','Main-local declarations','Global initialization','Read global state','Shadow a global','Nested local blocks','Update visible state','Restore visibility','Compare local and global','Scope trace synthesis'],
- ['Flowchart examination','Algorithm examination','C history/classification examination','C component examination','Simple program examination','Declaration examination','Scope examination','Flowchart application','Source organization application','Local/global synthesis'],
+ ['Flowchart examination','Algorithm examination','C history/classification examination','C component examination','Simple program examination','Declaration examination','Scope examination','Flowchart application','Source organization application','The Final Expedition'],
 ]
 SOURCE_IDS = [[], ['flowcharts','algorithms'], ['algorithms'], ['history','c'], ['cpp','macros','c'], ['basics','c'], ['basics','variables'], ['variables','c'], ['algorithms','history','cpp','variables']]
 EXAMPLES = ['', 'Start → Read n → n > 0? → Yes/No output → End', 'READ x; ADD 3; OUTPUT result',
@@ -56,8 +56,9 @@ def main():
                   stage_objective_policy='Level fixes the learning focus; variations change problems, fixtures and layouts within that focus.',
                   sources={key:{'title':title,'url':url} for key,(title,url) in SOURCES.items()},
                   exam_blueprint={str(k):v for k,v in {1:2,2:3,3:4,4:5,5:6,6:7,7:8,8:2,9:5,10:8}.items()},
+                  exam_capstone={'stage':10,'objective_id':'cp1_w9_capstone','coverage':list(range(2,9))},
                   exam_level_blueprint={str(k):v for k,v in {1:10,2:10,3:10,4:10,5:10,6:10,7:9,8:10,9:9,10:10}.items()})
-    course['weeks'][8]['genres']=['circuit','terminal','pending','factory','dungeon']
+    course['weeks'][8]['genres']=['circuit','terminal','hidden_archive','factory','dungeon']
     path.write_text(json.dumps(course,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 if __name__ == '__main__': main()

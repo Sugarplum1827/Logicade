@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <linearGradient id="gold" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fff4aa"/><stop offset=".24" stop-color="#ffc544"/><stop offset=".48" stop-color="#9d4709"/><stop offset=".72" stop-color="#f4a51a"/><stop offset="1" stop-color="#fff1a0"/>
+    </linearGradient>
+    <path id="corner" d="M30 5H15C9 5 4 9 4 15v15h5V19c0-2 2-4 4-4h5c4 0 7-3 7-6h5zM9 11h9l-7 7z"/>
+  </defs>
+  <rect x="3" y="3" width="90" height="90" rx="11" fill="none" stroke="#421d06" stroke-width="6"/>
+  <rect x="4" y="4" width="88" height="88" rx="10" fill="none" stroke="url(#gold)" stroke-width="5"/>
+  <rect x="8" y="8" width="80" height="80" rx="7" fill="none" stroke="#93510c" stroke-width="1.5"/>
+  <g fill="url(#gold)" stroke="#914208" stroke-width="1.15" stroke-linejoin="round" fill-rule="evenodd">
+    <use href="#corner"/><use href="#corner" transform="translate(96 0) scale(-1 1)"/>
+    <use href="#corner" transform="translate(0 96) scale(1 -1)"/><use href="#corner" transform="translate(96 96) scale(-1)"/>
+  </g>
+  <g fill="#4cd3ff" stroke="#583403" stroke-width="1">
+    <path id="gem" d="M8 14l4 4-4 4-4-4z"/>
+    <use href="#gem" transform="translate(96 0) scale(-1 1)"/>
+    <use href="#gem" transform="translate(0 96) scale(1 -1)"/>
+    <use href="#gem" transform="translate(96 96) scale(-1)"/>
+  </g>
+</svg>

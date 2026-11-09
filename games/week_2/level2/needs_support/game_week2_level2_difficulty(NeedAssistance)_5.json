@@ -9,7 +9,7 @@
   "trial": 5,
   "difficulty": "Need Assistance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Input and output",
+  "title": "Flowchart Lab · Input and output",
   "display_name": "Logic Circuit Workshop",
   "theme": "Mt. Pyre – Smoke Ridge: a ridge shrouded in ash",
   "topic": "Flowcharting",
@@ -56,12 +56,12 @@
   "source_level": 2,
   "source_week": 2,
   "primary_mechanic": "circuit construction and execution",
-  "objective": "Read value for station 5, then display the same value without changing it. Test dataset 5: {'value': -5}; {'value': 15}.",
+  "objective": "Read value for station 2, then display the same value without changing it. Problem values 15, 5; test inputs [{'value': -20}, {'value': 15}, {'value': -15}].",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
-  "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 5,
-  "seed": 163207608,
+  "seed": 12345,
   "layout": {
     "width": 14,
     "height": 9,
@@ -82,7 +82,7 @@
     "scenario_id": "flowchart_1",
     "source_level": 2,
     "title": "Input and output",
-    "prompt": "Read value for station 5, then display the same value without changing it. Test dataset 5: {'value': -5}; {'value': 15}.",
+    "prompt": "Read value for station 2, then display the same value without changing it. Problem values 15, 5; test inputs [{'value': -20}, {'value': 15}, {'value': -15}].",
     "entry": "start",
     "slots": [
       {
@@ -126,6 +126,22 @@
     ],
     "pieces": [
       {
+        "id": "read",
+        "label": "Read value",
+        "kind": "input",
+        "action": {
+          "names": [
+            "value"
+          ]
+        }
+      },
+      {
+        "id": "start",
+        "label": "Start",
+        "kind": "start",
+        "action": {}
+      },
+      {
         "id": "write",
         "label": "Write value",
         "kind": "output",
@@ -140,22 +156,6 @@
         "label": "End",
         "kind": "end",
         "action": {}
-      },
-      {
-        "id": "start",
-        "label": "Start",
-        "kind": "start",
-        "action": {}
-      },
-      {
-        "id": "read",
-        "label": "Read value",
-        "kind": "input",
-        "action": {
-          "names": [
-            "value"
-          ]
-        }
       }
     ],
     "solution": {
@@ -168,37 +168,28 @@
       {
         "id": "case_1",
         "inputs": {
-          "value": -5
+          "value": -20
         },
         "expected": [
-          -5
+          -20
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "value": 0
+          "value": 15
         },
         "expected": [
-          0
+          15
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "value": 12
+          "value": -15
         },
         "expected": [
-          12
-        ]
-      },
-      {
-        "id": "case_4",
-        "inputs": {
-          "value": 15
-        },
-        "expected": [
-          15
+          -15
         ]
       }
     ],
@@ -217,27 +208,69 @@
     {
       "id": "start",
       "kind": "flowchart_node",
-      "prompt": "Build position 1 in the requested chart."
+      "prompt": "Build position 1."
     },
     {
       "id": "read",
       "kind": "flowchart_node",
-      "prompt": "Build position 2 in the requested chart."
+      "prompt": "Build position 2."
     },
     {
       "id": "write",
       "kind": "flowchart_node",
-      "prompt": "Build position 3 in the requested chart."
+      "prompt": "Build position 3."
     },
     {
       "id": "end",
       "kind": "flowchart_node",
-      "prompt": "Build position 4 in the requested chart."
+      "prompt": "Build position 4."
     }
   ],
   "source_path": "week_2/level2/needs_support/game_week2_level2_difficulty(NeedAssistance)_5.json",
   "source_topic": "Flowcharting",
   "source_learning_alignment": "CP1 Week 2: Input/output",
   "source_primary_mechanic": "Comparison Duel",
-  "source_code_snippet": "power > shield"
+  "source_code_snippet": "power > shield",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 2,
+        "level": 2,
+        "source_week": 2,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w2_l2",
+        "difficulty": "needs_support",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -20,
+          15,
+          -15
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "0c84858ecee4e3d8bff68d4268a4877e5853d5770f1899118e5d901ef7f43209",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "4a43663c2c7b2986831b7ed449441baede06bfed60e7bcc7a778cac965a7b87a",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 3,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794198334.4492514,
+    "origin": "ollama",
+    "job_id": "786873cb292908bd840caa3f4b2dd007a55bb5b4d4430ad2eae4b1bac7f124b4",
+    "replaces_revision": "aa2008ab8cee37d19dcebbaac1ab52f0a1297e1c236d638021b2f368232bcebd"
+  }
 }

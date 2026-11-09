@@ -9,7 +9,7 @@
   "trial": 1,
   "difficulty": "Need Assistance",
   "mode": "circuit",
-  "title": "Flowchart Workshop – Add two numbers",
+  "title": "Flowchart Workshop – Ship surplus stock",
   "display_name": "Logic Circuit Workshop",
   "theme": "Sand Dunes – Camel Trail: a camel trail",
   "topic": "Examination Practice: Weeks 2–8",
@@ -64,7 +64,7 @@
   "source_level": 10,
   "source_week": 2,
   "primary_mechanic": "adventure construction and execution",
-  "objective": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 1: {'a': 1, 'b': 3}; {'a': 0, 'b': 2}.",
+  "objective": "Read stock and capacity. If stock exceeds capacity, send 3 units per surplus crate. Otherwise send 0. Shipment plan 1 uses capacity 11.",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
   "controls": "Click or press 1–4 to solve a gate; Escape pauses.",
   "time_limit_seconds": 0,
@@ -87,41 +87,47 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_1",
+    "scenario_id": "surplus_shipment",
     "source_level": 10,
-    "title": "Add two numbers",
-    "prompt": "Build a flowchart that reads a and b, adds them, and displays their sum. Test dataset 1: {'a': 1, 'b': 3}; {'a': 0, 'b': 2}.",
+    "title": "Ship surplus stock",
+    "prompt": "Read stock and capacity. If stock exceeds capacity, send 3 units per surplus crate. Otherwise send 0. Shipment plan 1 uses capacity 11.",
     "entry": "start",
     "slots": [
       {
         "id": "start",
-        "x": 0.45,
+        "x": 0.5,
         "y": 0.08,
         "number": 1
       },
       {
         "id": "read",
-        "x": 0.45,
-        "y": 0.29,
+        "x": 0.5,
+        "y": 0.27,
         "number": 2
       },
       {
-        "id": "calculate",
-        "x": 0.45,
-        "y": 0.5,
+        "id": "decide",
+        "x": 0.5,
+        "y": 0.47,
         "number": 3
       },
       {
-        "id": "write",
-        "x": 0.45,
-        "y": 0.71,
+        "id": "yes",
+        "x": 0.24,
+        "y": 0.68,
         "number": 4
       },
       {
-        "id": "end",
-        "x": 0.45,
-        "y": 0.9199999999999999,
+        "id": "no",
+        "x": 0.76,
+        "y": 0.68,
         "number": 5
+      },
+      {
+        "id": "end",
+        "x": 0.5,
+        "y": 0.9,
+        "number": 6
       }
     ],
     "edges": [
@@ -131,28 +137,28 @@
       },
       {
         "from": "read",
-        "to": "calculate"
+        "to": "decide"
       },
       {
-        "from": "calculate",
-        "to": "write"
+        "from": "decide",
+        "to": "yes",
+        "label": "Yes"
       },
       {
-        "from": "write",
+        "from": "decide",
+        "to": "no",
+        "label": "No"
+      },
+      {
+        "from": "yes",
+        "to": "end"
+      },
+      {
+        "from": "no",
         "to": "end"
       }
     ],
     "pieces": [
-      {
-        "id": "write",
-        "label": "Write sum",
-        "kind": "output",
-        "action": {
-          "value": {
-            "var": "sum"
-          }
-        }
-      },
       {
         "id": "start",
         "label": "Start",
@@ -166,76 +172,104 @@
         "action": {}
       },
       {
+        "id": "yes",
+        "label": "Send (stock − capacity) × 3",
+        "kind": "output",
+        "action": {
+          "value": {
+            "op": "*",
+            "args": [
+              {
+                "op": "-",
+                "args": [
+                  {
+                    "var": "stock"
+                  },
+                  {
+                    "var": "capacity"
+                  }
+                ]
+              },
+              3
+            ]
+          }
+        }
+      },
+      {
+        "id": "no",
+        "label": "Send 0",
+        "kind": "output",
+        "action": {
+          "value": 0
+        }
+      },
+      {
         "id": "read",
-        "label": "Read a, b",
+        "label": "Read stock, capacity",
         "kind": "input",
         "action": {
           "names": [
-            "a",
-            "b"
+            "stock",
+            "capacity"
           ]
         }
       },
       {
-        "id": "calculate",
-        "label": "sum = a + b",
-        "kind": "process",
+        "id": "decide",
+        "label": "stock > capacity?",
+        "kind": "decision",
         "action": {
-          "values": [
-            {
-              "name": "sum",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "a"
-                  },
-                  {
-                    "var": "b"
-                  }
-                ]
+          "test": {
+            "op": ">",
+            "args": [
+              {
+                "var": "stock"
+              },
+              {
+                "var": "capacity"
               }
-            }
-          ]
+            ]
+          }
         }
       }
     ],
     "solution": {
       "start": "start",
       "read": "read",
-      "calculate": "calculate",
-      "write": "write",
+      "decide": "decide",
+      "yes": "yes",
+      "no": "no",
       "end": "end"
     },
     "cases": [
       {
         "id": "case_1",
         "inputs": {
-          "a": 1,
-          "b": 3
+          "stock": 10,
+          "capacity": 11
         },
         "expected": [
-          4
+          0
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "a": -1,
-          "b": 6
+          "stock": 11,
+          "capacity": 11
         },
         "expected": [
-          5
+          0
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "a": 0,
-          "b": 2
+          "stock": 12,
+          "capacity": 11
         },
         "expected": [
-          2
+          3
         ]
       }
     ],
@@ -262,19 +296,24 @@
       "prompt": "Build position 2 in the requested chart."
     },
     {
-      "id": "calculate",
+      "id": "decide",
       "kind": "flowchart_node",
       "prompt": "Build position 3 in the requested chart."
     },
     {
-      "id": "write",
+      "id": "yes",
       "kind": "flowchart_node",
       "prompt": "Build position 4 in the requested chart."
     },
     {
-      "id": "end",
+      "id": "no",
       "kind": "flowchart_node",
       "prompt": "Build position 5 in the requested chart."
+    },
+    {
+      "id": "end",
+      "kind": "flowchart_node",
+      "prompt": "Build position 6 in the requested chart."
     }
   ],
   "source_path": "week_9/level8/needs_support/game_week9_level8_difficulty(NeedAssistance)_1.json",

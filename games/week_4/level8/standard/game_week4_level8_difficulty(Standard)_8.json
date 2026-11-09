@@ -8,9 +8,9 @@
   "level": 8,
   "trial": 8,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · Portability",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Portability",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Spider Den: a webbed spider den",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l8",
   "source_level": 8,
   "source_week": 4,
-  "primary_mechanic": "Stamina Climb",
-  "objective": "Archive variation 8: classify and verify C history, characteristics and language categories for Portability.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 51,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 8: Find 5 artifacts, read the evidence, and verify three findings about Portability.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 1991372725,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 1991372725,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Portability",
   "source_primary_mechanic": "Stamina Climb",
-  "source_code_snippet": "while stamina > 0:\n    climb()"
+  "source_code_snippet": "while stamina > 0:\n    climb()",
+  "archive_evidence": [
+    {
+      "id": "history_8_8",
+      "era": "A standard for shared behavior",
+      "history": "The ANSI committee began its work in 1983 with portability as a goal. A documented language and library gave implementations a shared specification.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "standard"
+    },
+    {
+      "id": "history_4_1",
+      "era": "From kernel to utilities",
+      "history": "The team went on to rewrite Unix utilities after the kernel rewrite showed that C could handle systems work efficiently.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "unix"
+    },
+    {
+      "id": "lesson_8_1",
+      "era": "What moves between systems",
+      "history": "Portability concerns moving source between environments. Different type limits or implementation choices can affect behavior. Check documented limits and avoid undocumented assumptions.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_8_4",
+      "era": "An assumption to check",
+      "history": "When code assumes a particular numeric range, identify the required range and check what the target implementation actually provides.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_8_2",
+      "era": "Test on the intended target",
+      "history": "A program can compile on two implementations and still behave differently. Tests on both targets can expose a difference that the compiler alone cannot detect.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

@@ -4,7 +4,8 @@
     if(!lesson)return;
     const details=document.createElement('details');details.className=dock?'lesson-guide lesson-guide-dock':'lesson-guide';
     const add=(tag,text)=>{const el=document.createElement(tag);el.textContent=text;details.appendChild(el);return el;};
-    add('summary',lesson.week===9?`Week 9 examination practice · Week ${lesson.source_week}`:`Week ${lesson.source_week} lesson · ${lesson.stage_title}`);
+    const review = lesson.coverage?.length > 1 ? 'Weeks 2–8' : `Week ${lesson.source_week}`;
+    add('summary',lesson.week===9?`Week 9 examination practice · ${review}`:`Week ${lesson.source_week} lesson · ${lesson.stage_title}`);
     add('h2',lesson.title);for(const point of lesson.points||[])add('p',point);
     if(lesson.example)add('pre',lesson.example);
     add('p',lesson.assessment_kind==='examination_practice'?'Examination practice. Results remain separate from formal pretest/posttest scores.':'Apply this lesson in the current mission.');
@@ -26,6 +27,11 @@
   function stepsFor(game) {
     const m=game.programming;
     if(game.mode==='welcome_video')return [];
+    if(game.mode==='hidden_archive')return [
+      dom('.archive-tray','What to look for','Match each silhouette and name to an artifact scattered around the room. Click an artifact or focus it with Tab and press Enter.'),
+      dom('.archive-object','Inspect a clue','An artifact opens a historical record the first time you find it. The counter tracks unique discoveries.'),
+      dom('.archive-evidence','Use the Evidence folder','Reopen discovered records here. Find all five artifacts to unlock three evidence checks on this stage’s topic.')
+    ];
     if(game.flowchart) {
       // These coordinates match the renderer's responsive Canvas geometry.
       const shape = (part) => (canvas) => {
@@ -87,7 +93,10 @@
     if(week<1||week>9||level!==(week===1?2:1))return;
     const steps=stepsFor(game);if(!steps.length)return;
     opened=true;guide.active=true;const started=performance.now();
-    const send=type=>window.parent.postMessage({channel:'logicade-game',version:1,type},'*');
+    const send=type=>{
+      window.dispatchEvent(new Event('logicade:guidance_changed'));
+      window.parent.postMessage({channel:'logicade-game',version:1,type},'*');
+    };
     send('guidance_started');
     const savedFocus=document.activeElement,scrollPositions=new Map();
     const root=document.createElement('div');root.className='first-visit-guide';

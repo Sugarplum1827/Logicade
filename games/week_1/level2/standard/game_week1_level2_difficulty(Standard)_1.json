@@ -9,7 +9,7 @@
   "trial": 1,
   "difficulty": "Standard",
   "mode": "tetris",
-  "title": "Flowchart Workshop – Add two numbers",
+  "title": "Flowchart Lab · Rectangle area",
   "display_name": "Flowchart Block Puzzle",
   "theme": "The Kingdom – Archery Yard: the garrison archery yard",
   "topic": "Flowchart Symbols and Control Flow",
@@ -49,12 +49,12 @@
   "source_level": 2,
   "source_week": 1,
   "primary_mechanic": "Drag-and-drop flowchart construction",
-  "objective": "Build a flowchart that reads a and b, adds them, and displays their sum.",
+  "objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 10, 'height': 5}, {'width': 0, 'height': 6}, {'width': 10, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
   "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
-  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "time_limit_seconds": 0,
   "starting_lives": 3,
-  "seed": 2079051293,
+  "seed": 12345,
   "layout": {
     "interaction": "flowchart_drag_drop",
     "columns": 12,
@@ -63,10 +63,10 @@
   },
   "flowchart": {
     "schema_version": 1,
-    "scenario_id": "flowchart_1",
+    "scenario_id": "flowchart_2",
     "source_level": null,
-    "title": "Add two numbers",
-    "prompt": "Build a flowchart that reads a and b, adds them, and displays their sum.",
+    "title": "Rectangle area",
+    "prompt": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 15, 5; test inputs [{'width': 10, 'height': 5}, {'width': 0, 'height': 6}, {'width': 10, 'height': 7}, {'width': 15, 'height': 15}, {'width': 15, 'height': 5}].",
     "entry": "start",
     "slots": [
       {
@@ -120,50 +120,6 @@
     ],
     "pieces": [
       {
-        "id": "write",
-        "label": "Write sum",
-        "kind": "output",
-        "action": {
-          "value": {
-            "var": "sum"
-          }
-        }
-      },
-      {
-        "id": "calculate",
-        "label": "sum = a + b",
-        "kind": "process",
-        "action": {
-          "values": [
-            {
-              "name": "sum",
-              "value": {
-                "op": "+",
-                "args": [
-                  {
-                    "var": "a"
-                  },
-                  {
-                    "var": "b"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "read",
-        "label": "Read a, b",
-        "kind": "input",
-        "action": {
-          "names": [
-            "a",
-            "b"
-          ]
-        }
-      },
-      {
         "id": "decoy_reset",
         "label": "Reset result to 0",
         "kind": "process",
@@ -183,10 +139,54 @@
         "action": {}
       },
       {
+        "id": "read",
+        "label": "Read width, height",
+        "kind": "input",
+        "action": {
+          "names": [
+            "width",
+            "height"
+          ]
+        }
+      },
+      {
+        "id": "calculate",
+        "label": "area = width × height",
+        "kind": "process",
+        "action": {
+          "values": [
+            {
+              "name": "area",
+              "value": {
+                "op": "*",
+                "args": [
+                  {
+                    "var": "width"
+                  },
+                  {
+                    "var": "height"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "id": "start",
         "label": "Start",
         "kind": "start",
         "action": {}
+      },
+      {
+        "id": "write",
+        "label": "Write area",
+        "kind": "output",
+        "action": {
+          "value": {
+            "var": "area"
+          }
+        }
       }
     ],
     "solution": {
@@ -200,31 +200,51 @@
       {
         "id": "case_1",
         "inputs": {
-          "a": 2,
-          "b": 3
+          "width": 10,
+          "height": 5
         },
         "expected": [
-          5
+          50
         ]
       },
       {
         "id": "case_2",
         "inputs": {
-          "a": -4,
-          "b": 7
+          "width": 0,
+          "height": 6
         },
         "expected": [
-          3
+          0
         ]
       },
       {
         "id": "case_3",
         "inputs": {
-          "a": 0,
-          "b": 0
+          "width": 10,
+          "height": 7
         },
         "expected": [
-          0
+          70
+        ]
+      },
+      {
+        "id": "case_4",
+        "inputs": {
+          "width": 15,
+          "height": 15
+        },
+        "expected": [
+          225
+        ]
+      },
+      {
+        "id": "case_5",
+        "inputs": {
+          "width": 15,
+          "height": 5
+        },
+        "expected": [
+          75
         ]
       }
     ],
@@ -245,32 +265,74 @@
     {
       "id": "start",
       "kind": "flowchart_node",
-      "prompt": "Build position 1 in the requested chart."
+      "prompt": "Build position 1."
     },
     {
       "id": "read",
       "kind": "flowchart_node",
-      "prompt": "Build position 2 in the requested chart."
+      "prompt": "Build position 2."
     },
     {
       "id": "calculate",
       "kind": "flowchart_node",
-      "prompt": "Build position 3 in the requested chart."
+      "prompt": "Build position 3."
     },
     {
       "id": "write",
       "kind": "flowchart_node",
-      "prompt": "Build position 4 in the requested chart."
+      "prompt": "Build position 4."
     },
     {
       "id": "end",
       "kind": "flowchart_node",
-      "prompt": "Build position 5 in the requested chart."
+      "prompt": "Build position 5."
     }
   ],
   "source_path": "week_1/level2/standard/game_week1_level2_difficulty(Standard)_1.json",
   "source_topic": "Orientation",
   "source_learning_alignment": "CP1 Week 1: Controls and mission practice",
   "source_primary_mechanic": "Rename Rush",
-  "source_code_snippet": "player_name = 'Ada'"
+  "source_code_snippet": "player_name = 'Ada'",
+  "generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 15,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          0,
+          10
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "42c61bf1b25c98fa798eb1c312c9223ca8152eb3c44861e787c0cb12f868ba21",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "3a7fe089a67ad8d0739246d084b878a362c92fb1329c880a49b603faa9f1a075",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 5,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1793352741.001805,
+    "origin": "ollama",
+    "job_id": "ec24066cde76046cd14a938af1a091a389f79b61dc015e52687dd7c0281844bf",
+    "replaces_revision": "cf45658a32f52bdf1ed6ff62604efb0a9f05bab942081f317b603acd0e5a716f"
+  }
 }

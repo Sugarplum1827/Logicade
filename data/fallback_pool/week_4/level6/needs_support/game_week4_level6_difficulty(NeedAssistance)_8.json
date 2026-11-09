@@ -1,24 +1,24 @@
 {
   "file_id": "game_1058",
-  "game_title": "C Archive · Imperative operations",
+  "game_title": "The Lost Legacy of C · Imperative operations",
   "game_concept": "A action puzzle set in Shadow Cave – Exit Light Ledge, a ledge toward daylight: the spelunker must handle cave spiders while practicing control flow: while loops. Core idea – Dam Filler: Raise the water level in a loop while level < max, without overflowing.",
-  "genre": "CP1 challenge; Week 4 theme pending",
+  "genre": "Historical hidden-object investigation",
   "theme": "Shadow Cave – Exit Light Ledge: a ledge toward daylight",
-  "core_gameplay_loop": "Solve the CP1 stations in the shared Canvas shell while the Week 4 game theme awaits course approval.",
-  "primary_mechanic": "Dam Filler",
+  "core_gameplay_loop": "Search the archive, examine recovered computing artifacts, and use their evidence to verify the assigned C lesson.",
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
   "secondary_mechanics": [
     "Countdown timer with score multiplier",
     "Bonus coins for fast correct moves",
     "Event log of every action"
   ],
-  "player_objective": "Archive variation 8: classify and verify C history, characteristics and language categories for Imperative operations.",
-  "controls": "Read each archive record and choose the supported C fact.",
-  "win_condition": "All researched archive facts are correctly identified.",
-  "lose_condition": "Timer hits 0 with score < 210, or lives reach 0.",
+  "player_objective": "Case 8: Find 5 artifacts, read the evidence, and verify three findings about Imperative operations.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "win_condition": "Recover all 5 artifacts and answer all three evidence checks correctly.",
+  "lose_condition": "The case ends when the available incorrect evidence checks are exhausted.",
   "difficulty": "Need Assistance",
   "estimated_play_time_minutes": 6,
   "learning_alignment": "CP1 Week 4: Imperative operations",
-  "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
+  "assets_style": "Shared archive artwork, illustrated artifacts, and Kenney interface audio.",
   "unique_identity_key": "W4-M08-X2-T20-82f16924",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Dam Filler' (Week 4 slot 8), mission type 'Resource Rush', and setting 'Exit Light Ledge'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 4,
@@ -35,7 +35,7 @@
   "game_settings": {
     "lives": 5,
     "hint_count": 5,
-    "time_limit_seconds": 63,
+    "time_limit_seconds": 0,
     "target_score": 210,
     "action_budget": 21,
     "streak_target": 8,
@@ -45,16 +45,16 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Step 1: Look at the code panel. It shows how level changes.",
-    "Step 2: Use the controls to apply the code idea against cave spiders in Exit Light Ledge.",
-    "Step 3: Win by meeting the goal: score >= 210 within 63 seconds."
+    "Match the silhouettes in the tray to the objects in the room.",
+    "Inspect each artifact to read its history.",
+    "Open Evidence to review the records and verify your findings."
   ],
   "canvas_runtime": {
     "engine": "logicade_canvas_v2",
     "game_path": "week_4/level6/needs_support/game_week4_level6_difficulty(NeedAssistance)_8.json",
     "variation_id": "canvas_game_1058",
-    "mode": "pending",
-    "asset_set": "pending",
+    "mode": "hidden_archive",
+    "asset_set": "hidden_archive",
     "playable": true,
     "asset_manifest": "games/assets/manifest.json"
   },
@@ -66,5 +66,6 @@
   "source_time_limit_seconds": 63,
   "learning_objective_id": "cp1_w4_l6",
   "source_week": 4,
-  "source_level": 6
+  "source_level": 6,
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover."
 }

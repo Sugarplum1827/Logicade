@@ -122,7 +122,7 @@
       ],
       "mechanic": "Dennis Ritchie developed C at Bell Labs in the early 1970s, building on B in the Unix environment.",
       "genres": [
-        "pending"
+        "hidden_archive"
       ],
       "stages": [
         "C origins",
@@ -325,7 +325,7 @@
       "genres": [
         "circuit",
         "terminal",
-        "pending",
+        "hidden_archive",
         "factory",
         "dungeon"
       ],
@@ -339,7 +339,7 @@
         "Scope examination",
         "Flowchart application",
         "Source organization application",
-        "Local/global synthesis"
+        "The Final Expedition"
       ],
       "source_ids": [
         "algorithms",
@@ -355,7 +355,7 @@
           "These gamified examination exercises remain separate from formal pretest/posttest scores and approved assessment scoring."
         ],
         "example": "Apply the earlier lessons; read the source-week label on each stage.",
-        "practice": "Local/global synthesis"
+        "practice": "The Final Expedition"
       }
     }
   ],
@@ -406,6 +406,11 @@
     "10": 8
   },
   "stage_objective_policy": "Level fixes the learning focus; variations change problems, fixtures and layouts within that focus.",
+  "exam_capstone": {
+    "stage": 10,
+    "objective_id": "cp1_w9_capstone",
+    "coverage": [2, 3, 4, 5, 6, 7, 8]
+  },
   "exam_level_blueprint": {
     "1": 10,
     "2": 10,

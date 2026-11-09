@@ -11,3 +11,7 @@
 .scope-connections{font:12px/1.7 Consolas,monospace;padding-left:18px;color:#bce9dc}.scope-node-task{padding:9px;background:#183d44;border-left:3px solid #dfbd6b}.workbench-editors label:has(input[type=checkbox]){display:flex;align-items:center;gap:8px}.workbench-editors label input[type=checkbox]{order:-1}
 @media(max-width:850px){.workbench-layout{grid-template-columns:minmax(0,1fr) 285px}.workbench-sidebar{padding:10px}.workbench-header{font-size:12px;padding:9px}.programming-workbench button{font-size:12px;padding:8px}}
 @media(max-width:600px){.workbench-layout{display:flex;flex-direction:column;overflow:auto}.workbench-world{height:52vh;min-height:300px;flex-shrink:0}.workbench-sidebar{overflow:visible;border-left:0}.workbench-controls{flex-wrap:wrap}.workbench-header{flex-direction:column;gap:4px}}
+.expedition-checks details { margin-block: .5rem; padding: .5rem; border: 1px solid currentColor; border-radius: .3rem; }
+.expedition-checks summary { cursor: pointer; font-weight: 700; }
+.expedition-checks label { display: block; margin-block: .45rem; }
+.expedition-checks select, .expedition-checks input { display: block; width: 100%; max-width: 100%; }

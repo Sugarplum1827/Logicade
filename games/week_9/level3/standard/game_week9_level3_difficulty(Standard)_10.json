@@ -8,9 +8,9 @@
   "level": 3,
   "trial": 10,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · History/classification review",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · History/classification review",
+  "display_name": "The Lost Legacy of C",
   "theme": "Sand Dunes – Sundial Plaza: a giant sundial plaza",
   "topic": "Examination Practice: Weeks 2–8",
   "learning_objectives": [
@@ -63,21 +63,19 @@
   "learning_objective_id": "cp1_w4_l10",
   "source_level": 10,
   "source_week": 4,
-  "primary_mechanic": "adventure construction and execution",
-  "objective": "Archive variation 10: classify and verify C history, characteristics and language categories for History/classification review.",
-  "hint": "Use the Examination Practice: Weeks 2–8 idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 10: Find 5 artifacts, read the evidence, and verify three findings about History/classification review.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
   "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 3972782639,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 3972782639,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -129,5 +127,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: History/classification review",
   "source_primary_mechanic": "Test Gauntlet",
-  "source_code_snippet": "assert f(2) == 4"
+  "source_code_snippet": "assert f(2) == 4",
+  "archive_evidence": [
+    {
+      "id": "history_10_10",
+      "era": "Technical language versus labels",
+      "history": "C's designers wanted a practical tool for building systems. Terms such as general-purpose and procedural help explain what the tool can do and how programs are written.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "book"
+    },
+    {
+      "id": "history_9_3",
+      "era": "A procedural program",
+      "history": "Functions let a C programmer give a name to a procedure and call it when needed, including from other functions.",
+      "source": "GNU C Language Introduction and Reference Manual",
+      "art": "book"
+    },
+    {
+      "id": "lesson_7_1",
+      "era": "Source, translation and tests",
+      "history": "C is normally compiled. Write the source, translate it and link it as needed, then run the resulting program. Tests check whether its behavior matches the goal after compilation succeeds.",
+      "source": "GNU Compiler Collection Manual, Overall Options"
+    },
+    {
+      "id": "lesson_7_3",
+      "era": "When the output is wrong",
+      "history": "If a compiled program prints the wrong total, check its operations and test values. Accepting the source does not check that total for you.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_7_4",
+      "era": "A clean build and a test run",
+      "history": "Treat build diagnostics and program output as different clues. A successful build and a correct result are separate milestones.",
+      "source": "GNU Compiler Collection Manual, Overall Options"
+    }
+  ]
 }

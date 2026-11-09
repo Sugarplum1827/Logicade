@@ -77,6 +77,16 @@ test('a rejected coin transaction does not block an unrelated difficulty decisio
   assert.equal(calls.at(-1).body.failed_records, 1);
 });
 
+test('a session checkpoint remains in the outbox until the server acknowledges it', async () => {
+  const { worker, db, calls } = setup([
+    job('session-a', 'learner_sessions', { student_id: 'A', session_id: 'S1', duration_ms: 30_000 }),
+    job('session-b', 'learner_sessions', { student_id: 'B', session_id: 'S2', duration_ms: 30_000 }),
+  ]);
+  await worker.drainQueue();
+  assert.equal(calls.find(call => call.path === '/api/sync/batch').body.rows[0].session_id, 'S1');
+  assert.deepEqual(db.rows('sync_queue').map(row => row.job_id), ['session-b']);
+});
+
 test('a backed-off parent keeps child events queued until the server confirms it', async () => {
   const { worker, calls, db } = setup([
     job('l', 'levels', { student_id: 'A', level_id: 'L' }, {

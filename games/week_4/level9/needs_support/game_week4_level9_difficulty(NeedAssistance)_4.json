@@ -8,9 +8,9 @@
   "level": 9,
   "trial": 4,
   "difficulty": "Need Assistance",
-  "mode": "pending",
-  "title": "C Archive · Characteristics and limits",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Characteristics and limits",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Dragon Hoard Cave: a hoard-filled cave",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l9",
   "source_level": 9,
   "source_week": 4,
-  "primary_mechanic": "Infinite Loop Trap",
-  "objective": "Archive variation 4: classify and verify C history, characteristics and language categories for Characteristics and limits.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 76,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 4: Find 5 artifacts, read the evidence, and verify three findings about Characteristics and limits.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 5,
   "seed": 702070638,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 702070638,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -118,5 +116,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Characteristics and limits",
   "source_primary_mechanic": "Infinite Loop Trap",
-  "source_code_snippet": "while n < 5:\n    print(n)  # n never changes"
+  "source_code_snippet": "while n < 5:\n    print(n)  # n never changes",
+  "archive_evidence": [
+    {
+      "id": "history_9_4",
+      "era": "An abstract type structure",
+      "history": "Ritchie drew on Algol 68 when designing ways to combine basic types into arrays, pointers and functions.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "bcpl"
+    },
+    {
+      "id": "history_10_7",
+      "era": "A lesson from changing machines",
+      "history": "The effort to move Unix and its programs to the Interdata machine highlighted assumptions about integers, pointers and the surrounding system.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "lesson_9_1",
+      "era": "Classifying C precisely",
+      "history": "C is general-purpose, procedural and imperative. Middle-level is an informal teaching label. A compiler accepting a program does not prove that it works or runs unchanged everywhere.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_9_3",
+      "era": "What the standard covers",
+      "history": "The standard describes the language and library. It does not define a middle-level compiler mode or certify that a program meets its goal.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_9_4",
+      "era": "Read claims with care",
+      "history": "Compare claims about a language's facilities with claims about a particular program. Testing the program and reviewing portability are still part of the work.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

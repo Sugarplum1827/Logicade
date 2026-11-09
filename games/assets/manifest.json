@@ -4,6 +4,10 @@
   "license": "Kenney assets used here are CC0; retain each pack's bundled license file.",
   "sources": {
     "welcome_video": "/canvas-runtime/assets/logicade_prologue.mp4",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
+    "archive_stacks": "/canvas-runtime/assets/archive/stacks.webp",
+    "archive_workbench": "/canvas-runtime/assets/archive/workbench.webp",
+    "archive_store": "/canvas-runtime/assets/archive/store.webp",
     "factory_tile": "/vendor/kenney/weekly-ui/tiny-factory/Tiles/tile_0017.png",
     "dungeon_tile": "/vendor/kenney/organized/tiles/roguelike_rpg_pack/roguelike_sheet_transparent/r26_c06.png",
     "hero_sprite": "/vendor/kenney/organized/tiles/roguelike_characters/roguelike_char_transparent/r10_c00.png",
@@ -46,6 +50,14 @@
       "success_sound",
       "error_sound"
     ],
+    "hidden_archive": [
+      "archive_room",
+      "archive_stacks",
+      "archive_workbench",
+      "archive_store",
+      "success_sound",
+      "error_sound"
+    ],
     "dungeon": [
       "dungeon_tile",
       "wall_tile",
@@ -56,9 +68,11 @@
   },
   "source_notes": {
     "kenney": "Existing local CC0 packs in vendor/kenney; shared by URL rather than copied per game.",
-    "welcome_video": "Shared LogiCade prologue video; one copy in games/assets."
+    "welcome_video": "Shared LogiCade prologue video; one copy in games/assets.",
+    "archive_room": "Four shared fallback illustrations. The archive room catalog assigns a separate illustration to each of the 100 Week 4 level and case combinations."
   },
   "libraries": {
+    "archive_rooms": "/canvas-runtime/runtime/archive-room-layouts.js",
     "weekly_ui": "/canvas-runtime/assets/weekly-ui-manifest.json"
   }
 }

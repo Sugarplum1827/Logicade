@@ -23,9 +23,10 @@ export default function LandingSplash({ onComplete }) {
     <main className="landing-splash" aria-label="Loading LogiCade">
       <img className="landing-splash-background" src="/assets/landing_bg.jpg" alt="" />
       <div className="landing-splash-shade" />
-      <section className="landing-splash-content" aria-live="polite">
-        <p className="landing-splash-eyebrow">LOGICADE</p>
+      <section className="landing-splash-content realm-paper">
+        <img className="realm-splash-logo" src="/assets/logicade_logo.png" alt="LogiCade" />
         <h1>Preparing your adventure</h1>
+        <div className="realm-divider" aria-hidden="true" />
         <div
           className="landing-splash-progress"
           role="progressbar"

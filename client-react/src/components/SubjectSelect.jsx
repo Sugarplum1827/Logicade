@@ -13,6 +13,7 @@ const DEFAULT_SUBJECTS = [
 ];
 
 export default function SubjectSelect({ studentId, onSelectSubject, onLogout, tutorial }) {
+  const [featuredIndex, setFeaturedIndex] = useState(0);
   const [showLogout, setShowLogout] = useState(false);
   const [subjects, setSubjects] = useState(
     DEFAULT_SUBJECTS.map((s, i) => ({ ...s, unlocked: i === 0 })),
@@ -45,83 +46,49 @@ export default function SubjectSelect({ studentId, onSelectSubject, onLogout, tu
       .catch(() => console.log('Using default subjects (JSON failed to load)'));
   }, [studentId]);
 
+  const featured = subjects[featuredIndex] || subjects[0];
+  const goTo = (offset) => setFeaturedIndex((index) => (index + subjects.length + offset) % subjects.length);
+  const slots = [-1, 0, 1].map(offset => ({
+    offset,
+    subject: subjects[(featuredIndex + subjects.length + offset) % subjects.length],
+  }));
+
   return (
-    <div className="subject-select-screen">
+    <main className="subject-select-screen">
       {tutorial}
-      {showLogout && (
-        <LogoutModal
-          onConfirm={onLogout}
-          onCancel={() => setShowLogout(false)}
-        />
-      )}
+      {showLogout && <LogoutModal onConfirm={onLogout} onCancel={() => setShowLogout(false)} />}
+      <header className="realm-subject-header">
+        <h1 className="realm-plaque">Choose a Subject</h1>
+        <button type="button" className="realm-button realm-button-red" onClick={() => setShowLogout(true)}>Logout</button>
+      </header>
 
-      <div className="subject-header">
-        <div className="header-left">
-          <div className="logicade-badge">
-            <span className="logo-text">
-              Logi<span style={{ color: '#ffca28' }}>Cade</span>
-            </span>
-          </div>
-          <div className="header-title-box">
-            <h1>CHOOSE YOUR SUBJECT</h1>
-            <p>Select a subject to begin your adventure.</p>
-          </div>
-        </div>
-
-        <div className="header-right">
-          <button
-            className="btn-logout-header"
-            onClick={() => setShowLogout(true)}
-          >
-            LOGOUT
-          </button>
-        </div>
+      <section className="realm-carousel" aria-label="Subjects">
+        <button type="button" className="realm-carousel-arrow realm-button realm-button-gold"
+          aria-label="Previous subject" onClick={() => goTo(-1)}>‹</button>
+        {slots.map(({ offset, subject }) => (
+          <article key={offset} className={`realm-subject-card realm-paper ${offset === 0 ? 'is-featured' : 'is-side'} ${subject.unlocked ? '' : 'is-locked'}`}>
+            <h2 className="realm-plaque">{subject.unlocked ? subject.title : 'Locked'}</h2>
+            <div className="realm-subject-art">
+              <img src={subject.image || '/assets/subjects/cp1_icon.png'} alt="" />
+              {!subject.unlocked && <img className="realm-subject-lock" src="/assets/lock_icon.png" alt="" />}
+            </div>
+            <p>{subject.unlocked ? subject.desc : subject.title}</p>
+            {offset === 0 && (
+              <button type="button" className="realm-button" disabled={!subject.unlocked} onClick={(event) => onSelectSubject(subject.id, event)}>
+                {subject.unlocked ? 'Select Subject' : 'Complete the previous subject'}
+              </button>
+            )}
+          </article>
+        ))}
+        <button type="button" className="realm-carousel-arrow realm-button realm-button-gold"
+          aria-label="Next subject" onClick={() => goTo(1)}>›</button>
+      </section>
+      <div className="realm-carousel-dots" role="group" aria-label="Choose featured subject">
+        {subjects.map((subject) => (
+          <button type="button" key={subject.id} aria-label={subject.title} aria-pressed={subject.id === featured.id}
+            onClick={() => setFeaturedIndex(subjects.indexOf(subject))}><span /></button>
+        ))}
       </div>
-
-      <div className="subject-grid-container">
-        <div className="subject-grid">
-          {subjects.map((subj) => {
-            const isUnlocked = !!subj.unlocked;
-            return (
-              <div
-                key={subj.id}
-                className={`subject-card ${isUnlocked ? 'unlocked' : 'locked'}`}
-              >
-                <div className="card-header">
-                  {isUnlocked ? subj.title : 'LOCKED SUBJECT'}
-                </div>
-                <div className="card-image-area">
-                  {isUnlocked && subj.image ? (
-                    <img
-                      src={subj.image}
-                      alt={subj.title}
-                      className="subject-icon-img"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.parentElement.classList.add('fallback-img');
-                      }}
-                    />
-                  ) : (
-                    <div className="empty-image-placeholder" />
-                  )}
-                </div>
-                <div className="card-desc">
-                  {isUnlocked
-                    ? subj.desc
-                    : 'Complete previous subjects to unlock.'}
-                </div>
-                <button
-                  className={`btn-select-subject ${isUnlocked ? '' : 'disabled'}`}
-                  onClick={(event) => isUnlocked && onSelectSubject(subj.id, event)}
-                  disabled={!isUnlocked}
-                >
-                  SELECT SUBJECT
-                </button>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }

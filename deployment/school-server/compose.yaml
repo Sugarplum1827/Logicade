@@ -1,0 +1,122 @@
+name: logicade-school
+services:
+  db:
+    image: supabase/postgres:17.6.1.136
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run setup first}
+      POSTGRES_DB: postgres
+      JWT_SECRET: ${JWT_SECRET}
+    volumes:
+      - database:/var/lib/postgresql/data
+      - db-config:/etc/postgresql-custom
+      - ./db-init.sql:/docker-entrypoint-initdb.d/init-scripts/99-logicade-roles.sql:ro
+    healthcheck:
+      test: [CMD, pg_isready, -U, postgres, -h, localhost]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    networks: [database]
+    logging: &logging
+      driver: json-file
+      options: {max-size: 10m, max-file: '3'}
+
+  migrate:
+    build: {context: ./app, dockerfile: deployment/school-server/Dockerfile}
+    image: logicade-school-app:2026-11-08
+    command: [python, deployment/school-server/migrate.py]
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+    depends_on: {db: {condition: service_healthy}}
+    networks: [database]
+    logging: *logging
+
+  rest:
+    image: postgrest/postgrest:v14.18
+    restart: unless-stopped
+    environment:
+      PGRST_DB_URI: postgres://authenticator:${POSTGRES_PASSWORD}@db:5432/postgres
+      PGRST_DB_SCHEMAS: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_JWT_SECRET: ${JWT_SECRET}
+      PGRST_DB_MAX_ROWS: '1000'
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    networks: [database]
+    logging: *logging
+
+  supabase-api:
+    image: nginx:1.28-alpine
+    restart: unless-stopped
+    volumes: [./supabase-api.conf:/etc/nginx/conf.d/default.conf:ro]
+    depends_on: [rest]
+    networks: [database]
+    logging: *logging
+
+  ollama:
+    image: ollama/ollama:0.13.0
+    restart: unless-stopped
+    volumes: [models:/root/.ollama]
+    environment: {OLLAMA_NUM_PARALLEL: '1', OLLAMA_MAX_LOADED_MODELS: '1'}
+    networks: [application]
+    logging: *logging
+
+  app:
+    image: logicade-school-app:2026-11-08
+    restart: unless-stopped
+    init: true
+    environment:
+      SUPABASE_URL: http://supabase-api:8000
+      SUPABASE_SERVICE_ROLE_KEY: ${SERVICE_ROLE_KEY}
+      LOGICADE_ADMIN_EMAIL: ${LOGICADE_ADMIN_EMAIL}
+      LOGICADE_ADMIN_KEY: ${LOGICADE_ADMIN_KEY}
+      LOGICADE_SESSION_SECRET: ${LOGICADE_SESSION_SECRET}
+      LOGICADE_NATIVE_CANVAS: '1'
+      LOGICADE_CANVAS_REPLACEMENTS: '1'
+      LOGICADE_NODE_BINARY: /usr/local/bin/node
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: qwen2.5:3b
+    ports: ['127.0.0.1:18000:8000']
+    volumes:
+      - content:/opt/logicade/data
+      - games:/opt/logicade/games
+      - state:/opt/logicade/.state
+      - ./backups:/backups
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      supabase-api: {condition: service_started}
+      ollama: {condition: service_started}
+    networks: [application, database]
+    healthcheck:
+      test: [CMD, python, deployment/school-server/healthcheck.py]
+      interval: 15s
+      timeout: 20s
+      retries: 20
+      start_period: 120s
+    logging: *logging
+
+  gateway:
+    image: nginx:1.28-alpine
+    restart: unless-stopped
+    volumes: [./public-gateway.conf:/etc/nginx/conf.d/default.conf:ro]
+    depends_on: {app: {condition: service_healthy}}
+    networks: [application]
+    logging: *logging
+
+  tunnel:
+    image: cloudflare/cloudflared:2026.10.0
+    restart: unless-stopped
+    command: [tunnel, --no-autoupdate, --protocol, http2, --url, 'http://gateway:8080']
+    depends_on: [gateway]
+    networks: [application]
+    logging: *logging
+
+networks:
+  database: {internal: true}
+  application: {}
+volumes:
+  database: {}
+  db-config: {}
+  content: {}
+  games: {}
+  state: {}
+  models: {}

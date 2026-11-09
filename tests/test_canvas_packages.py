@@ -22,21 +22,38 @@ def test_canonical_count_week_mapping_and_playability(games):
     rows=[g for values in games.values() for g in values]
     assert len(rows)==2700
     assert {g.file_id for g in rows}=={r['file_id'] for r in manifest}
-    expected={1:{'welcome_video','tetris'},2:{'circuit'},3:{'terminal'},4:{'pending'},5:{'factory'},6:{'dungeon'},7:{'terminal'},8:{'dungeon'},9:{'circuit','terminal','pending','factory','dungeon'}}
+    expected={1:{'welcome_video','tetris'},2:{'circuit'},3:{'terminal'},4:{'hidden_archive'},5:{'factory'},6:{'dungeon'},7:{'terminal'},8:{'circuit'},9:{'circuit','terminal','hidden_archive','factory','dungeon'}}
     for week,modes in expected.items():
         assert {g.slug for g in rows if g.week==week}==modes
     assert sum(g.week!=1 or g.level<=2 for g in rows)==2460
-    week_four=[g for g in rows if g.week==4]
+
+def test_week_four_uses_hidden_archive_and_stage_bound_evidence(games):
+    week_four=[game for game in games['hidden_archive'] if game.week==4]
     assert len(week_four)==300
+    archive_root=main.CANVAS_RUNTIME_ROOT/'assets/archive'
+    assert (archive_root/'room.webp').is_file()
+    assert {path.relative_to(archive_root).as_posix() for path in (archive_root/'week4').rglob('*.webp')} == {
+        f'week4/level{level:02d}/case{trial:02d}.webp'
+        for level in range(1, 11) for trial in range(1, 11)
+    }
+    case_records = {}
     for game in week_four:
-        assert game.slug=='pending' and 'programming' not in game.config
+        assert game.week==4 and 'programming' not in game.config
         source=json.loads((main.REPO_ROOT/'data/fallback_pool'/game.config['source_path']).read_text(encoding='utf-8'))
-        assert 'classif' in source['player_objective'].lower()
+        assert 'Find 5 artifacts' in source['player_objective']
+        assert game.config['layout']['clues']==5 and len(game.config['tasks'])==3
+        evidence = game.config['archive_evidence']
+        assert len(evidence) == len({card['id'] for card in evidence}) == 5
+        assert all(card['history'] and card['source'] for card in evidence)
+        case = (game.level, game.config['trial'])
+        assert case_records.setdefault(case, evidence[:2]) == evidence[:2]
+        assert game.config['time_limit_seconds']==0
         assert game.config['lesson']['source_week']==4
         assert any('Ritchie' in item['title'] for item in game.config['lesson']['sources'])
+    assert len(case_records) == len({cards[0]['history'] for cards in case_records.values()}) == 100
 
 
-@pytest.mark.parametrize('mode',['welcome_video','tetris','circuit','terminal','pending','factory','dungeon'])
+@pytest.mark.parametrize('mode',['welcome_video','tetris','circuit','terminal','hidden_archive','factory','dungeon'])
 def test_package_identity_assets_and_independent_leases(tmp_path,games,mode):
     game=games[mode][0]
     original=main.REPO_ROOT/'data/fallback_pool'/game.config['source_path']
@@ -93,7 +110,8 @@ def test_researched_curriculum_and_examination_cover_every_user_week(games):
         lesson=game.public_info()['lesson']
         assert lesson['week']==game.week and lesson['stage_title']
         assert lesson['source_week']==(int(course['exam_blueprint'][str(game.level)]) if game.week==9 else game.week)
-        assert lesson['coverage']==[lesson['source_week']]
+        cumulative=(game.week,game.level)==(9,10)
+        assert lesson['coverage']==(list(range(2,9)) if cumulative else [lesson['source_week']])
         assert game.config['curriculum_version']==course['version']
         if game.week>1: assert lesson['sources']
         if game.config['source_week']==2: assert game.config.get('flowchart') and not game.config.get('programming')
@@ -102,7 +120,7 @@ def test_researched_curriculum_and_examination_cover_every_user_week(games):
         if game.week==9: assert lesson['assessment_kind']=='examination_practice'
 
 
-@pytest.mark.parametrize('week,level',[(1,1),(1,2),(9,1)])
+@pytest.mark.parametrize('week,level',[(1,1),(1,2),(4,1),(9,1),(9,3),(9,8),(9,10)])
 def test_selection_cycle_prepare_pop_release_and_week_one_limit(monkeypatch,tmp_path,games,week,level):
     async def assignment(*_):return {'difficulty':'standard'}
     monkeypatch.setattr(main,'_resolve_stage_difficulty',assignment)

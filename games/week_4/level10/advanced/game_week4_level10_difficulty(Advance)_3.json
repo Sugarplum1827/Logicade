@@ -8,9 +8,9 @@
   "level": 10,
   "trial": 3,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · History/classification review",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · History/classification review",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Hidden Spring: a hidden spring",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l10",
   "source_level": 10,
   "source_week": 4,
-  "primary_mechanic": "Dam Filler",
-  "objective": "Archive variation 3: classify and verify C history, characteristics and language categories for History/classification review.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 46,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 3: Find 5 artifacts, read the evidence, and verify three findings about History/classification review.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 3618369055,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 3618369055,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: History/classification review",
   "source_primary_mechanic": "Dam Filler",
-  "source_code_snippet": "while level < max_level:\n    level += 2"
+  "source_code_snippet": "while level < max_level:\n    level += 2",
+  "archive_evidence": [
+    {
+      "id": "history_10_3",
+      "era": "An operating system grows",
+      "history": "Unix began in 1969, years before its widely read 1974 description. Early development happened at Bell Labs.",
+      "source": "Dennis Ritchie, The Evolution of the Unix Time-sharing System",
+      "art": "unix"
+    },
+    {
+      "id": "history_9_6",
+      "era": "The standard's actual remit",
+      "history": "The C standard describes a language and a library interface. Middle-level is a classroom description rather than a category specified by that standard.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "standard"
+    },
+    {
+      "id": "lesson_2_1",
+      "era": "The developer and laboratory",
+      "history": "Dennis Ritchie developed C at Bell Laboratories. He wrote its first compiler and refined the language alongside the Unix project.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_3_1",
+      "era": "Predecessor and operating system",
+      "history": "B was the immediate language predecessor of C. Unix was the operating system whose development helped shape C.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_2_2",
+      "era": "Roles in the project",
+      "history": "Ken Thompson developed B. Ritchie developed C from it. Many Bell Labs colleagues contributed tools and language ideas.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

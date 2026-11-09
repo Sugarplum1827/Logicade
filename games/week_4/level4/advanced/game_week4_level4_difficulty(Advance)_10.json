@@ -8,9 +8,9 @@
   "level": 4,
   "trial": 10,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · General-purpose languages",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · General-purpose languages",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Mushroom Cavern: a cavern of glowing mushrooms",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l4",
   "source_level": 4,
   "source_week": 4,
-  "primary_mechanic": "Nested While Dungeon",
-  "objective": "Archive variation 10: classify and verify C history, characteristics and language categories for General-purpose languages.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 31,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 10: Find 5 artifacts, read the evidence, and verify three findings about General-purpose languages.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 2522026781,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 2522026781,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: General-purpose languages",
   "source_primary_mechanic": "Nested While Dungeon",
-  "source_code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1"
+  "source_code_snippet": "while floor < 3:\n    while room < 4:\n        room += 1",
+  "archive_evidence": [
+    {
+      "id": "history_4_10",
+      "era": "Standard library portability",
+      "history": "The standards committee documented a shared library so everyday code could rely on common services across conforming environments.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "standard"
+    },
+    {
+      "id": "history_8_3",
+      "era": "Operating-system differences",
+      "history": "When Unix tools moved to new platforms, working with the host operating system often took more work than translating for new hardware.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "unix"
+    },
+    {
+      "id": "lesson_4_1",
+      "era": "A language for many tasks",
+      "history": "General-purpose means a language can express work across different domains. C can handle a calculation or a systems procedure. Running the same program on a new system still takes care.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_4_3",
+      "era": "Purpose and portability",
+      "history": "The variety of tasks a language can express is different from how easily one source program moves between environments.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_4_4",
+      "era": "Choosing the operations",
+      "history": "Decide what data a problem needs, what changes or calculations to perform, and how to report a result. C supplies tools for all three.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

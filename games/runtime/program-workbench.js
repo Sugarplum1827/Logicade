@@ -26,14 +26,16 @@
     let scopeEditor=null,scopePre=null,scopeText=null,scopeLine=null,scopeNode='controller',scopeSelect=null,scopeFollow=null,scopeTask=null,wireList=null;
     const images={};for(const [key,url] of Object.entries(game.assets||{}))if(/\.png$/i.test(url)){const img=new Image();img.src=url;images[key]=img;}
     const post=(type,fields={})=>window.parent.postMessage({channel:'logicade-game',version:1,type,event_id:`program-${game.file_id}-${++state.events}`,time_ms:state.started?Math.round(performance.now()-state.started):0,...fields},'*');
-    function begin(){if(!state.started){state.started=performance.now();state.last=state.started;post('game_started',{game_id:game.file_id,variation_id:game.variation_id});}}
+    const study = globalThis.LogiCadeStudyTelemetry;
+    function begin(){if(!state.started){state.started=performance.now();state.last=state.started;study?.start();study?.present();post('game_started',{game_id:game.file_id,variation_id:game.variation_id});}}
     const say=text=>{feedback.textContent=text;live.textContent=text;};
     function sound(key){const src=game.assets?.[key];if(src){const a=new Audio(src);a.volume=.25;a.play().catch(()=>{});}}
     function checkpoint(){post('checkpoint_saved',{payload:{mission_id:m.mission_id,solution:copy(state.solution)}});}
-    function changed(){if(state.done)return;state.running=false;state.frames=[];state.at=-1;state.result=null;state.dirty=true;checkpoint();draw();}
+    function changed(){if(state.done)return;study?.present();state.running=false;state.frames=[];state.at=-1;state.result=null;state.dirty=true;checkpoint();draw();}
     const button=(label,parent,fn)=>{const b=make('button',label,parent);b.type='button';b.onclick=fn;return b;};
     function editor(label,value,change){const wrap=make('label',label,editors);const area=make('textarea',null,wrap);area.value=value;area.spellcheck=false;area.maxLength=12000;area.setAttribute('aria-label',label);area.oninput=()=>{change(area.value);changed();};return area;}
     if(m.family==='terminal')m.nodes.forEach((node,i)=>editor(`Node ${node.id} program`,state.solution.programs[i],value=>state.solution.programs[i]=value));
+    if(m.capstone)expeditionTray();
     if(m.family==='adventure')editor('Adventure program',m.program,value=>state.solution.program=value);
     function selectScopeNode(id){
       if(!Object.hasOwn(state.solution.programs||{},id))return;
@@ -65,10 +67,12 @@
       const skipped=Math.max(0,state.frames.length-1-state.at);state.running=false;state.at=state.frames.length-1;
       post('custom',{event_type:'program_fast_forward',payload:{mission_id:m.mission_id,trace_frames_skipped:skipped}});complete();
     });
-    button('Reset simulation',footer,()=>{if(state.done)return;state.running=false;state.frames=[];state.at=-1;state.result=null;post('custom',{event_type:'program_reset',payload:{mission_id:m.mission_id}});say('Execution reset. Your design and previous check results are retained.');draw();});
+    button('Reset simulation',footer,()=>{if(state.done)return;study?.present();state.running=false;state.frames=[];state.at=-1;state.result=null;post('custom',{event_type:'program_reset',payload:{mission_id:m.mission_id}});say('Execution reset. Your design and previous check results are retained.');draw();});
     button('Pause',footer,()=>{if(!state.done){state.paused=true;post('pause_request');post('game_paused');draw();}});
     function prepare(){
+      const responseMs = study?.takeResponseTime();
       state.result=model.check(m,state.solution);state.frames=state.result.frames||[];state.at=-1;state.dirty=false;
+      study?.submit(post, 'activity', m.mission_id, state.result.passed === true, responseMs);
       post('custom',{event_type:'program_execution_started',payload:{family:m.family,mission_id:m.mission_id}});
       say('Executing your solution. Watch the state and outputs.');
     }
@@ -78,10 +82,10 @@
       for(const c of r.checks){make('p',`${c.passed?'✓':'✕'} ${c.id}${c.outputs?' · actual '+c.outputs.join(', '):''}${c.error?' · '+c.error:''}`,results);post('question_answered',{entity_id:c.id,payload:{question_id:c.id,correct:c.passed,attempt_number:state.checks,answer_type:'program_execution'}});}
       post('custom',{event_type:'program_execution_checked',payload:{mission_id:m.mission_id,family:m.family,correct:r.correct,total:r.total}});
       if(r.passed){say('All goals verified. Mission complete.');sound('success_sound');finish(true,'program_goals_verified');}
-      else{state.lives--;sound('error_sound');say(r.error||'The outputs do not satisfy the mission. Inspect the trace and revise your solution.');if(!state.lives)finish(false,'program_checks_exhausted');}
+      else{study?.present();state.lives--;sound('error_sound');say(r.error||'The outputs do not satisfy the mission. Inspect the trace and revise your solution.');if(!state.lives)finish(false,'program_checks_exhausted');}
       draw();
     }
-    function finish(won,reason){state.done=true;state.running=false;editors.querySelectorAll('textarea').forEach(e=>e.disabled=true);if(won)post('activity_completed',{entity_id:m.mission_id,payload:{won,family:m.family}});post('game_over',{won,reason,score:won?100:Math.round(state.correct/Math.max(1,state.tested)*100),accuracy:state.correct/Math.max(1,state.tested),answered:state.tested,correct:state.correct,error_count:state.tested-state.correct,hint_count:state.hints,duration_sec:state.elapsed,formal_assessment:false,accuracy_basis:'program_execution_goals'});}
+    function finish(won,reason){state.done=true;state.running=false;editors.querySelectorAll('textarea').forEach(e=>e.disabled=true);if(won)post('activity_completed',{entity_id:m.mission_id,payload:{won,family:m.family}});post('game_over',{won,reason,score:won?100:Math.round(state.correct/Math.max(1,state.tested)*100),accuracy:state.correct/Math.max(1,state.tested),answered:state.tested,correct:state.correct,error_count:state.tested-state.correct,hint_count:state.hints,duration_sec:state.elapsed,active_play_ms:study?.activePlayMs(),formal_assessment:false,accuracy_basis:'program_execution_goals'});}
     let fromSelect,toSelect,componentSelect,valueInput;
     function connectionControls(nodes){
       const fromLabel=make('label','Wire from',inspector);fromSelect=make('select',null,fromLabel);
@@ -102,9 +106,42 @@
       if(!state.solution.wires.some(w=>w[0]===a&&w[1]===b))state.solution.wires.push([a,b]);
       state.wire=null;changed();updateWireList();say(`Connected ${a} → ${b}.`);
     }
-    function factoryTray(){
+    function expeditionTray(){
+      const panel=make('section',null,editors,'expedition-checks');
+      make('h2','Expedition preparation',panel);
+      make('p','Complete these checks before running the adventure program. Open a section to enter your work.',panel);
+      const section=title=>{const details=make('details',null,panel);make('summary',title,details);return details;};
+      const {flowchart,trace_case:trace,history}=m.capstone;
+      const chart=section('Weeks 2–3 · Build and trace the shipment flowchart');
+      chart.open=true;
+      make('p',flowchart.prompt,chart);
+      const slots=new Map(flowchart.slots.map(slot=>[slot.id,slot.number]));
+      state.solution.chart={};
+      for(const slot of flowchart.slots){
+        const next=flowchart.edges.filter(edge=>edge.from===slot.id)
+          .map(edge=>edge.label?edge.label+' → '+slots.get(edge.to):'→ '+slots.get(edge.to)).join(' · ');
+        const label=make('label',`Position ${slot.number} ${next || '· End of route'}`,chart);
+        const select=make('select',null,label);
+        make('option','Choose a flowchart block',select).value='';
+        for(const piece of flowchart.pieces)make('option',piece.kind+' · '+piece.label,select).value=piece.id;
+        select.onchange=()=>{state.solution.chart[slot.id]=select.value;changed();};
+      }
+      const traceLabel=make('label',`Trace shipment for stock ${trace.inputs.stock}, capacity ${trace.inputs.capacity}`,chart);
+      const traceInput=make('input',null,traceLabel);
+      traceInput.type='number';traceInput.step='1';
+      traceInput.oninput=()=>{state.solution.trace_value=traceInput.value===''?null:traceInput.valueAsNumber;changed();};
+      const archive=section('Week 4 · Interpret the archive record');
+      make('p',history.record,archive);make('small',history.source,archive);
+      const historyLabel=make('label',history.prompt,archive),choice=make('select',null,historyLabel);
+      make('option','Choose a finding',choice).value='';
+      history.choices.forEach((text,index)=>{make('option',text,choice).value=String(index);});
+      choice.onchange=()=>{state.solution.history_choice=choice.value===''?null:Number(choice.value);changed();};
+      sourceTray(section('Week 5 · Assemble and classify C source'));
+      make('h2','Weeks 6–8 · Program the expedition',editors);
+    }
+    function sourceTray(parent){
       if(m.source_exercise){
-        const exercise=m.source_exercise,panel=make('section',null,editors,'c-source-builder');panel.setAttribute('aria-label','C source assembly');
+        const exercise=m.source_exercise,panel=make('section',null,parent,'c-source-builder');panel.setAttribute('aria-label','C source assembly');
         const refreshSource=()=>{panel.replaceChildren();make('h2','Build the C source',panel);make('p',exercise.prompt,panel);
           for(const part of exercise.parts){const b=button('Add source block: '+part.label,panel,()=>{if(state.done||state.paused)return;state.solution.source_order.push(part.id);changed();refreshSource();});b.disabled=state.solution.source_order.includes(part.id);}
           const ordered=state.solution.source_order.map(id=>exercise.parts.find(p=>p.id===id));make('pre',ordered.map(p=>p.code).join('\n')||'Select source blocks in program order.',panel);
@@ -112,6 +149,9 @@
           for(const token of Object.keys(exercise.categories)){const label=make('label','Classify '+token,panel),select=make('select',null,label);select.setAttribute('aria-label','Classify '+token);for(const value of ['', 'keyword','identifier','directive']){const option=make('option',value||'Choose a category',select);option.value=value;}select.value=state.solution.c_categories[token]||'';select.onchange=()=>{if(!state.done&&!state.paused){state.solution.c_categories[token]=select.value;changed();}};}
         };refreshSource();
       }
+    }
+    function factoryTray(){
+      sourceTray(editors);
       if(m.routing){make('h2','Branch contracts',editors);for(const goal of m.routing.targets)make('p',`${goal.id} · ${goal.label}: ${goal.target} components through ${goal.via.join(' → ')} → ${goal.output}`,editors,'factory-contract');make('p','Ore values: '+m.ore_values.slice(0,m.target).join(', '),editors,'factory-contract');}
       make('h2','Drag machine sprites onto the grid',editors);
       const tray=make('div',null,editors,'factory-sprite-tray');

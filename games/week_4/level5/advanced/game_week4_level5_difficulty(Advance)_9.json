@@ -8,9 +8,9 @@
   "level": 5,
   "trial": 9,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · Procedural classification",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Procedural classification",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Torchlit Cave Mouth: the torchlit cave entrance",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l5",
   "source_level": 5,
   "source_week": 4,
-  "primary_mechanic": "Condition Builder",
-  "objective": "Archive variation 9: classify and verify C history, characteristics and language categories for Procedural classification.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 34,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 9: Find 5 artifacts, read the evidence, and verify three findings about Procedural classification.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 4068594072,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 4068594072,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Procedural classification",
   "source_primary_mechanic": "Condition Builder",
-  "source_code_snippet": "while i ____ 4:"
+  "source_code_snippet": "while i ____ 4:",
+  "archive_evidence": [
+    {
+      "id": "history_5_9",
+      "era": "A procedure that reports no value",
+      "history": "The earliest K&R edition did not describe the later void type. In modern C, a void function can do work without producing a result for its caller.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "book"
+    },
+    {
+      "id": "history_7_2",
+      "era": "A compiler for another machine",
+      "history": "Ritchie built a B cross-compiler that ran on a smaller computer but emitted machine instructions for a GE-635 mainframe.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "compiler"
+    },
+    {
+      "id": "lesson_5_1",
+      "era": "Procedural organization",
+      "history": "C supports procedural programming. Functions organize ordered steps that can be called and reused. Procedural and object-oriented describe distinct ways of organizing a program.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_5_2",
+      "era": "A division of labor",
+      "history": "Functions can separate input, processing and output. Give each function a clear job and call it in the order the task requires.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_5_3",
+      "era": "Follow the call",
+      "history": "A call runs a function's instructions. A function with a return value can pass a result back so the caller can use it.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    }
+  ]
 }

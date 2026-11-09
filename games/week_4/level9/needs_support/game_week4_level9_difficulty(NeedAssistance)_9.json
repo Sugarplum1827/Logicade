@@ -8,9 +8,9 @@
   "level": 9,
   "trial": 9,
   "difficulty": "Need Assistance",
-  "mode": "pending",
-  "title": "C Archive · Characteristics and limits",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Characteristics and limits",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Bone Crypt: a dusty bone crypt",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l9",
   "source_level": 9,
   "source_week": 4,
-  "primary_mechanic": "Loop Counter Conveyor",
-  "objective": "Archive variation 9: classify and verify C history, characteristics and language categories for Characteristics and limits.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 76,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 9: Find 5 artifacts, read the evidence, and verify three findings about Characteristics and limits.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 5,
   "seed": 74083756,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 74083756,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -118,5 +116,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Characteristics and limits",
   "source_primary_mechanic": "Loop Counter Conveyor",
-  "source_code_snippet": "while i < 5:\n    i += 1"
+  "source_code_snippet": "while i < 5:\n    i += 1",
+  "archive_evidence": [
+    {
+      "id": "history_9_9",
+      "era": "Classification and capability",
+      "history": "General-purpose describes the variety of tasks C can express. Procedural and imperative describe ways its programs organize and perform work.",
+      "source": "GNU C Language Introduction and Reference Manual",
+      "art": "book"
+    },
+    {
+      "id": "history_10_2",
+      "era": "The hardware that changed the design",
+      "history": "With the PDP-11, programmers could address bytes separately. A language built around a single word-sized cell made character operations awkward.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "lesson_9_1",
+      "era": "Classifying C precisely",
+      "history": "C is general-purpose, procedural and imperative. Middle-level is an informal teaching label. A compiler accepting a program does not prove that it works or runs unchanged everywhere.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_9_2",
+      "era": "Three different labels",
+      "history": "General-purpose is about the kinds of tasks a language can express. Procedural is about organizing work into functions. Imperative is about executing instructions that can change state.",
+      "source": "GNU C Language Introduction and Reference Manual"
+    },
+    {
+      "id": "lesson_9_3",
+      "era": "What the standard covers",
+      "history": "The standard describes the language and library. It does not define a middle-level compiler mode or certify that a program meets its goal.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {readFile,readdir} from 'node:fs/promises';
 const scope={};
 vm.runInNewContext(await readFile(new URL('../../games/runtime/c-runtime.js',import.meta.url),'utf8'),scope);
+vm.runInNewContext(await readFile(new URL('../../games/runtime/flowchart-model.js',import.meta.url),'utf8'),scope);
 vm.runInNewContext(await readFile(new URL('../../games/runtime/program-model.js',import.meta.url),'utf8'),scope);
 const model=scope.LogiCadeProgramModel;
 const clone=x=>JSON.parse(JSON.stringify(x));
@@ -27,6 +28,22 @@ for(const week of [3,5,6,7,8,9])test(`all week ${week} authored missions execute
 });
 test('Week 4 uses researched archive facts rather than C-program execution',async()=>{
   assert.equal(await load(4),undefined);
+});
+test('the final expedition rejects each missing skill and a wrong scoped type', async()=>{
+  const mission=await load(9,10),reference=clone(mission.reference);
+  const variants={
+    shipment_flowchart:{chart:{}},
+    algorithm_trace:{trace_value:reference.trace_value+1},
+    c_history:{history_choice:-1},
+    c_source_components:{source_order:[]},
+    typed_shadow_and_restoration:{program:reference.program.replace('float cargo','double cargo')},
+    exit:{program:reference.program.replace(/^move.*$/gm,'')},
+  };
+  for(const [id,change] of Object.entries(variants)){
+    const result=model.check(mission,{...reference,...change});
+    assert.equal(result.passed,false,id);
+    assert.equal(result.checks.find(check=>check.id===id)?.passed,false,result.error);
+  }
 });
 test('terminal programs must compute outputs rather than acknowledge an answer',async()=>{
   const m=await load(3,2,'standard',2),solution=clone(m.reference);

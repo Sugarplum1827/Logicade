@@ -1,0 +1,6314 @@
+
+[PAGE 1]
+ 
+ 
+ 
+ 
+ 
+ 
+SimuRithm: An Intelligent Decision Support System for Automated 
+ML Model Selection 
+ 
+A Thesis Presented to 
+The Faculty of the College of Computing Studies 
+Eulogio “Amang” Rodriguez 
+Institute of Science and Technology 
+Nagtahan, Sampaloc, Manila 
+ 
+In Partial Fulfillment 
+of the Requirements for the Degree of  
+Bachelor of Science in Computer Science 
+ 
+By: 
+Bacolod, Joshua G. 
+Jacinto, Cazzandra Mae O. 
+Tatoy, Aldrei Summer B. 
+Tizado, Steven Kurt M. 
+ 
+ 
+ 
+2026 
+
+[PAGE 2]
+ 
+ 
+ 
+ 
+CHAPTER I 
+The Problem and Its Background 
+Background of the Study 
+The growing presence of data in nearly every aspect of modern life 
+has made the ability to analyze and interpret it an increasingly essential skill, 
+particularly in fields such as computer science, information technology, and 
+engineering. Students and prac titioners alike are expected to work with 
+datasets of varying sizes and complexities, applying computational methods 
+to extract patterns, generate predictions, and support informed decisions. 
+At the heart of these processes are machine learning algorithms,  
+mathematical models that learn from data to perform classification, 
+regression, clustering, and other analytical tasks. As the range of available 
+algorithms continues to expand, so too does the difficulty of determining 
+which one is most appropriate for a given dataset and problem, a challenge 
+that sits at the center of what this study seeks to address. 
+Choosing the right machine learning algorithm is far from 
+straightforward. Different algorithms are designed with different 
+assumptions about data, and their performance varies considerably 
+depending on the characteristics of the dataset being used, includ ing how 
+large it is, how many features it contains, whether the classes are balanced, 
+and how the values are distributed. A student or researcher who simply 
+applies the first familiar algorithm to a dataset without considering these 
+properties of risks obtaining results that are inaccurate, misleading, or 
+difficult to interpret. In academic settings, this problem is compounded by 
+
+[PAGE 3]
+ 
+ 
+ 
+ 
+the fact that most learners do not yet have the depth of experience needed 
+to make confident, informed choices. The typical response is to try multiple 
+algorithms one at a time, compare results, and select whichever performs 
+best, an approach that is slow,  inefficient, and does not build genuine 
+understanding of why one algorithm outperforms another. 
+This experience of uncertainty and inefficiency in algorithm selection 
+is a widely recognized challenge in undergraduate data science education. 
+Classroom instruction in most higher education institutions covers how 
+algorithms work in theory but rarely pro vides structured, systematic 
+guidance on how to match an algorithm to the specific properties of a real -
+world dataset. The result is a significant disconnect between conceptual 
+knowledge and practical application, one that hinders students from 
+engaging me aningfully with machine learning beyond surface -level 
+familiarity. Undergraduate students, particularly those introductory data 
+science and computer science courses, often resort to trial-and-error rather 
+than principled decision-making when confronted with unfamiliar datasets. 
+This gap is further widened by the nature of existing tools designed 
+to automate parts of the machine learning pipeline. Most currently available 
+automated machine learning (AutoML) platforms, such as Auto -sklearn, 
+AutoGluon, and GAMA, are built primarily for professional data scientists 
+and presuppose a level of technical expertise that undergraduate students 
+have not yet gained. These tools often produce results without explanation, 
+leaving users with little understanding o f why a particular algorithm was 
+recommended or how the dataset's characteristics influenced that 
+
+[PAGE 4]
+ 
+ 
+ 
+ 
+recommendation. For a student who is still building foundational knowledge, 
+this kind of black -box output offers limited educational value. What is 
+needed is not simply automation, but guided, interpretable automation, a 
+system that not only recommends an algorithm but also helps the user 
+understand the reasoning behind that recommendation. 
+This need is particularly evident in the Philippine higher education 
+context, where Filipino undergraduate students working with structured 
+educational and institutional datasets frequently encounter the same 
+algorithm selection challenges, and where the c hoice of machine learning 
+algorithm has measurable consequences on the quality of analytical 
+outcomes. Despite this, no locally developed tool currently exists that 
+provides undergraduate students with an accessible, dataset-informed, and 
+educationally mea ningful pathway to algorithm selection. The disconnect 
+between the growing demand for data literacy in Philippine academia and 
+the inaccessibility of existing tools represents a clear gap that this study 
+aims to address. 
+It is from this recognition that SimuRithm was conceptualized. 
+SimuRithm is an intelligent decision support system that takes an uploaded 
+dataset, analyzes its structural and statistical properties, and recommends 
+the most suitable machine learning algorithm based on what it finds. It uses 
+Natural Language Processing (NLP) tec hniques, specifically tokenization 
+and lexical analysis via NLTK, to interpret column headers and infer what 
+each variable represents. It performs descriptive and correlation analyses 
+to characterize the dataset and employs a meta -learning model trained on 
+
+[PAGE 5]
+ 
+ 
+ 
+ 
+algorithm-dataset performance histories to generate its recommendations. 
+The system is designed from the ground up with undergraduate students in 
+mind, presenting its outputs in clear, readable formats, offering step-by-step 
+guidance, and providing visuali zations that make data characteristics 
+tangible and understandable. 
+SimuRithm does not aim to replace the learning process. Rather, it 
+aims to support it, giving students a structured starting point from which they 
+can explore their data, understand its properties, and make informed 
+decisions about how to analyze it. By embedding intelligence into a tool that 
+is genuinely accessible to beginners, SimuRithm  seeks to bridge the gap 
+between theoretical instruction and practical application that many students 
+in Philippine higher education currently face. The development of this 
+system is grounded in the belief that when students are given the right tools 
+and the right guidance, they become more confident, more capable, and 
+more genuinely engaged with the field of machine learning. 
+Despite the increasing availability of machine learning tools, most 
+existing platforms are designed for experienced practitioners and require 
+substantial technical knowledge to operate effectively. Students and 
+beginners in data science often struggle to identify which machine learning 
+algorithm is most appropriate for  their dataset, resulting in inefficient trial -
+and-error approaches, wasted time, and poor model outcomes. There is a 
+clear need for an accessible, intelligent system that can automatically 
+analyze dataset characteristics and guide users toward the most su itable 
+algorithm with minimal technical burden. 
+
+[PAGE 6]
+ 
+ 
+ 
+ 
+Statement of the Problem 
+This study aims to develop SimuRithm, an intelligent decision support 
+system that assists students in identifying the uploaded datasets, processes 
+text-related information, evaluates all applicable algorithms in its extensible 
+algorithm repository, and displays an output for every major proc ess step. 
+Specifically, the study seeks to answer the following questions:  
+1. How can the system effectively accept, parse, and validate 
+heterogeneous datasets (incorporating numerical, categorical, 
+alphanumeric, and text -based attributes) from diverse formats like 
+CSV and Excel, while leveraging Natural Language Processing 
+(NLP) on metadata and text fields to automate variable identification 
+and feature extraction?  
+2. How can an extensible algorithm repository be designed and 
+integrated to dynamically support, execute, and benchmark a wide 
+spectrum of machine learning tasks, specifically encompassing the 
+following: 
+a. Classification 
+b. Regression 
+c. Clustering 
+d. Anomaly Detection 
+e. Dimensionality Reduction 
+f. Topic Modeling 
+g. Text Similarity 
+h. Sequence Modeling  
+
+[PAGE 7]
+ 
+ 
+ 
+ 
+3. How can a hybrid meta -learning or rule -assisted recommendation 
+engine analyze dataset characteristics, NLP -derived features, and 
+empirical execution performance to intelligently rank and recommend 
+the most suitable algorithms based on user-selected priorities?  
+4. What granular outputs must be displayed at each major operational 
+stage (from upload to export ) to ensure transparency, and to what 
+extent does the resulting SimuRithm  system comply with ISO/IEC 
+25010 software quality standards while reducing the trial and -error 
+burden for undergraduate students? 
+Objectives of the Study 
+The general objective of this study is to design and develop 
+SimuRithm as an NLP -assisted intelligent decision support system for 
+comprehensive machine learning algorithm selection with visible step -by-
+step output generation. Specifically, this study aims to: 
+1. Develop a system capable of accepting, parsing, validating, and 
+processing CSV and Excel datasets containing numerical, 
+categorical, alphanumeric, and text -based attributes, while utilizing 
+Natural Language Processing (NLP) techniques such as 
+tokenization, normalization, lexical analysis, vectorization, and 
+optional embedding methods for metadata interpretation, variable 
+identification, and feature extraction. 
+2. Design and integrate an extensible algorithm repository that 
+dynamically supports, executes, and benchmarks machine learning 
+tasks including classification, regression, clustering, anomaly 
+
+[PAGE 8]
+ 
+ 
+ 
+ 
+detection, dimensionality reduction, topic modeling, text similarity, 
+and sequence modeling using appropriate performance evaluation 
+metrics. 
+3. Develop a recommendation engine that analyzes dataset 
+characteristics, NLP -derived feature characteristics, task type, 
+algorithm performance metrics, and user -selected priorities to rank 
+and recommend the most suitable machine learning algorithms. 
+4. Create a transparent user interface that displays outputs at every 
+major stage of the process —from dataset upload and validation to 
+preprocessing, benchmarking, recommendation, visualization, and 
+export—and evaluate the resulting system using ISO/IEC 25010  
+software quality standards and user feedback to determine its 
+effectiveness in reducing trial-and-error in algorithm selection. 
+Theoretical Framework 
+This study is based on three main theories that explain the design 
+and purpose of the SimuRithm  system. These theories are the No Free 
+Lunch Theorem, Meta -learning Theory, and Decision Support System 
+Theory. Together, they support the system’s goal of helping students 
+choose the most suitable machine learning algorithm for a given dataset. 
+The diagram below shows how each theory connects to the main parts. 
+
+[PAGE 9]
+ 
+ 
+ 
+ 
+ 
+Figure 1.1. Theoretical Diagram 
+The theoretical framework of SimuRithm  is based on the No Free 
+Lunch Theorem, Meta -learning Theory, and Decision Support System 
+Theory. The No Free Lunch Theorem explains that no single machine 
+learning algorithm performs best for every dataset, since each dataset has 
+different characteristics  such as size, features, distribution, and variable 
+relationships. Because of this, SimuRithm  first analyzes the uploaded 
+dataset before recommending an algorithm. Meta -learning Theory, also 
+known as “learning to learn,” supports this process by using past results 
+from different datasets to help predict which algorithm may be suitable for a 
+new dataset. In SimuRithm, this is applied through the analysis of dataset 
+features, descriptive statistics, correlation results, and other relevant 
+dataset information. Lastly,  the Decision Support System Theory explains 
+that a system should assist users in making decisions rather than replacing 
+their judgment. SimuRithm follows this idea by presenting the 
+
+
+[PAGE 10]
+ 
+ 
+ 
+ 
+recommended algorithm together with statistical results, visualizations, and 
+explanations that help students understand the basis of the 
+recommendation. Through these theories, SimuRithm  is supported as an 
+intelligent decision support system that helps undergraduate students and 
+beginner data analysts reduce trial -and-error, understand their datasets, 
+and make informed decisions in selecting machine learning algorithms, 
+while also serving  as an additional teaching tool for educators and 
+professors. 
+ 
+Conceptual Framework 
+ 
+
+
+[PAGE 11]
+ 
+ 
+ 
+ 
+Figure 1.2. Conceptual Framework 
+This diagram presents the overall process of SimuRithm : An 
+Intelligent Decision Support System for Automated ML Model Selection. The 
+framework follows an Input –Process–Output (IPO) model, where the input 
+consists of structured datasets in CSV or Excel format, dataset components, 
+and user preferences such as m achine learning category and variable 
+selection. 
+The process begins with Dataset Understanding, where the system 
+analyzes the uploaded dataset to determine its characteristics and 
+structure. This is followed by Dataset Preparation, which transforms the data 
+into a suitable format for machine learning execution. The ML Category 
+Workflow identifies the appropriate machine learning task based on the 
+dataset characteristics and selected variables. After identifying t he task 
+category, the system performs Algorithm Benchmarking by evaluating 
+suitable machine learning algorithms and comparing their performance. The 
+system also undergoes evaluation to determine its effectiveness, usability, 
+and reliability. 
+The expected output of the system includes dataset insights, 
+algorithm performance results, and intelligent recommendations. The 
+framework demonstrates how SimuRithm assists users, particularly 
+beginners, in understanding datasets and selecting suitable ma chine 
+learning algorithms through a guided and data  driven decision support 
+process. 
+
+[PAGE 12]
+ 
+ 
+ 
+ 
+Significance of the Study 
+The development of SimuRithm carries significant value for multiple 
+stakeholders in the academic and research communities. 
+Students. As the primary beneficiary group, students stand to gain 
+the most from the system. SimuRithm  reduces the complexity of selecting 
+machine learning algorithms by automatically analyzing datasets and 
+generating comprehensible outputs such as descriptive statistics, 
+correlation results, and graphical visualizations. By providing guided, step -
+by-step recommendations, the system helps students avoid common errors 
+in data analysis and fosters a deeper understanding of the relationship 
+between dataset properties and model performance. The customization 
+feature further allows students to apply their own va riable selections, 
+reinforcing active learning. 
+Educators and Professors. Faculty members in Computer Science 
+and Data Science programs can utilize SimuRithm as a supplementary 
+teaching tool. The system's visual outputs and algorithm explanations can 
+serve as discussion starting points for lessons on machine learning model 
+selection, dataset preprocessing, and performance evaluation, reducing the 
+need for extensive individual guidance during laboratory exercises. 
+Academic Institutions.  The study contributes to the institution's 
+commitment to technology -aided instruction and research innovation. By 
+developing an intelligent system tailored for undergraduate use, the 
+institution demonstrates its capacity to produce applied research that 
+addresses real educational challenges in the local context. 
+
+[PAGE 13]
+ 
+ 
+ 
+ 
+Future Researchers.  This study establishes a foundation for 
+subsequent research in automated machine learning, intelligent tutoring 
+systems, and educational technology. Future researchers may extend 
+SimuRithm's capabilities to support a wider range of algorithms, handle 
+unstructured data types, or integrate adaptive learning features that 
+personalize recommendations based on individual user history. 
+Scope and Limitations of the Study 
+This study focuses on the design, development, and evaluation of 
+SimuRithm, an intelligent decision support system for automated machine 
+learning model selection, intended primarily for academic use by 
+undergraduate students who need a guide system for analyzing datasets 
+and choosing suitable algorithms.  
+The system accepts CSV and Excel datasets containing numerical, 
+categorical, alphanumeric, and text -based attributes. It supports dataset 
+parsing, validation, dataset overview generation, NLP -based header and 
+text-field interpretation, variable role identification, task detection, 
+preprocessing, feature engineering, algorithm filtering, benchmarking, 
+recommendation, visualization, and report generation. 
+The system uses an extensible algorithm repository. This study 
+includes algorithms for classification, regression, clustering, anomaly 
+detection, dimensionality reduction, topic modeling, text similarity, and 
+sequence modeling when available in the implementation environment. 
+The system must display a visible output for every major step. This 
+includes upload status, validation report, dataset preview, column and data 
+
+[PAGE 14]
+ 
+ 
+ 
+ 
+type summary, missing value report, NLP tokenization and header 
+interpretation output, detected text -field output, preprocessing log, 
+generated feature summary, candidate algorithm output, algorithm 
+exclusion reason, benchmark output, visual outputs, final  recommendation 
+explanation, and downloadable result report. 
+The study acknowledges several limitations. First, although the 
+algorithm repository is designed to be comprehensive and extensible, it 
+cannot literally contain every algorithm ever created. Its coverage depends 
+on the algorithms implemented in the selected Python libraries and those 
+encoded by the researchers. Second, deep learning and transformer-based 
+methods may require greater computing resources and may be limited by 
+available hardware. Third, system performance depends on the quality, 
+size, and completeness of the uploaded dataset. Fourth, NLP interpretation 
+may be affected by ambiguous column names, mixed languages, 
+abbreviations, spelling errors, or domai n-specific terminology. Fifth, 
+recommendations are decision-support outputs and should be reviewed by 
+users before being used in formal research conclusions. Six, images, video, 
+and audio files are beyond the scope of the study. 
+Definition of Terms 
+Algorithm Recommendation. The system output identifies and explains 
+the most suitable algorithm or ranked set of algorithms based on dataset 
+properties, NLP-derived features, task type, and performance results. 
+
+[PAGE 15]
+ 
+ 
+ 
+ 
+Algorithm Repository. The extensible collection of machine learning and 
+NLP-compatible algorithms available for filtering, benchmarking, and 
+recommendation within SimuRithm. 
+Alphanumeric Data. Data composed of letters, numbers, or combinations 
+of both, commonly found in structured datasets such as IDs, labels, codes, 
+categories, and descriptive values. 
+Candidate Algorithm Output. The visible list of algorithms that the system 
+considers suitable for the detected task and data representation, including 
+the reason for inclusion or exclusion. 
+Classification. A machine learning task that predicts a categorical output 
+or class label. 
+Clustering. An unsupervised machine learning task that groups similar 
+records without requiring a predefined target variable. 
+Correlation Analysis.  A statistical method used to identify relationships 
+among numerical variables in a dataset. 
+Dataset. A collection of data organized in rows and columns and uploaded 
+to the system in CSV or Excel format. 
+Dataset Characteristics. Measurable properties of the uploaded dataset, 
+including row count, column count, data types, missing values, class 
+balance, distribution, sparsity, text length, vocabulary size, and feature 
+dimensionality. 
+Data Visualization. The graphical presentation of dataset characteristics, 
+NLP outputs, model performance, and recommendation results through 
+charts, tables, and diagrams. 
+
+[PAGE 16]
+ 
+ 
+ 
+ 
+Deep Learning Algorithm.  A machine learning method based on neural 
+networks, such as multilayer perceptron, convolutional networks, recurrent 
+networks, and transformer-based models. 
+Dimensionality Reduction. A process of reducing the number of features 
+while preserving useful information for analysis or modeling. 
+Feature Engineering.  The process of transforming raw data into usable 
+model inputs, including encoding categorical variables, scaling numeric 
+values, and converting text into numerical representations. 
+Meta-learning. A machine learning approach where a system learns from 
+previous dataset and algorithm performance records to guide future 
+recommendations. 
+Natural Language Processing.  A branch of artificial intelligence that 
+enables computers to process and analyze human language. In SimuRithm, 
+NLP is used for header interpretation, text -field detection, tokenization, 
+vectorization, and feature extraction. 
+NLP-Derived Features.  Numerical representations produced from 
+language data, such as token counts, n -grams, TF -IDF vectors, word 
+embeddings, sentence embeddings, or transformer embeddings. 
+Output Visibility. The system requires that every major step must display 
+an understandable output to the user before proceeding to the next stage. 
+Preprocessing Log.  A displayed record of cleaning and transformation 
+actions applied to the dataset, including missing value handling, encoding, 
+scaling, tokenization, vectorization, and train-test splitting. 
+Regression. A machine learning task that predicts a continuous numerical 
+output. 
+
+[PAGE 17]
+ 
+ 
+ 
+ 
+Task Detection.  The process of identifying whether the dataset is most 
+appropriate for classification, regression, clustering, topic modeling, 
+similarity search, anomaly detection, or another supported task. 
+Text Vectorization.  The conversion of text into numerical form so that 
+machine learning algorithms can process it. 
+Tokenization. The NLP process of breaking text or column headers into 
+smaller meaningful units called tokens. 
+Transformer-Based Model.  A neural language model architecture that 
+uses attention mechanisms and can be applied to tasks such as text 
+classification, semantic similarity, and language understanding. 
+ 
+CHAPTER II 
+Review of Related Literature 
+This chapter presents a review of existing systems and literature 
+closely related to SimuRithm : An Intelligent Decision Support System for 
+Automated ML Model Selection. The review covers systems and studies 
+published from 2021 to the present, focusing on automated machine 
+learning platforms, intelligent decision support tools, meta -learning for 
+algorithm selection, and empirical research on dataset characteristics and 
+their influence on classifier performance. The chapter is divided into three 
+sections. Table 2.1 reviews ten related studies from the literature that 
+provide theoretical and empirical foundations for the proposed system. 
+Table 2.2 reviews ten related systems that share functional or conceptual 
+overlap with SimuRithm, examining their methodologies, strengths, and 
+
+[PAGE 18]
+ 
+ 
+ 
+ 
+limitations. Synthesizes the reviewed works to identify research gaps and 
+justify the development of SimuRithm. 
+ 
+Foreign Literature and Studies 
+Table 2.1. Foreign Literature and Studies 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Dagan, I., 
+Vainshtein, 
+R., Katz, G., 
+& Rokach, 
+L. (2024). 
+Automated 
+algorithm 
+selection 
+using meta-
+learning and 
+Meta-
+learning 
+approach 
+that renders 
+an entire 
+tabular 
+dataset as 
+an image, 
+then uses 
+pre-trained 
+deep CNNs 
+to 
+recommend  
+The image-
+based 
+dataset 
+representatio
+n enables 
+cross-dataset 
+learning and 
+matches 
+state-of-the-
+art algorithm-
+selection 
+To automatically 
+select effective 
+classification 
+algorithms for 
+tabular datasets 
+while avoiding 
+exhaustive 
+model training. 
+ 
+Extend image-
+based 
+representations to 
+additional ML 
+tasks and larger 
+algorithm pools; a 
+useful basis for 
+low-cost 
+recommendation 
+engines like 
+SimuRithm. 
+ 
+Title/Author
+s 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+
+[PAGE 19]
+ 
+ 
+ 
+ 
+pre-trained 
+deep 
+convolutiona
+l neural 
+networks 
+(AutoIRAD). 
+Information 
+Fusion, 105, 
+102210. 
+ in a zero-
+shot way, 
+without 
+training 
+every 
+candidate. 
+accuracy at a 
+fraction of the 
+computational 
+cost. 
+  
+Garouani, 
+M., Ahmad, 
+A., Bouneffa, 
+M., & 
+Hamlich, M. 
+(2023). 
+Autoencoder
+-kNN meta -
+model based 
+data 
+characterizat
+ion approach 
+for an 
+automated 
+selection of 
+Generates 
+dataset 
+meta-
+features 
+through an 
+autoencode
+r; a k -NN 
+meta-model 
+then maps 
+those 
+characteristi
+cs to the 
+most 
+suitable 
+algorithm. 
+Autoencoder-
+derived meta-
+features 
+improve 
+recommendat
+ion accuracy 
+over 
+conventional 
+meta-feature 
+sets and 
+reduce trial -
+and-error 
+model search. 
+To build a data -
+characterization 
+method that 
+enables meta -
+learning-based 
+automated 
+algorithm 
+selection. 
+Enrich the meta -
+feature set and 
+pair selection with 
+hyperparameter 
+optimization; 
+validate across 
+more domains. 
+
+[PAGE 20]
+ 
+ 
+ 
+ 
+AI 
+algorithms. 
+Journal of 
+Big Data, 
+10(1), 14. 
+Tested on 
+industrial / 
+big 
+datasets. 
+Vente, T., & 
+Beel, J. 
+(2025). 
+Algorithm 
+Selection for 
+Recommend
+er Systems 
+via Meta -
+Learning on 
+Algorithm 
+Characteristi
+c. 
+arXiv:2508.0
+4419. 
+Meta-
+learning 
+that, unlike 
+prior work 
+treating 
+algorithms 
+as 
+featureless 
+classes, 
+encodes the 
+characteristi
+cs of the 
+algorithms 
+so the 
+meta-
+Modeling 
+algorithm 
+features 
+narrows the 
+gap between 
+the single -
+best algorithm 
+and an ideal 
+oracle 
+selector, 
+improving 
+per-instance 
+selection 
+To improve 
+automated 
+algorithm 
+selection by 
+representing the 
+algorithms 
+themselves, not 
+only dataset 
+features. 
+ 
+Generalize 
+algorithm-aware 
+meta-learning 
+beyond 
+recommender 
+systems to 
+broader ML 
+algorithm 
+selection. 
+ 
+
+[PAGE 21]
+ 
+ 
+ 
+ 
+learner can 
+predict the 
+best 
+algorithm 
+per instance 
+Title/Author
+s 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Rong, Y., 
+Leemann, 
+T., Nguyen, 
+T.-T., et al. 
+(2024). 
+Towards 
+Human-
+Centered 
+Explainable 
+AI: A Survey 
+of User 
+Studies for 
+Model 
+Explanations
+. IEEE 
+Transactions 
+on Pattern 
+Systematic 
+survey of 
+user studies 
+that 
+evaluate 
+model 
+explanation
+s across 
+application 
+domains. 
+Explainability 
+is inherently 
+human-
+centered; 
+user 
+evaluation 
+remains 
+inconsistent, 
+and XAI 
+adoption 
+varies by 
+domain 
+(faster in 
+recommender 
+systems). 
+To understand 
+XAI users' needs 
+and how 
+explainable 
+models are 
+evaluated with 
+real users. 
+Standardize 
+human-centered 
+evaluation; design 
+explanations 
+around user 
+decision contexts 
+— relevant to 
+SimuRithm's 
+interpretable 
+recommendations. 
+
+[PAGE 22]
+ 
+ 
+ 
+ 
+Analysis and 
+Machine 
+Intelligence, 
+46(4), 2104 -
+2122. 
+Uddin, S., & 
+Lu, H. 
+(2024). 
+Dataset 
+meta-level 
+and 
+statistical 
+features 
+affect 
+machine 
+learning 
+performance
+. Scientific 
+Reports, 14, 
+1670. 
+Empirical 
+study on 
+200 open 
+tabular 
+datasets 
+(Kaggle, 
+UCI) testing 
+how 3 meta-
+level 
+features 
+(size, 
+attribute 
+count, class 
+ratio) and 4 
+statistical 
+features 
+(mean, SD, 
+skewness, 
+kurtosis) 
+Both meta -
+level and 
+statistical 
+dataset 
+features 
+measurably 
+influence ML 
+performance, 
+supporting 
+the use of 
+dataset 
+characteristic
+s to guide 
+model choice. 
+To quantify how 
+specific dataset 
+features impact 
+the performance 
+of different ML 
+algorithms. 
+Incorporate 
+statistical features 
+(not only meta -
+level) into dataset 
+profiling and 
+algorithm-
+selection systems. 
+
+[PAGE 23]
+ 
+ 
+ 
+ 
+affect 5 ML 
+algorithms. 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+
+[PAGE 24]
+ 
+ 
+ 
+ 
+Langenecke
+r, S., Sturm, 
+C., Schalles, 
+C., & Binnig, 
+C. (2024). 
+Pythagoras: 
+Semantic 
+Type 
+Detection of 
+Numerical 
+Data in 
+Enterprise 
+Data Lakes. 
+Proceedings 
+of EDBT 
+2024. 
+A graph 
+neural 
+network 
+with a novel 
+graph 
+representati
+on of tables 
+that uses 
+column 
+headers, 
+values, and 
+neighboring
+-column 
+context to 
+predict 
+semantic 
+types of 
+numerical 
+columns. 
+Pythagoras 
+significantly 
+outperforms 
+five state -of-
+the-art 
+semantic-type 
+detectors on 
+numerical 
+data (about 
++22% F1), 
+filling a gap 
+left by 
+header/text-
+focused 
+methods. 
+To accurately 
+detect the 
+semantic types of 
+numerical 
+columns using 
+contextual 
+signals. 
+Combine 
+numerical and 
+non-numerical 
+semantic typing for 
+fuller automated 
+dataset 
+understanding — 
+directly relevant to 
+SimuRithm's NLP 
+header analysis. 
+
+[PAGE 25]
+ 
+ 
+ 
+ 
+Tornede, A., 
+Gehring, L., 
+Tornede, T., 
+Wever, M., & 
+Hüllermeier, 
+E. (2023). 
+Algorithm 
+selection on 
+a meta level. 
+Machine 
+Learning, 
+112(4), 
+1253-1286. 
+Formalizes 
+“meta-
+algorithm 
+selection” 
+(selecting 
+among 
+algorithm 
+selectors 
+themselves) 
+and 
+proposes 
+and 
+evaluates 
+combination 
+strategies. 
+Combining 
+multiple 
+algorithm 
+selectors at a 
+meta level 
+can 
+outperform 
+any single 
+selector, 
+advancing the 
+theory of 
+automated 
+selection. 
+To improve 
+algorithm 
+selection by 
+selecting or 
+combining 
+selectors rather 
+than base 
+algorithms alone. 
+Use ensembles of 
+selection 
+strategies; 
+relevant when 
+designing a robust 
+recommendation 
+engine. 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+
+[PAGE 26]
+ 
+ 
+ 
+ 
+Feurer, M., 
+Eggensperg
+er, K., 
+Falkner, S., 
+Lindauer, 
+M., & Hutter, 
+F. (2022). 
+Auto-sklearn 
+2.0: Hands -
+free AutoML 
+via Meta -
+Learning. 
+Journal of 
+Machine 
+Learning 
+Research, 
+23(261), 1 -
+61. 
+Extends 
+Auto-
+sklearn with 
+meta-
+learning 
+and 
+automated 
+policy 
+selection 
+(portfolio 
+building, 
+model-
+selection 
+strategy) for 
+hands-free 
+AutoML. 
+Meta-
+learning-
+driven 
+configuration 
+substantially 
+improves 
+AutoML 
+performance 
+and 
+robustness 
+while 
+reducing 
+manual 
+tuning. 
+To make AutoML 
+fully automated 
+and efficient by 
+exploiting 
+knowledge from 
+prior tasks. 
+Leverage prior -
+task knowledge 
+(warm-starting); 
+note such tools 
+target experts, 
+motivating 
+beginner-friendly 
+systems like 
+SimuRithm. 
+
+[PAGE 27]
+ 
+ 
+ 
+ 
+He, X., 
+Zhao, K., & 
+Chu, X. 
+(2021). 
+AutoML: A 
+survey of the 
+state-of-the-
+art. 
+Knowledge-
+Based 
+Systems, 
+212, 
+106622. 
+Comprehen
+sive survey 
+of the 
+AutoML 
+pipeline: 
+data 
+preparation, 
+feature 
+engineering
+, model 
+selection, 
+neural 
+architecture 
+search, and 
+hyperparam
+eter 
+optimization
+. 
+AutoML can 
+automate 
+much of the 
+ML pipeline, 
+but usability 
+for non -
+experts and 
+interpretability 
+of outputs 
+remain 
+limited. 
+To review and 
+structure the 
+AutoML field and 
+its open 
+problems. 
+Improve the 
+accessibility and 
+transparency of 
+AutoML for non -
+expert users. 
+Title/Author
+s 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+
+[PAGE 28]
+ 
+ 
+ 
+ 
+Uddin, S., & 
+Lu, H. 
+(2024). 
+Dataset 
+meta-level 
+and 
+statistical 
+features 
+affect 
+machine 
+learning 
+performance
+. Scientific 
+Reports, 14, 
+1670. 
+Empirical 
+study on 
+200 open 
+tabular 
+datasets 
+(Kaggle, 
+UCI) testing 
+how 3 meta-
+level 
+features 
+(size, 
+attribute 
+count, class 
+ratio) and 4 
+statistical 
+features 
+(mean, SD, 
+skewness, 
+kurtosis) 
+affect 5 ML 
+algorithms. 
+Both meta -
+level and 
+statistical 
+dataset 
+features 
+measurably 
+influence ML 
+performance, 
+supporting 
+the use of 
+dataset 
+characteristic
+s to guide 
+model choice. 
+To quantify how 
+specific dataset 
+features impact 
+the performance 
+of different ML 
+algorithms. 
+Incorporate 
+statistical features 
+(not only meta -
+level) into dataset 
+profiling and 
+algorithm-
+selection systems. 
+
+[PAGE 29]
+ 
+ 
+ 
+ 
+Langenecke
+r, S., Sturm, 
+C., Schalles, 
+C., & Binnig, 
+C. (2024). 
+Pythagoras: 
+Semantic 
+Type 
+Detection of 
+Numerical 
+Data in 
+Enterprise 
+Data Lakes. 
+Proceedings 
+of EDBT 
+2024. 
+A graph 
+neural 
+network 
+with a novel 
+graph 
+representati
+on of tables 
+that uses 
+column 
+headers, 
+values, and 
+neighboring 
+column 
+columns to 
+predict 
+semantic 
+types of 
+numerical 
+columns. 
+Pythagoras 
+significantly 
+outperforms 
+five state -of-
+the-art 
+semantic-type 
+detectors on 
+numerical 
+data (about 
++22% F1), 
+filling a gap 
+left by 
+header/text-
+focused 
+methods. 
+To accurately 
+detect the 
+semantic types of 
+numerical 
+columns using 
+contextual 
+signals. 
+Combine 
+numerical and 
+non-numerical 
+semantic typing for 
+fuller automated 
+dataset 
+understanding — 
+directly relevant to 
+SimuRithm's NLP 
+header analysis. 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+
+[PAGE 30]
+ 
+ 
+ 
+ 
+Tornede, A., 
+Gehring, L., 
+Tornede, T., 
+Wever, M., & 
+Hüllermeier, 
+E. (2023). 
+Algorithm 
+selection on 
+a meta level. 
+Machine 
+Learning, 
+112(4), 
+1253-1286. 
+Formalizes 
+“meta-
+algorithm 
+selection” 
+(selecting 
+among 
+algorithm 
+selectors 
+themselves) 
+and 
+proposes 
+and 
+evaluates 
+combination 
+strategies. 
+Combining 
+multiple 
+algorithm 
+selectors at a 
+meta level 
+can 
+outperform 
+any single 
+selector, 
+advancing the 
+theory of 
+automated 
+selection. 
+To improve 
+algorithm 
+selection by 
+selecting or 
+combining 
+selectors rather 
+than base 
+algorithms alone. 
+Use ensembles of 
+selection 
+strategies; 
+relevant when 
+designing a robust 
+recommendation 
+engine. 
+
+[PAGE 31]
+ 
+ 
+ 
+ 
+Feurer, M., 
+Eggensperg
+er, K., 
+Falkner, S., 
+Lindauer, 
+M., & Hutter, 
+F. (2022). 
+Auto-sklearn 
+2.0: Hands -
+free AutoML 
+via Meta -
+Learning. 
+Journal of 
+Machine 
+Learning 
+Research, 
+23(261), 1 -
+61. 
+Extends 
+Auto-
+sklearn with 
+meta-
+learning 
+and 
+automated 
+policy 
+selection 
+(portfolio 
+building, 
+model-
+selection 
+strategy) for 
+hands-free 
+AutoML. 
+Meta-
+learning-
+driven 
+configuration 
+substantially 
+improves 
+AutoML 
+performance 
+and 
+robustness 
+while 
+reducing 
+manual 
+tuning. 
+To make AutoML 
+fully automated 
+and efficient by 
+exploiting 
+knowledge from 
+prior tasks. 
+Leverage prior -
+task knowledge 
+(warm-starting); 
+note such tools 
+target experts, 
+motivating 
+beginner-friendly 
+systems like 
+SimuRithm. 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+
+[PAGE 32]
+ 
+ 
+ 
+ 
+He, X., 
+Zhao, K., & 
+Chu, X. 
+(2021). 
+AutoML: A 
+survey of the 
+state-of-the-
+art. 
+Knowledge-
+Based 
+Systems, 
+212, 
+106622. 
+Comprehen
+sive survey 
+of the 
+AutoML 
+pipeline: 
+data 
+preparation, 
+feature 
+engineering
+, model 
+selection, 
+neural 
+architecture 
+search, and 
+hyperparam
+eter 
+optimization
+. 
+AutoML can 
+automate 
+much of the 
+ML pipeline, 
+but usability 
+for non -
+experts and 
+interpretability 
+of outputs 
+remains 
+limited. 
+To review and 
+structure the 
+AutoML field and 
+its open 
+problems. 
+Improve the 
+accessibility and 
+transparency of 
+AutoML for non -
+expert users. 
+
+[PAGE 33]
+ 
+ 
+ 
+ 
+Local Literature and Studies 
+Table 2.2. Local Literature and Studies 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Gojo Cruz, 
+J. I., de 
+Vera, J. M. 
+L., & Pilario, 
+K. E. (2025). 
+Machine 
+learning-
+driven 
+analysis of 
+agro-
+climatic data 
+for 
+temperature 
+modeling 
+and 
+forecasting 
+in Philippine 
+urban areas. 
+Sustainable 
+Uses 41 
+years of 
+agro-
+climatologic
+al data for 
+Manila and 
+Dagupan; 
+pipeline of 
+standard 
+scaling, 
+PCA, EDA, 
+eight ML 
+regressors 
+and time -
+series 
+models (incl. 
+MLP, LSTM) 
+with 32 
+predictors. 
+The MLP 
+regressor 
+gave the best 
+test 
+performance 
+(R² ≈ 0.81) for 
+Manila; 
+models are 
+location-
+specific 
+(Manila model 
+fails on 
+Dagupan); 
+LSTM 
+forecasts 
+rising 2025 -
+2027 
+maximum 
+temperatures. 
+To develop ML 
+models predict 
+maximum urban 
+temperature to 
+support climate -
+action decision -
+making. 
+Build location -
+specific models; 
+integrate ML 
+forecasts into 
+urban 
+sustainability 
+policy. 
+
+[PAGE 34]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Cities and 
+Society 
+(Elsevier). 
+Francisco, 
+M. E., 
+Carvajal, T. 
+M., & 
+Watanabe, 
+K. (2024). 
+Hybrid ML 
+approach to 
+zero-inflated 
+data 
+improves 
+dengue 
+prediction. 
+PLOS 
+Six ML 
+algorithms 
+predict 
+dengue in 
+Metro 
+Manila 
+across 
+spatial and 
+temporal 
+resolutions; 
+a hybrid 
+method 
+handles 
+A hybrid 
+approach 
+addressing 
+zero-inflation 
+improves 
+dengue 
+prediction 
+accuracy; 
+spatiotempor
+al resolution 
+materially 
+affects 
+results. 
+To understand 
+how 
+spatiotemporal 
+resolution and 
+zero-inflation 
+affect ML dengue 
+prediction and to 
+improve 
+accuracy. 
+Use resolution -
+aware, zero -
+inflation-handling 
+models for 
+epidemiological 
+forecasting. 
+
+[PAGE 35]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Neglected 
+Tropical 
+Diseases, 
+18(10). 
+(DLSU)  
+zero-inflated 
+data. 
+
+[PAGE 36]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Buebos-
+Esteve, D. 
+E., & 
+Dagamac, 
+N. H. A. 
+(2024). 
+Spatiotempo
+ral models of 
+dengue 
+epidemiolog
+y in the 
+Philippines: 
+Integrating 
+remote 
+sensing and 
+interpretable 
+machine 
+learning. 
+Acta Tropica 
+(Elsevier). 
+(University 
+Builds 
+random-
+forest 
+learners 
+(mlr3, R) on 
+NDVI and 
+rainfall 
+features 
+(2016–
+2020) for 
+two tasks 
+(incidence, 
+mortality) 
+and two 
+clustering 
+strategies, 
+with 
+interpretabili
+ty via 
+Permutation 
+Feature 
+Importance 
+Temporal-
+clustering 
+models (rfsrc / 
+ranger) 
+performed 
+best, 
+reflecting 
+dengue 
+seasonality; 
+interpretable 
+ML reveals 
+key predictors 
+even in a 
+data-limited 
+setting. 
+To predict 
+dengue incidence 
+and mortality and 
+explain their 
+drivers using 
+interpretable ML 
+and remote 
+sensing. 
+Adopt 
+interpretable ML 
+for public -health 
+decision support; 
+expand the 
+covariate set. 
+
+[PAGE 37]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+of Santo 
+Tomas) 
+and 
+Accumulate
+d Local 
+Effects. 
+Salvador, E. 
+L. V. (2024). 
+Use of 
+boosting 
+algorithms in 
+household-
+level poverty 
+measureme
+nt: 
+Random-
+forest 
+models 
+(mlr3/R) 
+using NDVI 
+and rainfall 
+(2016–
+2020) to 
+predict 
+CatBoost 
+achieved the 
+best overall 
+performance 
+(≈91%); 
+XGBoost and 
+GBM 
+followed; 
+AdaBoost 
+To assess ML 
+effectiveness in 
+predicting and 
+classifying 
+household wealth 
+quintiles for 
+poverty 
+measurement. 
+Incorporate more 
+diverse data to 
+improve 
+predictive 
+accuracy and 
+policy utility. 
+
+[PAGE 38]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Predicting 
+and 
+classifying 
+household 
+wealth 
+quintiles in 
+the 
+Philippines. 
+arXiv:2407.1
+3061.  
+incidence 
+and 
+mortality, 
+interpreted 
+via 
+Permutation 
+Feature 
+Importance 
+and ALE. 
+was weakest; 
+clear trade -
+offs between 
+training time, 
+testing speed, 
+and accuracy. 
+Švábenský, 
+V., Verger, 
+M., Rodrigo, 
+M. M. T., 
+Monterozo, 
+C. J. G., 
+Baker, R. S., 
+Saavedra, 
+M. Z. N., 
+Lallé, S., & 
+Shimada, A. 
+Collected 
+48.7M 
+Canvas 
+LMS log 
+records over 
+three 
+semesters; 
+trained 
+binary 
+classifiers 
+predicting 
+student 
+The best 
+model 
+reached AUC 
+0.75 and 
+weighted F1 
+0.79; the 
+study 
+surfaces 
+fairness 
+consideration
+s specific to 
+To predict 
+academic 
+performance 
+from LMS activity 
+while evaluating 
+algorithmic bias. 
+Assess fairness 
+before deploying 
+predictive student 
+models; account 
+for demographic 
+context. 
+
+[PAGE 39]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+(2024). 
+Evaluating 
+algorithmic 
+bias in 
+models for 
+predicting 
+academic 
+performance 
+of Filipino 
+students. 
+Proc. 17th 
+Int'l Conf. on 
+Educational 
+Data Mining 
+(EDM). 
+grades from 
+LMS activity; 
+evaluated 
+fairness and 
+algorithmic 
+bias. 
+Filipino 
+student data. 
+
+[PAGE 40]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Sagum, R. 
+A., & 
+Sagum, J. K. 
+A. (2025). 
+Parallel 
+ensemble 
+approach for 
+named entity 
+recognition 
+in Filipino 
+text. AICCC 
+'24, 409 –
+413. ACM. 
+A parallel 
+ensemble of 
+NER models 
+for Filipino 
+text, building 
+on prior 
+Filipino NER 
+datasets 
+and 
+approaches. 
+The parallel 
+ensemble 
+improves 
+named-entity 
+recognition 
+for Filipino 
+text over 
+single 
+models. 
+To improve NER 
+accuracy for the 
+low-resource 
+Filipino language. 
+Expand 
+annotated Filipino 
+corpora; explore 
+transformer-
+based 
+ensembles. 
+
+[PAGE 41]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Ramos, R. 
+K., & 
+Vergara, J. 
+P. (2023). 
+TF-NERD: 
+Tagalog 
+fine-grained 
+named entity 
+recognition 
+dataset. 
+NLPIR 2023, 
+222–227. 
+Constructs a 
+fine-grained 
+Tagalog 
+NER dataset 
+and 
+evaluates 
+NER models 
+/ classifiers 
+on it. 
+Provides a 
+benchmark 
+fine-grained 
+Tagalog NER 
+resource and 
+baseline 
+results, 
+addressing 
+data scarcity 
+for Filipino 
+NLP. 
+To create a fine -
+grained NER 
+dataset for 
+Tagalog and 
+benchmark 
+models on it. 
+Extend 
+annotations and 
+apply the dataset 
+to downstream 
+Filipino NLP 
+tasks. 
+
+[PAGE 42]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Robantes, J. 
+L., Serrano, 
+A., Dioses, 
+R., & Cortez, 
+D. M. 
+(2024). 
+Enhanced 
+named entity 
+recognition 
+algorithm for 
+Filipino 
+cultural and 
+heritage 
+texts. World 
+Journal of 
+Advanced 
+Research 
+and 
+Reviews, 
+24(3), 2177–
+2186. 
+An 
+enhanced 
+rule-based 
+NER using 
+COHFIE, 
+character/to
+ken 
+features, 
+positive/neg
+ative 
+example 
+sets, and the 
+CIDOC-
+CRM 
+framework; 
+benchmarke
+d against 
+calamanCy 
+and 
+RoBERTa 
+Tagalog. 
+The 
+enhanced 
+model 
+improves 
+recognition of 
+culturally and 
+historically 
+significant 
+Filipino 
+entities over 
+existing 
+Filipino 
+models. 
+To adapt NER to 
+Filipino cultural 
+and heritage 
+texts and set a 
+new benchmark. 
+Enrich the corpus 
+and combine rule-
+based methods 
+with neural 
+approaches. 
+
+[PAGE 43]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+Macrohon, 
+J. J. E. 
+(2024). 
+Comparing 
+Semi-
+Supervised 
+Machine 
+Learning 
+Algorithms 
+to Sentiment 
+Analysis on 
+English and 
+Filipino 
+Tweets 
+during the 
+POGO 
+Probe. Proc. 
+2024 6th 
+World 
+Symposium 
+on Software 
+Engineering 
+Compares 
+three semi -
+supervised 
+algorithms 
+(Self-
+Training with 
+Multinomial 
+Naïve 
+Bayes, 
+Label 
+Propagation
+, Label 
+Spreading) 
+on 
+English/Filip
+ino tweets 
+about the 
+POGO 
+investigation
+; 70% of 
+training data 
+Label 
+Propagation 
+performed 
+best, reaching 
+about 89.43% 
+accuracy on 
+the test set, 
+surpassing 
+comparable 
+prior work on 
+English/Filipin
+o tweets. 
+To analyze 
+Filipino public 
+sentiment on the 
+POGO issue 
+using semi -
+supervised ML 
+and compare 
+algorithm 
+performance. 
+Use semi -
+supervised 
+methods to cut 
+labeling cost for 
+Filipino / code -
+switched social -
+media text. 
+
+[PAGE 44]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+(WSSE). 
+ACM. 
+left 
+unlabeled. 
+Ong, L. E. 
+C., & De 
+Leon, M. M. 
+(2024). 
+Developing 
+BERT-
+based 
+ensemble 
+for Filipino 
+text 
+classificatio
+n. NLPIR 
+2024. ACM. 
+Fine-tunes 
+BERT 
+models as 
+base 
+learners on 
+a labeled 
+Filipino 
+hate-speech 
+dataset, 
+then 
+combines 
+them via 
+hard voting, 
+soft voting, 
+stacking, 
+BERT-based 
+ensembles 
+improve 
+Filipino hate -
+speech text 
+classification 
+over 
+individual 
+base models. 
+To classify hate 
+speech in Filipino 
+text using 
+ensembles of 
+fine-tuned BERT 
+models. 
+Apply ensemble 
+transformer 
+approaches to 
+other Filipino text-
+classification 
+tasks. 
+
+[PAGE 45]
+ 
+ 
+ 
+ 
+Title/Autho
+rs 
+Methods Conclusion Objectives 
+Recommendatio
+ns 
+and 
+blending 
+ensembles. 
+Synthesis 
+ The body of literature and studies reviewed across both foreign and 
+local sources converges on three overarching themes that collectively justify 
+the development of SimuRithm: (1) the context -dependence of machine 
+learning algorithm performance, (2) the pe rsistent accessibility gap in 
+existing automated machine learning tools, and (3) the growing but 
+underserved demand for data -driven educational guidance systems within 
+the Philippine academic context. 
+The foreign literature consistently demonstrates that no single 
+machine learning algorithm achieves optimal performance across all 
+dataset configurations. Uddin and Lu (2024) empirically established that 
+both meta -level and statistical dataset properties s erve as reliable 
+determinants of classifier performance across two hundred tabular datasets, 
+whereas Garouani  et al. (2023) demonstrated that such dataset 
+characteristics may be encoded as meta-features and mapped to the most 
+appropriate algorithm. Dagan et al. (2024), Tornede et al. (2023), and Vente 
+and Beel (2025) further established that meta -learning frameworks trained 
+on prior algorithm –dataset performance histories are capable of 
+
+[PAGE 46]
+ 
+ 
+ 
+ 
+generalizing recommendations to previously unseen datasets, thereby 
+validating the core decision logic underlying SimuRithm. 
+The local literature reinforces this context -dependence within the 
+Philippine setting. Salvador (2024) reported that, among five boosting 
+algorithms applied to Philippine household data, CatBoost achieved 
+markedly superior performance relative to the alternatives, while Francisco 
+et al. (2024) demonstrated that a hybrid approach exceeded the accuracy 
+of single models in dengue prediction across Metropolitan Manila, and 
+Buebos-Esteve and Dagamac  (2024) observed that the best -performing 
+learner was contingent upon the task and clustering strategy employed. 
+Švábenský et al. (2024), in modeling the academic performance of Filipino 
+students, similarly found that model behavior and fairness varied with the 
+characteristics of the underlying data. Collectively, these findings confirm 
+that intelligent, dataset -sensitive alg orithm selection constitutes a 
+demonstrable and practically significant challenge within the Philippine 
+academic and research landscape. 
+The reviewed foreign literature further reveals a consistent limitation: 
+although automated machine learning has advanced considerably, its 
+capabilities remain oriented toward expert practitioners rather than novice 
+learners. He et al. (2021) observed that  the usability of AutoML for non -
+experts and the interpretability of its outputs remain limited, and Barbudo et 
+al. (2023) formally characterized this accessibility gap as unresolved across 
+eight years of AutoML  research. Even systems explicitly engineered for 
+automation, such as the meta-learning-driven Auto-sklearn 2.0 of Feurer et 
+al. (2022), prioritize predictive performance and hands -free operation over 
+
+[PAGE 47]
+ 
+ 
+ 
+ 
+the guided, interpretable explanation that a student requires. Rong et al. 
+(2024) reinforce this observation, affirming that interpretable, user-centered 
+explanation remains underdeveloped within contemporary machine learning 
+systems. 
+The local literature corroborates this gap within the Philippine 
+context. The reviewed Philippine studies apply machine learning to specific, 
+predetermined problems — household poverty classification (Salvador, 
+2024), dengue forecasting (Francisco et al., 2024; Buebos -Esteve & 
+Dagamac, 2024), urban temperature modeling (Gojo Cruz et al., 2025), and 
+student-performance prediction (Švábenský et al., 2024) — each conducted 
+by researchers already possessing machine learning expertise and each 
+employing a fixed, pre-selected set of algorithms rather than guiding a user 
+through informed algorithm selection. The Filipino -language natural 
+language processing studies (Ramos & Vergara, 2023; Robantes et al., 
+2024; Macrohon, 2024; Sagum & Sagum, 2025) further demonstrate that 
+the interpretation of Filipino and mixed -language text remains a low -
+resource and non -trivial undertaking — precisely the challenge that 
+SimuRithm's NLP-based header and text-field analysis must accommodate. 
+Across these works, no locally developed tool offers undergraduate 
+students an accessible, dataset-driven pathway to algorithm selection. 
+SimuRithm responds directly to this convergence of evidence by 
+integrating dataset parsing, NLP -based header analysis, statistical feature 
+extraction, and meta -learning-based recommendation within a unified, 
+student-centered intelligent decision support system. By concurrently 
+addressing the theoretical, technical, and pedagogical gaps identified 
+
+[PAGE 48]
+ 
+ 
+ 
+ 
+across both foreign and local sources, SimuRithm  occupies a role that no 
+existing tool has yet fulfilled: the provision, to undergraduate students within 
+the Philippine higher education context, of an accessible, guided, and 
+educationally meaningful pathway toward informed machine learning model 
+selection. 
+ 
+Comparison Table 
+Table 2.3. Comparison Table 
+Legend:  ✓ = fully supported ~ = partially supported ✗ = not 
+supported ★ = distinguishing SimuRithm capability 
+
+[PAGE 49]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+SimuRit
+hm 
+(Propos
+ed 
+System
+) 
+✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+Dagan 
+et al. 
+(2024) 
+✗ ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 50]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+Garoua
+ni et al. 
+(2023) 
+✗ ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✗ ✗ 
+Vente & 
+Beel 
+(2025) 
+✗ ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✗ ✗ 
+Barbudo 
+et al. 
+(2023) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 51]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+Rong et 
+al. 
+(2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Uddin & 
+Lu 
+(2024) 
+✗ ~ ~ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Langen
+ecker et 
+al. 
+(2024) 
+✓ ~ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 52]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+Tornede 
+et al. 
+(2023) 
+✗ ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✗ ✗ 
+Feurer 
+et al. 
+(2022) 
+✗ ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✗ ✓ 
+He et al. 
+(2021) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Gojo 
+Cruz et 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 53]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+al. 
+(2025) 
+Francisc
+o et al. 
+(2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Buebos-
+Esteve 
+& 
+Dagama
+c (2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 54]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+Salvado
+r (2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Šváben
+ský et 
+al. 
+(2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Sagum 
+& 
+Sagum 
+(2025) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 55]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+Ramos 
+& 
+Vergara 
+(2023) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Robante
+s et al. 
+(2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+Macroh
+on et al. 
+(2024) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 56]
+ 
+ 
+ 
+ 
+Review
+ed 
+Work / 
+System 
+DATASET INTELLIGENCE ALGORITHM 
+RECOMMEND
+ATION 
+USER EXPERIENCE 
+NLP-
+based 
+heade
+r 
+analys
+is ★ 
+Datas
+et 
+chara
+cterist
+ic-
+driven 
+selecti
+on ★ 
+Desc
+riptiv
+e 
+stati
+stics 
+outp
+ut ★ 
+Corr
+elati
+on 
+analy
+sis 
+outp
+ut ★ 
+Meta
+-
+learn
+ing 
+base
+d 
+reco
+mme
+ndati
+on 
+Step-
+by-step 
+guided 
+recom
+mendat
+ion ★ 
+Student 
+/ 
+beginn
+er-
+oriente
+d 
+design 
+★ 
+Custom
+izable X 
+/ Y 
+variable 
+selectio
+n ★ 
+Gra
+phi
+cal 
+dat
+a 
+vis
+uali
+zati
+on 
+Free 
+/ 
+open 
+acce
+ss 
+Ong & 
+De Leon 
+(2025) 
+✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ ✗ 
+This table presents a comprehensive feature comparison of 
+SimuRithm: An Intelligent Decision Support System for Automated ML 
+Model Selection against the twenty related works reviewed in this chapter 
+— ten foreign (Dagan et al., 2024; Garouani et al., 2023; Vente & Beel, 
+2025; Barbudo et al., 2023; Rong et al., 2024; Uddin & Lu, 2024; 
+Langenecker et al., 2024; Tornede et al., 2023; Feurer et al., 2022; and He 
+et al., 2021) and ten local (Gojo Cruz et al., 2025; Francisco et al., 2024; 
+Buebos-Esteve & Dagamac, 2024; Salvador, 2024; Švábenský et al., 2024; 
+
+[PAGE 57]
+ 
+ 
+ 
+ 
+Sagum & Sagum, 2025; Ramos & Vergara, 2023; Robantes et al., 2024; 
+Macrohon et al., 2024; and Ong & De Leon, 2025). The comparison spans 
+both foreign and local works in order to situate SimuRithm within the broader 
+landscape of existing machine learning ap proaches and to identify the 
+specific gaps it is designed to address within the Philippine undergraduate 
+academic context. 
+The comparison is organized across three feature categories: 
+Dataset Intelligence, Algorithm Recommendation, and User Experience. 
+Under Dataset Intelligence, each work is evaluated for its capacity to 
+perform NLP-based column header analysis, dataset chara cteristic-driven 
+algorithm selection prior to model execution, descriptive statistics 
+generation, and correlation analysis as part of its output. Under Algorithm 
+Recommendation, the works are assessed on whether they employ meta -
+learning for algorithm pred iction and whether they provide step -by-step 
+guided recommendations that explain why a particular algorithm was 
+selected. Under User Experience, the comparison covers student and 
+beginner orientation, customizable predictor and target variable selection, 
+graphical data visualization, and free or open accessibility. Each cell is 
+marked with a checkmark ( ✓) for full support, a tilde (~) for partial support, 
+or a cross ( ✗) for no support, while features bearing a star ( ★) denote 
+capabilities that distinguish SimuRithm and are absent across all twenty 
+reviewed works. 
+The table reveals that while several foreign works demonstrate 
+strength in algorithm -selection methodology — Dagan et al. (2024), 
+
+[PAGE 58]
+ 
+ 
+ 
+ 
+Garouani et al. (2023), Vente and Beel (2025), Tornede  et al. (2023), and 
+Feurer et al. (2022) all employ meta -learning and dataset characteristic -
+driven selection, and Langenecker et al. (2024) contributes NLP -based 
+semantic interpretation of columns — none couples these technical 
+capabilities with interpretable, student-oriented output or a guided, step-by-
+step recommendation workflow. The remaining foreign works are surveys 
+(Barbudo et al., 2023; He et al., 2021; Rong et al., 2024) rather than usable 
+systems and therefore provide none of the evaluated capabilities directly. 
+The local works, though contextually relevant to Philippine settings, apply 
+fixed, pre-selected algorithms to specific predetermined problems without 
+any automated or data-driven selection mechanism, and none are oriented 
+toward beginning student users. SimuRithm  is the only entry among those 
+reviewed that integrates NLP-based header analysis, dataset characteristic-
+driven selection, descriptive statistics and correlation analysis output, and a 
+step-by-step guided recommendation workflow within a design explicitly  
+tailored for undergraduate academic use. This convergence of 
+distinguishing features across all three categories establishes the precise 
+research gap that SimuRithm  is developed to address, justifying its 
+contribution as a novel and accessible intelligent decision support tool for 
+machine learning model selection in the Philippine higher education context. 
+CHAPTER III 
+METHODOLOGY 
+
+[PAGE 59]
+ 
+ 
+ 
+ 
+This chapter presents the methodology used in designing, 
+developing, and evaluating SimuRithm : An Intelligent Decision Support 
+System for automated machine learning algorithm selection. The methods 
+described in this chapter were chosen to address the research questions 
+stated in the Statement of the Problem, each of which required a specific 
+approach, set of tools, and basis for evaluation. The organization of this 
+chapter follows the input -process-output structure introduced in the 
+Conceptual Framework, beginning with how data enters the system, 
+followed by how the system processes it, and ends wi th how the system's 
+outputs are measured and assessed. 
+Method Research Used 
+This study will use the developmental, experimental, and descriptive 
+methods of research. The developmental method is suitable for this study 
+because the main purpose is to design and develop a working system. 
+SimuRithm will be created to help students analyze datasets and choose a 
+suitable machine learning algorithm. The system will include features such 
+as dataset upload, validation, NLP analysis, preprocessing, algorithm 
+repository management, benchmarking, recommenda tion, visualization, 
+and report generation. 
+The experimental method will also be used because the study will 
+test and compare different machine learning algorithms. The algorithms 
+categories included in the study are classification, regression, clustering, 
+anomaly detection, dimensionality reduction, topic modeling, text similarity, 
+sequence modeling. These categories will be tested using selected 
+datasets, and their results will be compared based on accuracy, precision, 
+
+[PAGE 60]
+ 
+ 
+ 
+ 
+recall, F1 -score, AUC, RMSE, MAE, R -squared, silhouette score, 
+coherence score, execution time, and resource consumption. Through this 
+method, the researchers will be able to determine how each algorithm 
+performs under different dataset conditions. 
+The descriptive method will be used to describe and evaluate the 
+performance and quality of the system. The respondents will use SimuRithm 
+and answer ISO/EIC 25010 criteria and usability indicator-based evaluation 
+forms based on their experience. Their responses will help the researchers 
+determine whether the system is useful, easy to understand, and helpful in 
+reducing the trial -and-error p rocess in selecting machine learning 
+algorithms.  
+Research Design 
+The study will follow developmental, experimental, and descriptive 
+research design. The developmental part focuses on the SimuRithm system 
+creation. The experimental component focuses on analyzing algorithm 
+performance across different dataset types and NLP feature 
+representations. The descriptive part focuses on evaluating user experience 
+and software quality. 
+The system will allow users to upload Excel or CSV datasets. After 
+uploading, SimuRithm will validate the dataset and display the result. The 
+system will then generate a dataset overview, apply NLP analysis to 
+headers and text fields, display detected tokens and inferred roles, allow 
+variable confirmation, perform processing, display a prepr ocessing log, 
+generate candidate algorithms, run applicable algorithms, display 
+
+[PAGE 61]
+ 
+ 
+ 
+ 
+benchmark results, , compare algorithm performance using appropriate 
+metrics, and recommend the most suitable algorithm with an explanation. 
+The system will generate an exportable recommendation report containing 
+dataset characteristics, preprocessing acti ons, benchmark results, and the 
+final algorithm recommendation  
+The Simurithm system will use an algorithm repository. Algorithms 
+will be grouped by task and compatibility with data representation. For 
+example, if the dataset has a categorical target, classification algorithms will 
+be considered. If the dataset has a continuous target, regression algorithms 
+will be considered. If no target is selected, clustering, topic modeling, 
+anomaly detection, or similarity algorithms may be considered. If text fields 
+are detected, NLP feature extraction will be performed before algorithm 
+filtering. 
+Locale of the Study 
+The study will be conducted at the College of Computing Studies of 
+Eulogio “Amang” Rodriguez Institute of Science and Technology, located in 
+Nagtahan, Sampaloc, Manila. This location is suitable for the study because 
+the target users of SimuRithm are stude nts from computing -related 
+programs of the said school. 
+Students from Computer Science and Information Technology 
+programs are commonly exposed to programming, data analysis, and basic 
+machine learning concepts. Because of this, they are appropriate 
+respondents for evaluating a system that helps users understan d datasets 
+and select suitable machine learning algorithms. The system testing may be 
+
+[PAGE 62]
+ 
+ 
+ 
+ 
+conducted in a computer laboratory or in any available academic setting 
+where the respondents can access the system. It may also be conducted 
+online, provided that all respondents are given the same instructions and 
+evaluation forms. 
+Respondents of the Study 
+The respondents of the study will be undergraduate students from 
+Computer Science and Information Technology programs. They will serve 
+as the main evaluators of the system. The respondents will test SimuRithm 
+and provide feedback about its usability, usefu lness, clarity, and 
+effectiveness in helping users choose a machine learning algorithm. 
+The respondents will be selected using purposive sampling. This 
+means that the researchers will choose participants who are related to the 
+purpose of the study. Since SimuRithm  is designed for students and 
+beginner data analysts, the respondents must have basic knowledge of 
+programming, datasets, or machine learning activities. The study may also 
+include Computer Science or Information Technology faculty members as 
+expert evalua tors, especially for checking the system based on software 
+quality standards. However, the main focus of the evaluation will remain on 
+the student respondents because they are the primary intended users of the 
+system. 
+Research Instruments 
+The researchers will use several instruments to gather the needed 
+data. An ISO/IEC 25010 -based evaluation form will be used to assess 
+functional suitability, usability, performance efficiency, reliability, and 
+
+[PAGE 63]
+ 
+ 
+ 
+ 
+maintainability. Functional suitability will evaluate whether the system 
+performs dataset upload, validation, NLP analysis, preprocessing, algorithm 
+filtering, benchmarking, recommendation, visualization, and export. 
+Usability will evaluate whether the sys tem can be easily understood by 
+undergraduate students. Performance efficiency will evaluate whether the 
+system processes datasets within acceptable time and resource limits. 
+Reliability will evaluate whether the system handles invalid files, 
+unsupported d atasets, and algorithm errors properly. Maintainability will 
+evaluate whether the algorithm repository and NLP modules can be 
+updated. 
+A usability questionnaire will be used to measure whether users find 
+the step-by-step outputs understandable, helpful, and easy to follow. A task 
+checklist will be used to verify whether respondents can complete the main 
+system tasks, including dataset upload, validation viewing, NLP output 
+viewing, preprocessing review, algorithm comparison, recommendation 
+reading, and report download. An algorithm performance record she et will 
+store the metrics generated by each candidate algorithm. A dataset 
+suitability checklist will be used to record file type, number of rows, number 
+of columns, data types, text fields, missing values, target variable 
+availability, and task type. A process-output checklist will be used to confirm 
+that every major system step displays the required output. 
+Data Gathering Procedure 
+The researchers will collect sample datasets from public repositories, 
+school-approved datasets, or instructor -provided datasets. Datasets may 
+include numerical, categorical, alphanumeric, and text-based columns. CSV 
+
+[PAGE 64]
+ 
+ 
+ 
+ 
+and Excel files will be prioritized because these formats match the system 
+scope. Each dataset will be uploaded to the system. SimuRithm will display 
+an upload status and validation report showing whether the file type, 
+structure, row count, column count, and readable fields are acceptable. 
+The system will generate a dataset overview output that includes a 
+preview table, data types, missing values, duplicate records, target 
+candidates, and detected text fields. The NLP module will analyze column 
+headers and text fields. It will display tokens , normalized terms, detected 
+header meanings, possible variable roles, text -length summaries, 
+vocabulary size, and suggested feature extraction methods. The user may 
+confirm or customize the input variables, target variable, task type, and 
+evaluation metric. The system will display the final variable selection output 
+before preprocessing begins. 
+The system will preprocess the data and display a preprocessing log. 
+This may include missing value handling, encoding, scaling, tokenization, 
+stop-word handling, vectorization, embedding generation, feature selection, 
+and train -test splitting. The algorit hm repository will filter all applicable 
+algorithms based on task type, dataset size, feature dimensionality, text 
+representation, target type, and available computing resources. The system 
+will display candidate algorithms and explain inclusion or exclusi on 
+decisions. The system will execute the applicable algorithms, record 
+performance metrics, and display benchmark tables and charts. It will then 
+rank algorithms based on a composite score or user-selected priority. 
+The recommendation engine will generate a final recommendation 
+with an explanation. The results will include the best algorithm, alternative 
+
+[PAGE 65]
+ 
+ 
+ 
+ 
+algorithms, key dataset insights, performance evidence, warnings, and 
+downloadable output report. Respondents will test the system and complete 
+the evaluation of instruments. Their responses will be tabulated and 
+interpreted using frequency, percentage, weighted mean, and qualitative 
+comments where appropriate. 
+Data Analysis Tools 
+The researchers will use Python as the main programming language 
+for developing and testing the system. Python is suitable for this study 
+because it has many libraries for data analysis, machine learning, and 
+visualization. Pandas and NumPy will be used fo r reading, cleaning, and 
+processing datasets. Scikit -learn will be used to run the machine learning 
+algorithms and compute their performance results. HTML will be used for 
+the user interface of the system. Furthermore, JavaScript is employed within 
+the HTM L structure to invoke and execute the Python code, enabling 
+smooth interaction between the web interface and the underlying Python -
+based functionality. This integration allows the webpage to communicate 
+with Python processes, thereby supporting dynamic operations, data 
+processing, and enhanced interactivity within the application. 
+NLTK will be used for checking and processing the column headers 
+of the dataset. This will help the system understand possible meanings of 
+column names and support the system in identifying variables. Matplotlib or 
+other graphing tools may be used to create charts, graphs, and other visual 
+outputs. For the evaluation  of results, Microsoft Excel, Google Sheets, or 
+
+[PAGE 66]
+ 
+ 
+ 
+ 
+Python may be used to compute the weighted mean, percentage, and other 
+needed results. 
+The machine learning results will be analyzed using accuracy, 
+precision, recall, F1-score, AUC, RMSE, MAE, R-squared, silhouette score, 
+coherence score, execution time, and resource consumption. The 
+evaluation responses from the respondents will be analyze d using 
+frequency, percentage, and weighted mean. These tools will help the 
+researchers determine the performance of the algorithms and the 
+acceptability of the system. 
+The system will utilize an SQL database to store historical records 
+from the previous processes. The stored data can be retrieved and used as 
+a reference for future operations. By maintaining the history, the system can 
+be used for better support in decisi on-making, process efficiency, and 
+support long-term operational needs. 
+Algorithm Repository 
+Table 3.1. Algorithm Repository 
+Algorithm Type Algorithms Under Possible Use in Simurithm 
+1. Classification 
+Logistic Regression 
+Decision Tree 
+Random Forest 
+Support Vector Machine 
+(SVM) 
+k-Nearest Neighbors (KNN) 
+Categorical target, text 
+classification, and label 
+prediction 
+
+[PAGE 67]
+ 
+ 
+ 
+ 
+Naive Bayes 
+2. Regression 
+Linear Regression 
+Ridge Regression 
+Lasso Regression 
+Decision Tree Regressor 
+Random Forest Regressor 
+Support Vector Regression 
+(SVR) 
+Continuous target prediction 
+3. Clustering 
+K-Means 
+Density-Based Spatial 
+Clustering of Applications 
+with Noise (DBSCAN) 
+Hierarchical Clustering 
+No target variable, and 
+grouping records or 
+documentation 
+4. Anomaly Detection 
+Isolation Forest 
+One-Class SVM 
+Local Outlier Factor (LOF)  
+Detecting unusual records 
+5. Dimensionality 
+Reduction 
+Principal Component 
+Analysis (PCA) 
+t-Distributed Stochastic 
+Neighbor Embedding (t-
+SNE) 
+Uniform Manifold 
+Approximation and 
+Reducing features or 
+converting text to numerical 
+form 
+
+[PAGE 68]
+ 
+ 
+ 
+ 
+Projection (UMAP)  
+6. Topic Modeling 
+Latent Dirichlet Allocation 
+(LDA) 
+Non-negative Matrix 
+Factorization (NMF) 
+Discovering topic in text 
+fields 
+7. Text Similarity 
+TF-IDF + Cosine Similarity 
+Jaccard Similarity 
+Finding similar records, 
+documents, or column 
+meanings 
+8. Sequence Modeling 
+Long Short-Term Memory 
+(LSTM) 
+Gated Recurrent Unit (GRU) 
+Transformer 
+Text sequence or semantic 
+language tasks when 
+hardware or libraries allow 
+Recommended Metrics per Category 
+Table 3.2. Recommended Metrics per Category 
+Legend: 
+✓ = Primary metric for the task 
+~ = Can be used in some anomaly detection implementations 
+✗ = Not applicable 
+✓* = Applicable only if sequence modeling performs forecasting or 
+numerical prediction 
+
+[PAGE 69]
+ 
+ 
+ 
+ 
+Evaluati
+on 
+Metric 
+Classif
+ication 
+Regre
+ssion 
+Cluste
+ring 
+Anom
+aly 
+Detecti
+on 
+Dimen
+sionali
+ty 
+Reduc
+tion 
+Topic 
+Modeli
+ng 
+Text 
+Similar
+ity 
+Seque
+nce 
+Modeli
+ng 
+Accurac
+y 
+✓ ✗ ✗ ~ ✗ ✗ ✗ ✓ 
+Precisio
+n 
+✓ ✗ ✗ ✓ ✗ ✗ ✗ ✓ 
+Recall ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✓ 
+F1-
+Score 
+✓ ✗ ✗ ✓ ✗ ✗ ✗ ✓ 
+AUC ✓ ✗ ✗ ✓ ✗ ✗ ✗ ✓ 
+RMSE ✗ ✓ ✗ ✗ ✗ ✗ ✗ ✓* 
+MAE ✗ ✓ ✗ ✗ ✗ ✗ ✗ ✓* 
+R-
+Squared 
+(R²) 
+✗ ✓ ✗ ✗ ✗ ✗ ✗ ✗ 
+Silhouett
+e Score 
+✗ ✗ ✓ ✗ ✗ ✗ ✗ ✗ 
+
+[PAGE 70]
+ 
+ 
+ 
+ 
+Coheren
+ce Score 
+✗ ✗ ✗ ✗ ✗ ✓ ✗ ✗ 
+Executio
+n Time 
+✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+Resourc
+e 
+Consum
+ption 
+✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+This table shows the recommended metrics per category to ensure 
+that machine learning algorithm are evaluated fairly and appropriately, 
+SimuRithm will apply task-specific performance metrics based on the nature 
+of the machine learning problem. Different al gorithm categories require 
+different evaluation measures because a metric that is suitable for one task 
+may not accurately reflect performance in another. Rainio and Klén (2024) 
+emphasized that the selection of evaluation metrics should be aligned with 
+the objectives and characteristics of the machine learning task being 
+performed. 
+For classification and classification-based sequence modeling tasks, 
+the system will use Accuracy, Precision, Recall, F1-Score, and Area Under 
+the Receiver Operating Characteristic Curve (AUC). These metrics are 
+widely used to evaluate the correctness of p redictions and the balance 
+between correctly identified positive cases and classification errors. 
+
+[PAGE 71]
+ 
+ 
+ 
+ 
+Precision, Recall, and F1-Score are particularly important when dealing with 
+imbalanced datasets where overall accuracy alone may be misleading. 
+For regression tasks, the system will utilize Root Mean Squared Error 
+(RMSE), Mean Absolute Error (MAE), and R-Squared (R²). RMSE and MAE 
+measure the magnitude of prediction errors, while R² indicates the 
+proportion of variance in the dependent variable ex plained by the model. 
+These metrics are among the most commonly accepted measures for 
+evaluating predictive performance in regression models. 
+For clustering algorithms, Silhouette Score will be used to assess 
+cluster quality by measuring how well data points fit within their assigned 
+clusters compared to neighboring clusters. Higher silhouette values indicate 
+better-defined and more meaningful clusters. 
+For topic modeling tasks, Coherence Score will be employed to 
+evaluate the semantic consistency and interpretability of generated topics. 
+Topic coherence has become one of the most widely adopted measures for 
+assessing topic quality because it reflects the  degree to which topic 
+keywords are meaningfully related. 
+In addition to predictive performance metrics, SimuRithm  will record 
+Execution Time and Resource Consumption for all algorithm categories. 
+These measurements provide information regarding computational 
+efficiency, allowing the system to recommend algorithms that not only 
+achieve high predictive performance but also operate within practical time 
+and resource constraints. This supports the study's objective of helping 
+
+[PAGE 72]
+ 
+ 
+ 
+ 
+undergraduate students select algorithms that are both effective and 
+computationally feasible. 
+Statistical Treatment of the Data 
+The study will use frequency and percentage to describe the 
+responses of the respondents. These will help show how many respondents 
+selected a certain answer in the evaluation forms. The formula for 
+percentage is: 
+Percentage = (f / N) × 100 
+where: 
+f  =  number of responses 
+N  =  total number of respondents 
+The weighted mean will be used to interpret the results of the 
+ISO/IEC 25010 evaluation and usability questionnaire. It will help determine 
+the overall rating of the system based on the answers of the respondents. 
+The formula for weighted mean is: 
+Weighted Mean = Σwx / N 
+where: 
+w  =  weight of each response 
+x  =  number of respondents who selected the response 
+N  =  total number of respondents 
+The following scale will be used to interpret the weighted mean: 
+
+[PAGE 73]
+ 
+ 
+ 
+ 
+Range Interpretation 
+4.21 – 5.00 Strongly Agree / Excellent 
+3.41 – 4.20 Agree / Very Good 
+2.61 – 3.40 Neutral / Good 
+1.81 – 2.60 Disagree / Fair 
+1.00 – 1.80 Strongly Disagree / Poor 
+Table 3.3. Weighted Mean Interpretation Scale 
+For the algorithm testing, accuracy will be used to measure how 
+many predictions are correct. Precision will measure how many predicted 
+positive results are actually correct, while recall will measure how many 
+actual positive results are correctly identifi ed. The F1-score will be used to 
+balance the results of precision and recall. Execution time will also be 
+recorded to determine how long each algorithm takes to process the 
+dataset. The following formulas will be used: 
+Accuracy = (TP + TN) / (TP + TN + FP + FN) 
+Precision = TP / (TP + FP) 
+Recall = TP / (TP + FN) 
+F1-Score = 2 × (Precision × Recall) / (Precision + Recall) 
+where: 
+TP  =  true positive 
+TN  =  true negative 
+
+[PAGE 74]
+ 
+ 
+ 
+ 
+FP  =  false positive 
+FN  =  false negative 
+Recommendation accuracy will also be used to check if SimuRithm  
+recommends the correct algorithm. A recommendation will be considered 
+correct if the algorithm suggested by the system is the same as the 
+algorithm that gets the best result during testing. The formula is: 
+Recommendation Accuracy = (Number of Correct 
+Recommendations / Total Number of Test Datasets) × 100 
+Proof of Concept 
+The proof of concept presents the working prototype of SimuRithm : 
+An Intelligent Decision Support System for Automated ML Model Selection. 
+It describes the main process of the system, beginning with dataset upload 
+and ending with the generation of the recommended machine learning 
+algorithm. This section demonstrates ho w the system guides users in 
+understanding their dataset, preparing it for machine learning, comparing 
+different algorithms, and identifying the most suitable model.  
+ 
+ 
+ 
+ 
+ 
+
+
+[PAGE 75]
+ 
+ 
+ 
+ 
+Figure 3.1.1. Dataset Upload 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.1.2. Dataset Upload 
+The Dataset Upload stage serves as the initial interaction between 
+the user and the SimuRithm system. This stage allows users to provide their 
+dataset in supported formats, such as CSV or Excel files, which will serve 
+as the primary input for the automated machine learning model selection 
+
+
+[PAGE 76]
+ 
+ 
+ 
+ 
+process. After uploading the dataset, the system performs an initial 
+validation to ensure that the file can be properly processed. The uploaded 
+dataset is then prepared for the succeeding stages by identifying the 
+available information and making it access ible for further analysis. This 
+stage provides users with a guided starting point and reduces the difficulty 
+of manually preparing datasets before applying machine learning 
+techniques. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.2.1. Dataset Understanding (Data Types) 
+
+
+[PAGE 77]
+ 
+ 
+ 
+ 
+ 
+Figure 3.2.2. Dataset Understanding (Data Types) 
+ 
+ 
+Figure 3.2.3. Dataset Understanding (Column Analysis) 
+
+
+[PAGE 78]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.2.4. Dataset Understanding (Column Analysis) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+[PAGE 79]
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.2.5. Dataset Understanding (Data Preview) 
+The Dataset Understanding stage focuses on analyzing the uploaded 
+dataset to determine its structure, characteristics, and relevant information 
+needed for machine learning preparation. The system examines dataset 
+attributes, column information, and available data characteristics to provide 
+users with a clearer understanding of their data. This stage helps identify 
+important dataset properties that influence the selection of suitable machine 
+learning approaches. By presenting the analyzed dataset information  in a 
+structured manner, SimuRithm assists users in interpreting their dataset 
+before proceeding to variable selection and algorithm recommendation. 
+ 
+ 
+
+[PAGE 80]
+ 
+ 
+ 
+ 
+Figure 3.3.1. Variable Selection 
+ 
+Figure 3.3.2.  Variable Selection 
+
+
+[PAGE 81]
+ 
+ 
+ 
+ 
+The Variable Selection stage allows users to review and confirm the 
+variables that will be used for machine learning analysis. Users can identify 
+the input variables ￼ 
+variable (Y) according to their intended objective. This stage ensures that 
+the system understands the relationship between the selected features and 
+expected output before determining suitable machine learning algorithms. 
+By allowing users to verify the selected variables, the system improves the 
+reliability of the succeeding algorithm selection and evaluation process. 
+Figure 3.4.1.  Algorithm Repository 
+ 
+ 
+ 
+ 
+
+
+[PAGE 82]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.4.2.  Algorithm Repository 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+[PAGE 83]
+ 
+ 
+ 
+ 
+Figure 3.4.3.  Algorithm Repository 
+The Algorithm Repository st age presents the available machine 
+learning algorithms that can be considered based on the identified dataset 
+characteristics and machine learning category. The repository serves as a 
+reference component that stores algorithm information and supports the 
+filtering of suitable candidates for evaluation. Instead of requiring users to 
+manually select from a large number of machine learning algorithms, 
+SimuRithm narrows the possible choices based on compatibility with the 
+dataset. This stage simplifies algorithm selection and provides a more 
+guided approach for users with limited machine learning experience. 
+ 
+Figure 3.5.1.  Benchmarking 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+[PAGE 84]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.5.2 Benchmarking 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3.5.3 Benchmarking 
+
+
+[PAGE 85]
+ 
+ 
+ 
+ 
+The Benchmarking stage evaluates and compares the selected 
+machine learning algorithms to determine  their performance on the given 
+dataset. The system executes the candidate algorithms and records their 
+results using appropriate evaluation metrics depending on the identified 
+machine learning task. The generated comparison allows users to 
+understand the differences between algorithms and provides evidence for 
+selecting the most suitable model. This stage reduces the need for manual 
+trial-and-error by providing a systematic evaluation process. 
+ 
+Figure 3.6.1 Final Recommendation 
+The Final Recommendation stage presents the generated output 
+after completing dataset analysis and algorithm benchmarking. The system 
+provides the recommended machine learning algorithm together with 
+supporting information from the evaluation results. The recommendation 
+includes an explanation of why the selected algorithm is considered 
+
+
+[PAGE 86]
+ 
+ 
+ 
+ 
+appropriate for the given dataset, helping users understand the decision 
+behind the suggested model. This stage demonstrates how SimuRithm  
+assists users in making informed machine learning model selection 
+decisions through a guided and data-driven process. 
+ 
+ 
+Architectural Framework 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+[PAGE 87]
+ 
+ 
+ 
+ 
+Figure 3.10 Architectural Framework 
+SimuRithm is structured around a layered architectural framework 
+that organizes the system's components according to their role in the overall 
+machine learning preparation and recommendation pipeline. The 
+architecture is composed of five principal layers: the data intake layer, which 
+handles dataset upload, validation, and parsing. The intelligence layer, 
+which performs NLP -based header analysis, statistical feature extraction, 
+and dataset quality assessment; the processing layer, which carries out data 
+cleaning, pr eprocessing, and train -test preparation; the execution layer, 
+which manages the algorithm repository, filters candidate algorithms, and 
+records benchmark results; and the output layer, which consolidates all 
+results into step -by-step visible outputs, visua lizations, and an exportable 
+recommendation report. These layers operate sequentially, with each stage 
+building upon the outputs of the preceding one. The system is implemented 
+in Python for its backend processing, with the user interface built in HTML 
+and JavaScript, and incorporates an SQL -based storage component that  
+preserves historical algorithm -dataset performance records to support the 
+meta-learning-based recommendation engine.  
+ 
+3.1. Software Model 
+The study will use the Prototyping Model in developing SimuRithm . 
+This model is suitable for the study because the system needs to be tested 
+and improved based on user feedback. Since the target users are 
+undergraduate students, it is important to create an initial version of the 
+
+[PAGE 88]
+ 
+ 
+ 
+ 
+system, allow users to test it, and improve it based on their comments and 
+evaluation results. 
+The development process will begin with gathering the system 
+requirements. The researchers will identify the needed features of 
+SimuRithm, such as dataset upload, CSV and Excel support, dataset 
+reading, column header checking, statistical results, graph generation, 
+algorithm testing, and algorithm recommendation. After identifying these 
+requirements, the researchers will create a simple des ign of the system, 
+including the layout, buttons, forms, and result screens. 
+After the design is prepared, the researchers will develop the first 
+working version of SimuRithm. This prototype will include the main features 
+of the system. The prototype will then be tested by the selected 
+respondents. They will use the system and answer evaluation forms. Based 
+on their feedback, the researchers will improve the system by fixing e rrors, 
+improving the interface, and making the outputs clearer and easier to 
+understand. 
+After the improvements are made, the final version of SimuRithm will 
+be prepared for evaluation. The completed system will be checked using 
+ISO/IEC 25010 and usability evaluation forms. The results will show whether 
+the system is functional, useful, easy to use, and effective in helping 
+students select a suitable machine learning algorithm. 
+ 
+ 
+
+[PAGE 89]
+ 
+ 
+ 
+ 
+ 
+ 
+CHAPTER IV 
+Results and Discussion 
+This chapter presents the results of the development of SimuRithm: 
+An Intelligent Decision Support System for Automated Machine Learning 
+Model Selection, organized by the four questions in the Statement of the 
+Problem. Each technique is written as a numbered algorithm in pseudocode, 
+followed by a trace that shows what the algorithm does to the sample 
+datasets. 
+SimuRithm has three layers: a browser interface that uploads files 
+and displays results; a PHP layer that validates and stores files, keeps 
+database records and logs, and generates reports; and a Python analysis 
+service, reached through the Flask web frame work, that contains the 
+researchers' analysis, benchmarking, and recommendation procedures. 
+Work happens in two phases. Phase 1 runs right after upload: the file is 
+validated, read, profiled, and its headers analyzed, and a target and task 
+are suggested. Phase 2 runs only after the user confirms the variables and 
+selects the algorithms: correlation, benchmarking, ranking, feature 
+importance, and optional tuning are performed. 
+The pseudocode uses these conventions: ← assigns a value; ▷ 
+begins a comment; STOP ends the procedure and shows the quoted 
+message to the user; REJECT does the same for a request that fails 
+validation. 
+
+[PAGE 90]
+ 
+ 
+ 
+ 
+Five sample datasets are used (Table 4.1). Together they contain 
+every storage type the system must recognize (integer, decimal, text, and 
+date) and require every kind of analysis it supports. 
+Table 4.1 Sample Datasets 
+ID File Rows × 
+column
+s 
+Columns, left to 
+right 
+Analysis 
+demonstrate
+d 
+D
+1 
+student_performance.c
+sv 
+500 × 8 Student_ID, 
+Gender, Age, 
+Study_Hours, 
+Attendance_Rate
+, Prev_Grade, 
+Teacher_Remark
+s, Final_Status 
+Classificatio
+n of 
+Final_Status 
+D
+2 
+house_prices.xlsx 1,200 × 
+8 
+House_ID, 
+Location, 
+Floor_Area, 
+Bedrooms, 
+Bathrooms, 
+Year_Built, 
+Has_Garage, 
+Sale_Price 
+Regression 
+of 
+Sale_Price 
+D
+3 
+mall_customers.csv 200 × 5 Customer_ID, 
+Gender, Age, 
+Clustering of 
+customers 
+
+[PAGE 91]
+ 
+ 
+ 
+ 
+Annual_Income, 
+Spending_Score 
+D
+4 
+product_reviews.csv 1,000 × 
+4 
+Review_ID, 
+Product_Categor
+y, Review_Text, 
+Rating 
+Topic 
+modeling 
+and text 
+similarity 
+D
+5 
+store_sales.xlsx 730 × 5 Date, Store_ID, 
+Promo, 
+Customers, Sales 
+Sequence 
+modeling of 
+daily Sales 
+Where a computation is worked by hand, the first six rows of D1 are 
+used (Table 4.2). Blank cells are missing values. 
+Table 4.2 First Six Rows of D1, Used for Hand-Computed Traces 
+Stude
+nt_ID 
+Gen
+der 
+A
+g
+e 
+Study_
+Hours 
+Attendanc
+e_Rate 
+Prev_
+Grade 
+Teacher_R
+emarks 
+Final_
+Status 
+S001 Fem
+ale 
+1
+9 
+12.5 0.92 88 Active in 
+class 
+discussion
+s 
+Passed 
+S002 Mal
+e 
+2
+0 
+ 0.75 74 Often late, 
+submits 
+incomplete 
+work 
+Failed 
+
+[PAGE 92]
+ 
+ 
+ 
+ 
+S003 Fem
+ale 
+ 8.0 0.81 79 Needs 
+more 
+practice 
+Passed 
+S004 Mal
+e 
+2
+1 
+4.5 0.60  Frequently 
+absent 
+Failed 
+S005  1
+9 
+10.0 0.88 85 Consistent 
+performan
+ce 
+Passed 
+S006 Fem
+ale 
+2
+0 
+6.0 0.70 71   
+4.1 Dataset Acceptance, Parsing, Validation, and Identification 
+SOP 1:  How can SimuRithm accept, parse, and validate 
+heterogeneous datasets from CSV and Excel files while identifying their 
+variables and possible target attributes? 
+SOP 1 is answered by Algorithms 4.1 to 4.13, which every uploaded 
+file passes through in Phase 1: validation and storage (4.1.1 to 4.1.3), 
+reading (4.1.4), type inference (4.1.5), profiling (4.1.6), header analysis 
+(4.1.7), target and task suggestion (4.1. 8), missing-value handling (4.1.9), 
+correlation (4.1.10), and error handling and logging (4.1.11). 
+4.1.1 Upload and File Validation 
+The browser sends the selected file to the PHP layer, which checks 
+the request before anything is stored. 
+Figure 4.1. File Validation Process 
+
+[PAGE 93]
+ 
+ 
+ 
+ 
+ALGORITHM 4.1  Validate Upload 
+INPUT : HTTP request R from the browser 
+OUTPUT: accepted file f, or a rejection message 
+1  IF R.method ≠ POST THEN STOP "Invalid request." 
+2  IF R carries no file named "dataset" THEN STOP "No file uploaded." 
+3  f ← the uploaded file 
+4  IF f.uploadStatus ≠ OK THEN STOP "Upload failed. Error code: " + 
+f.uploadStatus 
+5  ext ← lowercase(extension of f.name) 
+6  IF ext ∉ {csv, xls, xlsx} THEN STOP "Only CSV, XLS and XLSX files are 
+allowed." 
+7  IF f.size > 1,073,741,824 bytes THEN STOP "Dataset exceeds 1GB."   
+▷ 1024 × 1024 × 1024 
+8  RETURN f                                                           ▷ continue to Algorithm 
+4.2 
+Trace: D1 to D5 all pass, since their extensions are csv or xlsx and 
+each is under 1 GB. Grades.XLSX also passes, because line 5 lowercases 
+the extension. grades.pdf stops at line 6, and a 1.2 GB file stops at line 7. 
+Line 6 accepts only listed types (a whitelist), so any unknown type is rejected 
+by default. 
+4.1.2 Storage and Registration 
+ALGORITHM 4.2  Store and Register Dataset 
+INPUT : accepted file f with extension ext 
+OUTPUT: dataset ID and absolute path of the stored file 
+1  IF the upload folder does not exist THEN create it 
+
+[PAGE 94]
+ 
+ 
+ 
+ 
+2  name ← current date-time as YYYYMMDDhhmmss + "_" + unique ID + 
+"." + ext 
+3  move f into the upload folder as name 
+4  IF the move failed THEN log ERROR; STOP "Unable to save uploaded 
+file." 
+5  path ← absolute path of the stored file;  log SUCCESS "Dataset 
+uploaded" 
+6  connect to the database 
+7  IF the connection failed THEN delete the stored file; STOP "Unable to 
+connect to SimuRithm database." 
+8  TRY  insert record (original file name, rows ← NULL, columns ← 
+NULL);  id ← new record's ID 
+9  CATCH failure: delete the stored file; log ERROR; STOP "Unable to 
+register dataset in database." 
+10 RETURN id, path 
+Trace: D1 uploaded on 7 October 2026 at 14:25:30 is stored as 
+20261007142530_6703a1f2c9e4b.csv. Two students uploading a file 
+named data.csv in the same second receive different names, because the 
+unique ID in line 2 is derived from the time in microseconds. Rows and 
+columns stay NULL until the analysis service counts them (Algorithm 4.3, 
+line 7). Lines 7 and 9 delete the file when registratio n fails, so no file is left 
+without a record. 
+4.1.3 The Analysis Pipeline 
+PHP does not analyze data. It sends the stored file's path to the 
+Python analysis service through an API (Application Programming 
+
+[PAGE 95]
+ 
+ 
+ 
+ 
+Interface), and the service runs the analysis and returns the results. Figure 
+4.2 shows the complete pipeline across both phases. 
+ 
+SimuRithm analysis pipeline · 2 phases, 6 stages 
+Figure 4.2. SimuRithm Analysis Pipeline 
+ALGORITHM 4.3  Request Analysis from the Service 
+INPUT : dataset ID id, absolute path p 
+OUTPUT: analysis result shown in the browser 
+1  send POST /analyze with body {file_path: p}            ▷ wait ≤ 10 s to 
+connect, ≤ 300 s in total 
+2  IF no reply arrived (service offline or time exceeded) THEN result ← 
+FAILURE "Unable to communicate with Flask API." 
+3  ELSE IF the reply is not valid JSON THEN result ← FAILURE "Flask 
+returned invalid JSON." 
+4  ELSE IF the HTTP status is outside 200–299 THEN result ← FAILURE 
+with that status 
+5  ELSE result ← the reply 
+
+
+[PAGE 96]
+ 
+ 
+ 
+ 
+6  IF result is FAILURE THEN keep the record; log ERROR; STOP 
+"Dataset uploaded, but Flask analysis failed." 
+7  update record id with result.rows and result.columns   ▷ if this update 
+fails, it is only logged 
+8  log SUCCESS; send result to the browser 
+Inside the service, Algorithms 4.4 to 4.10 produce the result. Before 
+any reply leaves the service, NaN and infinite values are replaced by null, 
+because they are not valid JSON. Trace: if the Python service is not running, 
+line 2 fails and the user sees "Dataset uploaded, but Flask analysis failed." 
+For D1, line 7 sets rows = 500 and columns = 8. 
+4.1.4 Reading the Dataset 
+The analysis service first loads the stored file into a table in 
+memory. 
+ALGORITHM 4.4  Read Dataset 
+INPUT : absolute path p of the stored file 
+OUTPUT: table T, or an error 
+1  IF no file exists at p THEN STOP "Dataset not found" 
+2  ext ← lowercase(extension of p) 
+3  IF ext ∉ {.csv, .xls, .xlsx} THEN STOP "Unsupported file format"   ▷ 
+repeats PHP's check 
+4  IF ext = .csv THEN 
+5      FOR each encoding e IN [UTF-8, UTF-8 with BOM, Latin-1, 
+Windows-1252] DO 
+6          TRY read p as comma-separated text using e; first line = headers 
+7          IF reading succeeded THEN BREAK 
+
+[PAGE 97]
+ 
+ 
+ 
+ 
+8      IF every encoding failed THEN STOP with the last error 
+9  ELSE 
+10     read the first worksheet of p                 ▷ separate readers for .xls 
+and .xlsx 
+11 remove every row whose cells are all blank 
+12 remove every column whose cells are all blank 
+13 FOR each header h DO h ← trim(text(h)) 
+14 RETURN T 
+Trace: 
+ D1, D3, and D4 are read at the first attempt (UTF-8). A copy of D1 
+saved from Excel as Windows "ANSI" text with the value 
+"Parañaque" fails UTF-8 and UTF-8 with BOM at the letter ñ and is 
+read by Latin-1 at the third attempt. 
+ D2 and D5 are Excel files, so only their first worksheet is read (line 
+10). 
+ If D2 has formatted but empty rows below its data, line 11 removes 
+them, so its row count stays 1,200. 
+ A header typed as " Final_Status " becomes "Final_Status" (line 
+13). 
+ A renamed non-data file that passed PHP's extension check fails 
+here, at line 6 or 10. 
+4.1.5 Recognizing Data Types 
+While reading, each column receives a storage type: Integer, 
+Decimal, Text, or Date. The storage type decides whether a column is 
+treated as numerical or categorical in every later step. 
+
+[PAGE 98]
+ 
+ 
+ 
+ 
+ALGORITHM 4.5  Infer Storage Type of a Column 
+INPUT : the values c1 … cn of one column, as read from the file 
+OUTPUT: storage type ∈ {Integer, Decimal, Text, Date}; group ∈ 
+{Numerical, Categorical} 
+1  IF the file is Excel AND every non-blank cell is formatted as a date 
+THEN type ← Date 
+2  ELSE IF some non-blank value cannot be read as a number THEN type 
+← Text 
+3  ELSE IF the column has a blank cell THEN type ← Decimal   ▷ a blank 
+is stored as NaN, a decimal value 
+4  ELSE IF every value is a whole number THEN type ← Integer 
+5  ELSE type ← Decimal 
+6  group ← Numerical IF type ∈ {Integer, Decimal} ELSE Categorical 
+7  RETURN type, group 
+Trace: 
+ D2 Bedrooms (3, 2, 4, …, no blanks) → line 4 → Integer, 
+Numerical. 
+ D2 Floor_Area (85.5, 120.0, …) → line 5 → Decimal, Numerical. 
+ D1 Age (19, 20, blank, 21, …) → line 3 → Decimal, although every 
+age is a whole number, because S003's blank is stored as NaN. 
+ D3 Customer_ID (1 to 200) → line 4 → Integer, Numerical. Its 
+identifier role is recognized separately, in Algorithm 4.8. 
+ D1 Gender (Female, Male) → line 2 → Text, Categorical. A number 
+written with a comma, such as "1,200", also fails to read as a 
+number, so its column becomes Text. 
+
+[PAGE 99]
+ 
+ 
+ 
+ 
+ D5 Date (Excel date cells) → line 1 → Date, Categorical. The same 
+dates in a CSV file would be Text, since line 1 applies only to Excel. 
+ 
+Algorithm 4.5 applied to D1–D5 (Table 4.1) 
+Figure 4.3. Storage Types per Sample Dataset 
+A second pass looks at the characters inside the values. Its result, 
+the value type, is used by the header analysis in 4.1.7. 
+ALGORITHM 4.6  Classify Column Values 
+INPUT : column c with storage type from Algorithm 4.5 
+OUTPUT: value type ∈ {Numeric, Alphabetic, Alphanumeric, Unknown} 
+1  IF c is Numerical THEN RETURN Numeric 
+2  V ← the non-blank values of c, converted to text and trimmed 
+3  IF V is empty THEN RETURN Unknown 
+4  hasLetter ← some value in V contains a letter A–Z 
+5  hasDigit ← some value in V contains a digit 0–9 
+6  IF hasLetter AND NOT hasDigit THEN RETURN Alphabetic 
+7  IF hasLetter AND hasDigit THEN RETURN Alphanumeric 
+8  IF hasDigit THEN RETURN Numeric      ▷ numbers stored as text, 
+
+
+[PAGE 100]
+ 
+ 
+ 
+ 
+dates 
+9  RETURN Unknown 
+Trace: D1 Gender → Alphabetic. D1 Student_ID ("S001") → 
+Alphanumeric. D4 Review_Text → Alphanumeric, because at least one 
+review contains a digit ("Arrived in 2 days"). D5 Date → Numeric, because 
+its printed form "2024-01-01" holds digits only. 
+4.1.6 Profiling the Dataset 
+ALGORITHM 4.7  Profile Dataset 
+INPUT : table T from Algorithm 4.4 
+OUTPUT: summary S, column profile P, preview V 
+1  S.rows ← number of rows;  S.columns ← number of columns 
+2  S.missing ← number of blank cells 
+3  S.missingPercent ← S.missing ÷ (S.rows × S.columns) × 100 
+4  S.duplicates ← number of rows identical to an earlier row        ▷ 
+reported, never removed 
+5  S.numerical ← number of Numerical columns;  S.categorical ← the rest 
+6  S.memory ← memory occupied by T, in kilobytes 
+7  FOR each column c DO 
+8      P[c] ← storage type, blank count, distinct non-blank values, first non-
+blank value 
+9      IF c is Numerical THEN add mean, median, standard deviation (n − 
+1), minimum, maximum 
+10 V ← first 10 rows of T, blanks shown as empty 
+11 RETURN S, P, V 
+
+[PAGE 101]
+ 
+ 
+ 
+ 
+Trace on Table 4.2: rows = 6, columns = 8, missing = 6, missing 
+percent = 6 ÷ 48 × 100 = 12.5%, duplicates = 0, numerical = 4, categorical 
+= 4. For Study_Hours, the five non-blank values 12.5, 8.0, 4.5, 10.0, and 6.0 
+give a mean of 8.2, a median of 8.0, a standard deviation of 3.1741, a 
+minimum of 4.5, and a maximum of 12.5. Figure 4.4 shows the distinct and 
+blank counts from line 8, which Algorithm 4.10 uses to  tell classes from 
+continuous values. 
+ 
+Algorithm 4.7 applied to the first six rows of D1 (Table 4.2) 
+Figure 4.4. Distinct Values and Blank Cells per Column, D1 Excerpt 
+4.1.7 Reading the Column Headers 
+Before suggesting a target, SimuRithm reads each header with rule-
+based Natural Language Processing: the header is split into word tokens, 
+and the tokens are matched against keyword lists. 
+ALGORITHM 4.8  Analyze Column Header 
+INPUT : header h; value type t from Algorithm 4.6 
+OUTPUT: tokens, role 
+1  TARGET_WORDS ← {target, label, class, category, output, result, 
+
+
+[PAGE 102]
+ 
+ 
+ 
+ 
+outcome, status, 
+                   grade, score, passed, pass, prediction, response, gender} 
+2  tokens ← every unbroken run of letters or digits in lowercase(trim(h)) 
+3  IF some token ∈ TARGET_WORDS THEN role ← Target Candidate 
+4  ELSE IF the letters "id" appear anywhere in lowercase(h) THEN role ← 
+Identifier 
+5  ELSE IF t = Numeric THEN role ← Numeric 
+6  ELSE IF t = Alphabetic THEN role ← Text 
+7  ELSE IF t = Alphanumeric THEN role ← Categorical 
+8  ELSE role ← Unknown 
+9  RETURN tokens, role 
+Trace: 
+ D1 Final_Status → tokens final, status → "status" is a target word 
+→ Target Candidate. 
+ D2 Sale_Price → tokens sale, price → no target word, no "id", value 
+type Numeric → Numeric. 
+ D3 Customer_ID → tokens customer, id → line 4 → Identifier, even 
+though its storage type is Integer. 
+ D4 Review_Text → no target word, no "id", value type 
+Alphanumeric → Categorical. 
+ D5 Date → value type Numeric → Numeric. 
+ Underscores, spaces, and symbols separate tokens, so Final-
+Status and FINAL STATUS give the same tokens. Whole tokens 
+must match, so classroom does not match "class". 
+
+[PAGE 103]
+ 
+ 
+ 
+ 
+ 
+Algorithm 4.8 applied to D1–D5 (Table 4.1) 
+Figure 4.5. Header Roles per Sample Dataset 
+The rules have known weaknesses. Lowercasing happens before 
+splitting, so FinalStatus stays one token, "finalstatus". Plurals are not 
+reduced, so Grades does not match "grade". Line 4 matches "id" inside any 
+word, so Humidity or Paid_Amount would be labele d Identifier. The roles 
+are shown to the user; model training relies on the storage types, not the 
+roles. 
+4.1.8 Suggesting the Target and the Task 
+ALGORITHM 4.9  Suggest Target 
+INPUT : headers with their tokens, from left to right 
+OUTPUT: suggested target, alternative candidates 
+1  C ← empty list 
+2  FOR each column c, from left to right DO 
+3      IF some token of c ∈ TARGET_WORDS THEN append c to C 
+4  IF C is not empty THEN RETURN first(C), rest(C) 
+
+
+[PAGE 104]
+ 
+ 
+ 
+ 
+5  RETURN the last column, no alternatives       ▷ many datasets place 
+the label last 
+ 
+ALGORITHM 4.10  Detect Task 
+INPUT : target column y (non-blank values); n ← lowercase name of y 
+OUTPUT: task, reason 
+1  IF n contains an anomaly word (anomaly, outlier, fraud, intrusion, attack, 
+      abnormal, unusual, defect, fault, error) THEN RETURN Anomaly 
+Detection 
+2  IF n contains a sequence word (sequence, timestamp, datetime, date, 
+time, 
+      step, event, session, order, position) THEN RETURN Sequence 
+Modeling 
+3  IF y is Text THEN 
+4      IF the average length of y's values ≥ 30 characters THEN RETURN 
+Topic Modeling 
+5      RETURN Classification 
+6  IF y holds true/false values or a fixed category type THEN RETURN 
+Classification 
+7  IF y is Numerical THEN 
+8      IF n contains a regression word (score, grade, price, amount, rate, 
+age, 
+          time, sales, salary, income, and 14 others) THEN RETURN 
+Regression 
+9      d ← number of distinct values;  ratio ← d ÷ number of non-blank 
+
+[PAGE 105]
+ 
+ 
+ 
+ 
+values 
+10     IF d ≤ 10 AND ratio ≤ 0.20 THEN RETURN Classification   ▷ codes 
+such as 0/1 or 1–5 
+11     IF d ≤ 20 AND ratio ≤ 0.10 THEN RETURN Classification 
+12     RETURN Regression 
+13 RETURN Classification 
+In Algorithm 4.10, "contains" means the word appears anywhere 
+inside the name. Each returned task comes with a fixed explanation, for 
+example "The target column contains categorical values suitable for 
+classification." Table 4.3 applies both algorithms to the five datasets. 
+Table 4.3 Target and Task Suggestions for the Sample Datasets 
+Datas
+et 
+Target-word 
+columns, left to 
+right 
+Suggested 
+target 
+Suggested 
+task (rule) 
+Setup the user 
+confirms 
+D1 Gender, 
+Prev_Grade, 
+Final_Status 
+Gender Classificati
+on (text, 
+short 
+values: line 
+5) 
+Classification; 
+Y = 
+Final_Status 
+D2 none Sale_Price 
+(last column) 
+Regression 
+("price": 
+line 8) 
+Regression; Y 
+= Sale_Price 
+D3 Gender, 
+Spending_Scor
+e 
+Gender Classificati
+on (text, 
+short 
+Clustering; X = 
+Age, 
+Annual_Incom
+
+[PAGE 106]
+ 
+ 
+ 
+ 
+values: line 
+5) 
+e, 
+Spending_Sco
+re; no Y 
+D4 Product_Categ
+ory 
+Product_Categ
+ory 
+Classificati
+on (text, 
+short 
+values: line 
+5) 
+Topic 
+modeling and 
+text similarity; 
+X = 
+Review_Text 
+D5 none Sales (last 
+column) 
+Regression 
+("sales": 
+line 8) 
+Sequence 
+modeling; X = 
+Promo, 
+Customers; Y 
+= Sales 
+The suggestions match the intended setup only for D2. In D1, Gender 
+is suggested because it is the leftmost column containing a target word, 
+although the student intends Final_Status . In D3, D4, and D5 the intended 
+analysis has no single target or depends on time order, which the target -
+based rules cannot see. This is why the suggestions are never applied 
+automatically: the user reviews them and confirms or corrects the category, 
+X, Y, and algorithms on the configuration page before any model is trained. 
+[VERIFY against the configuration -page JS: which fields are pre -filled with 
+the suggestions.] 
+The service also contains rules for datasets without a target: a date 
+column or sequence word suggests Sequence Modeling; two text columns 
+suggest Text Similarity and one suggests Topic Modeling; an anomaly word 
+
+[PAGE 107]
+ 
+ 
+ 
+ 
+suggests Anomaly Detection; ten or more numerical columns suggest 
+Dimensionality Reduction; otherwise Clustering is suggested. Applied to D5, 
+the date column would suggest Sequence Modeling. Because Algorithm 4.9 
+always returns a column, these rules are no t reached in the current 
+workflow. 
+Algorithm 4.10 has two further weaknesses. Because "contains" 
+matches parts of words, a target named Delivery_Time becomes Sequence 
+Modeling ("time" is checked at line 2 before line 8), and Stage becomes 
+Regression ("stage" contains "age"). The ratio rules also depend on dataset 
+size: a 0/1 target has a ratio of 2 ÷ 6 = 0.33 in six rows and becomes 
+Regression, but 2 ÷ 500 = 0.004 in 500 rows and becomes Classification. 
+4.1.9 Handling Missing Values 
+Statistics literature (Rubin, 1976; Little & Rubin, 2019) distinguishes 
+three reasons why values go missing: 
+ MCAR (Missing Completely at Random): the blank is unrelated to 
+any value. Example: an encoder skipped S003's age by accident. 
+ MAR (Missing at Random): the blank is explained by another 
+recorded column. Example: study hours are missing more often for 
+students with low attendance. 
+ MNAR (Missing Not at Random): the blank depends on the 
+missing value itself. Example: students with low previous grades 
+chose not to report them. 
+MNAR cannot be confirmed from the data alone, because the 
+evidence is the missing values themselves. SimuRithm therefore assumes 
+MCAR or MAR and applies simple single imputation, a common approach 
+
+[PAGE 108]
+ 
+ 
+ 
+ 
+for a quick, preliminary comparison of algorithms. Because simple 
+imputation can bias results under MAR or MNAR, the blank counts are 
+shown to the user in Phase 1 (Algorithm 4.7) before anything is filled. 
+ALGORITHM 4.11  Handle Missing Values 
+INPUT : table T, target y (may be absent), task k 
+OUTPUT: table with no blanks, ready for training 
+1  ▷ already done while reading (Algorithm 4.4): fully blank rows and 
+columns removed 
+2  IF k is supervised THEN remove every row whose y is blank      ▷ the 
+answer is never invented 
+3  IF k is supervised THEN split rows into training (80%) and test (20%) 
+4  FOR each Numerical input column c DO 
+5      m ← median of c over the training rows (all rows if there is no split) 
+6      replace every blank in c by m 
+7  FOR each Categorical input column c DO 
+8      f ← most frequent value of c over the training rows; a tie goes to the 
+first in sorted order 
+9      replace every blank in c by f 
+10 IF k ∈ {Topic Modeling, Text Similarity} THEN treat blank text as ""; 
+drop documents left empty 
+11 IF k = Sequence Modeling THEN remove every row that has any blank 
+12 RETURN T 
+Trace on Table 4.2 with Final_Status as y (fill values computed on all 
+five remaining rows, for illustration): 
+ Line 2 removes S006, whose Final_Status is blank; 5 rows remain. 
+
+[PAGE 109]
+ 
+ 
+ 
+ 
+ Age: known values 19, 20, 21, 19 sort to 19, 19, 20, 21, so the 
+median is (19 + 20) ÷ 2 = 19.5, which fills S003. 
+ Study_Hours: 4.5, 8.0, 10.0, 12.5 give a median of (8.0 + 10.0) ÷ 2 
+= 9.0, which fills S002. 
+ Prev_Grade: 74, 79, 85, 88 give a median of 82.0, which fills S004. 
+ Gender: two Female and two Male is a tie, so line 8 takes "Female", 
+the first in sorted order, for S005. 
+ The median is used instead of the mean because it resists outliers: 
+if 12.5 were mistyped as 120, the mean of the four study hours 
+would jump from 8.75 to 35.6, while the median would stay at 9.0. 
+ Lines 5 and 8 learn fill values from the training rows only, so test 
+rows never influence them and no information leaks into the 
+evaluation. 
+In D4, reviews with blank text become empty documents and are 
+dropped at line 10. In D5, any day with a blank Promo, Customers, or Sales 
+value is removed at line 11. 
+4.1.10 Correlating the Selected Variables 
+Correlation runs in Phase 2, only on the variables the user selected. 
+ALGORITHM 4.12  Correlate Selected Variables 
+INPUT : columns selected by the user 
+OUTPUT: correlation matrix M, strongest pairs L 
+1  N ← selected columns whose group is Numerical 
+2  IF N has fewer than 2 columns THEN RETURN empty M and L 
+3  FOR each pair (a, b) of columns in N DO 
+
+[PAGE 110]
+ 
+ 
+ 
+ 
+4      R ← rows where both a and b are non-blank        ▷ pairwise deletion 
+5      M[a][b] ← Pearson r of a and b over R (Equation 4.1), rounded to 4 
+decimals 
+6  L ← every pair above the diagonal of M whose r is defined   ▷ a 
+constant column has no r 
+7  sort L by |r|, largest first, keeping each sign 
+8  keep the first 10 pairs of L 
+9  label each pair Very Strong (|r| ≥ 0.90), Strong (≥ 0.70), Moderate (≥ 
+0.50), or Weak, 
+   positive or negative by its sign 
+10 RETURN M, L 
+r = Σ(xᵢ − x̄)(yᵢ − ȳ) ÷ √[ Σ(xᵢ − x̄)² × Σ(yᵢ − ȳ)² ]          (Equation 4.1) 
+where xᵢ and yᵢ are the paired values of the two variables and x̄ and ȳ are 
+their means. 
+Trace on Table 4.2, with the four numerical columns selected: 4 × 3 
+÷ 2 = 6 pairs are computed. Attendance_Rate and Prev_Grade (five 
+complete pairs; S004 is skipped at line 4) give r = 0.999, "Very Strong 
+Positive." Age and Attendance_Rate (S003 skipped) give r = −0.980, "Very 
+Strong Negative," and line 7 still ranks it second because it sorts by absolute 
+value. Coefficients this extreme come from having only six rows; on the full 
+files they would be weaker. Text columns, including a text t arget such as 
+Final_Status, never enter line 1, and Pearson's r detects only straight -line 
+relationships. 
+
+[PAGE 111]
+ 
+ 
+ 
+ 
+4.1.11 Error Handling and Logging 
+Each algorithm checks for failure at the point where it can occur, 
+rather than relying on one generic error page: 
+ Guard clauses stop a step as soon as a condition fails (Algorithm 
+4.1, lines 1 to 7; Algorithm 4.4, lines 1 to 3). 
+ Compensating deletion removes a stored file when its database 
+record cannot be created, because the file system and the 
+database cannot share one transaction (Algorithm 4.2, lines 7 and 
+9). 
+ Layered reply checks separate a service that is offline, a reply that 
+is not JSON, and an HTTP error (Algorithm 4.3, lines 2 to 4). 
+ Request validation in the analysis service returns HTTP 400 with a 
+specific message (Algorithm 4.14); any unexpected failure returns 
+HTTP 500 with its message. 
+ Fault isolation lets one algorithm fail without stopping the others 
+(Algorithm 4.15, lines 12 and 19). 
+Every stage also writes a log entry, so a failed analysis can be traced 
+to the exact step where it stopped. 
+ALGORITHM 4.13  Write Log Entry 
+INPUT : level ∈ {INFO, SUCCESS, WARNING, ERROR}, message, 
+context (optional) 
+1  line ← "[" + current date-time + "] [" + level + "] [IP: " + client address + "] 
+" + message 
+2  IF context is given THEN line ← line + " | Context: " + context written as 
+JSON 
+
+[PAGE 112]
+ 
+ 
+ 
+ 
+3  lock the log file exclusively; append line; release the lock   ▷ 
+simultaneous uploads never mix lines 
+4  IF writing failed THEN ignore it                                ▷ logging never 
+stops the workflow 
+Trace (D1 upload, Algorithm 4.2, line 5): 
+[2026-10-07 14:25:30] [SUCCESS] [IP: 127.0.0.1] Dataset uploaded 
+successfully. | Context: 
+{"filename":"student_performance.csv","stored_name":"20261007142530_
+6703a1f2c9e4b.csv","file_size":2048,"extension":"csv"} 
+Workflow events go to a system log; database errors go to a separate 
+database log. 
+4.1.12 Overall Process for SOP 1 
+Figure 4.6. Validation Summary Process  
+SOP 1 is addressed by Algorithms 4.1 to 4.13. An upload is accepted 
+only if it is a POST request carrying a CSV, XLS, or XLSX file of at most 1 
+GB; it is stored under a time-based unique name and registered, and the file 
+is deleted if registration fails. T he analysis service reads the file with 
+automatic encoding detection, removes empty rows and columns, assigns 
+each column a storage type (integer, decimal, text, or date) and a value 
+type, and profiles it. Header tokens and keyword lists assign each column a 
+role and suggest a target, and the target's name, type, and distinct -value 
+ratio suggest a task. Across the five sample datasets, these suggestions 
+matched the intended setup once (D2), which confirms why the user must 
+review them before Phase 2. 
+
+[PAGE 113]
+ 
+ 
+ 
+ 
+4.2 Algorithm Repository, Task Support, and Benchmarking 
+SOP 2:  How can SimuRithm dynamically support, execute, and 
+benchmark algorithms for Classification, Regression, Clustering, Anomaly 
+Detection, Dimensionality Reduction, Topic Modeling, Text Similarity, and 
+Sequence Modeling? 
+SOP 2 is answered by a repository that groups algorithms by task, a 
+validation step for every benchmark request (Algorithm 4.14), and one 
+benchmarking procedure per task (Algorithms 4.15 to 4.22), followed by 
+feature importance and tuning (Algorithms 4.23 and 4.24). 
+4.2.1 Algorithm Repository and Request Validation 
+In the main mode, the user chooses one task category and 3 to 5 of 
+its algorithms; these are benchmarked side by side and ranked. A single 
+mode also exists, in which one chosen algorithm is benchmarked for each 
+target. Table 4.4 lists the repository. 
+Table 4.4 Algorithm Repository by Task 
+Task Algorithms 
+Classification Logistic Regression, Decision 
+Tree, Random Forest, SVM, KNN, 
+Naive Bayes 
+Regression Linear Regression, Ridge, Lasso, 
+Decision Tree Regressor, Random 
+Forest Regressor, SVR (single 
+mode also accepts KNN 
+Regressor) 
+
+[PAGE 114]
+ 
+ 
+ 
+ 
+Clustering K-Means, DBSCAN, Hierarchical 
+Clustering 
+Anomaly Detection Isolation Forest, One-Class SVM, 
+Local Outlier Factor 
+Dimensionality Reduction PCA, t-SNE, UMAP 
+Topic Modeling LDA, NMF 
+Text Similarity TF-IDF with Cosine Similarity, 
+Jaccard Similarity 
+Sequence Modeling LSTM, GRU, Transformer 
+The repository is a single list of task names, each holding its 
+algorithm names. Adding an algorithm means adding its name to that list 
+and its configured model to the task's benchmarking procedure; validation, 
+ranking, and display need no change, which ma kes the repository 
+extensible. 
+ALGORITHM 4.14  Validate Benchmark Request 
+INPUT : category k, features X, targets Y, algorithms A, path p 
+OUTPUT: ACCEPT, or REJECT with a message (HTTP 400) 
+1  IF k is not one of the eight categories THEN REJECT "Unsupported 
+analysis category." 
+2  IF X, Y, or A is not a list THEN REJECT "Features, targets, and 
+algorithms must be arrays." 
+3  A ← A without duplicates;  n ← number of algorithms in category k 
+4  IF |A| < min(3, n) OR |A| > min(5, n) THEN REJECT "Select between 3 
+and 5 algorithms for this category." 
+5  IF some algorithm in A is not in category k THEN REJECT "One or 
+
+[PAGE 115]
+ 
+ 
+ 
+ 
+more algorithms do not belong to this category." 
+6  IF X is empty THEN REJECT "Select at least one feature." 
+7  IF k ∈ {Classification, Regression, Sequence Modeling} AND Y is empty 
+THEN REJECT "Select at least one target." 
+8  T ← Read Dataset(p)                               ▷ Algorithm 4.4 
+9  IF some column of X or Y is not in T THEN REJECT "Selected columns 
+were not found." 
+10 ACCEPT 
+Trace: 
+ D1, Classification, A = {Random Forest, SVM, Logistic Regression} 
+→ accepted. 
+ D1, Classification, A = {Random Forest, SVM} → line 4 rejects, 
+since at least 3 are required. 
+ D3, Clustering, A = {K-Means, DBSCAN, Hierarchical Clustering} → 
+accepted; with n = 3, exactly 3 are required. 
+ D4, Topic Modeling, A = {LDA, NMF} → accepted; with n = 2, 
+exactly 2 are required. 
+ D1, Classification, A includes Linear Regression → line 5 rejects. 
+Single mode adds two checks: no column may be both X and Y ("A column 
+cannot be both X and Y."), and the chosen algorithm must suit the target's 
+detected task ("Linear Regression is not available for classification 
+targets."). Every accepted algorithm then receives the same rows, the same 
+preprocessing, and the same split (seed 42), so all candidates are 
+compared on exactly the same data. When several targets are selected, 
+each is benchmarked separately with only the X variables as inputs. 
+
+[PAGE 116]
+ 
+ 
+ 
+ 
+4.2.2 Classification Benchmarking 
+Figure 4.7. Classification Benchmarking Process  
+ALGORITHM 4.15  Classification Benchmark (one algorithm a, one target 
+y) 
+INPUT : table T, inputs X, target y, algorithm a 
+OUTPUT: accuracy, precision, recall, F1, CV score, execution time 
+1  IF y is not a column of T THEN STOP "Target column not found." 
+2  IF a ∉ {Logistic Regression, Decision Tree, Random Forest, KNN, Naive 
+Bayes, SVM} THEN STOP 
+3  remove rows where y is blank;  IF fewer than 2 rows remain THEN 
+STOP 
+4  IF Detect Task(y) ≠ Classification THEN STOP "Target was detected as 
+<task>, not classification." 
+5  IF distinct(y) ÷ rows > 0.50 THEN STOP "too high-cardinality for the 
+classification benchmark" 
+6  IF y is Text THEN replace each class by its position in sorted order    ▷ 
+label encoding 
+7  IF y has fewer than 2 classes THEN STOP 
+8  numerical inputs:   fill blanks with the median, then z ← (x − mean) ÷ 
+standard deviation 
+9  categorical inputs: fill blanks with the most frequent value, then one 0/1 
+column per category 
+10 split rows 80% training / 20% testing (seed 42), keeping class 
+proportions 
+   IF every class has at least 2 rows 
+
+[PAGE 117]
+ 
+ 
+ 
+ 
+11 start timer 
+12 TRY 
+13     learn steps 8–9 and model a from the training rows only; predict the 
+test rows 
+14     stop timer 
+15     accuracy ← correct predictions ÷ test rows 
+16     precision, recall, F1 ← per-class values combined by weighted 
+average (Equation 4.2) 
+17     k ← min(5, size of the smallest class) 
+18     IF k ≥ 2 THEN CV ← mean accuracy over k class-balanced, shuffled 
+folds (seed 42) 
+19 CATCH any failure: return a with empty metrics and the error   ▷ the 
+other algorithms continue 
+20 RETURN accuracy, precision, recall, F1, CV, time 
+Weighted F1 = Σ (nₖ ÷ N) × F1ₖ          (Equation 4.2) 
+where k is each class, n ₖ is the number of test rows in class k, N is 
+the total number of test rows, and F1ₖ is the F1-score of class k. 
+Trace on D1 with y = Final_Status and X = Gender, Age, 
+Study_Hours, Attendance_Rate, Prev_Grade: 
+ Line 3 removes S006 (blank Final_Status). 
+ Line 4 passes: Final_Status is detected as Classification. Choosing 
+Prev_Grade as y would stop here with "Target 'Prev_Grade' was 
+detected as 'regression', not classification." 
+ Line 5 passes: 2 classes ÷ 5 rows = 0.40. Choosing Student_ID as y 
+would stop here (6 ÷ 6 = 1.00). 
+
+[PAGE 118]
+ 
+ 
+ 
+ 
+ Line 6 sorts the classes to [Failed, Passed], so Failed → 0 and 
+Passed → 1, and S001 to S005 become 1, 0, 1, 0, 1. Only the target 
+is numbered this way. Inputs use 0/1 columns (line 9), because 
+numbering categories such as Luzon = 0, Mindanao = 1, Visayas = 
+2 would imply an order and distance that do not exist. 
+ Lines 8 and 9 turn row S005 (Gender blank, Age 19, Study_Hours 
+10.0, Attendance_Rate 0.88, Prev_Grade 85) into Gender_Female = 
+1, Gender_Male = 0, Age −0.94, Study_Hours 0.46, 
+Attendance_Rate 0.78, Prev_Grade 0.70. For Study_Hours, the filled 
+values 12.5, 9.0, 8.0, 4.5, 10.0 have a mean of 8.8 and a standard 
+deviation of 2.62, so (10.0 − 8.8) ÷ 2.62 = 0.46. Without this scaling, 
+a 10 -point gap in Prev_Grade would outweigh a 0.10 gap in 
+Attendance_Rate a hundredfold in distance -based models such as 
+KNN and SVM. 
+ Line 10 on only six rows would leave 1 test row, but a class-balanced 
+split needs at least one test row per class, so it stops with "The 
+test_size = 1 should be greater or equal to the number of classes = 
+2." On all 500 rows (320 Passed, 180 Failed), train ing receives 256 
+Passed and 144 Failed, and testing receives 64 Passed and 36 
+Failed. 
+ Line 16: with F1 = 0.92 for Passed (64 rows) and 0.85 for Failed (36 
+rows), weighted F1 = 0.64 × 0.92 + 0.36 × 0.85 = 0.89. Weighted 
+recall always equals accuracy, a property used in 4.3. 
+ Line 17: k = min(5, 180) = 5 folds. 
+
+[PAGE 119]
+ 
+ 
+ 
+ 
+4.2.3 Regression Benchmarking 
+Figure 4.8. Regression Benchmarking Process 
+ALGORITHM 4.16  Regression Benchmark (only the lines that differ from 
+Algorithm 4.15) 
+2  IF a ∉ {Linear Regression, Ridge, Lasso, Decision Tree Regressor, 
+Random Forest Regressor, SVR} 
+   THEN STOP                                  ▷ single mode also accepts KNN 
+Regressor 
+4  IF y is not Numerical THEN STOP "Target is not numeric and cannot be 
+processed by the regression benchmark." 
+   IF Detect Task(y) ≠ Regression THEN STOP 
+5–7  skipped: no cardinality limit, no label encoding, no class check 
+10 split rows 80% / 20% at random (seed 42); no class balancing 
+15–16 RMSE, MAE, and R² on the test rows (Equations 4.3 to 4.5) 
+17–18 k ← min(5, rows);  CV ← mean R² over k folds taken in file order 
+MAE = (1 ÷ n) × Σ |yᵢ − ŷᵢ|          (Equation 4.3) 
+RMSE = √[ (1 ÷ n) × Σ (yᵢ − ŷᵢ)² ]          (Equation 4.4) 
+R² = 1 − [ Σ (yᵢ − ŷᵢ)² ÷ Σ (yᵢ − ȳ)² ]          (Equation 4.5) 
+where yᵢ is the actual value, ŷᵢ is the predicted value, ȳ is the mean of 
+the actual values, and n is the number of test rows. 
+Trace on D2 with y = Sale_Price: line 4 passes, since Sale_Price is 
+Numerical and its name contains "price". Suppose three test houses sold 
+for 3.2, 4.5, and 2.8 million pesos and the model predicted 3.0, 4.8, and 2.9. 
+The errors are 0.2, −0.3, and −0.1, s o MAE = (0.2 + 0.3 + 0.1) ÷ 3 = 0.20 
+million. RMSE = √((0.04 + 0.09 + 0.01) ÷ 3) = 0.22 million, slightly higher 
+
+[PAGE 120]
+ 
+ 
+ 
+ 
+because squaring penalizes the larger 0.3 miss. The actual prices average 
+3.5 million, so R² = 1 − 0.14 ÷ 1.58 = 0.91: the model explains about 91% of 
+the variation in price. An R² below 0 would mean the model does worse than 
+always guessing the average. 
+4.2.4 Clustering Benchmarking 
+Figure 4.9. Clustering Benchmarking Process  
+ALGORITHM 4.17  Clustering Benchmark 
+INPUT : table T, features X (all columns if none selected), algorithms A 
+OUTPUT: Silhouette, Calinski-Harabasz, Davies-Bouldin, clusters, time 
+per algorithm 
+1  IF some column of X is not in T THEN STOP "Selected feature(s) not 
+found" 
+2  numerical: fill with median, standardize;  categorical: fill with most 
+frequent, 0/1 columns 
+   ▷ all rows are used; there is no test split, because clustering has no 
+correct answer 
+3  FOR each algorithm a in A DO 
+4      start timer 
+5      TRY 
+6          K-Means: place 3 centres, assign each row to the nearest, move 
+centres; best of 10 starts 
+           Hierarchical: start with one group per row; merge the closest pair 
+(Ward) until 3 remain 
+           DBSCAN: grow clusters from rows with ≥ 5 neighbours within 
+distance 0.5; 
+
+[PAGE 121]
+ 
+ 
+ 
+ 
+                   isolated rows are noise (−1) 
+7          labels ← cluster of every row;  stop timer 
+8          IF fewer than 2 distinct labels (noise counts as one) THEN metrics 
+← unavailable 
+9          ELSE compute Silhouette, Calinski-Harabasz, Davies-Bouldin 
+10     CATCH failure: record the error for a 
+11 sort the results by Silhouette, highest first; unavailable results last 
+The three measures: Silhouette (−1 to 1, higher is better) averages, 
+over all rows, s = (b − a) ÷ max(a, b), where a is a row's mean distance to 
+its own cluster and b its mean distance to the nearest other cluster; a row 
+with a = 0.8 and b = 2.0 scores 0.60. Calinski-Harabasz (higher is better) 
+is the spread between clusters divided by the spread within them. Davies-
+Bouldin (lower is better) is the average similarity of each cluster to its most 
+similar neighbour. 
+Trace on D3 with X = Age, Annual_Income, Spending_Score: all 
+three are Integer columns, so line 2 only standardizes them. K -Means and 
+Hierarchical Clustering each return 3 clusters. DBSCAN finds no row with 5 
+neighbours within 0.5, labels all 200 customers  as noise, and line 8 marks 
+its metrics unavailable. 
+ 
+Algorithm 4.17 on D3 · illustrative values 
+
+
+[PAGE 122]
+ 
+ 
+ 
+ 
+Figure 4.10. Silhouette Scores of the Clustering Algorithms on D3 
+4.2.5 Anomaly Detection Benchmarking 
+ALGORITHM 4.18  Anomaly Detection Benchmark 
+INPUT : features X, algorithms A ⊆ {Isolation Forest, One-Class SVM, 
+Local Outlier Factor} 
+1  matrix ← numerical: median fill and standardize; categorical: most-
+frequent fill, 0/1 columns 
+   (beyond the 50 most frequent categories, the rest are grouped) 
+   IF the matrix exceeds 20 million cells THEN STOP 
+2  IF fewer than 4 rows THEN STOP "Anomaly detection needs at least 
+four usable rows." 
+3  FOR each a in A DO 
+4      TRY label every row +1 (normal) or −1 (anomaly): 
+           Isolation Forest: rows isolated by fewer random splits are 
+anomalies 
+           One-Class SVM: rows outside a boundary drawn around about 
+90% of the data 
+           Local Outlier Factor: rows much sparser than their 20 nearest 
+neighbours 
+5      outliers ← number of rows labelled −1;  rate ← outliers ÷ rows 
+6      IF both labels occur THEN score ← Silhouette with {normal, anomaly} 
+as the two groups 
+7      CATCH failure: record the error for a 
+Trace on D2 with X = Floor_Area, Sale_Price: a 45 -square-meter 
+house recorded as selling for 45 million pesos lies far from every other 
+
+[PAGE 123]
+ 
+ 
+ 
+ 
+house, is isolated after very few random splits, and is labelled −1. If 60 of 
+the 1,200 houses are flagged, the anomaly rate is 60 ÷ 1,200 = 5.0%. 
+Precision and recall are not computed, because the dataset does not say 
+which houses are truly anomalous. 
+4.2.6 Dimensionality Reduction Benchmarking 
+ALGORITHM 4.19  Dimensionality Reduction Benchmark 
+INPUT : features X, algorithms A ⊆ {PCA, t-SNE, UMAP} 
+1  matrix ← as in Algorithm 4.18, line 1;  IF fewer than 4 rows THEN STOP 
+2  IF more than 1,000 rows THEN keep a random 1,000 (seed 42)   ▷ t-
+SNE slows sharply with rows 
+3  FOR each a in A DO 
+4      TRY  PCA:   project onto the 2 directions of greatest variation 
+            t-SNE: 2-D layout keeping near rows near; start from PCA; 
+perplexity = min(30, rows − 1) 
+            UMAP:  2-D layout keeping neighbourhoods; neighbours = min(15, 
+rows − 1) 
+5      score ← Trustworthiness: do rows that are neighbours in 2-D (up to 
+5) also neighbour in the original data? 
+6      CATCH failure: record the error for a     ▷ e.g., UMAP library not 
+installed 
+Trace on D2: its 1,200 rows exceed 1,000, so line 2 keeps a random 
+1,000. A Trustworthiness of 1.0 would mean no false neighbours in the plot; 
+0.95 means very few houses look close in 2 -D without being close in the 
+data. 
+
+[PAGE 124]
+ 
+ 
+ 
+ 
+4.2.7 Topic Modeling Benchmarking 
+ALGORITHM 4.20  Topic Modeling Benchmark 
+INPUT : text columns X, algorithms A ⊆ {LDA, NMF} 
+1  documents ← for each row, the columns of X joined by spaces (blank → 
+"") 
+2  drop empty documents;  IF fewer than 2 remain THEN STOP 
+3  IF more than 2,000 documents THEN keep a random 2,000 (seed 42) 
+4  FOR each a in A DO 
+5      LDA: count each word per document;  NMF: weight each word by TF-
+IDF 
+       (both keep at most 3,000 words and remove English stop words) 
+6      k ← min(10, documents, distinct words);  IF k < 2 THEN STOP 
+7      fit a with k topics (LDA 10 passes; NMF up to 400 iterations) 
+8      top ← the 10 highest-weighted words of each topic 
+9      score ← Topic Diversity (Equation 4.6) 
+Topic Diversity = (distinct words in all topics' top-10 lists) ÷ (k × 10)          
+(Equation 4.6) 
+where k is the number of topics. 
+Trace on D4 with X = Review_Text: the 1,000 reviews give k = 
+min(10, 1,000, distinct words) = 10 topics, hence 100 top words. If 84 of 
+them are distinct, diversity is 84 ÷ 100 = 0.84; values near 1 mean the topics 
+do not repeat each other. Line 5 reduces " Needs more practice" to "needs 
+practice", since "more" is an English stop word. Filipino words such as "sa" 
+and "ng" are not on that list, so in Taglish reviews they can appear among 
+topic words. 
+
+[PAGE 125]
+ 
+ 
+ 
+ 
+4.2.8 Text Similarity Benchmarking 
+ALGORITHM 4.21  Text Similarity Benchmark 
+INPUT : text columns X, algorithms A ⊆ {TF-IDF with Cosine, Jaccard} 
+1  documents ← as in Algorithm 4.20, lines 1–2;  IF more than 1,000 
+THEN keep a random 1,000 
+2  TF-IDF with Cosine: each document → word weights (≤ 5,000 words, 
+stop words removed), 
+                       scaled to length 1;  similarity(A, B) ← Σ weightA × weightB 
+3  Jaccard: each document → set of lowercase words split on spaces; 
+            similarity(A, B) ← shared words ÷ all distinct words 
+4  similarity of each document with itself ← 0 
+5  score ← average, over documents, of the highest similarity to any other 
+document 
+          ▷ Mean Nearest Similarity 
+Trace on D4: "Battery lasts long" and "Battery does not last long" 
+share {battery, long}, 2 of 6 distinct words, so their Jaccard similarity is 0.33. 
+Line 3 does not reduce "lasts" to "last" or strip punctuation, so "long" and 
+"long." also count as differe nt words. If three documents have nearest 
+similarities of 0.50, 0.50, and 0.20, the score is 0.40. 
+4.2.9 Sequence Modeling Benchmarking 
+ALGORITHM 4.22  Sequence Modeling Benchmark 
+INPUT : features X, targets Y, algorithms A ⊆ {LSTM, GRU, Transformer} 
+1  IF the TensorFlow library is not installed THEN STOP "Sequence 
+models require TensorFlow" 
+
+[PAGE 126]
+ 
+ 
+ 
+ 
+2  F ← Numerical columns of X;  IF F is empty THEN STOP "Sequence 
+modeling requires numeric X variables." 
+3  FOR each target y in Y DO 
+4      IF y is not Numerical THEN record "Sequence targets must be 
+numeric."; continue 
+5      remove rows with any blank in F or y 
+6      standardize F and y: z ← (x − mean) ÷ standard deviation 
+7      w ← min(5, max(2, rows ÷ 5));  IF rows ≤ w + 2 THEN record "Not 
+enough rows"; continue 
+8      sequences ← for each row t after the first w: inputs of rows t−w … 
+t−1, answer y at row t 
+9      first 80% of sequences → training; last 20% → testing        ▷ time 
+order kept 
+10     FOR each a in A DO 
+11         network ← LSTM (24 units) | GRU (24 units) | 
+                     Transformer (2-head attention, normalization, averaging); 
+one output value 
+12         train 8 passes (Adam optimizer, mean squared error, seed 42); 
+predict the test answers 
+13         convert predictions back to y's units; score ← R², plus RMSE and 
+MAE 
+Trace on D5 with X = Promo, Customers and y = Sales: Date is not 
+Numerical, so line 2 leaves it out of the inputs. Line 7 gives w = min(5, 
+max(2, 730 ÷ 5 = 146)) = 5, so each prediction uses the previous five days. 
+Line 8 builds 725 sequences, and line 9 trains on the first 580 and tests on 
+
+[PAGE 127]
+ 
+ 
+ 
+ 
+the last 145 days. The sequences follow the row order of the file, so the file 
+must already be sorted by date; SimuRithm does not sort it. 
+4.2.10 Results and Metrics 
+Every benchmarking procedure returns the same fields for each 
+algorithm: its name, its primary metric and score, whether a higher score is 
+better, its execution time, any task -specific measures, and any error. After 
+ranking (4.3), each result also receives  its rank and a recommended flag. 
+The dashboard shows the results in a sortable table grouped by task, with 
+the recommended algorithm first, failed algorithms last as "Not run: " plus 
+the reason, and a chart whose metric and chart type the user can switch.  
+Table 4.5 Metrics Computed per Task 
+Task Primary metric Other measures Better when 
+Classification Accuracy Precision, recall, 
+F1 (weighted), 
+CV accuracy, 
+time 
+Higher 
+Regression R² RMSE, MAE, 
+CV R², time 
+Higher R²; 
+lower RMSE 
+and MAE 
+Clustering Silhouette Calinski-
+Harabasz, 
+Davies-Bouldin, 
+clusters, time 
+Higher 
+Silhouette and 
+CH; lower DB 
+
+[PAGE 128]
+ 
+ 
+ 
+ 
+Anomaly 
+Detection 
+Silhouette (when 
+both labels 
+occur) 
+Outliers, 
+anomaly rate, 
+time 
+Higher 
+Dimensionality 
+Reduction 
+Trustworthiness Dimensions, 
+time 
+Higher 
+Topic Modeling Topic Diversity Topics, 
+reconstruction 
+error (NMF), 
+time 
+Higher 
+Text Similarity Mean Nearest 
+Similarity 
+Documents, 
+time 
+Higher means 
+more similar 
+documents 
+Sequence 
+Modeling 
+R² RMSE, MAE, 
+time 
+Higher R²; 
+lower RMSE 
+and MAE 
+4.2.11 Feature Importance 
+For classification and regression, SimuRithm also reports which 
+inputs are most informative for the target. 
+ALGORITHM 4.23  Feature Importance 
+INPUT : inputs X, target y 
+OUTPUT: importance of each input column, sorted 
+1  remove rows with a blank y;  prepare X as in Algorithm 4.15, lines 8–9 
+(all rows) 
+2  IF y is Text OR y has ≤ 20 distinct values THEN label-encode y; model 
+← Random Forest classifier 
+
+[PAGE 129]
+ 
+ 
+ 
+ 
+   ELSE model ← Random Forest regressor                     ▷ 200 trees, 
+seed 42 
+3  train model on all rows 
+4  FOR each prepared column j DO 
+5      importance[j] ← total impurity decrease from splits on j, averaged 
+over the 200 trees 
+       ▷ impurity = Gini, 1 − Σp² (classification), or variance (regression) 
+6  scale the importances to sum to 1; sort them from largest to smallest 
+Trace on D1 with y = Final_Status: line 1 produces six prepared 
+columns, Age, Study_Hours, Attendance_Rate, Prev_Grade, 
+Gender_Female, and Gender_Male, whose importances sum to 1. 
+ 
+Algorithm 4.23 on D1 · illustrative values 
+Figure 4.11. Feature Importance for Final_Status, D1 
+Three cautions apply. The scores come from a separate Random 
+Forest, not from the algorithm being benchmarked, so they describe the 
+data rather than what SVM or KNN relied on. One original column can be 
+split across several scores: Gender's total is Gender _Female plus 
+Gender_Male. And impurity -based importance tends to favor continuous 
+
+
+[PAGE 130]
+ 
+ 
+ 
+ 
+and many -valued columns; permutation importance is a common 
+alternative. 
+4.2.12 Hyperparameter Tuning 
+When tuning is enabled, the recommended algorithm is searched for 
+better settings. Tuning reports the best settings and their score as a 
+suggestion; it does not change the benchmark or the recommendation.  
+ALGORITHM 4.24  Tune Recommended Model 
+INPUT : recommended algorithm r, category k, prepared rows 
+OUTPUT: best settings and their score 
+1  IF k = Clustering THEN 
+2      candidates ← K-Means: clusters 2 … min(8, rows − 1) 
+                    Hierarchical: same range × linkage ∈ {Ward, complete, 
+average} 
+                    DBSCAN: distance ∈ {0.3, 0.5, 0.7, 1.0} × neighbours ∈ {3, 5, 
+10} 
+3      FOR each candidate DO label the rows (DBSCAN noise removed); 
+           skip it if < 2 clusters or one cluster per row;  score ← Silhouette 
+4      RETURN the candidate with the highest score 
+5  IF k ∉ {Classification, Regression} THEN RETURN "not configured" 
+6  remove rows with a blank y;  IF fewer than 3 rows THEN STOP 
+7  folds ← Classification: min(5, smallest class), class-balanced (STOP if a 
+class has < 2 rows) 
+           Regression: min(5, rows);  both shuffled with seed 42 
+8  FOR each combination g in r's grid (Table 4.6) DO 
+9      score[g] ← mean CV accuracy (classification) or R² (regression), with 
+
+[PAGE 131]
+ 
+ 
+ 
+ 
+fill and scaling 
+                  re-learned inside each fold 
+10 RETURN the g with the highest score[g] 
+Table 4.6 Settings Searched for the Recommended Algorithm 
+Algorithm Settings searched Combinations 
+Logistic Regression C ∈ {0.1, 1, 10} 3 
+Decision Tree maximum depth ∈ 
+{none, 5, 10} × 
+minimum split ∈ {2, 5} 
+6 
+Random Forest trees ∈ {50, 100} × 
+maximum depth ∈ 
+{none, 10} × minimum 
+leaf ∈ {1, 2} 
+8 
+SVM or SVR C ∈ {0.1, 1, 10} × 
+kernel ∈ {RBF, linear} 
+6 
+KNN neighbours ∈ {3, 5, 7}, 
+only values that fit a 
+fold × weighting ∈ 
+{uniform, distance} 
+up to 6 
+Naive Bayes smoothing ∈ {1e-9, 
+1e-8, 1e-7} 
+3 
+Linear Regression intercept ∈ {yes, no} 2 
+Ridge alpha ∈ {0.1, 1, 10, 
+100} 
+4 
+
+[PAGE 132]
+ 
+ 
+ 
+ 
+Lasso alpha ∈ {0.001, 0.01, 
+0.1, 1} 
+4 
+Random Forest, 
+single mode 
+trees ∈ {100, 200, 
+300} × depth ∈ {none, 
+10, 20} × split ∈ {2, 5, 
+10} × leaf ∈ {1, 2, 4} 
+81 
+Trace: if Logistic Regression is recommended for D1 with 5 folds, line 
+9 trains 3 × 5 = 15 models plus one final refit. Because the benchmark's CV 
+score uses the same 5 -fold scheme, the two are directly comparable, for 
+example 0.88 with the default C = 1 a gainst 0.90 with C = 10. For D3 with 
+K-Means, line 2 tries 2 to 8 clusters, which relaxes the fixed 3 clusters of 
+Algorithm 4.17. In single mode, the Random Forest grid needs 81 × 5 = 405 
+fits, which can push a large dataset past the 300 -second limit of Algorithm 
+4.3. 
+4.2.13 Interpretation of SOP 2 
+SOP 2 is addressed by a task-grouped repository, validation of every 
+request (Algorithm 4.14), and one benchmarking procedure per task 
+(Algorithms 4.15 to 4.22). Supervised procedures re -check the task and 
+target before training, fill and scale inside the training split, use a class -
+balanced 80/20 split when possible, and cross -validate with fold counts 
+sized to the data. Unsupervised and text procedures use measures that 
+need no labels: Silhouette, Trustworthiness, Topic Diversity, and Mean 
+Nearest Similarity. Every candidate is tested on the same rows and split, 
+failures are isolated per algorithm and shown with their reason, and feature 
+
+[PAGE 133]
+ 
+ 
+ 
+ 
+importance and grid -search tuning (Algorithms 4.23 and 4.24) extend the 
+results. 
+4.3 Recommendation Engine 
+SOP 3: How can a hybrid meta -learning or rule -assisted 
+recommendation engine analyze dataset characteristics, NLP -derived 
+features, and empirical execution performance to intelligently rank and 
+recommend the most suitable algorithms based on user-selected priorities? 
+SimuRithm's engine is rule-assisted and works in two layers. Dataset 
+characteristics and NLP-derived header features shape what is compared: 
+they produce the suggested target and task (Algorithms 4.8 to 4.10), and 
+the task and cardinality checks of Algorit hm 4.15 block unsuitable 
+benchmarks. The measured performance of the benchmarked algorithms is 
+then ranked by Algorithm 4.25. 
+Figure 4.12. Recommendation Process 
+4.3.1 Recommendation Algorithm 
+ALGORITHM 4.25  Recommend Algorithm 
+INPUT : benchmark results R of the user's selected algorithms, task k 
+OUTPUT: recommended algorithm, its score, reason, full ranking 
+1  R ← results without an error 
+2  IF R is empty THEN RETURN "No successful model" 
+3  M ← metrics and weights of task k (Figure 4.13); other tasks: the 
+primary metric, weight 1 
+4  FOR each metric m in M DO 
+5      lo[m] ← smallest value of m in R;  hi[m] ← largest   ▷ empty, NaN, 
+
+[PAGE 134]
+ 
+ 
+ 
+ 
+infinite values ignored 
+6  FOR each algorithm a in R DO 
+7      FOR each metric m in M that a has DO 
+8          s ← 0.5 IF hi[m] = lo[m] ELSE (value − lo[m]) ÷ (hi[m] − lo[m])     ▷ 
+Equation 4.7 
+9          IF lower is better for m THEN s ← 1 − s                          ▷ RMSE, 
+MAE, Davies-Bouldin 
+10         total[a] ← total[a] + w[m] × s;  weights[a] ← weights[a] + w[m] 
+11     score[a] ← total[a] ÷ weights[a]                                       ▷ Equation 
+4.8 
+12 sort the algorithms by score, highest first 
+13 RETURN the first algorithm, its score, the task's fixed reason, and the 
+ranking 
+s = (v − vₘᵢₙ) ÷ (vₘₐₓ − vₘᵢₙ)          (Equation 4.7) 
+Recommendation Score = Σ (wₘ × sₘ) ÷ Σ wₘ          (Equation 4.8) 
+where v is an algorithm's value of a metric; vₘᵢₙ and vₘₐₓ are the lowest and 
+highest values of that metric among the candidates; w ₘ is the metric's 
+weight; and sₘ is the rescaled value. Line 8 puts every metric on the same 
+0-to-1 scale, the best candidate getting 1 and the worst 0, so metrics with 
+different units can be combined. Line 7 skips a metric the algorithm lacks, 
+such as a CV score that could not be computed; its weight is left out of both 
+sums, so the algorithm is not penalized. When several targ ets are 
+benchmarked, the rows of one algorithm are combined, which averages its 
+performance across the targets. 
+
+[PAGE 135]
+ 
+ 
+ 
+ 
+4.3.2 Weights 
+ 
+Weights fixed in the recommendation engine 
+Figure 4.13. Recommendation Weights by Task 
+The weights are set by the researchers and fixed in the system. 
+Accuracy and F1 carry the most weight in classification because they are 
+the measures students most often report, and F1 guards against a model 
+that ignores a minority class; cross -validation rewards stable performance. 
+R² and its cross-validated form dominate regression because they express 
+how much of the target's variation is explained. Silhouette dominates 
+clustering because it is bounded and widely used. [VERIFY: adjust this 
+rationale to your group's actual reasoning.] 
+4.3.3 Worked Example 
+Trace on D1 (500 rows, y = Final_Status) with three classifiers 
+selected. Their benchmark values are: Random Forest, accuracy 0.91, 
+precision 0.91, recall 0.91, F1 0.90, CV 0.89; SVM, 0.90, 0.90, 0.90, 0.89, 
+0.87; Logistic Regression, 0.89, 0.89, 0.89, 0.8 9, 0.88 (illustrative). Recall 
+equals accuracy in each case, because weighted recall always does. 
+ Line 5 for accuracy: lo = 0.89, hi = 0.91. 
+
+
+[PAGE 136]
+ 
+ 
+ 
+ 
+ Line 8 for SVM's accuracy: (0.90 − 0.89) ÷ (0.91 − 0.89) = 0.5. 
+ Line 11 for SVM: 0.25 × 0.5 + 0.15 × 0.5 + 0.15 × 0.5 + 0.25 × 0 + 
+0.20 × 0 = 0.275. 
+ Logistic Regression scores 0 on every metric except CV, where it 
+lies midway, so it scores 0.20 × 0.5 = 0.100. Random Forest is best 
+on every metric and scores 1.000. 
+ 
+Equation 4.8 applied to three classifiers on D1 · illustrative values 
+Figure 4.14. Recommendation Scores of Three Classifiers on D1 
+Two properties follow. The score is relative: a 0.02 difference in 
+accuracy spans the whole 0-to-1 range, so 1.000 means "best among these 
+candidates," not a perfect model, and adding or removing a candidate 
+changes the others' scores. And because weighted recall equals accuracy, 
+accuracy effectively carries 0.25 + 0.15 = 0.40 of a classification score. 
+4.3.4 Recommendation Output 
+The engine returns the recommended algorithm, the average of its 
+primary metric, its recommendation score, the task, a reason, and the full 
+ranking. The reason is fixed per task, for example "Highest normalized score 
+across accuracy, precision, recall, F1,  and available cross -validation 
+results" for classification. Each result then receives its rank, and the winner 
+
+
+[PAGE 137]
+ 
+ 
+ 
+ 
+is flagged. The dashboard shows the recommendation in a card and places 
+the winner first in the results table with a "Recommended" badge, and both 
+reports include it. If tuning is on, the recommended algorithm is then tuned 
+(Algorithm 4.24). In single mode only one algorithm is benchmarked, so line 
+8 gives every metric 0.5 and the chosen algorithm is trivially recommended; 
+a genuine comparison happens only when 3 to 5 algorithms are selected. 
+4.3.5 Scope and Limitations 
+1. Rule-assisted, not meta -learning. The engine ranks by 
+performance on the uploaded dataset; it does not learn from past 
+datasets which algorithm tends to win on similar data. 
+2. Dataset and NLP features act before scoring.  They decide the 
+suggested target and task and block unsuitable benchmarks, but 
+they are not terms in Equation 4.8. 
+3. Fixed weights. The user cannot set priorities such as "favor speed." 
+4. Execution time is shown but not scored.  A model that is slightly 
+more accurate but far slower still ranks first. 
+5. Relative scores. Scores compare the current candidates only and 
+cannot be compared across runs or tasks. 
+4.3.6 Summary of SOP 3 
+SimuRithm recommends algorithms with a rule -assisted, task -
+specific, normalized weighted score (Algorithm 4.25). Dataset 
+characteristics and header features shape the comparison; each metric is 
+rescaled from 0 to 1 across the candidates and combined with fixed weights; 
+and the highest-scoring algorithm is returned with its score, a fixed reason, 
+
+[PAGE 138]
+ 
+ 
+ 
+ 
+and the full ranking. All eight task categories receive a recommendation, 
+and the recommended model can then be tuned. 
+4.4 System Transparency, Software Quality, and Reduction of Trial-
+and-Error 
+SOP 4:  What granular outputs must be displayed at each major 
+operational stage (from upload to export) to ensure transparency, and to 
+what extent does the resulting SimuRithm system comply with ISO/IEC 
+25010 software quality standards while reducing the trial -and-error burden 
+for undergraduate students? 
+SimuRithm shows the result of each stage before the user moves to 
+the next, so a student can trace the recommendation back to the data. 
+4.4.1 Outputs at Each Stage 
+Table 4.7 Outputs Displayed per Stage 
+Stage Output shown to the 
+user 
+Produced by 
+Service status "API Online" or "API 
+Offline" badge when the 
+dashboard loads 
+Health check (Figure 
+4.2) 
+Upload File name, type, size; 
+upload progress bar; 
+status badges; error 
+messages 
+Algorithms 4.1 to 4.3 
+
+[PAGE 139]
+ 
+ 
+ 
+ 
+Analysis progress Loading window with 
+six named steps 
+(Upload, Statistics, 
+NLP, Correlation, 
+Benchmark, 
+Recommendation), 
+each ticked when done 
+Each response 
+section as it arrives 
+Dataset profile Rows, columns, blank 
+cells, duplicates, 
+numerical and 
+categorical counts, 
+suggested task and 
+target 
+Algorithms 4.5, 4.7, 
+4.9, 4.10 
+Data preview First 10 rows in a 
+sortable, searchable 
+table 
+Algorithm 4.7, line 
+10 
+Header analysis Each column's tokens, 
+value type, and role, 
+with color-coded 
+badges 
+Algorithms 4.6 and 
+4.8 
+Selection Chosen category, X 
+and Y variables, 
+algorithms; a specific 
+message for each 
+invalid choice 
+Algorithm 4.14 
+
+[PAGE 140]
+ 
+ 
+ 
+ 
+Correlation Color-coded matrix; top 
+10 pairs with strength 
+labels 
+Algorithm 4.12 
+Benchmarking Results table and a 
+chart with selectable 
+metric and chart type; 
+failures shown as "Not 
+run" with the reason 
+Algorithms 4.15 to 
+4.22 
+Recommendation Recommended 
+algorithm, task, score, 
+reason; 
+"Recommended" badge 
+Algorithm 4.25 
+Feature importance Ranked table and bar 
+chart 
+Algorithm 4.23 
+Tuning Best settings, best CV 
+score, and a 
+Completed, Partial, or 
+Unavailable badge with 
+any error 
+Algorithm 4.24 
+Export PDF report and Excel 
+workbook 
+Report generators, 
+below 
+Before any value from a dataset is placed on the page, the characters 
+<, >, &, and quotation marks are converted into their safe HTML forms, so 
+a malicious cell such as <script>…</script> is shown as text instead of being 
+run. 
+
+[PAGE 141]
+ 
+ 
+ 
+ 
+PDF report. The browser sends the complete analysis to the PHP 
+layer, which builds a ten -section report (dataset information, statistics, 
+dataset profile, header analysis, correlation matrix, strongest correlations, 
+benchmark results, recommendation, feature importan ce, and tuning) and 
+converts it to an A4 PDF with the Dompdf library, using a font that displays 
+characters such as ñ and ². Warnings are suppressed during generation so 
+they cannot corrupt the file, every value is escaped, and failures return a 
+readable message. 
+Excel report.  The PhpSpreadsheet library builds a ten -sheet 
+workbook with the same content, two editable native charts (benchmark 
+comparison and feature importance), the recommended algorithm's row 
+highlighted in green, four-decimal number formats, frozen header rows, and 
+A4 landscape pages numbered "Page X of N." 
+One gap remains against the study's scope: the preprocessing 
+applied to a specific dataset (which blanks were filled with what, and which 
+columns became 0/1 columns) is not displayed as a log, although its rules 
+are fixed and stated in Algorithms 4.11 and 4.15. 
+4.4.2 ISO/IEC 25010 Software Quality Evaluation 
+Table 4.8 ISO/IEC 25010 Evaluation Criteria 
+Quality characteristic Evaluation focus Supporting 
+implementation 
+Functional Suitability Upload, validation, type 
+inference, header 
+analysis, 
+Algorithms 4.1 to 4.25; 
+Table 4.7 
+
+[PAGE 142]
+ 
+ 
+ 
+ 
+benchmarking, 
+recommendation, 
+visualization, tuning, 
+and export work as 
+specified 
+Usability Undergraduate 
+students can 
+understand and 
+operate the system 
+Two-phase pipeline; 
+suggestions with 
+reasons; named 
+progress steps; 
+specific messages 
+Performance 
+Efficiency 
+Processing time and 
+resources are 
+acceptable 
+Execution time per 
+algorithm; dataset 
+memory; sampling to 
+1,000 or 2,000 rows or 
+documents; 300-
+second limit 
+Reliability Invalid files, 
+unsupported datasets, 
+and algorithm errors 
+are handled without 
+crashing 
+Section 4.1.11; fault 
+isolation; 
+compensating 
+deletion; logs 
+Maintainability The repository and 
+procedures can be 
+updated easily 
+Task-grouped 
+repository; one 
+connector to the 
+analysis service; one 
+
+[PAGE 143]
+ 
+ 
+ 
+ 
+procedure per task; 
+central settings; logs 
+Procedure. The respondents are [VERIFY: number and profile, e.g., 
+30 undergraduate IT/CS students and 5 IT professionals]. Each respondent 
+first completes a set of tasks with SimuRithm, using D1 to D5: upload each 
+dataset, review the profile and header analysis, correct the suggested target 
+where needed (Table 4.3), run a benchmark, read the recommendation, and 
+export both reports. Reliability is probed directly by uploading a PDF, an 
+empty CSV, and a file over 1 GB, and by selecting the same column as both 
+X and Y. Respondents then answer a 5 -point Likert questionnaire with 
+[VERIFY: number] items per characteristic. 
+Treatment of data. Each item is summarized by its weighted mean: 
+WM = Σ (f × w) ÷ N          (Equation 4.9) 
+where f is the number of respondents choosing a rating, w is the 
+rating (1 to 5), and N is the number of respondents. For example, if 18 of 30 
+respondents rate an item 5, 10 rate it 4, and 2 rate it 3, then WM = (18 × 5 
++ 10 × 4 + 2 × 3) ÷ 30 = 136 ÷ 30 = 4.53, Strongly Agree/Excellent. A 
+characteristic's mean is the average of its items, and the overall rating is the 
+average of the five characteristics. Means are interpreted as 4.21 –5.00 
+Strongly Agree/Excellent; 3.41 –4.20 Agree/Very Good; 2.61 –3.40 
+Neutral/Good; 1.81–2.60 Disagree/Fair; 1.00–1.80 Strongly Disagree/Poor. 
+Table 4.9 ISO/IEC 25010 Evaluation Results (to be completed after data 
+gathering) 
+Quality characteristic Weighted mean Interpretation 
+Functional Suitability   
+
+[PAGE 144]
+ 
+ 
+ 
+ 
+Usability   
+Performance Efficiency   
+Reliability   
+Maintainability   
+Overall   
+4.4.3 Reduction of Trial-and-Error 
+Table 4.10 Traditional Selection Compared with SimuRithm 
+Step Traditional approach SimuRithm 
+Inspect the dataset Student reads the file 
+manually 
+Storage types, profile, 
+and preview generated 
+(Algorithms 4.4 to 4.7) 
+Interpret the columns Student judges each 
+column 
+Headers tokenized and 
+roles assigned 
+(Algorithm 4.8) 
+Choose target and 
+task 
+Student decides 
+unaided 
+Suggested with a 
+reason, then confirmed 
+(Algorithms 4.9, 4.10) 
+Handle missing 
+values 
+Student picks and 
+codes a method 
+Fixed rules inside the 
+training split (Algorithm 
+4.11) 
+Check the setup Errors appear only 
+when code fails 
+Request validated; 
+unsuitable targets 
+blocked (Algorithms 
+4.14, 4.15) 
+
+[PAGE 145]
+ 
+ 
+ 
+ 
+Test algorithms Each coded and run 
+separately 
+3 to 5 algorithms run 
+on one shared split 
+(Algorithms 4.15 to 
+4.22) 
+Compare results Numbers compared 
+by hand 
+Normalized weighted 
+ranking with a reason 
+(Algorithm 4.25) 
+Tune settings Settings tried one at a 
+time 
+Grid search on the 
+recommended model 
+(Algorithm 4.24) 
+Document the result Written up manually PDF and Excel reports 
+SimuRithm does not remove human judgment. Its target suggestions 
+matched the intended setup in only one of the five sample datasets (Table 
+4.3); its missing -value rules assume MCAR or MAR data (4.1.9); and its 
+weights are researcher -defined and ignore speed (4.3.5) . Its 
+recommendations are decision-support outputs that students should review 
+before using them in formal research. 
+Summary of Findings According to the Statement of the Problem 
+Table 4.11 Summary of Findings 
+Statement of the 
+Problem 
+Finding Algorithms 
+1. Dataset acceptance, 
+parsing, validation, and 
+identification 
+SimuRithm accepts 
+CSV, XLS, and XLSX 
+files up to 1 GB, reads 
+4.1 to 4.13 
+
+[PAGE 146]
+ 
+ 
+ 
+ 
+them with automatic 
+encoding detection, 
+assigns every column 
+a storage type 
+(integer, decimal, text, 
+or date) and a role, 
+profiles blanks and 
+statistics, and 
+suggests a target and 
+task with a reason for 
+the user to confirm. 
+2. Algorithm repository 
+and benchmarking 
+SimuRithm groups its 
+algorithms by eight 
+tasks, validates each 
+request, and 
+benchmarks the 
+selected algorithms on 
+identical data with 
+task-specific 
+preparation and 
+measures, plus 
+feature importance 
+and tuning. 
+4.14 to 4.24 
+3. Recommendation 
+engine 
+SimuRithm ranks and 
+recommends 
+4.25 
+
+[PAGE 147]
+ 
+ 
+ 
+ 
+algorithms in all eight 
+tasks with a rule-
+assisted, normalized 
+weighted score; 
+dataset and header 
+features shape the 
+comparison; weights 
+are fixed; execution 
+time is shown but not 
+scored. 
+4. Transparency and 
+software quality 
+Every stage displays 
+its result, from upload 
+progress to ranking, 
+tuning, and PDF and 
+Excel reports; a per-
+dataset preprocessing 
+log is not yet shown. 
+ISO/IEC 25010 results 
+will come from the 
+respondents' 
+evaluation. 
+Table 4.7; Equation 
+4.9 
+Overall Discussion 
+The prototype follows the study's Input–Process–Output framework: 
+a CSV or Excel dataset and the user's confirmed choices go in; validation, 
+
+[PAGE 148]
+ 
+ 
+ 
+ 
+reading, type inference, profiling, header analysis, task detection, 
+preparation, benchmarking, ranking, and tuning are performed; and a 
+dataset profile, benchmark results, a recommendation with its reason, and 
+reports come out. 
+The five sample datasets show both what the reading procedures do 
+well and where they fall short. Storage types were recognized in every case, 
+including integer identifiers (D3), blanks that turn whole numbers into 
+decimals (D1), and Excel dates (D5). Head er roles found the identifier in 
+every dataset. Target and task suggestions, however, matched the intended 
+setup only for D2, because the leftmost target word decides the target and 
+tasks without a single target cannot be suggested. The two -phase design, 
+in which the user confirms before any model is trained, is therefore essential 
+rather than optional. 
+The results should be read within the study's limitations. Header 
+analysis is rule-based: it does not split camel-case names or reduce plurals, 
+and it matches "id" inside any word. Task detection matches keywords 
+inside words, so names such as Delivery_Tim e are misread, and its ratio 
+rules depend on dataset size. Sequence modeling relies on the file already 
+being sorted by time. Missing-value handling assumes MCAR or MAR data. 
+Recommendation scores are relative and ignore execution time, and the 
+engine does not learn from past datasets. Analyses longer than 300 
+seconds, including tuning, are stopped, and English stop words leave 
+Filipino function words in Taglish text. 
+
+[PAGE 149]
+ 
+ 
+ 
+ 
+Chapter Summary 
+This chapter presented SimuRithm's techniques as Algorithms 4.1 to 
+4.25 and traced them on five sample datasets. In Phase 1, uploads are 
+validated, stored, and registered; the analysis service reads each file, infers 
+integer, decimal, text, or date for eve ry column, profiles it, analyzes its 
+headers, and suggests a target and task for the user to confirm. In Phase 2, 
+the user's request is validated, the selected algorithms are benchmarked on 
+identical data, ranked by a normalized weighted score, and optionally tuned, 
+with feature importance as additional insight. Visible outputs at every stage 
+and the PDF and Excel reports let students trace the recommendation back 
+to their data. The ISO/IEC 25010 results will be inserted after the 
+respondents complete the evaluation. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 150]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+REFERENCES 
+Afif, M. (2024). Examining the usability of mobile applications among 
+undergraduate students using SUS and data mining techniques. 
+International Journal of Data and Network Science, 8(3), 1801 –1814. 
+https://doi.org/10.5267/j.ijdns.2024.3.012 
+Ali, R., Hussain, A., Nazir, S., Khan, S., & Khan, H. U. (2023). Intelligent 
+decision support systems —An analysis of machine learning and 
+multicriteria decision -making methods. Applied Sciences, 13(22), 12426. 
+https://doi.org/10.3390/app132212426 
+Barbudo, R., Ventura, S., & Romero, J. R. (2023). Eight years of AutoML: 
+Categorisation, review and trends. Knowledge and Information Systems, 
+65, 5097–5149. https://doi.org/10.1007/s10115-023-01935-1 
+Bernardo, A. B. I., Cordel, M. O., II, Lapinid, M. R. C., Teves, J. M. M., 
+Yap, S. A., & Chua, U. C. (2022). Contrasting profiles of low -performing 
+mathematics students in public and private schools in the Philippines: 
+Insights from machine learning. Journal of Intelligence, 10(3), 61. 
+https://doi.org/10.3390/jintelligence10030061 
+Bernardo, A. B. I., Cordel, M. O., II, Lapinid, M. R. C., Teves, J. M. M., 
+Yap, S. A., & Chua, U. C. (2023). Profiling low-proficiency science students 
+in the Philippines using machine learning. Humanities and Social Sciences 
+Communications, 10, 258. https://doi.org/10.1057/s41599-023-01705-y 
+
+[PAGE 151]
+ 
+ 
+ 
+ 
+Bilog, R. J., & Abamo, J. L. V. (2024). Machine learning predictive models 
+for faculty selection and promotion in public higher education institutions in 
+the Philippines. International Journal of Intelligent Systems and Applications 
+in Engineering, 12(3), 3278 –3289. 
+https://ijisae.org/index.php/IJISAE/article/view/5934 
+Dagan, I., Vainshtein, R., Katz, G., & Rokach, L. (2024). Automated 
+algorithm selection using meta -learning and pre -trained deep convolution 
+neural networks. Information Fusion, 105, 102210. 
+https://doi.org/10.1016/j.inffus.2023.102210 
+Deshmukh, A. M., & Chalmeta, R. (2024). Validation of system usability 
+scale as a usability metric to evaluate voice user interfaces. PeerJ Computer 
+Science, 10, e1918. https://doi.org/10.7717/peerj-cs.1918 
+Elahi, M., Starke, A., El Ioini, N., Lambrix, A. A., & Trattner, C. (2022). 
+Developing and evaluating a university recommender system. Frontiers in 
+Artificial Intelligence, 4, 796268. https://doi.org/10.3389/frai.2021.796268 
+Elshawi, R., Maher, M., & Sakr, S. (2021). Automated machine learning: 
+State-of-the-art and open challenges. Entropy, 21(12), 1 –22. 
+https://doi.org/10.3390/e21121138 
+Erickson, N., Mueller, J., Shirkov, A., Zhang, H., Larroy, P., Li, M., & 
+Smola, A. (2023). AutoGluon-Tabular: Robust and accurate AutoML for 
+structured data. arXiv. https://arxiv.org/abs/2003.06505 
+Evangelista, E. D. L., & Sy, B. D. (2022). An approach for improved 
+students' performance prediction using homogeneous and heterogeneous 
+ensemble methods. International Journal of Electrical and Computer 
+
+[PAGE 152]
+ 
+ 
+ 
+ 
+Engineering, 12(5), 5226 –5235. 
+https://doi.org/10.11591/ijece.v12i5.pp5226-5235 
+Feurer, M., Eggensperger, K., Falkner, S., Lindauer, M., & Hutter, F. 
+(2022). Auto-sklearn 2.0: Hands-free AutoML via meta-learning. Journal of 
+Machine Learning Research, 23, 11936 –11996. 
+https://jmlr.org/papers/v23/21-0050.html 
+Garouani, M., Ahmad, A., Bouneffa, M., Hamlich, M., Bourguin, G., & 
+Lewandowski, A. (2022). Using meta -learning for automated algorithms 
+selection and configuration: An experimental framework for industrial big 
+data. Journal of Big Data, 9, 57. https://doi.org/10.1186/s40537-022-00612-
+4 
+Gulane, J., Cadag, M., & Ramos, J. (2022). Educational data mining for 
+Senior High School strand selection of Grade 10 students. In Proceedings 
+of the 2022 Research Conference. Camarines Sur Polytechnic Colleges. 
+https://www.cspc.edu.ph 
+He, X., Zhao, K., & Chu, X. (2021). AutoML: A survey of the state -of-the-
+art. Knowledge -Based Systems, 212, 106622. 
+https://doi.org/10.1016/j.knosys.2020.106622 
+Hospedales, T., Antoniou, A., Micaelli, P., & Storkey, A. (2021). Meta-
+learning in neural networks: A survey. IEEE Transactions on Pattern 
+Analysis and Machine Intelligence, 44(9), 5149 –5169. 
+https://doi.org/10.1109/TPAMI.2021.3079209 
+Hoyle, A., Goel, P., Hian -Cheong, A., Peskov, D., Boyd -Graber, J., & 
+Resnik, P. (2021).  Is automated topic model evaluation broken? the 
+incoherence of coherence. Advances in neural information processing 
+
+[PAGE 153]
+ 
+ 
+ 
+ 
+systems, 34, 2018 -2033. 
+https://proceedings.neurips.cc/paper/2021/hash/0f83556a305d789b1d718
+15e8ea4f4b0-Abstract.html 
+Karmaker, S. K., Hassan, M. M., Smith, M. J., Xu, L., Zhai, C., & 
+Veeramachaneni, K. (2021). AutoML to date and beyond: Challenges and 
+opportunities. ACM Computing Surveys, 54(8), 1 –36. 
+https://doi.org/10.1145/3470918 
+Khairy, D., Alharbi, N., Amasha, M. A., Areed, M. F., Alkhalaf, S., & 
+Gaber, T. (2024). Prediction of student exam performance using data 
+mining classification algorithms. Education and Information Technologies, 
+29, 21621–21645. https://doi.org/10.1007/s10639-024-12619-w 
+Komer, B., Bergstra, J., & Eliasmith, C. (2023). MLJAR: State-of-the-art 
+automated machine learning framework for tabular data [Software 
+documentation]. MLJAR. https://github.com/mljar/mljar-supervised 
+Laguna, R., Santos, M., & De Leon, P. (2023). An intelligent academic 
+advising system with machine learning-based course recommendations for 
+undergraduate students. In Proceedings of the 2023 National Computing 
+Conference of the Philippines. Computing Society of the Philippines. 
+https://www.csp.org.ph 
+LeDell, E., & Poirier, S. (2022). H2O AutoML: Scalable automatic machine 
+learning. In Proceedings of the AutoML Workshop at ICML 2020. H2O.ai. 
+https://www.automl.org/wp-
+content/uploads/2020/07/AutoML_2020_paper_61.pdf 
+Mohammed, S., Budach, L., Feuerpfeil, M., Ihde, N., Nathansen, A., 
+Noack, N., Patzlaff, H., Naumann, F., & Harmouch, H. (2022). The effects 
+
+[PAGE 154]
+ 
+ 
+ 
+ 
+of data quality on machine learning performance on tabular data. arXiv. 
+https://arxiv.org/abs/2207.14529 
+Mohr, F., Wever, M., & Hüllermeier, E. (2021). GAMA: A general 
+automated machine learning assistant. In Proceedings of the European 
+Conference on Machine Learning and Knowledge Discovery in Databases 
+(ECML-PKDD). Springer. https://doi.org/10.1007/978-3-030-86517-7_14 
+Olson, R. S., & Moore, J. H. (2021). TPOT: A tree -based pipeline 
+optimization tool for automating machine learning. In Automated Machine 
+Learning (pp. 151 –160). Springer. https://doi.org/10.1007/978-3-030-
+05318-5_8 
+Pio, P. B., Rivolli, A., de Carvalho, A. C. P. L. F., & Garcia, L. P. F. (2024). 
+A review on preprocessing algorithm selection with meta -learning. 
+Knowledge and Information Systems, 66, 1 –28. 
+https://doi.org/10.1007/s10115-023-01970-y 
+Rahimi, H., Mimno, D., Vigly, J. H., Naacke, H., Constantin, C., & 
+Amann, B. (2024, March).  Contextualized topic coherence metrics. In 
+Findings of the Association for Computational Linguistics: EACL 2024  (pp. 
+1760-1773). https://aclanthology.org/2024.findings-eacl.123 
+Rainio, O., Teuho, J., & Klén, R. (2024). Evaluation metrics and statistical 
+tests for machine learning. Scientific reports , 14(1), 6086.  
+https://www.nature.com/articles/s41598-024-56706-x 
+Rogers, J. K. B., Mercado, T. C. R., & Decano, R. S. (2025). Moodle 
+interactions and academic performance: Educational data mining in a 
+Philippine university. Journal of Education and Learning (EduLearn), 19(1), 
+542–550. https://doi.org/10.11591/edulearn.v19i1.21549 
+
+[PAGE 155]
+ 
+ 
+ 
+ 
+Rojas, H., Renteria, R., Duran, V. M., Gutiérrez, Y. T., Cabrera, M. J. I., 
+& Aminuddin, A. (2025). Mapping the evolution and future directions of 
+ISO/IEC 25010: A bibliometric and thematic analysis. Engineering, 
+Technology & Applied Science Research, 15(1). 
+https://doi.org/10.48084/etasr.11772 
+Speis, A., Papageorgiou, E. I., & Mohr, F. (2025). A practical evaluation 
+of AutoML tools for binary, multiclass, and multilabel classification. Scientific 
+Reports, 15, Article 17281. https://doi.org/10.1038/s41598-025-02149-x 
+Švábenský, V., Verger, M., Rodrigo, M. M. T., Monterozo, C. J. G., 
+Baker, R. S., Saavedra, M. Z. N. L., Lallé, S., & Shimada, A. (2024).  
+Evaluating algorithmic bias in models for predicting academic performance 
+of Filipino students. In Proceedings of the 14th Learning Analytics and 
+Knowledge Conference (pp. 713 –724). Association for Computing 
+Machinery. https://doi.org/10.1145/3636555.3636936 
+Thamilarasan, Y., Raja Ikram, R. R., Osman, M., Salahuddin, L., Bujeri, 
+W. Y. W., & Kanchymalay, K. (2023). Enhanced system usability scale 
+using the software quality standard approach. Engineering, Technology & 
+Applied Science Research, 13(5), 11779 –11784. 
+https://doi.org/10.48084/etasr.5971 
+Tornede, A., Gehring, L., Tornede, T., Wever, M., & Hüllermeier, E. 
+(2023). Algorithm selection on a meta level. Machine Learning, 112, 1253–
+1286. https://doi.org/10.1007/s10994-022-06274-6 
+Tulawe, A., Abedin, J., & Alawi, F. (2024).  Classification and regression 
+tree models for academic performance analysis at MSU-Tawi-Tawi College 
+
+[PAGE 156]
+ 
+ 
+ 
+ 
+of Technology and Oceanography. Advances in Applied Statistics, 91, 129–
+148. https://doi.org/10.17654/0972361724007 
+Uddin, S., & Lu, H. (2024). Dataset meta-level and statistical features affect 
+machine learning performance. Scientific Reports, 14, 1670. 
+https://doi.org/10.1038/s41598-024-51825-x 
+Vlachogianni, P., & Tselios, N. (2022). Perceived usability evaluation of 
+educational technology using the System Usability Scale (SUS): A 
+systematic review. Journal of Research on Technology in Education, 54(3), 
+392–409. https://doi.org/10.1080/15391523.2020.1867938 
+Xin, D., Ma, L., Liu, J., Macke, S., Song, S., & Parameswaran, A. (2021). 
+Whither AutoML? Understanding the role of automation in machine learning 
+workflows. Proceedings of the 2021 CHI Conference on Human Factors in 
+Computing Systems, 1–16. https://doi.org/10.1145/3411764.3445306 
+Yang, C., Wang, Q., Zhang, J., Voyles, R., & Shi, Y. (2024). PyCaret: An 
+open-source, low-code machine learning library for automated ML model 
+development [Software]. https://github.com/pycaret/pycaret 
+Yu, E. R., II, Pineda, E. D., Tano, I. M., Lagman, A. C., & Victoriano, J. 
+M. (2025). Comparative analysis of supervised machine learning algorithms 
+for predicting student programming anxiety levels. Journal of Artificial 
+Intelligence, Machine Learning and Neural Network, 5(1), 28 –39. 
+https://doi.org/10.55529/jaimlnn.51.28.39 
+Zhang, Y., Li, Q., & Xin, Y. (2024). Research on eight machine learning 
+algorithms applicability on different characteristics data sets in medical 
+classification tasks. Frontiers in Computational Neuroscience, 18, 1345575. 
+https://doi.org/10.3389/fncom.2024.1345575 
+
+[PAGE 157]
+ 
+ 
+ 
+ 
+Zoller, M. A., & Huber, M. F. (2021). Benchmark and survey of automated 
+machine learning frameworks. Journal of Artificial Intelligence Research, 70, 
+409–472. https://doi.org/10.1613/jair.1.11854 

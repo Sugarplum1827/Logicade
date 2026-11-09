@@ -8,9 +8,9 @@
   "level": 2,
   "trial": 5,
   "difficulty": "Advance",
-  "mode": "pending",
-  "title": "C Archive · Ritchie and Bell Labs",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · Ritchie and Bell Labs",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Mine Cart Tunnel: an old mine cart tunnel",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l2",
   "source_level": 2,
   "source_week": 4,
-  "primary_mechanic": "Break Out",
-  "objective": "Archive variation 5: classify and verify C history, characteristics and language categories for Ritchie and Bell Labs.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 26,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 5: Find 5 artifacts, read the evidence, and verify three findings about Ritchie and Bell Labs.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 2,
   "seed": 2906896368,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 2906896368,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: Ritchie and Bell Labs",
   "source_primary_mechanic": "Break Out",
-  "source_code_snippet": "while True:\n    if danger:\n        break"
+  "source_code_snippet": "while True:\n    if danger:\n        break",
+  "archive_evidence": [
+    {
+      "id": "history_2_5",
+      "era": "The disk arrived late",
+      "history": "Ritchie recalls waiting three months for the PDP-11's disk. The team still tested software during that wait.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "history_1_8",
+      "era": "When C took shape",
+      "history": "Ritchie dates C's development to 1969–1973, with particularly rapid work during 1972.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "bell"
+    },
+    {
+      "id": "lesson_2_1",
+      "era": "The developer and laboratory",
+      "history": "Dennis Ritchie developed C at Bell Laboratories. He wrote its first compiler and refined the language alongside the Unix project.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_2_4",
+      "era": "Reading the credits",
+      "history": "A language developer, a book coauthor and a compiler contributor can all appear in the same archive. Look at what each record credits the person with doing.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_2_2",
+      "era": "Roles in the project",
+      "history": "Ken Thompson developed B. Ritchie developed C from it. Many Bell Labs colleagues contributed tools and language ideas.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

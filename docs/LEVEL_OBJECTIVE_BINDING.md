@@ -31,16 +31,16 @@ These are game-based examination-practice activities; formal assessments retain 
 | --- | --- | --- |
 | 1 | 2 | 10 — Flowchart synthesis |
 | 2 | 3 | 10 — Algorithm synthesis |
-| 3 | 4 | 10 — History/classification review |
+| 3 | 4 | 10 — History/classification review in a five-object archive case |
 | 4 | 5 | 10 — Build and verify a source file |
 | 5 | 6 | 10 — Program synthesis |
 | 6 | 7 | 10 — Integer division with typed declaration and output |
 | 7 | 8 | 9 — Compare local and global |
-| 8 | 2 | 10 — Further flowchart synthesis |
+| 8 | 2 | 10 — Surplus shipment flowchart with branching and boundary cases |
 | 9 | 5 | 9 — Source organization |
-| 10 | 8 | 10 — Scope trace synthesis |
+| 10 | 2–8 | The Final Expedition combines a shipment chart, algorithm trace, C history evidence, source assembly, and a C adventure with typed local and file-scope variables. |
 
-`exam_blueprint` identifies source weeks; `exam_level_blueprint` identifies source stages. Each review stage has a stable learning focus while its ten problems vary. This blueprint does not claim that the declaration review alone assesses every C type or every earlier stage.
+`exam_blueprint` and `exam_level_blueprint` identify the source weeks and stages. `exam_capstone` defines Stage 10's independent objective and coverage. Its source coordinates retain Week 8 Stage 10 as the scope reference. Each review stage has a stable learning focus while its ten problems vary. Stage 6 focuses on integer division.
 
 ## Validation and rollout
 

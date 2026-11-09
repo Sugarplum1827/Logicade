@@ -1,0 +1,632 @@
+{
+  "created_at_utc": "2026-11-08T08:51:11.481924+00:00",
+  "dataset_origin": "synthetic_demo_not_research",
+  "synthetic_warning": "Feature patterns and labels were generated together; metrics are only a pipeline demonstration, not learner prediction performance.",
+  "method": "L2 multinomial logistic regression; one participant-grouped holdout; split seed search for class coverage",
+  "excluded_insufficient_evidence_rows": 0,
+  "excluded_unlabeled_rows": 0,
+  "classes": [
+    "needs_support",
+    "standard",
+    "advanced"
+  ],
+  "split_seed": 2026,
+  "sklearn_version": "1.9.1",
+  "representations": [
+    {
+      "n_test_rows": 150,
+      "n_test_participants": 30,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_class_recall": {
+        "advanced": 1.0,
+        "needs_support": 1.0,
+        "standard": 1.0
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          0
+        ],
+        [
+          0,
+          0,
+          65
+        ]
+      ],
+      "multiclass_log_loss": 0.019395622584274578,
+      "multiclass_brier_score": 0.0019713395639436773,
+      "representation": "raw",
+      "n_train_rows": 450,
+      "n_train_participants": 90,
+      "n_total_rows_after_exclusions": 600,
+      "n_total_participants": 120,
+      "numeric_features": [
+        "mistakes",
+        "scored_submissions",
+        "mistakes_per_submission",
+        "hints_for_model",
+        "hint_opportunities",
+        "completion_time_ratio",
+        "level_run_attempts",
+        "accuracy",
+        "accuracy_scored_checks",
+        "first_try_success",
+        "failure_rate_last_five",
+        "failure_rate_evaluated_runs",
+        "retries",
+        "topic_mastery",
+        "topic_mastery_task_count",
+        "response_time_ratio",
+        "response_time_sample_count"
+      ],
+      "categorical_features": [
+        "objective_id",
+        "target_objective_id",
+        "difficulty_before",
+        "target_week",
+        "target_stage"
+      ],
+      "top_absolute_coefficients_by_class": {
+        "advanced": [
+          {
+            "feature": "numeric__level_run_attempts",
+            "coefficient": -1.968450360193776
+          },
+          {
+            "feature": "numeric__failure_rate_last_five",
+            "coefficient": -1.8231452000730373
+          },
+          {
+            "feature": "numeric__topic_mastery",
+            "coefficient": 1.6614544521182566
+          },
+          {
+            "feature": "numeric__accuracy",
+            "coefficient": 1.1527130070128742
+          },
+          {
+            "feature": "numeric__response_time_ratio",
+            "coefficient": -1.1240260918521183
+          },
+          {
+            "feature": "numeric__hints_for_model",
+            "coefficient": -0.8452964679735245
+          },
+          {
+            "feature": "numeric__retries",
+            "coefficient": -0.78269688037922
+          },
+          {
+            "feature": "numeric__first_try_success",
+            "coefficient": 0.644458695797945
+          },
+          {
+            "feature": "numeric__mistakes_per_submission",
+            "coefficient": -0.6304804204209591
+          },
+          {
+            "feature": "numeric__completion_time_ratio",
+            "coefficient": -0.6158822530889198
+          },
+          {
+            "feature": "numeric__mistakes",
+            "coefficient": -0.5176081006818165
+          },
+          {
+            "feature": "numeric__accuracy_scored_checks",
+            "coefficient": -0.15512053584152966
+          },
+          {
+            "feature": "categorical__target_stage_9",
+            "coefficient": -0.1493211881846843
+          },
+          {
+            "feature": "numeric__response_time_sample_count",
+            "coefficient": -0.14545443676587105
+          },
+          {
+            "feature": "numeric__hint_opportunities",
+            "coefficient": -0.12987586248294503
+          },
+          {
+            "feature": "numeric__missingindicator_topic_mastery_task_count",
+            "coefficient": 0.11412859734920791
+          },
+          {
+            "feature": "numeric__missingindicator_topic_mastery",
+            "coefficient": 0.11412859734920791
+          },
+          {
+            "feature": "categorical__target_week_7",
+            "coefficient": 0.08002939308468542
+          },
+          {
+            "feature": "categorical__target_objective_id_flowchart_sequence",
+            "coefficient": -0.07589316135077208
+          },
+          {
+            "feature": "categorical__objective_id_c_local_global_scope",
+            "coefficient": -0.07589316135077208
+          }
+        ],
+        "needs_support": [
+          {
+            "feature": "numeric__level_run_attempts",
+            "coefficient": 1.5027509016806644
+          },
+          {
+            "feature": "numeric__failure_rate_last_five",
+            "coefficient": 1.3292373830124022
+          },
+          {
+            "feature": "numeric__topic_mastery",
+            "coefficient": -1.1402597751758863
+          },
+          {
+            "feature": "numeric__retries",
+            "coefficient": 1.0862504211656536
+          },
+          {
+            "feature": "numeric__accuracy",
+            "coefficient": -1.0037656019262686
+          },
+          {
+            "feature": "numeric__response_time_ratio",
+            "coefficient": 0.9721276620498946
+          },
+          {
+            "feature": "numeric__hints_for_model",
+            "coefficient": 0.9413119135741222
+          },
+          {
+            "feature": "numeric__mistakes",
+            "coefficient": 0.7202901391507218
+          },
+          {
+            "feature": "numeric__mistakes_per_submission",
+            "coefficient": 0.6887626429125749
+          },
+          {
+            "feature": "numeric__completion_time_ratio",
+            "coefficient": 0.5804306220015256
+          },
+          {
+            "feature": "numeric__first_try_success",
+            "coefficient": -0.33601854592004976
+          },
+          {
+            "feature": "numeric__scored_submissions",
+            "coefficient": 0.19708621073721436
+          },
+          {
+            "feature": "numeric__accuracy_scored_checks",
+            "coefficient": 0.15914348896407807
+          },
+          {
+            "feature": "numeric__hint_opportunities",
+            "coefficient": 0.15362699646206956
+          },
+          {
+            "feature": "numeric__response_time_sample_count",
+            "coefficient": 0.1248674393763023
+          },
+          {
+            "feature": "categorical__target_stage_9",
+            "coefficient": 0.10125175457775448
+          },
+          {
+            "feature": "categorical__difficulty_before_standard",
+            "coefficient": 0.09874263529310995
+          },
+          {
+            "feature": "categorical__objective_id_flowchart_loops",
+            "coefficient": -0.08767261806452252
+          },
+          {
+            "feature": "categorical__target_objective_id_algorithm_tracing",
+            "coefficient": -0.08767261806452252
+          },
+          {
+            "feature": "numeric__topic_mastery_task_count",
+            "coefficient": 0.07475266683963344
+          }
+        ],
+        "standard": [
+          {
+            "feature": "numeric__topic_mastery",
+            "coefficient": -0.5211946769423708
+          },
+          {
+            "feature": "numeric__failure_rate_last_five",
+            "coefficient": 0.4939078170606345
+          },
+          {
+            "feature": "numeric__level_run_attempts",
+            "coefficient": 0.46569945851311195
+          },
+          {
+            "feature": "numeric__first_try_success",
+            "coefficient": -0.30844014987789387
+          },
+          {
+            "feature": "numeric__retries",
+            "coefficient": -0.3035535407864345
+          },
+          {
+            "feature": "numeric__mistakes",
+            "coefficient": -0.20268203846890553
+          },
+          {
+            "feature": "numeric__scored_submissions",
+            "coefficient": -0.16235283296519465
+          },
+          {
+            "feature": "numeric__response_time_ratio",
+            "coefficient": 0.1518984298022236
+          },
+          {
+            "feature": "numeric__accuracy",
+            "coefficient": -0.14894740508660617
+          },
+          {
+            "feature": "numeric__missingindicator_response_time_sample_count",
+            "coefficient": -0.11589532491425365
+          },
+          {
+            "feature": "numeric__missingindicator_response_time_ratio",
+            "coefficient": -0.11589532491425365
+          },
+          {
+            "feature": "categorical__target_stage_2",
+            "coefficient": 0.11085473442416884
+          },
+          {
+            "feature": "numeric__missingindicator_topic_mastery",
+            "coefficient": -0.1059470834159194
+          },
+          {
+            "feature": "numeric__missingindicator_topic_mastery_task_count",
+            "coefficient": -0.1059470834159194
+          },
+          {
+            "feature": "numeric__topic_mastery_task_count",
+            "coefficient": -0.10586002592118147
+          },
+          {
+            "feature": "numeric__hints_for_model",
+            "coefficient": -0.09601544560059648
+          },
+          {
+            "feature": "categorical__objective_id_c_local_global_scope",
+            "coefficient": 0.08770128955611337
+          },
+          {
+            "feature": "categorical__target_objective_id_flowchart_sequence",
+            "coefficient": 0.08770128955611337
+          },
+          {
+            "feature": "categorical__difficulty_before_standard",
+            "coefficient": -0.08664104167755529
+          },
+          {
+            "feature": "categorical__target_stage_8",
+            "coefficient": -0.07492806758263784
+          }
+        ]
+      },
+      "artifact": "artifacts\\mlr_synthetic_demo\\difficulty_mlr_raw.joblib",
+      "model_is_live": false
+    },
+    {
+      "n_test_rows": 150,
+      "n_test_participants": 30,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_class_recall": {
+        "advanced": 1.0,
+        "needs_support": 1.0,
+        "standard": 1.0
+      },
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          0
+        ],
+        [
+          0,
+          0,
+          65
+        ]
+      ],
+      "multiclass_log_loss": 0.007851168251027905,
+      "multiclass_brier_score": 0.0002766683336408446,
+      "representation": "bands",
+      "n_train_rows": 450,
+      "n_train_participants": 90,
+      "n_total_rows_after_exclusions": 600,
+      "n_total_participants": 120,
+      "numeric_features": [],
+      "categorical_features": [
+        "objective_id",
+        "target_objective_id",
+        "difficulty_before",
+        "target_week",
+        "target_stage",
+        "mistakes_band",
+        "hints_band",
+        "completion_time_band",
+        "level_run_attempts_band",
+        "accuracy_band",
+        "first_try_success_band",
+        "failure_rate_band",
+        "retries_band",
+        "topic_mastery_band",
+        "response_time_band"
+      ],
+      "top_absolute_coefficients_by_class": {
+        "advanced": [
+          {
+            "feature": "categorical__level_run_attempts_band_advanced",
+            "coefficient": 1.064835017543182
+          },
+          {
+            "feature": "categorical__failure_rate_band_advanced",
+            "coefficient": 0.9569201256237924
+          },
+          {
+            "feature": "categorical__topic_mastery_band_advanced",
+            "coefficient": 0.8022354389870421
+          },
+          {
+            "feature": "categorical__level_run_attempts_band_standard",
+            "coefficient": -0.7119251446053557
+          },
+          {
+            "feature": "categorical__failure_rate_band_standard",
+            "coefficient": -0.6155418256059464
+          },
+          {
+            "feature": "categorical__topic_mastery_band_standard",
+            "coefficient": -0.5451577567327617
+          },
+          {
+            "feature": "categorical__accuracy_band_advanced",
+            "coefficient": 0.5126929943760934
+          },
+          {
+            "feature": "categorical__response_time_band_advanced",
+            "coefficient": 0.45848946208773195
+          },
+          {
+            "feature": "categorical__first_try_success_band_needs_support",
+            "coefficient": -0.37981906559985945
+          },
+          {
+            "feature": "categorical__first_try_success_band_advanced",
+            "coefficient": 0.34839496929786157
+          },
+          {
+            "feature": "categorical__retries_band_advanced",
+            "coefficient": 0.3281676212422898
+          },
+          {
+            "feature": "categorical__level_run_attempts_band_needs_support",
+            "coefficient": -0.32446150869193696
+          },
+          {
+            "feature": "categorical__hints_band_advanced",
+            "coefficient": 0.30874833861499634
+          },
+          {
+            "feature": "categorical__mistakes_band_needs_support",
+            "coefficient": -0.2968449834639322
+          },
+          {
+            "feature": "categorical__retries_band_needs_support",
+            "coefficient": -0.28928430504076613
+          },
+          {
+            "feature": "categorical__failure_rate_band_needs_support",
+            "coefficient": -0.2886449068222226
+          },
+          {
+            "feature": "categorical__completion_time_band_needs_support",
+            "coefficient": -0.2878616837708574
+          },
+          {
+            "feature": "categorical__accuracy_band_needs_support",
+            "coefficient": -0.2846139288920993
+          },
+          {
+            "feature": "categorical__topic_mastery_band_needs_support",
+            "coefficient": -0.2724580106047863
+          },
+          {
+            "feature": "categorical__mistakes_band_advanced",
+            "coefficient": 0.2698962577913237
+          }
+        ],
+        "needs_support": [
+          {
+            "feature": "categorical__level_run_attempts_band_needs_support",
+            "coefficient": 0.7461308514947924
+          },
+          {
+            "feature": "categorical__failure_rate_band_needs_support",
+            "coefficient": 0.6617696995335169
+          },
+          {
+            "feature": "categorical__topic_mastery_band_needs_support",
+            "coefficient": 0.6284137274434296
+          },
+          {
+            "feature": "categorical__retries_band_needs_support",
+            "coefficient": 0.614988297074484
+          },
+          {
+            "feature": "categorical__mistakes_band_needs_support",
+            "coefficient": 0.5893607809312533
+          },
+          {
+            "feature": "categorical__hints_band_needs_support",
+            "coefficient": 0.5281166649994876
+          },
+          {
+            "feature": "categorical__response_time_band_needs_support",
+            "coefficient": 0.45031856096141076
+          },
+          {
+            "feature": "categorical__retries_band_standard",
+            "coefficient": -0.4392834008600526
+          },
+          {
+            "feature": "categorical__accuracy_band_needs_support",
+            "coefficient": 0.4253394815815252
+          },
+          {
+            "feature": "categorical__level_run_attempts_band_standard",
+            "coefficient": -0.4190697804973558
+          },
+          {
+            "feature": "categorical__mistakes_band_standard",
+            "coefficient": -0.41335289145807697
+          },
+          {
+            "feature": "categorical__hints_band_standard",
+            "coefficient": -0.37813345998124753
+          },
+          {
+            "feature": "categorical__failure_rate_band_standard",
+            "coefficient": -0.3443447932331765
+          },
+          {
+            "feature": "categorical__topic_mastery_band_standard",
+            "coefficient": -0.34038755817245386
+          },
+          {
+            "feature": "categorical__level_run_attempts_band_advanced",
+            "coefficient": -0.3327185192423195
+          },
+          {
+            "feature": "categorical__failure_rate_band_advanced",
+            "coefficient": -0.30121466419982507
+          },
+          {
+            "feature": "categorical__response_time_band_standard",
+            "coefficient": -0.29125169746974305
+          },
+          {
+            "feature": "categorical__accuracy_band_advanced",
+            "coefficient": -0.28156267072990554
+          },
+          {
+            "feature": "categorical__completion_time_band_needs_support",
+            "coefficient": 0.26592520800324654
+          },
+          {
+            "feature": "categorical__topic_mastery_band_advanced",
+            "coefficient": -0.25468893067999643
+          }
+        ],
+        "standard": [
+          {
+            "feature": "categorical__level_run_attempts_band_standard",
+            "coefficient": 1.130994925102711
+          },
+          {
+            "feature": "categorical__failure_rate_band_standard",
+            "coefficient": 0.959886618839123
+          },
+          {
+            "feature": "categorical__topic_mastery_band_standard",
+            "coefficient": 0.8855453149052157
+          },
+          {
+            "feature": "categorical__level_run_attempts_band_advanced",
+            "coefficient": -0.7321164983008623
+          },
+          {
+            "feature": "categorical__failure_rate_band_advanced",
+            "coefficient": -0.6557054614239671
+          },
+          {
+            "feature": "categorical__topic_mastery_band_advanced",
+            "coefficient": -0.5475465083070459
+          },
+          {
+            "feature": "categorical__response_time_band_standard",
+            "coefficient": 0.48295504249073196
+          },
+          {
+            "feature": "categorical__retries_band_standard",
+            "coefficient": 0.4497183528156878
+          },
+          {
+            "feature": "categorical__level_run_attempts_band_needs_support",
+            "coefficient": -0.4216693428028557
+          },
+          {
+            "feature": "categorical__failure_rate_band_needs_support",
+            "coefficient": -0.37312479271129434
+          },
+          {
+            "feature": "categorical__accuracy_band_standard",
+            "coefficient": 0.37204843342489835
+          },
+          {
+            "feature": "categorical__mistakes_band_standard",
+            "coefficient": 0.3579558015395798
+          },
+          {
+            "feature": "categorical__topic_mastery_band_needs_support",
+            "coefficient": -0.3559557168386436
+          },
+          {
+            "feature": "categorical__hints_band_standard",
+            "coefficient": 0.32755285488893315
+          },
+          {
+            "feature": "categorical__retries_band_needs_support",
+            "coefficient": -0.32570399203371797
+          },
+          {
+            "feature": "categorical__mistakes_band_needs_support",
+            "coefficient": -0.2925157974673216
+          },
+          {
+            "feature": "categorical__hints_band_needs_support",
+            "coefficient": -0.2806996477187105
+          },
+          {
+            "feature": "categorical__response_time_band_advanced",
+            "coefficient": -0.25846185323809817
+          },
+          {
+            "feature": "categorical__accuracy_band_advanced",
+            "coefficient": -0.23113032364618763
+          },
+          {
+            "feature": "categorical__response_time_band_needs_support",
+            "coefficient": -0.21776289305445312
+          }
+        ]
+      },
+      "artifact": "artifacts\\mlr_synthetic_demo\\difficulty_mlr_bands.joblib",
+      "model_is_live": false
+    }
+  ],
+  "interpretation": "Exploratory pilot metrics only; do not choose a production model from this holdout alone."
+}

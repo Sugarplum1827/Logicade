@@ -65,8 +65,8 @@ try:
 except ImportError:  # dimensions and --slice need Pillow
     Image = None
 
-# Hard-coded Kenney vendor folder on this machine
-KENNEY_DIR = Path(r"C:\Users\Shiela\OneDrive\Apps\Documents\thesis_System\Logicade\vendor\kenney")
+# Resolve from this script so the project can be moved to another user or drive.
+KENNEY_DIR = Path(__file__).resolve().parents[1] / "vendor" / "kenney"
 DEFAULT_SRC = KENNEY_DIR
 DEFAULT_OUT = KENNEY_DIR / "organized"
 

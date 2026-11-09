@@ -1,6 +1,6 @@
 {
   "file_id": "game_0045",
-  "game_title": "Flowchart Workshop – Even numbers from 9 to 100",
+  "game_title": "Flowchart Lab · Rectangle area",
   "game_concept": "A drag-and-drop algorithm puzzle in The Kingdom: create the requested executable flowchart.",
   "genre": "Drag-and-drop executable flowchart puzzle",
   "theme": "The Kingdom – Castle Gatehouse: the fortified castle gatehouse",
@@ -11,8 +11,8 @@
     "Power-up crates for perfect rounds",
     "Live variable watch panel"
   ],
-  "player_objective": "Build a flowchart that prints every even number between 9 and 100, including 100. Start at 10 and increase by 2.",
-  "controls": "Drag blocks from the tray into chart positions. Drag them back to remove them. Check chart runs the algorithm. Keyboard: [ or ] selects a block, arrows choose a position, Enter places, C checks, Escape pauses.",
+  "player_objective": "Read a rectangle's width and height. Calculate its area and display the result. Problem values 20, 5; test inputs [{'width': 10, 'height': 5}, {'width': 15, 'height': 6}, {'width': 5, 'height': 7}, {'width': 5, 'height': 8}, {'width': 20, 'height': 9}, {'width': 0, 'height': 10}, {'width': 20, 'height': 20}, {'width': 20, 'height': 5}].",
+  "controls": "Drag flowchart symbols onto numbered positions and follow the arrows. Check chart executes every case. Arrow keys and Enter also place selected blocks.",
   "win_condition": "Build a complete chart whose execution produces the required outputs for every example input.",
   "lose_condition": "The run ends after the available unsuccessful chart checks are used.",
   "difficulty": "Standard",
@@ -63,5 +63,53 @@
   "source_game_title": "Uninitialized Hunt – Castle Gatehouse Race",
   "learning_objective_id": "cp1_w1_l2",
   "source_week": 1,
-  "source_level": 2
+  "source_level": 2,
+  "canvas_generation": {
+    "schema_version": 1,
+    "proposal": {
+      "schema_version": 1,
+      "binding": {
+        "week": 1,
+        "level": 2,
+        "source_week": 1,
+        "source_level": 2,
+        "curriculum_version": "cp1-stage-objectives-v1-2026-10-29",
+        "learning_objective_id": "cp1_w1_l2",
+        "difficulty": "standard",
+        "mechanic_family": "flowchart",
+        "required_c_type": null
+      },
+      "parameters": {
+        "problem_variant": 2,
+        "primary_value": 20,
+        "secondary_value": 5,
+        "input_values": [
+          -10,
+          15,
+          5,
+          -5,
+          20,
+          0
+        ],
+        "layout_seed": 12345
+      }
+    },
+    "parameter_fingerprint": "28baea2581efbd55721827f6cfc2239d0668647f51fc1f37a2e858af41bdf8ba",
+    "model_tag": "qwen2.5:3b",
+    "model_digest": "357c53fb659c",
+    "problem_fingerprint": "50d1a94f0a73d0689c3e1df8f39e36756b97782d65a8295c2acb1d2b7adbb5ec",
+    "runtime_verification": {
+      "passed": true,
+      "cases": 8,
+      "negative_control": true,
+      "verifier": "shipped_canvas_models_v1"
+    },
+    "generated_at": 1794197895.2654648,
+    "origin": "ollama",
+    "job_id": "ad2a9ee204f9cca64b61d9a9c4da848ac9c4a2ec02caec8cc8bd29180da76dc8",
+    "replaces_revision": "3b0e0abfa56dec6c1294aa9813d8bcc26de84b66f1e57243ec8b6068d1a81921"
+  },
+  "hint": "Trace the arrows. Read input before using it; use rectangles for assignments and diamonds for decisions.",
+  "is_fallback": false,
+  "generated_at": "2026-11-09T04:18:15.265464+00:00"
 }

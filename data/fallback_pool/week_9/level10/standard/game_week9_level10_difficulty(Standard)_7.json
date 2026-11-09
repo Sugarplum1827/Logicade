@@ -1,37 +1,37 @@
 {
   "file_id": "game_2687",
-  "game_title": "Examination practice · C Scope Circuit · Scope trace synthesis · variation 7",
+  "game_title": "The Final Expedition · Route 7",
   "game_concept": "A logic puzzle set in Sand Dunes – Sandstorm Pass, a pass in a sandstorm: the caravan guide must handle scarab swarms while practicing debugging & combined skills. Core idea – Exception Rodeo: Wrap risky code in try/except to catch runtime errors without crashing.",
-  "genre": "circuit programming workbench",
+  "genre": "adventure programming workbench",
   "theme": "Sand Dunes – Sandstorm Pass: a pass in a sandstorm",
   "core_gameplay_loop": "Construct a solution, execute it, inspect actual state and outputs, then revise until all mission goals pass.",
-  "primary_mechanic": "circuit construction and execution",
+  "primary_mechanic": "adventure construction and execution",
   "secondary_mechanics": [
     "Limited action budget",
     "Ghost replay of best run",
     "Step-by-step code highlighting"
   ],
-  "player_objective": "Week 8 examination practice: Build 2 parallel branches, merge every branch by SUM, and feed the merged signal back for 3 passes before the output probe. In the scope controller, restore global visibility after a local block. Print the scope trace [19, 10], then send the incoming signal with writeOutput(signal) into the broadcast splitter. Final file-scope values: {'steps': 10}. Pass all 3 signal tests.",
-  "controls": "Drag components and connect pins. A splitter broadcasts a copy to every branch; the SUM merger waits for one result from each branch in the same pass. LOOP sends intermediate results back to split, and the final result to output. Select Program node to edit each C controller. Run tests every case; Step highlights the active node, wire and C line. Each node invocation starts fresh C scopes. Feedback passes and execution are bounded. readInput and writeOutput are bounded LogiCade helpers from logicade.h, not standard C functions.",
-  "win_condition": "The executed solution satisfies every output and world-state check.",
+  "player_objective": "Route 7: verify the shipment flowchart, trace an extra input, identify the C history record, and assemble the source file. Then collect 1 crystal(s) and reach the beacon. In C, initialize file-scope int cargo to 22. Inside a nested block declare a float cargo set to half your shipment trace and print it to one decimal place. After that block, print the restored file-scope cargo as an integer.",
+  "controls": "Write int main(void) with declarations, assignments, printf and braces. Movement calls moveRight(n), moveLeft(n), moveUp(n), moveDown(n) are game helpers from logicade.h. Run or Step verifies real map goals, printed values and global state in the documented safe C subset. Use the expedition panel to place flowchart symbols, enter the trace, read the archive record, and assemble the source blocks.",
+  "win_condition": "Verify the preparation checks and complete the coded expedition.",
   "lose_condition": "The available unsuccessful execution checks are exhausted.",
   "difficulty": "Standard",
   "estimated_play_time_minutes": 8,
-  "learning_alignment": "CP1 Week 8: Scope trace synthesis",
+  "learning_alignment": "CP1 Weeks 2–8: The Final Expedition",
   "assets_style": "Shared Kenney CC0 tile and audio assets with deterministic Canvas layouts; assets are not duplicated per game.",
   "unique_identity_key": "W9-M02-X3-T07-838e81f7",
   "duplicate_check_notes": "Unique combination of primary mechanic 'Exception Rodeo' (Week 9 slot 2), mission type 'Efficiency Trial', and setting 'Sandstorm Pass'. No other file shares this combination; games sharing the mechanic differ in mission/win condition and setting, and games sharing the setting use a different mechanic.",
   "week": 9,
   "level": 10,
   "trial": 7,
-  "topic": "Local and Global Variables",
+  "topic": "Examination Practice: Weeks 2–8",
   "region": {
     "id": "w9_desert",
     "name": "Sand Dunes",
     "banner": "data/fallback_pool/week_9/w9_desert.png",
     "mood": "desert oud, hand drums and sandy wind"
   },
-  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\nint steps = 9;\nint main(void)\n{\n  int signal = readInput();\n{ int steps = 19; printf(\"%d\\n\", steps); }\nsteps = steps + 1;\nprintf(\"%d\\n\", steps);\n  writeOutput(signal);\n  return 0;\n}",
+  "code_snippet": "#include <stdio.h>\n#include \"logicade.h\"\n// Add file-scope declarations here when required.\nint main(void)\n{\n// Declare, print and navigate here.\nreturn 0;\n}",
   "game_settings": {
     "lives": 3,
     "hint_count": 2,
@@ -45,18 +45,16 @@
     "starting_score": 0
   },
   "tutorial": [
-    "Read the C scope mission and expected signal traces.",
-    "Connect sensor → scope controller → splitter; wire each branch into the SUM merger.",
-    "Write file-scope declarations before main and local declarations inside their blocks.",
-    "Connect merger → LOOP, LOOP → split and LOOP → output. Set the required feedback passes.",
-    "Use Program node to edit every branch. Step inspects scopes and signals; Run verifies all tests."
+    "Place the shipment flowchart blocks and predict the extra input.",
+    "Read the historical record and assemble the C source file.",
+    "Write the scoped C program, collect the crystals, and reach the beacon."
   ],
   "canvas_runtime": {
     "engine": "logicade_canvas_v2",
     "game_path": "week_9/level10/standard/game_week9_level10_difficulty(Standard)_7.json",
     "variation_id": "canvas_game_2687",
-    "mode": "circuit",
-    "asset_set": "circuit",
+    "mode": "dungeon",
+    "asset_set": "dungeon",
     "playable": true,
     "asset_manifest": "games/assets/manifest.json"
   },
@@ -65,9 +63,9 @@
   "source_lose_condition": "actions_used exceeds 19 before the sundial is reached, or lives reach 0.",
   "source_game_title": "Exception Rodeo – Sandstorm Pass Trial",
   "source_primary_mechanic": "Exception Rodeo",
-  "hint": "Wire every splitter branch into the SUM merger. The feedback controller repeats the merged signal for the required pass count, then sends it to the probe. Declare globals before main. Braces create local scopes; an inner declaration hides an outer name until its block ends. Use Step to inspect the variable scopes and output trace.",
+  "hint": "Work through the expedition checks in the sidebar. When writing C, declare the outer cargo before main and put the decimal cargo inside its own braces.",
   "source_time_limit_seconds": 57,
-  "learning_objective_id": "cp1_w8_l10",
+  "learning_objective_id": "cp1_w9_capstone",
   "source_week": 8,
   "source_level": 10,
   "mechanic_migration": {

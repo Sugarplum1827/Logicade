@@ -8,9 +8,9 @@
   "level": 10,
   "trial": 2,
   "difficulty": "Standard",
-  "mode": "pending",
-  "title": "C Archive · History/classification review",
-  "display_name": "Week 4 Challenge · Theme Pending",
+  "mode": "hidden_archive",
+  "title": "The Lost Legacy of C · History/classification review",
+  "display_name": "The Lost Legacy of C",
   "theme": "Shadow Cave – Moss Door Chamber: a mossy sealed door",
   "topic": "Introduction to C: History, Characteristics and Classification",
   "learning_objectives": [
@@ -55,21 +55,19 @@
   "learning_objective_id": "cp1_w4_l10",
   "source_level": 10,
   "source_week": 4,
-  "primary_mechanic": "Doubling Growth",
-  "objective": "Archive variation 2: classify and verify C history, characteristics and language categories for History/classification review.",
-  "hint": "Use the Introduction to C: History, Characteristics and Classification idea and test one choice against the station goal.",
-  "controls": "Click or press 1–4 to answer; Escape pauses.",
-  "time_limit_seconds": 57,
+  "primary_mechanic": "Hidden-object investigation and evidence verification",
+  "objective": "Case 2: Find 5 artifacts, read the evidence, and verify three findings about History/classification review.",
+  "hint": "Match an unfound object in the tray to its shape in the room. The Evidence folder keeps every record you uncover.",
+  "controls": "Select objects in the room. Review discovered objects in Evidence and verify your findings. Tab and Enter select controls. Escape closes a card or pauses.",
+  "time_limit_seconds": 0,
   "starting_lives": 3,
   "seed": 2339853016,
   "layout": {
-    "width": 14,
-    "height": 9,
-    "seed": 2339853016,
-    "theme_status": "awaiting_course_decision"
+    "interaction": "hidden_object_search",
+    "clues": 5
   },
   "assets": {
-    "terminal_tile": "/vendor/kenney/organized/tiles/1_bit_pack/colored_transparent/r00_c01.png",
+    "archive_room": "/canvas-runtime/assets/archive/room.webp",
     "success_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/confirmation_001.ogg",
     "error_sound": "/vendor/kenney/organized/audio/interface/interface_sounds/error_001.ogg"
   },
@@ -121,5 +119,39 @@
   "source_topic": "Introduction to C: History, Characteristics and Classification",
   "source_learning_alignment": "CP1 Week 4: History/classification review",
   "source_primary_mechanic": "Doubling Growth",
-  "source_code_snippet": "while size < goal:\n    size *= 2"
+  "source_code_snippet": "while size < goal:\n    size *= 2",
+  "archive_evidence": [
+    {
+      "id": "history_10_2",
+      "era": "The hardware that changed the design",
+      "history": "With the PDP-11, programmers could address bytes separately. A language built around a single word-sized cell made character operations awkward.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "history_9_5",
+      "era": "Close to the machine",
+      "history": "C made it practical to write code for data in memory while using named variables, functions and types. Its combination of facilities explains the informal classroom label middle-level.",
+      "source": "Dennis Ritchie, The Development of the C Language",
+      "art": "board"
+    },
+    {
+      "id": "lesson_2_1",
+      "era": "The developer and laboratory",
+      "history": "Dennis Ritchie developed C at Bell Laboratories. He wrote its first compiler and refined the language alongside the Unix project.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_2_4",
+      "era": "Reading the credits",
+      "history": "A language developer, a book coauthor and a compiler contributor can all appear in the same archive. Look at what each record credits the person with doing.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    },
+    {
+      "id": "lesson_2_2",
+      "era": "Roles in the project",
+      "history": "Ken Thompson developed B. Ritchie developed C from it. Many Bell Labs colleagues contributed tools and language ideas.",
+      "source": "Dennis Ritchie, The Development of the C Language"
+    }
+  ]
 }

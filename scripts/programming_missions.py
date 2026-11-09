@@ -5,10 +5,16 @@ try:
     from .factory_missions import factory_mission
     from .scope_circuits import scope_circuit
     from .cp1_lessons import source_week, source_level, lesson_for, c_source_exercise, c_variable_mission
+    from .archive_lessons import authoring_questions
+    from .archive_evidence import LESSON_NOTES
+    from .flowchart_scenarios import make_flowchart
 except ImportError:
     from factory_missions import factory_mission
     from scope_circuits import scope_circuit
     from cp1_lessons import source_week, source_level, lesson_for, c_source_exercise, c_variable_mission
+    from archive_lessons import authoring_questions
+    from archive_evidence import LESSON_NOTES
+    from flowchart_scenarios import make_flowchart
 
 
 def adventure_map(seed,level,rank,gem_count):
@@ -59,7 +65,59 @@ def adventure_map(seed,level,rank,gem_count):
     return [''.join(row) for row in grid],list(start),list(exit_cell),[list(p) for p in gems],route,features
 
 
+def final_expedition(trial, difficulty, seed, parameters):
+    mission = programming_mission(6, 10, trial, difficulty, seed, parameters)
+    rank = mission['difficulty_profile']
+    lesson = lesson_for(9, 10)
+    chart_values = parameters or {'primary_value': 15 + trial, 'secondary_value': 3 + trial % 4, 'input_values': [trial]}
+    flow = make_flowchart('capstone', trial, difficulty, seed, level=10, parameters=chart_values, application=True)
+    capacity = flow['cases'][0]['inputs']['capacity']
+    units = chart_values['secondary_value']
+    surplus = trial + 2
+    shipment = surplus * units
+    trace = {'id': 'expedition_trace', 'inputs': {'stock': capacity + surplus, 'capacity': capacity}, 'expected': [shipment]}
+    history = authoring_questions(10)[(trial * 5 - 1) % 18]
+    history_topic = int(history['id'].split('_')[1][1:])
+    _, record, source = LESSON_NOTES[history_topic][0]
+    options = [history['answer'], *history['distractors'][:2 + bool(rank)]]
+    rng = random.Random(seed)
+    rng.shuffle(options)
+    exercise = c_source_exercise(10, trial, rank, week=5, parameters=parameters)
+    rng.shuffle(exercise['parts'])
+    local_type = 'float' if trial % 2 else 'double'
+    route = '\n'.join(line for line in mission['reference']['program'].splitlines() if line.startswith('move'))
+    declarations = f'int cargo = {capacity};\nint main(void)\n{{'
+    report = f'{{ {local_type} cargo = {shipment} / 2.0; printf("%.1f\\n", cargo); }}\nprintf("%d\\n", cargo);'
+    reference_program = f'#include <stdio.h>\n#include "logicade.h"\n{declarations}\n{report}\n{route}\nreturn 0;\n}}'
+    mission.update(
+        mission_id=f'cp1_w9_l10_v{trial}_{rank}', title=f'The Final Expedition · Route {trial}',
+        focus=lesson['stage_title'], objective_id=lesson['objective_id'], source_week=8, source_level=10,
+        objective=(f'Route {trial}: verify the shipment flowchart, trace an extra input, identify the C history record, and assemble the source file. '
+                   f'Then collect {len(mission["gems"])} crystal(s) and reach the beacon. In C, initialize file-scope int cargo to {capacity}. '
+                   f'Inside a nested block declare a {local_type} cargo set to half your shipment trace and print it to one decimal place. '
+                   'After that block, print the restored file-scope cargo as an integer.'),
+        expected_watch=[shipment / 2, capacity], expected_globals={'cargo': capacity},
+        hint='Work through the expedition checks in the sidebar. When writing C, declare the outer cargo before main and put the decimal cargo inside its own braces.',
+        controls=mission['controls'] + ' Use the expedition panel to place flowchart symbols, enter the trace, read the archive record, and assemble the source blocks.',
+        capstone={
+            'coverage': lesson['coverage'], 'flowchart': flow, 'trace_case': trace,
+            'history': {'prompt': history['prompt'], 'record': record, 'source': source, 'choices': options, 'answer_index': options.index(history['answer'])},
+            'scope': {'name': 'cargo', 'local_type': local_type},
+        },
+        source_exercise=exercise,
+        reference={
+            'program': reference_program, 'chart': flow['solution'], 'trace_value': shipment,
+            'history_choice': options.index(history['answer']), 'source_order': exercise['reference_order'],
+            'c_categories': exercise['categories'],
+        },
+    )
+    mission['rules']['max_lines'] = max(mission['rules']['max_lines'], len(reference_program.splitlines()) + 10)
+    return mission
+
+
 def programming_mission(week, level, trial, difficulty, seed, parameters=None):
+    if (week, level) == (9, 10):
+        return final_expedition(trial, difficulty, seed, parameters)
     if week==9:
         origin=source_week(week,level)
         mission=programming_mission(origin,source_level(week,level),trial,difficulty,seed,parameters)

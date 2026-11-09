@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useEffectEvent, useRef, useState } from 'react';
 import MidtermAssessment from './MidtermAssessment';
 import { guidanceKey, needsFirstVisitGuidance } from '../game/firstVisitGuidance';
 
 const ALLOWED_GAME_EVENTS = new Set([
   'game_started', 'question_answered', 'hint_used', 'activity_completed',
-  'checkpoint_saved', 'game_paused', 'game_resumed', 'custom',
+  'checkpoint_saved', 'game_paused', 'game_resumed', 'custom', 'scored_submission',
 ]);
 
 /** Runs an imported static game in an opaque-origin sandbox and bridges a small event contract. */
 export default function GamePackageFrame({
-  launchUrl, studentId, levelId, week, level, difficulty, spec, meta, onPause, onGameOver, onGuidanceChange,
+  launchUrl, studentId, levelId, week, level, difficulty, spec, meta, onPause, onGameOver, onGuidanceChange, onHintRequest,
 }) {
   const frameRef = useRef(null);
   const startedAtRef = useRef(0);
@@ -18,6 +18,9 @@ export default function GamePackageFrame({
   const attemptIdRef = useRef(crypto.randomUUID());
   const guidanceRequested = useRef(false);
   const [assessmentContext,setAssessmentContext]=useState(null);
+  const requestHint = useEffectEvent(() => onHintRequest?.());
+  const notifyGameOver = useEffectEvent(result => onGameOver?.(result));
+  const notifyPause = useEffectEvent(() => onPause?.());
   const showAssessment=Boolean(assessmentContext&&assessmentContext.studentId===studentId&&assessmentContext.launchUrl===launchUrl);
 
   const handleFrameLoad = () => {
@@ -39,6 +42,7 @@ export default function GamePackageFrame({
 
   useEffect(() => {
     let active = true;
+    let diagnosticEvents = 0;
     startedAtRef.current = Date.now();
     finishedRef.current = false;
     seenEventIds.current.clear();
@@ -48,7 +52,7 @@ export default function GamePackageFrame({
       frameRef.current?.contentWindow?.postMessage(
         { channel: 'logicade-host', version: 1, type: 'pause' }, '*',
       );
-      onPause?.();
+      notifyPause();
     };
     const handleResume = () => frameRef.current?.contentWindow?.postMessage(
       { channel: 'logicade-host', version: 1, type: 'resume' }, '*',
@@ -61,6 +65,10 @@ export default function GamePackageFrame({
       if (event.source !== frameRef.current?.contentWindow) return;
       const message = event.data;
       if (!message || typeof message !== 'object' || message.channel !== 'logicade-game' || message.version !== 1) return;
+      if (message.type === 'learner_input') {
+        window.LogiCadeStudySession?.input();
+        return;
+      }
       if (message.type === 'guidance_started' && guidanceRequested.current) {
         onGuidanceChange?.(true);
         return;
@@ -79,9 +87,12 @@ export default function GamePackageFrame({
       if (message.type === 'event' || ALLOWED_GAME_EVENTS.has(String(message.type || ''))) {
         const eventType = String(message.type === 'event' ? message.event_type || '' : message.type || '');
         if (!ALLOWED_GAME_EVENTS.has(eventType) || finishedRef.current) return;
+        const diagnostic = eventType === 'custom' || eventType === 'checkpoint_saved';
+        if (diagnostic && diagnosticEvents >= 750) return;
         const eventId = String(message.event_id || `${eventType}:${message.time_ms ?? message.t_ms ?? 0}`);
-        if (seenEventIds.current.has(eventId) || seenEventIds.current.size >= 1000) return;
+        if (seenEventIds.current.has(eventId) || seenEventIds.current.size >= 2500) return;
         seenEventIds.current.add(eventId);
+        if (diagnostic) diagnosticEvents++;
         const payload = message.payload && typeof message.payload === 'object'
           ? message.payload
           : Object.fromEntries(Object.entries(message).filter(([key]) => ![
@@ -100,6 +111,10 @@ export default function GamePackageFrame({
 
       if (message.type === 'pause_request') {
         handlePause();
+        return;
+      }
+      if (message.type === 'hint_request' && !finishedRef.current) {
+        requestHint();
         return;
       }
       if (message.type !== 'game_over' || finishedRef.current) return;
@@ -125,12 +140,14 @@ export default function GamePackageFrame({
         reason: typeof message.reason === 'string' ? message.reason.slice(0, 120) : 'package_game_over',
         spec,
         accuracy_basis: typeof message.accuracy_basis === 'string' ? message.accuracy_basis.slice(0, 80) : null,
+        active_play_ms: Number.isInteger(message.active_play_ms) && message.active_play_ms >= 0 && message.active_play_ms <= 86400000
+          ? message.active_play_ms : null,
         formal_assessment: message.formal_assessment === true,
       };
       window.Telemetry?.emit(result.won ? 'level_win' : 'level_lose', {
         t_ms_since_start: Math.trunc(result.time * 1000),
         payload: { reason: result.reason, raw_score: result.score, accuracy: result.accuracy,
-          accuracy_basis: result.accuracy_basis, formal_assessment: result.formal_assessment,
+          accuracy_basis: result.accuracy_basis, active_play_ms: result.active_play_ms, formal_assessment: result.formal_assessment,
           variation_id: meta?.generated_game?.variation_id || null },
       });
 
@@ -142,7 +159,7 @@ export default function GamePackageFrame({
         completionTimeSec: result.time, won: result.won,
       })).catch((error) => {
         console.error('[package game] attempt persistence failed:', error);
-      }).finally(() => { if (active) onGameOver?.(result); });
+      }).finally(() => { if (active) notifyGameOver(result); });
     };
 
     window.addEventListener('message', handleGameMessage);
@@ -156,7 +173,7 @@ export default function GamePackageFrame({
       window.removeEventListener('logicade:resume_game', handleResume);
       window.removeEventListener('logicade:show_hint', handleHint);
     };
-  }, [studentId, levelId, week, level, difficulty, spec, meta, onPause, onGameOver, launchUrl, onGuidanceChange]);
+  }, [studentId, levelId, week, level, difficulty, spec, meta, launchUrl, onGuidanceChange]);
 
   return (<>
     {showAssessment&&<MidtermAssessment key={studentId} studentId={studentId} onClose={()=>{setAssessmentContext(null);frameRef.current?.contentWindow?.postMessage({channel:'logicade-host',version:1,type:'resume'},'*');}}/>}
